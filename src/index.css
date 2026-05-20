@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Design tokens — exposed as Tailwind utilities via @theme.
+   Values match the original Framer site exactly.
+   ========================================================================== */
+
+@theme {
+  /* Colors */
+  --color-brand: #ff0033;
+  --color-brand-hover: #d6002b;
+
+  --color-ink: #0c2217;          /* Framer rgb(12, 34, 23) — body text */
+  --color-ink-muted: #4a4a4a;
+  --color-line: #e5e5e5;
+
+  --color-strip-end: #424242;    /* Framer rgb(66, 66, 66) — dark strip cap */
+
+  --color-footer-bg: #eef0f5;    /* light lavender-gray footer bg */
+
+  /* Typography */
+  --font-sans: "Mulish", "Mulish Placeholder", sans-serif;
+  --font-display: "Mulish", "Mulish Placeholder", sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body.is-menu-open {
+    overflow: hidden;
+  }
+}

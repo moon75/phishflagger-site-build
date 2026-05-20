@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse -File | Select-Object @{n=\"Path\";e={$_.FullName.Replace\\(\"D:\\\\PhishFlagger's\\\\website1\\\\\",\"\"\\)}} | Format-Table -AutoSize -HideTableHeaders)",
+      "Bash(npx vite *)"
+    ]
+  }
+}
