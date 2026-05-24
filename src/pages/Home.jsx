@@ -131,7 +131,7 @@ export default function Home() {
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[560px] object-contain"
+            className="h-auto w-full max-w-[560px] rounded-xl border border-gray-200 object-contain"
           />
         </div>
       </div>
