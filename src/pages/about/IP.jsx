@@ -83,7 +83,7 @@ export default function IP() {
               </Link>
             </div>
             <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-              The Email Phishing Solution
+              Protecting Communications
             </p>
 
             <h1 className="mt-10 text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[44px] lg:text-[48px]">

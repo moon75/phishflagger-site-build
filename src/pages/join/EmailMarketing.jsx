@@ -77,33 +77,17 @@ export default function EmailMarketing() {
               Tame email security and help prevent phishing and other email
               fraud.
             </li>
-            <li className="list-disc">
-              You will receive a copy of the <BrandInline />
-              &trade; Compliance Guide.
-            </li>
-            <li className="list-disc">
-              Get all the resources required to understand and implement email
-              numbering for safety and fraud prevention.
-            </li>
-            <li className="list-disc">
-              Book a meeting with a member of our team to explore your
-              opportunities.
-            </li>
           </ul>
         </div>
       </section>
 
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="text-[24px] font-medium leading-snug tracking-tight text-ink sm:text-[30px]">
-            Licensees must be capable of implementing the Protocol into their
-            Applications
-          </h2>
           <Link
-            to="/join/email-marketing/quote"
-            className="mt-8 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
-            Request Quote
+            Contact Us
           </Link>
         </div>
       </section>
@@ -275,7 +259,7 @@ function PageBrand() {
         <BrandDisplay />
       </Link>
       <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-        The Email Phishing Solution
+        Protecting Communications
       </p>
     </div>
   );

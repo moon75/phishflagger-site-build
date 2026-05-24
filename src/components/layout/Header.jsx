@@ -103,11 +103,8 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Bottom strip — 80% red, 20% dark gray cap */}
-        <div className="flex h-1.5 w-full" aria-hidden>
-          <span className="h-full w-[80%] bg-brand" />
-          <span className="h-full w-[20%] bg-strip-end" />
-        </div>
+        {/* Bottom strip — full red */}
+        <div className="h-1.5 w-full bg-brand" aria-hidden />
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />

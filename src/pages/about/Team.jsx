@@ -88,7 +88,7 @@ export default function Team() {
               </Link>
             </div>
             <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-              The Email Phishing Solution
+              Protecting Communications
             </p>
 
             <h1 className="mt-8 text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:mt-10 sm:text-[44px] lg:text-[52px]">

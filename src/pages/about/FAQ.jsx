@@ -50,7 +50,7 @@ export default function FAQ() {
               </Link>
             </div>
             <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-              The Email Phishing Solution
+              Protecting Communications
             </p>
 
             <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[56px]">

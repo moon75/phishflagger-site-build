@@ -13,7 +13,7 @@ export default function EmailIndividual() {
           <PageBrand />
 
           <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Email Hosting Applications
+            Individual Email
           </h1>
         </div>
       </section>
@@ -21,104 +21,12 @@ export default function EmailIndividual() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <p>
-              Strengthen the security of your email systems with{" "}
-              <BrandInline />
-              &trade; Email Hosting Application licensing. This flexible
-              solution integrates <BrandInline />
-              &trade; email numbering into your existing security protocols,
-              enhancing your protection against email phishing and fraud.
-            </p>
-            <p>
-              Obtain a <BrandInline />
-              &trade; Email Hosting Application licensing to help protect all
-              hosted online email systems from phishing and fraud.
-            </p>
-          </div>
-
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={emailInboxImg}
-              alt="Inbox showing PhishCounter numbered email messages"
-              className="h-auto w-full max-w-[520px] rounded-md object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-[1100px] text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-          <p>
-            Email Hosting Application licensing can help secure all email
-            systems with <BrandInline />
-            &trade; email numbering:
-          </p>
-
-          <ul className="mt-5 space-y-2 pl-5">
-            <li className="list-disc">
-              <BrandInline />
-              &trade; email numbering can be applied to outgoing emails to help
-              create additional confidence in your hosted email security.
-            </li>
-            <li className="list-disc">
-              Layer <BrandInline />
-              &trade; email numbering with other email security protocols to
-              help prevent email phishing in hosted email systems.
-            </li>
-            <li className="list-disc">
-              <BrandInline />
-              &trade; Email Hosting Application licensing is designed to be
-              flexible and can be integrated into various hosted email
-              applications by online webmail system providers and general email
-              service providers.
-            </li>
-            <li className="list-disc">
-              This adaptability ensures that your email systems are further
-              protected from phishing and fraud.
-            </li>
-            <li className="list-disc">
-              Tame email security and help prevent phishing and other email
-              fraud.
-            </li>
-            <li className="list-disc">
-              You will receive a copy of the <BrandInline />
-              &trade; Compliance Guide.
-            </li>
-            <li className="list-disc">
-              Get all the resources required to understand and implement email
-              numbering for safety and fraud prevention.
-            </li>
-            <li className="list-disc">
-              Learn how to protect email recipients.
-            </li>
-            <li className="list-disc">
-              Learn how to implement <BrandInline />
-              &trade; email numbering to help keep email clients safe.
-            </li>
-            <li className="list-disc">
-              Book a meeting with a member of our team to explore your
-              opportunities.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
-        <div className="mx-auto max-w-[1100px] bg-[#f4f7f8] px-6 py-12 text-center sm:px-10 sm:py-16">
-          <h2 className="mx-auto max-w-[680px] text-[24px] font-medium leading-snug tracking-tight text-ink sm:text-[30px]">
-            Licensees must be capable of implementing the Protocol into their
-            Applications
-          </h2>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-          >
-            Request Quote
-          </Link>
+        <div className="mx-auto flex max-w-[1100px] justify-center">
+          <img
+            src={emailInboxImg}
+            alt="Inbox showing PhishCounter numbered email messages"
+            className="h-auto w-full max-w-[520px] rounded-md object-contain"
+          />
         </div>
       </section>
 
@@ -289,7 +197,7 @@ function PageBrand() {
         <BrandDisplay />
       </Link>
       <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-        The Email Phishing Solution
+        Protecting Communications
       </p>
     </div>
   );

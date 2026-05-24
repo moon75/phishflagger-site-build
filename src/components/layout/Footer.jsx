@@ -76,12 +76,12 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
               <span className="font-normal text-[#FF0033]">Flagger</span>
               <sup className="ml-0.5 text-sm font-bold not-italic">TM</sup>
             </h2>
-            <p className="mt-2 text-[11px] text-[#4a4a4a]">
+            <p className="mt-2 text-[13px] text-[#4a4a4a]">
               Protecting Communications.
             </p>
           </div>
 
-          <p className="mx-auto mb-5 whitespace-nowrap text-[13px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-xs">
+          <p className="mx-auto mb-5 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>
@@ -105,7 +105,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
       <section
         aria-label="Related tags"
-        className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-[#eef0f4] px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[10px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[9px]"
+        className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-[#eef0f4] px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[7px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[6px]"
       >
         {tags.map((t) => (
           <span key={t} className="inline-block whitespace-nowrap">

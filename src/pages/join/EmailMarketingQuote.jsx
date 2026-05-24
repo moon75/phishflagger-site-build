@@ -43,7 +43,7 @@ export default function EmailMarketingQuote() {
             <BrandDisplay />
           </Link>
           <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-            The Email Phishing Solution
+            Protecting Communications
           </p>
           <h1 className="mt-6 text-[22px] font-medium leading-tight tracking-tight text-ink sm:text-[30px]">
             Marketers and Bulk Emailers License Quote Request

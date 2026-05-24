@@ -43,7 +43,7 @@ export default function Blog() {
               </Link>
             </div>
             <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-              The Email Phishing Solution
+              Protecting Communications
             </p>
 
             <h1 className="mt-10 text-[36px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[48px]">

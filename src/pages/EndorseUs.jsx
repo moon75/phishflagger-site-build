@@ -41,7 +41,7 @@ export default function EndorseUs() {
           </Link>
 
           <p className="mt-3 text-[20px] font-medium leading-none text-[#242424]">
-            The Email Phishing Solution
+            Protecting Communications
           </p>
 
           <h1 className="mt-9 text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-[44px]">

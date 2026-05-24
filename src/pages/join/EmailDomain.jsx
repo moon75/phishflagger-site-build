@@ -14,7 +14,7 @@ export default function EmailDomain() {
           <PageBrand />
 
           <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Domain Applications and Resellers
+            Join Your Domain
           </h1>
         </div>
       </section>
@@ -103,22 +103,6 @@ export default function EmailDomain() {
               impersonation, phishing and other email-based fraud.
             </li>
             <li className="list-disc">
-              You will receive a copy of the <BrandInline />
-              &trade; Compliance Guide.
-            </li>
-            <li className="list-disc">
-              Get all the resources required to understand and implement email
-              numbering for safety and fraud prevention.
-            </li>
-            <li className="list-disc">
-              Learn how to insert <BrandInline trail="Counter" />
-              &trade; sequential email numbering into outgoing emails.
-            </li>
-            <li className="list-disc">
-              Learn how to flag suspicious emails as potential phishing and
-              email fraud attempts.
-            </li>
-            <li className="list-disc">
               Book a meeting with a member of our team to explore your
               opportunities.
             </li>
@@ -128,15 +112,11 @@ export default function EmailDomain() {
 
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="text-[24px] font-medium leading-snug tracking-tight text-ink sm:text-[30px]">
-            Licensees must be capable of implementing the Protocol into their
-            Applications
-          </h2>
           <Link
             to="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
-            Request Quote
+            Contact Us
           </Link>
         </div>
       </section>
@@ -184,7 +164,7 @@ function PageBrand() {
         <BrandDisplay />
       </Link>
       <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
-        The Email Phishing Solution
+        Protecting Communications
       </p>
     </div>
   );
