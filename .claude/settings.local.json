@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell(Get-ChildItem -Recurse -File | Select-Object @{n=\"Path\";e={$_.FullName.Replace\\(\"D:\\\\PhishFlagger's\\\\website1\\\\\",\"\"\\)}} | Format-Table -AutoSize -HideTableHeaders)",
       "Bash(npx vite *)",
-      "PowerShell($r = Invoke-WebRequest -Uri \"https://www.phishflagger.com/\" -UseBasicParsing; $head = $r.Content.Substring\\(0, [Math]::Min\\(4000, $r.Content.Length\\)\\); $head)"
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://www.phishflagger.com/\" -UseBasicParsing; $head = $r.Content.Substring\\(0, [Math]::Min\\(4000, $r.Content.Length\\)\\); $head)",
+      "Bash(git *)"
     ]
   }
 }
