@@ -81,16 +81,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         {/* Left — heading + bullets */}
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            What is{" "}
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>?
-          </h2>
-
-          <ul className="mt-6 space-y-4 text-[15px] leading-[1.6] text-ink sm:mt-8 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+          <ul className="mb-6 space-y-4 text-[15px] leading-[1.6] text-ink sm:mb-8 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -121,6 +112,15 @@ export default function Home() {
               <span>Provides a defense against impersonation and fraud.</span>
             </li>
           </ul>
+
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            What is{" "}
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="font-normal not-italic">™</span>?
+          </h2>
         </div>
 
         {/* Right — info box image */}
@@ -185,7 +185,7 @@ export default function Home() {
             Work?
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            <BrandInline trail="Flagger" />™ inserts an uncounted sequential
+            <BrandInline trail="Flagger" />™ inserts a sequential
             number in the subject line, called the{" "}
             <BrandInline trail="Counter" />™, from the sender. The recipient
             will see this number and be able to verify if it matches the last
@@ -212,9 +212,7 @@ export default function Home() {
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Any Email Domain can join the PhishFlagger Protocol. We also enable
-            Marketers, Portals and Security Providers. Please see our licensing
-            section to review and select which is most applicable for your
-            organization.
+            Marketers, Portals and Security Providers.
           </p>
         </div>
         <div className="flex justify-center lg:justify-end">

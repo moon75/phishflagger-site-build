@@ -188,15 +188,15 @@ a { text-decoration: none; color: inherit; }
 }
 
 .page-title-contact-icon {
-  width: clamp(160px, 16vw, 200px);
-  height: clamp(160px, 16vw, 200px);
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   object-fit: cover;
   border-radius: 50%;
 }
 
 .page-title-sub-icon {
-  width: clamp(160px, 16vw, 200px);
-  height: clamp(160px, 16vw, 200px);
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   object-fit: contain;
 }
 
