@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
@@ -10,15 +12,33 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
   return (
     <>
       <footer className="bg-[#eef0f4] font-['Mulish',sans-serif]">
+        {/* Top strip — full red, matches header */}
+        <div className="h-1.5 w-full bg-brand" aria-hidden />
         <div className="mx-auto max-w-[980px] px-6 pt-9 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
-          <p className="mx-auto mb-[18px] max-w-[720px] text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
-            <em className="text-black">
-              Phish<strong className="text-[#FF0033]">Flagger</strong>
-            </em>
-            ™ was created to protect consumers and help companies eliminate brand
-            destruction by imposters. We sequentially number outgoing digital
-            communications including Email, Message, Text/SMS and Caller ID.
-          </p>
+          <div className="mx-auto mb-[18px] flex w-fit max-w-full flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-6">
+            <p className="max-w-[640px] text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
+              <em className="text-black">
+                Phish<strong className="text-[#FF0033]">Flagger</strong>
+              </em>
+              ™ was created to protect consumers and help companies eliminate brand
+              destruction by imposters. We sequentially number outgoing digital
+              communications including Email, Message, Text/SMS and Caller ID.
+            </p>
+            <div className="flex shrink-0 flex-row items-center gap-4 sm:flex-col sm:items-start sm:gap-1.5">
+              <Link
+                to="/victim-testimonials"
+                className="whitespace-nowrap text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[14px]"
+              >
+                Victim Testimonial
+              </Link>
+              <Link
+                to="/endorse-us"
+                className="whitespace-nowrap text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[14px]"
+              >
+                Endorse Us
+              </Link>
+            </div>
+          </div>
 
           <ul
             aria-label="Social media"

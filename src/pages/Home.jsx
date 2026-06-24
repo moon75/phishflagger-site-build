@@ -41,15 +41,12 @@ export default function Home() {
       </div>
 
       {/* Headline */}
-      <h1 className="mt-8 text-center text-[28px] font-bold tracking-tight text-ink leading-[1.15] sm:mt-10 sm:text-[36px] lg:text-[42px]">
+      <h1 className="mt-2 text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:mt-3 sm:text-[36px] lg:text-[42px]">
         Protecting Communications
       </h1>
 
-      {/* Divider */}
-      <div className="mx-auto mt-5 h-px w-[92%] bg-gray-300 sm:mt-6" />
-
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-10 sm:mt-10 sm:gap-y-12">
+      <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-10 sm:mt-20 sm:gap-x-16 sm:gap-y-12">
         {SCREENS.map((s) => (
           <div key={s.label} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
@@ -131,7 +128,7 @@ export default function Home() {
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[560px] rounded-xl border border-gray-200 object-contain"
+            className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
           />
         </div>
       </div>

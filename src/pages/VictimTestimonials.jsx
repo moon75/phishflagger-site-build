@@ -43,7 +43,7 @@ export default function VictimTestimonials() {
           </p>
 
           <h1 className="mt-9 text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-[44px]">
-            Victim Testimonials
+            Victim Testimonial
           </h1>
 
           <p className="mt-5 text-[16px] font-medium leading-normal text-[#4f5c60] sm:text-[18px]">
@@ -56,7 +56,7 @@ export default function VictimTestimonials() {
           className="mx-auto mt-31 max-w-[802px] rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14 sm:px-6 md:px-6 lg:px-6"
         >
           <h2 className="text-center text-[26px] font-semibold leading-tight tracking-tight text-[#333333] sm:text-[36px]">
-            Victim Testimonials Information
+            Victim Testimonial Information
           </h2>
 
           <div className="mt-8 space-y-4">

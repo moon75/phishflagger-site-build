@@ -10,7 +10,6 @@ export const nav = [
       { label: "Email - Individual", href: "/join/email-individual" },
       { label: "Email - Marketing", href: "/join/email-marketing" },
       { label: "Telecom", href: "/join/telecom" },
-      { label: "Other", href: "/join/other" },
     ],
   },
   { label: "PhishFlagger.org", href: "/phishflagger-org" },

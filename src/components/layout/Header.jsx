@@ -69,7 +69,7 @@ export default function Header() {
             <img
               src="/assets/icons/member-id.svg"
               alt="Member ID 0001"
-              className="h-3.5 w-auto shrink-0"
+              className="ml-4 h-3.5 w-auto shrink-0 sm:ml-6"
             />
           </div>
 

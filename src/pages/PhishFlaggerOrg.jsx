@@ -49,21 +49,6 @@ export default function PhishFlaggerOrg() {
             you simply care. Our Community is open to anyone.
           </p>
 
-          {/* Two icon cards */}
-          <div className="mt-12 flex flex-wrap items-end justify-center gap-x-10 gap-y-10 sm:mt-16 sm:gap-x-20 sm:gap-y-12">
-            <IconCard
-              to="/victim-testimonials"
-              src={victimImg}
-              alt="Victim with bandaged arm"
-              label="Victim Testimonials"
-            />
-            <IconCard
-              to="/endorse-us"
-              src={endorseImg}
-              alt="Person in suit with verified check and medal"
-              label="Endorse Us"
-            />
-          </div>
         </div>
       </section>
 

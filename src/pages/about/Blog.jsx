@@ -53,10 +53,7 @@ export default function Blog() {
 
           {/* Table of contents */}
           <nav className="mx-auto mt-10 max-w-[680px] rounded-2xl border border-gray-200 bg-[#fafbfc] p-5 sm:mt-12 sm:p-6">
-            <p className="text-[12px] font-bold uppercase tracking-wider text-ink-muted">
-              In this issue
-            </p>
-            <ul className="mt-3 space-y-2 text-[14px] sm:text-[15px]">
+            <ul className="space-y-2 text-[14px] sm:text-[15px]">
               {POSTS.map((p, i) => (
                 <li key={p.id}>
                   <a
@@ -73,7 +70,7 @@ export default function Blog() {
       </section>
 
       {/* ===== Article 1 — Vegas ===== */}
-      <article id="vegas" className="w-full bg-white px-4 pb-14 sm:px-6 sm:pb-20">
+      <article id="vegas" className="w-full scroll-mt-28 bg-white px-4 pb-14 sm:px-6 sm:pb-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
             <Brand /> "What happens in Vegas stays in Vegas." Not this time!
@@ -107,7 +104,7 @@ export default function Blog() {
       <Divider />
 
       {/* ===== Article 2 — Finally, a fix for email ===== */}
-      <article id="fix-for-email" className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <article id="fix-for-email" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
             Finally, a fix for email
@@ -322,7 +319,7 @@ export default function Blog() {
       <Divider />
 
       {/* ===== Article 3 — Secured patents ===== */}
-      <article id="secured-patents" className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <article id="secured-patents" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
             Secured patents
