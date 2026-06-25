@@ -3,7 +3,6 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
-import grandmaImg from "../../../telecom Webpage/assets/images/icons/grandma.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
@@ -73,7 +72,7 @@ export default function Telecom() {
 
           <div className="flex justify-center">
             <img
-              src={grandmaImg}
+              src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
               className="h-auto w-full max-w-[280px] object-contain sm:max-w-[340px]"
             />
@@ -222,7 +221,7 @@ function ActionCard({ to, label, src, alt, imageClassName = "" }) {
       <img
         src={src}
         alt={alt}
-        className={`mt-5 h-[150px] w-[150px] object-contain sm:h-[190px] sm:w-[190px] ${imageClassName}`}
+        className={`mt-5 h-[90px] w-[90px] object-contain sm:h-[110px] sm:w-[110px] ${imageClassName}`}
       />
     </Link>
   );

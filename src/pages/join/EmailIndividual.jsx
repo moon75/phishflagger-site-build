@@ -37,7 +37,7 @@ export default function EmailIndividual() {
 
 const FAQ_ITEMS = [
   {
-    q: "Why PhishFlagger(TM)?",
+    q: "Why PhishFlagger™?",
     a: (
       <>
         <p>
@@ -65,7 +65,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "What is PhishFlagger(TM) email numbering?",
+    q: "What is PhishFlagger™ email numbering?",
     a: (
       <p>
         It is simple. <BrandInline />
@@ -78,7 +78,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "How does PhishFlagger(TM) email numbering work?",
+    q: "How does PhishFlagger™ email numbering work?",
     a: (
       <>
         <p>
@@ -131,7 +131,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "What are some other benefits of PhishFlagger(TM) email numbering?",
+    q: "What are some other benefits of PhishFlagger™ email numbering?",
     a: (
       <>
         <p>
@@ -164,7 +164,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "How does PhishFlagger(TM) help keep my email contacts safe from email phishing and fraud?",
+    q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
     a: (
       <p>
         The patented <BrandInline />
@@ -244,7 +244,7 @@ function FaqSection() {
               key={item.q}
               question={item.q}
               answer={item.a}
-              defaultOpen
+              defaultOpen={index === 0}
               last={index === FAQ_ITEMS.length - 1}
             />
           ))}
