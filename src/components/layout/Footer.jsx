@@ -15,8 +15,8 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
         <div className="mx-auto max-w-[980px] px-6 pt-9 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
-          <div className="mx-auto mb-[18px] flex w-fit max-w-full flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-6">
-            <p className="max-w-[640px] text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
+          <div className="mx-auto mb-[18px] max-w-[640px]">
+            <p className="text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
               </em>
@@ -24,20 +24,26 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
               destruction by imposters. We sequentially number outgoing digital
               communications including Email, Message, Text/SMS and Caller ID.
             </p>
-            <div className="flex shrink-0 flex-row items-center gap-4 sm:flex-col sm:items-start sm:gap-1.5">
-              <Link
-                to="/victim-testimonials"
-                className="whitespace-nowrap text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[14px]"
-              >
-                Victim Testimonial
-              </Link>
-              <Link
-                to="/endorse-us"
-                className="whitespace-nowrap text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[14px]"
-              >
-                Endorse Us
-              </Link>
-            </div>
+            <nav aria-label="Footer menu" className="mt-5 flex flex-wrap items-center justify-center gap-x-0 gap-y-2">
+              {[
+                { label: "About Us", to: "/about/team" },
+                { label: "Contact", to: "/contact" },
+                { label: "Victim Testimonials", to: "/victim-testimonials" },
+                { label: "Endorse Us", to: "/endorse-us" },
+              ].map((link, i, arr) => (
+                <span key={link.to} className="flex items-center">
+                  <Link
+                    to={link.to}
+                    className="px-3 text-[13px] font-semibold text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                  >
+                    {link.label}
+                  </Link>
+                  {i < arr.length - 1 && (
+                    <span className="text-[#ccc] select-none" aria-hidden>|</span>
+                  )}
+                </span>
+              ))}
+            </nav>
           </div>
 
           <ul

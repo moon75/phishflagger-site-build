@@ -57,7 +57,7 @@ export default function Telecom() {
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
-                  className="grid grid-cols-[minmax(0,1fr)_4.5ch_minmax(0,0.8fr)_auto] items-baseline gap-3 font-medium tabular-nums"
+                  className="grid grid-cols-[minmax(0,1fr)_4.5ch_minmax(0,0.8fr)_5rem] items-baseline gap-3 font-medium tabular-nums"
                 >
                   <span>{item.number}</span>
                   <span className="font-bold text-[#1f6e5f]">{item.seq}</span>
@@ -67,7 +67,7 @@ export default function Telecom() {
               ))}
             </ul>
             <p className="mt-6 text-[18px] leading-relaxed text-ink sm:text-[22px]">
-              Existing Caller ID can be used to validate calls.
+              Existing Caller ID will be used to validate calls.
             </p>
           </div>
 

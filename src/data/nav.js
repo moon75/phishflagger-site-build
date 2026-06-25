@@ -16,6 +16,7 @@ export const nav = [
   {
     label: "About",
     children: [
+      { label: "Kickstarter", href: "/about/kickstarter" },
       { label: "Team", href: "/about/team" },
       { label: "Press", href: "/about/press" },
       { label: "Video", href: "/about/video" },
@@ -23,7 +24,7 @@ export const nav = [
       { label: "FAQ", href: "/about/faq" },
       { label: "Blog", href: "/about/blog" },
       { label: "News", href: "/about/news" },
-      { label: "Fiction", href: "/about/fiction" },
+      { label: "Fiction Fund Reading", href: "/about/fiction" },
     ],
   },
   { label: "Contact", href: "/contact" },

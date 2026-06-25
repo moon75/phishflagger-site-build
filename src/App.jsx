@@ -32,6 +32,7 @@ import FAQ from "./pages/about/FAQ.jsx";
 import Blog from "./pages/about/Blog.jsx";
 import News from "./pages/about/News.jsx";
 import Fiction from "./pages/about/Fiction.jsx";
+import Kickstarter from "./pages/about/Kickstarter.jsx";
 
 export default function App() {
   return (
@@ -73,6 +74,7 @@ export default function App() {
           <Route path="faq" element={<FAQ />} />
           <Route path="blog" element={<Blog />} />
           <Route path="news" element={<News />} />
+          <Route path="kickstarter" element={<Kickstarter />} />
           <Route path="fiction" element={<Fiction />} />
         </Route>
 

@@ -277,7 +277,7 @@ export default function Home() {
             imgAlt="Mechanical numbering stamp"
           />
           <HistoryCard
-            year="2024"
+            year="2026"
             topic="Phishing Protection"
             patent="US Patent 11,601,449 B2"
             attribution="William Pearce"

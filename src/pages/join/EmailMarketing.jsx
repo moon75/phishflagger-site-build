@@ -23,11 +23,8 @@ export default function EmailMarketing() {
         <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <p>
-              Protect your marketing and bulk email campaigns with the{" "}
-              <BrandInline />
-              &trade; Marketer and Bulk Emailer License. You can help prevent
-              phishing and fraud by numbering your outgoing emails. A{" "}
-              <BrandInline />
+              You can help prevent phishing and fraud by numbering your outgoing
+              emails. A <BrandInline />
               &trade; license can protect your brand and clients while
               increasing your campaign reach.
             </p>
@@ -52,12 +49,6 @@ export default function EmailMarketing() {
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[1100px] text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-          <p>
-            A <BrandInline />
-            &trade; Marketer and Bulk Emailer License can help secure all email
-            communications sent out by marketing firms and bulk emailers:
-          </p>
-
           <ul className="mt-5 space-y-2 pl-5">
             <li className="list-disc">
               When sending marketing emails, direct emails, and bulk emails, a
@@ -76,6 +67,9 @@ export default function EmailMarketing() {
             <li className="list-disc">
               Tame email security and help prevent phishing and other email
               fraud.
+            </li>
+            <li className="list-disc">
+              Prevent Impersonations of your customers.
             </li>
           </ul>
         </div>
@@ -99,7 +93,7 @@ export default function EmailMarketing() {
 
 const FAQ_ITEMS = [
   {
-    q: "Why PhishFlagger(TM)?",
+    q: "Why PhishFlagger™?",
     a: (
       <>
         <p>
@@ -127,7 +121,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "What is PhishFlagger(TM) email numbering?",
+    q: "What is PhishFlagger™ email numbering?",
     a: (
       <p>
         It is simple. <BrandInline />
@@ -140,7 +134,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "How does PhishFlagger(TM) email numbering work?",
+    q: "How does PhishFlagger™ email numbering work?",
     a: (
       <>
         <p>
@@ -193,7 +187,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "What are some other benefits of PhishFlagger(TM) email numbering?",
+    q: "What are some other benefits of PhishFlagger™ email numbering?",
     a: (
       <>
         <p>
@@ -226,7 +220,7 @@ const FAQ_ITEMS = [
     ),
   },
   {
-    q: "How does PhishFlagger(TM) help keep my email contacts safe from email phishing and fraud?",
+    q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
     a: (
       <p>
         The patented <BrandInline />
@@ -306,7 +300,7 @@ function FaqSection() {
               key={item.q}
               question={item.q}
               answer={item.a}
-              defaultOpen
+              defaultOpen={index === 0}
               last={index === FAQ_ITEMS.length - 1}
             />
           ))}

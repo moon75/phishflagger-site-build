@@ -27,15 +27,14 @@ export default function EmailDomain() {
             <p>
               Protect your email domains and those you resell with{" "}
               <BrandInline />
-              &trade; Domain Applications and Reseller Licensing. Safeguard
+              &trade;. Safeguard
               all of your domains with <BrandInline />
               &trade; email numbering to help enhance security and prevent
               impersonation, phishing and other email-based fraud.
             </p>
             <p>
               Obtain <BrandInline />
-              &trade; Domain Applications and Reseller licensing to help
-              protect in-house email domains and email domains that you resell
+              &trade; to help protect in-house email domains and email domains that you resell
               to clients from email phishing and fraud.
             </p>
           </div>
@@ -70,7 +69,7 @@ export default function EmailDomain() {
             </h2>
 
             <ul className="mt-6 space-y-4 text-[14px] font-semibold leading-relaxed text-ink sm:text-[15px]">
-              <Benefit>Another Phishing protection protocol.</Benefit>
+              <Benefit>Better Phishing protection protocol human validation.</Benefit>
               <Benefit>Flag or quarantine out of sequence email.</Benefit>
               <Benefit>Number outgoing email automatically.</Benefit>
               <Benefit>Resellers earn additional revenue.</Benefit>
