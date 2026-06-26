@@ -25,7 +25,31 @@ const FAQ_ITEMS = [
   },
   {
     q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
-    a: "The patented PhishFlagger™ email numbering system helps keep people safer and reduces the risks from email phishing and fraud. Your contacts compare the PhishCounter™ email ID number they receive to the number they are expecting to receive in the next email from you, to determine if the email is really from you and is safe to open. It's so simple, but since it is virtually impossible for anyone else but the actual sender and receiver to know what the next sequence number is, the recipient is safer. With PhishFlagger™ email numbering, customers won’t open fake emails claiming to be from you because those fake emails will be easily recognizable: if it has the wrong PhishCounter™ number, or no number, it’s fake.",
+    a: "The patented PhishFlagger™ email numbering system helps keep people safer and reduces the risks from email phishing and fraud. Your contacts compare the PhishCounter™ email ID number they receive to the number they are expecting to receive in the next email from you, to determine if the email is really from you and is safe to open. It’s so simple, but since it is virtually impossible for anyone else but the actual sender and receiver to know what the next sequence number is, the recipient is safer. With PhishFlagger™ email numbering, customers won’t open fake emails claiming to be from you because those fake emails will be easily recognizable: if it has the wrong PhishCounter™ number, or no number, it’s fake.",
+  },
+  {
+    q: "Do email recipients need to install anything?",
+    a: "No. Recipients need nothing installed, no app to download, and no account to create. The PhishCounter™ number appears directly in the email subject line — visible in any email client, on any device. The only thing recipients need to do is remember the last number they received from a sender.",
+  },
+  {
+    q: "Can a phisher just replicate the sequence number to fool the system?",
+    a: "Virtually impossible. The PhishCounter™ number is specific to each individual sender-recipient pair and is only known between the legitimate sender and that particular recipient. A phisher blasting emails to thousands of people cannot know the unique sequence number each individual is expecting — making it effectively impossible to craft a convincing fake at scale.",
+  },
+  {
+    q: "Is PhishFlagger™ email numbering patented?",
+    a: "Yes. PhishFlagger™ email numbering is a patented process covering the method of assigning sequential identifiers to outgoing email on a per-recipient basis to authenticate message origin. Licensing is available for organizations of all sizes.",
+  },
+  {
+    q: "How do I get a license, and how much does it cost?",
+    a: "Licensing options depend on the size and type of your organization. PhishFlagger™ offers plans for individual users, businesses licensing a domain, and email marketing organizations. Visit our Join page or contact us directly to discuss the right plan for your needs.",
+  },
+  {
+    q: "What happens if a recipient forgets their last PhishCounter™ number?",
+    a: "They can simply look back at the most recent legitimate email from that sender to check the last number used. If that is not possible, the safest step is to contact the sender through a trusted channel — by phone or via the company’s official website — to confirm whether the email is genuine. PhishFlagger™ is an added layer of protection that works alongside existing email safety best practices.",
+  },
+  {
+    q: "Does PhishFlagger™ work with platforms like Mailchimp, Salesforce, or HubSpot?",
+    a: "Yes. PhishFlagger™ is platform-agnostic. The numbering process is implemented at the sending domain or email infrastructure level and can be integrated with any platform that allows customization of outgoing subject lines. Your technical team will follow the Compliance Guide included with your license to implement it for your specific environment.",
   },
 ];
 

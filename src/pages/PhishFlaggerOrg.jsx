@@ -147,7 +147,15 @@ const FAQ_ITEMS = [
   },
   {
     q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
-    a: "The patented PhishFlagger™ email numbering system helps keep people safer and reduces the risks from email phishing and fraud. Your contacts compare the PhishCounter™ email ID number they receive to the number they are expecting to receive in the next email from you, to determine if the email is really from you and is safe to open. It's so simple, but since it is virtually impossible for anyone else but the actual sender and receiver to know what the next sequence number is, the recipient is safer. With PhishFlagger™ email numbering, customers won’t open fake emails claiming to be from you because those fake emails will be easily recognizable: if it has the wrong PhishCounter™ number, or no number, it’s fake.",
+    a: "The patented PhishFlagger™ email numbering system helps keep people safer and reduces the risks from email phishing and fraud. Your contacts compare the PhishCounter™ email ID number they receive to the number they are expecting to receive in the next email from you, to determine if the email is really from you and is safe to open. It’s so simple, but since it is virtually impossible for anyone else but the actual sender and receiver to know what the next sequence number is, the recipient is safer. With PhishFlagger™ email numbering, customers won’t open fake emails claiming to be from you because those fake emails will be easily recognizable: if it has the wrong PhishCounter™ number, or no number, it’s fake.",
+  },
+  {
+    q: "How can I encourage the organizations I deal with to adopt PhishFlagger™?",
+    a: "Share information about PhishFlagger™ with your bank, insurance provider, or any company that regularly emails you. Direct them to phishflagger.com or contact our team — we can provide materials to share with their IT or compliance departments. Spreading the word is one of the most effective ways to make email safer for everyone.",
+  },
+  {
+    q: "Do recipients need to install anything to benefit from PhishFlagger™?",
+    a: "No. The PhishCounter™ number is embedded directly in the email subject line, visible in any email client on any device. Recipients need no app, no account, and no technical setup — just the habit of checking the number.",
   },
 ];
 

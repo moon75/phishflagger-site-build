@@ -184,6 +184,41 @@ const FAQ_ITEMS = [
       </p>
     ),
   },
+  {
+    q: "I'm not a business — can PhishFlagger™ still protect me?",
+    a: (
+      <p>
+        Yes. <BrandInline />
+        &trade; offers individual licensing for personal email users who want to
+        give their contacts a way to verify that emails are genuinely from them.
+        It is particularly useful for professionals who regularly communicate
+        with clients, or anyone who wants to protect the people they email from
+        receiving spoofed messages in their name.
+      </p>
+    ),
+  },
+  {
+    q: "Do my email recipients need to install anything?",
+    a: (
+      <p>
+        Nothing at all. The <BrandInline trail="Counter" />
+        &trade; number appears directly in the subject line of every email —
+        visible in any email client, on any device. No app, no account, and no
+        technical setup is required on the recipient's side.
+      </p>
+    ),
+  },
+  {
+    q: "Is PhishFlagger™ email numbering patented?",
+    a: (
+      <p>
+        Yes. <BrandInline />
+        &trade; email numbering is a patented process. Licensing is available
+        for individuals and organizations of all sizes who want to protect their
+        contacts from phishing and authenticate their outgoing communications.
+      </p>
+    ),
+  },
 ];
 
 function PageBrand() {

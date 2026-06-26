@@ -150,6 +150,18 @@ const FAQ_ITEMS = [
     q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
     a: "The patented PhishFlagger email numbering system helps contacts compare the PhishCounter email ID number they receive to the number they are expecting. Fake emails claiming to be from you can be recognized if the number is wrong, missing, or out of sequence.",
   },
+  {
+    q: "Do I need to change my DNS settings, MX records, or email provider?",
+    a: "No DNS or MX changes are required. PhishFlagger™ numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged.",
+  },
+  {
+    q: "Does PhishFlagger™ work with our existing email platform?",
+    a: "Yes. PhishFlagger™ is platform-agnostic and integrates with any email system that allows customization of outgoing messages. Your technical team will follow the Compliance Guide included with your license to implement it for your specific environment.",
+  },
+  {
+    q: "Do our email recipients need to install anything?",
+    a: "Nothing. The PhishCounter™ number appears in the subject line of every outgoing email — visible in any email client, on any device. No app, account, or setup is needed on the recipient's side.",
+  },
 ];
 
 function PageBrand() {

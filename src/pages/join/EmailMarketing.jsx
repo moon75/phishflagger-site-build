@@ -240,6 +240,43 @@ const FAQ_ITEMS = [
       </p>
     ),
   },
+  {
+    q: "Will the PhishCounter™ number in the subject line affect my open rates?",
+    a: (
+      <p>
+        Early adopters have found that numbered subject lines build recipient
+        trust over time, which improves open rates. Recipients who recognize{" "}
+        <BrandInline />
+        &trade; numbering are more confident opening emails and less likely to
+        delete them out of caution. A/B test subject lines as you normally would
+        — the <BrandInline trail="Counter" />
+        &trade; prefix is consistent and will not skew your results.
+      </p>
+    ),
+  },
+  {
+    q: "Does PhishFlagger™ work with platforms like Mailchimp, Salesforce, or HubSpot?",
+    a: (
+      <p>
+        Yes. <BrandInline />
+        &trade; is platform-agnostic and integrates with any email marketing
+        platform that allows customization of outgoing subject lines. Your
+        technical team will follow the Compliance Guide included with your
+        license to implement it within your existing sending environment.
+      </p>
+    ),
+  },
+  {
+    q: "Do our email recipients need to install anything?",
+    a: (
+      <p>
+        Nothing. The <BrandInline trail="Counter" />
+        &trade; number is embedded in the email subject line — visible in any
+        email client, on any device. No app, no account, and no setup is
+        required on the recipient's side.
+      </p>
+    ),
+  },
 ];
 
 function PageBrand() {

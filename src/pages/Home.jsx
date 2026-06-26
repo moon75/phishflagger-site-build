@@ -337,6 +337,14 @@ const FAQ_ITEMS = [
     q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
     a: "PhishFlagger™ was created to protect consumers and help companies eliminate brand destruction by imposters. By sequentially numbering digital communications, recipients can immediately identify legitimate messages and spot fraudulent ones that lack the expected sequence number.",
   },
+  {
+    q: "Do email recipients need to install anything?",
+    a: "Nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side.",
+  },
+  {
+    q: "Is PhishFlagger™ email numbering patented?",
+    a: "Yes. The PhishFlagger™ email numbering method is a patented process. Licensing is available for organizations that want to protect their customers from phishing and authenticate their outgoing communications.",
+  },
 ];
 
 function FaqItem({ question, answer, last }) {
