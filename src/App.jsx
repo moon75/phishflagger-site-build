@@ -9,6 +9,7 @@ import Demo from "./pages/Demo.jsx";
 import VideoPage from "./pages/Video.jsx";
 import VictimTestimonials from "./pages/VictimTestimonials.jsx";
 import EndorseUs from "./pages/EndorseUs.jsx";
+import Petition from "./pages/Petition.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="community" element={<Community />} />
         <Route path="demo" element={<Demo />} />
         <Route path="video" element={<VideoPage />} />
+        <Route path="petition" element={<Petition />} />
 
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />

@@ -270,7 +270,7 @@ export default function Home() {
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 max-w-[105px] object-contain"
+            className="h-auto w-1/3 max-w-[131px] object-contain"
           />
           <img
             src={callerIdHandsetImg}
@@ -284,10 +284,16 @@ export default function Home() {
             Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Sequence Number known only by valid carrier and callee prevents
-            impersonation. As the existing Caller ID roll is fully
-            interoperable globally, a &lsquo;sequence number&rsquo; could be
-            implemented by telecoms worldwide to help authenticate calls.
+            The Sequence Number known only by valid carrier and callee prevents
+            impersonation. As the existing Caller ID rail is fully interoperable
+            between carriers globally, a &lsquo;sequence number&rsquo; implemented
+            by telecoms worldwide would end fake calls.{" "}
+            <Link
+              to="/petition"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Sign our Petition
+            </Link>
           </p>
         </div>
       </div>
