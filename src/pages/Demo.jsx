@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function Demo() {
@@ -22,7 +22,7 @@ export default function Demo() {
                 &trade;
               </span>
             </Link>
-            <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications.
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function Demo() {
 
           <p className="mx-auto mt-8 max-w-[640px] text-[13.5px] leading-[1.6] text-ink-muted sm:mt-10 sm:text-[14.5px]">
             This will open your default email client (Outlook, Apple Mail,
-            Gmail, etc.).
+            Gmail, etc.). Subject or Content is not required.
           </p>
         </div>
       </section>

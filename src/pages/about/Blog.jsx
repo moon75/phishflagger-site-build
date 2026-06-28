@@ -16,10 +16,32 @@ function Brand({ trail = "Flagger" }) {
   );
 }
 
+// Ordered newest-first (index 0 = highest number = displayed at top)
 const POSTS = [
-  { id: "vegas", title: "PhishFlagger \"What happens in Vegas stays in Vegas.\" Not this time!" },
-  { id: "fix-for-email", title: "Finally, a fix for email" },
-  { id: "secured-patents", title: "Secured patents" },
+  {
+    id: "caller-id-breakthrough",
+    title: "PhishFlagger™ announces a breakthrough in the global fight against Caller ID fraud",
+  },
+  {
+    id: "text-messages-patent",
+    title: "Secured Text Messages Cell Phone Patents",
+  },
+  {
+    id: "caller-id-patent",
+    title: "Secured CallerID Patent",
+  },
+  {
+    id: "secured-patents",
+    title: "Secured patents",
+  },
+  {
+    id: "fix-for-email",
+    title: "Finally, a fix for email",
+  },
+  {
+    id: "vegas",
+    title: 'PhishFlagger "What happens in Vegas stays in Vegas." Not this time!',
+  },
 ];
 
 export default function Blog() {
@@ -42,7 +64,7 @@ export default function Blog() {
                 </span>
               </Link>
             </div>
-            <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
 
@@ -51,7 +73,7 @@ export default function Blog() {
             </h1>
           </div>
 
-          {/* Table of contents */}
+          {/* Table of contents — numbers count down (newest = highest) */}
           <nav className="mx-auto mt-10 max-w-[680px] rounded-2xl border border-gray-200 bg-[#fafbfc] p-5 sm:mt-12 sm:p-6">
             <ul className="space-y-2 text-[14px] sm:text-[15px]">
               {POSTS.map((p, i) => (
@@ -60,7 +82,7 @@ export default function Blog() {
                     href={`#${p.id}`}
                     className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                   >
-                    {i + 1}. {p.title}
+                    {POSTS.length - i}. {p.title}
                   </a>
                 </li>
               ))}
@@ -69,35 +91,178 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* ===== Article 1 — Vegas ===== */}
-      <article id="vegas" className="w-full scroll-mt-28 bg-white px-4 pb-14 sm:px-6 sm:pb-20">
+      {/* ===== Article 6 — Caller ID breakthrough (from Press) ===== */}
+      <article id="caller-id-breakthrough" className="w-full scroll-mt-28 bg-white px-4 pb-14 sm:px-6 sm:pb-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
-            <Brand /> "What happens in Vegas stays in Vegas." Not this time!
+            <Brand />™ announces a breakthrough in the global fight against Caller ID fraud
+          </h2>
+
+          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
+            <p className="text-[14px] font-medium text-ink sm:text-[15px]">
+              FOR IMMEDIATE RELEASE: Toronto, ON April 17, 2026
+            </p>
+            <p className="text-[13px] text-ink-muted sm:text-[14px]">
+              Contact Information: Email:{" "}
+              <a
+                href="mailto:callerid@phishflagger.com"
+                className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                callerid@phishflagger.com
+              </a>
+            </p>
+            <p className="text-[18px] font-semibold text-ink sm:text-[20px]">
+              Press Release
+            </p>
+            <p>
+              Phone-based fraud using spoofing and fake Caller IDs has become a
+              pervasive issue for individuals, companies, governments and law
+              enforcement agencies worldwide. STIR/SHAKEN works well in modern
+              networks, but has not solved call spoofing on a worldwide scale.{" "}
+              <Brand />™ represents a breakthrough in the global fight against
+              Caller ID fraud.
+            </p>
+            <p>
+              <Brand />™ enhances traditional Caller ID systems by adding an
+              innovative validation layer to the existing Caller ID rail,
+              authenticating calls and making it significantly harder for
+              fraudsters to misuse caller identification. As this technology
+              spreads, it will reduce phone fraud, contributing to enhanced
+              consumer protection and safer communication practices worldwide.
+            </p>
+
+            <h3 className="pt-2 text-[16px] font-bold text-ink sm:text-[17px]">
+              How <Brand />™ Protection Works:
+            </h3>
+            <p>
+              <strong className="font-bold">Caller Information:</strong> The{" "}
+              <Brand />™ protocol enables telecom networks to add a unique{" "}
+              <em className="italic">Sequence Number</em>, the{" "}
+              <span className="font-bold">
+                Phish<span className="text-brand">Counter</span>
+                <sup className="text-[10px]">TM</sup>
+              </span>
+              , within the existing calling line identification information,
+              also known as caller ID.
+            </p>
+            <p>
+              <strong className="font-bold">Validation Process:</strong> The{" "}
+              <Brand />™ protocol verifies if the unique{" "}
+              <em className="italic">Sequence Number</em> is the next expected
+              number in the series for the callee.
+            </p>
+            <p>
+              <strong className="font-bold">Out-of-Order Check:</strong> If the{" "}
+              <em className="italic">Sequence Number</em> is not in the
+              expected order, the callee may notice, and the call can be
+              flagged as potentially fraudulent. Receivers can now take steps
+              to confirm the call's legitimacy before engaging, eliminating the
+              risk of Caller ID fraud.
+            </p>
+            <p>
+              As deepfake AI increases risks to Caller ID, telecoms will
+              benefit from implementing a sequential <Brand />™ phone call
+              numbering solution as an additional authentication layer to
+              protect consumers and help prevent ransom attempts and other
+              phone fraud.
+            </p>
+            <p className="pt-2">
+              <Brand />™ protects communications. The creator of the{" "}
+              <Brand />™ method, William Pearce, holds patents related to
+              communication, including Email, Text, Messaging and Phone
+              Hardware. Pearce received U.S. Patent no. 12309317B2 for the{" "}
+              <Brand />™ Caller ID method, and similar patents are now pending
+              in over 60 countries.
+            </p>
+            <p className="pt-4">
+              For more information, visit{" "}
+              <a
+                href="https://www.phishflagger.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                www.phishflagger.com
+              </a>
+              .
+            </p>
+            <p className="text-[12.5px] text-ink-muted sm:text-[13px]">
+              <Brand />™ and <Brand trail="Counter" />™ are Trademarks of{" "}
+              <Brand /> Inc.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <Divider />
+
+      {/* ===== Article 5 — Secured Text Messages Cell Phone Patents ===== */}
+      <article id="text-messages-patent" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[820px]">
+          <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
+            Secured Text Messages Cell Phone Patents
+          </h2>
+
+          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
+            <p>
+              <Brand />™ is awarded a Patent in the USA to stop fake phone calls.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <Divider />
+
+      {/* ===== Article 4 — Secured CallerID Patent ===== */}
+      <article id="caller-id-patent" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[820px]">
+          <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
+            Secured CallerID Patent
+          </h2>
+
+          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
+            <p>
+              <Brand />™ is awarded Patents in the USA on their{" "}
+              <Brand />™ methode applied to Text, SMS, and CellPhones.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <Divider />
+
+      {/* ===== Article 3 — Secured patents ===== */}
+      <article id="secured-patents" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[820px]">
+          <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
+            Secured patents
           </h2>
 
           <BlogImage
-            src={blog1Img}
-            alt="Black Hat conference signage in Las Vegas"
+            src={blog3Img}
+            alt="Person reviewing a numbered inbox on a laptop"
           />
 
           <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
             <p>
-              Our staff who were in Las Vegas for the official launch were
-              delighted with the reception we received. Of the hundreds, and
-              possibly thousands, of people we talked to at the show, a grand
-              total of two (yes, two) had bad things to say about <Brand />
-              <Sup>TM</Sup> and <Brand trail="Counter" />
-              <Sup>TM</Sup>. We hope we'll have a chance to talk to both of
-              them again, and maybe change their minds.
-            </p>
-            <p>
-              According to the old saying, "What happens in Vegas stays in
-              Vegas." Not this time! Now that we have officially launched, we
-              intend to bring the good news about numbering emails to as many
-              organizations as possible.
+              <Brand />™ is awarded Patents in the USA and UK to help
+              safeguard electronic messages. Among the many uses of the IP is
+              a method to prevent email phishing by numbering outgoing emails.
+              This method will empower email recipients with a method to
+              validate authentic emails from the sender. It's a
+              human-compatible approach that can easily be implemented now.
             </p>
           </div>
+
+          <BlogImage
+            src={blog3Img1}
+            alt="PhishFlagger enabled email client preview"
+          />
+
+          <BlogImage
+            src={blog3Img2}
+            alt="Numbering prevents fraud — historical comparison"
+          />
         </div>
       </article>
 
@@ -318,38 +483,35 @@ export default function Blog() {
 
       <Divider />
 
-      {/* ===== Article 3 — Secured patents ===== */}
-      <article id="secured-patents" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      {/* ===== Article 1 — Vegas ===== */}
+      <article id="vegas" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
-            Secured patents
+            <Brand /> "What happens in Vegas stays in Vegas." Not this time!
           </h2>
 
           <BlogImage
-            src={blog3Img}
-            alt="Person reviewing a numbered inbox on a laptop"
+            src={blog1Img}
+            alt="Black Hat conference signage in Las Vegas"
           />
 
           <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
             <p>
-              <Brand />™ is awarded Patents in the USA and UK to help
-              safeguard electronic messages. Among the many uses of the IP is
-              a method to prevent email phishing by numbering outgoing emails.
-              This method will empower email recipients with a method to
-              validate authentic emails from the sender. It's a
-              human-compatible approach that can easily be implemented now.
+              Our staff who were in Las Vegas for the official launch were
+              delighted with the reception we received. Of the hundreds, and
+              possibly thousands, of people we talked to at the show, a grand
+              total of two (yes, two) had bad things to say about <Brand />
+              <Sup>TM</Sup> and <Brand trail="Counter" />
+              <Sup>TM</Sup>. We hope we'll have a chance to talk to both of
+              them again, and maybe change their minds.
+            </p>
+            <p>
+              According to the old saying, "What happens in Vegas stays in
+              Vegas." Not this time! Now that we have officially launched, we
+              intend to bring the good news about numbering emails to as many
+              organizations as possible.
             </p>
           </div>
-
-          <BlogImage
-            src={blog3Img1}
-            alt="PhishFlagger enabled email client preview"
-          />
-
-          <BlogImage
-            src={blog3Img2}
-            alt="Numbering prevents fraud — historical comparison"
-          />
         </div>
       </article>
     </>

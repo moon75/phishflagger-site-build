@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export function TelecomFormPage({
@@ -34,7 +34,7 @@ export function TelecomFormPage({
               &trade;
             </span>
           </Link>
-          <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+          <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications.
           </p>
           <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">

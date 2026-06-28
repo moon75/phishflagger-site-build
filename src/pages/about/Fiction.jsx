@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import page1 from "../../assets/images/fiction/Newspaper Page 1.jpg";
 import page2 from "../../assets/images/fiction/Newspaper Page 2.jpg";
@@ -31,6 +32,23 @@ export default function Fiction() {
   return (
     <div className="relative min-h-screen w-full bg-[#1f1f22] text-white">
       <CloseButton />
+
+      {/* Header */}
+      <div className="w-full bg-white px-4 pt-10 pb-8 text-center sm:px-6">
+        <Link to="/" className="inline-block hover:opacity-80">
+          <span className="text-[28px] leading-none tracking-tight italic sm:text-[34px]">
+            <span className="font-extrabold text-ink">Phish</span>
+            <span className="font-normal text-brand">Flagger</span>
+          </span>
+          <sup className="ml-0.5 text-[13px] font-normal not-italic text-ink">™</sup>
+        </Link>
+        <p className="mt-2 text-[18px] font-medium text-ink sm:text-[19px]">
+          Protecting Communications
+        </p>
+        <h1 className="mt-6 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[52px]">
+          Fiction
+        </h1>
+      </div>
 
       <div className="flex min-h-screen flex-col items-center justify-between px-4 py-10 sm:px-8 sm:py-14">
         {/* Viewer */}

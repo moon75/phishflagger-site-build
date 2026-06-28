@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox v2.png";
@@ -231,7 +231,7 @@ function PageBrand() {
       >
         <BrandDisplay />
       </Link>
-      <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
         Protecting Communications
       </p>
     </div>

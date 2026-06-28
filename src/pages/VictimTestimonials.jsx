@@ -38,7 +38,7 @@ export default function VictimTestimonials() {
             </span>
           </Link>
 
-          <p className="mt-3 text-[20px] font-medium leading-none text-[#242424]">
+          <p className="mt-3 text-[25px] font-medium leading-none text-[#242424]">
             Protecting Communications
           </p>
 

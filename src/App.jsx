@@ -33,6 +33,8 @@ import Blog from "./pages/about/Blog.jsx";
 import News from "./pages/about/News.jsx";
 import Fiction from "./pages/about/Fiction.jsx";
 import Kickstarter from "./pages/about/Kickstarter.jsx";
+import HallOfFame from "./pages/about/HallOfFame.jsx";
+import Supporters from "./pages/about/Supporters.jsx";
 
 export default function App() {
   return (
@@ -75,6 +77,8 @@ export default function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="news" element={<News />} />
           <Route path="kickstarter" element={<Kickstarter />} />
+          <Route path="hall-of-fame" element={<HallOfFame />} />
+          <Route path="supporters" element={<Supporters />} />
           <Route path="fiction" element={<Fiction />} />
         </Route>
 

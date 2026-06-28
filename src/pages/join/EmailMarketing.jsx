@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
@@ -24,14 +24,12 @@ export default function EmailMarketing() {
           <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <p>
               You can help prevent phishing and fraud by numbering your outgoing
-              emails. A <BrandInline />
-              &trade; license can protect your brand and clients while
+              emails. <BrandInline />
+              &trade; can protect your brand and clients while
               increasing your campaign reach.
             </p>
             <p>
-              Obtain a <BrandInline />
-              &trade; Marketer and Bulk Emailer License to help protect all
-              email recipients from phishing and fraud.
+              Protect all email recipients from phishing and fraud.
             </p>
           </div>
 
@@ -50,11 +48,6 @@ export default function EmailMarketing() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[1100px] text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
           <ul className="mt-5 space-y-2 pl-5">
-            <li className="list-disc">
-              When sending marketing emails, direct emails, and bulk emails, a
-              Marketer and Bulk Emailer License is required to number your
-              outgoing bulk emails.
-            </li>
             <li className="list-disc">
               <BrandInline />
               &trade; email numbering in your outgoing email campaigns helps
@@ -289,7 +282,7 @@ function PageBrand() {
       >
         <BrandDisplay />
       </Link>
-      <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
         Protecting Communications
       </p>
     </div>

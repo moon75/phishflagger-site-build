@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtectionImg from "../../assets/images/3rd section left image.avif";
@@ -82,11 +82,6 @@ export default function EmailDomain() {
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[1100px] text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-          <p>
-            Domain Applications and Reseller licensing can help secure your
-            email domains and all incoming and outgoing email communications:
-          </p>
-
           <ul className="mt-5 space-y-2 pl-5">
             <li className="list-disc">
               <BrandInline />
@@ -100,10 +95,6 @@ export default function EmailDomain() {
             <li className="list-disc">
               Tame email security at all levels and help prevent
               impersonation, phishing and other email-based fraud.
-            </li>
-            <li className="list-disc">
-              Book a meeting with a member of our team to explore your
-              opportunities.
             </li>
           </ul>
         </div>
@@ -174,7 +165,7 @@ function PageBrand() {
       >
         <BrandDisplay />
       </Link>
-      <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
         Protecting Communications
       </p>
     </div>

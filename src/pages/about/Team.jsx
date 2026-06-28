@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import williamImg from "../../assets/images/william.avif";
 import mikeImg from "../../assets/images/mike.avif";
@@ -87,7 +87,7 @@ export default function Team() {
                 </span>
               </Link>
             </div>
-            <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
 

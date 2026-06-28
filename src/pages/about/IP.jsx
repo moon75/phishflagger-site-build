@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
 function Brand({ trail = "Flagger" }) {
@@ -82,7 +82,7 @@ export default function IP() {
                 </span>
               </Link>
             </div>
-            <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
 

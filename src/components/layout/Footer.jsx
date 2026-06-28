@@ -1,4 +1,21 @@
 import { Link } from "react-router-dom";
+import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
+import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
+import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
+import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
+import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
+import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
+import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+
+const PRODUCT_IMAGES = [
+  { src: callerIdBoxImg, alt: "Caller ID box" },
+  { src: desktopPhoneImg, alt: "Desktop phone" },
+  { src: threePhoneImg, alt: "Three phones" },
+  { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
+  { src: emailPhoneImg, alt: "PhishFlagger Email" },
+  { src: messagesPhoneImg, alt: "PhishFlagger Messages" },
+  { src: textPhoneImg, alt: "PhishFlagger Text" },
+];
 
 export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
   const tags = [
@@ -11,44 +28,123 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
   return (
     <>
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[1200px]">
+          <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
+            Protecting Communications
+          </h2>
+          <div className="mt-10 grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+            {PRODUCT_IMAGES.map((item) => (
+              <img
+                key={item.alt}
+                src={item.src}
+                alt={item.alt}
+                className="mx-auto h-[150px] w-full object-contain sm:h-[190px]"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-[#eef0f4] font-['Mulish',sans-serif]">
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
+
         <div className="mx-auto max-w-[980px] px-6 pt-9 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
-          <div className="mx-auto mb-[18px] max-w-[640px]">
+          {/* Description paragraph */}
+          <div className="mx-auto max-w-[640px]">
             <p className="text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
               </em>
-              ™ was created to protect consumers and help companies eliminate brand
-              destruction by imposters. We sequentially number outgoing digital
-              communications including Email, Message, Text/SMS and Caller ID.
+              ™ prevents impersonation.
+              We sequentially number outgoing digital communications and validate sending domain or email.
             </p>
-            <nav aria-label="Footer menu" className="mt-5 flex flex-wrap items-center justify-center gap-x-0 gap-y-2">
-              {[
-                { label: "About Us", to: "/about/team" },
-                { label: "Contact", to: "/contact" },
-                { label: "Victim Testimonials", to: "/victim-testimonials" },
-                { label: "Endorse Us", to: "/endorse-us" },
-              ].map((link, i, arr) => (
-                <span key={link.to} className="flex items-center">
-                  <Link
-                    to={link.to}
-                    className="px-3 text-[13px] font-semibold text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
-                  >
-                    {link.label}
-                  </Link>
-                  {i < arr.length - 1 && (
-                    <span className="text-[#ccc] select-none" aria-hidden>|</span>
-                  )}
-                </span>
-              ))}
-            </nav>
+            <hr className="mt-8 border-[#d8dae0]" />
+          </div>
+
+          {/* Three-column site index */}
+          <div className="mx-auto mt-8 max-w-[640px] text-left">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
+              {/* Column 1 — Company */}
+              <div>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Company</p>
+                <ul className="space-y-2.5 list-none p-0">
+                  {[
+                    { label: "Home", to: "/" },
+                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
+                    { label: "Community", to: "/community" },
+                    { label: "Demo", to: "/demo" },
+                    { label: "Video", to: "/video" },
+                    { label: "Victim Testimonials", to: "/victim-testimonials" },
+                    { label: "Endorse Us", to: "/endorse-us" },
+                    { label: "Contact", to: "/contact" },
+                  ].map((link) => (
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
+                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2 — Join */}
+              <div>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Join</p>
+                <ul className="space-y-2.5 list-none p-0">
+                  {[
+                    { label: "Email — Domain", to: "/join/email-domain" },
+                    { label: "Email — Individual", to: "/join/email-individual" },
+                    { label: "Email — Marketing", to: "/join/email-marketing" },
+                    { label: "Telecom", to: "/join/telecom" },
+                  ].map((link) => (
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
+                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 3 — About */}
+              <div>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">About</p>
+                <ul className="space-y-2.5 list-none p-0">
+                  {[
+                    { label: "Kickstarter", to: "/about/kickstarter" },
+                    { label: "Team", to: "/about/team" },
+                    { label: "Press", to: "/about/press" },
+                    { label: "Video", to: "/about/video" },
+                    { label: "IP", to: "/about/ip" },
+                    { label: "FAQ", to: "/about/faq" },
+                    { label: "Blog", to: "/about/blog" },
+                    { label: "Fiction", to: "/about/fiction" },
+                  ].map((link) => (
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
+                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           <ul
             aria-label="Social media"
-            className="mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
+            className="mt-8 mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
           >
             <li>
               <a

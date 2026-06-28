@@ -8,7 +8,9 @@ import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 import howWorksImg from "../assets/images/4th section.avif";
 import whoCanUseImg from "../assets/images/5th sec.avif";
-import callerIdSectionImg from "../assets/images/6th sec.avif";
+import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
+import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
+import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
@@ -84,6 +86,10 @@ export default function Home() {
           <ul className="mb-6 space-y-4 text-[15px] leading-[1.6] text-ink sm:mb-8 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>Provides a defense against impersonation and fraud.</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
                 Human-compatible solution that validates legitimate
                 communications an highlights fraud attempts.
@@ -106,10 +112,6 @@ export default function Home() {
                 Flags fraud attempts that do not have the expected sequential
                 number.
               </span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>Provides a defense against impersonation and fraud.</span>
             </li>
           </ul>
 
@@ -164,8 +166,38 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 4 — How Does PhishFlagger Work? (white) ===== */}
+    {/* ===== Section 4 — Individual protection (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr]">
+        {/* Left — heading + text */}
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="font-normal not-italic">™</span>
+            <br />
+            Individual protection
+          </h2>
+          <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
+            Support our free plug to stop impersonation now.
+          </p>
+        </div>
+
+        {/* Right — Thunderbird client image */}
+        <div className="flex justify-center lg:justify-end">
+          <img
+            src="/assets/images/thunderbird client image.webp"
+            alt="Mozilla Thunderbird email client with PhishFlagger plugin"
+            className="h-auto w-full max-w-[560px] object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 5 — How Does PhishFlagger Work? (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -227,17 +259,29 @@ export default function Home() {
 
     {/* ===== Section 6 — Caller ID (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
-        <div className="flex justify-center lg:justify-start">
+      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
+        {/* Left — 3 phones in a row */}
+        <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
           <img
-            src={callerIdSectionImg}
-            alt="Caller ID device"
-            className="h-auto w-full max-w-[420px] object-contain"
+            src={callerIdDesktopImg}
+            alt="Desktop corded phone with PhishFlagger Caller ID"
+            className="h-auto w-1/3 max-w-[160px] object-contain"
+          />
+          <img
+            src={threePhoneImg}
+            alt="PhishFlagger Caller ID phones"
+            className="h-auto w-1/3 max-w-[105px] object-contain"
+          />
+          <img
+            src={callerIdHandsetImg}
+            alt="Cordless handset with PhishFlagger Caller ID"
+            className="h-auto w-1/3 max-w-[160px] object-contain"
           />
         </div>
+        {/* Right — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Caller ID
+            Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Sequence Number known only by valid carrier and callee prevents

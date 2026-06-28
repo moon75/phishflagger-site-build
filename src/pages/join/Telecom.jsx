@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
-import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
-import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
-import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
-import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
+import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 
 export default function Telecom() {
   return (
@@ -52,11 +49,11 @@ export default function Telecom() {
             <h2 className="text-[24px] font-bold leading-tight text-ink sm:text-[30px]">
               User-facing authentication
             </h2>
-            <ul className="mt-6 space-y-2 text-[15px] leading-relaxed text-ink sm:text-[18px]">
+            <ul className="mt-6 space-y-2 text-[12px] leading-relaxed text-ink sm:text-[15px] lg:text-[18px]">
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
-                  className="grid grid-cols-[minmax(0,1fr)_4.5ch_minmax(0,0.8fr)_5rem] items-baseline gap-3 font-medium tabular-nums"
+                  className="grid grid-cols-[minmax(0,1fr)_4ch_minmax(0,0.7fr)_4rem] sm:grid-cols-[minmax(0,1fr)_4.5ch_minmax(0,0.8fr)_5rem] items-baseline gap-2 sm:gap-3 font-medium tabular-nums"
                 >
                   <span>{item.number}</span>
                   <span className="font-bold text-[#1f6e5f]">{item.seq}</span>
@@ -65,7 +62,7 @@ export default function Telecom() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[18px] leading-relaxed text-ink sm:text-[22px]">
+            <p className="mt-6 text-[14px] leading-relaxed text-ink sm:text-[18px] lg:text-[22px]">
               Existing Caller ID will be used to validate calls.
             </p>
           </div>
@@ -101,8 +98,8 @@ export default function Telecom() {
         imageAlt="Caller ID box showing a PhishCounter sequence number"
         reverse
         items={[
-          "Flags fraud attempts that do not have the expected sequential number.",
           "Provides a defense against impersonation and fraud.",
+          "Flags fraud attempts that do not have the expected sequential number.",
         ]}
       />
 
@@ -122,23 +119,6 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
-            Protecting Communications
-          </h2>
-          <div className="mt-10 grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
-            {PRODUCT_IMAGES.map((item) => (
-              <img
-                key={item.alt}
-                src={item.src}
-                alt={item.alt}
-                className="mx-auto h-[150px] w-full object-contain sm:h-[190px]"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
@@ -176,15 +156,6 @@ const CALL_EXAMPLES = [
   },
 ];
 
-const PRODUCT_IMAGES = [
-  { src: callerIdBoxImg, alt: "Caller ID box" },
-  { src: desktopPhoneImg, alt: "Desktop phone" },
-  { src: threePhoneImg, alt: "Three phones" },
-  { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
-  { src: emailPhoneImg, alt: "PhishFlagger Email" },
-  { src: messagesPhoneImg, alt: "PhishFlagger Messages" },
-  { src: textPhoneImg, alt: "PhishFlagger Text" },
-];
 
 function PageBrand() {
   return (
@@ -202,7 +173,7 @@ function PageBrand() {
           &trade;
         </span>
       </Link>
-      <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
         Protecting Communications.
       </p>
     </div>
@@ -221,7 +192,7 @@ function ActionCard({ to, label, src, alt, imageClassName = "" }) {
       <img
         src={src}
         alt={alt}
-        className={`mt-5 h-[90px] w-[90px] object-contain sm:h-[110px] sm:w-[110px] ${imageClassName}`}
+        className={`mt-5 h-[68px] w-[68px] object-contain sm:h-[83px] sm:w-[83px] ${imageClassName}`}
       />
     </Link>
   );

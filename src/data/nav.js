@@ -17,6 +17,8 @@ export const nav = [
     label: "About",
     children: [
       { label: "Kickstarter", href: "/about/kickstarter" },
+      { label: "Hall of Fame", href: "/about/hall-of-fame" },
+      { label: "Supporters", href: "/about/supporters" },
       { label: "Team", href: "/about/team" },
       { label: "Press", href: "/about/press" },
       { label: "Video", href: "/about/video" },

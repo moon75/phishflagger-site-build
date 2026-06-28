@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const initialForm = {
@@ -42,7 +42,7 @@ export default function EmailMarketingQuote() {
           >
             <BrandDisplay />
           </Link>
-          <p className="mt-3 text-[13px] font-medium text-ink sm:text-[14px]">
+          <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications
           </p>
           <h1 className="mt-6 text-[22px] font-medium leading-tight tracking-tight text-ink sm:text-[30px]">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import victimImg from "../assets/images/victim testimonials.avif";
@@ -25,7 +25,7 @@ export default function PhishFlaggerOrg() {
           </h1>
 
           {/* Tagline */}
-          <p className="mt-3 text-center text-[13px] font-medium text-ink sm:text-[14px]">
+          <p className="mt-3 text-center text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications
           </p>
 
