@@ -18,34 +18,12 @@ export default function Telecom() {
         <div className="mx-auto max-w-content">
           <PageBrand />
 
-          <div className="mt-14 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
-            <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-left lg:text-[36px]">
+          <div className="mt-14">
+            <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
               Regulators and Telecoms
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
-
-            <div className="flex flex-wrap justify-center gap-10 sm:gap-14">
-              <ActionCard
-                to="/join/telecom/contact"
-                label="Contact"
-                src={contactIcon}
-                alt="Contact"
-                imageClassName="rounded-full object-cover"
-              />
-              <ActionCard
-                to="/join/telecom/subscribe"
-                label="Subscribe"
-                src={subscribeIcon}
-                alt="Subscribe"
-              />
-              <ActionCard
-                to="/endorse-us"
-                label="Endorse Us"
-                src={endorseIcon}
-                alt="Endorse Us"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -126,6 +104,49 @@ export default function Telecom() {
         </div>
       </section>
 
+      {/* ===== Bottom CTA panel ===== */}
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-content">
+          <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
+            <ActionCard
+              to="/join/telecom/contact"
+              label="Contact"
+              src={contactIcon}
+              alt="Contact"
+              imageClassName="rounded-full object-cover"
+            />
+            <ActionCard
+              to="/join/telecom/subscribe"
+              label="Subscribe"
+              src={subscribeIcon}
+              alt="Subscribe"
+            />
+            <ActionCard
+              to="/endorse-us"
+              label="Endorse Us"
+              src={endorseIcon}
+              alt="Endorse Us"
+            />
+            <ActionCard
+              to="/petition"
+              label="Sign Petition"
+              alt="Sign Petition"
+              svgIcon={
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-5 h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
+                  <rect x="18" y="14" width="28" height="36" rx="3" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
+                  <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="23" y1="35" x2="34" y2="35" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M36 44 L48 32 L52 36 L40 48 L34 50 Z" fill="#ff0033" stroke="white" strokeWidth="1"/>
+                  <line x1="46" y1="34" x2="50" y2="38" stroke="white" strokeWidth="1.5"/>
+                </svg>
+              }
+            />
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
@@ -187,7 +208,7 @@ function PageBrand() {
   );
 }
 
-function ActionCard({ to, label, src, alt, imageClassName = "" }) {
+function ActionCard({ to, label, src, alt, imageClassName = "", svgIcon }) {
   return (
     <Link
       to={to}
@@ -196,11 +217,13 @@ function ActionCard({ to, label, src, alt, imageClassName = "" }) {
       <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
-      <img
-        src={src}
-        alt={alt}
-        className={`mt-5 h-[68px] w-[68px] object-contain sm:h-[83px] sm:w-[83px] ${imageClassName}`}
-      />
+      {svgIcon ?? (
+        <img
+          src={src}
+          alt={alt}
+          className={`mt-5 h-[68px] w-[68px] object-contain sm:h-[83px] sm:w-[83px] ${imageClassName}`}
+        />
+      )}
     </Link>
   );
 }
