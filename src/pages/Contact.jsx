@@ -23,7 +23,7 @@ export default function Contact() {
     <>
     <CloseButton />
     <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
-      <div className="mx-auto max-w-[1100px]">
+      <div className="mx-auto max-w-content">
         {/* ===== Top — wordmark, tagline, page heading ===== */}
         <div className="text-center">
           <div className="text-[36px] leading-none tracking-tight sm:text-[48px] lg:text-[56px]">

@@ -15,7 +15,7 @@ export default function Telecom() {
       <CloseButton />
 
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto max-w-content">
           <PageBrand />
 
           <div className="mt-14 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
@@ -51,7 +51,7 @@ export default function Telecom() {
       </section>
 
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight text-ink sm:text-[30px]">
               User-facing authentication
@@ -111,7 +111,7 @@ export default function Telecom() {
       />
 
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <p className="text-center text-[25px] leading-snug tracking-tight text-ink sm:text-[34px] lg:text-left">
             By adding a <strong>Sequence Number</strong> to the existing Caller
             ID rail, we can end Caller ID fraud.
@@ -208,7 +208,7 @@ function ActionCard({ to, label, src, alt, imageClassName = "" }) {
 function SplitSection({ image, imageAlt, text }) {
   return (
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img
             src={image}
@@ -250,7 +250,7 @@ function FeatureSection({ tone = "white", image, imageAlt, items, reverse }) {
         tone === "gray" ? "bg-[#eef0f4]" : "bg-white"
       }`}
     >
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         {reverse ? imageEl : listEl}
         {reverse ? listEl : imageEl}
       </div>

@@ -27,7 +27,7 @@ export default function Home() {
     <>
     {/* ===== Section 1 — Hero (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
-      <div className="mx-auto max-w-[1100px]">
+      <div className="mx-auto max-w-content">
       {/* Logo — mark + wordmark */}
       <div className="flex items-center justify-center gap-2 sm:gap-3">
         <img
@@ -80,7 +80,7 @@ export default function Home() {
 
     {/* ===== Section 2 — What is PhishFlagger? (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         {/* Left — heading + bullets */}
         <div>
           <ul className="mb-6 space-y-4 text-[15px] leading-[1.6] text-ink sm:mb-8 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -138,7 +138,7 @@ export default function Home() {
 
     {/* ===== Section 3 — Domain protection (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         {/* Left — email authentication diagram */}
         <div className="flex justify-center lg:justify-start">
           <img
@@ -168,7 +168,7 @@ export default function Home() {
 
     {/* ===== Section 4 — Individual protection (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr]">
         {/* Left — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -198,7 +198,7 @@ export default function Home() {
 
     {/* ===== Section 5 — How Does PhishFlagger Work? (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div className="flex justify-center lg:justify-start">
           <img
             src={howWorksImg}
@@ -231,7 +231,7 @@ export default function Home() {
 
     {/* ===== Section 5 — Who Can Use (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             Who Can Use
@@ -259,7 +259,7 @@ export default function Home() {
 
     {/* ===== Section 6 — Caller ID (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
           <img
@@ -301,7 +301,7 @@ export default function Home() {
 
     {/* ===== Section 7 — Numbering history (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto max-w-[1100px]">
+      <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[16px] leading-[1.5] text-ink sm:text-[20px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
           records and documents, thereby reducing fraud.

@@ -9,7 +9,7 @@ export default function EmailIndividual() {
       <CloseButton />
 
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto max-w-content">
           <PageBrand />
 
           <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
@@ -21,7 +21,7 @@ export default function EmailIndividual() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto flex max-w-[1100px] justify-center">
+        <div className="mx-auto flex max-w-content justify-center">
           <img
             src={emailInboxImg}
             alt="Inbox showing PhishCounter numbered email messages"

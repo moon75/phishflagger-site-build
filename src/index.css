@@ -23,6 +23,18 @@
   --font-display: "Mulish", "Mulish Placeholder", sans-serif;
 }
 
+@layer utilities {
+  /* Content wrapper — 1100px on standard screens, scales to 75 vw (max 1600px) on hi-res */
+  .max-w-content {
+    max-width: 1100px;
+  }
+  @media (min-width: 1536px) {
+    .max-w-content {
+      max-width: clamp(1100px, 75vw, 1600px);
+    }
+  }
+}
+
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;

@@ -18,7 +18,7 @@ function TelecomThanks({ message }) {
     <>
       <CloseButton to="/join/telecom" />
       <section className="w-full bg-white px-4 py-16 sm:px-6 sm:py-24">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto max-w-content">
           <div className="text-center">
             <Link
               to="/"

@@ -53,7 +53,7 @@ export default function PhishFlaggerOrg() {
       </section>
 
       {/* Divider */}
-      <div className="mx-auto h-px w-[88%] max-w-[1100px] bg-gray-300" />
+      <div className="mx-auto h-px w-[88%] max-w-content bg-gray-300" />
 
       {/* ===== Section 2 — Participate and Help Improve (white) ===== */}
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">

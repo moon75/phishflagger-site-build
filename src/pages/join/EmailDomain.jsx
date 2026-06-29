@@ -10,7 +10,7 @@ export default function EmailDomain() {
       <CloseButton />
 
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto max-w-content">
           <PageBrand />
 
           <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
@@ -22,7 +22,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
           <div className="space-y-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <p>
               Protect your email domains and those you resell with{" "}
@@ -52,7 +52,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex justify-center lg:justify-start">
             <img
               src={domainProtocolImg}
@@ -81,7 +81,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-[1100px] text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+        <div className="mx-auto max-w-content text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
           <ul className="mt-5 space-y-2 pl-5">
             <li className="list-disc">
               <BrandInline />
