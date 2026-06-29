@@ -3,6 +3,7 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
+import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -18,7 +19,7 @@ export default function Telecom() {
           <PageBrand />
 
           <div className="mt-14 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
-            <h1 className="text-center text-[34px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[48px] lg:text-left lg:text-[60px]">
+            <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-left lg:text-[36px]">
               Regulators and Telecoms
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
@@ -37,6 +38,12 @@ export default function Telecom() {
                 label="Subscribe"
                 src={subscribeIcon}
                 alt="Subscribe"
+              />
+              <ActionCard
+                to="/endorse-us"
+                label="Endorse Us"
+                src={endorseIcon}
+                alt="Endorse Us"
               />
             </div>
           </div>

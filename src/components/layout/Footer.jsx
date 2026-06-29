@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -8,7 +7,6 @@ import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/Ph
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 
 const PRODUCT_IMAGES = [
-  { src: callerIdBoxImg, alt: "Caller ID box" },
   { src: desktopPhoneImg, alt: "Desktop phone" },
   { src: threePhoneImg, alt: "Three phones" },
   { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
@@ -28,18 +26,19 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
   return (
     <>
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <div className="h-1.5 w-full bg-brand" aria-hidden />
+      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
             Protecting Communications
           </h2>
-          <div className="mt-10 grid grid-cols-2 items-center gap-6 sm:grid-cols-3 lg:grid-cols-7">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
             {PRODUCT_IMAGES.map((item) => (
               <img
                 key={item.alt}
                 src={item.src}
                 alt={item.alt}
-                className="mx-auto h-[150px] w-full object-contain sm:h-[190px]"
+                className="h-[150px] w-auto object-contain sm:h-[190px]"
               />
             ))}
           </div>

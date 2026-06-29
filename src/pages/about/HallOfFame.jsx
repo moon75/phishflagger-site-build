@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import williamImg from "../../assets/images/william.avif";
-import mikeImg from "../../assets/images/mike.avif";
-import joeImg from "../../assets/images/joe.avif";
 
 const SUPPORTERS = [
   {
     id: 1,
     name: "Sarah Mitchell",
     number: "#0001",
-    img: williamImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahMitchell&backgroundColor=b6e3f4",
     quote:
       "How come it took so long? The world needed this yesterday. I've been waiting for something like PhishFlagger my entire career in banking.",
   },
@@ -17,7 +14,7 @@ const SUPPORTERS = [
     id: 2,
     name: "James Thornton",
     number: "#0002",
-    img: mikeImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=JamesThornton&backgroundColor=c0aede",
     quote:
       "Finally a real solution to email fraud. PhishFlagger is a game changer — simple, human-compatible, and long overdue.",
   },
@@ -25,7 +22,7 @@ const SUPPORTERS = [
     id: 3,
     name: "Linda Okafor",
     number: "#0003",
-    img: joeImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=LindaOkafor&backgroundColor=ffd5dc",
     quote:
       "I was scammed twice before I found PhishFlagger. I wish this existed sooner. Proud to be Supporter #0003.",
   },
@@ -71,8 +68,8 @@ export default function HallOfFame() {
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[980px]">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {SUPPORTERS.map((s) => (
-              <SupporterCard key={s.id} {...s} />
+            {SUPPORTERS.map((s, i) => (
+              <SupporterCard key={s.id} {...s} index={i + 1} />
             ))}
           </div>
         </div>
@@ -81,13 +78,17 @@ export default function HallOfFame() {
   );
 }
 
-function SupporterCard({ name, number, img, quote }) {
+function SupporterCard({ name, number, img, quote, index }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
+    <div className="relative flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
+      {/* Sign-in number */}
+      <span className="absolute left-5 top-4 text-[52px] font-extrabold leading-none text-[#e8eaee]">
+        {index}
+      </span>
       <img
         src={img}
         alt={name}
-        className="h-24 w-24 rounded-full object-cover ring-4 ring-[#eef0f4]"
+        className="relative h-24 w-24 rounded-full object-cover ring-4 ring-[#eef0f4]"
       />
       <h2 className="mt-4 text-[18px] font-semibold text-ink">{name}</h2>
       <span className="mt-1 inline-block rounded-full bg-brand px-3 py-0.5 text-[12px] font-bold text-white tracking-wide">

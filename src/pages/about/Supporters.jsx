@@ -1,28 +1,25 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import williamImg from "../../assets/images/william.avif";
-import shawnImg from "../../assets/images/shawn.avif";
-import danImg from "../../assets/images/dan.avif";
 
 const SUPPORTERS = [
   {
     id: 1,
     name: "Sarah Mitchell",
-    img: williamImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahMitchell&backgroundColor=b6e3f4",
     note: "How come it took so long? The world needed this yesterday. Proud to support PhishFlagger from day one.",
     verified: true,
   },
   {
     id: 2,
     name: "James Thornton",
-    img: shawnImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=JamesThornton&backgroundColor=c0aede",
     note: "Finally a real solution to email fraud. Simple, human-compatible, and long overdue. I'm all in.",
     verified: true,
   },
   {
     id: 3,
     name: "Linda Okafor",
-    img: danImg,
+    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=LindaOkafor&backgroundColor=ffd5dc",
     note: "I was scammed twice before I found PhishFlagger. This technology should be everywhere.",
     verified: false,
   },
