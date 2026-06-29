@@ -82,7 +82,7 @@ function SupporterCard({ name, number, img, quote, index }) {
   return (
     <div className="relative flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
       {/* Sign-in number */}
-      <span className="absolute left-5 top-4 text-[52px] font-extrabold leading-none text-[#e8eaee]">
+      <span className="absolute left-5 top-4 text-[52px] font-extrabold leading-none text-black">
         {index}
       </span>
       <img

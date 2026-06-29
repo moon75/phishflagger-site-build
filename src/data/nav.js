@@ -13,7 +13,7 @@ export const nav = [
     ],
   },
   {
-    label: "Help Us",
+    label: "Help",
     children: [
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/about/kickstarter" },
