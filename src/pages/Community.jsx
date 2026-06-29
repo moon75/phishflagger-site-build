@@ -24,12 +24,12 @@ export default function Community() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-[760px]">
           <div className="text-center">
-            <div className="text-[36px] leading-none tracking-tight sm:text-[48px] lg:text-[56px]">
+            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>
-              <span className="ml-1 align-super text-[16px] font-normal not-italic sm:text-[18px] lg:text-[22px]">
+              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
                 &trade;
               </span>
             </div>

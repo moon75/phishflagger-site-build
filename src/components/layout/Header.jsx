@@ -66,11 +66,9 @@ export default function Header() {
             </nav>
 
             {/* ^0001 badge — sits right next to Contact */}
-            <img
-              src="/assets/icons/member-id.svg"
-              alt="Member ID 0001"
-              className="ml-4 h-3.5 w-auto shrink-0 sm:ml-6"
-            />
+            <span className="ml-4 shrink-0 font-normal text-brand sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+              ^0001
+            </span>
           </div>
 
           {/* Mobile toggle */}

@@ -12,13 +12,13 @@ export default function Video() {
         <div className="mx-auto max-w-[1000px]">
           {/* Wordmark + tagline */}
           <div className="text-center">
-            <div className="text-[34px] leading-none tracking-tight sm:text-[44px] lg:text-[52px]">
+            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
               <Link to="/" className="inline-block hover:opacity-80">
                 <em className="italic">
                   <span className="font-extrabold text-ink">Phish</span>
                   <span className="font-normal text-brand">Flagger</span>
                 </em>
-                <span className="ml-1 align-super text-[16px] font-normal not-italic sm:text-[18px] lg:text-[20px]">
+                <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
                   ™
                 </span>
               </Link>

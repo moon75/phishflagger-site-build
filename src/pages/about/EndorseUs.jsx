@@ -29,18 +29,18 @@ export default function EndorseUs() {
             <Link
               to="/"
               aria-label="PhishFlagger home"
-              className="inline-block text-[42px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[48px]"
+              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
             >
               <em className="italic">
-                <span className="font-extrabold text-[#3a3a3a]">Phish</span>
+                <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>
-              <span className="align-super text-[18px] font-semibold not-italic text-[#3a3a3a] sm:text-[20px]">
+              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
                 &trade;
               </span>
             </Link>
 
-            <p className="mt-3 text-[25px] font-medium leading-none text-[#242424]">
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
 

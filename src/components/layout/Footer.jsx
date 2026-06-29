@@ -62,21 +62,19 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
             <hr className="mt-8 border-[#d8dae0]" />
           </div>
 
-          {/* Three-column site index */}
-          <div className="mx-auto mt-8 max-w-[640px] text-left">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
+          {/* Four-column site index */}
+          <div className="mx-auto mt-8 max-w-[860px] text-left">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {/* Column 1 — Company */}
               <div>
                 <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Company</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Home", to: "/" },
-                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
                     { label: "Community", to: "/community" },
                     { label: "Demo", to: "/demo" },
                     { label: "Video", to: "/video" },
                     { label: "Victim Testimonials", to: "/victim-testimonials" },
-                    { label: "Endorse Us", to: "/endorse-us" },
                     { label: "Contact", to: "/contact" },
                   ].map((link) => (
                     <li key={link.to}>
@@ -118,7 +116,6 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                 <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">About</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
-                    { label: "Kickstarter", to: "/about/kickstarter" },
                     { label: "Team", to: "/about/team" },
                     { label: "Press", to: "/about/press" },
                     { label: "Video", to: "/about/video" },
@@ -126,6 +123,31 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                     { label: "FAQ", to: "/about/faq" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Fiction", to: "/about/fiction" },
+                  ].map((link) => (
+                    <li key={link.to}>
+                      <Link
+                        to={link.to}
+                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 4 — Help */}
+              <div>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Help</p>
+                <ul className="space-y-2.5 list-none p-0">
+                  {[
+                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
+                    { label: "Kickstarter", to: "/about/kickstarter" },
+                    { label: "Hall of Fame", to: "/about/hall-of-fame" },
+                    { label: "Endorse Us", to: "/about/endorse-us" },
+                    { label: "Supporters", to: "/about/supporters" },
+                    { label: "Telecom - Endorse Us", to: "/endorse-us" },
+                    { label: "Telecom - Sign Petition", to: "/petition" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link

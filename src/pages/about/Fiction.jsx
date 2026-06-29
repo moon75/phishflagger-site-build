@@ -40,7 +40,7 @@ export default function Fiction() {
             <span className="font-extrabold text-ink">Phish</span>
             <span className="font-normal text-brand">Flagger</span>
           </span>
-          <sup className="ml-0.5 text-[13px] font-normal not-italic text-ink">™</sup>
+          <sup className="ml-0.5 text-[14px] font-normal not-italic text-ink sm:text-[16px]">™</sup>
         </Link>
         <p className="mt-2 text-[18px] font-medium text-ink sm:text-[19px]">
           Protecting Communications

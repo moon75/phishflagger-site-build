@@ -127,7 +127,7 @@ export default function IP() {
 
           {/* Footer line */}
           <p className="mt-12 text-[13px] text-ink-muted sm:mt-14 sm:text-[13.5px]">
-            Related applications and other jurisdictions are pending.
+            Related applications are pending in 62 Countries.
           </p>
         </div>
       </section>

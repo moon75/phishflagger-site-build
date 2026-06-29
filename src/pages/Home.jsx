@@ -83,7 +83,16 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         {/* Left — heading + bullets */}
         <div>
-          <ul className="mb-6 space-y-4 text-[15px] leading-[1.6] text-ink sm:mb-8 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+          <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
+            What is{" "}
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="font-normal not-italic">™</span>?
+          </h2>
+
+          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>Provides a defense against impersonation and fraud.</span>
@@ -114,15 +123,6 @@ export default function Home() {
               </span>
             </li>
           </ul>
-
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            What is{" "}
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>?
-          </h2>
         </div>
 
         {/* Right — info box image */}
@@ -229,8 +229,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 5 — Who Can Use (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 5 — Who Can Use (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -257,8 +257,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 6 — Caller ID (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 6 — Caller ID (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
@@ -287,7 +287,8 @@ export default function Home() {
             The Sequence Number known only by valid carrier and callee prevents
             impersonation. As the existing Caller ID rail is fully interoperable
             between carriers globally, a &lsquo;sequence number&rsquo; implemented
-            by telecoms worldwide would end fake calls.{" "}
+            by telecoms worldwide would end fake calls.
+            <br />
             <Link
               to="/petition"
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
@@ -299,8 +300,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Numbering history (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 7 — Numbering history (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[16px] leading-[1.5] text-ink sm:text-[20px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
@@ -339,8 +340,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 8 — FAQ (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 8 — FAQ (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-center text-[28px] font-bold tracking-tight text-ink sm:text-[36px] lg:text-[42px]">
           Frequently asked questions

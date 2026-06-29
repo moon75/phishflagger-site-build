@@ -161,7 +161,7 @@ function PageBrand() {
       <Link
         to="/"
         aria-label="PhishFlagger home"
-        className="inline-block text-[36px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[42px]"
+        className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
       >
         <BrandDisplay />
       </Link>

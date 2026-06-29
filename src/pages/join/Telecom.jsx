@@ -191,13 +191,13 @@ function PageBrand() {
       <Link
         to="/"
         aria-label="PhishFlagger home"
-        className="inline-block text-[36px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[48px] lg:text-[56px]"
+        className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
       >
         <em className="italic">
           <span className="font-extrabold text-ink">Phish</span>
           <span className="font-normal text-brand">Flagger</span>
         </em>
-        <span className="ml-1 align-super text-[16px] font-normal not-italic sm:text-[18px] lg:text-[22px]">
+        <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
           &trade;
         </span>
       </Link>

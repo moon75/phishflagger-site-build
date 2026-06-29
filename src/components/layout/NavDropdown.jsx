@@ -76,7 +76,7 @@ export default function NavDropdown({ item }) {
       <div
         role="menu"
         className={cn(
-          "absolute left-1/2 top-full z-50 mt-3 min-w-[240px] -translate-x-1/2 border-t-2 border-brand bg-white py-2 shadow-2xl ring-1 ring-black/5 transition-all duration-200",
+          "absolute left-1/2 top-full z-50 mt-3 w-max -translate-x-1/2 border-t-2 border-brand bg-white py-2 shadow-2xl ring-1 ring-black/5 transition-all duration-200",
           open
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-1.5 opacity-0",
