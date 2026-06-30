@@ -101,6 +101,8 @@ export default function PhishFlaggerOrg() {
         </div>
       </section>
 
+      <hr className="border-t border-gray-300" />
+
       {/* ===== Section 3 — FAQ (white) ===== */}
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[1000px]">

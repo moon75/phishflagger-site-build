@@ -160,7 +160,7 @@ export default function Home() {
             Domain protection
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
-            Domain protection for Microsoft, Google and Linux.
+            Domain protection for Microsoft, Google and Linux email servers.
           </p>
         </div>
       </div>
@@ -243,8 +243,15 @@ export default function Home() {
             <span className="font-normal not-italic">™</span>
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Any Email Domain can join the PhishFlagger Protocol. We also enable
+            Any Email Domain can join PhishFlagger protection. We also enable
             Marketers, Portals and Security Providers.
+          </p>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-5 sm:text-[15px] sm:leading-[1.6]">
+            <span className="font-semibold">Coming Soon Free:</span> Any
+            Individual using Gmail, Yahoo, Outlook/Hotmail/Live (and other
+            approved free sites) can install a plug-in for Thunderbird, Outlook
+            (and other approved Email Clients) and be protected with
+            PhishFlagger.
           </p>
         </div>
         <div className="flex justify-center lg:justify-end">
@@ -284,6 +291,8 @@ export default function Home() {
             Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            Fake phone calls can be prevented now.
+            <br />
             The Sequence Number known only by valid carrier and callee prevents
             impersonation. As the existing Caller ID rail is fully interoperable
             between carriers globally, a &lsquo;sequence number&rsquo; implemented
@@ -332,13 +341,15 @@ export default function Home() {
             topic="Phishing Protection"
             patent="US Patent 11,601,449 B2"
             attribution="William Pearce"
-            heading="Numbering Email"
+            heading="Numbering Communications"
             img={history3Img}
             imgAlt="PhishFlagger email numbering"
           />
         </div>
       </div>
     </section>
+
+    <hr className="border-t border-gray-300" />
 
     {/* ===== Section 8 — FAQ (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">

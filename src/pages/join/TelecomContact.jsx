@@ -15,7 +15,7 @@ export default function TelecomContact() {
     <>
       <CloseButton to="/join/telecom" />
       <TelecomFormPage
-        title="Contact Us (For Telecom or CallerID)"
+        title="Contact Us (For Telecom)"
         buttonLabel="Send"
         thanksPath="/join/telecom/thanks-contact"
         form={form}

@@ -267,6 +267,8 @@ function Divider() {
 
 function FaqSection() {
   return (
+    <>
+    <hr className="border-t border-gray-300" />
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-center text-[36px] font-semibold tracking-tight text-ink sm:text-[48px]">
@@ -286,6 +288,7 @@ function FaqSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
