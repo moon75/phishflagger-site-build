@@ -23,7 +23,15 @@ export default function EndorseUs() {
   return (
     <>
       <CloseButton />
-      <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
+      <div className="flex justify-end px-4 pt-5 pr-24 sm:px-6 sm:pr-28">
+        <Link
+          to="/about/supporters"
+          className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+        >
+          Supporters
+        </Link>
+      </div>
+      <section className="bg-white px-4 pb-16 pt-4 text-ink sm:px-6 sm:pt-6">
         <div className="mx-auto max-w-[1040px]">
           <div className="text-center">
             <Link

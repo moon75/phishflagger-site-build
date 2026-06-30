@@ -38,7 +38,7 @@ export default function Telecom() {
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
-                  className="grid grid-cols-[minmax(0,1fr)_4ch_minmax(0,0.7fr)_4rem] sm:grid-cols-[minmax(0,1fr)_4.5ch_minmax(0,0.8fr)_5rem] items-baseline gap-2 sm:gap-3 font-medium tabular-nums"
+                  className="grid grid-cols-[minmax(0,1fr)_4ch_max-content_1fr] sm:grid-cols-[minmax(0,1fr)_4.5ch_max-content_1fr] items-baseline gap-2 sm:gap-3 font-medium tabular-nums"
                 >
                   <span>{item.number}</span>
                   <span className="font-bold text-[#1f6e5f]">{item.seq}</span>

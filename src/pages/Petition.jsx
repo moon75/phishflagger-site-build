@@ -75,7 +75,7 @@ export default function Petition() {
   if (status === "success") {
     return (
       <>
-        <CloseButton to="/" />
+        <CloseButton to="/join/telecom" />
         <section className="flex min-h-screen flex-col items-center justify-center bg-white px-4 text-center">
           <div className="text-[52px] text-green-500">✓</div>
           <h2 className="mt-4 text-[28px] font-semibold text-[#303030]">
@@ -97,7 +97,7 @@ export default function Petition() {
 
   return (
     <>
-      <CloseButton to="/" />
+      <CloseButton to="/join/telecom" />
       <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
           {/* Header */}

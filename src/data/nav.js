@@ -17,9 +17,7 @@ export const nav = [
     children: [
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/about/kickstarter" },
-      { label: "Hall of Fame", href: "/about/hall-of-fame" },
       { label: "Endorse Us", href: "/about/endorse-us" },
-      { label: "Supporters", href: "/about/supporters" },
       { label: "Telecom - Endorse Us", href: "/endorse-us" },
       { label: "Telecom - Sign Petition", href: "/petition" },
     ],
@@ -27,9 +25,9 @@ export const nav = [
   {
     label: "About",
     children: [
-      { label: "Team", href: "/about/team" },
-      { label: "Press", href: "/about/press" },
       { label: "Video", href: "/about/video" },
+      { label: "Press", href: "/about/press" },
+      { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
       { label: "FAQ", href: "/about/faq" },
       { label: "Blog", href: "/about/blog" },

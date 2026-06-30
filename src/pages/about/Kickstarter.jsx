@@ -6,7 +6,16 @@ export default function Kickstarter() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
+      <div className="flex justify-end px-4 pt-5 pr-24 sm:px-6 sm:pr-28">
+        <Link
+          to="/about/hall-of-fame"
+          className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+        >
+          Hall of Fame
+        </Link>
+      </div>
+
+      <section className="w-full bg-white px-4 pt-6 pb-20 sm:px-6 sm:pt-8 sm:pb-28">
         <div className="mx-auto max-w-[920px] text-center">
           <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
             <Link to="/" className="inline-block hover:opacity-80">

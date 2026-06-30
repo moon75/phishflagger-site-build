@@ -63,7 +63,8 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
           </div>
 
           {/* Four-column site index */}
-          <div className="mx-auto mt-8 max-w-[860px] text-left">
+          <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen bg-white px-4 py-8 sm:px-6">
+          <div className="mx-auto max-w-[860px] text-left">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {/* Column 1 — Company */}
               <div>
@@ -161,6 +162,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                 </ul>
               </div>
             </div>
+          </div>
           </div>
 
           <ul

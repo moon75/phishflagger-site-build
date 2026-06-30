@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FAQ_ITEMS } from "../data/faq.js";
 import emailImg from "../assets/images/email.avif";
 import messagesImg from "../assets/images/messages.avif";
 import textImg from "../assets/images/text.avif";
@@ -373,41 +374,6 @@ export default function Home() {
     </>
   );
 }
-
-const FAQ_ITEMS = [
-  {
-    q: "Why PhishFlagger™?",
-    a: "Phishing scams and fraudulent emails hurt everybody. Today it is still far too easy to open an email that looks legitimate on the surface but hides malicious risks inside. PhishFlagger™ helps bulk email senders — banks, insurance companies, financial institutions — prevent customers from falling victim to phishing attempts by providing authenticated, numbered communications that assure recipients of message legitimacy.",
-  },
-  {
-    q: "What is PhishFlagger™ email numbering?",
-    a: "PhishFlagger™ email numbering is a patented protocol that assigns a unique sequential number to each outgoing email from a sender domain, making every legitimate message individually identifiable to the recipient.",
-  },
-  {
-    q: "How does PhishFlagger™ email numbering work?",
-    a: "Each outgoing email is tagged with the next number in the sender’s sequence (the PhishCounter™) and placed in the subject line. The recipient — or their email client — can confirm the number is in sequence; any out-of-sequence or missing number is automatically flagged as suspicious.",
-  },
-  {
-    q: "How do outgoing emails get numbered?",
-    a: "Numbering happens at the sending domain. When an email leaves the sender’s server, PhishFlagger™ inserts the next sequential number into the message header / subject line before delivery, so every recipient receives a counter-stamped email.",
-  },
-  {
-    q: "What are some other benefits of PhishFlagger™ email numbering?",
-    a: "Beyond phishing defense, sequential numbering improves deliverability trust, helps recipients track and audit communications, reduces support load from impersonation incidents, and gives marketers verifiable engagement signals.",
-  },
-  {
-    q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
-    a: "PhishFlagger™ was created to protect consumers and help companies eliminate brand destruction by imposters. By sequentially numbering digital communications, recipients can immediately identify legitimate messages and spot fraudulent ones that lack the expected sequence number.",
-  },
-  {
-    q: "Do email recipients need to install anything?",
-    a: "Nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side.",
-  },
-  {
-    q: "Is PhishFlagger™ email numbering patented?",
-    a: "Yes. The PhishFlagger™ email numbering method is a patented process. Licensing is available for organizations that want to protect their customers from phishing and authenticate their outgoing communications.",
-  },
-];
 
 function FaqItem({ question, answer, last }) {
   const [open, setOpen] = useState(false);

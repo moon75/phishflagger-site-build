@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { FAQ_ITEMS } from "../../data/faq.js";
 import emailInboxImg from "../../assets/images/email-inbox v2.png";
 
 export default function EmailIndividual() {
@@ -35,192 +36,6 @@ export default function EmailIndividual() {
   );
 }
 
-const FAQ_ITEMS = [
-  {
-    q: "Why PhishFlagger™?",
-    a: (
-      <>
-        <p>
-          Phishing scams and fraudulent emails hurt everybody. Today it is still
-          far too easy to open an email that looks legitimate on the surface but
-          hides malicious risks inside. For bulk email senders, getting people
-          to open their emails is critical to sales and extending the lifetime
-          value of a customer. <BrandInline />
-          &trade; email numbering is a patented, licensable email safeguard to
-          help prevent your email contacts from phishing and fraud.
-        </p>
-        <p>
-          <BrandInline />
-          &trade; prevents your contacts from being fooled by fraudulent emails
-          that may be claiming or even appearing to be from you. With{" "}
-          <BrandInline />
-          &trade; email numbering, you can give your clients confidence that
-          emails they receive from you are authentic and safe to open.
-        </p>
-        <p>
-          Help protect your customer base from phishing and assure them that you
-          take their privacy and safety seriously.
-        </p>
-      </>
-    ),
-  },
-  {
-    q: "What is PhishFlagger™ email numbering?",
-    a: (
-      <p>
-        It is simple. <BrandInline />
-        &trade; email numbering is a patented process that inserts a sequential
-        number, the <BrandInline trail="Counter" />
-        &trade;, in the subject line of each outgoing email to help prevent
-        phishing and other fraudulent emails. Once your emails are numbered,
-        people will know whether an email is really from you.
-      </p>
-    ),
-  },
-  {
-    q: "How does PhishFlagger™ email numbering work?",
-    a: (
-      <>
-        <p>
-          Once you see it in action, the patented <BrandInline />
-          &trade; email numbering method is simple and easy for anyone to
-          understand and use, like page numbers in a book. <BrandInline />
-          &trade; works this way: every time an email is sent to an email
-          contact, the subject line of the email gets prefixed with a sequential{" "}
-          <BrandInline trail="Counter" />
-          &trade; ID number.
-        </p>
-        <p>
-          The first email that gets sent to potentialclient1@market.com would be
-          numbered something like "001 - Don't miss out on this special,
-          limited-time offer." With the second email, the <BrandInline trail="Counter" />
-          &trade; number increases by one, so the subject line would be
-          something like "002 - Don't forget to take advantage of this special,
-          limited-time offer today."
-        </p>
-        <p>
-          The third email would be something like "003 - Last chance to grab
-          this offer before it's gone!" Since your contact knows that the last{" "}
-          <BrandInline trail="Counter" />
-          &trade; number they received from you was 003, the next email from you
-          should be 004. If they receive an email with no number, or with number
-          8, or 217, or anything other than 004, they know that email is
-          suspicious and a potential phishing attempt.
-        </p>
-      </>
-    ),
-  },
-  {
-    q: "How do outgoing emails get numbered?",
-    a: (
-      <p>
-        Bulk email senders that license <BrandInline />
-        &trade; need to inform their technology staff or IT providers to add a
-        sequential counter to the subject line of each email sent to each
-        recipient, following the easy steps in our Compliance Guide, which you
-        receive when you obtain a license. Automated <BrandInline />
-        &trade; email numbering implementations will vary depending on your
-        environment and will require customization for your email system. A
-        back-end process needs to be implemented to automatically generate and
-        insert a sequential <BrandInline trail="Counter" />
-        &trade; ID number into the subject line of each outgoing email that you
-        send. This back-end process may be incorporated within an existing email
-        system or may exist separately and interoperate with an existing email
-        system.
-      </p>
-    ),
-  },
-  {
-    q: "What are some other benefits of PhishFlagger™ email numbering?",
-    a: (
-      <>
-        <p>
-          In addition to helping keep people safe from phishing and email fraud,{" "}
-          <BrandInline />
-          &trade; can be very beneficial in other ways for organizations,
-          including saving time and money, improving productivity and
-          efficiency. Record-keeping and audit trails are much easier to find
-          when email discussions are uniquely numbered.
-        </p>
-        <p>
-          This adaptability can benefit customer service providers, HR teams,
-          legal teams, and sales teams that need to quickly reference specific
-          conversations. With <BrandInline />
-          &trade; email numbering, clients can refer to a numbered message
-          instead of searching through cluttered inboxes or folders.
-        </p>
-        <p>
-          Example: "The one from December 23rd. Jack: Hang on. I see a few. The
-          one named 'draft document?' Jill: No, no. It's called 'draft document
-          version 2-need help.' Jack: Are you sure you sent that to me? Jill:
-          Yes. Jack: Okay, let me have a look here. This may take a minute."
-        </p>
-        <p>
-          With numbered email, the same request is simpler: "I meant, Jack: Let
-          me check my junk mail folder. Jill: Email number 1127, from me. Jack:
-          One sec. Okay, yes, I see it right there."
-        </p>
-      </>
-    ),
-  },
-  {
-    q: "How does PhishFlagger™ help keep my email contacts safe from email phishing and fraud?",
-    a: (
-      <p>
-        The patented <BrandInline />
-        &trade; email numbering system helps keep people safer and reduces the
-        risks from email phishing and fraud. Your contacts compare the{" "}
-        <BrandInline trail="Counter" />
-        &trade; email ID number they receive to the number they are expecting to
-        receive in the next email from you, to determine if the email is really
-        from you and is safe to open. It is simple, but since it is virtually
-        impossible for anyone else but the actual sender and receiver to know
-        what the next sequence number is, the recipient is safer. With{" "}
-        <BrandInline />
-        &trade; email numbering, customers will not open fake emails claiming to
-        be from you because those fake emails will be easily recognizable: if it
-        has the wrong <BrandInline trail="Counter" />
-        &trade; number, or no number, it is fake.
-      </p>
-    ),
-  },
-  {
-    q: "I'm not a business — can PhishFlagger™ still protect me?",
-    a: (
-      <p>
-        Yes. <BrandInline />
-        &trade; offers individual licensing for personal email users who want to
-        give their contacts a way to verify that emails are genuinely from them.
-        It is particularly useful for professionals who regularly communicate
-        with clients, or anyone who wants to protect the people they email from
-        receiving spoofed messages in their name.
-      </p>
-    ),
-  },
-  {
-    q: "Do my email recipients need to install anything?",
-    a: (
-      <p>
-        Nothing at all. The <BrandInline trail="Counter" />
-        &trade; number appears directly in the subject line of every email —
-        visible in any email client, on any device. No app, no account, and no
-        technical setup is required on the recipient's side.
-      </p>
-    ),
-  },
-  {
-    q: "Is PhishFlagger™ email numbering patented?",
-    a: (
-      <p>
-        Yes. <BrandInline />
-        &trade; email numbering is a patented process. Licensing is available
-        for individuals and organizations of all sizes who want to protect their
-        contacts from phishing and authenticate their outgoing communications.
-      </p>
-    ),
-  },
-];
-
 function PageBrand() {
   return (
     <div className="text-center">
@@ -249,15 +64,6 @@ function BrandDisplay() {
         &trade;
       </span>
     </>
-  );
-}
-
-function BrandInline({ trail = "Flagger" }) {
-  return (
-    <em className="italic">
-      <span className="font-extrabold text-ink">Phish</span>
-      <span className="font-normal text-brand">{trail}</span>
-    </em>
   );
 }
 
