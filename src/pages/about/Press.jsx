@@ -138,6 +138,17 @@ export default function Press() {
               <Brand />™ and <Brand trail="Counter" />™ are Trademarks of{" "}
               <Brand /> Inc.
             </p>
+            <p className="pt-2 text-[13px] sm:text-[14px]">
+              <span className="font-semibold text-ink">Source: </span>
+              <a
+                href="https://www.einpresswire.com/article/905767982/phishflagger-announces-a-breakthrough-in-the-global-fight-against-caller-id-fraud"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                EIN Presswire
+              </a>
+            </p>
           </div>
         </div>
       </section>

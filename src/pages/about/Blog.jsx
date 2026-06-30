@@ -92,17 +92,16 @@ export default function Blog() {
       </section>
 
       {/* ===== Article 6 — Caller ID breakthrough (from Press) ===== */}
-      <article id="caller-id-breakthrough" className="w-full scroll-mt-28 bg-white px-4 pb-14 sm:px-6 sm:pb-20">
+      <article id="caller-id-breakthrough" className="w-full scroll-mt-28 bg-white px-4 pb-14 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
         <div className="mx-auto max-w-[820px]">
-          <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
-            <Brand />™ announces a breakthrough in the global fight against Caller ID fraud
-          </h2>
-
-          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
-            <p className="text-[14px] font-medium text-ink sm:text-[15px]">
+          <div className="text-center">
+            <h2 className="text-[22px] font-semibold leading-[1.35] text-ink sm:text-[26px]">
+              <Brand />™ announces a breakthrough in the global fight against Caller ID fraud
+            </h2>
+            <p className="mt-3 text-[14px] font-medium text-ink sm:text-[15px]">
               FOR IMMEDIATE RELEASE: Toronto, ON April 17, 2026
             </p>
-            <p className="text-[13px] text-ink-muted sm:text-[14px]">
+            <p className="mt-4 text-[13px] text-ink-muted sm:text-[14px]">
               Contact Information: Email:{" "}
               <a
                 href="mailto:callerid@phishflagger.com"
@@ -111,9 +110,12 @@ export default function Blog() {
                 callerid@phishflagger.com
               </a>
             </p>
-            <p className="text-[18px] font-semibold text-ink sm:text-[20px]">
+            <p className="mt-6 text-[18px] font-semibold text-ink sm:text-[20px]">
               Press Release
             </p>
+          </div>
+
+          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
             <p>
               Phone-based fraud using spoofing and fake Caller IDs has become a
               pervasive issue for individuals, companies, governments and law

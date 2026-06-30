@@ -20,7 +20,7 @@ export default function Telecom() {
 
           <div className="mt-14">
             <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
-              Regulators and Telecoms
+              Telecoms and Regulators
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
