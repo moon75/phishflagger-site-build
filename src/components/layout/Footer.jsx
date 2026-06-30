@@ -49,7 +49,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
 
-        <div className="mx-auto max-w-[980px] px-6 pt-9 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
+        <div className="mx-auto max-w-[980px] px-6 pt-9 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
           {/* Description paragraph */}
           <div className="mx-auto max-w-[640px]">
             <p className="text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
@@ -61,9 +61,10 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
             </p>
             <hr className="mt-8 border-[#d8dae0]" />
           </div>
+        </div>
 
-          {/* Four-column site index */}
-          <div className="relative left-1/2 right-1/2 -mx-[50vw] mt-8 w-screen bg-white px-4 py-8 sm:px-6">
+        {/* Four-column site index — full-width child of <footer>, no vw-based hacks needed */}
+        <div className="mt-8 w-full bg-white px-4 py-8 sm:px-6">
           <div className="mx-auto max-w-[860px] text-left">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {/* Column 1 — Company */}
@@ -163,8 +164,9 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
               </div>
             </div>
           </div>
-          </div>
+        </div>
 
+        <div className="mx-auto max-w-[980px] px-6 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4">
           <ul
             aria-label="Social media"
             className="mt-8 mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
