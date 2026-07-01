@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { FAQ_ITEMS } from "../../data/faq.js";
-import emailInboxImg from "../../assets/images/email-inbox v2.png";
+import phishCounterImg from "../../assets/images/4th section.avif";
 
 export default function EmailMarketing() {
   return (
@@ -72,9 +72,9 @@ export default function EmailMarketing() {
 
           <div className="flex justify-center lg:justify-end">
             <img
-              src={emailInboxImg}
-              alt="Inbox showing PhishCounter numbered email messages"
-              className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
+              src={phishCounterImg}
+              alt="PhishCounter subject line example"
+              className="h-auto w-full max-w-[560px] object-contain"
             />
           </div>
         </div>
