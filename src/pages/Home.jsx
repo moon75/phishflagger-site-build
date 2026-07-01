@@ -48,8 +48,14 @@ export default function Home() {
         Protecting Communications
       </h1>
 
+      <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5]">
+        <BrandInline />™ protects consumers and companies from brand
+        destruction by imposters. We secure Email, Text, SMS, Instant Messaging
+        and CallerID through sequential numbering.
+      </p>
+
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-10 sm:mt-20 sm:gap-x-16 sm:gap-y-12">
+      <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-x-16 sm:gap-y-12">
         {SCREENS.map((s) => (
           <div key={s.label} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
@@ -455,4 +461,3 @@ function PhonePlaceholder({ src, alt }) {
     />
   );
 }
-

@@ -84,7 +84,7 @@ export default function EndorseUs() {
             </p>
 
             <h1 className="mt-9 text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-[44px]">
-              Endorse Us
+              Endorse Us for safe phone Calls.
             </h1>
           </div>
 

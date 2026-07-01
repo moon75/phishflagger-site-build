@@ -7,7 +7,6 @@ import robertImg from "../../assets/images/dr robert.avif";
 import danImg from "../../assets/images/dan.avif";
 import jimImg from "../../assets/images/jim riches.avif";
 import paulImg from "../../assets/images/paul grant.avif";
-import joeImg from "../../assets/images/joe.avif";
 import shawnImg from "../../assets/images/shawn.avif";
 
 const TEAM = [
@@ -37,7 +36,7 @@ const TEAM = [
   },
   {
     name: "Dan Grozdanovski",
-    role: "VP Infrastructure and Engineering",
+    role: "CTO",
     bio: "Dan brings over 30 years of experience in management and technology across various sectors, including aerospace industry, photonics, lasers, automation, AI, virtualization and management.",
     photo: danImg,
   },
@@ -52,12 +51,6 @@ const TEAM = [
     role: "Digital Design",
     bio: "With over 20 years of experience in UX and product design, Paul is a dedicated leader committed to enhancing user experiences across multiple industries and platforms, with recent contributions in conversational AI.",
     photo: paulImg,
-  },
-  {
-    name: "Joe Andre",
-    role: "Senior Advisor, Telecommunications",
-    bio: "Joe has been in the telecommunications business for 41 years with Bell Canada in technical and management of field services for 34 years.",
-    photo: joeImg,
   },
   {
     name: "Shawn Pearce",

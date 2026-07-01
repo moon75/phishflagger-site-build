@@ -113,7 +113,7 @@ export default function IP() {
           {/* Trademark + license line */}
           <p className="mt-8 text-[13px] leading-[1.6] text-ink-muted sm:text-[13.5px]">
             <Brand />™ and <Brand trail="Counter" />™ are Trademarks of{" "}
-            <Brand /> Inc. 2023.
+            <Brand /> Inc. 2026.
             <br />
             License is required.
           </p>

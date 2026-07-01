@@ -13,16 +13,6 @@ export const nav = [
     ],
   },
   {
-    label: "Help",
-    children: [
-      { label: "PhishFlagger.org", href: "/phishflagger-org" },
-      { label: "Kickstarter", href: "/about/kickstarter" },
-      { label: "Endorse Us", href: "/about/endorse-us" },
-      { label: "Telecom - Endorse Us", href: "/endorse-us" },
-      { label: "Telecom - Sign Petition", href: "/petition" },
-    ],
-  },
-  {
     label: "About",
     children: [
       { label: "Video", href: "/about/video" },
@@ -32,6 +22,16 @@ export const nav = [
       { label: "FAQ", href: "/about/faq" },
       { label: "Blog", href: "/about/blog" },
       { label: "Fiction", href: "/about/fiction" },
+    ],
+  },
+  {
+    label: "Help",
+    children: [
+      { label: "PhishFlagger.org", href: "/phishflagger-org" },
+      { label: "Kickstarter", href: "/about/kickstarter" },
+      { label: "Endorse Us", href: "/about/endorse-us" },
+      { label: "Telecom - Endorse Us", href: "/endorse-us" },
+      { label: "Telecom - Sign Petition", href: "/petition" },
     ],
   },
   { label: "Contact", href: "/contact" },

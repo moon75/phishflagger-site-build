@@ -59,7 +59,6 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
               ™ prevents impersonation.
               We sequentially number outgoing digital communications and validate sending domain or email.
             </p>
-            <hr className="mt-8 border-[#d8dae0]" />
           </div>
         </div>
 
@@ -69,7 +68,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {/* Column 1 — Company */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Company</p>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Company</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Home", to: "/" },
@@ -82,7 +81,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                     <li key={link.to}>
                       <Link
                         to={link.to}
-                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
                         {link.label}
                       </Link>
@@ -93,7 +92,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
               {/* Column 2 — Join */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Join</p>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Join</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Email — Domain", to: "/join/email-domain" },
@@ -104,7 +103,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                     <li key={link.to}>
                       <Link
                         to={link.to}
-                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
                         {link.label}
                       </Link>
@@ -115,7 +114,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
               {/* Column 3 — About */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">About</p>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">About</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Team", to: "/about/team" },
@@ -129,7 +128,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                     <li key={link.to}>
                       <Link
                         to={link.to}
-                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
                         {link.label}
                       </Link>
@@ -140,7 +139,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
               {/* Column 4 — Help */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-[#999]">Help</p>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Help</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "PhishFlagger.org", to: "/phishflagger-org" },
@@ -154,7 +153,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                     <li key={link.to}>
                       <Link
                         to={link.to}
-                        className="text-[13px] text-[#4a4a4a] transition-colors hover:text-[#FF0033]"
+                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
                         {link.label}
                       </Link>

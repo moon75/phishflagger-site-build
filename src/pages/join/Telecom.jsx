@@ -24,6 +24,10 @@ export default function Telecom() {
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
+            <p className="mx-auto mt-5 max-w-[720px] text-center text-[15px] leading-[1.6] text-ink sm:text-[18px]">
+              By adding a Sequence Number to the existing Caller ID rail, we
+              can end Caller ID fraud.
+            </p>
           </div>
         </div>
       </section>
@@ -38,12 +42,26 @@ export default function Telecom() {
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
-                  className="grid grid-cols-[minmax(0,1fr)_4ch_max-content_1fr] sm:grid-cols-[minmax(0,1fr)_4.5ch_max-content_1fr] items-baseline gap-2 sm:gap-3 font-medium tabular-nums"
+                  className="font-medium tabular-nums"
                 >
                   <span>{item.number}</span>
-                  <span className="font-bold text-[#1f6e5f]">{item.seq}</span>
+                  {item.seq && (
+                    <>
+                      {" "}
+                      <span className="font-bold text-[#1f6e5f]">
+                        {item.seq}
+                      </span>
+                    </>
+                  )}{" "}
                   <span>{item.name}</span>
-                  <span className="font-bold text-brand">{item.status}</span>
+                  {item.status && (
+                    <>
+                      {" "}
+                      <span className="font-bold text-brand">
+                        {item.status}
+                      </span>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
@@ -65,7 +83,10 @@ export default function Telecom() {
       <SplitSection
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
-        text="As the Caller ID rail is interoperable between technologies and carriers globally, a sequence number can be implemented easily to authenticate calls and help prevent fraud."
+        bullets={[
+          "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
+          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide. In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically. In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
+        ]}
       />
 
       <FeatureSection
@@ -91,8 +112,9 @@ export default function Telecom() {
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <p className="text-center text-[25px] leading-snug tracking-tight text-ink sm:text-[34px] lg:text-left">
-            By adding a <strong>Sequence Number</strong> to the existing Caller
-            ID rail, we can end Caller ID fraud.
+            As the Caller ID rail is interoperable between technologies and
+            carriers globally, a sequence number can be implemented easily to
+            authenticate calls and help prevent fraud.
           </p>
           <div className="flex justify-center">
             <img
@@ -228,7 +250,7 @@ function ActionCard({ to, label, src, alt, imageClassName = "", svgIcon }) {
   );
 }
 
-function SplitSection({ image, imageAlt, text }) {
+function SplitSection({ image, imageAlt, text, bullets }) {
   return (
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
@@ -239,9 +261,19 @@ function SplitSection({ image, imageAlt, text }) {
             className="h-auto w-full max-w-[300px] object-contain"
           />
         </div>
-        <p className="text-center text-[22px] leading-relaxed text-ink sm:text-[28px] lg:text-left">
-          {text}
-        </p>
+        {bullets ? (
+          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
+            {bullets.map((item) => (
+              <li key={item} className="list-disc">
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-center text-[22px] leading-relaxed text-ink sm:text-[28px] lg:text-left">
+            {text}
+          </p>
+        )}
       </div>
     </section>
   );

@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { FAQ_ITEMS } from "../../data/faq.js";
+import emailInboxImg from "../../assets/images/email-inbox v2.png";
 
 export default function EmailMarketing() {
   return (
@@ -47,25 +48,35 @@ export default function EmailMarketing() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-content text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-          <ul className="mt-5 space-y-2 pl-5">
-            <li className="list-disc">
-              <BrandInline />
-              &trade; email numbering in your outgoing email campaigns helps
-              prevent others from impersonating you, your organization, clients,
-              partners, and your brand.
-            </li>
-            <li className="list-disc">
-              Designed for marketers and bulk emails.
-            </li>
-            <li className="list-disc">
-              Tame email security and help prevent phishing and other email
-              fraud.
-            </li>
-            <li className="list-disc">
-              Prevent Impersonations of your customers.
-            </li>
-          </ul>
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <ul className="mt-5 space-y-2 pl-5">
+              <li className="list-disc">
+                <BrandInline />
+                &trade; email numbering in your outgoing email campaigns helps
+                prevent others from impersonating you, your organization, clients,
+                partners, and your brand.
+              </li>
+              <li className="list-disc">
+                Designed for marketers and bulk emails.
+              </li>
+              <li className="list-disc">
+                Tame email security and help prevent phishing and other email
+                fraud.
+              </li>
+              <li className="list-disc">
+                Prevent Impersonations of your customers.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={emailInboxImg}
+              alt="Inbox showing PhishCounter numbered email messages"
+              className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
+            />
+          </div>
         </div>
       </section>
 
