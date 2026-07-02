@@ -42,13 +42,25 @@ function MobileGroup({ item, onClose }) {
         <ul className="flex flex-col py-2 pl-4">
           {item.children.map((child) => (
             <li key={child.href}>
-              <NavLink
-                to={child.href}
-                onClick={onClose}
-                className="block py-3 text-lg text-ink-muted transition-colors hover:text-brand"
-              >
-                {child.label}
-              </NavLink>
+              {child.external ? (
+                <a
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                  className="block py-3 text-lg text-ink-muted transition-colors hover:text-brand"
+                >
+                  {child.label}
+                </a>
+              ) : (
+                <NavLink
+                  to={child.href}
+                  onClick={onClose}
+                  className="block py-3 text-lg text-ink-muted transition-colors hover:text-brand"
+                >
+                  {child.label}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>

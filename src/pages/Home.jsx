@@ -409,7 +409,7 @@ function FaqItem({ question, answer, last }) {
         </svg>
       </button>
       {open && (
-        <div className="px-4 pb-5 text-[13.5px] leading-[1.65] text-ink-muted sm:px-6 sm:pb-6 sm:text-[15px]">
+        <div className="whitespace-pre-line px-4 pb-5 text-[13.5px] leading-[1.65] text-ink-muted sm:px-6 sm:pb-6 sm:text-[15px]">
           {answer}
         </div>
       )}

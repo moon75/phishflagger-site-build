@@ -186,7 +186,7 @@ function FaqItem({ question, answer, defaultOpen, last }) {
         </span>
       </button>
       {open && (
-        <div className="space-y-4 px-4 pb-5 text-[13px] leading-[1.75] text-ink-muted sm:px-6 sm:text-[14px]">
+        <div className="whitespace-pre-line space-y-4 px-4 pb-5 text-[13px] leading-[1.75] text-ink-muted sm:px-6 sm:text-[14px]">
           {answer}
         </div>
       )}

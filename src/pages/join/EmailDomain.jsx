@@ -62,42 +62,23 @@ export default function EmailDomain() {
             />
           </div>
 
-          <div>
-            <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-ink sm:text-[42px]">
-              <BrandDisplay />
-              <br />
-              Domain Protection
-            </h2>
-
-            <ul className="mt-6 space-y-4 text-[14px] font-semibold leading-relaxed text-ink sm:text-[15px]">
-              <Benefit>Better Phishing protection protocol human validation.</Benefit>
-              <Benefit>Flag or quarantine out of sequence email.</Benefit>
-              <Benefit>Number outgoing email automatically.</Benefit>
-              <Benefit>Resellers earn additional revenue.</Benefit>
+          <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <ul className="space-y-2 pl-5">
+              <li className="list-disc">
+                <BrandInline />
+                &trade; email numbering in email domains helps prevent others
+                from impersonating you, your organization, and your brand.
+              </li>
+              <li className="list-disc">
+                Designed for organizations of all sizes with email domains, and
+                for resellers.
+              </li>
+              <li className="list-disc">
+                Tame email security at all levels and help prevent
+                impersonation, phishing and other email-based fraud.
+              </li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-content text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-          <ul className="mt-5 space-y-2 pl-5">
-            <li className="list-disc">
-              <BrandInline />
-              &trade; email numbering in email domains helps prevent others
-              from impersonating you, your organization, and your brand.
-            </li>
-            <li className="list-disc">
-              Designed for organizations of all sizes with email domains, and
-              for resellers.
-            </li>
-            <li className="list-disc">
-              Tame email security at all levels and help prevent
-              impersonation, phishing and other email-based fraud.
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -157,15 +138,6 @@ function BrandInline({ trail = "Flagger" }) {
   );
 }
 
-function Benefit({ children }) {
-  return (
-    <li className="flex gap-3">
-      <span className="mt-[0.45em] h-3 w-3 shrink-0 rounded-full bg-[#2a6df4]" />
-      <span>{children}</span>
-    </li>
-  );
-}
-
 function Divider() {
   return <div className="mx-auto h-px w-[94%] max-w-[1120px] bg-gray-300" />;
 }
@@ -216,7 +188,7 @@ function FaqItem({ question, answer, defaultOpen, last }) {
         </span>
       </button>
       {open && (
-        <div className="px-4 pb-5 text-[13px] leading-[1.75] text-ink-muted sm:px-6 sm:text-[14px]">
+        <div className="whitespace-pre-line px-4 pb-5 text-[13px] leading-[1.75] text-ink-muted sm:px-6 sm:text-[14px]">
           {answer}
         </div>
       )}

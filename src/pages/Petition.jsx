@@ -125,7 +125,11 @@ export default function Petition() {
             onSubmit={onSubmit}
             className="mx-auto mt-12 max-w-[802px] rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-10 sm:px-10"
           >
-            <h1 className="text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
+            <p className="text-center text-[24px] font-semibold leading-tight text-[#303030] sm:text-[30px]">
+              Sign Petition
+            </p>
+
+            <h1 className="mt-5 text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
               Help Stop Fake Calls
             </h1>
 

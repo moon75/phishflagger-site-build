@@ -85,13 +85,25 @@ export default function NavDropdown({ item }) {
         <ul className="flex flex-col">
           {item.children.map((child) => (
             <li key={child.href}>
-              <NavLink
-                to={child.href}
-                role="menuitem"
-                className="block whitespace-nowrap px-5 py-2 text-[15px] text-ink transition-colors hover:text-brand"
-              >
-                {child.label}
-              </NavLink>
+              {child.external ? (
+                <a
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="menuitem"
+                  className="block whitespace-nowrap px-5 py-2 text-[15px] text-ink transition-colors hover:text-brand"
+                >
+                  {child.label}
+                </a>
+              ) : (
+                <NavLink
+                  to={child.href}
+                  role="menuitem"
+                  className="block whitespace-nowrap px-5 py-2 text-[15px] text-ink transition-colors hover:text-brand"
+                >
+                  {child.label}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>

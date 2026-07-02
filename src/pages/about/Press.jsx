@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import { useEffect } from "react";
 
 const PRESS_RELEASE_URL =
   "https://www.einpresswire.com/article/905767982/phishflagger-announces-a-breakthrough-in-the-global-fight-against-caller-id-fraud";
@@ -15,17 +14,15 @@ function Brand({ trail = "Flagger" }) {
 }
 
 export default function Press() {
-  useEffect(() => {
-    window.location.replace(PRESS_RELEASE_URL);
-  }, []);
-
   return (
     <section className="w-full bg-white px-4 py-16 text-center sm:px-6 sm:py-24">
       <p className="text-[18px] font-medium text-ink">
-        Opening the PhishFlagger press release...
+        Open the PhishFlagger press release in a new window.
       </p>
       <a
         href={PRESS_RELEASE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-4 inline-block text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
       >
         Open EIN Presswire

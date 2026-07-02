@@ -85,7 +85,11 @@ export default function Telecom() {
         imageAlt="PhishFlagger Caller ID"
         bullets={[
           "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
-          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide. In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically. In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
+          [
+            "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
+            "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
+            "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
+          ],
         ]}
       />
 
@@ -264,8 +268,16 @@ function SplitSection({ image, imageAlt, text, bullets }) {
         {bullets ? (
           <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
             {bullets.map((item) => (
-              <li key={item} className="list-disc">
-                {item}
+              <li key={Array.isArray(item) ? item.join(" ") : item} className="list-disc">
+                {Array.isArray(item) ? (
+                  <div className="space-y-4">
+                    {item.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                ) : (
+                  item
+                )}
               </li>
             ))}
           </ul>

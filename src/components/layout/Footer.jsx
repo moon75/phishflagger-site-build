@@ -45,7 +45,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
         </div>
       </section>
 
-      <footer className="bg-[#eef0f4] font-['Mulish',sans-serif]">
+      <footer className="bg-white font-['Mulish',sans-serif]">
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
 
@@ -68,7 +68,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {/* Column 1 — Company */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Company</p>
+                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Company</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Home", to: "/" },
@@ -92,7 +92,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
               {/* Column 2 — Join */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Join</p>
+                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Join</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Email — Domain", to: "/join/email-domain" },
@@ -112,18 +112,18 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                 </ul>
               </div>
 
-              {/* Column 3 — About */}
+              {/* Column 3 — Help */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">About</p>
+                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Help</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
-                    { label: "Team", to: "/about/team" },
-                    { label: "Press", to: "/about/press" },
-                    { label: "Video", to: "/about/video" },
-                    { label: "IP", to: "/about/ip" },
-                    { label: "FAQ", to: "/about/faq" },
-                    { label: "Blog", to: "/about/blog" },
-                    { label: "Fiction", to: "/about/fiction" },
+                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
+                    { label: "Kickstarter", to: "/about/kickstarter" },
+                    { label: "Hall of Fame", to: "/about/hall-of-fame" },
+                    { label: "Endorse Us", to: "/about/endorse-us" },
+                    { label: "Supporters", to: "/about/supporters" },
+                    { label: "Telecom - Endorse Us", to: "/endorse-us" },
+                    { label: "Telecom - Sign Petition", to: "/petition" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link
@@ -137,18 +137,18 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
                 </ul>
               </div>
 
-              {/* Column 4 — Help */}
+              {/* Column 4 — About */}
               <div>
-                <p className="mb-4 text-[10px] font-bold uppercase tracking-widest text-black">Help</p>
+                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">About</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
-                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
-                    { label: "Kickstarter", to: "/about/kickstarter" },
-                    { label: "Hall of Fame", to: "/about/hall-of-fame" },
-                    { label: "Endorse Us", to: "/about/endorse-us" },
-                    { label: "Supporters", to: "/about/supporters" },
-                    { label: "Telecom - Endorse Us", to: "/endorse-us" },
-                    { label: "Telecom - Sign Petition", to: "/petition" },
+                    { label: "Team", to: "/about/team" },
+                    { label: "Press", to: "/about/press" },
+                    { label: "Video", to: "/about/video" },
+                    { label: "IP", to: "/about/ip" },
+                    { label: "FAQ", to: "/about/faq" },
+                    { label: "Blog", to: "/about/blog" },
+                    { label: "Fiction", to: "/about/fiction" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link
@@ -251,7 +251,7 @@ export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
 
       <section
         aria-label="Related tags"
-        className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-[#eef0f4] px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[7px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[6px]"
+        className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-white px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[7px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[6px]"
       >
         {tags.map((t) => (
           <span key={t} className="inline-block whitespace-nowrap">
