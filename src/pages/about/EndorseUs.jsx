@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import supportersImg from "../../assets/images/supporters-cartoon.png";
+
+const FORMSPARK_ENDPOINT = "https://submit-form.com/IxWqoD0pH";
 
 export default function EndorseUs() {
   const [form, setForm] = useState({
@@ -12,13 +14,45 @@ export default function EndorseUs() {
     company: "",
     endorsement: "",
   });
+  const [status, setStatus] = useState("idle");
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    // Submission endpoint can be connected when the backend is ready.
+    setStatus("submitting");
+
+    try {
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        position: "",
+        company: "",
+        endorsement: "",
+      });
+      navigate(
+        location.pathname.startsWith("/help")
+          ? "/help/endorse-us/thanks"
+          : "/about/endorse-us/thanks"
+      );
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -132,11 +166,17 @@ export default function EndorseUs() {
             <div className="mt-12 flex justify-center">
               <button
                 type="submit"
-                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2"
+                disabled={status === "submitting"}
+                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60"
               >
-                Submit
+                {status === "submitting" ? "Submitting..." : "Submit"}
               </button>
             </div>
+            {status === "error" && (
+              <p className="mt-6 text-center text-[14px] font-medium text-red-600">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
           <aside className="text-center lg:sticky lg:top-32">
             <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[42px]">

@@ -1,5 +1,5 @@
 ﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const initialForm = {
   firstName: "",
@@ -23,12 +23,14 @@ const initialForm = {
 
 export default function EmailMarketingQuote() {
   const [form, setForm] = useState(initialForm);
+  const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
   const onSubmit = (event) => {
     event.preventDefault();
+    navigate("/join/email-marketing/quote/thanks");
   };
 
   return (

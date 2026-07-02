@@ -1,63 +1,53 @@
-import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
-const FORMSPARK_ID = "YOUR_FORM_ID";
+const FORMSPARK_ENDPOINT = "https://submit-form.com/YW0bMhHOg";
 
 export default function EndorseUs() {
-  const [name, setName] = useState("");
-  const [note, setNote] = useState("");
   const [pic, setPic] = useState(null);
   const [verifyMe, setVerifyMe] = useState(false);
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [details, setDetails] = useState("");
   const [status, setStatus] = useState("idle");
+  const navigate = useNavigate();
   const fileRef = useRef(null);
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
     setStatus("submitting");
 
-    const body = new FormData();
-    body.append("name", name);
-    body.append("note", note);
-    if (pic) body.append("pic", pic);
-    if (verifyMe) {
-      body.append("_verifyMe", "true");
-      body.append("email", email);
-      body.append("phone", phone);
-      if (details) body.append("details", details);
+    const data = new FormData(form);
+    const body = {};
+
+    for (const [key, value] of data.entries()) {
+      if (value instanceof File) continue;
+      body[key] = value;
+    }
+
+    if (pic) {
+      body.pic = pic.name;
     }
 
     try {
-      const res = await fetch(
-        `https://submit-api.formspark.io/f/${FORMSPARK_ID}`,
-        { method: "POST", body, headers: { Accept: "application/json" } }
-      );
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
       if (!res.ok) throw new Error();
       setStatus("success");
+      form.reset();
+      setPic(null);
+      setVerifyMe(false);
+      navigate("/endorse-us/thanks");
     } catch {
       setStatus("error");
     }
   };
-
-  if (status === "success") {
-    return (
-      <>
-        <CloseButton to="/join/telecom" />
-        <section className="flex min-h-screen flex-col items-center justify-center bg-white px-4 text-center">
-          <div className="text-[52px] text-green-500">✓</div>
-          <h2 className="mt-4 text-[28px] font-semibold text-[#303030]">
-            Thank you!
-          </h2>
-          <p className="mt-3 text-[16px] text-[#666]">
-            Your endorsement has been received.
-          </p>
-        </section>
-      </>
-    );
-  }
 
   return (
     <>
@@ -96,10 +86,10 @@ export default function EndorseUs() {
               {/* Name */}
               <Field label="Name">
                 <input
+                  id="name"
+                  name="name"
                   type="text"
                   required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
                   autoComplete="name"
                   className="h-13 w-full bg-transparent text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
@@ -109,16 +99,15 @@ export default function EndorseUs() {
               {/* Note */}
               <Field label="Note">
                 <textarea
+                  id="note"
+                  name="note"
                   required
                   rows={4}
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
                   placeholder="Share your thoughts on PhishFlagger…"
                   className="min-h-[96px] w-full resize-none bg-transparent py-4 text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
                 />
               </Field>
 
-              {/* Pic — optional file upload */}
               <div>
                 <span className="mb-3 block text-[21px] font-medium leading-none text-[#333333]">
                   Pic{" "}
@@ -138,6 +127,8 @@ export default function EndorseUs() {
                   </span>
                   <input
                     ref={fileRef}
+                    id="pic"
+                    name="pic"
                     type="file"
                     accept="image/*"
                     className="hidden"
@@ -146,10 +137,12 @@ export default function EndorseUs() {
                 </div>
               </div>
 
-              {/* Verify me as real — optional checkbox + conditional fields */}
               <div>
                 <label className="flex cursor-pointer items-center gap-3">
                   <input
+                    id="verifyMe"
+                    name="verifyMe"
+                    value="true"
                     type="checkbox"
                     checked={verifyMe}
                     onChange={(e) => setVerifyMe(e.target.checked)}
@@ -167,10 +160,10 @@ export default function EndorseUs() {
                   <div className="mt-5 space-y-4 rounded-[8px] border border-[#e4e7ea] bg-[#fafbfc] px-5 py-5">
                     <Field label="Email">
                       <input
+                        id="email"
+                        name="email"
                         type="email"
                         required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="hello@example.com"
                         autoComplete="email"
                         className="h-13 w-full bg-transparent text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
@@ -183,10 +176,10 @@ export default function EndorseUs() {
                           +1
                         </span>
                         <input
+                          id="phone"
+                          name="phone"
                           type="tel"
                           required
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
                           placeholder="(123) 456-7890"
                           autoComplete="tel"
                           className="min-w-0 flex-1 bg-transparent text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
@@ -194,33 +187,19 @@ export default function EndorseUs() {
                       </div>
                     </Field>
 
-                    <div>
-                      <span className="mb-3 block text-[21px] font-medium leading-none text-[#333333]">
-                        Details{" "}
-                        <span className="text-[14px] font-normal text-[#999]">
-                          optional
-                        </span>
-                      </span>
-                      <div className="rounded-[7px] bg-[#f5f7f8] px-4">
-                        <textarea
-                          rows={3}
-                          value={details}
-                          onChange={(e) => setDetails(e.target.value)}
-                          placeholder="Any additional details…"
-                          className="min-h-[72px] w-full resize-none bg-transparent py-4 text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
-                        />
-                      </div>
-                    </div>
+                    <Field label="Details">
+                      <textarea
+                        id="details"
+                        name="details"
+                        rows={3}
+                        placeholder="Any additional details..."
+                        className="min-h-[72px] w-full resize-none bg-transparent py-4 text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
+                      />
+                    </Field>
                   </div>
                 )}
               </div>
             </div>
-
-            {status === "error" && (
-              <p className="mt-6 text-center text-[14px] text-red-600">
-                Something went wrong. Please try again.
-              </p>
-            )}
 
             <div className="mt-12 flex justify-center">
               <button
@@ -228,9 +207,14 @@ export default function EndorseUs() {
                 disabled={status === "submitting"}
                 className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60"
               >
-                {status === "submitting" ? "Submitting…" : "Submit"}
+                {status === "submitting" ? "Submitting..." : "Submit"}
               </button>
             </div>
+            {status === "error" && (
+              <p className="mt-6 text-center text-[14px] font-medium text-red-600">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </div>
       </section>

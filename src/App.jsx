@@ -9,7 +9,10 @@ import Demo from "./pages/Demo.jsx";
 import VideoPage from "./pages/Video.jsx";
 import VictimTestimonials from "./pages/VictimTestimonials.jsx";
 import EndorseUs from "./pages/EndorseUs.jsx";
+import EndorseThanks from "./pages/EndorseThanks.jsx";
 import Petition from "./pages/Petition.jsx";
+import PetitionThanks from "./pages/PetitionThanks.jsx";
+import GenericThanks from "./pages/GenericThanks.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
@@ -45,18 +48,57 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="phishflagger-org" element={<PhishFlaggerOrg />} />
         <Route path="victim-testimonials" element={<VictimTestimonials />} />
+        <Route
+          path="victim-testimonials/thanks"
+          element={
+            <GenericThanks
+              message="Thank you. Your testimonial has been received."
+              closeTo="/phishflagger-org"
+            />
+          }
+        />
         <Route path="endorse-us" element={<EndorseUs />} />
+        <Route path="endorse-us/thanks" element={<EndorseThanks />} />
         <Route path="contact" element={<Contact />} />
+        <Route
+          path="contact/thanks"
+          element={
+            <GenericThanks
+              message="Thank you. Your message has been received."
+              closeTo="/contact"
+            />
+          }
+        />
         <Route path="community" element={<Community />} />
+        <Route
+          path="community/thanks"
+          element={
+            <GenericThanks
+              message="Thank you. Your community request has been received."
+              closeTo="/phishflagger-org"
+            />
+          }
+        />
         <Route path="demo" element={<Demo />} />
         <Route path="video" element={<VideoPage />} />
+        <Route path="News" element={<News />} />
         <Route path="petition" element={<Petition />} />
+        <Route path="petition/thanks" element={<PetitionThanks />} />
 
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />
           <Route path="email-individual" element={<EmailIndividual />} />
           <Route path="email-marketing" element={<EmailMarketing />} />
           <Route path="email-marketing/quote" element={<EmailMarketingQuote />} />
+          <Route
+            path="email-marketing/quote/thanks"
+            element={
+              <GenericThanks
+                message="Thank you. Your quote request has been received."
+                closeTo="/join/email-marketing"
+              />
+            }
+          />
           <Route path="telecom" element={<Telecom />} />
           <Route path="telecom/contact" element={<TelecomContact />} />
           <Route path="telecom/subscribe" element={<TelecomSubscribe />} />
@@ -71,6 +113,19 @@ export default function App() {
           <Route path="other" element={<Other />} />
         </Route>
 
+        <Route path="help">
+          <Route path="endorse-us" element={<AboutEndorseUs />} />
+          <Route
+            path="endorse-us/thanks"
+            element={
+              <GenericThanks
+                message="Thank you. Your endorsement has been received."
+                closeTo="/help/endorse-us"
+              />
+            }
+          />
+        </Route>
+
         <Route path="about">
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
@@ -82,6 +137,15 @@ export default function App() {
           <Route path="kickstarter" element={<Kickstarter />} />
           <Route path="hall-of-fame" element={<HallOfFame />} />
           <Route path="endorse-us" element={<AboutEndorseUs />} />
+          <Route
+            path="endorse-us/thanks"
+            element={
+              <GenericThanks
+                message="Thank you. Your endorsement has been received."
+                closeTo="/about/endorse-us"
+              />
+            }
+          />
           <Route path="supporters" element={<Supporters />} />
           <Route path="fiction" element={<Fiction />} />
         </Route>

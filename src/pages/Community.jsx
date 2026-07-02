@@ -1,4 +1,5 @@
 ﻿import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function Community() {
@@ -9,13 +10,14 @@ export default function Community() {
     phone: "",
     message: "",
   });
+  const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
   const onSubmit = (event) => {
     event.preventDefault();
-    // Submission endpoint can be connected when the backend is ready.
+    navigate("/community/thanks");
   };
 
   return (

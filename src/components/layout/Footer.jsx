@@ -121,7 +121,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "PhishFlagger.org", to: "/phishflagger-org" },
                     { label: "Kickstarter", to: "/about/kickstarter" },
                     { label: "Hall of Fame", to: "/about/hall-of-fame" },
-                    { label: "Endorse Us", to: "/about/endorse-us" },
+                    { label: "Endorse Us", to: "/help/endorse-us" },
                     { label: "Supporters", to: "/about/supporters" },
                     { label: "Telecom - Endorse Us", to: "/endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
@@ -148,6 +148,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Video", to: "/about/video" },
                     { label: "IP", to: "/about/ip" },
                     { label: "FAQ", to: "/about/faq" },
+                    { label: "Phishing News", to: "/News" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Fiction", to: "/about/fiction" },
                   ].map((link) => (

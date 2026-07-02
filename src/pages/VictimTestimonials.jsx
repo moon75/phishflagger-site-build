@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function VictimTestimonials() {
@@ -9,13 +9,14 @@ export default function VictimTestimonials() {
     phone: "",
     testimonial: "",
   });
+  const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
   const onSubmit = (event) => {
     event.preventDefault();
-    // Submission endpoint can be connected when the backend is ready.
+    navigate("/victim-testimonials/thanks");
   };
 
   return (

@@ -1,11 +1,130 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import newsCardImg from "../../assets/images/phishing-news-card.png";
+
+const NEWS_ITEMS = [
+  {
+    title:
+      "Q1 Goals to Cops in Security: The Rise of AI-Powered Phishing",
+    image: newsCardImg,
+  },
+  {
+    title:
+      "New PoisonSeed Attacking CRM & Bulk Email Providers in Supply Chain Phishing Attack",
+    image: newsCardImg,
+  },
+  {
+    title:
+      "Hackers Abuse Cloudflare Services for Sophisticated Phishing Attacks",
+    image: newsCardImg,
+  },
+  {
+    title:
+      "Phishing platform 'LabHost' behind wave of iOS, Android SMS attacks",
+    image: newsCardImg,
+  },
+  {
+    title: "Top 10 announcements from Black Hat 2024",
+    image: newsCardImg,
+  },
+  {
+    title:
+      "Phishing Emails Alert at DeBusk Anymore, Here's How to Spot Them",
+    image: newsCardImg,
+  },
+  {
+    title: "OPP warning Ontarians to be aware of 'smishing' fraud",
+    image: newsCardImg,
+  },
+  {
+    title: "New Data Shows Impact of AI-Powered Phishing on Businesses",
+    image: newsCardImg,
+  },
+  {
+    title:
+      "Weekly Recap: Chrome 0-Day, IngressNightmare, Solar Bugs, DNS Tactics, and More",
+    image: newsCardImg,
+  },
+];
 
 export default function News() {
   return (
     <>
       <CloseButton />
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <h1 className="text-4xl font-bold">News</h1>
+      <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
+        <div className="mx-auto max-w-[1040px]">
+          <div className="text-center">
+            <div className="text-[34px] leading-none tracking-tight sm:text-[42px]">
+              <em className="italic">
+                <span className="font-extrabold text-[#3a3a3a]">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>
+              <span className="ml-1 align-super text-[16px] font-semibold not-italic sm:text-[20px]">
+                TM
+              </span>
+            </div>
+            <p className="mt-3 text-[16px] font-medium text-[#303030] sm:text-[18px]">
+              The Email Phishing Solution
+            </p>
+            <h1 className="mt-8 text-[42px] font-normal leading-tight tracking-tight text-[#333333] sm:text-[58px]">
+              Latest Phishing News
+            </h1>
+          </div>
+
+          <form className="mx-auto mt-36 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-8 text-center sm:px-8">
+            <h2 className="text-[28px] font-semibold leading-tight text-[#435154] sm:text-[34px]">
+              Subscribe to PhishFlagger News
+            </h2>
+            <p className="mx-auto mt-5 max-w-[480px] text-[11px] leading-[1.8] text-[#4f5c60]">
+              Tip: To ensure our News mail never go in your junk folder
+              <br />
+              we recommend you add a new contact as no-reply@phishflaggernews.com
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <input
+                type="email"
+                placeholder="hello@example.com"
+                className="h-[54px] min-w-0 flex-1 rounded-[5px] bg-white px-4 text-[14px] text-ink placeholder:text-[#b6b6b6] focus:outline-none focus:ring-2 focus:ring-[#cdd4d7]"
+              />
+              <button
+                type="submit"
+                className="h-[54px] rounded-[5px] bg-[#565656] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {NEWS_ITEMS.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[8px] border border-[#dedede] bg-white shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-transform duration-200 hover:-translate-y-1"
+              >
+                <div className="flex min-h-[330px] w-full flex-col">
+                  <div className="h-[185px] w-full overflow-hidden bg-[#f4f5f7]">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
+                    <h2 className="text-[16px] font-bold leading-snug text-[#303030]">
+                      {item.title}
+                    </h2>
+                    <a
+                      href="#"
+                      className="mt-auto inline-flex items-center gap-2 pt-8 text-[12px] font-bold uppercase tracking-wide text-[#303030] hover:text-brand"
+                    >
+                      View News
+                      <span aria-hidden>›</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

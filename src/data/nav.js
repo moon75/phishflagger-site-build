@@ -20,7 +20,7 @@ export const nav = [
     children: [
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/about/kickstarter" },
-      { label: "Endorse Us", href: "/about/endorse-us" },
+      { label: "Endorse Us", href: "/help/endorse-us" },
       { label: "Telecom - Endorse Us", href: "/endorse-us" },
       { label: "Telecom - Sign Petition", href: "/petition" },
     ],
@@ -33,6 +33,7 @@ export const nav = [
       { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
       { label: "FAQ", href: "/about/faq" },
+      { label: "Phishing News", href: "/News" },
       { label: "Blog", href: "/about/blog" },
       { label: "Fiction", href: "/about/fiction" },
     ],

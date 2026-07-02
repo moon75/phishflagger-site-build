@@ -131,6 +131,14 @@ export default function Telecom() {
         </div>
       </section>
 
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-content text-center">
+          <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
+            Placeholder text
+          </p>
+        </div>
+      </section>
+
       {/* ===== Bottom CTA panel ===== */}
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">

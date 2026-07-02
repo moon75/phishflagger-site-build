@@ -1,5 +1,5 @@
 ﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function Contact() {
@@ -10,13 +10,14 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+  const navigate = useNavigate();
 
   const update = (field) => (e) =>
     setForm((f) => ({ ...f, [field]: e.target.value }));
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // wire up submission later
+    navigate("/contact/thanks");
   };
 
   return (

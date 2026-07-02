@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
-const FORMSPARK_ID = "YOUR_FORM_ID";
+const FORMSPARK_ENDPOINT = "https://submit-form.com/QA8UI22TL";
 
 const COUNTRIES = [
   "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda",
@@ -47,53 +47,37 @@ export default function Petition() {
   const [address, setAddress] = useState("");
   const [note, setNote] = useState("");
   const [status, setStatus] = useState("idle");
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
 
-    const body = new FormData();
-    body.append("name", name);
-    body.append("country", country);
-    if (email) body.append("email", email);
-    if (phone) body.append("phone", phone);
-    if (address) body.append("address", address);
-    if (note) body.append("note", note);
+    const body = {
+      name,
+      country,
+      ...(email ? { email } : {}),
+      ...(phone ? { phone } : {}),
+      ...(address ? { address } : {}),
+      ...(note ? { note } : {}),
+    };
 
     try {
-      const res = await fetch(
-        `https://submit-api.formspark.io/f/${FORMSPARK_ID}`,
-        { method: "POST", body, headers: { Accept: "application/json" } }
-      );
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
       if (!res.ok) throw new Error();
       setStatus("success");
+      navigate("/petition/thanks");
     } catch {
       setStatus("error");
     }
   };
-
-  if (status === "success") {
-    return (
-      <>
-        <CloseButton to="/join/telecom" />
-        <section className="flex min-h-screen flex-col items-center justify-center bg-white px-4 text-center">
-          <div className="text-[52px] text-green-500">✓</div>
-          <h2 className="mt-4 text-[28px] font-semibold text-[#303030]">
-            Thank you for signing!
-          </h2>
-          <p className="mt-3 text-[16px] text-[#666]">
-            Your signature has been received.
-          </p>
-          <Link
-            to="/"
-            className="mt-8 text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-          >
-            Back to home
-          </Link>
-        </section>
-      </>
-    );
-  }
 
   return (
     <>
