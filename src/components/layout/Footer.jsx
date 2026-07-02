@@ -5,6 +5,7 @@ import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/ph
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const PRODUCT_IMAGES = [
   { src: desktopPhoneImg, alt: "Desktop phone" },
@@ -15,7 +16,7 @@ const PRODUCT_IMAGES = [
   { src: textPhoneImg, alt: "PhishFlagger Text" },
 ];
 
-export default function Footer({ logoSrc = "/pf-logo-v2.png" }) {
+export default function Footer({ logoSrc = logoImg }) {
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
     "#numberingemail", "#cybersecurity", "#emailsecurity",

@@ -4,6 +4,7 @@ import { nav } from "../../data/nav.js";
 import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
+import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,18 +28,13 @@ export default function Header() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="flex shrink-0 items-center gap-2"
+            className="flex shrink-0 items-center"
             aria-label="PhishFlagger home"
           >
             <img
-              src="/assets/images/logo-mark.png"
-              alt=""
-              className="h-11 w-auto"
-            />
-            <img
-              src="/assets/images/logo-wordmark.png"
+              src={logoImg}
               alt="PhishFlagger"
-              className="h-7 w-auto"
+              className="h-auto w-[190px] sm:w-[220px]"
             />
           </NavLink>
 

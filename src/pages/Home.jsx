@@ -12,6 +12,7 @@ import whoCanUseImg from "../assets/images/5th sec.avif";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
+import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
@@ -29,17 +30,12 @@ export default function Home() {
     {/* ===== Section 1 — Hero (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
       <div className="mx-auto max-w-content">
-      {/* Logo — mark + wordmark */}
-      <div className="flex items-center justify-center gap-2 sm:gap-3">
+      {/* Logo */}
+      <div className="flex items-center justify-center">
         <img
-          src="/assets/images/logo-mark.png"
-          alt=""
-          className="h-14 w-auto sm:h-20"
-        />
-        <img
-          src="/assets/images/logo-wordmark.png"
+          src={logoImg}
           alt="PhishFlagger"
-          className="h-8 w-auto sm:h-12"
+          className="h-auto w-full max-w-[360px] sm:max-w-[520px]"
         />
       </div>
 
