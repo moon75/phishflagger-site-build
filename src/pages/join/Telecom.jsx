@@ -24,10 +24,6 @@ export default function Telecom() {
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
-            <p className="mx-auto mt-5 max-w-[720px] text-center text-[15px] leading-[1.6] text-ink sm:text-[18px]">
-              By adding a Sequence Number to the existing Caller ID rail, we
-              can end Caller ID fraud.
-            </p>
           </div>
         </div>
       </section>
@@ -84,7 +80,6 @@ export default function Telecom() {
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
-          "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
           [
             "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
             "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
@@ -115,11 +110,17 @@ export default function Telecom() {
 
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <p className="text-center text-[25px] leading-snug tracking-tight text-ink sm:text-[34px] lg:text-left">
-            As the Caller ID rail is interoperable between technologies and
-            carriers globally, a sequence number can be implemented easily to
-            authenticate calls and help prevent fraud.
-          </p>
+          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
+            <li className="list-disc">
+              As the Caller ID rail is interoperable between technologies and
+              carriers globally, a sequence number can be implemented easily to
+              authenticate calls and help prevent fraud.
+            </li>
+            <li className="list-disc">
+              By adding a Sequence Number to the existing Caller ID rail, we
+              can end Spoofing.
+            </li>
+          </ul>
           <div className="flex justify-center">
             <img
               src={desktopPhoneImg}

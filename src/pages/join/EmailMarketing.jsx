@@ -24,10 +24,13 @@ export default function EmailMarketing() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              Protect your Clients Brand from Impersonation.
+            </h2>
             <p>
               You can help prevent phishing and fraud by numbering your outgoing
               emails. <BrandInline />
-              &trade; can protect your brand and clients while
+              &trade; can protect your brand and your clients brand while
               increasing your campaign reach.
             </p>
             <p>
@@ -50,6 +53,9 @@ export default function EmailMarketing() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              How it works.
+            </h2>
             <ul className="mt-5 space-y-2 pl-5">
               <li className="list-disc">
                 <BrandInline />
@@ -80,7 +86,9 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[820px] text-center">
           <Link
             to="/contact"

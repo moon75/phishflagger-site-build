@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import supportersImg from "../../assets/images/supporters-cartoon.png";
 
 export default function EndorseUs() {
   const [form, setForm] = useState({
@@ -23,14 +24,6 @@ export default function EndorseUs() {
   return (
     <>
       <CloseButton />
-      <div className="flex justify-end px-4 pt-5 pr-24 sm:px-6 sm:pr-28">
-        <Link
-          to="/about/supporters"
-          className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-        >
-          Supporters
-        </Link>
-      </div>
       <section className="bg-white px-4 pb-16 pt-4 text-ink sm:px-6 sm:pt-6">
         <div className="mx-auto max-w-[1040px]">
           <div className="text-center">
@@ -57,9 +50,10 @@ export default function EndorseUs() {
             </h1>
           </div>
 
+          <div className="mt-24 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
           <form
             onSubmit={onSubmit}
-            className="mx-auto mt-24 max-w-[802px] rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
+            className="rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
           >
             <h2 className="text-center text-[26px] font-semibold leading-tight tracking-tight text-[#333333] sm:text-[36px]">
               Endorsement Information
@@ -144,6 +138,23 @@ export default function EndorseUs() {
               </button>
             </div>
           </form>
+          <aside className="text-center lg:sticky lg:top-32">
+            <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[42px]">
+              See our Supporters
+            </h2>
+            <img
+              src={supportersImg}
+              alt="Happy PhishFlagger supporters"
+              className="mx-auto mt-8 h-auto w-full max-w-[520px] object-contain"
+            />
+            <Link
+              to="/about/supporters"
+              className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              Supporters
+            </Link>
+          </aside>
+          </div>
         </div>
       </section>
     </>
