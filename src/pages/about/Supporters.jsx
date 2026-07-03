@@ -28,7 +28,7 @@ const SUPPORTERS = [
 export default function Supporters() {
   return (
     <>
-      <CloseButton />
+      <CloseButton to="/endorse-us" />
 
       {/* Header */}
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">

@@ -28,12 +28,12 @@ export const nav = [
   {
     label: "About",
     children: [
+      { label: "Phishing News", href: "/News" },
       { label: "Video", href: "/about/video" },
       { label: "Press", href: PRESS_RELEASE_URL, external: true },
       { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
       { label: "FAQ", href: "/about/faq" },
-      { label: "Phishing News", href: "/News" },
       { label: "Blog", href: "/about/blog" },
       { label: "Fiction", href: "/about/fiction" },
     ],

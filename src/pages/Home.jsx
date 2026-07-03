@@ -234,7 +234,7 @@ export default function Home() {
 
     {/* ===== Section 5 — Who Can Use (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             Who Can Use
@@ -257,11 +257,21 @@ export default function Home() {
             PhishFlagger.
           </p>
         </div>
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex flex-wrap justify-center gap-6 lg:justify-end">
+          <img
+            src="/assets/images/individual.png"
+            alt="Individual protection illustration"
+            className="h-auto w-full max-w-[220px] object-contain"
+          />
+          <img
+            src="/assets/images/domain.png"
+            alt="Domain protection illustration"
+            className="h-auto w-full max-w-[220px] object-contain"
+          />
           <img
             src={whoCanUseImg}
             alt="Join PhishFlagger illustration"
-            className="h-auto w-full max-w-[520px] object-contain"
+            className="h-auto w-full max-w-[220px] object-contain"
           />
         </div>
       </div>

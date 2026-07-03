@@ -36,10 +36,10 @@ export default function Telecom() {
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="text-[24px] font-bold leading-tight text-ink sm:text-[30px]">
-              User-facing authentication
+            <h2 className="max-w-[440px] text-[20px] font-bold leading-snug tracking-tight text-ink [text-wrap:balance] sm:text-[26px]">
+              Existing Caller ID can be used to validate calls now.
             </h2>
-            <ul className="mt-6 space-y-2 text-[12px] leading-relaxed text-ink sm:text-[15px] lg:text-[18px]">
+            <ul className="mt-8 space-y-2 text-[12px] leading-relaxed text-ink sm:text-[15px] lg:text-[18px]">
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
@@ -66,9 +66,6 @@ export default function Telecom() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[14px] leading-relaxed text-ink sm:text-[18px] lg:text-[22px]">
-              Existing Caller ID will be used to validate calls.
-            </p>
           </div>
 
           <div className="flex justify-center">
