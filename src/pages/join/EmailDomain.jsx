@@ -15,7 +15,7 @@ export default function EmailDomain() {
           <PageBrand />
 
           <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Join Your Domain
+            Email Domain
           </h1>
         </div>
       </section>
