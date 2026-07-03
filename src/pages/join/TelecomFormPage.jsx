@@ -1,20 +1,40 @@
-﻿import { Link } from "react-router-dom";
+﻿import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export function TelecomFormPage({
   title,
   buttonLabel,
   thanksPath,
+  formsparkEndpoint,
   form,
   setForm,
 }) {
+  const [status, setStatus] = useState("idle");
   const navigate = useNavigate();
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    if (thanksPath) navigate(thanksPath);
+    setStatus("submitting");
+
+    try {
+      const res = await fetch(formsparkEndpoint, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      if (thanksPath) navigate(thanksPath);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -166,11 +186,17 @@ export function TelecomFormPage({
             <div className="flex justify-center pt-2">
               <button
                 type="submit"
-                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#2b2b2b]"
+                disabled={status === "submitting"}
+                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#2b2b2b] disabled:opacity-60"
               >
-                {buttonLabel}
+                {status === "submitting" ? "Sending..." : buttonLabel}
               </button>
             </div>
+            {status === "error" && (
+              <p className="text-center text-[14px] font-medium text-red-600">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </div>
       </div>

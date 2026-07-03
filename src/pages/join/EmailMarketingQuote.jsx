@@ -21,16 +21,36 @@ const initialForm = {
   message: "",
 };
 
+const FORMSPARK_ENDPOINT = "https://submit-form.com/7e0tIcT1b";
+
 export default function EmailMarketingQuote() {
   const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState("idle");
   const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    navigate("/join/email-marketing/quote/thanks");
+    setStatus("submitting");
+
+    try {
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      navigate("/join/email-marketing/quote/thanks");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -251,11 +271,17 @@ export default function EmailMarketingQuote() {
           <div className="flex justify-center pt-10">
             <button
               type="submit"
-              className="cursor-pointer rounded-md bg-[#4a4a4a] px-7 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              disabled={status === "submitting"}
+              className="cursor-pointer rounded-md bg-[#4a4a4a] px-7 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f] disabled:opacity-60"
             >
-              Submit Quote Inquiry
+              {status === "submitting" ? "Submitting..." : "Submit Quote Inquiry"}
             </button>
           </div>
+          {status === "error" && (
+            <p className="pt-4 text-center text-[14px] font-medium text-red-600">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </form>
       </div>
     </section>

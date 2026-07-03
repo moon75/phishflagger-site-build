@@ -18,6 +18,7 @@ export default function TelecomSubscribe() {
         title="Subscribe"
         buttonLabel="Subscribe"
         thanksPath="/join/telecom/thanks-subscribe"
+        formsparkEndpoint="https://submit-form.com/j82Iv58GQ"
         form={form}
         setForm={setForm}
       />

@@ -2,6 +2,8 @@
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
+const FORMSPARK_ENDPOINT = "https://submit-form.com/W5T1Pc8bd";
+
 export default function Community() {
   const [form, setForm] = useState({
     firstName: "",
@@ -10,14 +12,32 @@ export default function Community() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState("idle");
   const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    navigate("/community/thanks");
+    setStatus("submitting");
+
+    try {
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      navigate("/community/thanks");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -120,11 +140,17 @@ export default function Community() {
             <div className="flex justify-center pt-2">
               <button
                 type="submit"
-                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#2b2b2b]"
+                disabled={status === "submitting"}
+                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#2b2b2b] disabled:opacity-60"
               >
-                Send
+                {status === "submitting" ? "Sending..." : "Send"}
               </button>
             </div>
+            {status === "error" && (
+              <p className="text-center text-[14px] font-medium text-red-600">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </div>
       </section>

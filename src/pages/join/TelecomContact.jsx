@@ -18,6 +18,7 @@ export default function TelecomContact() {
         title="Contact Us (For Telecom)"
         buttonLabel="Send"
         thanksPath="/join/telecom/thanks-contact"
+        formsparkEndpoint="https://submit-form.com/ZlULesKxU"
         form={form}
         setForm={setForm}
       />

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
+const FORMSPARK_ENDPOINT = "https://submit-form.com/R9oWZt9Ae";
+
 export default function VictimTestimonials() {
   const [form, setForm] = useState({
     name: "",
@@ -9,14 +11,32 @@ export default function VictimTestimonials() {
     phone: "",
     testimonial: "",
   });
+  const [status, setStatus] = useState("idle");
   const navigate = useNavigate();
 
   const update = (field) => (event) =>
     setForm((current) => ({ ...current, [field]: event.target.value }));
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    navigate("/victim-testimonials/thanks");
+    setStatus("submitting");
+
+    try {
+      const res = await fetch(FORMSPARK_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      navigate("/victim-testimonials/thanks");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -111,11 +131,17 @@ export default function VictimTestimonials() {
           <div className="mt-12 flex justify-center">
             <button
               type="submit"
-              className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2"
+              disabled={status === "submitting"}
+              className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60"
             >
-              Submit
+              {status === "submitting" ? "Submitting..." : "Submit"}
             </button>
           </div>
+          {status === "error" && (
+            <p className="mt-6 text-center text-[14px] font-medium text-red-600">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </form>
         </div>
       </section>
