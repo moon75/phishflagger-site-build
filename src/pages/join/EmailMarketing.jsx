@@ -164,7 +164,7 @@ function FaqSection() {
               key={item.q}
               question={item.q}
               answer={item.a}
-              defaultOpen={index === 0}
+              defaultOpen={false}
               last={index === FAQ_ITEMS.length - 1}
             />
           ))}

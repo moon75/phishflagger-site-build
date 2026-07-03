@@ -39,7 +39,7 @@ export default function FAQ() {
                 key={item.q}
                 question={item.q}
                 answer={item.a}
-                defaultOpen={i === 0}
+                defaultOpen={false}
               />
             ))}
           </div>

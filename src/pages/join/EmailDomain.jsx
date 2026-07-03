@@ -82,6 +82,8 @@ export default function EmailDomain() {
         </div>
       </section>
 
+      <Divider />
+
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[820px] text-center">
           <Link
@@ -158,7 +160,7 @@ function FaqSection() {
               key={item.q}
               question={item.q}
               answer={item.a}
-              defaultOpen={index === 0}
+              defaultOpen={false}
               last={index === FAQ_ITEMS.length - 1}
             />
           ))}

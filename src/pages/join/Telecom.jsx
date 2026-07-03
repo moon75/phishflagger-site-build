@@ -24,6 +24,11 @@ export default function Telecom() {
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
+            <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
+              PhishFlagger protocols introduce a sequence number, known only by
+              the valid carrier and the callee into the Caller ID field
+              providing a simple way to identify fraudsters.
+            </p>
           </div>
         </div>
       </section>
@@ -80,11 +85,9 @@ export default function Telecom() {
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
-          [
-            "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
-            "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
-            "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
-          ],
+          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
+          "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
+          "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
         ]}
       />
 
@@ -117,8 +120,9 @@ export default function Telecom() {
               authenticate calls and help prevent fraud.
             </li>
             <li className="list-disc">
-              By adding a Sequence Number to the existing Caller ID rail, we
-              can end Spoofing.
+              PhishFlagger protocols introduce a sequence number, known only by
+              the valid carrier and the callee into the Caller ID field
+              providing a simple way to identify fraudsters.
             </li>
           </ul>
           <div className="flex justify-center">

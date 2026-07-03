@@ -6,7 +6,6 @@ import toddImg from "../../assets/images/todd.avif";
 import robertImg from "../../assets/images/dr robert.avif";
 import danImg from "../../assets/images/dan.avif";
 import jimImg from "../../assets/images/jim riches.avif";
-import paulImg from "../../assets/images/paul grant.avif";
 import shawnImg from "../../assets/images/shawn.avif";
 
 const TEAM = [
@@ -45,12 +44,6 @@ const TEAM = [
     role: "Security Advocate",
     bio: "Jim began his business career establishing a licensed apparel company. His ongoing active investor roles in many start ups, allowed him to realize the importance and necessity of the PhishFlagger solution in the marketplace. Jim will be heading the sales and licensing of the company as it moves into market.",
     photo: jimImg,
-  },
-  {
-    name: "Paul Grant",
-    role: "Digital Design",
-    bio: "With over 20 years of experience in UX and product design, Paul is a dedicated leader committed to enhancing user experiences across multiple industries and platforms, with recent contributions in conversational AI.",
-    photo: paulImg,
   },
   {
     name: "Shawn Pearce",
