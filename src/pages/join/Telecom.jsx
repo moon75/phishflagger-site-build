@@ -120,9 +120,7 @@ export default function Telecom() {
               authenticate calls and help prevent fraud.
             </li>
             <li className="list-disc">
-              PhishFlagger protocols introduce a sequence number, known only by
-              the valid carrier and the callee into the Caller ID field
-              providing a simple way to identify fraudsters.
+              Provides immediate protection even with old Handsets.
             </li>
           </ul>
           <div className="flex justify-center">
@@ -136,9 +134,23 @@ export default function Telecom() {
       </section>
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
-            Placeholder text
+            The PhishFlagger process is protected by Patents
+            <br />
+            in the following Jurisdiction:
+          </p>
+          <p className="mx-auto mt-8 max-w-[900px] text-[15px] leading-[1.85] text-ink sm:text-[18px]">
+            Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
+            Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
+            Egypt, Estonia, Finland, France, Germany, Greece, Hungary, Iceland,
+            India, Indonesia, Ireland, Israel, Italy, Latvia, Liechtenstein,
+            Lithuania, Luxembourg, Malta, Mexico, Monaco, Montenegro,
+            Netherlands, Nigeria, North Macedonia, Norway, Philippines, Poland,
+            Portugal, Romania, Russia, Saudi Arabia, San Marino, Serbia,
+            Slovakia, Slovenia, Spain, Sweden, Switzerland, Thailand, Turkey,
+            UAE, USA, England, Scotland, Singapore, Vietnam, Wales and Northern
+            Ireland.
           </p>
         </div>
       </section>

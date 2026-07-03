@@ -12,7 +12,31 @@
       "PowerShell(\"done\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(chromium-cli *)",
+      "Bash(npx --version)",
+      "Bash(npm ls *)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(command -v google-chrome chromium chromium-browser msedge)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/endorse.png\" --window-size=1280,1000 \"http://localhost:5176/help/endorse-us\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/endorse900.png\" --window-size=960,900 \"http://localhost:5176/help/endorse-us\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/endorse768.png\" --window-size=768,900 \"http://localhost:5176/help/endorse-us\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/endorse-fixed.png\" --window-size=960,1000 \"http://localhost:5176/help/endorse-us\")",
+      "Bash(taskkill //F //IM node.exe //FI \"WINDOWTITLE eq *vite*\")",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -sf http://localhost:5176)",
+      "Bash(curl -sf http://localhost:5173)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/verify.png\" --window-size=960,1000 \"http://localhost:5176/help/endorse-us\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill *)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/verify2.png\" --window-size=1160,900 \"http://localhost:5173/help/endorse-us\")",
+      "Bash(wmic process *)",
+      "Bash(powershell -NoProfile -Command \"Get-CimInstance Win32_Process -Filter 'ProcessId=17440' | Select-Object ProcessId,ParentProcessId,CommandLine,ExecutablePath | Format-List\")",
+      "Bash(powershell -NoProfile -Command \"Get-CimInstance Win32_Process -Filter 'ProcessId=13984' | Select-Object ProcessId,ParentProcessId,CommandLine,Name | Format-List\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/pane.png\" --window-size=1160,1000 \"http://localhost:5173/help/endorse-us\")",
+      "Bash(curl -s http://localhost:5183/help/endorse-us -o /dev/null -w \"%{http_code}\\\\n\")"
     ]
   }
 }
