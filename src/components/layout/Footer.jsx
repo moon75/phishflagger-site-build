@@ -168,10 +168,10 @@ export default function Footer({ logoSrc = logoImg }) {
         </div>
 
         <div className="mx-auto max-w-[980px] px-6 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4">
-        <div className="mx-auto max-w-[720px] rounded-2xl bg-[#eef0f4] px-6 py-8 sm:px-10">
+        <div className="mx-auto inline-block rounded-2xl bg-[#eef0f4] px-6 py-6 sm:px-8">
           <ul
             aria-label="Social media"
-            className="mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
+            className="flex flex-wrap justify-center gap-[18px] list-none p-0"
           >
             <li>
               <a
@@ -218,8 +218,9 @@ export default function Footer({ logoSrc = logoImg }) {
               </a>
             </li>
           </ul>
+        </div>
 
-          <div className="mx-auto">
+          <div className="mx-auto mt-8">
             <img
               src={logoSrc}
               alt="PhishFlagger"
@@ -229,7 +230,6 @@ export default function Footer({ logoSrc = logoImg }) {
               Protecting Communications.
             </p>
           </div>
-        </div>
 
           <p className="mx-auto mb-5 mt-6 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,

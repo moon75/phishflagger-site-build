@@ -67,7 +67,7 @@ export default function News() {
             </p>
           </div>
 
-          <form className="mx-auto mt-36 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-8 text-center sm:px-8">
+          <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-8 text-center sm:px-8">
             <h2 className="text-[28px] font-semibold leading-tight text-[#435154] sm:text-[34px]">
               Subscribe to PhishFlagger News
             </h2>
@@ -89,10 +89,10 @@ export default function News() {
                 Subscribe
               </button>
             </div>
+            <p className="mt-4 text-center text-[12px] text-[#8a9296]">
+              We respect your privacy. You can unsubscribe at any time.
+            </p>
           </form>
-          <p className="mx-auto mt-4 max-w-[640px] text-center text-[12px] text-[#8a9296]">
-            We respect your privacy. You can unsubscribe at any time.
-          </p>
 
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {NEWS_ITEMS.map((item) => (

@@ -133,41 +133,48 @@ export default function Telecom() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
-            <BrokenShieldIcon className="h-auto w-full max-w-[280px]" />
+            <img
+              src="/assets/images/image-stir.png"
+              alt="STIR/SHAKEN"
+              className="h-auto w-full max-w-[420px]"
+            />
           </div>
           <div className="lg:order-1">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               STIR / SHAKEN does not work and is problematic
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <li>
+              <li className="font-semibold text-ink">
+                Fraud has skyrocketed in the 5 years since it was implemented{" "}
                 <a
                   href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >
-                  Fraud has skyrocketed in the 5 years since it was implemented
+                  Link
                 </a>
               </li>
-              <li>
+              <li className="font-semibold text-ink">
+                UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead{" "}
                 <a
                   href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >
-                  UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead
+                  Link
                 </a>
               </li>
-              <li>
+              <li className="font-semibold text-ink">
+                Call authentication and STIR/SHAKEN is not the solution{" "}
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >
-                  Call authentication and STIR/SHAKEN is not the solution
+                  Link
                 </a>
               </li>
             </ul>
@@ -178,7 +185,11 @@ export default function Telecom() {
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
-            <GlobalNetworkIcon className="h-auto w-full max-w-[280px]" />
+            <img
+              src="/assets/images/existing%20CLI.jpg"
+              alt="Existing CLI"
+              className="h-auto w-full max-w-[420px]"
+            />
           </div>
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -224,6 +235,27 @@ export default function Telecom() {
               >
                 Link
               </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="flex justify-center">
+            <img
+              src="/assets/images/Respresntation%20image.png"
+              alt="PhishFlagger using existing infrastructure"
+              className="h-auto w-full max-w-[420px] object-contain"
+            />
+          </div>
+          <div>
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              PhishFlagger uses existing infrastructure.
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              A sequence number know only by Valid Telecom and Callee could be
+              implemented now to end spoofing.
             </p>
           </div>
         </div>
@@ -409,55 +441,6 @@ function SplitSection({ image, imageAlt, text, bullets }) {
         )}
       </div>
     </section>
-  );
-}
-
-function BrokenShieldIcon({ className }) {
-  return (
-    <svg viewBox="0 0 200 200" fill="none" className={className} aria-hidden>
-      <path
-        d="M100 20 L165 45 V95 C165 135 138 165 100 180 C62 165 35 135 35 95 V45 Z"
-        stroke="#c8ccd3"
-        strokeWidth="5"
-        fill="#f5f6f8"
-      />
-      <path
-        d="M108 45 L78 108 H98 L88 150 L132 90 H110 Z"
-        fill="#ff0033"
-        opacity="0.9"
-      />
-      <path
-        d="M55 60 L145 140"
-        stroke="#ff0033"
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M145 60 L55 140"
-        stroke="#ff0033"
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function GlobalNetworkIcon({ className }) {
-  return (
-    <svg viewBox="0 0 200 200" fill="none" className={className} aria-hidden>
-      <circle cx="100" cy="100" r="70" stroke="#c8ccd3" strokeWidth="3" fill="#f5f6f8" />
-      <path d="M30 100 H170" stroke="#c8ccd3" strokeWidth="2" />
-      <path d="M100 30 C130 60 130 140 100 170" stroke="#c8ccd3" strokeWidth="2" fill="none" />
-      <path d="M100 30 C70 60 70 140 100 170" stroke="#c8ccd3" strokeWidth="2" fill="none" />
-      <circle cx="60" cy="55" r="8" fill="#ff0033" />
-      <circle cx="145" cy="70" r="8" fill="#1f6e5f" />
-      <circle cx="55" cy="140" r="8" fill="#1f6e5f" />
-      <circle cx="140" cy="150" r="8" fill="#ff0033" />
-      <path d="M60 55 L100 100 L145 70" stroke="#9ca3af" strokeWidth="2" strokeDasharray="4 4" />
-      <path d="M55 140 L100 100 L140 150" stroke="#9ca3af" strokeWidth="2" strokeDasharray="4 4" />
-      <circle cx="100" cy="100" r="14" fill="white" stroke="#1f6e5f" strokeWidth="3" />
-      <path d="M94 100 L99 106 L108 94" stroke="#1f6e5f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </svg>
   );
 }
 
