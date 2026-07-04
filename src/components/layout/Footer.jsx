@@ -168,9 +168,10 @@ export default function Footer({ logoSrc = logoImg }) {
         </div>
 
         <div className="mx-auto max-w-[980px] px-6 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4">
+        <div className="mx-auto max-w-[720px] rounded-2xl bg-[#eef0f4] px-6 py-8 sm:px-10">
           <ul
             aria-label="Social media"
-            className="mt-8 mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
+            className="mb-[22px] flex flex-wrap justify-center gap-[18px] list-none p-0"
           >
             <li>
               <a
@@ -218,18 +219,19 @@ export default function Footer({ logoSrc = logoImg }) {
             </li>
           </ul>
 
-          <div className="mx-auto mb-6">
-            <h2 className="text-3xl italic leading-none">
-              <span className="font-extrabold text-black">Phish</span>
-              <span className="font-normal text-[#FF0033]">Flagger</span>
-              <sup className="ml-0.5 text-sm font-bold not-italic">TM</sup>
-            </h2>
+          <div className="mx-auto">
+            <img
+              src={logoSrc}
+              alt="PhishFlagger"
+              className="mx-auto h-auto w-[220px] sm:w-[260px]"
+            />
             <p className="mt-2 text-[13px] text-[#4a4a4a]">
               Protecting Communications.
             </p>
           </div>
+        </div>
 
-          <p className="mx-auto mb-5 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
+          <p className="mx-auto mb-5 mt-6 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>

@@ -52,10 +52,10 @@ export const FAQ_ITEMS = [
   },
   {
     q: "What happens if a recipient forgets their last PhishCounter™ number?",
-    a: "They can simply look back at the most recent legitimate email from that sender to check the last number used. If that is not possible, the safest step is to contact the sender through a trusted channel — by phone or via the company’s official website — to confirm whether the email is genuine. PhishFlagger™ is an added layer of protection that works alongside existing email safety best practices.",
+    a: "Install our Plug-In, use and Email from an PhishFlagger enabled Domain or manually look back at the most recent legitimate email from that sender to check the last number used. For first communications contact the sender through a trusted channel — by phone or via the company’s official website — to confirm whether the email is genuine. PhishFlagger™ is an added layer of protection that works alongside existing email safety best practices.",
   },
   {
     q: "Does PhishFlagger™ work with platforms like Mailchimp, Salesforce, or HubSpot?",
-    a: "Yes. PhishFlagger™ is platform-agnostic. The numbering process is implemented at the sending domain or email infrastructure level and can be integrated with any platform that allows customization of outgoing subject lines. Your technical team will follow the Compliance Guide included with your license to implement it for your specific environment.",
+    a: "Yes. The numbering process is implemented at the sending domain or by the Plug-In.",
   },
 ];

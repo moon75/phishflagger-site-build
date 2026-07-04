@@ -27,13 +27,15 @@ export default function Video() {
               Protecting Communications
             </p>
 
-            <h1 className="mt-10 text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[44px] lg:text-[52px]">
-              Watch the Video
+            <h1 className="mx-auto mt-10 max-w-[720px] text-[28px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[36px] lg:text-[42px]">
+              How{" "}
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>
+              <span className="font-normal not-italic">™</span> email
+              numbering protects against phishing and Impersonation.
             </h1>
-            <p className="mx-auto mt-4 max-w-[640px] text-[14px] leading-[1.6] text-ink sm:text-[15px]">
-              See how PhishFlagger™ email numbering protects against phishing
-              and fraud.
-            </p>
           </div>
 
           {/* Video player */}

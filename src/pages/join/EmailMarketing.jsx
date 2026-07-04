@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { FAQ_ITEMS } from "../../data/faq.js";
 import phishCounterImg from "../../assets/images/4th section.avif";
+import inboxImg from "../../assets/images/email-inbox v2.png";
+import marketerImg from "../../assets/images/5th sec.avif";
 
 export default function EmailMarketing() {
   return (
@@ -40,7 +42,7 @@ export default function EmailMarketing() {
 
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/assets/images/email-marketing-1.webp"
+              src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
               className="h-auto w-full max-w-[520px] object-contain"
             />
@@ -81,6 +83,30 @@ export default function EmailMarketing() {
               src={phishCounterImg}
               alt="PhishCounter subject line example"
               className="h-auto w-full max-w-[560px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              Recipients that are PhishFlagger Enabled.
+            </h2>
+            <p className="mt-5">
+              PhishFlagger enabled domain or clients automatically validate
+              emails.
+            </p>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={inboxImg}
+              alt="PhishFlagger inbox showing validated and flagged emails"
+              className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
             />
           </div>
         </div>

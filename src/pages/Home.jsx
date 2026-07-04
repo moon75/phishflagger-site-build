@@ -257,22 +257,37 @@ export default function Home() {
             PhishFlagger.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 lg:justify-end">
-          <img
-            src="/assets/images/individual.png"
-            alt="Individual protection illustration"
-            className="h-auto w-full max-w-[220px] object-contain"
-          />
-          <img
-            src="/assets/images/domain.png"
-            alt="Domain protection illustration"
-            className="h-auto w-full max-w-[220px] object-contain"
-          />
-          <img
-            src={whoCanUseImg}
-            alt="Join PhishFlagger illustration"
-            className="h-auto w-full max-w-[220px] object-contain"
-          />
+        <div className="flex flex-wrap items-end justify-center gap-6 lg:justify-end">
+          <div className="flex w-[150px] flex-col items-center">
+            <img
+              src="/assets/images/individual.png"
+              alt="Individual protection illustration"
+              className="h-[150px] w-auto object-contain"
+            />
+            <span className="mt-3 text-[14px] font-semibold text-ink">
+              Individual
+            </span>
+          </div>
+          <div className="flex w-[150px] flex-col items-center">
+            <img
+              src="/assets/images/domain.png"
+              alt="Domain protection illustration"
+              className="h-[150px] w-auto object-contain"
+            />
+            <span className="mt-3 text-[14px] font-semibold text-ink">
+              Domain
+            </span>
+          </div>
+          <div className="flex w-[150px] flex-col items-center">
+            <img
+              src={whoCanUseImg}
+              alt="Join PhishFlagger illustration"
+              className="h-[150px] w-auto object-contain"
+            />
+            <span className="mt-3 text-[14px] font-semibold text-ink">
+              Marketer
+            </span>
+          </div>
         </div>
       </div>
     </section>

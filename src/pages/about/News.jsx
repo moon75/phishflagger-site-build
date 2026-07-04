@@ -65,9 +65,6 @@ export default function News() {
             <p className="mt-3 text-[16px] font-medium text-[#303030] sm:text-[18px]">
               The Email Phishing Solution
             </p>
-            <h1 className="mt-8 text-[42px] font-normal leading-tight tracking-tight text-[#333333] sm:text-[58px]">
-              Latest Phishing News
-            </h1>
           </div>
 
           <form className="mx-auto mt-36 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-8 text-center sm:px-8">
@@ -93,6 +90,9 @@ export default function News() {
               </button>
             </div>
           </form>
+          <p className="mx-auto mt-4 max-w-[640px] text-center text-[12px] text-[#8a9296]">
+            We respect your privacy. You can unsubscribe at any time.
+          </p>
 
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {NEWS_ITEMS.map((item) => (
