@@ -144,34 +144,37 @@ export default function Telecom() {
               STIR / SHAKEN does not work and is problematic
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <li className="font-semibold text-ink">
+              <li className="flex items-start gap-2 font-semibold text-ink">
+                <span>Fraud has skyrocketed in the 5 years since it was implemented</span>
                 <a
                   href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4"
+                  className="shrink-0 text-blue-600 underline underline-offset-2"
                 >
-                  Fraud has skyrocketed in the 5 years since it was implemented
+                  Link
                 </a>
               </li>
-              <li className="font-semibold text-ink">
+              <li className="flex items-start gap-2 font-semibold text-ink">
+                <span>UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead</span>
                 <a
                   href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4"
+                  className="shrink-0 text-blue-600 underline underline-offset-2"
                 >
-                  UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead
+                  Link
                 </a>
               </li>
-              <li className="font-semibold text-ink">
+              <li className="flex items-start gap-2 font-semibold text-ink">
+                <span>Call authentication and STIR/SHAKEN is not the solution</span>
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4"
+                  className="shrink-0 text-blue-600 underline underline-offset-2"
                 >
-                  Call authentication and STIR/SHAKEN is not the solution
+                  Link
                 </a>
               </li>
             </ul>
@@ -227,47 +230,53 @@ export default function Telecom() {
               Authentication.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              <span className="font-semibold">
+                PhishFlagger Numbering could meet the report challenge.
+              </span>{" "}
               <a
                 href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-4"
+                className="text-blue-600 underline underline-offset-2"
               >
-                PhishFlagger Numbering could meet the report challenge.
+                Link
               </a>
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <span className="font-semibold">Ofcom, 2 September 2025:</span>{" "}
+              <span className="font-semibold">
+                Ofcom Sept 2 2025: Ofcom attempt to close the CLI spoofing
+                loophole, but are there holes in the plan?
+              </span>{" "}
               <a
                 href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-4"
+                className="text-blue-600 underline underline-offset-2"
               >
-                Ofcom attempt to close the CLI spoofing loophole, but are
-                there holes in the plan?
+                Link
               </a>
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <span className="font-semibold">Ofcom, 21 July 2025:</span>{" "}
+              <span className="font-semibold">
+                Ofcom 21 July 2025: Consultation: Tackling scam calls from
+                abroad
+              </span>{" "}
               <a
                 href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-4"
+                className="text-blue-600 underline underline-offset-2"
               >
-                Consultation: Tackling scam calls from abroad
+                Link
               </a>{" "}
-              (
               <a
                 href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-4"
+                className="text-blue-600 underline underline-offset-2"
               >
-                consultation overview
+                Link
               </a>
-              )
             </p>
           </div>
         </div>
