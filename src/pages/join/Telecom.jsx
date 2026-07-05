@@ -134,7 +134,7 @@ export default function Telecom() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
             <img
-              src="/assets/images/image-stir.png"
+              src="/assets/images/existing%20CLI.jpg"
               alt="STIR/SHAKEN"
               className="h-auto w-full max-w-[420px]"
             />
@@ -145,36 +145,33 @@ export default function Telecom() {
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               <li className="font-semibold text-ink">
-                Fraud has skyrocketed in the 5 years since it was implemented{" "}
                 <a
                   href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="underline underline-offset-4"
                 >
-                  Link
+                  Fraud has skyrocketed in the 5 years since it was implemented
                 </a>
               </li>
               <li className="font-semibold text-ink">
-                UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead{" "}
                 <a
                   href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="underline underline-offset-4"
                 >
-                  Link
+                  UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead
                 </a>
               </li>
               <li className="font-semibold text-ink">
-                Call authentication and STIR/SHAKEN is not the solution{" "}
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  className="underline underline-offset-4"
                 >
-                  Link
+                  Call authentication and STIR/SHAKEN is not the solution
                 </a>
               </li>
             </ul>
@@ -186,7 +183,7 @@ export default function Telecom() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
-              src="/assets/images/existing%20CLI.jpg"
+              src="/assets/images/image-stir.png"
               alt="Existing CLI"
               className="h-auto w-full max-w-[420px]"
             />
@@ -212,7 +209,11 @@ export default function Telecom() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
-            <RejectedStampIcon className="h-auto w-full max-w-[280px]" />
+            <img
+              src="/assets/images/off%20com.jpg"
+              alt="Ofcom"
+              className="h-auto w-full max-w-[380px] object-contain"
+            />
           </div>
           <div className="lg:order-1">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -226,15 +227,47 @@ export default function Telecom() {
               Authentication.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              PhishFlagger Numbering could meet the report challenge.{" "}
               <a
                 href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                className="font-semibold underline underline-offset-4"
               >
-                Link
+                PhishFlagger Numbering could meet the report challenge.
               </a>
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              <span className="font-semibold">Ofcom, 2 September 2025:</span>{" "}
+              <a
+                href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-4"
+              >
+                Ofcom attempt to close the CLI spoofing loophole, but are
+                there holes in the plan?
+              </a>
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              <span className="font-semibold">Ofcom, 21 July 2025:</span>{" "}
+              <a
+                href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-4"
+              >
+                Consultation: Tackling scam calls from abroad
+              </a>{" "}
+              (
+              <a
+                href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-4"
+              >
+                consultation overview
+              </a>
+              )
             </p>
           </div>
         </div>
@@ -441,31 +474,6 @@ function SplitSection({ image, imageAlt, text, bullets }) {
         )}
       </div>
     </section>
-  );
-}
-
-function RejectedStampIcon({ className }) {
-  return (
-    <svg viewBox="0 0 200 200" fill="none" className={className} aria-hidden>
-      <rect x="30" y="40" width="140" height="120" rx="6" stroke="#c8ccd3" strokeWidth="3" fill="#f5f6f8" />
-      <path d="M45 65 H120" stroke="#c8ccd3" strokeWidth="4" strokeLinecap="round" />
-      <path d="M45 85 H140" stroke="#c8ccd3" strokeWidth="4" strokeLinecap="round" />
-      <path d="M45 105 H100" stroke="#c8ccd3" strokeWidth="4" strokeLinecap="round" />
-      <g transform="translate(100,120) rotate(-18)">
-        <rect x="-55" y="-20" width="110" height="40" rx="6" fill="none" stroke="#ff0033" strokeWidth="4" />
-        <text
-          x="0"
-          y="6"
-          textAnchor="middle"
-          fontSize="18"
-          fontWeight="700"
-          fill="#ff0033"
-          fontFamily="sans-serif"
-        >
-          REJECTED
-        </text>
-      </g>
-    </svg>
   );
 }
 
