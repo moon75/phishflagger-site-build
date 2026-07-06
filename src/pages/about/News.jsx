@@ -10,39 +10,49 @@ const NEWS_ITEMS = [
   {
     title:
       "New PoisonSeed Attacking CRM & Bulk Email Providers in Supply Chain Phishing Attack",
-    image: newsCardImg,
+    image: "/assets/images/news/poisonseed-crm-bulk-email-phishing.jpg",
+    url: "https://cybersecuritynews.com/new-poisonseed-attacking-crm-bulk-email-providers/",
   },
   {
     title:
       "Hackers Abuse Cloudflare Services for Sophisticated Phishing Attacks",
-    image: newsCardImg,
+    image: "/assets/images/news/cloudflare-services-phishing-attacks.jpg",
+    url: "https://cybersecuritynews.com/hackers-abuse-cloudflare-services/",
   },
   {
     title:
-      "Phishing platform 'LabHost' behind wave of iOS, Android SMS attacks",
-    image: newsCardImg,
+      "Phishing platform 'Lucid' behind wave of iOS, Android SMS attacks",
+    image: "/assets/images/news/phishing-hook.jpg",
+    url: "https://www.bleepingcomputer.com/news/security/phishing-platform-lucid-behind-wave-of-ios-android-sms-attacks/",
   },
   {
     title: "Top 10 announcements from Black Hat 2024",
-    image: newsCardImg,
+    image: "/assets/images/news/vegas.avif",
+    url: "https://s2w.inc/en/news/detail/949",
   },
   {
     title:
-      "Phishing Emails Alert at DeBusk Anymore, Here's How to Spot Them",
-    image: newsCardImg,
+      "Phishing emails aren't as obvious anymore. Here's how to spot them",
+    image: "/assets/images/news/gettyimages-496819483.webp",
+    url: "https://www.cnet.com/tech/services-and-software/phishing-emails-arent-as-obvious-anymore-heres-how-to-spot-them/",
   },
   {
     title: "OPP warning Ontarians to be aware of 'smishing' fraud",
-    image: newsCardImg,
+    image:
+      "/assets/images/news/opp-warning-ontarians-to-be-aware-smishing-fraud.avif",
+    url: "https://www.quintenews.com/2025/03/31/opp-warning-ontarians-to-be-aware-smishing-fraud/",
   },
   {
     title: "New Data Shows Impact of AI-Powered Phishing on Businesses",
-    image: newsCardImg,
+    image:
+      "/assets/images/news/State-of-Credential-Security_Blog-1_Header_628x4002X.webp",
+    url: "https://www.dashlane.com/blog/new-data-aipowered-phishing",
   },
   {
     title:
       "Weekly Recap: Chrome 0-Day, IngressNightmare, Solar Bugs, DNS Tactics, and More",
-    image: newsCardImg,
+    image: "/assets/images/news/recap.jpg",
+    url: "https://thehackernews.com/2025/03/weekly-recap-chrome-0-day.html?m=1",
   },
 ];
 
@@ -113,7 +123,9 @@ export default function News() {
                       {item.title}
                     </h2>
                     <a
-                      href="#"
+                      href={item.url || "#"}
+                      target={item.url ? "_blank" : undefined}
+                      rel={item.url ? "noopener noreferrer" : undefined}
                       className="mt-auto inline-flex items-center gap-2 pt-8 text-[12px] font-bold uppercase tracking-wide text-[#303030] hover:text-brand"
                     >
                       View News
