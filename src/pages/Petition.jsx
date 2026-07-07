@@ -214,7 +214,7 @@ export default function Petition() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="h-[49px] cursor-pointer rounded-[7px] bg-brand px-10 text-[16px] font-semibold text-white transition-colors hover:bg-[#cc0029] focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 disabled:opacity-60"
+                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-10 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60"
               >
                 {status === "submitting" ? "Submitting…" : "Submit"}
               </button>

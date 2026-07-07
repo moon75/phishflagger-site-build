@@ -259,7 +259,7 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[14px] font-semibold text-ink">
+            <span className="mb-3 text-[28px] font-semibold text-ink">
               Individual
             </span>
             <img
@@ -269,7 +269,7 @@ export default function Home() {
             />
           </div>
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[14px] font-semibold text-ink">
+            <span className="mb-3 text-[28px] font-semibold text-ink">
               Domain
             </span>
             <img
@@ -279,7 +279,7 @@ export default function Home() {
             />
           </div>
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[14px] font-semibold text-ink">
+            <span className="mb-3 text-[28px] font-semibold text-ink">
               Marketer
             </span>
             <img

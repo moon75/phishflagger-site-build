@@ -52,6 +52,12 @@ export default function Kickstarter() {
                   className="h-auto w-full max-w-[420px] object-contain"
                 />
               </Link>
+              <Link
+                to="/about/hall-of-fame"
+                className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Hall of Fame
+              </Link>
             </div>
           </div>
         </div>

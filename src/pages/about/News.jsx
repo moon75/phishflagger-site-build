@@ -6,6 +6,7 @@ const NEWS_ITEMS = [
     title:
       "Q1 Goals to Cops in Security: The Rise of AI-Powered Phishing",
     image: newsCardImg,
+    url: "https://securityboulevard.com/2025/04/q1-goals-to-gaps-in-security-the-rise-of-hr-themed-phishing/",
   },
   {
     title:
