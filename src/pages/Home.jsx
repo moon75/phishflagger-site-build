@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FAQ_ITEMS } from "../data/faq.js";
+import FaqTabs from "../components/faq/FaqTabs.jsx";
 import emailImg from "../assets/images/email.avif";
 import messagesImg from "../assets/images/messages.avif";
 import textImg from "../assets/images/text.avif";
@@ -104,7 +103,7 @@ export default function Home() {
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
                 Human-compatible solution that validates legitimate
-                communications an highlights fraud attempts.
+                communications and highlights fraud attempts.
               </span>
             </li>
             <li className="flex gap-4">
@@ -129,12 +128,15 @@ export default function Home() {
         </div>
 
         {/* Right — info box image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex flex-col items-center">
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
             className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
           />
+          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
         </div>
       </div>
     </section>
@@ -181,7 +183,7 @@ export default function Home() {
             </em>
             <span className="font-normal not-italic">™</span>
             <br />
-            Individual protection
+            Individual protection: Thunderbird with PhishFlagger free plug
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
             Support our free plug to stop impersonation now.
@@ -326,6 +328,7 @@ export default function Home() {
             between carriers globally, a &lsquo;sequence number&rsquo; implemented
             by telecoms worldwide would end fake calls.
             <br />
+            Help stop phone fraud in your country.{" "}
             <Link
               to="/petition"
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
@@ -377,64 +380,21 @@ export default function Home() {
       </div>
     </section>
 
-    <hr className="border-t border-gray-300" />
+    <div className="h-1.5 w-full bg-brand" aria-hidden />
 
-    {/* ===== Section 8 — FAQ (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 8 — FAQ (white, part of footer) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-center text-[28px] font-bold tracking-tight text-ink sm:text-[36px] lg:text-[42px]">
           Frequently asked questions
         </h2>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 sm:mt-12">
-          {FAQ_ITEMS.map((item, idx) => (
-            <FaqItem
-              key={item.q}
-              question={item.q}
-              answer={item.a}
-              last={idx === FAQ_ITEMS.length - 1}
-            />
-          ))}
+        <div className="mt-8 sm:mt-12">
+          <FaqTabs />
         </div>
       </div>
     </section>
     </>
-  );
-}
-
-function FaqItem({ question, answer, last }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={last ? "" : "border-b border-gray-200"}>
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-gray-50 sm:gap-6 sm:px-6 sm:py-5"
-      >
-        <span className="text-[14px] font-medium text-ink sm:text-[17px]">
-          {question}
-        </span>
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          className={`h-5 w-5 shrink-0 text-ink transition-transform duration-200 ${
-            open ? "rotate-45" : ""
-          }`}
-          aria-hidden
-        >
-          <path d="M12 5v14M5 12h14" />
-        </svg>
-      </button>
-      {open && (
-        <div className="whitespace-pre-line px-4 pb-5 text-[13.5px] leading-[1.65] text-ink-muted sm:px-6 sm:pb-6 sm:text-[15px]">
-          {answer}
-        </div>
-      )}
-    </div>
   );
 }
 

@@ -36,7 +36,8 @@
       "Bash(powershell -NoProfile -Command \"Get-CimInstance Win32_Process -Filter 'ProcessId=17440' | Select-Object ProcessId,ParentProcessId,CommandLine,ExecutablePath | Format-List\")",
       "Bash(powershell -NoProfile -Command \"Get-CimInstance Win32_Process -Filter 'ProcessId=13984' | Select-Object ProcessId,ParentProcessId,CommandLine,Name | Format-List\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --screenshot=\"C:/Users/rock777/AppData/Local/Temp/claude/D--Full-Stack-Client-Sites-PhishFlagger-React/fb9a28c5-5b05-4e30-bbe7-fb794c356f64/scratchpad/pane.png\" --window-size=1160,1000 \"http://localhost:5173/help/endorse-us\")",
-      "Bash(curl -s http://localhost:5183/help/endorse-us -o /dev/null -w \"%{http_code}\\\\n\")"
+      "Bash(curl -s http://localhost:5183/help/endorse-us -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(npx eslint *)"
     ]
   }
 }

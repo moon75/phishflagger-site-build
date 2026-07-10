@@ -31,7 +31,7 @@ const SUPPORTERS = [
 export default function HallOfFame() {
   return (
     <>
-      <CloseButton />
+      <CloseButton to="/about/kickstarter" />
 
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[920px] text-center">

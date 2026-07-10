@@ -143,12 +143,12 @@ export default function Footer({ logoSrc = logoImg }) {
                 <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">About</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
+                    { label: "Phishing News", to: "/News" },
                     { label: "Team", to: "/about/team" },
                     { label: "Press", to: "/about/press" },
                     { label: "Video", to: "/about/video" },
                     { label: "IP", to: "/about/ip" },
                     { label: "FAQ", to: "/about/faq" },
-                    { label: "Phishing News", to: "/News" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Fiction", to: "/about/fiction" },
                   ].map((link) => (

@@ -31,7 +31,7 @@ export default function Video() {
               Watch the Video
             </h1>
             <p className="mx-auto mt-4 max-w-[640px] text-[14px] leading-[1.6] text-ink sm:text-[15px]">
-              See how PhishFlagger™ email numbering protects against phishing
+              See how PhishFlagger™ and human validation protects against phishing
               and fraud.
             </p>
           </div>

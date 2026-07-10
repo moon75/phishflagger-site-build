@@ -45,13 +45,11 @@ export default function Kickstarter() {
               >
                 Hall of Fame
               </Link>
-              <Link to="/about/hall-of-fame" className="mt-8 transition-opacity hover:opacity-80">
-                <img
-                  src={supportersImg}
-                  alt="Happy PhishFlagger supporters"
-                  className="h-auto w-full max-w-[420px] object-contain"
-                />
-              </Link>
+              <img
+                src={supportersImg}
+                alt="Happy PhishFlagger supporters"
+                className="mt-8 h-auto w-full max-w-[420px] object-contain"
+              />
               <Link
                 to="/about/hall-of-fame"
                 className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"

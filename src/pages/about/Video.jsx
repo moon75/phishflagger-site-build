@@ -33,8 +33,8 @@ export default function Video() {
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>
-              <span className="font-normal not-italic">™</span> email
-              numbering protects against phishing and Impersonation.
+              <span className="font-normal not-italic">™</span> and human
+              validation protects against phishing and Impersonation.
             </h1>
           </div>
 

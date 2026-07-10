@@ -78,29 +78,29 @@ export default function News() {
             </p>
           </div>
 
-          <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-8 text-center sm:px-8">
-            <h2 className="text-[28px] font-semibold leading-tight text-[#435154] sm:text-[34px]">
+          <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-5 text-center sm:px-8">
+            <h2 className="text-[22px] font-semibold leading-tight text-[#435154] sm:text-[26px]">
               Subscribe to PhishFlagger News
             </h2>
-            <p className="mx-auto mt-5 max-w-[480px] text-[11px] leading-[1.8] text-[#4f5c60]">
+            <p className="mx-auto mt-3 max-w-[480px] text-[11px] leading-[1.6] text-[#4f5c60]">
               Tip: To ensure our News mail never go in your junk folder
               <br />
               we recommend you add a new contact as no-reply@phishflaggernews.com
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <input
                 type="email"
                 placeholder="hello@example.com"
-                className="h-[54px] min-w-0 flex-1 rounded-[5px] bg-white px-4 text-[14px] text-ink placeholder:text-[#b6b6b6] focus:outline-none focus:ring-2 focus:ring-[#cdd4d7]"
+                className="h-[44px] min-w-0 flex-1 rounded-[5px] bg-white px-4 text-[14px] text-ink placeholder:text-[#b6b6b6] focus:outline-none focus:ring-2 focus:ring-[#cdd4d7]"
               />
               <button
                 type="submit"
-                className="h-[54px] rounded-[5px] bg-[#565656] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="h-[44px] rounded-[5px] bg-[#565656] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#3f3f3f]"
               >
                 Subscribe
               </button>
             </div>
-            <p className="mt-4 text-center text-[12px] text-[#8a9296]">
+            <p className="mt-3 text-center text-[12px] text-[#8a9296]">
               We respect your privacy. You can unsubscribe at any time.
             </p>
           </form>

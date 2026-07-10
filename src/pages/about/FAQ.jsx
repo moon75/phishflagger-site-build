@@ -1,7 +1,6 @@
-﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import { FAQ_ITEMS } from "../../data/faq.js";
+import FaqTabs from "../../components/faq/FaqTabs.jsx";
 
 export default function FAQ() {
   return (
@@ -32,69 +31,12 @@ export default function FAQ() {
             </h1>
           </div>
 
-          {/* FAQ list */}
-          <div className="mt-12 divide-y divide-gray-200 border-y border-gray-200 sm:mt-16">
-            {FAQ_ITEMS.map((item, i) => (
-              <FaqItem
-                key={item.q}
-                question={item.q}
-                answer={item.a}
-                defaultOpen={false}
-              />
-            ))}
+          {/* FAQ categories */}
+          <div className="mt-12 sm:mt-16">
+            <FaqTabs />
           </div>
         </div>
       </section>
     </>
-  );
-}
-
-function FaqItem({ question, answer, defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen);
-  return (
-    <div>
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 px-2 py-5 text-left transition-colors hover:bg-gray-50 sm:gap-6 sm:px-4 sm:py-6"
-      >
-        <span className="text-[15px] font-semibold text-ink sm:text-[17px]">
-          {question}
-        </span>
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center text-ink-muted">
-          {open ? (
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path d="M5 12h14" />
-            </svg>
-          ) : (
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path d="M12 5v14M5 12h14" />
-            </svg>
-          )}
-        </span>
-      </button>
-      {open && (
-        <div className="whitespace-pre-line px-2 pb-6 text-[13.5px] leading-[1.7] text-ink sm:px-4 sm:pb-7 sm:text-[14.5px]">
-          {answer}
-        </div>
-      )}
-    </div>
   );
 }

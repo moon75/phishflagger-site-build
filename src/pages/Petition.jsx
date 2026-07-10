@@ -118,9 +118,7 @@ export default function Petition() {
             </h1>
 
             <p className="mt-5 text-center text-[15px] leading-[1.65] text-[#444] sm:text-[16px]">
-              To all Regulators, this could stop fake calls.
-              <br />
-              I would appreciate validating incoming calls now.
+              Let your Regulators Know, this will stop fake calls.
             </p>
 
             <div className="mt-10 space-y-5">

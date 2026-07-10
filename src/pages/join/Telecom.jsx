@@ -144,38 +144,47 @@ export default function Telecom() {
               STIR / SHAKEN does not work and is problematic
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <li className="flex items-start gap-2 font-semibold text-ink">
-                <span>Fraud has skyrocketed in the 5 years since it was implemented</span>
-                <a
-                  href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 text-blue-600 underline underline-offset-2"
-                >
-                  Link
-                </a>
+              <li className="font-semibold text-ink">
+                Fraud has skyrocketed in the 5 years since it was{" "}
+                <span className="whitespace-nowrap">
+                  implemented.{" "}
+                  <a
+                    href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
               </li>
-              <li className="flex items-start gap-2 font-semibold text-ink">
-                <span>UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID Now Dead</span>
-                <a
-                  href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 text-blue-600 underline underline-offset-2"
-                >
-                  Link
-                </a>
+              <li className="font-semibold text-ink">
+                UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID{" "}
+                <span className="whitespace-nowrap">
+                  Now Dead.{" "}
+                  <a
+                    href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
               </li>
-              <li className="flex items-start gap-2 font-semibold text-ink">
-                <span>Call authentication and STIR/SHAKEN is not the solution</span>
-                <a
-                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 text-blue-600 underline underline-offset-2"
-                >
-                  Link
-                </a>
+              <li className="font-semibold text-ink">
+                Call authentication and STIR/SHAKEN is not the{" "}
+                <span className="whitespace-nowrap">
+                  solution.{" "}
+                  <a
+                    href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -203,7 +212,6 @@ export default function Telecom() {
               <li className="list-disc">
                 Interrogable among Telecoms and Carriers worldwide.
               </li>
-              <li className="list-disc">Elegant</li>
             </ul>
           </div>
         </div>
@@ -215,7 +223,7 @@ export default function Telecom() {
             <img
               src="/assets/images/off%20com.jpg"
               alt="Ofcom"
-              className="h-auto w-full max-w-[380px] object-contain"
+              className="h-auto w-full max-w-[520px] object-contain"
             />
           </div>
           <div className="lg:order-1">
@@ -237,7 +245,7 @@ export default function Telecom() {
                 href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline underline-offset-2"
+                className="ml-2 text-blue-600 underline underline-offset-2"
               >
                 Link
               </a>
@@ -251,7 +259,7 @@ export default function Telecom() {
                 href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline underline-offset-2"
+                className="ml-2 text-blue-600 underline underline-offset-2"
               >
                 Link
               </a>
@@ -265,10 +273,10 @@ export default function Telecom() {
                 href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline underline-offset-2"
+                className="mr-2 text-blue-600 underline underline-offset-2"
               >
                 Link
-              </a>{" "}
+              </a>
               <a
                 href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
                 target="_blank"

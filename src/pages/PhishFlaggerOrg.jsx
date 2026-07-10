@@ -1,7 +1,6 @@
-﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
-import { FAQ_ITEMS } from "../data/faq.js";
+import FaqTabs from "../components/faq/FaqTabs.jsx";
 import victimImg from "../assets/images/victim testimonials.avif";
 import endorseImg from "../assets/images/endorse us.avif";
 import communityImg from "../assets/images/commnity image.avif";
@@ -102,64 +101,21 @@ export default function PhishFlaggerOrg() {
         </div>
       </section>
 
-      <hr className="border-t border-gray-300" />
+      <div className="h-1.5 w-full bg-brand" aria-hidden />
 
-      {/* ===== Section 3 — FAQ (white) ===== */}
+      {/* ===== Section 3 — FAQ (white, part of footer) ===== */}
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[1000px]">
           <h2 className="text-center text-[28px] font-bold tracking-tight text-ink sm:text-[36px] lg:text-[42px]">
             Frequently asked questions
           </h2>
 
-          <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 sm:mt-12">
-            {FAQ_ITEMS.map((item, idx) => (
-              <FaqItem
-                key={item.q}
-                question={item.q}
-                answer={item.a}
-                last={idx === FAQ_ITEMS.length - 1}
-              />
-            ))}
+          <div className="mt-8 sm:mt-12">
+            <FaqTabs />
           </div>
         </div>
       </section>
     </>
-  );
-}
-
-function FaqItem({ question, answer, last }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={last ? "" : "border-b border-gray-200"}>
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-gray-50 sm:gap-6 sm:px-6 sm:py-5"
-      >
-        <span className="text-[14px] font-medium text-ink sm:text-[17px]">
-          {question}
-        </span>
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          className={`h-5 w-5 shrink-0 text-ink transition-transform duration-200 ${
-            open ? "rotate-45" : ""
-          }`}
-          aria-hidden
-        >
-          <path d="M12 5v14M5 12h14" />
-        </svg>
-      </button>
-      {open && (
-        <div className="whitespace-pre-line px-4 pb-5 text-[13.5px] leading-[1.65] text-ink-muted sm:px-6 sm:pb-6 sm:text-[15px]">
-          {answer}
-        </div>
-      )}
-    </div>
   );
 }
 

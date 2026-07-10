@@ -1,7 +1,6 @@
-﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import { FAQ_ITEMS } from "../../data/faq.js";
+import FaqTabs from "../../components/faq/FaqTabs.jsx";
 import emailInboxImg from "../../assets/images/email-inbox v2.png";
 
 export default function EmailIndividual() {
@@ -22,12 +21,15 @@ export default function EmailIndividual() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto flex max-w-content justify-center">
+        <div className="mx-auto flex max-w-content flex-col items-center">
           <img
             src={emailInboxImg}
             alt="Inbox showing PhishCounter numbered email messages"
             className="h-auto w-full max-w-[520px] rounded-md object-contain"
           />
+          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
         </div>
       </section>
 
@@ -74,53 +76,18 @@ function Divider() {
 function FaqSection() {
   return (
     <>
-    <hr className="border-t border-gray-300" />
+    <div className="h-1.5 w-full bg-brand" aria-hidden />
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-center text-[36px] font-semibold tracking-tight text-ink sm:text-[48px]">
           Frequently asked questions
         </h2>
 
-        <div className="mt-10 overflow-hidden rounded-lg border border-gray-200 sm:mt-14">
-          {FAQ_ITEMS.map((item, index) => (
-            <FaqItem
-              key={item.q}
-              question={item.q}
-              answer={item.a}
-              defaultOpen={false}
-              last={index === FAQ_ITEMS.length - 1}
-            />
-          ))}
+        <div className="mt-10 sm:mt-14">
+          <FaqTabs />
         </div>
       </div>
     </section>
     </>
-  );
-}
-
-function FaqItem({ question, answer, defaultOpen, last }) {
-  const [open, setOpen] = useState(defaultOpen);
-
-  return (
-    <div className={last ? "" : "border-b border-gray-200"}>
-      <button
-        type="button"
-        onClick={() => setOpen((current) => !current)}
-        aria-expanded={open}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-gray-50 sm:px-6"
-      >
-        <span className="text-[14px] font-semibold text-ink sm:text-[15px]">
-          {question}
-        </span>
-        <span className="text-[20px] leading-none text-ink">
-          {open ? "-" : "+"}
-        </span>
-      </button>
-      {open && (
-        <div className="whitespace-pre-line space-y-4 px-4 pb-5 text-[13px] leading-[1.75] text-ink-muted sm:px-6 sm:text-[14px]">
-          {answer}
-        </div>
-      )}
-    </div>
   );
 }
