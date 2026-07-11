@@ -4,8 +4,8 @@ import { FAQ_CATEGORIES } from "../../data/faq.js";
 // Reusable category-tabbed FAQ block. Renders a row of pill tabs (one per
 // FAQ_CATEGORIES entry) and the accordion for whichever category is active.
 export default function FaqTabs() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const active = FAQ_CATEGORIES[activeIndex];
+  const [activeIndex, setActiveIndex] = useState(null);
+  const active = activeIndex === null ? null : FAQ_CATEGORIES[activeIndex];
 
   return (
     <div>
@@ -14,7 +14,7 @@ export default function FaqTabs() {
           <button
             key={category.name}
             type="button"
-            onClick={() => setActiveIndex(idx)}
+            onClick={() => setActiveIndex(idx === activeIndex ? null : idx)}
             className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
               idx === activeIndex
                 ? "border-[#5a6066] bg-[#5a6066] text-white"
@@ -26,22 +26,24 @@ export default function FaqTabs() {
         ))}
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 sm:mt-10">
-        {active.items.length > 0 ? (
-          active.items.map((item, idx) => (
-            <FaqItem
-              key={item.q}
-              question={item.q}
-              answer={item.a}
-              last={idx === active.items.length - 1}
-            />
-          ))
-        ) : (
-          <p className="px-4 py-10 text-center text-[14px] italic text-ink-muted sm:px-6 sm:text-[15px]">
-            Coming soon.
-          </p>
-        )}
-      </div>
+      {active && (
+        <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 sm:mt-10">
+          {active.items.length > 0 ? (
+            active.items.map((item, idx) => (
+              <FaqItem
+                key={item.q}
+                question={item.q}
+                answer={item.a}
+                last={idx === active.items.length - 1}
+              />
+            ))
+          ) : (
+            <p className="px-4 py-10 text-center text-[14px] italic text-ink-muted sm:px-6 sm:text-[15px]">
+              Coming soon.
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

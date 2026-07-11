@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import FaqTabs from "../../components/faq/FaqTabs.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox v2.png";
 import marketerImg from "../../assets/images/5th sec.avif";
@@ -124,7 +123,6 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <FaqSection />
     </>
   );
 }
@@ -173,21 +171,3 @@ function Divider() {
   return <div className="mx-auto h-px w-[94%] max-w-[1120px] bg-gray-300" />;
 }
 
-function FaqSection() {
-  return (
-    <>
-    <div className="h-1.5 w-full bg-brand" aria-hidden />
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto max-w-[1000px]">
-        <h2 className="text-center text-[36px] font-semibold tracking-tight text-ink sm:text-[48px]">
-          Frequently asked questions
-        </h2>
-
-        <div className="mt-10 sm:mt-14">
-          <FaqTabs />
-        </div>
-      </div>
-    </section>
-    </>
-  );
-}

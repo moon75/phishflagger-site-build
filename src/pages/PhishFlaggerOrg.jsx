@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
-import FaqTabs from "../components/faq/FaqTabs.jsx";
 import victimImg from "../assets/images/victim testimonials.avif";
 import endorseImg from "../assets/images/endorse us.avif";
 import communityImg from "../assets/images/commnity image.avif";
@@ -101,20 +100,6 @@ export default function PhishFlaggerOrg() {
         </div>
       </section>
 
-      <div className="h-1.5 w-full bg-brand" aria-hidden />
-
-      {/* ===== Section 3 — FAQ (white, part of footer) ===== */}
-      <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
-        <div className="mx-auto max-w-[1000px]">
-          <h2 className="text-center text-[28px] font-bold tracking-tight text-ink sm:text-[36px] lg:text-[42px]">
-            Frequently asked questions
-          </h2>
-
-          <div className="mt-8 sm:mt-12">
-            <FaqTabs />
-          </div>
-        </div>
-      </section>
     </>
   );
 }
