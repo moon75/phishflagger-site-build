@@ -190,7 +190,10 @@ export default function Home() {
         </div>
 
         {/* Right — Thunderbird client image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex flex-col items-center lg:items-end">
+          <span className="mb-3 text-[14px] font-semibold tracking-tight text-black">
+            Thunderbird
+          </span>
           <img
             src="/assets/images/thunderbird client image.webp"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
