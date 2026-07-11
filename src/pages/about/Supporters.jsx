@@ -1,27 +1,43 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
-const SUPPORTERS = [
+const PRESS_AWARDS = [
   {
     id: 1,
-    name: "Sarah Mitchell",
-    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahMitchell&backgroundColor=b6e3f4",
-    note: "How come it took so long? The world needed this yesterday. Proud to support PhishFlagger from day one.",
-    verified: true,
+    place: "1st Place",
+    name: "Dain Oh",
+    date: "August 10, 2024",
+    img: "/assets/images/supporters/Dain_Oh.webp",
+    description:
+      'Our First Prize for the "Smartest" person to FIRST write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
+    articleUrl:
+      "https://web.archive.org/web/20251005223901/https://thereadable.co/top-10-announcements-black-hat-2024/",
+    articleLabel: "Read the article",
+    pickUrl: "https://www.n3con.com/2023/speaker/dain-oh/",
+    pickLabel: "View Speaker Profile",
   },
   {
     id: 2,
-    name: "James Thornton",
-    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=JamesThornton&backgroundColor=c0aede",
-    note: "Finally a real solution to email fraud. Simple, human-compatible, and long overdue. I'm all in.",
-    verified: true,
+    place: "2nd Place",
+    name: "Austin Harris",
+    date: "August 19, 2024",
+    img: "/assets/images/supporters/Austin%20Harris.jpg",
+    description:
+      "Our Second Prize to be SECOND to write about PhishFlagger is awarded to Austin Harris. He was the second editor to recognize and write about our solution.",
+    articleUrl:
+      "https://appdevelopermagazine.com/phishflagger-anti-phishing-email-solution-released/",
+    articleLabel: "Read the article",
   },
   {
     id: 3,
-    name: "Linda Okafor",
-    img: "https://api.dicebear.com/7.x/avataaars/svg?seed=LindaOkafor&backgroundColor=ffd5dc",
-    note: "I was scammed twice before I found PhishFlagger. This technology should be everywhere.",
-    verified: false,
+    place: "3rd Place",
+    name: "J.D. Houvener",
+    date: "2025",
+    img: "/assets/images/supporters/jd%20houvener.jpg",
+    description:
+      "In 2025, J.D. Houvener reached out to Mr. Pearce, recognizing his patent.",
+    pickUrl: "https://www.youtube.com/c/Boldip",
+    pickLabel: "Watch on YouTube",
   },
 ];
 
@@ -53,17 +69,17 @@ export default function Supporters() {
             Supporters
           </h1>
           <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-ink-muted sm:text-[17px]">
-            People who believe in safer communications for everyone.
+            Honoring the journalists and reviewers who first recognized PhishFlagger.
           </p>
         </div>
       </section>
 
-      {/* Supporter cards */}
+      {/* Press recognition awards */}
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[980px]">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SUPPORTERS.map((s) => (
-              <SupporterCard key={s.id} {...s} />
+            {PRESS_AWARDS.map((a) => (
+              <PressAwardCard key={a.id} {...a} />
             ))}
           </div>
         </div>
@@ -73,33 +89,56 @@ export default function Supporters() {
   );
 }
 
-function SupporterCard({ name, img, note, verified }) {
+function PressAwardCard({
+  place,
+  name,
+  date,
+  img,
+  description,
+  articleUrl,
+  articleLabel,
+  pickUrl,
+  pickLabel,
+}) {
   return (
     <div className="flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
+      <span className="rounded-full bg-brand px-3 py-0.5 text-[12px] font-bold text-white tracking-wide">
+        {place}
+      </span>
       <img
         src={img}
         alt={name}
-        className="h-20 w-20 rounded-full object-cover ring-4 ring-[#eef0f4]"
+        className="mt-4 h-20 w-20 rounded-full object-cover object-top ring-4 ring-[#eef0f4]"
       />
       <h3 className="mt-4 text-[17px] font-semibold text-ink">{name}</h3>
-
-      {/* Verified badge */}
-      <div className="mt-2 flex items-center gap-1.5">
-        <span
-          className={`flex h-5 w-5 items-center justify-center rounded-full text-white text-[11px] font-bold ${
-            verified ? "bg-green-500" : "bg-gray-300"
-          }`}
-        >
-          {verified ? "✓" : "✗"}
-        </span>
-        <span className={`text-[12px] font-medium ${verified ? "text-green-600" : "text-gray-400"}`}>
-          {verified ? "Verified" : "Pending"}
-        </span>
-      </div>
+      <p className="mt-1 text-[12px] font-medium text-ink-muted">{date}</p>
 
       <p className="mt-4 text-[13px] leading-[1.7] text-ink-muted">
-        &ldquo;{note}&rdquo;
+        {description}
       </p>
+
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+        {articleUrl && (
+          <a
+            href={articleUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-brand px-4 py-1.5 text-[13px] font-semibold text-brand transition-colors hover:bg-brand hover:text-white"
+          >
+            {articleLabel}
+          </a>
+        )}
+        {pickUrl && (
+          <a
+            href={pickUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-brand px-4 py-1.5 text-[13px] font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            {pickLabel}
+          </a>
+        )}
+      </div>
     </div>
   );
 }
