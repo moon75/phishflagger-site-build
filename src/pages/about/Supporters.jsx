@@ -9,12 +9,10 @@ const PRESS_AWARDS = [
     date: "August 10, 2024",
     img: "/assets/images/supporters/Dain_Oh.webp",
     description:
-      'Our First Prize for the "Smartest" person to FIRST write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
+      'Our Top Recognition for the first person to FIRST write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
     articleUrl:
       "https://web.archive.org/web/20251005223901/https://thereadable.co/top-10-announcements-black-hat-2024/",
     articleLabel: "Read the article",
-    pickUrl: "https://www.n3con.com/2023/speaker/dain-oh/",
-    pickLabel: "View Speaker Profile",
   },
   {
     id: 2,
@@ -37,7 +35,7 @@ const PRESS_AWARDS = [
     description:
       "In 2025, J.D. Houvener reached out to Mr. Pearce, recognizing his patent.",
     pickUrl: "https://www.youtube.com/c/Boldip",
-    pickLabel: "Watch on YouTube",
+    pickLabel: "JD's Channel",
   },
 ];
 
