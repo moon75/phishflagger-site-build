@@ -63,21 +63,6 @@ export default function News() {
       <CloseButton />
       <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
-          <div className="text-center">
-            <div className="text-[34px] leading-none tracking-tight sm:text-[42px]">
-              <em className="italic">
-                <span className="font-extrabold text-[#3a3a3a]">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[16px] font-semibold not-italic sm:text-[20px]">
-                TM
-              </span>
-            </div>
-            <p className="mt-3 text-[16px] font-medium text-[#303030] sm:text-[18px]">
-              The Email Phishing Solution
-            </p>
-          </div>
-
           <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-5 text-center sm:px-8">
             <h2 className="text-[22px] font-semibold leading-tight text-[#435154] sm:text-[26px]">
               Subscribe to PhishFlagger News

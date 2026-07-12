@@ -11,9 +11,6 @@ import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/des
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
 import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
-import history1Img from "../assets/images/7 1st.avif";
-import history2Img from "../assets/images/7  2nd.avif";
-import history3Img from "../assets/images/7 3rd.avif";
 
 const SCREENS = [
   { label: "Email", src: emailImg },
@@ -264,7 +261,7 @@ export default function Home() {
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-[28px] font-semibold text-ink">
-              Individual
+              Plug-In
             </span>
             <img
               src="/assets/images/individual.png"
@@ -342,46 +339,6 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Numbering history (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto max-w-content">
-        <p className="mx-auto max-w-[820px] text-center text-[16px] leading-[1.5] text-ink sm:text-[20px] sm:leading-[1.45]">
-          Numbering has been revolutionary in creating identifiable order to
-          records and documents, thereby reducing fraud.
-        </p>
-
-        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
-          <HistoryCard
-            year="1470"
-            topic="Pagination"
-            patent="Printing Press 1440"
-            attribution="Johannes Gutenberg"
-            heading="Numbering Book Pages"
-            img={history1Img}
-            imgAlt="Numbered book pages"
-          />
-          <HistoryCard
-            year="1892"
-            topic="Consecutive Stamp"
-            patent="US Patent 484391A"
-            attribution="Edwin G. Bates"
-            heading="Numbering Machine"
-            img={history2Img}
-            imgAlt="Mechanical numbering stamp"
-          />
-          <HistoryCard
-            year="2026"
-            topic="Phishing Protection"
-            patent="US Patent 11,601,449 B2"
-            attribution="William Pearce"
-            heading="Numbering Communications"
-            img={history3Img}
-            imgAlt="PhishFlagger email numbering"
-          />
-        </div>
-      </div>
-    </section>
-
     </>
   );
 }
@@ -393,31 +350,6 @@ function BrandInline({ trail = "Flagger" }) {
       <span className="font-bold text-ink">Phish</span>
       <span className="font-normal text-brand">{trail}</span>
     </em>
-  );
-}
-
-function HistoryCard({ year, topic, patent, attribution, heading, img, imgAlt }) {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <div className="text-[28px] font-bold leading-none text-ink sm:text-[34px]">
-        {year}
-      </div>
-      <div className="mt-1 text-[12px] font-medium text-ink-muted sm:text-[13px]">
-        {topic}
-      </div>
-      <div className="text-[12px] text-ink-muted sm:text-[13px]">{patent}</div>
-      <div className="mt-2 rounded-full bg-[#2a6df4] px-3 py-1 text-[11px] font-semibold text-white sm:text-[12px]">
-        {attribution}
-      </div>
-      <div className="mt-3 text-[16px] font-semibold text-ink sm:mt-4 sm:text-[18px]">
-        {heading}
-      </div>
-      <img
-        src={img}
-        alt={imgAlt}
-        className="mt-3 h-auto w-full max-w-[240px] object-contain sm:mt-4 sm:max-w-[280px]"
-      />
-    </div>
   );
 }
 

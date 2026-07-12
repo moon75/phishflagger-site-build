@@ -28,6 +28,7 @@ export default function Footer({ logoSrc = logoImg }) {
 
   return (
     <>
+      <div className="h-1.5 w-full bg-brand" aria-hidden />
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[1000px]">
           <h2 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
@@ -110,7 +111,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Email — Domain", to: "/join/email-domain" },
-                    { label: "Email — Individual", to: "/join/email-individual" },
+                    { label: "Email — Plug-In", to: "/join/email-individual" },
                     { label: "Email — Marketing", to: "/join/email-marketing" },
                     { label: "Telecom", to: "/join/telecom" },
                   ].map((link) => (
@@ -163,6 +164,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "IP", to: "/about/ip" },
                     { label: "FAQ", to: "/about/faq" },
                     { label: "Blog", to: "/about/blog" },
+                    { label: "Numbering History", to: "/about/numbering-history" },
                     { label: "Fiction", to: "/about/fiction" },
                   ].map((link) => (
                     <li key={link.to}>

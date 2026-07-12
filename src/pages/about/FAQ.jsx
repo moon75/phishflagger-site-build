@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import FaqTabs from "../../components/faq/FaqTabs.jsx";
 
 export default function FAQ() {
   return (
@@ -25,15 +24,6 @@ export default function FAQ() {
             <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
-
-            <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[56px]">
-              FAQ
-            </h1>
-          </div>
-
-          {/* FAQ categories */}
-          <div className="mt-12 sm:mt-16">
-            <FaqTabs />
           </div>
         </div>
       </section>

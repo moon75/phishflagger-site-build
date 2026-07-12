@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import supportersImg from "../assets/images/supporters-cartoon.png";
 
+const grannyImg = "/assets/images/granny%20image.png";
+
 const FORMSPARK_ENDPOINT = "https://submit-form.com/YW0bMhHOg";
 
 export default function EndorseUs() {
@@ -76,12 +78,14 @@ export default function EndorseUs() {
           </div>
 
           <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
-          <div className="flex h-full flex-col">
-            <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-left sm:text-[44px]">
-              Endorse Us for safe phone Calls.
-            </h1>
-            <div className="flex flex-1 items-center">
-              <p className="mx-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:mx-0 sm:text-left sm:text-[18px]">
+          <div className="flex h-full flex-col items-center sm:items-start">
+            <img
+              src={grannyImg}
+              alt="Woman on a phone call"
+              className="h-auto w-full max-w-[280px] rounded-2xl object-cover"
+            />
+            <div className="mt-auto pt-8 text-center sm:text-left">
+              <p className="mx-auto max-w-[420px] text-[16px] leading-relaxed text-ink-muted sm:mx-0 sm:text-[18px]">
                 Share why verified, numbered calls matter to you — your endorsement
                 helps us show telecom providers and regulators that people want an
                 end to caller ID spoofing and phone fraud.
@@ -106,9 +110,13 @@ export default function EndorseUs() {
           </aside>
           </div>
 
+          <h1 className="mt-16 text-center text-[34px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[44px]">
+            Endorse Us for safe phone Calls.
+          </h1>
+
           <form
             onSubmit={onSubmit}
-            className="mt-16 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
+            className="mt-8 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
           >
             <div className="space-y-5">
               {/* Name */}

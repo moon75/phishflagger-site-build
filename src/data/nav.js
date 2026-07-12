@@ -1,16 +1,13 @@
 // Single source of truth for primary navigation.
 // Header (desktop + mobile) renders from this; routes in App.jsx mirror it.
 
-export const PRESS_RELEASE_URL =
-  "https://www.einpresswire.com/article/905767982/phishflagger-announces-a-breakthrough-in-the-global-fight-against-caller-id-fraud";
-
 export const nav = [
   { label: "Home", href: "/" },
   {
     label: "Join",
     children: [
       { label: "Email - Domain", href: "/join/email-domain" },
-      { label: "Email - Individual", href: "/join/email-individual" },
+      { label: "Email - Plug-In", href: "/join/email-individual" },
       { label: "Email - Marketing", href: "/join/email-marketing" },
       { label: "Telecom", href: "/join/telecom" },
     ],
@@ -30,11 +27,12 @@ export const nav = [
     children: [
       { label: "Phishing News", href: "/News" },
       { label: "Video", href: "/about/video" },
-      { label: "Press", href: PRESS_RELEASE_URL, external: true },
+      { label: "Press", href: "/about/press" },
       { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
       { label: "FAQ", href: "/about/faq" },
       { label: "Blog", href: "/about/blog" },
+      { label: "Numbering History", href: "/about/numbering-history" },
       { label: "Fiction", href: "/about/fiction" },
     ],
   },

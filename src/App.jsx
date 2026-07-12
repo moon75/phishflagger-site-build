@@ -36,6 +36,7 @@ import FAQ from "./pages/about/FAQ.jsx";
 import Blog from "./pages/about/Blog.jsx";
 import News from "./pages/about/News.jsx";
 import Fiction from "./pages/about/Fiction.jsx";
+import NumberingHistory from "./pages/about/NumberingHistory.jsx";
 import Kickstarter from "./pages/about/Kickstarter.jsx";
 import HallOfFame from "./pages/about/HallOfFame.jsx";
 import AboutEndorseUs from "./pages/about/EndorseUs.jsx";
@@ -147,6 +148,7 @@ export default function App() {
             }
           />
           <Route path="supporters" element={<Supporters />} />
+          <Route path="numbering-history" element={<NumberingHistory />} />
           <Route path="fiction" element={<Fiction />} />
         </Route>
 

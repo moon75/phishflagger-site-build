@@ -132,67 +132,6 @@ export default function Telecom() {
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <div className="flex justify-center lg:order-2">
-            <img
-              src="/assets/images/existing%20CLI.jpg"
-              alt="STIR/SHAKEN"
-              className="h-auto w-full max-w-[420px]"
-            />
-          </div>
-          <div className="lg:order-1">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              STIR / SHAKEN does not work and is problematic
-            </h2>
-            <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <li className="font-semibold text-ink">
-                Fraud has skyrocketed in the 5 years since it was{" "}
-                <span className="whitespace-nowrap">
-                  implemented.{" "}
-                  <a
-                    href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
-                  >
-                    Link
-                  </a>
-                </span>
-              </li>
-              <li className="font-semibold text-ink">
-                UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID{" "}
-                <span className="whitespace-nowrap">
-                  Now Dead.{" "}
-                  <a
-                    href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
-                  >
-                    Link
-                  </a>
-                </span>
-              </li>
-              <li className="font-semibold text-ink">
-                Call authentication and STIR/SHAKEN is not the{" "}
-                <span className="whitespace-nowrap">
-                  solution.{" "}
-                  <a
-                    href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
-                  >
-                    Link
-                  </a>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
               src="/assets/images/image-stir.png"
@@ -217,12 +156,12 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
             <img
-              src="/assets/images/off%20com.jpg"
-              alt="Ofcom"
+              src="/assets/images/existing%20CLI.jpg"
+              alt="STIR/SHAKEN anti-spoofing ecosystem diagram"
               className="h-auto w-full max-w-[520px] object-contain"
             />
           </div>
@@ -286,6 +225,50 @@ export default function Telecom() {
                 Link
               </a>
             </p>
+            <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              <li className="font-semibold text-ink">
+                Fraud has skyrocketed in the 5 years since it was{" "}
+                <span className="whitespace-nowrap">
+                  implemented.{" "}
+                  <a
+                    href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
+              </li>
+              <li className="font-semibold text-ink">
+                UK Rejects STIR/SHAKEN; US Plan to Control Global Caller ID{" "}
+                <span className="whitespace-nowrap">
+                  Now Dead.{" "}
+                  <a
+                    href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
+              </li>
+              <li className="font-semibold text-ink">
+                Call authentication and STIR/SHAKEN is not the{" "}
+                <span className="whitespace-nowrap">
+                  solution.{" "}
+                  <a
+                    href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -314,7 +297,15 @@ export default function Telecom() {
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
-            The PhishFlagger process is protected by Patents
+            The{" "}
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="align-super text-[12px] not-italic sm:text-[14px]">
+              &trade;
+            </span>{" "}
+            process is protected by Patents
             <br />
             in the following Jurisdiction:
           </p>

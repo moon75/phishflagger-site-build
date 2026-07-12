@@ -23,8 +23,12 @@ const POSTS = [
     title: "PhishFlagger™ announces a breakthrough in the global fight against Caller ID fraud",
   },
   {
-    id: "text-messages-patent",
-    title: "Secured Text Messages Cell Phone Patents",
+    id: "cell-phone-patent",
+    title: "Cell Phone Patent Granted",
+  },
+  {
+    id: "text-patent",
+    title: "Text Patent Granted",
   },
   {
     id: "caller-id-patent",
@@ -91,7 +95,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* ===== Article 6 — Caller ID breakthrough (from Press) ===== */}
+      {/* ===== Article 7 — Caller ID breakthrough (from Press) ===== */}
       <article id="caller-id-breakthrough" className="w-full scroll-mt-28 bg-white px-4 pb-14 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
         <div className="mx-auto max-w-[820px]">
           <div className="text-center">
@@ -198,16 +202,39 @@ export default function Blog() {
 
       <Divider />
 
-      {/* ===== Article 5 — Secured Text Messages Cell Phone Patents ===== */}
-      <article id="text-messages-patent" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      {/* ===== Article 6 — Cell Phone Patent Granted ===== */}
+      <article id="cell-phone-patent" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[820px]">
           <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
-            Secured Text Messages Cell Phone Patents
+            Cell Phone Patent Granted
           </h2>
 
           <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
             <p>
               <Brand />™ is awarded a Patent in the USA to stop fake phone calls.
+              Patent US20240305986A1 covers a method of detecting incomplete
+              text message record sets using sequential numbering utilizing
+              cellular phone firmware, issued December 9, 2025.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <Divider />
+
+      {/* ===== Article 5 — Text Patent Granted ===== */}
+      <article id="text-patent" className="w-full scroll-mt-28 bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[820px]">
+          <h2 className="text-[26px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[32px] lg:text-[36px]">
+            Text Patent Granted
+          </h2>
+
+          <div className="mt-8 space-y-5 text-[14.5px] leading-[1.75] text-ink sm:text-[15.5px]">
+            <p>
+              <Brand />™ is awarded a Patent in the USA to stop incomplete or
+              altered text messages. Patent US12238083B2 covers a method of
+              detecting incomplete electronic record sets using sequential
+              numbering, issued February 25, 2025.
             </p>
           </div>
         </div>
