@@ -3,7 +3,7 @@
 
 export const FAQ_CATEGORIES = [
   {
-    name: "PhishFlagger General",
+    name: "General",
     items: [
       {
         q: "Why PhishFlagger™?",
@@ -56,7 +56,7 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "PhishFlagger Email - Domain",
+    name: "Email - Domain",
     items: [
       {
         q: "Do I need to change my DNS settings, MX records, or email provider?",
@@ -69,7 +69,7 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "PhishFlagger Email - Plug-In",
+    name: "Email - Plug-In",
     items: [
       {
         q: "Do email recipients need to install anything?",
@@ -78,7 +78,7 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "PhishFlagger Email - Marketing",
+    name: "Email - Marketing",
     items: [
       {
         q: "Does PhishFlagger™ work with platforms like Mailchimp, Salesforce, or HubSpot?",
@@ -87,7 +87,7 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "PhishFlagger Telecom",
+    name: "Telecom",
     items: [],
   },
 ];
