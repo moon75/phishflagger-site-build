@@ -18,10 +18,6 @@ export const FAQ_CATEGORIES = [
         a: "PhishFlagger™ plug-in or appliance assigns numbers to outgoing emails and verifies incoming numbers, for your security.",
       },
       {
-        q: "Do I need to change my DNS settings, MX records, or email provider?",
-        a: "Plug-in: No DNS or MX changes are required. PhishFlagger™ numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is plug-in for your client. Perfect for individual and small companies.\n\nDomain: Yes DNS or MX changes are required. PhishFlagger™ numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
-      },
-      {
         q: "How does PhishFlagger™ email numbering work?",
         a: "Each outgoing email is tagged with the next number in the sender’s sequence (the PhishCounter™) and placed in the subject line. The recipient — or their email client — can confirm the number is in sequence; any out-of-sequence or missing number is automatically flagged as suspicious. Additionally we certify the sending domain or email.",
       },
@@ -57,19 +53,38 @@ export const FAQ_CATEGORIES = [
         q: "What happens if a recipient forgets their last PhishCounter™ number?",
         a: "Install our Plug-In, use and Email from an PhishFlagger enabled Domain or manually look back at the most recent legitimate email from that sender to check the last number used. For first communications contact the sender through a trusted channel — by phone or via the company’s official website — to confirm whether the email is genuine. PhishFlagger™ is an added layer of protection that works alongside existing email safety best practices.",
       },
+    ],
+  },
+  {
+    name: "PhishFlagger Email - Domain",
+    items: [
+      {
+        q: "Do I need to change my DNS settings, MX records, or email provider?",
+        a: "Plug-in: No DNS or MX changes are required. PhishFlagger™ numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is plug-in for your client. Perfect for individual and small companies.\n\nDomain: Yes DNS or MX changes are required. PhishFlagger™ numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
+      },
+      {
+        q: "Do email recipients need to install anything?",
+        a: "For our Domain customers nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+      },
+    ],
+  },
+  {
+    name: "PhishFlagger Email - Plug-In",
+    items: [
+      {
+        q: "Do email recipients need to install anything?",
+        a: "For our Domain customers nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+      },
+    ],
+  },
+  {
+    name: "PhishFlagger Email - Marketing",
+    items: [
       {
         q: "Does PhishFlagger™ work with platforms like Mailchimp, Salesforce, or HubSpot?",
         a: "Yes. The numbering process is implemented at the sending domain or by the Plug-In.",
       },
     ],
-  },
-  {
-    name: "PhishFlagger Email - Domain",
-    items: [],
-  },
-  {
-    name: "PhishFlagger Email - Plug-In",
-    items: [],
   },
   {
     name: "PhishFlagger Telecom",

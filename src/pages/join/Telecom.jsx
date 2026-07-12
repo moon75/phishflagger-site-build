@@ -169,62 +169,6 @@ export default function Telecom() {
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               UK&rsquo;s regulator does not approve STIR/SHAKEN or CLI Authentication
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              The Office of Communications is the government-approved
-              regulatory and competition authority for the broadcasting,
-              internet, telecommunications and postal industries of the
-              United Kingdom rejects existing STIR/SHAKEN or CLI
-              Authentication.
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <span className="font-semibold">
-                PhishFlagger Numbering could meet the report challenge.
-              </span>{" "}
-              <a
-                href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 text-blue-600 underline underline-offset-2"
-              >
-                Link
-              </a>
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <span className="font-semibold">
-                Ofcom Sept 2 2025: Ofcom attempt to close the CLI spoofing
-                loophole, but are there holes in the plan?
-              </span>{" "}
-              <a
-                href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 text-blue-600 underline underline-offset-2"
-              >
-                Link
-              </a>
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              <span className="font-semibold">
-                Ofcom 21 July 2025: Consultation: Tackling scam calls from
-                abroad
-              </span>{" "}
-              <a
-                href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-2 text-blue-600 underline underline-offset-2"
-              >
-                Link
-              </a>
-              <a
-                href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline underline-offset-2"
-              >
-                Link
-              </a>
-            </p>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               <li className="font-semibold text-ink">
                 Fraud has skyrocketed in the 5 years since it was{" "}
@@ -267,6 +211,40 @@ export default function Telecom() {
                     Link
                   </a>
                 </span>
+              </li>
+              <li className="font-semibold text-ink">
+                PhishFlagger Numbering could meet the report{" "}
+                <span className="whitespace-nowrap">
+                  challenge.{" "}
+                  <a
+                    href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 underline underline-offset-2"
+                  >
+                    Link
+                  </a>
+                </span>
+              </li>
+              <li className="font-semibold text-ink">
+                Ofcom Sept 2 2025 &amp; 21 July 2025: CLI spoofing loophole and
+                scam calls from abroad consultations.{" "}
+                <a
+                  href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
               </li>
             </ul>
           </div>
@@ -340,12 +318,14 @@ export default function Telecom() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
+              imageClassName="[clip-path:polygon(0_0,40%_0,40%_52%,100%_52%,100%_100%,0_100%)]"
             />
             <ActionCard
               to="/endorse-us"
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
+              imageClassName="[filter:hue-rotate(250deg)_saturate(1.3)]"
             />
             <ActionCard
               to="/petition"
@@ -358,8 +338,8 @@ export default function Telecom() {
                   <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
                   <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
                   <line x1="23" y1="35" x2="34" y2="35" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M36 44 L48 32 L52 36 L40 48 L34 50 Z" fill="#ff0033" stroke="white" strokeWidth="1"/>
-                  <line x1="46" y1="34" x2="50" y2="38" stroke="white" strokeWidth="1.5"/>
+                  <path d="M32 48 L50 28 L56 34 L38 54 L30 57 Z" fill="#2a6df4" stroke="white" strokeWidth="1.5"/>
+                  <line x1="47" y1="31" x2="53" y2="37" stroke="white" strokeWidth="2"/>
                 </svg>
               }
             />

@@ -5,7 +5,7 @@ import textImg from "../assets/images/text.avif";
 import callerIdImg from "../assets/images/callerid.avif";
 import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
-import howWorksImg from "../assets/images/4th section.avif";
+const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
 import whoCanUseImg from "../assets/images/5th sec.avif";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -205,30 +205,37 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div className="flex justify-center lg:justify-start">
           <img
-            src={howWorksImg}
-            alt="PhishCounter subject line example"
+            src={howDoesItWorkImg}
+            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
             className="h-auto w-full max-w-[520px] object-contain"
           />
         </div>
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            How Does{" "}
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>{" "}
-            Work?
-          </h2>
-          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            <BrandInline trail="Flagger" />™ inserts a sequential
-            number in the subject line, called the{" "}
-            <BrandInline trail="Counter" />™, from the sender. The recipient
-            will see this number and be able to verify if it matches the last
-            email sent (Human Compatible) or it will be automatically flagged
-            as out of sequence by an application or domain (Auto-Flagging). In
-            both cases, the recipient is protected from fraudulent senders.
-          </p>
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Human Validation.
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <BrandInline trail="Flagger" />™ inserts a sequential
+              number in the subject line, called the{" "}
+              <BrandInline trail="Counter" />™, from the sender. The recipient
+              will see this number and be able to verify if it matches the
+              last email sent (Human Compatible) or it will be automatically
+              flagged as out of sequence by an application or domain
+              (Auto-Flagging). In both cases, the recipient is protected from
+              fraudulent senders.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Digital Validation
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              We ensure the sending domain or email is accurate.{" "}
+              <BrandInline trail="Flagger" />™ uses the Domain registry and
+              Plug-Ins to add additional authentication.
+            </p>
+          </div>
         </div>
       </div>
     </section>

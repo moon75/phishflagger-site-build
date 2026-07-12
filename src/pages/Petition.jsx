@@ -102,6 +102,14 @@ export default function Petition() {
             <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications
             </p>
+
+            <h1 className="mt-10 text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
+              Help Stop Fake Calls
+            </h1>
+
+            <p className="mt-5 text-center text-[15px] leading-[1.65] text-[#444] sm:text-[16px]">
+              Let your Regulators Know, this will stop fake calls.
+            </p>
           </div>
 
           {/* Form card */}
@@ -109,19 +117,7 @@ export default function Petition() {
             onSubmit={onSubmit}
             className="mx-auto mt-12 max-w-[802px] rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-10 sm:px-10"
           >
-            <p className="text-center text-[24px] font-semibold leading-tight text-[#303030] sm:text-[30px]">
-              Sign Petition
-            </p>
-
-            <h1 className="mt-5 text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
-              Help Stop Fake Calls
-            </h1>
-
-            <p className="mt-5 text-center text-[15px] leading-[1.65] text-[#444] sm:text-[16px]">
-              Let your Regulators Know, this will stop fake calls.
-            </p>
-
-            <div className="mt-10 space-y-5">
+            <div className="space-y-5">
               {/* Name */}
               <Field label="Name" required>
                 <input

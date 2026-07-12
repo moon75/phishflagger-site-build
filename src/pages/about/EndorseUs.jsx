@@ -110,15 +110,15 @@ export default function EndorseUs() {
           </aside>
           </div>
 
+          <h2 className="mt-16 text-center text-[26px] font-semibold leading-tight tracking-tight text-[#333333] sm:text-[36px]">
+            Endorsement Information
+          </h2>
+
           <form
             onSubmit={onSubmit}
-            className="mt-16 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
+            className="mt-8 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
           >
-            <h2 className="text-center text-[26px] font-semibold leading-tight tracking-tight text-[#333333] sm:text-[36px]">
-              Endorsement Information
-            </h2>
-
-            <div className="mt-8 space-y-4">
+            <div className="space-y-4">
               <Field label="Name">
                 <input
                   type="text"

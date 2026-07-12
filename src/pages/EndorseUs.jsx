@@ -79,18 +79,16 @@ export default function EndorseUs() {
 
           <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
           <div className="flex h-full flex-col items-center sm:items-start">
+            <p className="max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
+              Share why verified, numbered calls matter to you — your endorsement
+              helps us show telecom providers and regulators that people want an
+              end to caller ID spoofing and phone fraud.
+            </p>
             <img
               src={grannyImg}
               alt="Woman on a phone call"
-              className="h-auto w-full max-w-[280px] rounded-2xl object-cover"
+              className="mt-auto h-auto w-full max-w-[280px] rounded-2xl object-cover"
             />
-            <div className="mt-auto pt-8 text-center sm:text-left">
-              <p className="mx-auto max-w-[420px] text-[16px] leading-relaxed text-ink-muted sm:mx-0 sm:text-[18px]">
-                Share why verified, numbered calls matter to you — your endorsement
-                helps us show telecom providers and regulators that people want an
-                end to caller ID spoofing and phone fraud.
-              </p>
-            </div>
           </div>
           <aside className="text-center lg:sticky lg:top-32">
             <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[42px]">
