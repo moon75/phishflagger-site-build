@@ -13,6 +13,7 @@ import EndorseThanks from "./pages/EndorseThanks.jsx";
 import Petition from "./pages/Petition.jsx";
 import PetitionThanks from "./pages/PetitionThanks.jsx";
 import GenericThanks from "./pages/GenericThanks.jsx";
+import Kick from "./pages/Kick.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
@@ -58,6 +59,7 @@ export default function App() {
             />
           }
         />
+        <Route path="kick" element={<Kick />} />
         <Route path="endorse-us" element={<EndorseUs />} />
         <Route path="endorse-us/thanks" element={<EndorseThanks />} />
         <Route path="contact" element={<Contact />} />
@@ -88,7 +90,7 @@ export default function App() {
 
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />
-          <Route path="email-individual" element={<EmailIndividual />} />
+          <Route path="email-plug-in" element={<EmailIndividual />} />
           <Route path="email-marketing" element={<EmailMarketing />} />
           <Route path="email-marketing/quote" element={<EmailMarketingQuote />} />
           <Route

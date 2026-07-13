@@ -57,43 +57,20 @@ export default function EndorseUs() {
       <CloseButton to="/join/telecom" />
       <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
-          <div className="text-center">
-            <Link
-              to="/"
-              aria-label="PhishFlagger home"
-              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-            >
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                &trade;
-              </span>
-            </Link>
-
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-          </div>
-
           <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
           <div className="flex h-full flex-col items-center sm:items-start">
-            <p className="max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
+            <img
+              src={grannyImg}
+              alt="Woman on a phone call"
+              className="h-auto w-full max-w-[280px] rounded-2xl object-cover"
+            />
+            <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
               Share why verified, numbered calls matter to you — your endorsement
               helps us show telecom providers and regulators that people want an
               end to caller ID spoofing and phone fraud.
             </p>
-            <img
-              src={grannyImg}
-              alt="Woman on a phone call"
-              className="mt-auto h-auto w-full max-w-[280px] rounded-2xl object-cover"
-            />
           </div>
           <aside className="text-center lg:sticky lg:top-32">
-            <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[42px]">
-              See our Supporters
-            </h2>
             <img
               src={supportersImg}
               alt="Happy PhishFlagger supporters"

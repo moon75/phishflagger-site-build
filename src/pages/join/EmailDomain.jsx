@@ -10,10 +10,12 @@ export default function EmailDomain() {
 
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-content">
-          <PageBrand />
-
-          <h1 className="mt-8 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            PhishFlagger for your Domain
+          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight sm:text-[46px] lg:text-[54px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="text-ink"> for your Domain</span>
           </h1>
         </div>
       </section>
@@ -93,37 +95,6 @@ export default function EmailDomain() {
         </div>
       </section>
 
-    </>
-  );
-}
-
-function PageBrand() {
-  return (
-    <div className="text-center">
-      <Link
-        to="/"
-        aria-label="PhishFlagger home"
-        className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-      >
-        <BrandDisplay />
-      </Link>
-      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-        Protecting Communications
-      </p>
-    </div>
-  );
-}
-
-function BrandDisplay() {
-  return (
-    <>
-      <em className="italic">
-        <span className="font-extrabold text-ink">Phish</span>
-        <span className="font-normal text-brand">Flagger</span>
-      </em>
-      <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-        &trade;
-      </span>
     </>
   );
 }

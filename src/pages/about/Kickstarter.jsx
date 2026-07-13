@@ -1,7 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import supportersImg from "../../assets/images/supporters-cartoon.png";
-import kickstarterPdf from "../../assets/Pdf/Kickstarter Campaign.pdf";
 
 export default function Kickstarter() {
   return (
@@ -38,14 +37,6 @@ export default function Kickstarter() {
               <p className="mx-auto mt-6 max-w-[520px] text-[16px] leading-relaxed text-ink-muted sm:text-[18px] lg:mx-0">
                 Coming soon.
               </p>
-              <a
-                href={kickstarterPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                View Kickstarter Campaign
-              </a>
             </div>
             <div className="flex flex-col items-center">
               <Link

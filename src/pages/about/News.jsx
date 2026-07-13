@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import newsCardImg from "../../assets/images/phishing-news-card.png";
 
@@ -64,25 +63,6 @@ export default function News() {
       <CloseButton />
       <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
-          <div className="text-center">
-            <Link
-              to="/"
-              aria-label="PhishFlagger home"
-              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-            >
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                &trade;
-              </span>
-            </Link>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-          </div>
-
           <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-5 text-center sm:px-8">
             <h2 className="text-[22px] font-semibold leading-tight text-[#435154] sm:text-[26px]">
               Subscribe to{" "}

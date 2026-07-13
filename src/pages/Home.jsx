@@ -187,15 +187,15 @@ export default function Home() {
         </div>
 
         {/* Right — Thunderbird client image */}
-        <div className="flex flex-col items-center lg:items-end">
-          <span className="mb-3 text-[14px] font-semibold tracking-tight text-black">
-            Thunderbird
-          </span>
+        <div className="relative flex w-full max-w-[560px] flex-col items-center lg:items-end">
           <img
             src="/assets/images/thunderbird client image.webp"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
             className="h-auto w-full max-w-[560px] object-contain"
           />
+          <span className="absolute bottom-4 inline-flex items-center gap-2 rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
+            Thunderbird
+          </span>
         </div>
       </div>
     </section>
@@ -213,7 +213,7 @@ export default function Home() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Human Validation.
+              Human.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
               <BrandInline trail="Flagger" />™ inserts a sequential
@@ -228,7 +228,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Digital Validation
+              Digital.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
               We ensure the sending domain or email is accurate.{" "}

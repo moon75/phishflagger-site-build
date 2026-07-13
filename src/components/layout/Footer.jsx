@@ -111,7 +111,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Email — Domain", to: "/join/email-domain" },
-                    { label: "Email — Plug-In", to: "/join/email-individual" },
+                    { label: "Email — Plug-In", to: "/join/email-plug-in" },
                     { label: "Email — Marketing", to: "/join/email-marketing" },
                     { label: "Telecom", to: "/join/telecom" },
                   ].map((link) => (
@@ -139,6 +139,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Supporters", to: "/about/supporters" },
                     { label: "Telecom - Endorse Us", to: "/endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
+                    { label: "FAQ", to: "/about/faq" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link
@@ -162,7 +163,6 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Press", to: "/about/press" },
                     { label: "Video", to: "/about/video" },
                     { label: "IP", to: "/about/ip" },
-                    { label: "FAQ", to: "/about/faq" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Numbering History", to: "/about/numbering-history" },
                     { label: "Fiction", to: "/about/fiction" },
