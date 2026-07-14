@@ -80,43 +80,38 @@ export default function EndorseUs() {
             </p>
           </div>
 
-          <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
-          <div className="flex h-full flex-col">
-            <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-left sm:text-[44px]">
-              Endorse Us
-            </h1>
-            <div className="flex flex-1 items-center">
-              <p className="mx-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:mx-0 sm:text-left sm:text-[18px]">
+          <div className="mt-10 grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="flex h-full flex-col items-center gap-6 sm:items-start">
+              <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-left sm:text-[44px]">
+                Endorse Us
+              </h1>
+              <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
                 Join our supporters. These visionaries understand how human
                 compatible PhishFlagger can finally solve Phishing.
               </p>
             </div>
+            <div className="flex h-full w-full flex-col items-center gap-6 text-center">
+              <img
+                src={supportersImg}
+                alt="Happy PhishFlagger supporters"
+                className="h-[220px] w-full max-w-[600px] object-contain"
+              />
+              <Link
+                to={
+                  location.pathname.startsWith("/help")
+                    ? "/help/supporters"
+                    : "/about/supporters"
+                }
+                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              >
+                Supporters
+              </Link>
+            </div>
           </div>
-          <aside className="text-center lg:sticky lg:top-32">
-            <h2 className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[42px]">
-              See our Supporters
-            </h2>
-            <img
-              src={supportersImg}
-              alt="Happy PhishFlagger supporters"
-              className="mx-auto mt-8 h-auto w-full max-w-[520px] object-contain"
-            />
-            <Link
-              to="/about/supporters"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-            >
-              Supporters
-            </Link>
-          </aside>
-          </div>
-
-          <h2 className="mt-16 text-center text-[26px] font-semibold leading-tight tracking-tight text-[#333333] sm:text-[36px]">
-            Endorsement Information
-          </h2>
 
           <form
             onSubmit={onSubmit}
-            className="mt-8 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
+            className="mt-14 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
           >
             <div className="space-y-4">
               <Field label="Name">

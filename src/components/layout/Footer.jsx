@@ -133,11 +133,11 @@ export default function Footer({ logoSrc = logoImg }) {
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "PhishFlagger.org", to: "/phishflagger-org" },
-                    { label: "Kickstarter", to: "/about/kickstarter" },
-                    { label: "Hall of Fame", to: "/about/hall-of-fame" },
+                    { label: "Kickstarter", to: "/help/kickstarter" },
+                    { label: "Hall of Fame", to: "/help/hall-of-fame" },
                     { label: "Endorse Us", to: "/help/endorse-us" },
-                    { label: "Supporters", to: "/about/supporters" },
-                    { label: "Telecom - Endorse Us", to: "/endorse-us" },
+                    { label: "Supporters", to: "/help/supporters" },
+                    { label: "Telecom - Endorse Us", to: "/help/telecom-endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
                     { label: "FAQ", to: "/about/faq" },
                   ].map((link) => (

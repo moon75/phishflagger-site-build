@@ -60,8 +60,6 @@ export default function App() {
           }
         />
         <Route path="kick" element={<Kick />} />
-        <Route path="endorse-us" element={<EndorseUs />} />
-        <Route path="endorse-us/thanks" element={<EndorseThanks />} />
         <Route path="contact" element={<Contact />} />
         <Route
           path="contact/thanks"
@@ -127,6 +125,14 @@ export default function App() {
               />
             }
           />
+          <Route path="telecom-endorse-us" element={<EndorseUs />} />
+          <Route
+            path="telecom-endorse-us/thanks"
+            element={<EndorseThanks />}
+          />
+          <Route path="kickstarter" element={<Kickstarter />} />
+          <Route path="hall-of-fame" element={<HallOfFame />} />
+          <Route path="supporters" element={<Supporters />} />
         </Route>
 
         <Route path="about">

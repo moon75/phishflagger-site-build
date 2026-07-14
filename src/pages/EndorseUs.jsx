@@ -46,7 +46,7 @@ export default function EndorseUs() {
       form.reset();
       setPic(null);
       setVerifyMe(false);
-      navigate("/endorse-us/thanks");
+      navigate("/help/telecom-endorse-us/thanks");
     } catch {
       setStatus("error");
     }
@@ -57,41 +57,41 @@ export default function EndorseUs() {
       <CloseButton to="/join/telecom" />
       <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
-          <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
-          <div className="flex h-full flex-col items-center sm:items-start">
-            <img
-              src={grannyImg}
-              alt="Woman on a phone call"
-              className="h-auto w-full max-w-[280px] rounded-2xl object-cover"
-            />
-            <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
-              Share why verified, numbered calls matter to you — your endorsement
-              helps us show telecom providers and regulators that people want an
-              end to caller ID spoofing and phone fraud.
-            </p>
-          </div>
-          <aside className="text-center lg:sticky lg:top-32">
-            <img
-              src={supportersImg}
-              alt="Happy PhishFlagger supporters"
-              className="mx-auto mt-8 h-auto w-full max-w-[520px] object-contain"
-            />
-            <Link
-              to="/about/supporters"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-            >
-              Supporters
-            </Link>
-          </aside>
-          </div>
-
-          <h1 className="mt-16 text-center text-[34px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[44px]">
+          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-[#303030] sm:text-[44px]">
             Endorse Us for safe phone Calls.
           </h1>
 
+          <div className="mt-10 grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="flex h-full flex-col items-center gap-6 sm:items-start">
+              <img
+                src={grannyImg}
+                alt="Woman on a phone call"
+                className="h-[220px] w-full max-w-[300px] rounded-2xl object-cover object-top shadow-sm"
+              />
+              <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
+                Share why verified, numbered calls matter to you — your endorsement
+                helps us show telecom providers and regulators that people want an
+                end to caller ID spoofing and phone fraud.
+              </p>
+            </div>
+            <div className="flex h-full w-full flex-col items-center gap-6 text-center">
+              <img
+                src={supportersImg}
+                alt="Happy PhishFlagger supporters"
+                className="h-[220px] w-full max-w-[600px] object-contain"
+              />
+              <Link
+                to="/help/supporters"
+                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              >
+                Supporters
+              </Link>
+            </div>
+          </div>
+
           <form
             onSubmit={onSubmit}
-            className="mt-8 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
+            className="mt-14 w-full rounded-[10px] border border-[#e9e9e9] bg-white px-6 pb-12 pt-14"
           >
             <div className="space-y-5">
               {/* Name */}

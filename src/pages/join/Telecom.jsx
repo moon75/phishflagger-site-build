@@ -318,14 +318,12 @@ export default function Telecom() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
-              imageClassName="[clip-path:polygon(0_0,40%_0,40%_52%,100%_52%,100%_100%,0_100%)]"
             />
             <ActionCard
-              to="/endorse-us"
+              to="/help/telecom-endorse-us"
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
-              imageClassName="[filter:hue-rotate(250deg)_saturate(1.3)]"
             />
             <ActionCard
               to="/petition"
