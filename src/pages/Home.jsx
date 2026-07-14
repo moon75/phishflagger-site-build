@@ -259,7 +259,7 @@ export default function Home() {
           </p>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-5 sm:text-[15px] sm:leading-[1.6]">
             <span className="font-semibold">Coming Soon Free:</span> Any
-            Individual using Gmail, Yahoo, Outlook/Hotmail/Live (and other
+            Individual or Business using Gmail, Yahoo, Outlook/Hotmail/Live (and other
             approved free sites) can install a plug-in for Thunderbird, Outlook
             (and other approved Email Clients) and be protected with
             PhishFlagger.
@@ -267,34 +267,78 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[28px] font-semibold text-ink">
-              Plug-In
+            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+              Plug-In Business
             </span>
-            <img
-              src="/assets/images/individual.png"
-              alt="Individual protection illustration"
-              className="h-[150px] w-auto object-contain"
-            />
+            <div className="flex h-[150px] w-[150px] items-center justify-center">
+              <svg
+                viewBox="0 0 150 150"
+                role="img"
+                aria-label="Small business team illustration"
+                className="h-[130px] w-[130px]"
+              >
+                <circle cx="38" cy="48" r="22" fill="none" stroke="#0c2217" strokeWidth="4" />
+                <path
+                  d="M4 132c0-24 15-42 34-42s34 18 34 42"
+                  fill="none"
+                  stroke="#0c2217"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+                <circle cx="90" cy="40" r="26" fill="none" stroke="#ff0033" strokeWidth="4" />
+                <path
+                  d="M46 136c0-26 20-44 44-44s44 18 44 44"
+                  fill="none"
+                  stroke="#ff0033"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+                <circle cx="120" cy="54" r="18" fill="none" stroke="#0c2217" strokeWidth="4" />
+                <path
+                  d="M92 132c0-20 13-34 32-34s32 14 32 34"
+                  fill="none"
+                  stroke="#0c2217"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
           </div>
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[28px] font-semibold text-ink">
+            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+              Plug-In Free
+            </span>
+            <div className="flex h-[150px] w-[150px] items-center justify-center">
+              <img
+                src="/assets/images/individual.png"
+                alt="Individual protection illustration"
+                className="h-[130px] w-[130px] object-contain"
+              />
+            </div>
+          </div>
+          <div className="flex w-[150px] flex-col items-center">
+            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Domain
             </span>
-            <img
-              src="/assets/images/domain.png"
-              alt="Domain protection illustration"
-              className="h-[150px] w-auto object-contain"
-            />
+            <div className="flex h-[150px] w-[150px] items-center justify-center">
+              <img
+                src="/assets/images/domain.png"
+                alt="Domain protection illustration"
+                className="h-[130px] w-[130px] object-contain"
+              />
+            </div>
           </div>
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-[28px] font-semibold text-ink">
+            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Marketer
             </span>
-            <img
-              src={whoCanUseImg}
-              alt="Join PhishFlagger illustration"
-              className="h-[150px] w-auto object-contain"
-            />
+            <div className="flex h-[150px] w-[150px] items-center justify-center">
+              <img
+                src={whoCanUseImg}
+                alt="Join PhishFlagger illustration"
+                className="h-[130px] w-[130px] object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
