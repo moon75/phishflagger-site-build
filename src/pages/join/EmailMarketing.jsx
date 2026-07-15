@@ -92,10 +92,14 @@ export default function EmailMarketing() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-              Recipients that are PhishFlagger Enabled.
+              Recipients that are <BrandInline />
+              <span className="align-super text-[14px] font-normal not-italic sm:text-[16px]">
+                &trade;
+              </span>{" "}
+              Enabled.
             </h2>
             <p className="mt-5">
-              PhishFlagger enabled domain or clients automatically validate
+              <BrandInline /> enabled domain or clients automatically validate
               emails.
             </p>
           </div>
