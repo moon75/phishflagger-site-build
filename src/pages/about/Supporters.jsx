@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { brandify } from "../../components/Brand.jsx";
 
 const PRESS_AWARDS = [
   {
@@ -67,7 +68,8 @@ export default function Supporters() {
             Supporters
           </h1>
           <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-ink-muted sm:text-[17px]">
-            Honoring the journalists and reviewers who first recognized PhishFlagger.
+            Honoring the journalists and reviewers who first recognized{" "}
+            {brandify("PhishFlagger")}.
           </p>
         </div>
       </section>
@@ -112,7 +114,7 @@ function PressAwardCard({
       <p className="mt-1 text-[12px] font-medium text-ink-muted">{date}</p>
 
       <p className="mt-4 text-[13px] leading-[1.7] text-ink-muted">
-        {description}
+        {brandify(description)}
       </p>
 
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">

@@ -6,6 +6,7 @@ import blog2Img from "../../assets/images/blog 2 feature.avif";
 import blog3Img from "../../assets/images/blog 3 feature image.avif";
 import blog3Img1 from "../../assets/images/blog 3 image 1.avif";
 import blog3Img2 from "../../assets/images/blog 3 image 2.webp";
+import { brandify } from "../../components/Brand.jsx";
 
 function Brand({ trail = "Flagger" }) {
   return (
@@ -86,7 +87,7 @@ export default function Blog() {
                     href={`#${p.id}`}
                     className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                   >
-                    {POSTS.length - i}. {p.title}
+                    {POSTS.length - i}. {brandify(p.title)}
                   </a>
                 </li>
               ))}

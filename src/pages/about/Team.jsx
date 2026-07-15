@@ -7,6 +7,7 @@ import robertImg from "../../assets/images/dr robert.avif";
 import danImg from "../../assets/images/dan.avif";
 import jimImg from "../../assets/images/jim riches.avif";
 import shawnImg from "../../assets/images/shawn.avif";
+import { brandify } from "../../components/Brand.jsx";
 
 const TEAM = [
   {
@@ -133,7 +134,7 @@ function TeamCard({ name, role, bio, photo }) {
         {role}
       </p>
       <p className="mt-4 text-[13.5px] leading-[1.65] text-ink sm:text-[14px]">
-        {bio}
+        {brandify(bio)}
       </p>
     </article>
   );

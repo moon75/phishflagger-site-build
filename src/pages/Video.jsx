@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { brandify } from "../components/Brand.jsx";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
 
@@ -31,8 +32,9 @@ export default function Video() {
               Watch the Video
             </h1>
             <p className="mx-auto mt-4 max-w-[640px] text-[14px] leading-[1.6] text-ink sm:text-[15px]">
-              See how PhishFlagger™ and human validation protects against phishing
-              and fraud.
+              {brandify(
+                "See how PhishFlagger™ and human validation protects against phishing and fraud.",
+              )}
             </p>
           </div>
 

@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { brandify } from "../../components/Brand.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
@@ -25,9 +26,9 @@ export default function Telecom() {
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
             <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
-              PhishFlagger protocols introduce a sequence number, known only by
-              the valid carrier and the callee into the Caller ID field
-              providing a simple way to identify fraudsters.
+              {brandify(
+                "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
+              )}
             </p>
           </div>
         </div>
@@ -217,7 +218,7 @@ export default function Telecom() {
                 </span>
               </li>
               <li className="font-semibold text-ink">
-                PhishFlagger Numbering could meet the report{" "}
+                {brandify("PhishFlagger")} Numbering could meet the report{" "}
                 <span className="whitespace-nowrap">
                   challenge.{" "}
                   <a
@@ -231,16 +232,26 @@ export default function Telecom() {
                 </span>
               </li>
               <li className="font-semibold text-ink">
-                Ofcom Sept 2 2025 &amp; 21 July 2025: CLI spoofing loophole and
-                scam calls from abroad consultations.{" "}
+                Ofcom Sept 2 2025{" "}
                 <a
                   href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 text-blue-600 underline underline-offset-2"
+                  className="text-blue-600 underline underline-offset-2"
                 >
                   Link
-                </a>{" "}
+                </a>
+                {" "}&amp; 21 July 2025{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                : CLI spoofing loophole and scam calls from abroad
+                consultations.{" "}
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
                   target="_blank"
@@ -326,6 +337,7 @@ export default function Telecom() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
+              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
             />
             <ActionCard
               to="/help/telecom-endorse-us"
@@ -344,8 +356,6 @@ export default function Telecom() {
                   <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
                   <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
                   <line x1="23" y1="35" x2="34" y2="35" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M32 48 L50 28 L56 34 L38 54 L30 57 Z" fill="#2a6df4" stroke="white" strokeWidth="1.5"/>
-                  <line x1="47" y1="31" x2="53" y2="37" stroke="white" strokeWidth="2"/>
                 </svg>
               }
             />
@@ -414,7 +424,15 @@ function PageBrand() {
   );
 }
 
-function ActionCard({ to, label, src, alt, imageClassName = "", svgIcon }) {
+function ActionCard({
+  to,
+  label,
+  src,
+  alt,
+  imageClassName = "",
+  svgIcon,
+  imageSize = "h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]",
+}) {
   return (
     <Link
       to={to}
@@ -427,7 +445,7 @@ function ActionCard({ to, label, src, alt, imageClassName = "", svgIcon }) {
         <img
           src={src}
           alt={alt}
-          className={`mt-5 h-[68px] w-[68px] object-contain sm:h-[83px] sm:w-[83px] ${imageClassName}`}
+          className={`mt-5 object-contain ${imageSize} ${imageClassName}`}
         />
       )}
     </Link>
@@ -452,11 +470,11 @@ function SplitSection({ image, imageAlt, text, bullets }) {
                 {Array.isArray(item) ? (
                   <div className="space-y-4">
                     {item.map((line) => (
-                      <p key={line}>{line}</p>
+                      <p key={line}>{brandify(line)}</p>
                     ))}
                   </div>
                 ) : (
-                  item
+                  brandify(item)
                 )}
               </li>
             ))}
@@ -485,7 +503,7 @@ function FeatureSection({ tone = "white", image, imageAlt, items, reverse }) {
     <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
       {items.map((item) => (
         <li key={item} className="list-disc">
-          {item}
+          {brandify(item)}
         </li>
       ))}
     </ul>

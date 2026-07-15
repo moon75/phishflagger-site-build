@@ -76,8 +76,56 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 2 — What is PhishFlagger? (white) ===== */}
+    {/* ===== Section 2 — How Does PhishFlagger Work? (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+        <div className="flex flex-col items-center lg:items-start">
+          <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
+            How Does{" "}
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="font-normal not-italic">™</span> Work?
+          </h2>
+          <img
+            src={howDoesItWorkImg}
+            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
+            className="h-auto w-full max-w-[520px] object-contain"
+          />
+        </div>
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Human.
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <BrandInline trail="Flagger" />™ inserts a sequential
+              number in the subject line, called the{" "}
+              <BrandInline trail="Counter" />™, from the sender. The recipient
+              will see this number and be able to verify if it matches the
+              last email sent (Human Compatible) or it will be automatically
+              flagged as out of sequence by an application or domain
+              (Auto-Flagging). In both cases, the recipient is protected from
+              fraudulent senders.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Digital.
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              We ensure the sending domain or email is accurate.{" "}
+              <BrandInline trail="Flagger" />™ uses the Domain registry and
+              Plug-Ins to add additional authentication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 3 — What is PhishFlagger? (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         {/* Left — heading + bullets */}
         <div>
@@ -137,8 +185,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 3 — Domain protection (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 4 — Domain protection (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         {/* Left — email authentication diagram */}
         <div className="flex justify-center lg:justify-start">
@@ -167,8 +215,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 4 — Individual protection (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 5 — Individual protection (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr]">
         {/* Left — heading + text */}
         <div>
@@ -179,7 +227,7 @@ export default function Home() {
             </em>
             <span className="font-normal not-italic">™</span>
             <br />
-            Individual protection: Thunderbird with PhishFlagger free plug
+            Individual protection: Thunderbird with <BrandInline />™ free plug
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
             Support our free plug to stop impersonation now.
@@ -200,47 +248,7 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 5 — How Does PhishFlagger Work? (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
-        <div className="flex justify-center lg:justify-start">
-          <img
-            src={howDoesItWorkImg}
-            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-            className="h-auto w-full max-w-[520px] object-contain"
-          />
-        </div>
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Human.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" />™ inserts a sequential
-              number in the subject line, called the{" "}
-              <BrandInline trail="Counter" />™, from the sender. The recipient
-              will see this number and be able to verify if it matches the
-              last email sent (Human Compatible) or it will be automatically
-              flagged as out of sequence by an application or domain
-              (Auto-Flagging). In both cases, the recipient is protected from
-              fraudulent senders.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Digital.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              We ensure the sending domain or email is accurate.{" "}
-              <BrandInline trail="Flagger" />™ uses the Domain registry and
-              Plug-Ins to add additional authentication.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 5 — Who Can Use (white) ===== */}
+    {/* ===== Section 6 — Who Can Use (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
@@ -254,15 +262,15 @@ export default function Home() {
             <span className="font-normal not-italic">™</span>
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Any Email Domain can join PhishFlagger protection. We also enable
+            Any Email Domain can join <BrandInline />™ protection. We also enable
             Marketers, Portals and Security Providers.
           </p>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-5 sm:text-[15px] sm:leading-[1.6]">
             <span className="font-semibold">Coming Soon Free:</span> Any
             Individual or Business using Gmail, Yahoo, Outlook/Hotmail/Live (and other
             approved free sites) can install a plug-in for Thunderbird, Outlook
-            (and other approved Email Clients) and be protected with
-            PhishFlagger.
+            (and other approved Email Clients) and be protected with{" "}
+            <BrandInline />™.
           </p>
         </div>
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
@@ -348,7 +356,7 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 6 — Caller ID (gray) ===== */}
+    {/* ===== Section 7 — Caller ID (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}

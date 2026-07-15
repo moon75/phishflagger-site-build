@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import supportersImg from "../../assets/images/supporters-cartoon.png";
+import { brandify } from "../../components/Brand.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/IxWqoD0pH";
 
@@ -67,8 +68,9 @@ export default function EndorseUs() {
           <div className="mt-10 grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex h-full flex-col items-center justify-center">
               <p className="max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-[18px]">
-                Join our supporters. These visionaries understand how human
-                compatible PhishFlagger can finally solve Phishing.
+                {brandify(
+                  "Join our supporters. These visionaries understand how human compatible PhishFlagger can finally solve Phishing.",
+                )}
               </p>
             </div>
             <div className="flex h-full w-full flex-col items-center gap-6 text-center">

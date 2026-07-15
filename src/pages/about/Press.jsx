@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { brandify } from "../../components/Brand.jsx";
 
 const PRESS_ITEMS = [
   {
@@ -61,7 +62,7 @@ export default function Press() {
                 className="block px-5 py-5 transition-colors hover:bg-gray-50 sm:px-8 sm:py-6"
               >
                 <p className="text-[15px] font-medium leading-snug text-ink sm:text-[17px]">
-                  {item.title}
+                  {brandify(item.title)}
                 </p>
                 <span className="mt-2 inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]">
                   Link

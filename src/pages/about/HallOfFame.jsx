@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { brandify } from "../../components/Brand.jsx";
 
 const SUPPORTERS = [
   {
@@ -95,7 +96,7 @@ function SupporterCard({ name, number, img, quote, index }) {
         Kickstarter Supporter {number}
       </span>
       <p className="mt-4 text-[14px] leading-[1.7] text-ink-muted">
-        &ldquo;{quote}&rdquo;
+        &ldquo;{brandify(quote)}&rdquo;
       </p>
     </div>
   );

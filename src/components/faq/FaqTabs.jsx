@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FAQ_CATEGORIES } from "../../data/faq.js";
+import { brandify } from "../Brand.jsx";
 
 // Reusable category-tabbed FAQ block. Renders a row of pill tabs (one per
 // FAQ_CATEGORIES entry) and the accordion for whichever category is active.
@@ -59,7 +60,7 @@ function FaqItem({ question, answer, last }) {
         className="flex w-full cursor-pointer items-center justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-gray-50 sm:gap-6 sm:px-6 sm:py-5"
       >
         <span className="text-[14px] font-medium text-ink sm:text-[17px]">
-          {question}
+          {brandify(question)}
         </span>
         <span className="text-[20px] leading-none text-ink-muted">
           {open ? "−" : "+"}
@@ -67,7 +68,7 @@ function FaqItem({ question, answer, last }) {
       </button>
       {open && (
         <div className="whitespace-pre-line px-4 pb-5 text-[13.5px] leading-[1.65] text-ink-muted sm:px-6 sm:pb-6 sm:text-[15px]">
-          {answer}
+          {brandify(answer)}
         </div>
       )}
     </div>
