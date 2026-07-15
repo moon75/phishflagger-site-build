@@ -87,11 +87,8 @@ export default function Footer({ logoSrc = logoImg }) {
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Home", to: "/" },
-                    { label: "Community", to: "/community" },
                     { label: "Demo", to: "/demo" },
                     { label: "Video", to: "/video" },
-                    { label: "Victim Testimonials", to: "/victim-testimonials" },
-                    { label: "Contact", to: "/contact" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link
@@ -190,7 +187,9 @@ export default function Footer({ logoSrc = logoImg }) {
           >
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/phishflagger"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#0A66C2] shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_10px_rgba(0,0,0,0.12)] max-sm:h-10 max-sm:w-10"
               >
@@ -201,7 +200,9 @@ export default function Footer({ logoSrc = logoImg }) {
             </li>
             <li>
               <a
-                href="#"
+                href="https://x.com/phishflagger"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X (Twitter)"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_10px_rgba(0,0,0,0.12)] max-sm:h-10 max-sm:w-10"
               >
@@ -212,7 +213,9 @@ export default function Footer({ logoSrc = logoImg }) {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.youtube.com/channel/UCuqevohQftyPjFz35uwY5mg"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#FF0000] shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_10px_rgba(0,0,0,0.12)] max-sm:h-10 max-sm:w-10"
               >
@@ -223,7 +226,9 @@ export default function Footer({ logoSrc = logoImg }) {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.facebook.com/PhishFlagger/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#1877F2] shadow-[0_1px_3px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_4px_10px_rgba(0,0,0,0.12)] max-sm:h-10 max-sm:w-10"
               >

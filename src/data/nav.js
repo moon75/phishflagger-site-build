@@ -30,7 +30,6 @@ export const nav = [
       { label: "Press", href: "/about/press" },
       { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
-      { label: "FAQ", href: "/about/faq" },
       { label: "Blog", href: "/about/blog" },
       { label: "Numbering History", href: "/about/numbering-history" },
       { label: "Fiction", href: "/about/fiction" },

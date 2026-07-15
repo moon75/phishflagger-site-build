@@ -141,7 +141,11 @@ export default function Telecom() {
           </div>
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              PhishFlagger Method using existing CLI
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>{" "}
+              Method using existing CLI
             </h2>
             <ul className="mt-6 space-y-3 pl-5 text-[17px] leading-relaxed text-ink sm:text-[19px]">
               <li className="list-disc">Easily deployable</li>
@@ -262,7 +266,11 @@ export default function Telecom() {
           </div>
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              PhishFlagger uses existing infrastructure.
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>{" "}
+              uses existing infrastructure.
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               A sequence number know only by Valid Telecom and Callee could be

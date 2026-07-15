@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/QA8UI22TL";
@@ -86,29 +86,12 @@ export default function Petition() {
         <div className="mx-auto max-w-[1040px]">
           {/* Header */}
           <div className="text-center">
-            <Link
-              to="/"
-              aria-label="PhishFlagger home"
-              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-            >
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                &trade;
-              </span>
-            </Link>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-
-            <h1 className="mt-10 text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
+            <h1 className="text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
               Help Stop Fake Calls
             </h1>
 
             <p className="mt-5 text-center text-[15px] leading-[1.65] text-[#444] sm:text-[16px]">
-              Let your Regulators Know, this will stop fake calls.
+              Let your Regulator know, this can stop faker calls.
             </p>
           </div>
 

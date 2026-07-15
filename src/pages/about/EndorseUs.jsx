@@ -58,34 +58,15 @@ export default function EndorseUs() {
   return (
     <>
       <CloseButton />
-      <section className="bg-white px-4 pb-16 pt-4 text-ink sm:px-6 sm:pt-6">
+      <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
         <div className="mx-auto max-w-[1040px]">
-          <div className="text-center">
-            <Link
-              to="/"
-              aria-label="PhishFlagger home"
-              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-            >
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                &trade;
-              </span>
-            </Link>
-
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-          </div>
+          <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-[44px]">
+            Endorse Us
+          </h1>
 
           <div className="mt-10 grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="flex h-full flex-col items-center gap-6 sm:items-start">
-              <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-left sm:text-[44px]">
-                Endorse Us
-              </h1>
-              <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
+            <div className="flex h-full flex-col items-center justify-center">
+              <p className="max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-[18px]">
                 Join our supporters. These visionaries understand how human
                 compatible PhishFlagger can finally solve Phishing.
               </p>

@@ -267,8 +267,10 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Plug-In Business
+            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+              Plug-In
+              <br />
+              Business
             </span>
             <div className="flex h-[150px] w-[150px] items-center justify-center">
               <svg
@@ -305,8 +307,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Plug-In Free
+            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+              Plug-In
+              <br />
+              Free
             </span>
             <div className="flex h-[150px] w-[150px] items-center justify-center">
               <img
@@ -320,7 +324,7 @@ export default function Home() {
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Domain
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center">
+            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
               <img
                 src="/assets/images/domain.png"
                 alt="Domain protection illustration"
@@ -332,7 +336,7 @@ export default function Home() {
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Marketer
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center">
+            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
               <img
                 src={whoCanUseImg}
                 alt="Join PhishFlagger illustration"
