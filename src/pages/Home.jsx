@@ -235,15 +235,15 @@ export default function Home() {
         </div>
 
         {/* Right — Thunderbird client image */}
-        <div className="relative flex w-full max-w-[560px] flex-col items-center lg:items-end">
+        <div className="flex w-full max-w-[1120px] flex-col items-center lg:items-end">
+          <span className="mb-3 inline-flex items-center gap-2 self-center rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
+            Thunderbird
+          </span>
           <img
             src="/assets/images/thunderbird client image.webp"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] object-contain"
+            className="h-auto w-full max-w-[1120px] object-contain"
           />
-          <span className="absolute bottom-4 inline-flex items-center gap-2 rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
-            Thunderbird
-          </span>
         </div>
       </div>
     </section>
@@ -342,7 +342,7 @@ export default function Home() {
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Marketer
+              Marketing
             </span>
             <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
               <img

@@ -12,24 +12,8 @@ export default function PhishFlaggerOrg() {
       {/* ===== Section 1 — Heading + intro + two icons (white) ===== */}
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[820px]">
-          {/* PhishFlagger.org wordmark */}
-          <h1 className="text-center text-[28px] leading-none tracking-tight sm:text-[34px]">
-            <Link to="/" className="inline-block hover:opacity-80">
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="font-semibold text-ink">.org</span>
-            </Link>
-          </h1>
-
-          {/* Tagline */}
-          <p className="mt-3 text-center text-[18px] font-medium text-ink sm:text-[19px]">
-            Protecting Communications
-          </p>
-
           {/* Section heading */}
-          <h2 className="mt-8 text-center text-[18px] font-semibold tracking-tight text-ink sm:mt-10 sm:text-[22px]">
+          <h2 className="mt-8 text-center text-[36px] font-semibold tracking-tight text-ink sm:mt-10 sm:text-[44px]">
             Our Community of participants who want to help
           </h2>
 

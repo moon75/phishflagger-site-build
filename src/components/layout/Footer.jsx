@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import FaqTabs from "../faq/FaqTabs.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
-import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import inboxImg from "../../assets/images/email-inbox v2.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const PRODUCT_IMAGES = [
+  { src: inboxImg, alt: "PhishFlagger Inbox" },
   { src: desktopPhoneImg, alt: "Desktop phone" },
-  { src: threePhoneImg, alt: "Three phones" },
   { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
   { src: emailPhoneImg, alt: "PhishFlagger Email" },
   { src: messagesPhoneImg, alt: "PhishFlagger Messages" },

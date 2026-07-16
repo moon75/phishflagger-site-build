@@ -17,8 +17,6 @@ export default function Telecom() {
 
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
-          <PageBrand />
-
           <div className="mt-14">
             <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
               Telecoms and Regulators
@@ -251,15 +249,7 @@ export default function Telecom() {
                   Link
                 </a>
                 : CLI spoofing loophole and scam calls from abroad
-                consultations.{" "}
-                <a
-                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
-                >
-                  Link
-                </a>
+                consultations.
               </li>
             </ul>
           </div>
@@ -324,6 +314,13 @@ export default function Telecom() {
       {/* ===== Bottom CTA panel ===== */}
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
+          <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            for Telecom
+          </h2>
           <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
             <ActionCard
               to="/join/telecom/contact"
@@ -402,29 +399,6 @@ const CALL_EXAMPLES = [
   },
 ];
 
-
-function PageBrand() {
-  return (
-    <div className="text-center">
-      <Link
-        to="/"
-        aria-label="PhishFlagger home"
-        className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-      >
-        <em className="italic">
-          <span className="font-extrabold text-ink">Phish</span>
-          <span className="font-normal text-brand">Flagger</span>
-        </em>
-        <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-          &trade;
-        </span>
-      </Link>
-      <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-        Protecting Communications.
-      </p>
-    </div>
-  );
-}
 
 function ActionCard({
   to,

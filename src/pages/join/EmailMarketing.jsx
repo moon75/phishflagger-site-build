@@ -51,7 +51,15 @@ export default function EmailMarketing() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src={phishCounterImg}
+              alt="PhishCounter subject line example"
+              className="h-auto w-full max-w-[560px] object-contain"
+            />
+          </div>
+
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
               How it works.
@@ -74,14 +82,6 @@ export default function EmailMarketing() {
                 Prevent Impersonations of your customers.
               </li>
             </ul>
-          </div>
-
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={phishCounterImg}
-              alt="PhishCounter subject line example"
-              className="h-auto w-full max-w-[560px] object-contain"
-            />
           </div>
         </div>
       </section>

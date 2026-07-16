@@ -107,6 +107,40 @@ export default function EndorseUs() {
                 />
               </Field>
 
+              {/* Country */}
+              <Field label="Country">
+                <input
+                  id="country"
+                  name="country"
+                  type="text"
+                  required
+                  placeholder="Your country"
+                  autoComplete="country-name"
+                  className="h-13 w-full bg-transparent text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
+                />
+              </Field>
+
+              {/* Company */}
+              <Field
+                label={
+                  <>
+                    Company{" "}
+                    <span className="text-[14px] font-normal text-[#999]">
+                      optional
+                    </span>
+                  </>
+                }
+              >
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder="Your company"
+                  autoComplete="organization"
+                  className="h-13 w-full bg-transparent text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
+                />
+              </Field>
+
               {/* Note */}
               <Field label="Note">
                 <textarea

@@ -23,28 +23,18 @@ export default function Kickstarter() {
                 ™
               </span>
             </Link>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
+            <h1 className="mt-3 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+              Kickstarter
+            </h1>
           </div>
 
           <div className="mt-16 grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
             <div className="text-center lg:text-left">
-              <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
-                Kickstarter
-              </h1>
-
-              <p className="mx-auto mt-6 max-w-[520px] text-[16px] leading-relaxed text-ink-muted sm:text-[18px] lg:mx-0">
+              <p className="mx-auto max-w-[520px] text-[16px] leading-relaxed text-ink-muted sm:text-[18px] lg:mx-0">
                 Coming soon.
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <Link
-                to="/about/hall-of-fame"
-                className="text-[30px] font-semibold leading-tight tracking-tight text-[#303030] transition-opacity hover:opacity-80 sm:text-[42px]"
-              >
-                Hall of Fame
-              </Link>
               <img
                 src={supportersImg}
                 alt="Happy PhishFlagger supporters"
