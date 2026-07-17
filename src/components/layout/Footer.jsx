@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import FaqTabs from "../faq/FaqTabs.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -18,6 +18,8 @@ const PRODUCT_IMAGES = [
 ];
 
 export default function Footer({ logoSrc = logoImg }) {
+  const { pathname } = useLocation();
+  const hideFaq = pathname === "/about/faq";
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
     "#numberingemail", "#cybersecurity", "#emailsecurity",
@@ -28,18 +30,22 @@ export default function Footer({ logoSrc = logoImg }) {
 
   return (
     <>
-      <div className="h-1.5 w-full bg-brand" aria-hidden />
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-[1000px]">
-          <h2 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
-            Frequently asked questions
-          </h2>
+      {!hideFaq && (
+        <>
+          <div className="h-1.5 w-full bg-brand" aria-hidden />
+          <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+            <div className="mx-auto max-w-[1000px]">
+              <h2 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
+                Frequently asked questions
+              </h2>
 
-          <div className="mt-8 sm:mt-12">
-            <FaqTabs />
-          </div>
-        </div>
-      </section>
+              <div className="mt-8 sm:mt-12">
+                <FaqTabs />
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <div className="h-1.5 w-full bg-brand" aria-hidden />
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
