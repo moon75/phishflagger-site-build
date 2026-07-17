@@ -9,7 +9,7 @@ import inboxImg from "../../assets/images/email-inbox v2.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const PRODUCT_IMAGES = [
-  { src: inboxImg, alt: "PhishFlagger Inbox" },
+  { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
   { src: desktopPhoneImg, alt: "Desktop phone" },
   { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
   { src: emailPhoneImg, alt: "PhishFlagger Email" },
@@ -53,7 +53,11 @@ export default function Footer({ logoSrc = logoImg }) {
                 key={item.alt}
                 src={item.src}
                 alt={item.alt}
-                className="h-[150px] w-auto object-contain sm:h-[190px]"
+                className={
+                  item.frame
+                    ? "h-[150px] w-auto rounded-lg border-2 border-black object-contain sm:h-[190px]"
+                    : "h-[150px] w-auto object-contain sm:h-[190px]"
+                }
               />
             ))}
           </div>
@@ -66,8 +70,8 @@ export default function Footer({ logoSrc = logoImg }) {
 
         <div className="mx-auto max-w-[980px] px-6 pt-9 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
           {/* Description paragraph */}
-          <div className="mx-auto max-w-[640px]">
-            <p className="text-base leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[15px]">
+          <div className="mx-auto max-w-[1280px]">
+            <p className="text-[32px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[30px]">
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
               </em>

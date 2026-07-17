@@ -162,6 +162,7 @@ export default function Contact() {
               >
                 <input
                   type="text"
+                  required
                   value={form.firstName}
                   onChange={update("firstName")}
                   placeholder="First Name"
@@ -172,6 +173,7 @@ export default function Contact() {
               <Field label="Last Name">
                 <input
                   type="text"
+                  required
                   value={form.lastName}
                   onChange={update("lastName")}
                   placeholder="Last Name"
@@ -183,6 +185,7 @@ export default function Contact() {
             <Field label="Email">
               <input
                 type="email"
+                required
                 value={form.email}
                 onChange={update("email")}
                 placeholder="hello@example.com"
@@ -195,6 +198,7 @@ export default function Contact() {
                 <span className="text-[14px] font-semibold text-ink">+1</span>
                 <input
                   type="tel"
+                  required
                   value={form.phone}
                   onChange={update("phone")}
                   placeholder="(123) 456 - 7890"

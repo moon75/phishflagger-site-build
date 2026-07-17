@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FAQ_CATEGORIES } from "../../data/faq.js";
 import { brandify } from "../Brand.jsx";
 
@@ -7,6 +8,13 @@ import { brandify } from "../Brand.jsx";
 export default function FaqTabs() {
   const [activeIndex, setActiveIndex] = useState(null);
   const active = activeIndex === null ? null : FAQ_CATEGORIES[activeIndex];
+  const { pathname } = useLocation();
+
+  // The Footer (and this FAQ block) persists across route changes, so an
+  // expanded category/question would otherwise stay open when navigating away.
+  useEffect(() => {
+    setActiveIndex(null);
+  }, [pathname]);
 
   return (
     <div>

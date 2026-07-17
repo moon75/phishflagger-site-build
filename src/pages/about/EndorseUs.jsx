@@ -100,6 +100,7 @@ export default function EndorseUs() {
               <Field label="Name">
                 <input
                   type="text"
+                  required
                   value={form.name}
                   onChange={update("name")}
                   placeholder="Your Name"
@@ -111,6 +112,7 @@ export default function EndorseUs() {
               <Field label="Email Address">
                 <input
                   type="email"
+                  required
                   value={form.email}
                   onChange={update("email")}
                   placeholder="hello@example.com"
@@ -124,6 +126,7 @@ export default function EndorseUs() {
                   <span className="text-[14px] font-bold text-[#242424]">+1</span>
                   <input
                     type="tel"
+                    required
                     value={form.phone}
                     onChange={update("phone")}
                     placeholder="(123) 456 - 7890"
@@ -133,7 +136,16 @@ export default function EndorseUs() {
                 </div>
               </Field>
 
-              <Field label="Position">
+              <Field
+                label={
+                  <>
+                    Position{" "}
+                    <span className="text-[14px] font-normal text-[#999]">
+                      optional
+                    </span>
+                  </>
+                }
+              >
                 <input
                   type="text"
                   value={form.position}
@@ -144,7 +156,16 @@ export default function EndorseUs() {
                 />
               </Field>
 
-              <Field label="Company">
+              <Field
+                label={
+                  <>
+                    Company{" "}
+                    <span className="text-[14px] font-normal text-[#999]">
+                      optional
+                    </span>
+                  </>
+                }
+              >
                 <input
                   type="text"
                   value={form.company}
@@ -158,6 +179,7 @@ export default function EndorseUs() {
               <Field label="Endorsement">
                 <textarea
                   rows={4}
+                  required
                   value={form.endorsement}
                   onChange={update("endorsement")}
                   placeholder="Endorsement Details"

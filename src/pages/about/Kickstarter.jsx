@@ -10,20 +10,7 @@ export default function Kickstarter() {
       <section className="w-full bg-white px-4 pt-6 pb-20 sm:px-6 sm:pt-8 sm:pb-28">
         <div className="mx-auto max-w-[1040px]">
           <div className="text-center">
-            <Link
-              to="/"
-              aria-label="PhishFlagger home"
-              className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-            >
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                ™
-              </span>
-            </Link>
-            <h1 className="mt-3 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+            <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
               Kickstarter
             </h1>
           </div>

@@ -84,6 +84,7 @@ export default function VictimTestimonials() {
             <Field label="Name">
               <input
                 type="text"
+                required
                 value={form.name}
                 onChange={update("name")}
                 placeholder="Your Name"
@@ -95,6 +96,7 @@ export default function VictimTestimonials() {
             <Field label="Email Address">
               <input
                 type="email"
+                required
                 value={form.email}
                 onChange={update("email")}
                 placeholder="hello@example.com"
@@ -103,7 +105,16 @@ export default function VictimTestimonials() {
               />
             </Field>
 
-            <Field label="Phone">
+            <Field
+              label={
+                <>
+                  Phone{" "}
+                  <span className="text-[14px] font-normal text-[#999]">
+                    optional
+                  </span>
+                </>
+              }
+            >
               <div className="flex h-13 items-center gap-6">
                 <span className="text-[14px] font-bold text-[#242424]">+1</span>
                 <input
@@ -120,6 +131,7 @@ export default function VictimTestimonials() {
             <Field label="Testimonial">
               <textarea
                 rows={4}
+                required
                 value={form.testimonial}
                 onChange={update("testimonial")}
                 placeholder="Your Testimonials"

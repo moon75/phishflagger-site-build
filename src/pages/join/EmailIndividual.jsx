@@ -6,7 +6,7 @@ export default function EmailIndividual() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
+      <section className="w-full bg-white px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
             Plug-in

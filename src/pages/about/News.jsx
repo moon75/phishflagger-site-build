@@ -80,6 +80,7 @@ export default function News() {
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <input
                 type="email"
+                required
                 placeholder="hello@example.com"
                 className="h-[44px] min-w-0 flex-1 rounded-[5px] bg-white px-4 text-[14px] text-ink placeholder:text-[#b6b6b6] focus:outline-none focus:ring-2 focus:ring-[#cdd4d7]"
               />

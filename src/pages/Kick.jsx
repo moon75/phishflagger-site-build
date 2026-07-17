@@ -1,5 +1,6 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
+import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import humanVsDigitalTxt from "../assets/Txt/Human vs Digital.txt?url";
 
 export default function Kick() {
@@ -32,6 +33,24 @@ export default function Kick() {
           className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
         >
           Human vs Digital
+        </a>
+
+        <a
+          href={launchPlanPdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+        >
+          joe1
+        </a>
+
+        <a
+          href="https://fastercapital.com/content/A-Deep-Dive-into-Altruistic-Crowdfunding-Campaigns.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+        >
+          Altruistic notes
         </a>
       </section>
     </>

@@ -126,6 +126,7 @@ export function TelecomFormPage({
               <Field label="First Name">
                 <input
                   type="text"
+                  required
                   value={form.firstName}
                   onChange={update("firstName")}
                   placeholder="First Name"
@@ -137,6 +138,7 @@ export function TelecomFormPage({
               <Field label="Last Name">
                 <input
                   type="text"
+                  required
                   value={form.lastName}
                   onChange={update("lastName")}
                   placeholder="Last Name"
@@ -149,6 +151,7 @@ export function TelecomFormPage({
             <Field label="Email">
               <input
                 type="email"
+                required
                 value={form.email}
                 onChange={update("email")}
                 placeholder="Email"
@@ -164,6 +167,7 @@ export function TelecomFormPage({
                 </span>
                 <input
                   type="tel"
+                  required
                   value={form.phone}
                   onChange={update("phone")}
                   placeholder="(123) 456 - 7890"

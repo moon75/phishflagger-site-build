@@ -81,6 +81,7 @@ export default function EmailMarketingQuote() {
               <Field label="First Name">
                 <input
                   type="text"
+                  required
                   value={form.firstName}
                   onChange={update("firstName")}
                   placeholder="First Name"
@@ -91,6 +92,7 @@ export default function EmailMarketingQuote() {
               <Field label="Last Name">
                 <input
                   type="text"
+                  required
                   value={form.lastName}
                   onChange={update("lastName")}
                   placeholder="Last Name"
@@ -110,6 +112,7 @@ export default function EmailMarketingQuote() {
               <Field label="Phone Number">
                 <input
                   type="tel"
+                  required
                   value={form.phone}
                   onChange={update("phone")}
                   placeholder="+1 (123) 456 - 7890"
@@ -134,6 +137,7 @@ export default function EmailMarketingQuote() {
               <Field label="Company Name">
                 <input
                   type="text"
+                  required
                   value={form.companyName}
                   onChange={update("companyName")}
                   placeholder="Name"
@@ -153,6 +157,7 @@ export default function EmailMarketingQuote() {
               <Field label="Email Address">
                 <input
                   type="email"
+                  required
                   value={form.email}
                   onChange={update("email")}
                   placeholder="contact@example.com"
@@ -193,6 +198,7 @@ export default function EmailMarketingQuote() {
               <Field label="Country">
                 <input
                   type="text"
+                  required
                   value={form.country}
                   onChange={update("country")}
                   placeholder="Country"

@@ -15,20 +15,18 @@ export default function Telecom() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+      <section className="w-full bg-white px-4 pt-12 pb-16 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-content">
-          <div className="mt-14">
-            <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
-              Telecoms and Regulators
-              <br />
-              <span className="text-brand">Help stop Call Spoofing</span>
-            </h1>
-            <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
-              {brandify(
-                "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
-              )}
-            </p>
-          </div>
+          <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
+            Telecoms and Regulators
+            <br />
+            <span className="text-brand">Help stop Call Spoofing</span>
+          </h1>
+          <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
+            {brandify(
+              "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
+            )}
+          </p>
         </div>
       </section>
 

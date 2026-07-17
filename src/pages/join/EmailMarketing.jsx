@@ -104,12 +104,15 @@ export default function EmailMarketing() {
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex flex-col items-center lg:items-end">
             <img
               src={inboxImg}
               alt="PhishFlagger inbox showing validated and flagged emails"
               className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
             />
+            <p className="mt-4 w-full max-w-[560px] text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+              Email client view from enabled Domain
+            </p>
           </div>
         </div>
       </section>

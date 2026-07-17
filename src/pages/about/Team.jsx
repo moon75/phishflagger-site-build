@@ -23,12 +23,6 @@ const TEAM = [
     photo: mikeImg,
   },
   {
-    name: "Todd Sturgeon",
-    role: "CTO",
-    bio: "Todd holds a Master's in Technology Management from Memorial University. He brings 30+ years of experience in information systems management across cybersecurity, government, education, manufacturing and other sectors. He spearheads technology initiatives and advances intellectual property development. Todd has successfully led innovative email security solutions and advised governments on technology integration in education.",
-    photo: toddImg,
-  },
-  {
     name: "Dr. Robert Cooper",
     role: "COO, Director",
     bio: "Dr. Robert Cooper is a graduate of Osgoode Hall Law School, a graduate of the University of Toronto School of Medicine, a member of the Law Society of Upper Canada and a member of the Governing Council of the University of Toronto. As a Director he bring extensive legal and entrepreneurial experience to PhishFlagger Management.",
@@ -37,8 +31,14 @@ const TEAM = [
   {
     name: "Dan Grozdanovski",
     role: "CTO",
-    bio: "Dan brings over 30 years of experience in management and technology across various sectors, including aerospace industry, photonics, lasers, automation, AI, virtualization and management.",
+    bio: "Dan brings over 30 years of experience in management and technology across various sectors, including aerospace industry, photonics, lasers, automation, and AI.",
     photo: danImg,
+  },
+  {
+    name: "Todd Sturgeon",
+    role: "CTO",
+    bio: "Todd holds a Master's in Technology Management from Memorial University. He brings 30+ years of experience in information systems management across cybersecurity, government, education, manufacturing and other sectors. He spearheads technology initiatives and advances intellectual property development. Todd has successfully led innovative email security solutions and advised governments on technology integration in education.",
+    photo: toddImg,
   },
   {
     name: "Jim Riches",

@@ -235,8 +235,8 @@ export default function Home() {
         </div>
 
         {/* Right — Thunderbird client image */}
-        <div className="flex w-full max-w-[1120px] flex-col items-center lg:items-end">
-          <span className="mb-3 inline-flex items-center gap-2 self-center rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
+        <div className="relative flex w-full max-w-[1120px] flex-col items-center lg:items-end">
+          <span className="absolute left-1/2 top-4 z-10 inline-flex -translate-x-1/2 items-center gap-2 rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
             Thunderbird
           </span>
           <img
@@ -278,7 +278,7 @@ export default function Home() {
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Plug-In
               <br />
-              Business
+              Corporate
             </span>
             <div className="flex h-[150px] w-[150px] items-center justify-center">
               <svg
@@ -330,7 +330,7 @@ export default function Home() {
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Domain
+              Domain Corporate
             </span>
             <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
               <img
