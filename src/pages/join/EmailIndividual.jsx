@@ -21,7 +21,7 @@ export default function EmailIndividual() {
           <img
             src={emailInboxImg}
             alt="Inbox showing PhishCounter numbered email messages"
-            className="h-auto w-full max-w-[520px] rounded-md object-contain"
+            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
           />
           <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
             Email client view from enabled Domain

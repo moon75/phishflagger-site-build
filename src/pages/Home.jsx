@@ -176,7 +176,7 @@ export default function Home() {
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
+            className="h-auto w-full max-w-[560px] rounded-lg border-2 border-black object-contain"
           />
           <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
             Email client view from enabled Domain
@@ -278,6 +278,20 @@ export default function Home() {
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Plug-In
               <br />
+              Free
+            </span>
+            <div className="flex h-[150px] w-[150px] items-center justify-center">
+              <img
+                src="/assets/images/individual.png"
+                alt="Individual protection illustration"
+                className="h-[130px] w-[130px] object-contain"
+              />
+            </div>
+          </div>
+          <div className="flex w-[150px] flex-col items-center">
+            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+              Plug-In
+              <br />
               Corporate
             </span>
             <div className="flex h-[150px] w-[150px] items-center justify-center">
@@ -316,23 +330,11 @@ export default function Home() {
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Plug-In
+              Domain
               <br />
-              Free
+              Corporate
             </span>
             <div className="flex h-[150px] w-[150px] items-center justify-center">
-              <img
-                src="/assets/images/individual.png"
-                alt="Individual protection illustration"
-                className="h-[130px] w-[130px] object-contain"
-              />
-            </div>
-          </div>
-          <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Domain Corporate
-            </span>
-            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
               <img
                 src="/assets/images/domain.png"
                 alt="Domain protection illustration"

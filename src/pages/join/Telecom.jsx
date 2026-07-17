@@ -228,7 +228,7 @@ export default function Telecom() {
                 </span>
               </li>
               <li className="font-semibold text-ink">
-                Ofcom Sept 2 2025{" "}
+                September 2, 2025{" "}
                 <a
                   href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
                   target="_blank"
@@ -237,9 +237,54 @@ export default function Telecom() {
                 >
                   Link
                 </a>
-                {" "}&amp; 21 July 2025{" "}
+                , July 21, 2025{" "}
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                , July 21, 2025{" "}
+                <a
+                  href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                , February 2, 2024{" "}
+                <a
+                  href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                , February 1, 2024{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                , June 2023{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?v=202723"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
+                , April 28, 2023{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/associated-documents/cli-authentication-potential-approach-to-detect-and-block-spoof-numbers.pdf?v=329617"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline underline-offset-2"

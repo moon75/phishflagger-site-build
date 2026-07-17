@@ -108,7 +108,7 @@ export default function EmailMarketing() {
             <img
               src={inboxImg}
               alt="PhishFlagger inbox showing validated and flagged emails"
-              className="h-auto w-full max-w-[560px] rounded-xl border-2 border-gray-300 object-contain shadow-[0_2px_6px_rgba(15,23,42,0.08)]"
+              className="h-auto w-full max-w-[560px] rounded-lg border-2 border-black object-contain"
             />
             <p className="mt-4 w-full max-w-[560px] text-center text-[14px] italic text-ink-muted sm:text-[15px]">
               Email client view from enabled Domain

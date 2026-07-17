@@ -77,7 +77,7 @@ export default function Footer({ logoSrc = logoImg }) {
         <div className="mx-auto max-w-[980px] px-6 pt-9 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
           {/* Description paragraph */}
           <div className="mx-auto max-w-[1280px]">
-            <p className="text-[32px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[30px]">
+            <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
               </em>

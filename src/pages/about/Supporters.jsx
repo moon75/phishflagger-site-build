@@ -10,7 +10,7 @@ const PRESS_AWARDS = [
     date: "August 10, 2024",
     img: "/assets/images/supporters/Dain_Oh.webp",
     description:
-      'Our Top Recognition for the first person to FIRST write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
+      'Our Top Recognition for the FIRST to write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
     articleUrl:
       "https://web.archive.org/web/20251005223901/https://thereadable.co/top-10-announcements-black-hat-2024/",
     articleLabel: "Read the article",
@@ -22,7 +22,7 @@ const PRESS_AWARDS = [
     date: "August 19, 2024",
     img: "/assets/images/supporters/Austin%20Harris.jpg",
     description:
-      "Our Second Prize to be SECOND to write about PhishFlagger is awarded to Austin Harris. He was the second editor to recognize and write about our solution.",
+      "The SECOND to write about PhishFlagger is awarded to Austin Harris. He was the second editor to recognize and write about our solution.",
     articleUrl:
       "https://appdevelopermagazine.com/phishflagger-anti-phishing-email-solution-released/",
     articleLabel: "Read the article",
@@ -101,7 +101,7 @@ function PressAwardCard({
   pickLabel,
 }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
+    <div className="flex h-full flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.07)]">
       <span className="rounded-full bg-brand px-3 py-0.5 text-[12px] font-bold text-white tracking-wide">
         {place}
       </span>
@@ -117,7 +117,7 @@ function PressAwardCard({
         {brandify(description)}
       </p>
 
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+      <div className="mt-auto flex flex-wrap items-center justify-center gap-3 pt-5">
         {articleUrl && (
           <a
             href={articleUrl}
