@@ -85,6 +85,18 @@ export default function Supporters() {
         </div>
       </section>
 
+      {/* Endorse Us CTA */}
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto flex max-w-[980px] justify-center">
+          <Link
+            to="/help/endorse-us"
+            className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          >
+            Endorse Us
+          </Link>
+        </div>
+      </section>
+
     </>
   );
 }

@@ -236,13 +236,18 @@ export default function Home() {
 
         {/* Right — Thunderbird client image */}
         <div className="relative flex w-full max-w-[1120px] flex-col items-center lg:items-end">
-          <span className="absolute left-1/2 top-4 z-10 inline-flex -translate-x-1/2 items-center gap-2 rounded-full border border-brand/25 bg-white/90 px-4 py-1.5 text-[13px] font-semibold uppercase tracking-wide text-brand shadow-sm backdrop-blur-sm">
-            Thunderbird
-          </span>
+          <div className="absolute right-4 top-4 z-10 text-right">
+            <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
+              Thunderbird
+            </span>
+            <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
+              Email Client
+            </span>
+          </div>
           <img
-            src="/assets/images/thunderbird client image.webp"
+            src="/assets/images/thunderbird new pick.avif"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[1120px] object-contain"
+            className="h-auto w-full max-w-[1120px] rounded-2xl border border-gray-200 bg-white object-contain p-2"
           />
         </div>
       </div>

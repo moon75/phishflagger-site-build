@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
 import EmailIndividual from "./pages/join/EmailIndividual.jsx";
+import EmailFreePlugIn from "./pages/join/EmailFreePlugIn.jsx";
 import EmailMarketing from "./pages/join/EmailMarketing.jsx";
 import EmailMarketingQuote from "./pages/join/EmailMarketingQuote.jsx";
 import Telecom from "./pages/join/Telecom.jsx";
@@ -89,6 +90,7 @@ export default function App() {
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />
           <Route path="email-plug-in" element={<EmailIndividual />} />
+          <Route path="email-free-plug-in" element={<EmailFreePlugIn />} />
           <Route path="email-marketing" element={<EmailMarketing />} />
           <Route path="email-marketing/quote" element={<EmailMarketingQuote />} />
           <Route
