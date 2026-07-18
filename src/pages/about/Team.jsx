@@ -36,7 +36,7 @@ const TEAM = [
   },
   {
     name: "Todd Sturgeon",
-    role: "CTO",
+    role: "CIPO",
     bio: "Todd holds a Master's in Technology Management from Memorial University. He brings 30+ years of experience in information systems management across cybersecurity, government, education, manufacturing and other sectors. He spearheads technology initiatives and advances intellectual property development. Todd has successfully led innovative email security solutions and advised governments on technology integration in education.",
     photo: toddImg,
   },
@@ -51,6 +51,11 @@ const TEAM = [
     role: "Cybersecurity Analyst",
     bio: "Shawn has over 25 years experience working for a \"top 3\" worldwide electronic component distribution company. He has extensive experience in marketing, and is responsible for keeping the PhishFlagger community up to date on the latest cybersecurity threats and initiatives.",
     photo: shawnImg,
+  },
+  {
+    name: "Recognition To Our Team",
+    role: "",
+    bio: "Joe Heir\nAlex Tichy\nDavid M?\nJoe Andre?\nJohn Grant\nRukhsar Hussain\nJE?EB?PG?NG?",
   },
 ];
 
@@ -112,20 +117,22 @@ function TeamCard({ name, role, bio, photo }) {
 
   return (
     <article className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_2px_10px_rgba(15,23,42,0.04)] transition hover:shadow-[0_4px_18px_rgba(15,23,42,0.08)] sm:p-6">
-      <div className="relative h-[260px] w-full overflow-hidden rounded-xl bg-gray-50 sm:h-[280px]">
-        <img
-          src={photo}
-          alt={name}
-          onError={onImgError}
-          className="h-full w-full object-cover object-top"
-        />
-        <div
-          className="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-[#2a6df4] to-[#1a52c9] text-[48px] font-bold text-white"
-          aria-hidden
-        >
-          {initials}
+      {photo && (
+        <div className="relative h-[260px] w-full overflow-hidden rounded-xl bg-gray-50 sm:h-[280px]">
+          <img
+            src={photo}
+            alt={name}
+            onError={onImgError}
+            className="h-full w-full object-cover object-top"
+          />
+          <div
+            className="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-[#2a6df4] to-[#1a52c9] text-[48px] font-bold text-white"
+            aria-hidden
+          >
+            {initials}
+          </div>
         </div>
-      </div>
+      )}
 
       <h3 className="mt-5 text-[17px] font-semibold text-ink sm:text-[18px]">
         {name}
@@ -133,7 +140,7 @@ function TeamCard({ name, role, bio, photo }) {
       <p className="mt-1 text-[14px] font-bold text-ink sm:text-[14.5px]">
         {role}
       </p>
-      <p className="mt-4 text-[13.5px] leading-[1.65] text-ink sm:text-[14px]">
+      <p className="mt-4 whitespace-pre-line text-[13.5px] leading-[1.65] text-ink sm:text-[14px]">
         {brandify(bio)}
       </p>
     </article>

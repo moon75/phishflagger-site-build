@@ -339,6 +339,9 @@ export default function Telecom() {
             <br />
             in the following Jurisdiction:
           </p>
+          <p className="mx-auto mt-4 max-w-[700px] text-[16px] font-semibold leading-relaxed text-ink sm:text-[18px]">
+            We are offering exceptional opportunities to early adopters.
+          </p>
           <p className="mx-auto mt-8 max-w-[900px] text-[15px] leading-[1.85] text-ink sm:text-[18px]">
             Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
             Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
@@ -413,31 +416,31 @@ const CALL_EXAMPLES = [
   {
     number: "...613-861-8600",
     seq: "2031",
-    name: "David Park",
+    name: "ABC Bank",
     status: "",
   },
   {
     number: "...613-861-8600",
     seq: "2032",
-    name: "David Park",
+    name: "ABC Bank",
     status: "",
   },
   {
     number: "...613-861-8600",
     seq: "2033",
-    name: "David Park",
+    name: "ABC Bank",
     status: "",
   },
   {
     number: "...613-861-8600",
     seq: "",
-    name: "David Park",
+    name: "ABC Bank",
     status: "<<< Fake",
   },
   {
     number: "...613-861-8600",
     seq: "3531",
-    name: "David Park",
+    name: "ABC Bank",
     status: "<<< Fake",
   },
 ];

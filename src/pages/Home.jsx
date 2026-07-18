@@ -285,13 +285,19 @@ export default function Home() {
               <br />
               Free
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center">
+            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
               <img
                 src="/assets/images/individual.png"
                 alt="Individual protection illustration"
                 className="h-[130px] w-[130px] object-contain"
               />
             </div>
+            <Link
+              to="/join/email-free-plug-in"
+              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join
+            </Link>
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
@@ -299,7 +305,7 @@ export default function Home() {
               <br />
               Corporate
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center">
+            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
               <svg
                 viewBox="0 0 150 150"
                 role="img"
@@ -332,6 +338,12 @@ export default function Home() {
                 />
               </svg>
             </div>
+            <Link
+              to="/join/email-plug-in"
+              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join
+            </Link>
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
@@ -339,25 +351,37 @@ export default function Home() {
               <br />
               Corporate
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center">
+            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
               <img
                 src="/assets/images/domain.png"
                 alt="Domain protection illustration"
                 className="h-[130px] w-[130px] object-contain"
               />
             </div>
+            <Link
+              to="/join/email-domain"
+              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join
+            </Link>
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Marketing
             </span>
-            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center">
+            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
               <img
                 src={whoCanUseImg}
                 alt="Join PhishFlagger illustration"
                 className="h-[130px] w-[130px] object-contain"
               />
             </div>
+            <Link
+              to="/join/email-marketing"
+              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join
+            </Link>
           </div>
         </div>
       </div>
@@ -387,7 +411,7 @@ export default function Home() {
         {/* Right — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Telecom / Caller ID
+            <BrandInline />™ for Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.
@@ -405,6 +429,12 @@ export default function Home() {
               Sign our Petition
             </Link>
           </p>
+          <Link
+            to="/join/telecom"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          >
+            Telecom
+          </Link>
         </div>
       </div>
     </section>
