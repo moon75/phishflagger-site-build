@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import domainProtectionImg from "../../assets/images/3rd section left image.avif";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox v2.png";
 
@@ -24,30 +23,15 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
-          <div className="space-y-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <p>
-              Protect your email domains and those you resell with{" "}
-              <BrandInline />
-              &trade;. Safeguard
-              all of your domains with <BrandInline />
-              &trade; email numbering to help enhance security and prevent
-              impersonation, phishing and other email-based fraud.
-            </p>
-            <p>
-              Obtain <BrandInline />
-              &trade; to help protect in-house email domains and email domains that you resell
-              to clients from email phishing and fraud.
-            </p>
-          </div>
-
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={domainProtectionImg}
-              alt="Email authentication diagram including PhishFlagger, DKIM, DMARC, SPF, ARC, and BIMI"
-              className="h-auto w-full max-w-[390px] object-contain"
-            />
-          </div>
+        <div className="mx-auto max-w-content">
+          <p className="text-center text-[28px] leading-[1.5] text-ink-muted sm:text-[30px]">
+            Protect your email domains and those you resell with{" "}
+            <BrandInline />
+            &trade;. Safeguard
+            all of your domains with <BrandInline />
+            &trade; email numbering to help enhance security and prevent
+            impersonation, phishing and other email-based fraud.
+          </p>
         </div>
       </section>
 
@@ -66,7 +50,7 @@ export default function EmailDomain() {
           <div className="space-y-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               <BrandInline />
-              &trade; for Domain
+              &trade; Protection
             </h2>
             <p>
               All email addresses within the domain are automatically{" "}
@@ -107,7 +91,11 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex flex-col items-center lg:items-end">
+            <p className="mb-4 text-center text-[18px] font-semibold text-ink sm:text-right sm:text-[20px]">
+              <BrandInline trail="Counter" />
+              &trade; Protect your recipients.
+            </p>
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"

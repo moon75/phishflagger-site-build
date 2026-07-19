@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
@@ -41,9 +41,14 @@ const PRESS_AWARDS = [
 ];
 
 export default function Supporters() {
+  const { pathname } = useLocation();
+  const closeTo = pathname.startsWith("/help")
+    ? "/help/endorse-us"
+    : "/about/endorse-us";
+
   return (
     <>
-      <CloseButton to="/help/telecom-endorse-us" />
+      <CloseButton to={closeTo} />
 
       {/* Header */}
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
@@ -89,7 +94,7 @@ export default function Supporters() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto flex max-w-[980px] justify-center">
           <Link
-            to="/help/endorse-us"
+            to={closeTo}
             className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
           >
             Endorse Us
