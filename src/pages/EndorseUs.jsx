@@ -81,7 +81,7 @@ export default function EndorseUs() {
                 className="h-[220px] w-full max-w-[600px] object-contain"
               />
               <Link
-                to="/help/supporters"
+                to="/help/telecom-supporters"
                 className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
               >
                 Supporters

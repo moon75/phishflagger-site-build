@@ -7,6 +7,7 @@ import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
 import whoCanUseImg from "../assets/images/5th sec.avif";
+import outlookImg from "../assets/images/outlook image.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
@@ -249,6 +250,36 @@ export default function Home() {
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
             className="h-auto w-full max-w-[1120px] rounded-2xl border border-gray-200 bg-white object-contain p-2"
           />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 5b — Individual protection: Outlook (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
+        {/* Left — Outlook client image */}
+        <div className="flex w-full max-w-[1120px] flex-col items-center lg:items-start">
+          <img
+            src={outlookImg}
+            alt="Microsoft Outlook email client with PhishFlagger plugin"
+            className="h-auto w-full max-w-[1120px] rounded-2xl border border-gray-200 bg-white object-contain p-2"
+          />
+        </div>
+
+        {/* Right — heading + text */}
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <span className="font-normal not-italic">™</span>
+            <br />
+            Individual protection: Outlook with <BrandInline />™ free plug
+          </h2>
+          <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
+            Support our free plug to stop impersonation now.
+          </p>
         </div>
       </div>
     </section>

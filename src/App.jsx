@@ -43,6 +43,7 @@ import Kickstarter from "./pages/about/Kickstarter.jsx";
 import HallOfFame from "./pages/about/HallOfFame.jsx";
 import AboutEndorseUs from "./pages/about/EndorseUs.jsx";
 import Supporters from "./pages/about/Supporters.jsx";
+import TelecomSupporters from "./pages/join/TelecomSupporters.jsx";
 
 export default function App() {
   return (
@@ -135,6 +136,7 @@ export default function App() {
           <Route path="kickstarter" element={<Kickstarter />} />
           <Route path="hall-of-fame" element={<HallOfFame />} />
           <Route path="supporters" element={<Supporters />} />
+          <Route path="telecom-supporters" element={<TelecomSupporters />} />
         </Route>
 
         <Route path="about">

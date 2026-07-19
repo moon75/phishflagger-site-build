@@ -264,6 +264,15 @@ export default function Telecom() {
                 >
                   Link
                 </a>
+                , February 2, 2024{" "}
+                <a
+                  href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/276698---further-action-to-tackle--scam-calls/associated-documents/consultation-tackling-scam-calls--expecting-providers-to-block-more-calls-with-spoofed-numbers?v=330862"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline underline-offset-2"
+                >
+                  Link
+                </a>
                 , February 1, 2024{" "}
                 <a
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
@@ -291,8 +300,7 @@ export default function Telecom() {
                 >
                   Link
                 </a>
-                : CLI spoofing loophole and scam calls from abroad
-                consultations.
+                .
               </li>
             </ul>
           </div>
