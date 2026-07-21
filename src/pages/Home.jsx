@@ -228,7 +228,7 @@ export default function Home() {
             </em>
             <span className="font-normal not-italic">™</span>
             <br />
-            Individual protection: Thunderbird with <BrandInline />™ free plug
+            Individual protection: Free Plug-In
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
             Support our free plug to stop impersonation now.

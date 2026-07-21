@@ -73,11 +73,7 @@ export default function EmailMarketing() {
                 Designed for marketers and bulk emails.
               </li>
               <li className="list-disc">
-                Tame email security and help prevent phishing and other email
-                fraud.
-              </li>
-              <li className="list-disc">
-                Prevent Impersonations of your customers.
+                Protect your brand from impersonation.
               </li>
             </ul>
           </div>
