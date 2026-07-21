@@ -25,10 +25,7 @@ export default function EmailDomain() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
           <p className="text-center text-[28px] leading-[1.5] text-ink-muted sm:text-[30px]">
-            Protect your email domains and those you resell with{" "}
-            <BrandInline />
-            &trade;. Safeguard
-            all of your domains with <BrandInline />
+            Your domains with <BrandInline />
             &trade; email numbering to help enhance security and prevent
             impersonation, phishing and other email-based fraud.
           </p>
