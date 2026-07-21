@@ -232,13 +232,7 @@ export default function Home() {
         {/* Left — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>
-            <br />
-            Individual protection: Free Plug-In
+            Individual protection: Free
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
             Support our free plug to stop impersonation now.
@@ -258,7 +252,7 @@ export default function Home() {
           <img
             src="/assets/images/thunderbird new pick.avif"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black bg-white object-contain p-2"
+            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black object-contain"
           />
         </div>
       </div>
@@ -272,7 +266,7 @@ export default function Home() {
           <img
             src={outlookImg}
             alt="Microsoft Outlook email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black bg-white object-contain p-2"
+            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black object-contain"
           />
         </div>
 
