@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { nav } from "../../data/nav.js";
 import FaqTabs from "../faq/FaqTabs.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -116,21 +117,18 @@ export default function Footer({ logoSrc = logoImg }) {
               <div>
                 <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Join</p>
                 <ul className="space-y-2.5 list-none p-0">
-                  {[
-                    { label: "Email — Domain", to: "/join/email-domain" },
-                    { label: "Email — Plug-In", to: "/join/email-plug-in" },
-                    { label: "Email — Marketing", to: "/join/email-marketing" },
-                    { label: "Telecom", to: "/join/telecom" },
-                  ].map((link) => (
-                    <li key={link.to}>
-                      <Link
-                        to={link.to}
-                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {nav
+                    .find((item) => item.label === "Join")
+                    .children.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          to={link.href}
+                          className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </div>
 

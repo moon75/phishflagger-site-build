@@ -118,12 +118,12 @@ function TeamCard({ name, role, bio, photo }) {
   return (
     <article className="flex flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_2px_10px_rgba(15,23,42,0.04)] transition hover:shadow-[0_4px_18px_rgba(15,23,42,0.08)] sm:p-6">
       {photo && (
-        <div className="relative h-[260px] w-full overflow-hidden rounded-xl bg-gray-50 sm:h-[280px]">
+        <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-50">
           <img
             src={photo}
             alt={name}
             onError={onImgError}
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-cover object-center"
           />
           <div
             className="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-[#2a6df4] to-[#1a52c9] text-[48px] font-bold text-white"

@@ -31,23 +31,7 @@ export default function TelecomSupporters() {
       {/* Header */}
       <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[920px] text-center">
-          <Link
-            to="/"
-            aria-label="PhishFlagger home"
-            className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-          >
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-              ™
-            </span>
-          </Link>
-          <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-            Protecting Communications
-          </p>
-          <h1 className="mt-10 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+          <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             Telecom Supporters
           </h1>
           <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-ink-muted sm:text-[17px]">

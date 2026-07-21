@@ -74,6 +74,11 @@ export default function EmailDomain() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <p className="mb-6 text-center text-[18px] font-semibold text-ink sm:text-left sm:text-[20px]">
+              <BrandInline trail="Counter" />
+              &trade; Protect your recipients.
+            </p>
+
             <ul className="space-y-2 pl-5">
               <li className="list-disc">
                 <BrandInline />
@@ -92,10 +97,6 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex flex-col items-center lg:items-end">
-            <p className="mb-4 text-center text-[18px] font-semibold text-ink sm:text-right sm:text-[20px]">
-              <BrandInline trail="Counter" />
-              &trade; Protect your recipients.
-            </p>
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"

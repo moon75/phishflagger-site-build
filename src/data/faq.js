@@ -69,11 +69,28 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "Email - Plug-In",
+    name: "Email - Plug-In (Free)",
     items: [
       {
         q: "Do email recipients need to install anything?",
         a: "For our Domain customers nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+      },
+      {
+        q: "What is the difference between the FREE and CORPORATE Plug-In?",
+        a: "Nothing, Once you install the Plug-In you can use Free and/or Corporate emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nCORPORATE\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or CORPORATE accounts.\nEach Email requires a key. Get your keys here.",
+      },
+    ],
+  },
+  {
+    name: "Email - Plug-In (Corporate)",
+    items: [
+      {
+        q: "Do email recipients need to install anything?",
+        a: "For our Domain customers nothing at all. The PhishCounter™ number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+      },
+      {
+        q: "What is the difference between the FREE and CORPORATE Plug-In?",
+        a: "Nothing, Once you install the Plug-In you can use Free and/or Corporate emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nCORPORATE\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or CORPORATE accounts.\nEach Email requires a key. Get your keys here.",
       },
     ],
   },

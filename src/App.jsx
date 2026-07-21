@@ -14,6 +14,8 @@ import Petition from "./pages/Petition.jsx";
 import PetitionThanks from "./pages/PetitionThanks.jsx";
 import GenericThanks from "./pages/GenericThanks.jsx";
 import Kick from "./pages/Kick.jsx";
+import HumanVsDigital from "./pages/HumanVsDigital.jsx";
+import TestStripe from "./pages/TestStripe.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
@@ -62,6 +64,8 @@ export default function App() {
           }
         />
         <Route path="kick" element={<Kick />} />
+        <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
+        <Route path="test-stripe" element={<TestStripe />} />
         <Route path="contact" element={<Contact />} />
         <Route
           path="contact/thanks"

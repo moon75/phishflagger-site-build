@@ -8,8 +8,11 @@ export default function EmailFreePlugIn() {
 
       <section className="w-full bg-white px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-content">
+          <p className="text-center text-[15px] font-semibold uppercase tracking-wide text-brand sm:text-[16px]">
+            Free PhishFlagger
+          </p>
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Plug-in
+            Thunderbird Plug-In
           </h1>
         </div>
       </section>
@@ -26,6 +29,22 @@ export default function EmailFreePlugIn() {
           <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
             Email client view from enabled Domain
           </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-content">
+          <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[36px]">
+            Outlook Plug-In
+          </h2>
+
+          <textarea
+            rows={6}
+            placeholder="placeholder text"
+            className="mt-8 w-full resize-none rounded-lg border-2 border-black bg-transparent p-4 text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+          />
         </div>
       </section>
 

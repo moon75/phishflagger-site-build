@@ -35,7 +35,7 @@ const PRESS_AWARDS = [
     img: "/assets/images/supporters/jd%20houvener.jpg",
     description:
       "In 2025, J.D. Houvener reached out to Mr. Pearce, recognizing his patent.",
-    pickUrl: "https://www.youtube.com/c/Boldip",
+    pickUrl: "https://www.youtube.com/@boldpatents/streams",
     pickLabel: "JD's Channel",
   },
 ];
