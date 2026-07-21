@@ -209,9 +209,19 @@ export default function Home() {
             <br />
             Domain protection
           </h2>
-          <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
-            Domain protection for Microsoft, Google and Linux email servers.
-          </p>
+          <ul className="mt-4 space-y-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>Domain protection for Microsoft, Google and Linux email servers.</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Enable all your users across all devices instantly with our
+                Domain Appliance
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
