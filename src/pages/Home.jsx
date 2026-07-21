@@ -97,7 +97,7 @@ export default function Home() {
         </div>
         <div className="space-y-6">
           <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-[#1BB14C] sm:text-[24px]">
               Human.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
@@ -112,7 +112,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-[#1BB14C] sm:text-[24px]">
               Digital.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
