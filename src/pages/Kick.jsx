@@ -36,15 +36,6 @@ export default function Kick() {
         </Link>
 
         <a
-          href={kickstarterRequirementsPdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-        >
-          Kickstarter Requirements
-        </a>
-
-        <a
           href={launchPlanPdf}
           target="_blank"
           rel="noopener noreferrer"
@@ -60,6 +51,15 @@ export default function Kick() {
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           Altruistic notes
+        </a>
+
+        <a
+          href={kickstarterRequirementsPdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          Kickstarter Requirements
         </a>
       </section>
     </>
