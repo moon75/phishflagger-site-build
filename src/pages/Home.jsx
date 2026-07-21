@@ -258,7 +258,7 @@ export default function Home() {
           <img
             src="/assets/images/thunderbird new pick.avif"
             alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border border-gray-200 bg-white object-contain p-2"
+            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black bg-white object-contain p-2"
           />
         </div>
       </div>
@@ -272,7 +272,7 @@ export default function Home() {
           <img
             src={outlookImg}
             alt="Microsoft Outlook email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border border-gray-200 bg-white object-contain p-2"
+            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black bg-white object-contain p-2"
           />
         </div>
 
