@@ -164,10 +164,10 @@ export default function Footer({ logoSrc = logoImg }) {
                 <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">About</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
+                    { label: "Video", to: "/about/video" },
+                    { label: "Press", to: "/about/press" },
                     { label: "Phishing News", to: "/News" },
                     { label: "Team", to: "/about/team" },
-                    { label: "Press", to: "/about/press" },
-                    { label: "Video", to: "/about/video" },
                     { label: "IP", to: "/about/ip" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Numbering History", to: "/about/numbering-history" },

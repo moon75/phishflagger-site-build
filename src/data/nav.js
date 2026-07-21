@@ -28,9 +28,9 @@ export const nav = [
   {
     label: "About",
     children: [
-      { label: "Phishing News", href: "/News" },
       { label: "Video", href: "/about/video" },
       { label: "Press", href: "/about/press" },
+      { label: "Phishing News", href: "/News" },
       { label: "Team", href: "/about/team" },
       { label: "IP", href: "/about/ip" },
       { label: "Blog", href: "/about/blog" },
