@@ -82,14 +82,6 @@ export default function EmailDomain() {
                 &trade; email numbering in email domains helps prevent others
                 from impersonating you, your organization, and your brand.
               </li>
-              <li className="list-disc">
-                Designed for organizations of all sizes with email domains, and
-                for resellers.
-              </li>
-              <li className="list-disc">
-                Tame email security at all levels and help prevent
-                impersonation, phishing and other email-based fraud.
-              </li>
             </ul>
           </div>
 

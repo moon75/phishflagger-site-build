@@ -276,7 +276,7 @@ export default function Home() {
             Individual protection: Free
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
-            Support our free plug to stop impersonation now.
+            Support our Outlook plug help stop impersonation now.
           </p>
         </div>
       </div>
