@@ -34,10 +34,6 @@ export default function TelecomSupporters() {
           <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             Telecom Supporters
           </h1>
-          <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-ink-muted sm:text-[17px]">
-            Honoring the telecoms and carriers who support{" "}
-            {brandify("PhishFlagger")}.
-          </p>
         </div>
       </section>
 
