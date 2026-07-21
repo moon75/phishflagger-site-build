@@ -7,6 +7,7 @@ import { brandify } from "../Brand.jsx";
 // FAQ_CATEGORIES entry) and the accordion for whichever category is active.
 export default function FaqTabs() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [openQuestion, setOpenQuestion] = useState(null);
   const active = activeIndex === null ? null : FAQ_CATEGORIES[activeIndex];
   const { pathname } = useLocation();
 
@@ -14,6 +15,7 @@ export default function FaqTabs() {
   // expanded category/question would otherwise stay open when navigating away.
   useEffect(() => {
     setActiveIndex(null);
+    setOpenQuestion(null);
   }, [pathname]);
 
   return (
@@ -44,6 +46,10 @@ export default function FaqTabs() {
                 question={item.q}
                 answer={item.a}
                 last={idx === active.items.length - 1}
+                open={openQuestion === item.q}
+                onToggle={() =>
+                  setOpenQuestion((prev) => (prev === item.q ? null : item.q))
+                }
               />
             ))
           ) : (
@@ -57,13 +63,12 @@ export default function FaqTabs() {
   );
 }
 
-function FaqItem({ question, answer, last }) {
-  const [open, setOpen] = useState(false);
+function FaqItem({ question, answer, last, open, onToggle }) {
   return (
     <div className={last ? "" : "border-b border-gray-200"}>
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
+        onClick={onToggle}
         aria-expanded={open}
         className="flex w-full cursor-pointer items-center justify-between gap-4 px-4 py-4 text-left transition-colors hover:bg-gray-50 sm:gap-6 sm:px-6 sm:py-5"
       >
