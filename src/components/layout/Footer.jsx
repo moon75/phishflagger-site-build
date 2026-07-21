@@ -142,7 +142,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Hall of Fame", to: "/help/hall-of-fame" },
                     { label: "Email - Endorse Us", to: "/help/endorse-us" },
                     { label: "Supporters", to: "/help/supporters" },
-                    { label: "Telecom - Supporters", to: "/help/telecom-supporters" },
+                    { label: "Telecom - Endorse Us", to: "/help/telecom-endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
                     { label: "FAQ", to: "/about/faq" },
                   ].map((link) => (

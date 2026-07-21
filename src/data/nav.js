@@ -19,7 +19,7 @@ export const nav = [
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/help/kickstarter" },
       { label: "Email - Endorse Us", href: "/help/endorse-us" },
-      { label: "Telecom - Supporters", href: "/help/telecom-supporters" },
+      { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
       { label: "Telecom - Sign Petition", href: "/petition" },
       { label: "FAQ", href: "/about/faq" },
     ],
