@@ -273,13 +273,7 @@ export default function Home() {
         {/* Right — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>
-            <br />
-            Individual protection: Outlook with <BrandInline />™ free plug
+            Individual protection: Free
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
             Support our free plug to stop impersonation now.
