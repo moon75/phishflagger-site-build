@@ -48,28 +48,32 @@ export default function Footer({ logoSrc = logoImg }) {
         </>
       )}
 
-      <div className="h-1.5 w-full bg-brand" aria-hidden />
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
-            Protecting Communications
-          </h2>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
-            {PRODUCT_IMAGES.map((item) => (
-              <img
-                key={item.alt}
-                src={item.src}
-                alt={item.alt}
-                className={
-                  item.frame
-                    ? "h-[150px] w-auto rounded-lg border-2 border-black object-contain sm:h-[190px]"
-                    : "h-[150px] w-auto object-contain sm:h-[190px]"
-                }
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {!hideFaq && (
+        <>
+          <div className="h-1.5 w-full bg-brand" aria-hidden />
+          <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+            <div className="mx-auto max-w-[1200px]">
+              <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
+                Protecting Communications
+              </h2>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+                {PRODUCT_IMAGES.map((item) => (
+                  <img
+                    key={item.alt}
+                    src={item.src}
+                    alt={item.alt}
+                    className={
+                      item.frame
+                        ? "h-[150px] w-auto rounded-lg border-2 border-black object-contain sm:h-[190px]"
+                        : "h-[150px] w-auto object-contain sm:h-[190px]"
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <footer className="bg-white font-['Mulish',sans-serif]">
         {/* Top strip — full red, matches header */}
@@ -141,7 +145,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Kickstarter", to: "/help/kickstarter" },
                     { label: "Hall of Fame", to: "/help/hall-of-fame" },
                     { label: "Email - Endorse Us", to: "/help/endorse-us" },
-                    { label: "Supporters", to: "/help/supporters" },
+                    { label: "Email - Supporters", to: "/help/supporters" },
                     { label: "Telecom - Endorse Us", to: "/help/telecom-endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
                     { label: "FAQ", to: "/about/faq" },

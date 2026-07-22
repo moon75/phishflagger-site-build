@@ -92,10 +92,17 @@ export default function EmailMarketing() {
               </span>{" "}
               Enabled.
             </h2>
-            <p className="mt-5">
-              <BrandInline /> enabled domain or clients automatically validate
-              emails.
-            </p>
+            <ul className="mt-5 list-disc space-y-2 pl-5">
+              <li>
+                <BrandInline /> enabled domain or clients automatically
+                validate emails.
+              </li>
+              <li>
+                Enabled clients are additionally protected with our Digital
+                verification method that validates the sending domain similar
+                to SPF.
+              </li>
+            </ul>
           </div>
 
           <div className="flex flex-col items-center lg:items-end">

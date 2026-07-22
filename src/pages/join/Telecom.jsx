@@ -24,7 +24,7 @@ export default function Telecom() {
           </h1>
           <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
             {brandify(
-              "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fraudsters.",
+              "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
             )}
           </p>
         </div>

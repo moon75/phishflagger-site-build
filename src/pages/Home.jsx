@@ -519,7 +519,7 @@ export default function Home() {
 
 function HistoryCard({ year, topic, patent, attribution, heading, img, imgAlt }) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center rounded-2xl border-2 border-black px-6 py-8 text-center">
       <div className="text-[28px] font-bold leading-none text-ink sm:text-[34px]">
         {year}
       </div>
