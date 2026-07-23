@@ -33,7 +33,7 @@ export default function Footer({ logoSrc = logoImg }) {
     <>
       {!hideFaq && (
         <>
-          <div className="h-1.5 w-full bg-brand" aria-hidden />
+          <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
             <div className="mx-auto max-w-[1000px]">
               <h2 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
@@ -50,7 +50,7 @@ export default function Footer({ logoSrc = logoImg }) {
 
       {!hideFaq && (
         <>
-          <div className="h-1.5 w-full bg-brand" aria-hidden />
+          <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
             <div className="mx-auto max-w-[1200px]">
               <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">

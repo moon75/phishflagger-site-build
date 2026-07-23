@@ -71,13 +71,13 @@ export default function EmailDomain() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <p className="mb-6 text-center text-[18px] font-semibold text-ink sm:text-left sm:text-[20px]">
+            <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-left sm:text-[30px]">
               <BrandInline trail="Counter" />
               &trade; Protect your recipients.
-            </p>
+            </h2>
 
-            <ul className="space-y-2 pl-5">
-              <li className="list-disc">
+            <ul className="space-y-2 pl-0">
+              <li className="list-none">
                 <BrandInline />
                 &trade; email numbering in email domains helps prevent others
                 from impersonating you, your organization, and your brand.

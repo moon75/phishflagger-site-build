@@ -263,8 +263,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 5b — Individual protection: Outlook (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 5b — Individual protection: Outlook (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         {/* Left — Outlook client image */}
         <div className="flex w-full max-w-[560px] flex-col items-center lg:items-start">
@@ -287,8 +287,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 6 — Who Can Use (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 6 — Who Can Use (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -421,8 +421,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Caller ID (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 7 — Caller ID (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
@@ -473,8 +473,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 8 — Numbering history (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 8 — Numbering history (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[16px] leading-[1.5] text-ink sm:text-[20px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
@@ -536,7 +536,7 @@ function HistoryCard({ year, topic, patent, attribution, heading, img, imgAlt })
       <img
         src={img}
         alt={imgAlt}
-        className="mt-3 h-auto w-full max-w-[240px] object-contain sm:mt-4 sm:max-w-[280px]"
+        className="mt-3 h-auto w-full max-w-[240px] rounded-md object-contain sm:mt-4 sm:max-w-[280px]"
       />
     </div>
   );
