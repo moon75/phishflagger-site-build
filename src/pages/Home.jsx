@@ -521,26 +521,13 @@ export default function Home() {
   );
 }
 
-function HistoryCard({ year, topic, patent, attribution, heading, img, imgAlt }) {
+function HistoryCard({ img, imgAlt }) {
   return (
     <div className="flex flex-col items-center rounded-2xl border-2 border-black px-6 py-8 text-center">
-      <div className="text-[28px] font-bold leading-none text-ink sm:text-[34px]">
-        {year}
-      </div>
-      <div className="mt-1 text-[12px] font-medium text-ink-muted sm:text-[13px]">
-        {topic}
-      </div>
-      <div className="text-[12px] text-ink-muted sm:text-[13px]">{patent}</div>
-      <div className="mt-2 rounded-full bg-[#2a6df4] px-3 py-1 text-[11px] font-semibold text-white sm:text-[12px]">
-        {attribution}
-      </div>
-      <div className="mt-3 text-[16px] font-semibold text-ink sm:mt-4 sm:text-[18px]">
-        {heading}
-      </div>
       <img
         src={img}
         alt={imgAlt}
-        className="mt-3 h-auto w-full max-w-[240px] rounded-md object-contain sm:mt-4 sm:max-w-[280px]"
+        className="h-auto w-full max-w-[300px] rounded-md object-contain sm:max-w-[360px]"
       />
     </div>
   );
