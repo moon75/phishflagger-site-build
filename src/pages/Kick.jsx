@@ -16,7 +16,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          View Kickstarter Campaign
+          1. View Kickstarter Campaign
         </a>
 
         <a
@@ -25,14 +25,14 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          TD Human
+          2. TD Human
         </a>
 
         <Link
           to="/kick/human-vs-digital"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          Human vs Digital
+          3. Human vs Digital
         </Link>
 
         <a
@@ -41,7 +41,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          joe1
+          4. joe1
         </a>
 
         <a
@@ -50,7 +50,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          Altruistic notes
+          5. Altruistic notes
         </a>
 
         <a
@@ -59,8 +59,15 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          Kickstarter Requirements
+          6. Kickstarter Requirements
         </a>
+
+        <Link
+          to="/joinfree"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          7. Join Free
+        </Link>
       </section>
     </>
   );
