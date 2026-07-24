@@ -134,7 +134,7 @@ export default function JoinFree() {
               {ALLOWED_DOMAINS.map((domain) => (
                 <span
                   key={domain}
-                  className="rounded-full border border-[#ffd3d6] bg-white px-3 py-1 text-[12px] font-bold text-brand"
+                  className="rounded-full border border-gray-300 bg-white px-3 py-1 text-[12px] font-semibold text-ink"
                 >
                   {domain}
                 </span>
@@ -270,7 +270,7 @@ export default function JoinFree() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full cursor-pointer rounded-lg bg-brand px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition-colors hover:bg-brand-hover disabled:opacity-70"
+                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:opacity-70"
                 >
                   {submitting ? "Joining..." : "Join Free"}
                 </button>
@@ -283,7 +283,7 @@ export default function JoinFree() {
           ) : (
             <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
               <div className="flex flex-col items-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand text-brand">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
                   <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
                     <path
                       d="M8 12.5l2.5 2.5L16 9.5"
