@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
 const ALLOWED_DOMAINS = ["gmail.com", "hotmail.com", "outlook.com", "live.com", "yahoo.com"];
@@ -103,21 +104,9 @@ export default function JoinFree() {
 
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
-          {/* ===== Top — wordmark, tagline, page heading ===== */}
+          {/* ===== Page heading ===== */}
           <div className="text-center">
-            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
-              <em className="italic">
-                <span className="font-extrabold text-ink">Phish</span>
-                <span className="font-normal text-brand">Flagger</span>
-              </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                ™
-              </span>
-            </div>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications.
-            </p>
-            <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
               Join Free
             </h1>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
@@ -143,6 +132,15 @@ export default function JoinFree() {
             <p className="mt-2.5 text-[12.5px] text-ink-muted">
               You will receive an email shortly, and it will contain the license for your email
               address.
+            </p>
+            <p className="mt-2.5 text-[12.5px] text-ink-muted">
+              Don't see your domain?{" "}
+              <Link
+                to="/joinfree/request-domain"
+                className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Request My Domain
+              </Link>
             </p>
           </div>
 

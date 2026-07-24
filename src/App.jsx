@@ -33,6 +33,7 @@ import {
 } from "./pages/join/TelecomThanks.jsx";
 import Other from "./pages/join/Other.jsx";
 import JoinFree from "./pages/join/JoinFree.jsx";
+import RequestDomain from "./pages/join/RequestDomain.jsx";
 
 import Team from "./pages/about/Team.jsx";
 import Press from "./pages/about/Press.jsx";
@@ -95,6 +96,7 @@ export default function App() {
         <Route path="petition" element={<Petition />} />
         <Route path="petition/thanks" element={<PetitionThanks />} />
         <Route path="joinfree" element={<JoinFree />} />
+        <Route path="joinfree/request-domain" element={<RequestDomain />} />
 
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />
