@@ -10,11 +10,12 @@ export default function SiteLayout() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const hideFooter = pathname === "/about/faq";
+  const hideFooter = pathname === "/about/faq" || pathname === "/joinfree";
+  const hideHeader = pathname === "/joinfree";
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      {!hideHeader && <Header />}
       <main id="main" className="flex-1">
         <Outlet />
       </main>
