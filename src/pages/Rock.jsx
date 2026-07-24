@@ -64,7 +64,7 @@ export default function Rock() {
     e.preventDefault();
     if (!FORMSPARK_ENDPOINT || imageUploading.some(Boolean)) return;
 
-    if (!passcode.includes(SECRET_PASSCODE)) {
+    if (passcode !== SECRET_PASSCODE) {
       setStatus("decoy");
       return;
     }

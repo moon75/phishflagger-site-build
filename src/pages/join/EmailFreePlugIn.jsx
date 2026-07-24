@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox v2.png";
 
@@ -45,6 +46,15 @@ export default function EmailFreePlugIn() {
             placeholder="placeholder text"
             className="mt-8 w-full resize-none rounded-lg border-2 border-black bg-transparent p-4 text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
           />
+
+          <div className="mt-10 flex justify-center">
+            <Link
+              to="/joinfree"
+              className="cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join Free
+            </Link>
+          </div>
         </div>
       </section>
 

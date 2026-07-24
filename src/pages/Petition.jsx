@@ -91,7 +91,7 @@ export default function Petition() {
             </h1>
 
             <p className="mt-5 text-center text-[15px] leading-[1.65] text-[#444] sm:text-[16px]">
-              Let your Regulator know, this can stop faker calls.
+              Let your Regulator know, this can stop fake calls.
             </p>
           </div>
 

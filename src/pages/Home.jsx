@@ -305,8 +305,11 @@ export default function Home() {
             <span className="font-normal not-italic">™</span>
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Any Email Domain can join <BrandInline />™ protection. We also enable
-            Marketers, Portals and Security Providers.
+            <BrandInline />™ is designed for individuals and organizations who
+            want greater confidence in the authenticity of their emails.
+            Whether you are using a custom domain or a supported email
+            service, <BrandInline />™ adds an extra layer of protection
+            against phishing and email impersonation.
           </p>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-5 sm:text-[15px] sm:leading-[1.6]">
             <span className="font-semibold">Coming Soon Free:</span> Any
