@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
@@ -29,44 +28,50 @@ export default function Press() {
       <CloseButton />
 
       <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
-        <div className="mx-auto max-w-[820px]">
+        <div className="mx-auto max-w-content">
           {/* Header */}
           <div className="text-center">
-            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
-              <Link to="/" className="inline-block hover:opacity-80">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>
-                <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                  ™
-                </span>
-              </Link>
-            </div>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-            <h1 className="mt-10 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+            <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
               Press
             </h1>
           </div>
 
           {/* Press mentions */}
-          <div className="mt-12 divide-y divide-gray-200 rounded-2xl border border-gray-200 sm:mt-16">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2">
             {PRESS_ITEMS.map((item) => (
               <a
                 key={item.url}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-5 py-5 transition-colors hover:bg-gray-50 sm:px-8 sm:py-6"
+                className="group overflow-hidden rounded-xl border border-gray-200 transition-colors hover:border-gray-300"
               >
-                <p className="text-[15px] font-medium leading-snug text-ink sm:text-[17px]">
-                  {brandify(item.title)}
-                </p>
-                <span className="mt-2 inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]">
-                  Link
-                </span>
+                <div className="flex h-36 items-center justify-center bg-[#f4f5f8]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    className="h-10 w-10 text-gray-400"
+                    aria-hidden
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 5.5A1.5 1.5 0 0 1 5.5 4H15v4h4.5A1.5 1.5 0 0 1 21 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-14A1.5 1.5 0 0 1 4 18.5v-13Z"
+                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 4l4.5 4.5" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 9.5h4M7 12.5h9M7 15.5h9" />
+                  </svg>
+                </div>
+                <div className="px-5 py-5 sm:px-6">
+                  <p className="text-[15px] font-medium leading-snug text-ink sm:text-[16px]">
+                    {brandify(item.title)}
+                  </p>
+                  <span className="mt-2 inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]">
+                    Link
+                  </span>
+                </div>
               </a>
             ))}
           </div>
