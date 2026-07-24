@@ -134,7 +134,7 @@ export default function JoinFree() {
               {ALLOWED_DOMAINS.map((domain) => (
                 <span
                   key={domain}
-                  className="text-[12.5px] font-semibold text-ink underline underline-offset-2"
+                  className="text-[12.5px] font-semibold text-ink"
                 >
                   {domain}
                 </span>
