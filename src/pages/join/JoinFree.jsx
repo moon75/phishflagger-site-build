@@ -121,7 +121,7 @@ export default function JoinFree() {
               Join Free
             </h1>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
-              Get your free license and start flagging phishing emails in minutes.
+              Get you Free Email licenses here.
             </p>
           </div>
 
@@ -130,11 +130,11 @@ export default function JoinFree() {
             <p className="text-[13px] font-semibold text-ink">
               Available now for the following domains:
             </p>
-            <div className="mt-2.5 flex flex-wrap gap-2">
+            <div className="mt-2.5 flex flex-wrap gap-x-4 gap-y-1.5">
               {ALLOWED_DOMAINS.map((domain) => (
                 <span
                   key={domain}
-                  className="rounded-full border border-gray-300 bg-white px-3 py-1 text-[12px] font-semibold text-ink"
+                  className="text-[12.5px] font-semibold text-ink underline underline-offset-2"
                 >
                   {domain}
                 </span>
@@ -200,13 +200,13 @@ export default function JoinFree() {
               </Field>
 
               <Field label="Address">
-                <input
-                  type="text"
+                <textarea
+                  rows={2}
                   autoComplete="street-address"
                   value={values.address}
                   onChange={(e) => handleChange("address", e.target.value)}
                   placeholder="Address"
-                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  className="w-full resize-none bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
                 />
               </Field>
 
