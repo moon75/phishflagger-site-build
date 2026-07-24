@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
-const ALLOWED_DOMAINS = ["gmail.com", "hotmail.com", "outlook.com", "live.com", "yahoo.com"];
+const ALLOWED_DOMAINS = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "live.com"];
 
 const REQUIRED_MESSAGES = {
   firstName: "First name is required.",
@@ -128,19 +128,16 @@ export default function JoinFree() {
                   {domain}
                 </span>
               ))}
+              <Link
+                to="/joinfree/request-domain"
+                className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Request My Domain
+              </Link>
             </div>
             <p className="mt-2.5 text-[12.5px] text-ink-muted">
               You will receive an email shortly, and it will contain the license for your email
               address.
-            </p>
-            <p className="mt-2.5 text-[12.5px] text-ink-muted">
-              Don't see your domain?{" "}
-              <Link
-                to="/joinfree/request-domain"
-                className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-              >
-                Request My Domain
-              </Link>
             </p>
           </div>
 
