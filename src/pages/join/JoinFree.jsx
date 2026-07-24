@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 
 const ALLOWED_DOMAINS = ["gmail.com", "hotmail.com", "outlook.com", "live.com", "yahoo.com"];
 
@@ -97,310 +98,229 @@ export default function JoinFree() {
   }
 
   return (
-    <div className="joinfree flex min-h-screen items-center justify-center bg-white px-5 py-4">
-      <style>{`
-        .joinfree, .joinfree * { box-sizing: border-box; }
-        .joinfree {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-          color: #4a4a4a;
-          -webkit-font-smoothing: antialiased;
-        }
-        .joinfree .card {
-          width: 100%;
-          max-width: 640px;
-          background: #ffffff;
-          border: 1px solid #e6e6e6;
-          border-radius: 10px;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.05);
-          padding: 20px 28px 22px;
-        }
-        .joinfree .card-header { margin-bottom: 12px; }
-        .joinfree .card-header h1 {
-          margin: 0 0 2px;
-          font-size: 19px;
-          font-weight: 700;
-          line-height: 1.25;
-          color: #4a4a4a;
-        }
-        .joinfree .subtitle { margin: 0; font-size: 13px; color: #7a7a7a; }
-        .joinfree .info-box {
-          background: #fafafa;
-          border: 1px solid #e6e6e6;
-          border-radius: 10px;
-          padding: 10px 14px;
-          margin-bottom: 14px;
-        }
-        .joinfree .info-label { margin: 0 0 6px; font-size: 12px; color: #7a7a7a; }
-        .joinfree .domain-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
-        .joinfree .domain-chip {
-          background: #fff;
-          border: 1px solid #ffd3d6;
-          color: #d81321;
-          font-size: 11.5px;
-          font-weight: 700;
-          padding: 3px 9px;
-          border-radius: 999px;
-        }
-        .joinfree .info-note { margin: 0; font-size: 12px; color: #7a7a7a; }
-        .joinfree form { display: flex; flex-direction: column; gap: 10px; }
-        .joinfree .form-row { display: grid; grid-template-columns: 1fr; gap: 10px; }
-        .joinfree .form-row.two-col { grid-template-columns: 1fr 1fr; }
-        .joinfree .form-row.three-col { grid-template-columns: 1fr 1fr 1fr; }
-        .joinfree .form-group { display: flex; flex-direction: column; gap: 3px; }
-        .joinfree label { font-size: 12.5px; font-weight: 600; color: #4a4a4a; }
-        .joinfree .optional { font-weight: 400; color: #7a7a7a; }
-        .joinfree input[type="text"],
-        .joinfree input[type="email"],
-        .joinfree input[type="tel"] {
-          width: 100%;
-          padding: 8px 12px;
-          font-size: 13.5px;
-          border: 1px solid #e6e6e6;
-          border-radius: 8px;
-          background: #fff;
-          color: #4a4a4a;
-          transition: border-color 0.15s ease, box-shadow 0.15s ease;
-        }
-        .joinfree input::placeholder { color: #a7aeb8; }
-        .joinfree input:focus {
-          outline: none;
-          border-color: #ff1f2e;
-          box-shadow: 0 0 0 3px rgba(255, 31, 46, 0.14);
-        }
-        .joinfree input.invalid { border-color: #d5313a; }
-        .joinfree input.invalid:focus { box-shadow: 0 0 0 3px rgba(213, 49, 58, 0.15); }
-        .joinfree .error-message { min-height: 13px; font-size: 11.5px; color: #d5313a; display: block; }
-        .joinfree .submit-btn {
-          position: relative;
-          margin-top: 2px;
-          width: 100%;
-          padding: 11px 16px;
-          font-size: 14.5px;
-          font-weight: 700;
-          color: #fff;
-          background: linear-gradient(135deg, #ff1f2e, #d81321);
-          border: none;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: transform 0.1s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-          box-shadow: 0 4px 14px rgba(255, 31, 46, 0.32);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-        }
-        .joinfree .submit-btn:hover { box-shadow: 0 6px 18px rgba(255, 31, 46, 0.4); transform: translateY(-1px); }
-        .joinfree .submit-btn:active { transform: translateY(0); }
-        .joinfree .submit-btn:disabled { opacity: 0.75; cursor: not-allowed; transform: none; }
-        .joinfree .btn-spinner {
-          display: none;
-          width: 16px;
-          height: 16px;
-          border: 2px solid rgba(255, 255, 255, 0.4);
-          border-top-color: #fff;
-          border-radius: 50%;
-          animation: joinfree-spin 0.7s linear infinite;
-        }
-        .joinfree .submit-btn.loading .btn-spinner { display: inline-block; }
-        .joinfree .submit-btn.loading .btn-text { opacity: 0.85; }
-        @keyframes joinfree-spin { to { transform: rotate(360deg); } }
-        .joinfree .form-footnote { margin: 2px 0 0; font-size: 11px; color: #7a7a7a; text-align: center; }
-        .joinfree .success-message {
-          display: none;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 16px 10px 4px;
-        }
-        .joinfree .success-message.show { display: flex; }
-        .joinfree .success-icon { color: #ff1f2e; margin-bottom: 12px; }
-        .joinfree .success-message h2 { margin: 0 0 6px; font-size: 20px; color: #4a4a4a; }
-        .joinfree .success-message p { margin: 0; font-size: 14px; color: #7a7a7a; }
-        .joinfree form.hide { display: none; }
-        @media (max-width: 560px) {
-          .joinfree .card { padding: 16px 18px 18px; }
-          .joinfree .form-row.two-col, .joinfree .form-row.three-col { grid-template-columns: 1fr; }
-          .joinfree .card-header h1 { font-size: 17px; }
-        }
-      `}</style>
+    <>
+      <CloseButton />
 
-      <div className="card">
-        <div className="card-header">
-          <div>
-            <h1>Email Registration for Thunderbird Plugin</h1>
-            <p className="subtitle">Get your free license and start flagging phishing emails in minutes.</p>
+      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+        <div className="mx-auto max-w-content">
+          {/* ===== Top — wordmark, tagline, page heading ===== */}
+          <div className="text-center">
+            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>
+              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
+                ™
+              </span>
+            </div>
+            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
+              Protecting Communications.
+            </p>
+            <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+              Join Free
+            </h1>
+            <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
+              Get your free license and start flagging phishing emails in minutes.
+            </p>
           </div>
+
+          {/* ===== Available domains ===== */}
+          <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
+            <p className="text-[13px] font-semibold text-ink">
+              Available now for the following domains:
+            </p>
+            <div className="mt-2.5 flex flex-wrap gap-2">
+              {ALLOWED_DOMAINS.map((domain) => (
+                <span
+                  key={domain}
+                  className="rounded-full border border-[#ffd3d6] bg-white px-3 py-1 text-[12px] font-bold text-brand"
+                >
+                  {domain}
+                </span>
+              ))}
+            </div>
+            <p className="mt-2.5 text-[12.5px] text-ink-muted">
+              You will receive an email shortly, and it will contain the license for your email
+              address.
+            </p>
+          </div>
+
+          {/* ===== Form ===== */}
+          {!submitted ? (
+            <form
+              onSubmit={handleSubmit}
+              className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
+            >
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <Field label="First Name" error={errors.firstName}>
+                  <input
+                    type="text"
+                    id="firstName"
+                    autoComplete="given-name"
+                    required
+                    ref={(el) => (inputRefs.current.firstName = el)}
+                    value={values.firstName}
+                    onChange={(e) => handleChange("firstName", e.target.value)}
+                    onBlur={() => handleBlur("firstName")}
+                    placeholder="First Name"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+
+                <Field label="Last Name" error={errors.lastName}>
+                  <input
+                    type="text"
+                    id="lastName"
+                    autoComplete="family-name"
+                    required
+                    ref={(el) => (inputRefs.current.lastName = el)}
+                    value={values.lastName}
+                    onChange={(e) => handleChange("lastName", e.target.value)}
+                    onBlur={() => handleBlur("lastName")}
+                    placeholder="Last Name"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <Field label="Email Address" error={errors.email}>
+                <input
+                  type="email"
+                  id="email"
+                  autoComplete="email"
+                  required
+                  ref={(el) => (inputRefs.current.email = el)}
+                  value={values.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  onBlur={() => handleBlur("email")}
+                  placeholder="you@gmail.com"
+                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                />
+              </Field>
+
+              <Field label="Address">
+                <input
+                  type="text"
+                  autoComplete="street-address"
+                  value={values.address}
+                  onChange={(e) => handleChange("address", e.target.value)}
+                  placeholder="Address"
+                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                />
+              </Field>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <Field label="City">
+                  <input
+                    type="text"
+                    autoComplete="address-level2"
+                    value={values.city}
+                    onChange={(e) => handleChange("city", e.target.value)}
+                    placeholder="City"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Zip/Postal Code">
+                  <input
+                    type="text"
+                    autoComplete="postal-code"
+                    value={values.zip}
+                    onChange={(e) => handleChange("zip", e.target.value)}
+                    placeholder="Zip/Postal Code"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Province/State">
+                  <input
+                    type="text"
+                    autoComplete="address-level1"
+                    value={values.state}
+                    onChange={(e) => handleChange("state", e.target.value)}
+                    placeholder="Province/State"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <Field label="Country">
+                  <input
+                    type="text"
+                    autoComplete="country-name"
+                    value={values.country}
+                    onChange={(e) => handleChange("country", e.target.value)}
+                    placeholder="Country"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Phone Number (optional)">
+                  <input
+                    type="tel"
+                    autoComplete="tel"
+                    value={values.phone}
+                    onChange={(e) => handleChange("phone", e.target.value)}
+                    placeholder="Phone Number"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <div className="flex flex-col items-center gap-4 pt-2">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full cursor-pointer rounded-lg bg-brand px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition-colors hover:bg-brand-hover disabled:opacity-70"
+                >
+                  {submitting ? "Joining..." : "Join Free"}
+                </button>
+                <p className="text-center text-[12.5px] text-ink-muted">
+                  By submitting, you agree to receive your plugin license by email. We never
+                  share your information.
+                </p>
+              </div>
+            </form>
+          ) : (
+            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
+              <div className="flex flex-col items-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand text-brand">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path
+                      d="M8 12.5l2.5 2.5L16 9.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
+                <p className="mt-2 text-[15px] text-ink-muted">
+                  Check your inbox shortly for your Thunderbird Plugin license.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
+      </section>
+    </>
+  );
+}
 
-        <div className="info-box">
-          <p className="info-label">Available now for the following domains:</p>
-          <div className="domain-list">
-            {ALLOWED_DOMAINS.map((domain) => (
-              <span className="domain-chip" key={domain}>{domain}</span>
-            ))}
-          </div>
-          <p className="info-note">
-            You will receive an email shortly, and it will contain the license for your email address.
-          </p>
-        </div>
-
-        <form className={submitted ? "hide" : ""} onSubmit={handleSubmit} noValidate>
-          <div className="form-row two-col">
-            <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                autoComplete="given-name"
-                required
-                ref={(el) => (inputRefs.current.firstName = el)}
-                className={errors.firstName ? "invalid" : ""}
-                value={values.firstName}
-                onChange={(e) => handleChange("firstName", e.target.value)}
-                onBlur={() => handleBlur("firstName")}
-              />
-              <span className="error-message">{errors.firstName}</span>
-            </div>
-            <div className="form-group">
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                type="text"
-                id="lastName"
-                autoComplete="family-name"
-                required
-                ref={(el) => (inputRefs.current.lastName = el)}
-                className={errors.lastName ? "invalid" : ""}
-                value={values.lastName}
-                onChange={(e) => handleChange("lastName", e.target.value)}
-                onBlur={() => handleBlur("lastName")}
-              />
-              <span className="error-message">{errors.lastName}</span>
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                autoComplete="email"
-                placeholder="you@gmail.com"
-                required
-                ref={(el) => (inputRefs.current.email = el)}
-                className={errors.email ? "invalid" : ""}
-                value={values.email}
-                onChange={(e) => handleChange("email", e.target.value)}
-                onBlur={() => handleBlur("email")}
-              />
-              <span className="error-message">{errors.email}</span>
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="address">Address</label>
-              <input
-                type="text"
-                id="address"
-                autoComplete="street-address"
-                value={values.address}
-                onChange={(e) => handleChange("address", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-          </div>
-
-          <div className="form-row three-col">
-            <div className="form-group">
-              <label htmlFor="city">City</label>
-              <input
-                type="text"
-                id="city"
-                autoComplete="address-level2"
-                value={values.city}
-                onChange={(e) => handleChange("city", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="zip">Zip/Postal Code</label>
-              <input
-                type="text"
-                id="zip"
-                autoComplete="postal-code"
-                value={values.zip}
-                onChange={(e) => handleChange("zip", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="state">Province/State</label>
-              <input
-                type="text"
-                id="state"
-                autoComplete="address-level1"
-                value={values.state}
-                onChange={(e) => handleChange("state", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-          </div>
-
-          <div className="form-row two-col">
-            <div className="form-group">
-              <label htmlFor="country">Country</label>
-              <input
-                type="text"
-                id="country"
-                autoComplete="country-name"
-                value={values.country}
-                onChange={(e) => handleChange("country", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">
-                Phone Number <span className="optional">(optional)</span>
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                autoComplete="tel"
-                value={values.phone}
-                onChange={(e) => handleChange("phone", e.target.value)}
-              />
-              <span className="error-message" />
-            </div>
-          </div>
-
-          <button type="submit" className={`submit-btn${submitting ? " loading" : ""}`} disabled={submitting}>
-            <span className="btn-text">Join Free</span>
-            <span className="btn-spinner" aria-hidden="true" />
-          </button>
-
-          <p className="form-footnote">
-            By submitting, you agree to receive your plugin license by email. We never share your information.
-          </p>
-        </form>
-
-        <div className={`success-message${submitted ? " show" : ""}`} role="status">
-          <div className="success-icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.6" />
-              <path
-                d="M8 12.5l2.5 2.5L16 9.5"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <h2>You're all set!</h2>
-          <p>Check your inbox shortly for your Thunderbird Plugin license.</p>
-        </div>
+function Field({ label, children, error }) {
+  return (
+    <label className="block">
+      <span className="mb-2 block text-[14px] font-semibold text-ink sm:text-[15px]">
+        {label}
+      </span>
+      <div
+        className={`flex items-center gap-3 rounded-md bg-[#f4f5f8] px-3 py-3 sm:px-4 ${
+          error ? "ring-1 ring-red-400" : ""
+        }`}
+      >
+        <div className="flex-1">{children}</div>
       </div>
-    </div>
+      {error && <span className="mt-1.5 block text-[12px] text-red-600">{error}</span>}
+    </label>
   );
 }
