@@ -311,13 +311,6 @@ export default function Home() {
             service, <BrandInline />™ adds an extra layer of protection
             against phishing and email impersonation.
           </p>
-          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-5 sm:text-[15px] sm:leading-[1.6]">
-            <span className="font-semibold">Coming Soon Free:</span> Any
-            Individual or Business using Gmail, Yahoo, Outlook/Hotmail/Live (and other
-            approved free sites) can install a plug-in for Thunderbird, Outlook
-            (and other approved Email Clients) and be protected with{" "}
-            <BrandInline />™.
-          </p>
         </div>
         <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
           <div className="flex w-[150px] flex-col items-center">
