@@ -5,7 +5,7 @@ import { brandify } from "../components/Brand.jsx";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
 
-const VIDEOS = [
+const BASE_VIDEOS = [
   {
     type: "youtube",
     id: YOUTUBE_VIDEO_ID,
@@ -27,9 +27,19 @@ const VIDEOS = [
   },
 ];
 
+const PLACEHOLDER_COUNT = 3;
+
+const VIDEOS = [
+  ...BASE_VIDEOS,
+  ...Array.from({ length: PLACEHOLDER_COUNT }, (_, i) => ({
+    type: "placeholder",
+    title: "Coming Soon",
+    description: "More PhishFlagger™ videos are on the way.",
+  })),
+];
+
 export default function Video() {
-  const [active, setActive] = useState(0);
-  const current = VIDEOS[active];
+  const [playing, setPlaying] = useState(null);
 
   return (
     <>
@@ -64,68 +74,78 @@ export default function Video() {
             </p>
           </div>
 
-          {/* Active video player */}
-          <div className="mx-auto mt-10 w-full max-w-[900px] overflow-hidden rounded-xl bg-black shadow-lg sm:mt-14">
-            <div className="aspect-video w-full">
-              {current.type === "youtube" ? (
-                <iframe
-                  key={active}
-                  src={`https://www.youtube.com/embed/${current.id}?rel=0&autoplay=1`}
-                  title={current.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              ) : (
-                <video
-                  key={active}
-                  src={current.src}
-                  controls
-                  autoPlay
-                  className="h-full w-full"
-                />
-              )}
-            </div>
-          </div>
-
-          {/* Choose a video */}
-          <div className="mx-auto mt-10 grid w-full max-w-[900px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-3">
-            {VIDEOS.map((v, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActive(i)}
-                className={`group overflow-hidden rounded-xl text-left transition ${
-                  i === active
-                    ? "ring-2 ring-brand ring-offset-2"
-                    : "ring-1 ring-black/10 hover:ring-black/25"
-                }`}
-              >
-                <div className="relative aspect-video w-full bg-black">
-                  {v.type === "youtube" ? (
-                    <img
-                      src={v.thumb}
-                      alt={v.title}
-                      className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
-                    />
-                  ) : (
-                    <video
-                      src={v.src}
-                      preload="metadata"
-                      muted
-                      className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
-                    />
-                  )}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-black shadow sm:h-10 sm:w-10">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-4 w-4">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </span>
+          {/* Video grid */}
+          <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+            {VIDEOS.map((v, i) => {
+              const isPlaying = playing === i;
+              return (
+                <div
+                  key={i}
+                  className={`group overflow-hidden rounded-xl transition ${
+                    isPlaying
+                      ? "ring-2 ring-brand ring-offset-2"
+                      : "ring-1 ring-black/10 hover:ring-black/25"
+                  }`}
+                >
+                  <div className="relative aspect-video w-full bg-black">
+                    {v.type === "placeholder" ? (
+                      <div className="flex h-full w-full items-center justify-center bg-black/5">
+                        <span className="text-[13px] font-medium text-ink/40">Coming Soon</span>
+                      </div>
+                    ) : isPlaying ? (
+                      v.type === "youtube" ? (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${v.id}?rel=0&autoplay=1`}
+                          title={v.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="h-full w-full"
+                        />
+                      ) : (
+                        <video
+                          src={v.src}
+                          controls
+                          autoPlay
+                          className="h-full w-full"
+                        />
+                      )
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setPlaying(i)}
+                        className="absolute inset-0 h-full w-full text-left"
+                      >
+                        {v.type === "youtube" ? (
+                          <img
+                            src={v.thumb}
+                            alt={v.title}
+                            className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
+                          />
+                        ) : (
+                          <video
+                            src={v.src}
+                            preload="metadata"
+                            muted
+                            className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
+                          />
+                        )}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-black shadow sm:h-10 sm:w-10">
+                            <svg viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-4 w-4">
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </span>
+                        </div>
+                      </button>
+                    )}
+                  </div>
+                  <div className="bg-white px-3 py-3">
+                    <p className="text-[13px] font-semibold text-ink">{v.title}</p>
+                    <p className="mt-1 text-[12px] leading-snug text-ink/70">{v.description}</p>
                   </div>
                 </div>
-              </button>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

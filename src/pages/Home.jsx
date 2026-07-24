@@ -104,14 +104,14 @@ export default function Home() {
               Human.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" />™ inserts a sequential
-              number in the subject line, called the{" "}
-              <BrandInline trail="Counter" />™, from the sender. The recipient
-              will see this number and be able to verify if it matches the
-              last email sent (Human Compatible) or it will be automatically
-              flagged as out of sequence by an application or domain
-              (Auto-Flagging). In both cases, the recipient is protected from
-              fraudulent senders.
+              <BrandInline trail="Flagger" />™ adds a unique, sequential
+              identifier to the subject line called the{" "}
+              <BrandInline trail="Counter" />™ on every outgoing email.
+              Recipients can quickly verify if the sequence matches the
+              previous email they received from the same sender. If the
+              number is missing or out of sequence, it provides an immediate
+              warning that the message may not be authentic, giving users a
+              simple way to spot phishing attempts.
             </p>
           </div>
           <div>
@@ -119,9 +119,13 @@ export default function Home() {
               Digital.
             </h2>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              We ensure the sending domain or email is accurate.{" "}
-              <BrandInline trail="Flagger" />™ uses the Domain registry and
-              Plug-Ins to add additional authentication.
+              <BrandInline trail="Flagger" />™ strengthens email
+              authentication by verifying sender identity at the domain
+              level. Working alongside existing email security standards and
+              authentication technologies, our domain validation screens
+              messages that originate from authorized senders, adding an
+              extra layer of protection against impersonation and phishing
+              attacks.
             </p>
           </div>
         </div>
