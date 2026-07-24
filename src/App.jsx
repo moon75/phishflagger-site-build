@@ -66,7 +66,7 @@ export default function App() {
           }
         />
         <Route path="kick" element={<Kick />} />
-        <Route path="rock" element={<Rock />} />
+        <Route path="edit" element={<Rock />} />
         <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
         <Route path="test-stripe" element={<TestStripe />} />
         <Route path="contact" element={<Contact />} />

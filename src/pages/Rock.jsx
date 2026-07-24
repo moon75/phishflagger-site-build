@@ -3,6 +3,11 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/HnXtQNLRA";
 
+// TODO: move this behind a real password page — this is just a cheap
+// speed-bump for now, not real security. Anyone reading the client bundle
+// can see it.
+const SECRET_PASSCODE = "007";
+
 // Formspark can't accept file attachments, so pictures upload straight to
 // Uploadcare and only the resulting CDN URL is sent to Formspark as text.
 const UPLOADCARE_PUBLIC_KEY = "1c944c79dccda460f80e";
@@ -58,6 +63,12 @@ export default function Rock() {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!FORMSPARK_ENDPOINT || imageUploading.some(Boolean)) return;
+
+    if (!passcode.includes(SECRET_PASSCODE)) {
+      setStatus("decoy");
+      return;
+    }
+
     setStatus("submitting");
 
     try {
@@ -91,8 +102,8 @@ export default function Rock() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <form onSubmit={onSubmit} className="space-y-8 sm:space-y-10">
-            {/* Picture boxes */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
+            {/* Picture boxes — .5x size */}
+            <div className="mx-auto grid max-w-[50%] grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
               {images.map((file, idx) => (
                 <PictureBox
                   key={idx}
@@ -164,6 +175,11 @@ export default function Rock() {
             {status === "success" && (
               <p className="text-center text-[14px] font-medium text-green-600">
                 Sent.
+              </p>
+            )}
+            {status === "decoy" && (
+              <p className="text-center text-[14px] font-medium text-ink">
+                Thank you.
               </p>
             )}
           </form>
