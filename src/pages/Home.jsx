@@ -16,9 +16,9 @@ import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 
 const SCREENS = [
+  { label: "Email Inbox", src: infoBoxImg },
   { label: "Email", src: emailPhoneImg },
   { label: "Messages", src: messagesPhoneImg },
-  { label: "Email Inbox", src: infoBoxImg },
   { label: "Text/SMS", src: textPhoneImg },
   { label: "Caller ID", src: callerIdHandsetImg },
 ];
