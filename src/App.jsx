@@ -20,11 +20,11 @@ import TestStripe from "./pages/TestStripe.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
-import EmailIndividual from "./pages/join/EmailIndividual.jsx";
 import EmailFreePlugIn from "./pages/join/EmailFreePlugIn.jsx";
 import EmailMarketing from "./pages/join/EmailMarketing.jsx";
 import EmailMarketingQuote from "./pages/join/EmailMarketingQuote.jsx";
 import Telecom from "./pages/join/Telecom.jsx";
+import Messaging from "./pages/join/Messaging.jsx";
 import TelecomContact from "./pages/join/TelecomContact.jsx";
 import TelecomSubscribe from "./pages/join/TelecomSubscribe.jsx";
 import {
@@ -100,7 +100,6 @@ export default function App() {
 
         <Route path="join">
           <Route path="email-domain" element={<EmailDomain />} />
-          <Route path="email-plug-in" element={<EmailIndividual />} />
           <Route path="email-free-plug-in" element={<EmailFreePlugIn />} />
           <Route path="email-marketing" element={<EmailMarketing />} />
           <Route path="email-marketing/quote" element={<EmailMarketingQuote />} />
@@ -124,6 +123,7 @@ export default function App() {
             path="telecom/thanks-subscribe"
             element={<TelecomThanksSubscribe />}
           />
+          <Route path="messaging" element={<Messaging />} />
           <Route path="other" element={<Other />} />
         </Route>
 

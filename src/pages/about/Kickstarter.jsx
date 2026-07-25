@@ -18,7 +18,10 @@ export default function Kickstarter() {
           <div className="mt-16 grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.85fr)] lg:gap-14">
             <div className="text-center lg:text-left">
               <p className="mx-auto max-w-[520px] text-[16px] leading-relaxed text-ink-muted sm:text-[18px] lg:mx-0">
-                Coming soon.
+                Meet the people who believed in us first. Like you, they knew
+                the world needed a better way to verify digital
+                communication. Their support helped bring PhishFlagger to the
+                world. We proudly honor our founding supporters.
               </p>
             </div>
             <div className="flex flex-col items-center">

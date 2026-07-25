@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import emailImg from "../assets/images/email.avif";
-import messagesImg from "../assets/images/messages.avif";
-import textImg from "../assets/images/text.avif";
-import callerIdImg from "../assets/images/callerid.avif";
+import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
@@ -10,17 +7,20 @@ import whoCanUseImg from "../assets/images/5th sec.avif";
 import outlookImg from "../assets/images/outlook image.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
+import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
 import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
+import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 
 const SCREENS = [
-  { label: "Email", src: emailImg },
-  { label: "Messages", src: messagesImg },
-  { label: "Text/SMS", src: textImg },
-  { label: "Caller ID", src: callerIdImg },
+  { label: "Email", src: emailPhoneImg },
+  { label: "Messages", src: messagesPhoneImg },
+  { label: "Email Inbox", src: infoBoxImg },
+  { label: "Text/SMS", src: textPhoneImg },
+  { label: "Caller ID", src: callerIdHandsetImg },
 ];
 
 export default function Home() {
@@ -51,8 +51,8 @@ export default function Home() {
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
       <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-x-16 sm:gap-y-12">
-        {SCREENS.map((s) => (
-          <div key={s.label} className="flex flex-col items-center">
+        {SCREENS.map((s, i) => (
+          <div key={i} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
               {s.label}
             </span>
@@ -235,64 +235,42 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 5 — Individual protection (gray) ===== */}
+    {/* ===== Section 5 — Individual protection: Free Plug-In (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.1fr]">
-        {/* Left — heading + text */}
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Individual protection: Free
-          </h2>
-          <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
-            Support our Thunderbird plug help stop impersonation now.
-          </p>
-        </div>
-
-        {/* Right — Thunderbird client image */}
-        <div className="relative flex w-full max-w-[560px] flex-col items-center lg:ml-auto lg:items-end">
-          <div className="absolute right-4 top-4 z-10 text-right">
-            <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
-              Thunderbird
-            </span>
-            <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
-              Email Client
-            </span>
+      <div className="mx-auto max-w-content">
+        <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          Free Plug-In
+        </h2>
+        <div className="mt-10 grid grid-cols-1 items-center gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-2">
+          <div className="relative mx-auto w-full max-w-[480px]">
+            <img
+              src="/assets/images/thunderbird new pick.avif"
+              alt="Mozilla Thunderbird email client with PhishFlagger plugin"
+              className="h-auto w-full rounded-2xl border-2 border-black object-contain"
+            />
+            <div className="absolute right-4 top-4 z-10 text-right">
+              <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
+                Thunderbird
+              </span>
+              <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
+                Email Client
+              </span>
+            </div>
           </div>
-          <img
-            src="/assets/images/thunderbird new pick.avif"
-            alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black object-contain"
-          />
+
+          <div className="flex w-full flex-col items-center">
+            <img
+              src={outlookImg}
+              alt="Microsoft Outlook email client with PhishFlagger plugin"
+              className="h-auto w-full max-w-[480px] rounded-2xl border-2 border-black object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    {/* ===== Section 5b — Individual protection: Outlook (white) ===== */}
+    {/* ===== Section 6 — Who Can Use (white) ===== */}
     <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
-        {/* Left — Outlook client image */}
-        <div className="flex w-full max-w-[560px] flex-col items-center lg:items-start">
-          <img
-            src={outlookImg}
-            alt="Microsoft Outlook email client with PhishFlagger plugin"
-            className="h-auto w-full max-w-[560px] rounded-2xl border-2 border-black object-contain"
-          />
-        </div>
-
-        {/* Right — heading + text */}
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Individual protection: Free
-          </h2>
-          <p className="mt-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:text-[18px] sm:leading-[1.55]">
-            Support our Outlook plug help stop impersonation now.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 6 — Who Can Use (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -302,7 +280,7 @@ export default function Home() {
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>
-            <span className="font-normal not-italic">™</span>
+            <span className="font-normal not-italic">™</span> Email
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             <BrandInline />™ is designed for individuals and organizations who
@@ -319,7 +297,7 @@ export default function Home() {
               <br />
               Free
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
+            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black bg-white">
               <img
                 src="/assets/images/individual.png"
                 alt="Individual protection illustration"
@@ -335,61 +313,13 @@ export default function Home() {
           </div>
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Plug-In
-              <br />
               Corporate
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
-              <svg
-                viewBox="0 0 150 150"
-                role="img"
-                aria-label="Small business team illustration"
-                className="h-[130px] w-[130px]"
-              >
-                <circle cx="38" cy="48" r="22" fill="none" stroke="#0c2217" strokeWidth="4" />
-                <path
-                  d="M4 132c0-24 15-42 34-42s34 18 34 42"
-                  fill="none"
-                  stroke="#0c2217"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                <circle cx="90" cy="40" r="26" fill="none" stroke="#ff0033" strokeWidth="4" />
-                <path
-                  d="M46 136c0-26 20-44 44-44s44 18 44 44"
-                  fill="none"
-                  stroke="#ff0033"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                <circle cx="120" cy="54" r="18" fill="none" stroke="#0c2217" strokeWidth="4" />
-                <path
-                  d="M92 132c0-20 13-34 32-34s32 14 32 34"
-                  fill="none"
-                  stroke="#0c2217"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-            <Link
-              to="/join/email-plug-in"
-              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Join
-            </Link>
-          </div>
-          <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
-              Domain
-              <br />
-              Corporate
-            </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
+            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-lg border-2 border-black">
               <img
-                src="/assets/images/domain.png"
+                src="/assets/images/domain image for homepage.png"
                 alt="Domain protection illustration"
-                className="h-[130px] w-[130px] object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
             <Link
@@ -403,7 +333,7 @@ export default function Home() {
             <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Marketing
             </span>
-            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black">
+            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black bg-white">
               <img
                 src={whoCanUseImg}
                 alt="Join PhishFlagger illustration"
@@ -421,8 +351,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Caller ID (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 7 — Caller ID (gray) ===== */}
+    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
@@ -473,6 +403,28 @@ export default function Home() {
       </div>
     </section>
 
+    {/* ===== Section 7b — Telecom / Text (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <BrandInline />™ for Telecom / Text
+          </h2>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            Placeholder text goes here. Replace this paragraph with the final
+            copy for this section.
+          </p>
+        </div>
+        <div className="flex justify-center lg:justify-end">
+          <img
+            src={textPhoneImg}
+            alt="Phone displaying PhishFlagger text messages"
+            className="h-auto w-1/2 max-w-[190px] object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
     {/* ===== Section 8 — Numbering history (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
@@ -519,11 +471,11 @@ export default function Home() {
 
 function HistoryCard({ img, imgAlt }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border-2 border-black px-6 py-8 text-center">
+    <div className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center">
       <img
         src={img}
         alt={imgAlt}
-        className="h-auto w-full max-w-[300px] rounded-md object-contain sm:max-w-[360px]"
+        className="h-auto w-full rounded-2xl object-contain"
       />
     </div>
   );

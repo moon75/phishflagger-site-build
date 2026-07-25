@@ -134,8 +134,6 @@ export default function Rock() {
                 <input
                   type="text"
                   inputMode="numeric"
-                  pattern="\d{6}"
-                  maxLength={6}
                   value={passcode}
                   onChange={(e) =>
                     setPasscode(e.target.value.replace(/\D/g, "").slice(0, 6))

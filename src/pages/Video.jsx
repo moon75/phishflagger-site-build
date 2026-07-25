@@ -48,7 +48,7 @@ export default function Video() {
         <div className="mx-auto max-w-[1000px]">
           {/* Intro */}
           <div className="text-center">
-            <p className="mx-auto max-w-[640px] text-[14px] leading-[1.6] text-ink sm:text-[15px]">
+            <p className="mx-auto max-w-[900px] text-[42px] leading-[1.6] text-ink sm:text-[45px]">
               {brandify(
                 "See how PhishFlagger™ and human validation protects against phishing and fraud.",
               )}

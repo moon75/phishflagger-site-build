@@ -14,10 +14,6 @@ export const FAQ_CATEGORIES = [
         a: "PhishFlagger™ email numbering is a patented protocol that assigns a unique sequential number to each outgoing email from a sender domain, making every legitimate message individually identifiable to the recipient. We also will offer Plug In’s for Individual use.",
       },
       {
-        q: "What does PhishFlagger™ do for me?",
-        a: "PhishFlagger™ plug-in or appliance assigns numbers to outgoing emails and verifies incoming numbers, for your security.",
-      },
-      {
         q: "How does PhishFlagger™ email numbering work?",
         a: "Each outgoing email is tagged with the next number in the sender’s sequence (the PhishCounter™) and placed in the subject line. The recipient — or their email client — can confirm the number is in sequence; any out-of-sequence or missing number is automatically flagged as suspicious. Additionally we certify the sending domain or email.",
       },
@@ -40,10 +36,6 @@ export const FAQ_CATEGORIES = [
       {
         q: "Can a phisher just replicate the sequence number to fool the system?",
         a: "Virtually impossible. The PhishCounter™ number is specific to each individual sender-recipient pair and is only known between the legitimate sender and that particular recipient. A phisher blasting emails to thousands of people cannot know the unique sequence number each individual is expecting — making it effectively impossible to craft a convincing fake at scale.",
-      },
-      {
-        q: "Is PhishFlagger™ email numbering patented?",
-        a: "The PhishFlagger™ email numbering method is a patented process.",
       },
       {
         q: "How do I get a license, and how much does it cost?",

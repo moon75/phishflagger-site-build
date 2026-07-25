@@ -22,9 +22,10 @@ export default function Demo() {
             </a>
           </div>
 
-          <p className="mx-auto mt-8 max-w-[640px] text-[27px] leading-[1.6] text-ink-muted sm:mt-10 sm:text-[29px]">
+          <p className="mx-auto mt-8 max-w-[640px] text-[16px] leading-[1.6] text-ink-muted sm:mt-10 sm:text-[17px]">
             This will open your default email client (Outlook, Apple Mail,
-            Gmail, etc.). Subject or Content is not required.
+            Gmail, etc.). Subject or Content is not required. Just click
+            send.
           </p>
         </div>
       </section>

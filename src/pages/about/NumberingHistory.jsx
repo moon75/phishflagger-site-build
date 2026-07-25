@@ -19,18 +19,9 @@ export default function NumberingHistory() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
           <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
+            <HistoryCard img={history1Img} imgAlt="Numbered book pages" />
+            <HistoryCard img={history2Img} imgAlt="Mechanical numbering stamp" />
             <HistoryCard
-              heading="Numbering Book Pages"
-              img={history1Img}
-              imgAlt="Numbered book pages"
-            />
-            <HistoryCard
-              heading="Numbering Machine"
-              img={history2Img}
-              imgAlt="Mechanical numbering stamp"
-            />
-            <HistoryCard
-              heading="Numbering Communications"
               img={history3Img}
               imgAlt="PhishFlagger email numbering"
             />
@@ -41,16 +32,13 @@ export default function NumberingHistory() {
   );
 }
 
-function HistoryCard({ heading, img, imgAlt }) {
+function HistoryCard({ img, imgAlt }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="text-[16px] font-semibold text-ink sm:text-[18px]">
-        {heading}
-      </div>
       <img
         src={img}
         alt={imgAlt}
-        className="mt-3 h-auto w-full max-w-[240px] object-contain sm:mt-4 sm:max-w-[280px]"
+        className="h-auto w-full max-w-[240px] object-contain sm:max-w-[280px]"
       />
     </div>
   );

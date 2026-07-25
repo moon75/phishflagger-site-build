@@ -263,12 +263,12 @@ export default function Footer({ logoSrc = logoImg }) {
             </p>
           </div>
 
-          <p className="mx-auto mb-5 mt-6 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
+          <p className="mx-auto mb-2.5 mt-3 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>
 
-          <p className="mx-auto mt-1 text-[10px] text-[#4a4a4a]">
+          <p className="mx-auto mt-0.5 text-[10px] text-[#4a4a4a]">
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Flagger</strong>
             </em>

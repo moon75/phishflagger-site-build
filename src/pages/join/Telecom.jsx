@@ -9,6 +9,7 @@ import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/call
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
+import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 
 export default function Telecom() {
   return (
@@ -163,7 +164,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20CLI.jpg"
               alt="STIR/SHAKEN anti-spoofing ecosystem diagram"
-              className="h-auto w-full max-w-[520px] object-contain"
+              className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
             />
           </div>
           <div className="lg:order-1">
@@ -332,6 +333,27 @@ export default function Telecom() {
       </section>
 
       <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              Placeholder heading goes here.
+            </h2>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              Placeholder text goes here. Replace this paragraph with the
+              final copy for this section.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src={textPhoneImg}
+              alt="Phone displaying PhishFlagger text messages"
+              className="h-auto w-full max-w-[260px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -365,7 +387,7 @@ export default function Telecom() {
       </section>
 
       {/* ===== Bottom CTA panel ===== */}
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">

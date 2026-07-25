@@ -1,5 +1,4 @@
-﻿import { Link } from "react-router-dom";
-import CloseButton from "../../components/ui/CloseButton.jsx";
+﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 import williamImg from "../../assets/images/william.avif";
 import mikeImg from "../../assets/images/mike.avif";
 import toddImg from "../../assets/images/todd.avif";
@@ -55,7 +54,7 @@ const TEAM = [
   {
     name: "Recognition To Our Team",
     role: "",
-    bio: "Joe Heir\nAlex Tichy\nDavid M?\nJoe Andre?\nJohn Grant\nRukhsar Hussain\nJE?EB?PG?NG?",
+    bio: "Joe Heir\nAlex Tichy\nJohn Grant\nRukhsar Hussain",
   },
 ];
 
@@ -68,22 +67,7 @@ export default function Team() {
         <div className="mx-auto max-w-[1200px]">
           {/* Header */}
           <div className="text-center">
-            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
-              <Link to="/" className="inline-block hover:opacity-80">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>
-                <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                  ™
-                </span>
-              </Link>
-            </div>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-
-            <h1 className="mt-8 text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:mt-10 sm:text-[44px] lg:text-[52px]">
+            <h1 className="text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[44px] lg:text-[52px]">
               Meet the Team
             </h1>
           </div>
