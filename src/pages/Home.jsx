@@ -50,13 +50,17 @@ export default function Home() {
       </p>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-x-16 sm:gap-y-12">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         {SCREENS.map((s, i) => (
           <div key={i} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
               {s.label}
             </span>
-            <PhonePlaceholder src={s.src} alt={`${s.label} screen`} />
+            <PhonePlaceholder
+              src={s.src}
+              alt={`${s.label} screen`}
+              large={i === 0}
+            />
           </div>
         ))}
       </div>
@@ -216,7 +220,7 @@ export default function Home() {
             </em>
             <span className="font-normal not-italic">™</span>
             <br />
-            Domain protection
+            Email Domain protection
           </h2>
           <ul className="mt-4 space-y-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
             <li className="flex gap-4">
@@ -239,7 +243,7 @@ export default function Home() {
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          Free Plug-In
+          Free Email Client Plug-In
         </h2>
         <div className="mt-10 grid grid-cols-1 items-start gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-3">
           <div className="flex w-full flex-col items-center">
@@ -259,12 +263,20 @@ export default function Home() {
               </div>
             </div>
             <div aria-hidden="true" className="mt-5 h-[22px]" />
-            <a
-              href="#"
-              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
-            >
-              Download
-            </a>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/plugin-download?download=Windows%20Download"
+                className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+              >
+                Windows Download
+              </Link>
+              <Link
+                to="/plugin-download?download=Linux%20Download"
+                className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+              >
+                Linux Download
+              </Link>
+            </div>
           </div>
 
           <div className="flex w-full flex-col items-center">
@@ -276,12 +288,12 @@ export default function Home() {
               />
             </div>
             <div aria-hidden="true" className="mt-5 h-[22px]" />
-            <a
-              href="#"
-              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+            <Link
+              to="/plugin-download?download=Windows%20Download"
+              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
             >
-              Download
-            </a>
+              Windows Download
+            </Link>
           </div>
 
           <div className="flex w-full flex-col items-center">
@@ -472,8 +484,28 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 8 — Numbering history (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
+        <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <BrandInline />™ for Messages
+        </h2>
+        <div className="flex items-center justify-center gap-14 lg:justify-start lg:gap-20">
+          <img
+            src="/assets/images/messages-apps-transparent.png"
+            alt="Popular messaging companies"
+            className="h-auto w-[58%] max-w-[306px] object-contain"
+          />
+          <img
+            src={messagesPhoneImg}
+            alt="Phone displaying PhishFlagger messages"
+            className="h-auto w-[32%] max-w-[171px] object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 8 — Numbering history (white) ===== */}
+    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[32px] leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
@@ -538,12 +570,16 @@ function BrandInline({ trail = "Flagger" }) {
   );
 }
 
-function PhonePlaceholder({ src, alt }) {
+function PhonePlaceholder({ src, alt, large = false }) {
   return (
     <img
       src={src}
       alt={alt}
-      className="block h-auto w-[140px] max-w-full object-contain sm:w-[180px] lg:w-[220px]"
+      className={
+        large
+          ? "block h-auto w-[230px] max-w-full object-contain sm:w-[300px] lg:w-[300px]"
+          : "block h-auto w-[140px] max-w-full object-contain sm:w-[180px] lg:w-[170px]"
+      }
     />
   );
 }

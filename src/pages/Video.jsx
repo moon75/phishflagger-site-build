@@ -131,7 +131,7 @@ export default function Video() {
                     ) : isPlaying ? (
                       v.type === "youtube" ? (
                         <iframe
-                          src={`https://www.youtube.com/embed/${v.id}?rel=0&autoplay=1`}
+                          src={`https://www.youtube.com/embed/${v.id}?rel=0`}
                           title={v.title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -141,7 +141,6 @@ export default function Video() {
                         <video
                           src={v.src}
                           controls
-                          autoPlay
                           className="h-full w-full"
                         />
                       )

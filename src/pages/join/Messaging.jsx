@@ -23,11 +23,11 @@ export default function Messaging() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-8 lg:justify-end">
+          <div className="flex items-center justify-center gap-14 lg:justify-end lg:gap-20">
             <img
-              src="/assets/images/messages apps image.png"
+              src="/assets/images/messages-apps-transparent.png"
               alt="Grid of popular messaging app icons"
-              className="h-auto w-[64%] max-w-[340px] rounded-lg object-contain"
+              className="h-auto w-[64%] max-w-[340px] object-contain"
             />
             <img
               src={messagesImg}

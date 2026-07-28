@@ -8,15 +8,18 @@ const DOWNLOADS = [
     name: "Outlook",
     image: outlookImg,
     alt: "Microsoft Outlook with the PhishFlagger plug-in",
-    action: "Download",
-    href: "#outlook-download",
+    actions: [
+      { label: "Windows Download", to: "/plugin-download?download=Windows%20Download" },
+    ],
   },
   {
     name: "Thunderbird",
     image: "/assets/images/thunderbird new pick.avif",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
-    action: "Download",
-    href: "#thunderbird-download",
+    actions: [
+      { label: "Windows Download", to: "/plugin-download?download=Windows%20Download" },
+      { label: "Linux Download", to: "/plugin-download?download=Linux%20Download" },
+    ],
   },
 ];
 
@@ -37,21 +40,6 @@ export default function EmailFreePlugIn() {
           <h1 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
             PhishFlagger Plug-In
           </h1>
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto flex max-w-content flex-col items-center">
-          <img
-            src={emailInboxImg}
-            alt="Inbox showing PhishCounter numbered email messages"
-            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
-          />
-          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-            Email client view from enabled Domain
-          </p>
         </div>
       </section>
 
@@ -93,6 +81,21 @@ export default function EmailFreePlugIn() {
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto flex max-w-content flex-col items-center">
+          <img
+            src={emailInboxImg}
+            alt="Inbox showing PhishCounter numbered email messages"
+            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
+          />
+          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
         </div>
       </section>
 
@@ -164,7 +167,7 @@ function ProviderIcon({ provider }) {
   );
 }
 
-function DownloadCard({ name, image, alt, action, href }) {
+function DownloadCard({ name, image, alt, actions }) {
   return (
     <article className="flex min-h-[340px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
       <div className="flex h-[220px] items-center justify-center bg-[#f7f8fb] p-5">
@@ -176,12 +179,17 @@ function DownloadCard({ name, image, alt, action, href }) {
       </div>
       <div className="flex flex-1 flex-col items-center justify-between p-6 text-center">
         <h2 className="text-[18px] font-semibold text-ink">{name}</h2>
-        <a
-          href={href}
-          className="mt-5 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-        >
-          {action}
-        </a>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+          {actions.map((action) => (
+            <Link
+              key={action.label}
+              to={action.to}
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              {action.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </article>
   );

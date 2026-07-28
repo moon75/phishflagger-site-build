@@ -1,4 +1,5 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { Link } from "react-router-dom";
 import outlookImg from "../assets/images/outlook image.png";
 
 export default function Download() {
@@ -25,18 +26,18 @@ export default function Download() {
                 />
               </div>
               <div className="flex justify-center gap-6 px-5 py-5 sm:px-6">
-                <a
-                  href="#"
+                <Link
+                  to="/plugin-download?download=Windows%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Windows
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/plugin-download?download=Linux%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Linux
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -50,12 +51,12 @@ export default function Download() {
                 />
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">
-                <a
-                  href="#"
+                <Link
+                  to="/plugin-download?download=Windows%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Windows
-                </a>
+                </Link>
               </div>
             </div>
 
