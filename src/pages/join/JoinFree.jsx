@@ -147,6 +147,10 @@ export default function JoinFree() {
               onSubmit={handleSubmit}
               className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
             >
+              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                Step 1
+              </p>
+
               <Field label="Email Address" error={errors.email}>
                 <input
                   type="email"

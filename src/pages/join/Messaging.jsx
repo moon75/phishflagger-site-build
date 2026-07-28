@@ -23,7 +23,12 @@ export default function Messaging() {
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex items-center justify-center gap-4 lg:justify-end">
+            <img
+              src="/assets/images/messages apps image.png"
+              alt="Grid of popular messaging app icons"
+              className="h-auto w-1/2 max-w-[190px] rounded-lg object-contain"
+            />
             <img
               src={messagesImg}
               alt="Phone showing PhishFlagger numbered messages"

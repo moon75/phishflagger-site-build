@@ -366,7 +366,7 @@ export default function Telecom() {
             </span>{" "}
             process is protected by Patents
             <br />
-            in the following Jurisdiction:
+            in the following Jurisdictions:
           </p>
           <p className="mx-auto mt-4 max-w-[700px] text-[16px] font-semibold leading-relaxed text-ink sm:text-[18px]">
             We are offering exceptional opportunities to early adopters.

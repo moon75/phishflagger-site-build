@@ -242,28 +242,42 @@ export default function Home() {
           Free Plug-In
         </h2>
         <div className="mt-10 grid grid-cols-1 items-center gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-2">
-          <div className="relative w-full max-w-[480px]">
-            <img
-              src="/assets/images/thunderbird new pick.avif"
-              alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-              className="h-auto w-full rounded-2xl border-2 border-black object-contain"
-            />
-            <div className="absolute right-4 top-4 z-10 text-right">
-              <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
-                Thunderbird
-              </span>
-              <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
-                Email Client
-              </span>
+          <div className="flex w-full flex-col items-center">
+            <div className="relative w-full max-w-[480px]">
+              <img
+                src="/assets/images/thunderbird new pick.avif"
+                alt="Mozilla Thunderbird email client with PhishFlagger plugin"
+                className="h-auto w-full rounded-2xl border-2 border-black object-contain"
+              />
+              <div className="absolute right-4 top-4 z-10 text-right">
+                <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
+                  Thunderbird
+                </span>
+                <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
+                  Email Client
+                </span>
+              </div>
             </div>
+            <a
+              href="#"
+              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+            >
+              Download
+            </a>
           </div>
 
-          <div className="flex w-full flex-col items-start ml-10">
+          <div className="flex w-full flex-col items-center">
             <img
               src={outlookImg}
               alt="Microsoft Outlook email client with PhishFlagger plugin"
               className="h-auto w-full max-w-[480px] rounded-2xl border-2 border-black object-contain"
             />
+            <a
+              href="#"
+              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+            >
+              Download
+            </a>
           </div>
         </div>
       </div>
