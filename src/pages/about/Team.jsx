@@ -1,4 +1,4 @@
-﻿import CloseButton from "../../components/ui/CloseButton.jsx";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 import williamImg from "../../assets/images/william.avif";
 import mikeImg from "../../assets/images/mike.avif";
 import toddImg from "../../assets/images/todd.avif";
@@ -54,7 +54,7 @@ const TEAM = [
   {
     name: "Recognition To Our Team",
     role: "",
-    bio: "Joe Heir\nAlex Tichy\nJohn Grant\nRukhsar Hussain",
+    bio: "Joe Heir\nAlex Tichy\nJohn Grant\nRukhsar Hussain\nAl Amin Ador",
   },
 ];
 

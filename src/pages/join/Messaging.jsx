@@ -15,7 +15,7 @@ export default function Messaging() {
       </section>
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <p>
               Placeholder text goes here. Replace this paragraph with the
@@ -23,16 +23,16 @@ export default function Messaging() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-4 lg:justify-end">
+          <div className="flex items-center justify-center gap-8 lg:justify-end">
             <img
               src="/assets/images/messages apps image.png"
               alt="Grid of popular messaging app icons"
-              className="h-auto w-1/2 max-w-[190px] rounded-lg object-contain"
+              className="h-auto w-[64%] max-w-[340px] rounded-lg object-contain"
             />
             <img
               src={messagesImg}
               alt="Phone showing PhishFlagger numbered messages"
-              className="h-auto w-1/2 max-w-[190px] object-contain"
+              className="h-auto w-[36%] max-w-[190px] object-contain"
             />
           </div>
         </div>

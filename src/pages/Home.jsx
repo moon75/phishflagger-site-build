@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
 import whoCanUseImg from "../assets/images/5th sec.avif";
-import outlookImg from "../assets/images/outlook image.png";
+import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -241,13 +241,13 @@ export default function Home() {
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           Free Plug-In
         </h2>
-        <div className="mt-10 grid grid-cols-1 items-center gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 items-start gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-3">
           <div className="flex w-full flex-col items-center">
-            <div className="relative w-full max-w-[480px]">
+            <div className="relative flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[294px]">
               <img
                 src="/assets/images/thunderbird new pick.avif"
                 alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-                className="h-auto w-full rounded-2xl border-2 border-black object-contain"
+                className="h-full w-full object-cover"
               />
               <div className="absolute right-4 top-4 z-10 text-right">
                 <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
@@ -258,6 +258,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
+            <div aria-hidden="true" className="mt-5 h-[22px]" />
             <a
               href="#"
               className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
@@ -267,17 +268,47 @@ export default function Home() {
           </div>
 
           <div className="flex w-full flex-col items-center">
-            <img
-              src={outlookImg}
-              alt="Microsoft Outlook email client with PhishFlagger plugin"
-              className="h-auto w-full max-w-[480px] rounded-2xl border-2 border-black object-contain"
-            />
+            <div className="flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[294px]">
+              <img
+                src={outlookImg}
+                alt="Microsoft Outlook email client with PhishFlagger plugin"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div aria-hidden="true" className="mt-5 h-[22px]" />
             <a
               href="#"
               className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
             >
               Download
             </a>
+          </div>
+
+          <div className="flex w-full flex-col items-center">
+            <div className="flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white sm:h-[294px]">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-white">
+                <img
+                  src="/assets/images/logo-mark.png"
+                  alt=""
+                  className="h-14 w-14 object-contain"
+                />
+                <span className="mt-4 text-[18px] font-semibold text-ink">
+                  Download Page
+                </span>
+                <span className="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-brand text-[24px] font-bold leading-none text-white">
+                  ↓
+                </span>
+              </div>
+            </div>
+            <h3 className="mt-5 text-[18px] font-semibold text-ink">
+              Download Page
+            </h3>
+            <Link
+              to="/download"
+              className="mt-5 rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+            >
+              Go to Download Page
+            </Link>
           </div>
         </div>
       </div>
@@ -425,8 +456,10 @@ export default function Home() {
             <BrandInline />™ for Telecom / Text
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Placeholder text goes here. Replace this paragraph with the final
-            copy for this section.
+            Phishing doesn't stop at email. <BrandInline />™ for Telecom and
+            Text adds an additional layer of verification to SMS and mobile
+            messaging, helping protect customers from text-based scams and
+            impersonation.
           </p>
         </div>
         <div className="flex justify-center lg:justify-start lg:ml-10">

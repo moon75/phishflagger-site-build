@@ -13,7 +13,7 @@ export default function FAQ() {
           </h1>
 
           <div className="mt-8 sm:mt-12">
-            <FaqTabs />
+            <FaqTabs showAskAiComingSoon />
           </div>
         </div>
       </section>

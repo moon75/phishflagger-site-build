@@ -63,6 +63,21 @@ export default function HallOfFame() {
             </em>
             ™ from day one. Thank you.
           </p>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
+            <Link
+              to="/about/video?video=thank-you"
+              className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
+            >
+              Thank You Video
+            </Link>
+            <Link
+              to="/about/video?video=kickstarter"
+              className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
+            >
+              Kickstarter Videos
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -72,6 +87,15 @@ export default function HallOfFame() {
             {SUPPORTERS.map((s, i) => (
               <SupporterCard key={s.id} {...s} index={i + 1} />
             ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/about/kickstarter"
+              className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[16px]"
+            >
+              Help stop phishing — support our Kickstarter
+            </Link>
           </div>
         </div>
       </section>

@@ -2,7 +2,16 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
-const ALLOWED_DOMAINS = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "live.com"];
+const DOMAIN_PROVIDERS = [
+  { domain: "gmail.com", provider: "Gmail" },
+  { domain: "yahoo.com", provider: "Yahoo" },
+  { domain: "hotmail.com", provider: "Hotmail" },
+  { domain: "outlook.com", provider: "Outlook" },
+  { domain: "live.com", provider: "Live" },
+  { domain: "aol.com", provider: "AOL" },
+];
+
+const ALLOWED_DOMAINS = DOMAIN_PROVIDERS.map(({ domain }) => domain);
 
 const REQUIRED_MESSAGES = {
   firstName: "First name is required.",
@@ -119,15 +128,20 @@ export default function JoinFree() {
             <p className="text-[13px] font-semibold text-ink">
               Available now for the following domains:
             </p>
-            <div className="mt-2.5 flex flex-wrap gap-x-4 gap-y-1.5">
-              {ALLOWED_DOMAINS.map((domain) => (
-                <span
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
+                <div
                   key={domain}
-                  className="text-[12.5px] font-semibold text-ink"
+                  className="flex min-h-[92px] flex-col items-center justify-center rounded-lg bg-white px-3 py-3 text-center"
                 >
-                  {domain}
-                </span>
+                  <DomainIcon provider={provider} />
+                  <span className="mt-2 text-[12.5px] font-semibold text-ink">
+                    {domain}
+                  </span>
+                </div>
               ))}
+            </div>
+            <div className="mt-3 text-center">
               <Link
                 to="/joinfree/request-domain"
                 className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
@@ -321,5 +335,41 @@ function Field({ label, children, error }) {
       </div>
       {error && <span className="mt-1.5 block text-[12px] text-red-600">{error}</span>}
     </label>
+  );
+}
+
+function DomainIcon({ provider }) {
+  if (provider === "Gmail") {
+    return (
+      <svg viewBox="0 0 64 48" className="h-8 w-11" aria-label="Gmail">
+        <path d="M5 10v31h10V20l17 13 17-13v21h10V10l-7-5-20 16L12 5Z" fill="#ea4335" />
+        <path d="M5 10v31h10V20L5 13Z" fill="#4285f4" />
+        <path d="M49 20v21h10V13Z" fill="#34a853" />
+      </svg>
+    );
+  }
+
+  if (provider === "Yahoo") {
+    return (
+      <span className="text-[18px] font-black italic tracking-[-0.08em] text-[#6001d2]">
+        YAHOO!
+      </span>
+    );
+  }
+
+  if (provider === "AOL") {
+    return <span className="text-[18px] font-black text-black">AOL.</span>;
+  }
+
+  return (
+    <span className="flex h-8 items-center gap-2" aria-label={`Microsoft ${provider}`}>
+      <svg viewBox="0 0 40 40" className="h-7 w-7" aria-hidden="true">
+        <rect x="2" y="2" width="17" height="17" fill="#f25022" />
+        <rect x="21" y="2" width="17" height="17" fill="#7fba00" />
+        <rect x="2" y="21" width="17" height="17" fill="#00a4ef" />
+        <rect x="21" y="21" width="17" height="17" fill="#ffb900" />
+      </svg>
+      <span className="text-[13px] font-semibold text-[#5e5e5e]">{provider}</span>
+    </span>
   );
 }

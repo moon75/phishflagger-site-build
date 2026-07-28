@@ -100,7 +100,13 @@ export default function EmailMarketing() {
               <li>
                 Enabled clients are additionally protected with our Digital
                 verification method that validates the sending domain similar
-                to SPF.
+                to SPF.{" "}
+                <Link
+                  to="/digital-ino"
+                  className="font-semibold text-[#2a6df4] underline underline-offset-4"
+                >
+                  More info Here.
+                </Link>
               </li>
             </ul>
           </div>

@@ -50,10 +50,10 @@ export default function Press() {
             {PRESS_ITEMS.map((item) => (
               <div
                 key={item.url}
-                className="group overflow-hidden rounded-xl border border-gray-200 transition-colors hover:border-gray-300"
+                className="group flex aspect-square flex-col overflow-hidden rounded-xl border border-gray-200 transition-colors hover:border-gray-300"
               >
                 <div
-                  className={`flex h-36 items-center justify-center overflow-hidden bg-[#f4f5f8] ${
+                  className={`flex h-1/2 shrink-0 items-center justify-center overflow-hidden bg-[#f4f5f8] ${
                     item.fit === "contain" ? "p-6" : ""
                   }`}
                 >
@@ -65,7 +65,7 @@ export default function Press() {
                     }`}
                   />
                 </div>
-                <div className="px-5 py-5 sm:px-6">
+                <div className="flex flex-1 flex-col px-5 py-5 sm:px-6">
                   <p className="text-[15px] font-medium leading-snug text-ink sm:text-[16px]">
                     {brandify(item.title)}
                   </p>
@@ -73,7 +73,7 @@ export default function Press() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
+                    className="mt-auto inline-block pt-2 text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                   >
                     Link
                   </a>

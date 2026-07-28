@@ -7,6 +7,8 @@ import Contact from "./pages/Contact.jsx";
 import Community from "./pages/Community.jsx";
 import Demo from "./pages/Demo.jsx";
 import VideoPage from "./pages/Video.jsx";
+import Download from "./pages/Download.jsx";
+import DigitalIno from "./pages/DigitalIno.jsx";
 import VictimTestimonials from "./pages/VictimTestimonials.jsx";
 import EndorseUs from "./pages/EndorseUs.jsx";
 import EndorseThanks from "./pages/EndorseThanks.jsx";
@@ -92,6 +94,8 @@ export default function App() {
         />
         <Route path="demo" element={<Demo />} />
         <Route path="video" element={<VideoPage />} />
+        <Route path="download" element={<Download />} />
+        <Route path="digital-ino" element={<DigitalIno />} />
         <Route path="News" element={<News />} />
         <Route path="petition" element={<Petition />} />
         <Route path="petition/thanks" element={<PetitionThanks />} />

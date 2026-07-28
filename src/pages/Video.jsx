@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { brandify } from "../components/Brand.jsx";
 
@@ -15,7 +16,7 @@ const BASE_VIDEOS = [
   {
     type: "local",
     src: "/assets/Videos/v1.mp4",
-    title: "PhishFlagger in Action",
+    title: "Thank You Video",
     description: "A closer look at how sequential numbering flags impersonation in real time.",
   },
   {
@@ -49,8 +50,30 @@ const VIDEOS = [
   })),
 ];
 
+const VIDEO_CATEGORIES = ["Feature", "Ads", "Shorts", "Manual", "In Progress"];
+
+function categoryVideos(category) {
+  if (category === "Feature") return VIDEOS;
+
+  return Array.from({ length: 6 }, () => ({
+    type: "placeholder",
+    title: "Coming Soon",
+    description: "",
+  }));
+}
+
 export default function Video() {
-  const [playing, setPlaying] = useState(null);
+  const [searchParams] = useSearchParams();
+  const requestedVideo = searchParams.get("video");
+  const [activeCategory, setActiveCategory] = useState("Feature");
+  const [playing, setPlaying] = useState(
+    requestedVideo === "thank-you"
+      ? 1
+      : requestedVideo === "kickstarter"
+        ? 3
+        : null,
+  );
+  const displayedVideos = categoryVideos(activeCategory);
 
   return (
     <>
@@ -67,9 +90,29 @@ export default function Video() {
             </p>
           </div>
 
+          <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-3">
+            {VIDEO_CATEGORIES.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => {
+                  setActiveCategory(category);
+                  setPlaying(null);
+                }}
+                className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
+                  category === activeCategory
+                    ? "border-[#5a6066] bg-[#5a6066] text-white"
+                    : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           {/* Video grid */}
           <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
-            {VIDEOS.map((v, i) => {
+            {displayedVideos.map((v, i) => {
               const isPlaying = playing === i;
               return (
                 <div

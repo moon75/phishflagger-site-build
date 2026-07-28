@@ -5,7 +5,7 @@ import { brandify } from "../Brand.jsx";
 
 // Reusable category-tabbed FAQ block. Renders a row of pill tabs (one per
 // FAQ_CATEGORIES entry) and the accordion for whichever category is active.
-export default function FaqTabs() {
+export default function FaqTabs({ showAskAiComingSoon = false }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const [openQuestion, setOpenQuestion] = useState(null);
   const active = activeIndex === null ? null : FAQ_CATEGORIES[activeIndex];
@@ -35,6 +35,15 @@ export default function FaqTabs() {
             {category.name}
           </button>
         ))}
+        {showAskAiComingSoon && (
+          <button
+            type="button"
+            disabled
+            className="cursor-not-allowed rounded-full border border-gray-200 bg-gray-100 px-4 py-2 text-[13px] font-medium text-gray-400 sm:text-[14px]"
+          >
+            Ask AI coming soon
+          </button>
+        )}
       </div>
 
       {active && (
