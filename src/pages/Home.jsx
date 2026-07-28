@@ -50,7 +50,7 @@ export default function Home() {
       </p>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
+      <div className="mt-12 flex flex-wrap items-start justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         {SCREENS.map((s, i) => (
           <div key={i} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
@@ -577,7 +577,7 @@ function PhonePlaceholder({ src, alt, large = false }) {
       alt={alt}
       className={
         large
-          ? "block h-auto w-[230px] max-w-full object-contain sm:w-[300px] lg:w-[300px]"
+          ? "mt-[30px] block h-auto w-[230px] max-w-full object-contain sm:w-[300px] lg:w-[300px]"
           : "block h-auto w-[140px] max-w-full object-contain sm:w-[180px] lg:w-[170px]"
       }
     />
