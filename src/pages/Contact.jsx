@@ -45,21 +45,9 @@ export default function Contact() {
     <CloseButton />
     <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
       <div className="mx-auto max-w-content">
-        {/* ===== Top — wordmark, tagline, page heading ===== */}
+        {/* ===== Top — page heading ===== */}
         <div className="text-center">
-          <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-              ™
-            </span>
-          </div>
-          <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-            Protecting Communications.
-          </p>
-          <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+          <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
             Contact
           </h1>
         </div>

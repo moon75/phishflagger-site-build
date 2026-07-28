@@ -46,7 +46,7 @@ export default function Press() {
           </div>
 
           {/* Press mentions */}
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {PRESS_ITEMS.map((item) => (
               <div
                 key={item.url}

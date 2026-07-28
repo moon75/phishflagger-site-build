@@ -10,13 +10,9 @@ export default function EmailDomain() {
 
       <section className="w-full bg-white px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-content">
-          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight sm:text-[46px] lg:text-[54px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="text-ink"> for your Domain</span>
-          </h1>
+          <p className="text-center text-[34px] font-semibold leading-tight tracking-tight sm:text-[46px] lg:text-[54px]">
+            Corporate
+          </p>
         </div>
       </section>
 
@@ -89,6 +85,34 @@ export default function EmailDomain() {
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
+              className="h-auto w-full max-w-[500px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+          <div className="space-y-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              Placeholder Heading
+            </h2>
+            <p>
+              Placeholder text goes here. Replace this copy with the final
+              content describing this feature or benefit.
+            </p>
+            <p>
+              Another placeholder paragraph to fill out the layout until real
+              copy is provided.
+            </p>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src="/assets/images/corporate%20image%20and%20design.png"
+              alt="Corporate email protection design"
               className="h-auto w-full max-w-[500px] object-contain"
             />
           </div>

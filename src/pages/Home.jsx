@@ -98,7 +98,7 @@ export default function Home() {
             className="h-auto w-full max-w-[520px] object-contain"
           />
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 ml-[4.3rem]">
           <div>
             <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
               Human.
@@ -180,7 +180,7 @@ export default function Home() {
         </div>
 
         {/* Right — info box image */}
-        <div className="flex flex-col items-center">
+        <div className="flex -translate-x-[1.2rem] flex-col items-center">
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
@@ -242,7 +242,7 @@ export default function Home() {
           Free Plug-In
         </h2>
         <div className="mt-10 grid grid-cols-1 items-center gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-2">
-          <div className="relative mx-auto w-full max-w-[480px]">
+          <div className="relative w-full max-w-[480px]">
             <img
               src="/assets/images/thunderbird new pick.avif"
               alt="Mozilla Thunderbird email client with PhishFlagger plugin"
@@ -258,7 +258,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex w-full flex-col items-center">
+          <div className="flex w-full flex-col items-start ml-10">
             <img
               src={outlookImg}
               alt="Microsoft Outlook email client with PhishFlagger plugin"
@@ -290,7 +290,7 @@ export default function Home() {
             against phishing and email impersonation.
           </p>
         </div>
-        <div className="flex flex-wrap items-start justify-center gap-6 lg:justify-end">
+        <div className="flex flex-wrap items-start justify-start gap-6 ml-[11rem]">
           <div className="flex w-[150px] flex-col items-center">
             <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
               Plug-In
@@ -373,7 +373,7 @@ export default function Home() {
           />
         </div>
         {/* Right — heading + text */}
-        <div>
+        <div className="-ml-[3.5rem]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             <BrandInline />™ for Telecom / Caller ID
           </h2>
@@ -415,7 +415,7 @@ export default function Home() {
             copy for this section.
           </p>
         </div>
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-start lg:ml-10">
           <img
             src={textPhoneImg}
             alt="Phone displaying PhishFlagger text messages"
@@ -428,7 +428,7 @@ export default function Home() {
     {/* ===== Section 8 — Numbering history (gray) ===== */}
     <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-content">
-        <p className="mx-auto max-w-[820px] text-center text-[16px] leading-[1.5] text-ink sm:text-[20px] sm:leading-[1.45]">
+        <p className="mx-auto max-w-[820px] text-center text-[32px] leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
           records and documents, thereby reducing fraud.
         </p>

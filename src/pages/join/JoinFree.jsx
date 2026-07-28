@@ -147,6 +147,21 @@ export default function JoinFree() {
               onSubmit={handleSubmit}
               className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
             >
+              <Field label="Email Address" error={errors.email}>
+                <input
+                  type="email"
+                  id="email"
+                  autoComplete="email"
+                  required
+                  ref={(el) => (inputRefs.current.email = el)}
+                  value={values.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  onBlur={() => handleBlur("email")}
+                  placeholder="you@gmail.com"
+                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                />
+              </Field>
+
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <Field label="First Name" error={errors.firstName}>
                   <input
@@ -178,21 +193,6 @@ export default function JoinFree() {
                   />
                 </Field>
               </div>
-
-              <Field label="Email Address" error={errors.email}>
-                <input
-                  type="email"
-                  id="email"
-                  autoComplete="email"
-                  required
-                  ref={(el) => (inputRefs.current.email = el)}
-                  value={values.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
-                  onBlur={() => handleBlur("email")}
-                  placeholder="you@gmail.com"
-                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                />
-              </Field>
 
               <Field label="Address">
                 <textarea

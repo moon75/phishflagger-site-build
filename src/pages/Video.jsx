@@ -24,9 +24,21 @@ const BASE_VIDEOS = [
     title: "Setup & Protection",
     description: "See how quickly your domain or inbox can be protected end to end.",
   },
+  {
+    type: "local",
+    src: "/assets/Videos/PhishFlagger_Kickstarter_video_1.mp4",
+    title: "PhishFlagger Kickstarter",
+    description: "An introduction to the PhishFlagger Kickstarter campaign.",
+  },
+  {
+    type: "local",
+    src: "/assets/Videos/PhishFlagger_Kickstarter_video_2.mp4",
+    title: "PhishFlagger Kickstarter",
+    description: "More on the PhishFlagger Kickstarter campaign.",
+  },
 ];
 
-const PLACEHOLDER_COUNT = 3;
+const PLACEHOLDER_COUNT = 1;
 
 const VIDEOS = [
   ...BASE_VIDEOS,
@@ -48,7 +60,7 @@ export default function Video() {
         <div className="mx-auto max-w-[1000px]">
           {/* Intro */}
           <div className="text-center">
-            <p className="mx-auto max-w-[900px] text-[42px] leading-[1.6] text-ink sm:text-[45px]">
+            <p className="mx-auto max-w-[900px] text-[31.5px] leading-[1.6] text-ink sm:text-[33.75px]">
               {brandify(
                 "See how PhishFlagger™ and human validation protects against phishing and fraud.",
               )}
