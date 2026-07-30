@@ -1,14 +1,48 @@
-import { useEffect } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import {
+  Outlet,
+  useLocation,
+  useNavigationType,
+} from "react-router-dom";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 
 export default function SiteLayout() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const { pathname } = location;
+  const scrollKey = `phishflagger-scroll:${location.key}`;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useLayoutEffect(() => {
+    const saveScrollPosition = () => {
+      sessionStorage.setItem(scrollKey, String(window.scrollY));
+    };
+
+    saveScrollPosition();
+    window.addEventListener("scroll", saveScrollPosition, { passive: true });
+
+    return () => {
+      saveScrollPosition();
+      window.removeEventListener("scroll", saveScrollPosition);
+    };
+  }, [scrollKey]);
+
+  useLayoutEffect(() => {
+    const savedPosition =
+      navigationType === "POP"
+        ? Number(sessionStorage.getItem(scrollKey) || 0)
+        : 0;
+
+    window.scrollTo(0, savedPosition);
+
+    const firstFrame = window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        window.scrollTo(0, savedPosition);
+      });
+    });
+
+    return () => window.cancelAnimationFrame(firstFrame);
+  }, [navigationType, scrollKey]);
 
   const hideFooter = pathname === "/about/faq";
 

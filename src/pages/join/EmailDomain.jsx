@@ -123,12 +123,12 @@ export default function EmailDomain() {
 
       <section className="w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <div className="mx-auto max-w-[820px] text-center">
-          <Link
-            to="/contact"
+          <a
+            href="https://join.phishflagger.com/corporate"
             className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
             Purchase Corporate
-          </Link>
+          </a>
         </div>
       </section>
 

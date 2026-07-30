@@ -31,7 +31,10 @@ export default function FaqTabs({
           <button
             key={category.name}
             type="button"
-            onClick={() => setActiveIndex(idx === activeIndex ? null : idx)}
+            onClick={() => {
+              setActiveIndex(idx === activeIndex ? null : idx);
+              setOpenQuestion(null);
+            }}
             className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
               idx === activeIndex
                 ? "border-[#5a6066] bg-[#5a6066] text-white"

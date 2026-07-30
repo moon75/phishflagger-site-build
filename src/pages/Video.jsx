@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { brandify } from "../components/Brand.jsx";
 
@@ -51,9 +51,34 @@ const VIDEOS = [
 ];
 
 const VIDEO_CATEGORIES = ["Feature", "Ads", "Shorts", "Manual", "In Progress"];
+const CATEGORY_SLUGS = {
+  Feature: "",
+  Ads: "ads",
+  Shorts: "shorts",
+  Manual: "manual",
+  "In Progress": "in-progress",
+};
+const SLUG_CATEGORIES = Object.fromEntries(
+  Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
+);
 
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
+  if (category === "In Progress") {
+    return [
+      {
+        type: "local",
+        src: "/assets/Videos/monkey video.mp4",
+        title: "Coming Soon",
+        description: "",
+      },
+      ...Array.from({ length: 5 }, () => ({
+        type: "placeholder",
+        title: "Coming Soon",
+        description: "",
+      })),
+    ];
+  }
 
   return Array.from({ length: 6 }, () => ({
     type: "placeholder",
@@ -64,8 +89,10 @@ function categoryVideos(category) {
 
 export default function Video() {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const { category = "" } = useParams();
   const requestedVideo = searchParams.get("video");
-  const [activeCategory, setActiveCategory] = useState("Feature");
+  const activeCategory = SLUG_CATEGORIES[category] || "Feature";
   const [playing, setPlaying] = useState(
     requestedVideo === "thank-you"
       ? 1
@@ -96,8 +123,9 @@ export default function Video() {
                 key={category}
                 type="button"
                 onClick={() => {
-                  setActiveCategory(category);
+                  const slug = CATEGORY_SLUGS[category];
                   setPlaying(null);
+                  navigate(slug ? `/about/video/${slug}` : "/about/video");
                 }}
                 className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
                   category === activeCategory

@@ -41,7 +41,10 @@ export default function Footer({ logoSrc = logoImg }) {
               </h2>
 
               <div className="mt-8 sm:mt-12">
-                <FaqTabs categoryOrder={[0, 2, 1, 3, 4]} />
+                <FaqTabs
+                  categoryOrder={[0, 2, 1, 3, 4]}
+                  showAskAiComingSoon
+                />
               </div>
             </div>
           </section>

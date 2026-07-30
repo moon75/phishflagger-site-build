@@ -7,11 +7,11 @@ export const FAQ_CATEGORIES = [
     items: [
       {
         q: "Why PhishFlagger™?",
-        a: "PhishFlagger™ helps bulk email senders — banks, insurance companies, financial institutions — and friends from falling victim to impersonation by providing authenticated, human compatible numbered communications (The PhishCounter™) that assure recipients of message legitimacy. Beyond phishing defense, sequential numbering improves deliverability trust, helps recipients track and audit communications, reduces support load from impersonation incidents.",
+        a: "PhishFlagger™ helps bulk email senders — banks, insurance companies, financial institutions — and friends from falling victim to impersonation by providing authenticated, human compatible numbered communications (The PhishCounter™) that assure recipients of message legitimacy.",
       },
       {
         q: "How do outgoing emails get numbered?",
-        a: "Numbering happens at the sending domain or from a plug in. When an email leaves the sender's server or Client, PhishFlagger™ inserts the next sequential number into the message header/subject line before delivery, so every recipient receives a counter-stamped email.",
+        a: "Numbering happens at the sending domain or from a plug in. When an email leaves the sender's server or Client, PhishFlagger™ inserts the next sequential number into the message header/subject line before delivery, so every recipient receives a counter-stamped email.\n\nBeyond phishing defense, sequential numbering improves deliverability trust, helps recipients track and audit communications, reduces support load from impersonation incidents.",
       },
       {
         q: "How does PhishFlagger™ email numbering work?",

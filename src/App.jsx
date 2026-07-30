@@ -94,7 +94,7 @@ export default function App() {
           }
         />
         <Route path="demo" element={<Demo />} />
-        <Route path="video" element={<VideoPage />} />
+        <Route path="video/:category?" element={<VideoPage />} />
         <Route path="download" element={<Download />} />
         <Route path="plugin-download" element={<PluginDownload />} />
         <Route path="digital-ino" element={<DigitalIno />} />
@@ -158,7 +158,7 @@ export default function App() {
         <Route path="about">
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
-          <Route path="video" element={<Video />} />
+          <Route path="video/:category?" element={<Video />} />
           <Route path="ip" element={<IP />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="blog" element={<Blog />} />

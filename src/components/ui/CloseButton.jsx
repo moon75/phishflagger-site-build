@@ -1,11 +1,25 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function CloseButton({ to = "/" }) {
+  const navigate = useNavigate();
+
+  function handleClose() {
+    const historyIndex = Number(window.history.state?.idx);
+
+    if (Number.isFinite(historyIndex) && historyIndex > 0) {
+      navigate(-1);
+      return;
+    }
+
+    navigate(to, { replace: true });
+  }
+
   return (
     <div className="relative">
-      <Link
-        to={to}
-        aria-label="Close and return home"
+      <button
+        type="button"
+        onClick={handleClose}
+        aria-label="Close and return to the previous page"
         className="absolute right-4 top-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#4a4a4a] text-white shadow-md transition hover:bg-[#2b2b2b] sm:right-6 sm:top-6 sm:h-14 sm:w-14"
       >
         <svg
@@ -19,7 +33,7 @@ export default function CloseButton({ to = "/" }) {
         >
           <path d="M6 6l12 12M6 18L18 6" />
         </svg>
-      </Link>
+      </button>
     </div>
   );
 }

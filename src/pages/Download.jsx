@@ -17,12 +17,12 @@ export default function Download() {
 
           <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {/* Thunderbird */}
-            <div className="overflow-hidden rounded-xl border border-gray-200">
-              <div className="flex h-40 items-center justify-center bg-[#f4f5f8] p-6">
+            <div className="overflow-hidden rounded-2xl border-2 border-black">
+              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex justify-center gap-6 px-5 py-5 sm:px-6">
@@ -42,12 +42,12 @@ export default function Download() {
             </div>
 
             {/* Outlook */}
-            <div className="overflow-hidden rounded-xl border border-gray-200">
-              <div className="flex h-40 items-center justify-center bg-[#f4f5f8] p-6">
+            <div className="overflow-hidden rounded-2xl border-2 border-black">
+              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">
@@ -61,14 +61,14 @@ export default function Download() {
             </div>
 
             {/* More clients coming soon */}
-            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-[#f4f5f8] px-5 py-10 text-center">
+            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 py-10 text-center">
               <p className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                 More Email Clients Available Soon
               </p>
             </div>
 
             {/* Developers CTA */}
-            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-[#f4f5f8] px-5 py-10 text-center">
+            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 py-10 text-center">
               <p className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                 Email Client Developers: Add PhishFlagger protocol to your
                 Client free.

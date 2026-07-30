@@ -3,7 +3,7 @@ import messagesPhoneImg from "../../telecom Webpage/assets/images/products/Phish
 import infoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
-import whoCanUseImg from "../assets/images/5th sec.avif";
+import whoCanUseImg from "../assets/images/5th sec edited.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -111,7 +111,7 @@ export default function Home() {
             <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
               <BrandInline trail="Flagger" />™ adds a unique, sequential
               identifier to the subject line called the{" "}
-              <BrandInline trail="Counter" />™ on every outgoing email.
+              <BrandInline trail="Counter" />™ on every outgoing communication.
               Recipients can quickly verify if the sequence matches the
               previous email they received from the same sender. If the
               number is missing or out of sequence, it provides an immediate
@@ -416,6 +416,27 @@ export default function Home() {
     {/* ===== Section 7 — Caller ID (gray) ===== */}
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0007" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2 lg:gap-40">
+        <div className="flex justify-center lg:justify-start">
+          <img
+            src={whoCanUseImg}
+            alt="PhishFlagger Email Marketing"
+            className="h-auto w-full max-w-[360px] object-contain"
+          />
+        </div>
+        <div className="lg:-ml-4">
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <BrandInline />™ Email Marketing
+          </h2>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            Place Holder text for Marketing home page
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
@@ -467,8 +488,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0008" />
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -497,14 +518,14 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0009" />
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0010" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <BrandInline />™ for Messages
         </h2>
         <div className="flex items-start justify-center gap-14 lg:justify-start lg:gap-20">
-          <div className="flex w-[58%] max-w-[306px] flex-col items-center">
+          <div className="flex w-[58%] max-w-[306px] flex-col items-start">
             <img
               src="/assets/images/messages-apps-transparent.png"
               alt="Popular messaging companies"
@@ -512,7 +533,7 @@ export default function Home() {
             />
             <Link
               to="/join/telecom"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="ml-8 mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Telecom
             </Link>
@@ -527,8 +548,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 8 — Numbering history (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0010" />
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[32px] leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
