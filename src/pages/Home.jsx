@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
+    <section className="relative w-full bg-[#eef0f4] px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
       <div className="mx-auto max-w-content">
       {/* Logo */}
       <div className="flex items-center justify-center">
@@ -85,7 +85,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 2 — How Does PhishFlagger Work? (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         <div className="flex flex-col items-center lg:items-start">
           <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
@@ -137,7 +138,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 3 — What is PhishFlagger? (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
         {/* Left — heading + bullets */}
         <div>
@@ -198,7 +200,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 4 — Domain protection (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         {/* Left — email authentication diagram */}
         <div className="flex justify-center lg:justify-start">
@@ -240,14 +243,15 @@ export default function Home() {
     </section>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           Free Email Client Plug-In
         </h2>
         <div className="mt-10 grid grid-cols-1 items-start gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-3">
           <div className="flex w-full flex-col items-center">
-            <div className="relative flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[294px]">
+            <div className="relative flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[264px]">
               <img
                 src="/assets/images/thunderbird new pick.avif"
                 alt="Mozilla Thunderbird email client with PhishFlagger plugin"
@@ -265,13 +269,13 @@ export default function Home() {
             <div aria-hidden="true" className="mt-5 h-[22px]" />
             <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
               <Link
-                to="/plugin-download?download=Windows%20Download"
+                to="/plugin-download?client=Thunderbird&download=Windows%20Download"
                 className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
               >
                 Windows Download
               </Link>
               <Link
-                to="/plugin-download?download=Linux%20Download"
+                to="/plugin-download?client=Thunderbird&download=Linux%20Download"
                 className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
               >
                 Linux Download
@@ -280,7 +284,7 @@ export default function Home() {
           </div>
 
           <div className="flex w-full flex-col items-center">
-            <div className="flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[294px]">
+            <div className="flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[264px]">
               <img
                 src={outlookImg}
                 alt="Microsoft Outlook email client with PhishFlagger plugin"
@@ -289,7 +293,7 @@ export default function Home() {
             </div>
             <div aria-hidden="true" className="mt-5 h-[22px]" />
             <Link
-              to="/plugin-download?download=Windows%20Download"
+              to="/plugin-download?client=Outlook&download=Windows%20Download"
               className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
             >
               Windows Download
@@ -297,7 +301,7 @@ export default function Home() {
           </div>
 
           <div className="flex w-full flex-col items-center">
-            <div className="flex h-[240px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white sm:h-[294px]">
+            <div className="flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white sm:h-[264px]">
               <div className="flex h-full w-full flex-col items-center justify-center bg-white">
                 <img
                   src="/assets/images/logo-mark.png"
@@ -327,8 +331,9 @@ export default function Home() {
     </section>
 
     {/* ===== Section 6 — Who Can Use (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.4fr]">
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0006" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.7fr_1.6fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             Who Can Use
@@ -347,32 +352,32 @@ export default function Home() {
             against phishing and email impersonation.
           </p>
         </div>
-        <div className="flex flex-wrap items-start justify-start gap-6 ml-[11rem]">
-          <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+        <div className="flex flex-wrap items-start justify-start gap-5 lg:ml-[15rem] lg:w-max lg:flex-nowrap">
+          <div className="flex w-[225px] flex-col items-center">
+            <span className="mb-[18px] text-center text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
               Plug-In
               <br />
               Free
             </span>
-            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black bg-white">
+            <div className="flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
               <img
                 src="/assets/images/individual.png"
                 alt="Individual protection illustration"
-                className="h-[130px] w-[130px] object-contain"
+                className="h-[195px] w-[195px] object-contain"
               />
             </div>
             <Link
               to="/join/email-free-plug-in"
-              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
             </Link>
           </div>
-          <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 text-center text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+          <div className="flex w-[225px] flex-col items-center">
+            <span className="mb-[18px] text-center text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
               Corporate
             </span>
-            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-lg border-2 border-black">
+            <div className="mt-[2.55rem] flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="Domain protection illustration"
@@ -381,25 +386,25 @@ export default function Home() {
             </div>
             <Link
               to="/join/email-domain"
-              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
             </Link>
           </div>
-          <div className="flex w-[150px] flex-col items-center">
-            <span className="mb-3 whitespace-nowrap text-[20px] font-semibold leading-tight text-ink sm:text-[22px]">
+          <div className="flex w-[225px] flex-col items-center">
+            <span className="mb-[18px] whitespace-nowrap text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
               Marketing
             </span>
-            <div className="mt-[1.7rem] flex h-[150px] w-[150px] items-center justify-center rounded-lg border-2 border-black bg-white">
+            <div className="mt-[2.55rem] flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
               <img
                 src={whoCanUseImg}
                 alt="Join PhishFlagger illustration"
-                className="h-[130px] w-[130px] object-contain"
+                className="h-[195px] w-[195px] object-contain"
               />
             </div>
             <Link
               to="/join/email-marketing"
-              className="mt-4 inline-flex h-[34px] items-center justify-center rounded-full bg-[#585858] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
             </Link>
@@ -409,7 +414,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7 — Caller ID (gray) ===== */}
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0007" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
@@ -461,7 +467,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -474,27 +481,42 @@ export default function Home() {
             impersonation.
           </p>
         </div>
-        <div className="flex justify-center lg:justify-start lg:ml-10">
+        <div className="flex flex-col items-center justify-center lg:ml-10 lg:items-start">
           <img
             src={textPhoneImg}
             alt="Phone displaying PhishFlagger text messages"
             className="h-auto w-1/2 max-w-[190px] object-contain"
           />
+          <Link
+            to="/join/telecom"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          >
+            Telecom
+          </Link>
         </div>
       </div>
     </section>
 
-    <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <BrandInline />™ for Messages
         </h2>
-        <div className="flex items-center justify-center gap-14 lg:justify-start lg:gap-20">
-          <img
-            src="/assets/images/messages-apps-transparent.png"
-            alt="Popular messaging companies"
-            className="h-auto w-[58%] max-w-[306px] object-contain"
-          />
+        <div className="flex items-start justify-center gap-14 lg:justify-start lg:gap-20">
+          <div className="flex w-[58%] max-w-[306px] flex-col items-center">
+            <img
+              src="/assets/images/messages-apps-transparent.png"
+              alt="Popular messaging companies"
+              className="h-auto w-full object-contain"
+            />
+            <Link
+              to="/join/telecom"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Telecom
+            </Link>
+          </div>
           <img
             src={messagesPhoneImg}
             alt="Phone displaying PhishFlagger messages"
@@ -505,7 +527,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 8 — Numbering history (white) ===== */}
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0010" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[32px] leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
@@ -567,6 +590,14 @@ function BrandInline({ trail = "Flagger" }) {
       <span className="font-bold text-ink">Phish</span>
       <span className="font-normal text-brand">{trail}</span>
     </em>
+  );
+}
+
+function SectionCounter({ value }) {
+  return (
+    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+      {value}
+    </span>
   );
 }
 

@@ -27,13 +27,13 @@ export default function Download() {
               </div>
               <div className="flex justify-center gap-6 px-5 py-5 sm:px-6">
                 <Link
-                  to="/plugin-download?download=Windows%20Download"
+                  to="/plugin-download?client=Thunderbird&download=Windows%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Windows
                 </Link>
                 <Link
-                  to="/plugin-download?download=Linux%20Download"
+                  to="/plugin-download?client=Thunderbird&download=Linux%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Linux
@@ -52,7 +52,7 @@ export default function Download() {
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">
                 <Link
-                  to="/plugin-download?download=Windows%20Download"
+                  to="/plugin-download?client=Outlook&download=Windows%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
                 >
                   Windows

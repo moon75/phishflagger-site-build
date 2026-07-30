@@ -36,12 +36,12 @@ export default function Footer({ logoSrc = logoImg }) {
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
             <div className="mx-auto max-w-[1000px]">
-              <h2 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
+              <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                 Frequently asked questions
               </h2>
 
               <div className="mt-8 sm:mt-12">
-                <FaqTabs />
+                <FaqTabs categoryOrder={[0, 2, 1, 3, 4]} />
               </div>
             </div>
           </section>
@@ -53,7 +53,7 @@ export default function Footer({ logoSrc = logoImg }) {
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
             <div className="mx-auto max-w-[1200px]">
-              <h2 className="text-center text-[28px] font-normal tracking-tight text-ink sm:text-[36px]">
+              <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                 Protecting Communications
               </h2>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-6">

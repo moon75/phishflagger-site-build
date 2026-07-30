@@ -9,7 +9,7 @@ const DOWNLOADS = [
     image: outlookImg,
     alt: "Microsoft Outlook with the PhishFlagger plug-in",
     actions: [
-      { label: "Windows Download", to: "/plugin-download?download=Windows%20Download" },
+      { label: "Windows Download", to: "/plugin-download?client=Outlook&download=Windows%20Download" },
     ],
   },
   {
@@ -17,8 +17,8 @@ const DOWNLOADS = [
     image: "/assets/images/thunderbird new pick.avif",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
     actions: [
-      { label: "Windows Download", to: "/plugin-download?download=Windows%20Download" },
-      { label: "Linux Download", to: "/plugin-download?download=Linux%20Download" },
+      { label: "Windows Download", to: "/plugin-download?client=Thunderbird&download=Windows%20Download" },
+      { label: "Linux Download", to: "/plugin-download?client=Thunderbird&download=Linux%20Download" },
     ],
   },
 ];
@@ -26,8 +26,10 @@ const DOWNLOADS = [
 const PROVIDERS = [
   "Outlook",
   "Gmail",
+  "Live.com",
   "Yahoo",
   "AOL",
+  "Hotmail",
 ];
 
 export default function EmailFreePlugIn() {
@@ -87,26 +89,11 @@ export default function EmailFreePlugIn() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto flex max-w-content flex-col items-center">
-          <img
-            src={emailInboxImg}
-            alt="Inbox showing PhishCounter numbered email messages"
-            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
-          />
-          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-            Email client view from enabled Domain
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Available for
           </h2>
-          <div className="mx-auto mt-9 grid max-w-[820px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+          <div className="mx-auto mt-9 grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
             {PROVIDERS.map((provider) => (
               <div
                 key={provider}
@@ -119,6 +106,27 @@ export default function EmailFreePlugIn() {
               </div>
             ))}
           </div>
+          <Link
+            to="/joinfree"
+            className="mt-10 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          >
+            Join
+          </Link>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto flex max-w-content flex-col items-center">
+          <img
+            src={emailInboxImg}
+            alt="Inbox showing PhishCounter numbered email messages"
+            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
+          />
+          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
         </div>
       </section>
     </>
@@ -126,7 +134,7 @@ export default function EmailFreePlugIn() {
 }
 
 function ProviderIcon({ provider }) {
-  if (provider === "Outlook") {
+  if (provider === "Outlook" || provider === "Hotmail" || provider === "Live.com") {
     return (
       <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#0878d1] shadow-sm">
         <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden="true">
