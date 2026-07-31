@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox v2.png";
 import heroInfoBoxImg from "../assets/images/email-inbox portrait.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
-import whoCanUseImg from "../assets/images/5th sec verified.png";
+import whoCanUseImg from "../assets/images/email-marketing-verified-v3.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -90,7 +90,7 @@ export default function Home() {
     {/* ===== Section 2 — How Does PhishFlagger Work? (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0002" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex flex-col items-center lg:items-start">
           <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
             How Does{" "}
@@ -106,7 +106,7 @@ export default function Home() {
             className="h-auto w-full max-w-[520px] object-contain"
           />
         </div>
-        <div className="space-y-6 ml-[4.3rem]">
+        <div className="space-y-6">
           <div>
             <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
               Human.
@@ -143,7 +143,7 @@ export default function Home() {
     {/* ===== Section 3 — What is PhishFlagger? (gray) ===== */}
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0003" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1.05fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + bullets */}
         <div>
           <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
 
         {/* Right — info box image */}
-        <div className="flex -translate-x-[1.2rem] flex-col items-center">
+        <div className="flex flex-col items-center">
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
@@ -205,7 +205,7 @@ export default function Home() {
     {/* ===== Section 4 — Domain protection (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0004" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — email authentication diagram */}
         <div className="flex justify-center lg:justify-start">
           <div className="w-full max-w-[560px] rounded-2xl border-2 border-black p-6 sm:p-8">
@@ -355,13 +355,13 @@ export default function Home() {
             against phishing and email impersonation.
           </p>
         </div>
-        <div className="flex flex-wrap items-start justify-start gap-5 lg:ml-[9rem] lg:w-max lg:flex-nowrap">
-          <div className="flex w-[225px] flex-col items-center">
-            <span className="mb-[18px] text-center text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
-              Plug-In
-              <br />
-              Free
-            </span>
+        <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-end">
+          <div className="flex w-auto flex-col items-center">
+            <div className="mb-[34px] flex h-[62px] items-end justify-center">
+              <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                Plug-In Free
+              </span>
+            </div>
             <div className="flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
               <img
                 src="/assets/images/individual.png"
@@ -376,11 +376,16 @@ export default function Home() {
               Join
             </Link>
           </div>
-          <div className="flex w-[225px] flex-col items-center">
-            <span className="mb-[18px] text-center text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
-              Corporate
-            </span>
-            <div className="mt-[2.55rem] flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
+          <div className="flex w-auto flex-col items-center">
+            <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
+              <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                Corporate
+              </span>
+              <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                Plug-In or Domain
+              </span>
+            </div>
+            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="Domain protection illustration"
@@ -394,15 +399,17 @@ export default function Home() {
               Join
             </Link>
           </div>
-          <div className="flex w-[225px] flex-col items-center">
-            <span className="mb-[18px] whitespace-nowrap text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
-              Marketing
-            </span>
-            <div className="mt-[2.55rem] flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
+          <div className="flex w-auto flex-col items-center">
+            <div className="mb-[34px] flex h-[62px] items-end justify-center">
+              <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                Marketing
+              </span>
+            </div>
+            <div className="flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
               <img
                 src={whoCanUseImg}
                 alt="Join PhishFlagger illustration"
-                className="h-[195px] w-[195px] object-contain"
+                className="h-[218px] w-[218px] object-contain"
               />
             </div>
             <Link
@@ -419,15 +426,15 @@ export default function Home() {
     {/* ===== Section 7 — Caller ID (gray) ===== */}
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0007" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2 lg:gap-40">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[360px] object-contain"
+            className="h-auto w-full max-w-[540px] object-contain"
           />
         </div>
-        <div className="lg:-ml-4">
+        <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             <BrandInline />™ Email Marketing
           </h2>
@@ -440,7 +447,7 @@ export default function Home() {
 
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0008" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1.3fr_1fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
           <img
@@ -460,7 +467,7 @@ export default function Home() {
           />
         </div>
         {/* Right — heading + text */}
-        <div className="-ml-[3.5rem]">
+        <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             <BrandInline />™ for Telecom / Caller ID
           </h2>
@@ -505,7 +512,7 @@ export default function Home() {
             impersonation.
           </p>
         </div>
-        <div className="flex items-start justify-center gap-8 lg:ml-10 lg:justify-start">
+        <div className="flex items-start justify-center gap-8 lg:justify-start">
           <div className="flex flex-col items-center">
             <img
               src={textPhoneImg}
@@ -534,7 +541,7 @@ export default function Home() {
         <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <BrandInline />™ for Messages
         </h2>
-        <div className="flex items-start justify-center gap-14 lg:justify-start lg:gap-20">
+        <div className="flex items-start justify-center gap-14 lg:justify-start">
           <div className="flex w-[58%] max-w-[306px] flex-col items-start">
             <img
               src={messagingIconsImg}

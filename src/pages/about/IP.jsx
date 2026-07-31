@@ -1,5 +1,4 @@
-﻿import { Link } from "react-router-dom";
-import CloseButton from "../../components/ui/CloseButton.jsx";
+﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 
 function Brand({ trail = "Flagger" }) {
   return (
@@ -71,22 +70,7 @@ export default function IP() {
         <div className="mx-auto max-w-[820px]">
           {/* Header */}
           <div className="text-center">
-            <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
-              <Link to="/" className="inline-block hover:opacity-80">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>
-                <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                  ™
-                </span>
-              </Link>
-            </div>
-            <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-              Protecting Communications
-            </p>
-
-            <h1 className="mt-10 text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[44px] lg:text-[48px]">
+            <h1 className="text-[32px] font-semibold leading-[1.15] tracking-tight text-ink sm:text-[44px] lg:text-[48px]">
               Intellectual Property and Patents
             </h1>
           </div>

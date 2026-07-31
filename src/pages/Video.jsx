@@ -50,20 +50,24 @@ const VIDEOS = [
   })),
 ];
 
-const VIDEO_CATEGORIES = ["Feature", "Ads", "Shorts", "Manual", "In Progress"];
+const VIDEO_CATEGORIES = ["Feature", "Ads", "Shorts", "Manual", "Kickstarter", "In Progress"];
 const CATEGORY_SLUGS = {
   Feature: "",
   Ads: "ads",
   Shorts: "shorts",
   Manual: "manual",
+  Kickstarter: "kickstarter",
   "In Progress": "in-progress",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
 );
 
+const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
+
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
+  if (category === "Kickstarter") return KICKSTARTER_VIDEOS;
   if (category === "In Progress") {
     return [
       {

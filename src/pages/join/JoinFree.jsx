@@ -33,6 +33,7 @@ export default function JoinFree() {
     firstName: "",
     lastName: "",
     email: "",
+    code: "",
     address: "",
     city: "",
     zip: "",
@@ -43,6 +44,8 @@ export default function JoinFree() {
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [emailVerified, setEmailVerified] = useState(false);
+  const [codeVerified, setCodeVerified] = useState(false);
   const inputRefs = useRef({});
 
   function validateField(fieldName, valueOverride) {
@@ -81,6 +84,25 @@ export default function JoinFree() {
 
   function handleBlur(fieldName) {
     validateField(fieldName);
+  }
+
+  function handleVerifyEmail() {
+    if (!validateField("email")) {
+      inputRefs.current.email?.focus();
+      return;
+    }
+    setEmailVerified(true);
+  }
+
+  function handleVerifyCode() {
+    const code = values.code.trim();
+    if (!code) {
+      setErrors((prev) => ({ ...prev, code: "Enter the code we sent to your email." }));
+      inputRefs.current.code?.focus();
+      return;
+    }
+    setErrors((prev) => ({ ...prev, code: "" }));
+    setCodeVerified(true);
   }
 
   function handleSubmit(event) {
@@ -165,20 +187,73 @@ export default function JoinFree() {
                 Step 1
               </p>
 
-              <Field label="Email Address" error={errors.email}>
-                <input
-                  type="email"
-                  id="email"
-                  autoComplete="email"
-                  required
-                  ref={(el) => (inputRefs.current.email = el)}
-                  value={values.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
-                  onBlur={() => handleBlur("email")}
-                  placeholder="you@gmail.com"
-                  className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                />
-              </Field>
+              <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                <div className="flex-1">
+                  <Field label="Email Address" error={errors.email}>
+                    <input
+                      type="email"
+                      id="email"
+                      autoComplete="email"
+                      required
+                      disabled={emailVerified}
+                      ref={(el) => (inputRefs.current.email = el)}
+                      value={values.email}
+                      onChange={(e) => handleChange("email", e.target.value)}
+                      onBlur={() => handleBlur("email")}
+                      placeholder="you@gmail.com"
+                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                    />
+                  </Field>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleVerifyEmail}
+                  disabled={emailVerified}
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                >
+                  {emailVerified ? "Email Verified" : "Verify Email"}
+                </button>
+              </div>
+
+              {emailVerified && (
+                <>
+                  <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                    Step 2
+                  </p>
+
+                  <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                    <div className="flex-1">
+                      <Field label="Enter the code we sent to you email." error={errors.code}>
+                        <input
+                          type="text"
+                          id="code"
+                          autoComplete="one-time-code"
+                          disabled={codeVerified}
+                          ref={(el) => (inputRefs.current.code = el)}
+                          value={values.code}
+                          onChange={(e) => handleChange("code", e.target.value)}
+                          placeholder="Enter code"
+                          className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                        />
+                      </Field>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleVerifyCode}
+                      disabled={codeVerified}
+                      className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                    >
+                      {codeVerified ? "Code Verified" : "Verify Code"}
+                    </button>
+                  </div>
+                </>
+              )}
+
+              {codeVerified && (
+              <>
+              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                Step 3
+              </p>
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <Field label="First Name" error={errors.firstName}>
@@ -292,6 +367,8 @@ export default function JoinFree() {
                   share your information.
                 </p>
               </div>
+              </>
+              )}
             </form>
           ) : (
             <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">

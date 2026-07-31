@@ -2,6 +2,7 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox v2.png";
+import outlookImg from "../../assets/images/outlook image 90.png";
 
 export default function EmailDomain() {
   return (
@@ -29,6 +30,58 @@ export default function EmailDomain() {
       </section>
 
       <Divider />
+
+      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-content">
+          <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+            Choose
+          </h2>
+          <div className="mx-auto mt-10 grid max-w-[820px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
+            <div className="flex flex-col items-center">
+              <h3 className="text-[22px] font-semibold text-ink sm:text-[26px]">
+                Plug-In
+              </h3>
+              <div className="mt-5 flex h-[220px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+                <img
+                  src={outlookImg}
+                  alt="Microsoft Outlook"
+                  className="h-full w-1/2 rounded-xl object-contain"
+                />
+                <img
+                  src="/assets/images/thunderbird new pick.avif"
+                  alt="Mozilla Thunderbird"
+                  className="h-full w-1/2 rounded-xl object-contain"
+                />
+              </div>
+              <Link
+                to="/join/email-free-plug-in"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Plug-In
+              </Link>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <h3 className="text-[22px] font-semibold text-ink sm:text-[26px]">
+                Domain
+              </h3>
+              <div className="mt-5 flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+                <img
+                  src={domainProtocolImg}
+                  alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <Link
+                to="/join/email-domain"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Domain
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1fr] lg:gap-20">

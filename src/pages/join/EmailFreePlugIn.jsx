@@ -16,6 +16,7 @@ const DOWNLOADS = [
     name: "Thunderbird",
     image: "/assets/images/thunderbird new pick.avif",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
+    fit: "contain",
     actions: [
       { label: "Windows Download", to: "/plugin-download?client=Thunderbird&download=Windows%20Download" },
       { label: "Linux Download", to: "/plugin-download?client=Thunderbird&download=Linux%20Download" },
@@ -49,34 +50,37 @@ export default function EmailFreePlugIn() {
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
+            Step 1. Install Plug-In
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3">
             {DOWNLOADS.map((item) => (
               <DownloadCard key={item.name} {...item} />
             ))}
 
-            <article className="flex min-h-[340px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
-              <div className="flex h-[220px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-8">
-                <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-gray-200 bg-white shadow-sm">
+            <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
+              <div className="flex h-[176px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-6">
+                <div className="flex h-full w-full flex-col items-center justify-center">
                   <img
                     src="/assets/images/logo-mark.png"
                     alt=""
-                    className="h-14 w-14 object-contain"
+                    className="h-11 w-11 object-contain"
                   />
-                  <span className="mt-4 text-[18px] font-semibold text-ink">
+                  <span className="mt-3 text-[15px] font-semibold text-ink">
                     Download Page
                   </span>
-                  <span className="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-brand text-[24px] font-bold leading-none text-white">
+                  <span className="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-brand text-[19px] font-bold leading-none text-white">
                     ↓
                   </span>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col items-center justify-between p-6 text-center">
-                <h2 className="text-[18px] font-semibold text-ink">
+              <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
+                <h2 className="text-[15px] font-semibold text-ink">
                   Download Page
                 </h2>
                 <Link
                   to="/download"
-                  className="mt-5 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
                 >
                   Go to Download Page
                 </Link>
@@ -90,14 +94,17 @@ export default function EmailFreePlugIn() {
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content text-center">
-          <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-            Available for
+          <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
+            Step 2. Get your Free Key
           </h2>
+          <h3 className="mt-8 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:mt-10 sm:text-[38px]">
+            Available for
+          </h3>
           <div className="mx-auto mt-9 grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
             {PROVIDERS.map((provider) => (
               <div
                 key={provider}
-                className="flex min-h-[142px] flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white px-4 py-6 shadow-[0_5px_20px_rgba(15,23,42,0.05)]"
+                className="flex min-h-[142px] flex-col items-center justify-center rounded-2xl border-2 border-black bg-white px-4 py-6 shadow-[0_5px_20px_rgba(15,23,42,0.05)]"
               >
                 <ProviderIcon provider={provider} />
                 <span className="mt-4 text-[15px] font-semibold text-ink">
@@ -106,9 +113,18 @@ export default function EmailFreePlugIn() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-[13.5px] text-ink-muted">
+            Don&rsquo;t see your domain?{" "}
+            <Link
+              to="/joinfree/request-domain"
+              className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+            >
+              Request My Domain
+            </Link>
+          </p>
           <Link
             to="/joinfree"
-            className="mt-10 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
           >
             Join
           </Link>
@@ -118,15 +134,27 @@ export default function EmailFreePlugIn() {
       <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <div className="mx-auto flex max-w-content flex-col items-center">
-          <img
-            src={emailInboxImg}
-            alt="Inbox showing PhishCounter numbered email messages"
-            className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
-          />
-          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-            Email client view from enabled Domain
-          </p>
+        <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
+          <div className="flex flex-col items-center">
+            <img
+              src={emailInboxImg}
+              alt="Inbox showing PhishCounter numbered email messages in Outlook"
+              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
+            />
+            <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+              Email client view from Outlook
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={emailInboxImg}
+              alt="Inbox showing PhishCounter numbered email messages in Thunderbird"
+              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
+            />
+            <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+              Email client view from Thunderbird
+            </p>
+          </div>
         </div>
       </section>
     </>
@@ -134,65 +162,60 @@ export default function EmailFreePlugIn() {
 }
 
 function ProviderIcon({ provider }) {
-  if (provider === "Outlook" || provider === "Hotmail" || provider === "Live.com") {
-    return (
-      <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#0878d1] shadow-sm">
-        <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden="true">
-          <rect x="21" y="15" width="31" height="34" rx="3" fill="white" />
-          <path d="M23 20 37 32 51 20v25H23Z" fill="#d9efff" />
-          <rect x="8" y="10" width="27" height="44" rx="3" fill="#106ebe" />
-          <text x="21.5" y="40" textAnchor="middle" fill="white" fontSize="24" fontWeight="700">O</text>
-        </svg>
-      </span>
-    );
-  }
-
   if (provider === "Gmail") {
     return (
-      <span className="flex h-14 w-14 items-center justify-center rounded-xl border border-gray-200 bg-white shadow-sm">
-        <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden="true">
-          <path d="M8 18v30h9V27l15 11 15-11v21h9V18l-6-5-18 14L14 13Z" fill="#ea4335" />
-          <path d="M8 18v30h9V27L8 20Z" fill="#4285f4" />
-          <path d="M47 27v21h9V20Z" fill="#34a853" />
-          <path d="m14 13 18 14 18-14 6 5-24 20L8 18Z" fill="#fbbc04" opacity=".38" />
-        </svg>
-      </span>
+      <svg viewBox="0 0 64 48" className="h-8 w-11" aria-label="Gmail">
+        <path d="M5 10v31h10V20l17 13 17-13v21h10V10l-7-5-20 16L12 5Z" fill="#ea4335" />
+        <path d="M5 10v31h10V20L5 13Z" fill="#4285f4" />
+        <path d="M49 20v21h10V13Z" fill="#34a853" />
+      </svg>
     );
   }
 
   if (provider === "Yahoo") {
     return (
-      <span className="flex h-14 min-w-14 items-center justify-center rounded-xl bg-[#6001d2] px-2 text-[20px] font-black italic tracking-[-0.08em] text-white shadow-sm">
+      <span className="text-[18px] font-black italic tracking-[-0.08em] text-[#6001d2]">
         YAHOO!
       </span>
     );
   }
 
+  if (provider === "AOL") {
+    return <span className="text-[18px] font-black text-black">AOL.</span>;
+  }
+
   return (
-    <span className="flex h-14 min-w-14 items-center justify-center rounded-xl bg-[#171717] px-2 text-[18px] font-black text-white shadow-sm">
-      AOL.
-    </span>
+    <svg viewBox="0 0 40 40" className="h-9 w-9" aria-label={`Microsoft ${provider}`}>
+      <rect x="2" y="2" width="17" height="17" fill="#f25022" />
+      <rect x="21" y="2" width="17" height="17" fill="#7fba00" />
+      <rect x="2" y="21" width="17" height="17" fill="#00a4ef" />
+      <rect x="21" y="21" width="17" height="17" fill="#ffb900" />
+    </svg>
   );
 }
 
-function DownloadCard({ name, image, alt, actions }) {
+function DownloadCard({ name, image, alt, actions, fit = "cover" }) {
   return (
-    <article className="flex min-h-[340px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
-      <div className="flex h-[220px] items-center justify-center bg-[#f7f8fb] p-5">
+    <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
+      <div
+        className={`flex h-[176px] items-center justify-center overflow-hidden bg-[#f7f8fb] ${
+          fit === "contain" ? "p-4" : ""
+        }`}
+      >
         <img
           src={image}
           alt={alt}
-          className="h-full w-full rounded-xl object-contain"
+          className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
         />
       </div>
-      <div className="flex flex-1 flex-col items-center justify-between p-6 text-center">
-        <h2 className="text-[18px] font-semibold text-ink">{name}</h2>
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+      <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
+        <h2 className="text-[15px] font-semibold text-ink">{name}</h2>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {actions.map((action) => (
             <Link
               key={action.label}
               to={action.to}
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
             >
               {action.label}
             </Link>

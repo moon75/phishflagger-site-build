@@ -36,8 +36,8 @@ export default function Press() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
-        <div className="mx-auto max-w-content">
+      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+        <div className="mx-auto max-w-[1000px]">
           {/* Header */}
           <div className="text-center">
             <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
@@ -46,14 +46,14 @@ export default function Press() {
           </div>
 
           {/* Press mentions */}
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
             {PRESS_ITEMS.map((item) => (
               <div
                 key={item.url}
-                className="group flex aspect-square flex-col overflow-hidden rounded-xl border border-gray-200 transition-colors hover:border-gray-300"
+                className="group overflow-hidden rounded-xl ring-1 ring-black/10 transition hover:ring-black/25"
               >
                 <div
-                  className={`flex h-1/2 shrink-0 items-center justify-center overflow-hidden bg-[#f4f5f8] ${
+                  className={`relative flex aspect-video w-full items-center justify-center overflow-hidden bg-[#f4f5f8] ${
                     item.fit === "contain" ? "p-6" : ""
                   }`}
                 >
@@ -65,15 +65,15 @@ export default function Press() {
                     }`}
                   />
                 </div>
-                <div className="flex flex-1 flex-col px-5 py-5 sm:px-6">
-                  <p className="text-[15px] font-medium leading-snug text-ink sm:text-[16px]">
+                <div className="bg-white px-3 py-3">
+                  <p className="text-[13px] font-semibold text-ink">
                     {brandify(item.title)}
                   </p>
                   <a
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-block pt-2 text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
+                    className="mt-1 inline-block text-[12px] font-semibold text-[#2a6df4] underline underline-offset-4"
                   >
                     Link
                   </a>

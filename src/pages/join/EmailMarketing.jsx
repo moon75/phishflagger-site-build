@@ -60,7 +60,7 @@ export default function EmailMarketing() {
 
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-              How it works.
+              The Human Part
             </h2>
             <ul className="mt-5 space-y-2 pl-5">
               <li className="list-disc">
@@ -71,9 +71,6 @@ export default function EmailMarketing() {
               </li>
               <li className="list-disc">
                 Designed for marketers and bulk emails.
-              </li>
-              <li className="list-disc">
-                Protect your brand from impersonation.
               </li>
             </ul>
           </div>

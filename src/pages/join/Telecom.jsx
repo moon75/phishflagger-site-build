@@ -177,7 +177,7 @@ export default function Telecom() {
           </div>
           <div className="lg:order-1">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              UK&rsquo;s regulator does not approve STIR/SHAKEN or CLI Authentication
+              UK&rsquo;s regulator does not approve STIR/SHAKEN
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               <li className="font-semibold text-ink">
