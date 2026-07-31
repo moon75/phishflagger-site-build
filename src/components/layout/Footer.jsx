@@ -11,8 +11,8 @@ import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png"
 
 const PRODUCT_IMAGES = [
   { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
-  { src: desktopPhoneImg, alt: "Desktop phone" },
-  { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID" },
+  { src: desktopPhoneImg, alt: "Desktop phone", verified: true, imageClass: "translate-y-3" },
+  { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID", offsetClass: "translate-y-2" },
   { src: emailPhoneImg, alt: "PhishFlagger Email" },
   { src: messagesPhoneImg, alt: "PhishFlagger Messages" },
   { src: textPhoneImg, alt: "PhishFlagger Text" },
@@ -61,16 +61,28 @@ export default function Footer({ logoSrc = logoImg }) {
               </h2>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
                 {PRODUCT_IMAGES.map((item) => (
-                  <img
+                  <div
                     key={item.alt}
-                    src={item.src}
-                    alt={item.alt}
-                    className={
-                      item.frame
-                        ? "h-[150px] w-auto rounded-lg border-2 border-black object-contain sm:h-[190px]"
-                        : "h-[150px] w-auto object-contain sm:h-[190px]"
-                    }
-                  />
+                    className={`relative flex h-[150px] w-auto items-center sm:h-[190px] ${item.offsetClass || ""}`}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className={`${
+                        item.frame
+                          ? "h-full w-auto rounded-lg border-2 border-black object-contain"
+                          : "h-full w-auto object-contain"
+                      } ${item.imageClass || ""}`}
+                    />
+                    {item.verified && (
+                      <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
+                        <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
+                          ✓
+                        </span>
+                        Verified
+                      </span>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>

@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
@@ -16,7 +16,8 @@ export default function Telecom() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-12 pb-16 sm:px-6 sm:pb-24">
+      <section className="relative w-full bg-white px-4 pt-12 pb-16 sm:px-6 sm:pb-24">
+        <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
             Telecoms and Regulators
@@ -31,7 +32,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="max-w-[440px] text-[20px] font-bold leading-snug tracking-tight text-ink [text-wrap:balance] sm:text-[26px]">
@@ -77,6 +79,7 @@ export default function Telecom() {
       </section>
 
       <SplitSection
+        counter="^0004"
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
@@ -87,6 +90,7 @@ export default function Telecom() {
       />
 
       <FeatureSection
+        counter="^0005"
         tone="gray"
         image={threePhoneImg}
         imageAlt="Phones with caller ID display"
@@ -97,6 +101,7 @@ export default function Telecom() {
       />
 
       <FeatureSection
+        counter="^0006"
         image={callerIdBoxImg}
         imageAlt="Caller ID box showing a PhishCounter sequence number"
         reverse
@@ -106,7 +111,8 @@ export default function Telecom() {
         ]}
       />
 
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
             <li className="list-disc">
@@ -128,7 +134,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0008" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -158,7 +165,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0009" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
             <img
@@ -307,7 +315,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0010" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -332,11 +341,12 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0011" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              Placeholder heading goes here.
+              SMS
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               Placeholder text goes here. Replace this paragraph with the
@@ -353,7 +363,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0012" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -387,7 +398,8 @@ export default function Telecom() {
       </section>
 
       {/* ===== Bottom CTA panel ===== */}
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0013" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">
@@ -503,9 +515,18 @@ function ActionCard({
   );
 }
 
-function SplitSection({ image, imageAlt, text, bullets }) {
+function SectionCounter({ value }) {
   return (
-    <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+      {value}
+    </span>
+  );
+}
+
+function SplitSection({ image, imageAlt, text, bullets, counter }) {
+  return (
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      {counter && <SectionCounter value={counter} />}
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img
@@ -540,7 +561,7 @@ function SplitSection({ image, imageAlt, text, bullets }) {
   );
 }
 
-function FeatureSection({ tone = "white", image, imageAlt, items, reverse }) {
+function FeatureSection({ tone = "white", image, imageAlt, items, reverse, counter }) {
   const imageEl = (
     <div className="flex justify-center">
       <img
@@ -562,10 +583,11 @@ function FeatureSection({ tone = "white", image, imageAlt, items, reverse }) {
 
   return (
     <section
-      className={`w-full px-4 py-14 sm:px-6 sm:py-20 ${
+      className={`relative w-full px-4 py-14 sm:px-6 sm:py-20 ${
         tone === "gray" ? "bg-[#eef0f4]" : "bg-white"
       }`}
     >
+      {counter && <SectionCounter value={counter} />}
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         {reverse ? imageEl : listEl}
         {reverse ? listEl : imageEl}

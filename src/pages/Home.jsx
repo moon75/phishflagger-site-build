@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox v2.png";
+import heroInfoBoxImg from "../assets/images/email-inbox portrait.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
-import whoCanUseImg from "../assets/images/5th sec edited.png";
+import whoCanUseImg from "../assets/images/5th sec verified.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -14,9 +15,11 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import twoGuysPhoneImg from "../assets/images/two-men-on-phones.jpg";
+import messagingIconsImg from "../assets/images/Icons-2.jpg";
 
 const SCREENS = [
-  { label: "Email Inbox", src: infoBoxImg },
+  { label: "Email Inbox", src: heroInfoBoxImg },
   { label: "Email", src: emailPhoneImg },
   { label: "Messages", src: messagesPhoneImg },
   { label: "Text/SMS", src: textPhoneImg },
@@ -333,8 +336,8 @@ export default function Home() {
     {/* ===== Section 6 — Who Can Use (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0006" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.7fr_1.6fr]">
-        <div>
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
+        <div className="lg:w-[500px]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             Who Can Use
             <br />
@@ -344,7 +347,7 @@ export default function Home() {
             </em>
             <span className="font-normal not-italic">™</span> Email
           </h2>
-          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+          <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:mt-6 sm:text-[16px] sm:leading-[1.6]">
             <BrandInline />™ is designed for individuals and organizations who
             want greater confidence in the authenticity of their emails.
             Whether you are using a custom domain or a supported email
@@ -352,7 +355,7 @@ export default function Home() {
             against phishing and email impersonation.
           </p>
         </div>
-        <div className="flex flex-wrap items-start justify-start gap-5 lg:ml-[15rem] lg:w-max lg:flex-nowrap">
+        <div className="flex flex-wrap items-start justify-start gap-5 lg:ml-[9rem] lg:w-max lg:flex-nowrap">
           <div className="flex w-[225px] flex-col items-center">
             <span className="mb-[18px] text-center text-[30px] font-semibold leading-tight text-ink sm:text-[33px]">
               Plug-In
@@ -502,18 +505,25 @@ export default function Home() {
             impersonation.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center lg:ml-10 lg:items-start">
+        <div className="flex items-start justify-center gap-8 lg:ml-10 lg:justify-start">
+          <div className="flex flex-col items-center">
+            <img
+              src={textPhoneImg}
+              alt="Phone displaying PhishFlagger text messages"
+              className="h-auto w-[190px] object-contain"
+            />
+            <Link
+              to="/join/telecom"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Telecom
+            </Link>
+          </div>
           <img
-            src={textPhoneImg}
-            alt="Phone displaying PhishFlagger text messages"
-            className="h-auto w-1/2 max-w-[190px] object-contain"
+            src={twoGuysPhoneImg}
+            alt="Two men using mobile phones"
+            className="aspect-[4/3] w-[300px] rounded-xl object-cover object-[center_72%]"
           />
-          <Link
-            to="/join/telecom"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-          >
-            Telecom
-          </Link>
         </div>
       </div>
     </section>
@@ -527,9 +537,9 @@ export default function Home() {
         <div className="flex items-start justify-center gap-14 lg:justify-start lg:gap-20">
           <div className="flex w-[58%] max-w-[306px] flex-col items-start">
             <img
-              src="/assets/images/messages-apps-transparent.png"
+              src={messagingIconsImg}
               alt="Popular messaging companies"
-              className="h-auto w-full object-contain"
+              className="h-auto w-[82%] object-contain"
             />
             <Link
               to="/join/telecom"
@@ -629,7 +639,7 @@ function PhonePlaceholder({ src, alt, large = false }) {
       alt={alt}
       className={
         large
-          ? "mt-[30px] block h-auto w-[230px] max-w-full object-contain sm:w-[300px] lg:w-[300px]"
+          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain sm:w-[300px] lg:w-[300px]"
           : "block h-auto w-[140px] max-w-full object-contain sm:w-[180px] lg:w-[170px]"
       }
     />

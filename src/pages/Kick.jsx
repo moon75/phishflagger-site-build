@@ -3,6 +3,7 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
+import kickstarterRewardsDoc from "../assets/Pdf/Kickstarter Rewards.docx";
 
 export default function Kick() {
   return (
@@ -62,11 +63,20 @@ export default function Kick() {
           6. Kickstarter Requirements
         </a>
 
+        <a
+          href={kickstarterRewardsDoc}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          7. Kickstarter Rewards
+        </a>
+
         <Link
           to="/joinfree"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          7. Join Free
+          8. Join Free
         </Link>
       </section>
     </>

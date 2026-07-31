@@ -1,5 +1,6 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
+import messagingIconsImg from "../../assets/images/Icons-2.jpg";
 
 export default function Messaging() {
   return (
@@ -25,9 +26,9 @@ export default function Messaging() {
 
           <div className="flex items-center justify-center gap-14 lg:justify-end lg:gap-20">
             <img
-              src="/assets/images/messages-apps-transparent.png"
+              src={messagingIconsImg}
               alt="Grid of popular messaging app icons"
-              className="h-auto w-[64%] max-w-[340px] object-contain"
+              className="h-auto w-[58%] max-w-[300px] object-contain"
             />
             <img
               src={messagesImg}
