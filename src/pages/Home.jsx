@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox v2.png";
 import heroInfoBoxImg from "../assets/images/email-inbox portrait.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
-import whoCanUseImg from "../assets/images/email-marketing-verified-v3.png";
+import whoCanUseImg from "../assets/images/email-marketing-verified-v4.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -568,7 +568,7 @@ export default function Home() {
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
-        <p className="mx-auto max-w-[820px] text-center text-[32px] leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
+        <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
           records and documents, thereby reducing fraud.
         </p>

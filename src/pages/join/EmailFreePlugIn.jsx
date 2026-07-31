@@ -86,6 +86,16 @@ export default function EmailFreePlugIn() {
                 </Link>
               </div>
             </article>
+
+            <p className="text-center text-[13.5px] text-ink-muted md:col-start-3">
+              Don&rsquo;t see your domain?{" "}
+              <Link
+                to="/joinfree/request-domain"
+                className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Request My Domain
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -136,24 +146,24 @@ export default function EmailFreePlugIn() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">
+            <p className="mb-4 text-center text-[28px] text-ink sm:text-[30px]">
+              Email client view from Outlook
+            </p>
             <img
               src={emailInboxImg}
               alt="Inbox showing PhishCounter numbered email messages in Outlook"
               className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
             />
-            <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-              Email client view from Outlook
-            </p>
           </div>
           <div className="flex flex-col items-center">
+            <p className="mb-4 text-center text-[28px] text-ink sm:text-[30px]">
+              Email client view from Thunderbird
+            </p>
             <img
               src={emailInboxImg}
               alt="Inbox showing PhishCounter numbered email messages in Thunderbird"
               className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
             />
-            <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-              Email client view from Thunderbird
-            </p>
           </div>
         </div>
       </section>
