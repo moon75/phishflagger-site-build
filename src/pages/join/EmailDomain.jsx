@@ -79,6 +79,25 @@ export default function EmailDomain() {
               </div>
             </div>
           </div>
+
+          <div className="mx-auto mt-8 grid max-w-[820px] grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+            <div className="flex flex-col items-center">
+              <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+                <p className="text-center text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
+                  Placeholder text goes here. Replace this copy with the final
+                  content.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+                <p className="text-center text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
+                  Placeholder text goes here. Replace this copy with the final
+                  content.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,8 +131,27 @@ export default function EmailDomain() {
 
       <Divider />
 
-      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
+        <div className="mx-auto max-w-content text-center">
+          <div className="mx-auto h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
+            <img
+              src="/assets/images/domain image for homepage.png"
+              alt="City skyline representing corporate domain protection"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+            Placeholder text goes here. Replace this copy with the final
+            content.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+        <SectionCounter value="^0005" />
         <div className="mx-auto max-w-[820px] text-center">
           <a
             href="https://join.phishflagger.com/membership-form-stripe.php"

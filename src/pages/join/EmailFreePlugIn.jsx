@@ -119,12 +119,22 @@ export default function EmailFreePlugIn() {
               Request My Domain
             </Link>
           </p>
-          <Link
-            to="/joinfree"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-          >
-            Join
-          </Link>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/joinfree"
+              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join
+            </Link>
+            <a
+              href="https://join.phishflagger.com/individual/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join2
+            </a>
+          </div>
         </div>
       </section>
 

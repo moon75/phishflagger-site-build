@@ -153,9 +153,9 @@ export default function Telecom() {
               Method using existing CLI
             </h2>
             <ul className="mt-6 space-y-3 pl-5 text-[17px] leading-relaxed text-ink sm:text-[19px]">
-              <li className="list-disc">Easily deployable</li>
+              <li className="list-disc">Easily deployable.</li>
               <li className="list-disc">
-                Immediate benefit even without enabled receiver
+                Immediate benefit even without enabled receiver.
               </li>
               <li className="list-disc">
                 Interrogable among Telecoms and Carriers worldwide.

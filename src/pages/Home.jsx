@@ -15,7 +15,6 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import twoGuysPhoneImg from "../assets/images/two-men-on-phones.jpg";
 import messagingIconsImg from "../assets/images/Icons-2.png";
 
 const SCREENS = [
@@ -344,8 +343,6 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Who Can Use
-            <br />
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
@@ -392,7 +389,7 @@ export default function Home() {
             </div>
             <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
               <img
-                src="/assets/images/domain image for homepage.png"
+                src="/assets/images/corporate%20image%20and%20design.png"
                 alt="Domain protection illustration"
                 className="h-full w-full object-cover"
               />
@@ -507,7 +504,7 @@ export default function Home() {
       <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="text-[32px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[40px] lg:text-[46px]">
             <BrandInline />™ for Telecom / SMS
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
@@ -522,20 +519,15 @@ export default function Home() {
             <img
               src={textPhoneImg}
               alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-[190px] object-contain"
+              className="h-auto w-[280px] object-contain"
             />
             <Link
               to="/join/telecom"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              Telecom
+              SMS
             </Link>
           </div>
-          <img
-            src={twoGuysPhoneImg}
-            alt="Two men using mobile phones"
-            className="aspect-[4/3] w-[300px] rounded-xl object-cover object-[center_72%]"
-          />
         </div>
       </div>
     </section>
