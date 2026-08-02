@@ -46,7 +46,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[500px] object-contain"
+              className="h-auto w-full max-w-[350px] object-contain"
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function EmailDomain() {
         <SectionCounter value="^0004" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-            Ways to Join
+            Two Ways To Join
           </h2>
           <div className="mx-auto mt-10 grid max-w-[820px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
             <div className="flex flex-col items-center">

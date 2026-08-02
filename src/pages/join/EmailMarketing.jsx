@@ -40,7 +40,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[520px] object-contain"
+              className="h-auto w-full max-w-[416px] object-contain"
             />
           </div>
         </div>

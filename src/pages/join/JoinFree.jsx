@@ -425,7 +425,7 @@ export default function JoinFree() {
               rel="noopener noreferrer"
               className="text-[13px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
             >
-              Purchase
+              Continue
             </a>
           </div>
         </div>

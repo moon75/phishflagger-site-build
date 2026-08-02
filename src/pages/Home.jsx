@@ -15,6 +15,7 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+const smsPhoneImg = "/assets/images/only%204%20messages%20now.png";
 import messagingIconsImg from "../assets/images/Icons-2.png";
 
 const SCREENS = [
@@ -528,6 +529,11 @@ export default function Home() {
               SMS
             </Link>
           </div>
+          <img
+            src={smsPhoneImg}
+            alt="Phone displaying PhishFlagger SMS messages"
+            className="h-auto w-[280px] object-contain"
+          />
         </div>
       </div>
     </section>
