@@ -90,9 +90,7 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 2. Get your Free Key.&nbsp; Works with ....
@@ -111,7 +109,7 @@ export default function EmailFreePlugIn() {
             ))}
           </div>
           <p className="mt-6 text-[13.5px] text-ink-muted">
-            Don&rsquo;t see your domain?{" "}
+            Don&rsquo;t see your free email domain?{" "}
             <Link
               to="/joinfree/request-domain"
               className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
@@ -137,8 +135,6 @@ export default function EmailFreePlugIn() {
           </div>
         </div>
       </section>
-
-      <Divider />
 
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
@@ -231,8 +227,4 @@ function DownloadCard({ name, image, alt, actions, fit = "cover" }) {
       </div>
     </article>
   );
-}
-
-function Divider() {
-  return <div className="mx-auto h-px w-[94%] max-w-[1120px] bg-gray-200" />;
 }

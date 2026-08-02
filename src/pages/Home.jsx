@@ -152,12 +152,11 @@ export default function Home() {
         {/* Left — heading + bullets */}
         <div>
           <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
-            Why{" "}
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>
-            <span className="font-normal not-italic">™</span>?
+            <span className="font-normal not-italic">™</span> Human
           </h2>
 
           <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -233,19 +232,12 @@ export default function Home() {
             <br />
             Email Domain protection
           </h2>
-          <ul className="mt-4 space-y-4 text-[15px] leading-[1.6] text-ink sm:mt-6 sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>Domain protection for Microsoft, Google and Linux email servers.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Enable all your users across all devices instantly with our
-                Domain Appliance
-              </span>
-            </li>
-          </ul>
+          <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
+            Domain Protection
+          </h3>
+          <p className="mt-2 text-[15px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.55]">
+            PlaceHolder text for Domain Protection SPF
+          </p>
         </div>
       </div>
     </section>
@@ -254,85 +246,18 @@ export default function Home() {
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
-        <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          Free Email Client Plug-In
-        </h2>
-        <div className="mt-10 grid grid-cols-1 items-start gap-10 sm:mt-14 sm:gap-8 lg:grid-cols-3">
-          <div className="flex w-full flex-col items-center">
-            <div className="relative flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[264px]">
-              <img
-                src="/assets/images/thunderbird new pick.avif"
-                alt="Mozilla Thunderbird email client with PhishFlagger plugin"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute right-4 top-4 z-10 text-right">
-                <span className="block font-sans text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[26px]">
-                  Thunderbird
-                </span>
-                <span className="block font-sans text-[15px] font-medium leading-tight text-ink-muted sm:text-[17px]">
-                  Email Client
-                </span>
-              </div>
-            </div>
-            <div aria-hidden="true" className="mt-5 h-[22px]" />
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                to="/plugin-download?client=Thunderbird&download=Windows%20Download"
-                className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
-              >
-                Windows Download
-              </Link>
-              <Link
-                to="/plugin-download?client=Thunderbird&download=Linux%20Download"
-                className="cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
-              >
-                Linux Download
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex w-full flex-col items-center">
-            <div className="flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black sm:h-[264px]">
-              <img
-                src={outlookImg}
-                alt="Microsoft Outlook email client with PhishFlagger plugin"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div aria-hidden="true" className="mt-5 h-[22px]" />
-            <Link
-              to="/plugin-download?client=Outlook&download=Windows%20Download"
-              className="mt-5 cursor-pointer rounded-lg bg-[#585858] px-5 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
-            >
-              Windows Download
-            </Link>
-          </div>
-
-          <div className="flex w-full flex-col items-center">
-            <div className="flex h-[220px] w-full max-w-[430px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white sm:h-[264px]">
-              <div className="flex h-full w-full flex-col items-center justify-center bg-white">
-                <img
-                  src="/assets/images/logo-mark.png"
-                  alt=""
-                  className="h-14 w-14 object-contain"
-                />
-                <span className="mt-4 text-[18px] font-semibold text-ink">
-                  Download Page
-                </span>
-                <span className="mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-brand text-[24px] font-bold leading-none text-white">
-                  ↓
-                </span>
-              </div>
-            </div>
-            <h3 className="mt-5 text-[18px] font-semibold text-ink">
-              Download Page
-            </h3>
-            <Link
-              to="/download"
-              className="mt-5 rounded-lg bg-[#585858] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
-            >
-              Go to Download Page
-            </Link>
+        <div className="flex justify-center">
+          <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+            <img
+              src={outlookImg}
+              alt="Microsoft Outlook"
+              className="h-full w-1/2 rounded-xl object-contain"
+            />
+            <img
+              src="/assets/images/thunderbird new pick.avif"
+              alt="Mozilla Thunderbird"
+              className="h-full w-1/2 rounded-xl object-contain"
+            />
           </div>
         </div>
       </div>
@@ -396,7 +321,7 @@ export default function Home() {
               />
             </div>
             <Link
-              to="/join/email-domain"
+              to="/join/email-corporate"
               className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
@@ -419,7 +344,7 @@ export default function Home() {
               to="/join/email-marketing"
               className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              Join
+              Marketing
             </Link>
           </div>
         </div>
@@ -461,15 +386,23 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — 3 phones in a row */}
         <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
-          <img
-            src={callerIdDesktopImg}
-            alt="Desktop corded phone with PhishFlagger Caller ID"
-            className="h-auto w-1/3 max-w-[160px] object-contain"
-          />
+          <div className="relative flex items-end pt-2">
+            <img
+              src={callerIdDesktopImg}
+              alt="Desktop corded phone with PhishFlagger Caller ID"
+              className="h-auto w-full max-w-[200px] object-contain"
+            />
+            <span className="absolute top-1 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
+              <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
+                ✓
+              </span>
+              Verified
+            </span>
+          </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 max-w-[131px] object-contain"
+            className="h-auto w-1/3 max-w-[135px] object-contain"
           />
           <img
             src={callerIdHandsetImg}

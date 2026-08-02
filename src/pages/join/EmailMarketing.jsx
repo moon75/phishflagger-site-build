@@ -17,11 +17,10 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+          <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
               Brand Protection
             </h2>
@@ -46,9 +45,8 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div className="flex justify-center lg:justify-start">
             <img
@@ -58,7 +56,7 @@ export default function EmailMarketing() {
             />
           </div>
 
-          <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+          <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
               The Human Part
             </h2>
@@ -77,17 +75,16 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+          <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-              Recipients that are <BrandInline />
+              <BrandInline />
               <span className="align-super text-[14px] font-normal not-italic sm:text-[16px]">
                 &trade;
               </span>{" "}
-              Enabled.
+              enabled Recipients.
             </h2>
             <ul className="mt-5 list-disc space-y-2 pl-5">
               <li>
@@ -121,9 +118,8 @@ export default function EmailMarketing() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0005" />
         <div className="mx-auto max-w-[820px] text-center">
           <Link
             to="/contact"
@@ -147,7 +143,11 @@ function BrandInline({ trail = "Flagger" }) {
   );
 }
 
-function Divider() {
-  return <div className="mx-auto h-px w-[94%] max-w-[1120px] bg-gray-300" />;
+function SectionCounter({ value }) {
+  return (
+    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+      {value}
+    </span>
+  );
 }
 

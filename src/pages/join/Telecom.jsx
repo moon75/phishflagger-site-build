@@ -10,6 +10,7 @@ import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/des
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+const smsPhoneImg = "/assets/images/only%204%20messages%20now.png";
 
 export default function Telecom() {
   return (
@@ -89,30 +90,43 @@ export default function Telecom() {
         ]}
       />
 
-      <FeatureSection
-        counter="^0005"
-        tone="gray"
-        image={threePhoneImg}
-        imageAlt="Phones with caller ID display"
-        items={[
-          "Human-compatible solution that validates legitimate communications and highlights fraud attempts.",
-          "Provides protection by adding a unique sequential number, the PhishCounter, visible to the user.",
-        ]}
-      />
-
-      <FeatureSection
-        counter="^0006"
-        image={callerIdBoxImg}
-        imageAlt="Caller ID box showing a PhishCounter sequence number"
-        reverse
-        items={[
-          "Provides a defense against impersonation and fraud.",
-          "Flags fraud attempts that do not have the expected sequential number.",
-        ]}
-      />
-
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0005" />
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
+            <li className="list-disc">
+              Human-compatible solution that validates legitimate
+              communications and highlights fraud attempts.
+            </li>
+            <li className="list-disc">
+              Provides protection by adding a unique sequential number, the
+              PhishCounter, visible to the user.
+            </li>
+            <li className="list-disc">
+              Provides a defense against impersonation and fraud.
+            </li>
+            <li className="list-disc">
+              Flags fraud attempts that do not have the expected sequential
+              number.
+            </li>
+          </ul>
+          <div className="flex items-center justify-center gap-6">
+            <img
+              src={threePhoneImg}
+              alt="Phones with caller ID display"
+              className="h-auto w-full max-w-[160px] object-contain"
+            />
+            <img
+              src={callerIdBoxImg}
+              alt="Caller ID box showing a PhishCounter sequence number"
+              className="h-auto w-full max-w-[210px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
             <li className="list-disc">
@@ -134,8 +148,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0008" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -165,8 +179,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0009" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0008" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center lg:order-2">
             <img
@@ -306,8 +320,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0010" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0009" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -332,8 +346,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0011" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0010" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -344,18 +358,23 @@ export default function Telecom() {
               final copy for this section.
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-6">
             <img
               src={textPhoneImg}
               alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-full max-w-[260px] object-contain"
+              className="h-auto w-full max-w-[171px] object-contain"
+            />
+            <img
+              src={smsPhoneImg}
+              alt="Phone displaying PhishFlagger SMS messages"
+              className="h-auto w-full max-w-[200px] object-contain"
             />
           </div>
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0012" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0011" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -389,8 +408,8 @@ export default function Telecom() {
       </section>
 
       {/* ===== Bottom CTA panel ===== */}
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0013" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0012" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">
@@ -552,37 +571,3 @@ function SplitSection({ image, imageAlt, text, bullets, counter }) {
   );
 }
 
-function FeatureSection({ tone = "white", image, imageAlt, items, reverse, counter }) {
-  const imageEl = (
-    <div className="flex justify-center">
-      <img
-        src={image}
-        alt={imageAlt}
-        className="h-auto w-full max-w-[320px] object-contain"
-      />
-    </div>
-  );
-  const listEl = (
-    <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
-      {items.map((item) => (
-        <li key={item} className="list-disc">
-          {brandify(item)}
-        </li>
-      ))}
-    </ul>
-  );
-
-  return (
-    <section
-      className={`relative w-full px-4 py-14 sm:px-6 sm:py-20 ${
-        tone === "gray" ? "bg-[#eef0f4]" : "bg-white"
-      }`}
-    >
-      {counter && <SectionCounter value={counter} />}
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-        {reverse ? imageEl : listEl}
-        {reverse ? listEl : imageEl}
-      </div>
-    </section>
-  );
-}

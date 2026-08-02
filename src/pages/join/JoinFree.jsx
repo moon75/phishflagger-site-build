@@ -46,15 +46,8 @@ export default function JoinFree() {
   const [submitted, setSubmitted] = useState(false);
   const [emailVerified, setEmailVerified] = useState(false);
   const [codeVerified, setCodeVerified] = useState(false);
+  const [showStep3Modal, setShowStep3Modal] = useState(false);
   const inputRefs = useRef({});
-  const step3Ref = useRef(null);
-
-  function handleCompleteJoin() {
-    setCodeVerified(true);
-    requestAnimationFrame(() => {
-      step3Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
 
   function validateField(fieldName, valueOverride) {
     const value = (valueOverride !== undefined ? valueOverride : values[fieldName]).trim();
@@ -111,6 +104,7 @@ export default function JoinFree() {
     }
     setErrors((prev) => ({ ...prev, code: "" }));
     setCodeVerified(true);
+    setShowStep3Modal(true);
   }
 
   function handleSubmit(event) {
@@ -133,6 +127,7 @@ export default function JoinFree() {
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
+      setShowStep3Modal(false);
       console.log("Registration submitted:", values);
     }, 900);
   }
@@ -159,108 +154,150 @@ export default function JoinFree() {
               onSubmit={handleSubmit}
               className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
             >
-              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                Step 1
-              </p>
+              <div className={`transition-opacity ${emailVerified ? "opacity-50" : ""}`}>
+                <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                  Step 1
+                </p>
 
-              <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                <div className="flex-1">
-                  <Field label="Email Address" error={errors.email}>
-                    <input
-                      type="email"
-                      id="email"
-                      autoComplete="email"
-                      required
-                      disabled={emailVerified}
-                      ref={(el) => (inputRefs.current.email = el)}
-                      value={values.email}
-                      onChange={(e) => handleChange("email", e.target.value)}
-                      onBlur={() => handleBlur("email")}
-                      placeholder="you@gmail.com"
-                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                    />
-                  </Field>
+                <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                  <div className="flex-1">
+                    <Field label="Email Address" error={errors.email}>
+                      <input
+                        type="email"
+                        id="email"
+                        autoComplete="email"
+                        required
+                        disabled={emailVerified}
+                        ref={(el) => (inputRefs.current.email = el)}
+                        value={values.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        onBlur={() => handleBlur("email")}
+                        placeholder="you@gmail.com"
+                        className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                      />
+                    </Field>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleVerifyEmail}
+                    disabled={emailVerified}
+                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                  >
+                    {emailVerified ? "Email Verified" : "Verify Email"}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={handleVerifyEmail}
-                  disabled={emailVerified}
-                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
-                >
-                  {emailVerified ? "Email Verified" : "Verify Email"}
-                </button>
               </div>
 
-              <div className="rounded-lg bg-[#f4f5f8] px-5 py-4">
+              <div
+                className={`transition-opacity ${
+                  emailVerified ? "" : "pointer-events-none opacity-50"
+                }`}
+              >
                 <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
                   Step 2
                 </p>
 
                 <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                  <div className="flex-1 rounded-md bg-white px-3 py-3 sm:px-4">
-                    <input
-                      type="text"
-                      placeholder="Enter code"
-                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                    />
+                  <div className="flex-1">
+                    <Field label="Enter the code we sent to you email." error={errors.code}>
+                      <input
+                        type="text"
+                        id="code"
+                        autoComplete="one-time-code"
+                        disabled={!emailVerified || codeVerified}
+                        ref={(el) => (inputRefs.current.code = el)}
+                        value={values.code}
+                        onChange={(e) => handleChange("code", e.target.value)}
+                        placeholder="Enter code"
+                        className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                      />
+                    </Field>
                   </div>
                   <button
                     type="button"
-                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
+                    onClick={handleVerifyCode}
+                    disabled={!emailVerified || codeVerified}
+                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
                   >
-                    Get Code
+                    {codeVerified ? "Code Verified" : "Verify Code"}
                   </button>
                 </div>
-
               </div>
+            </form>
+          ) : (
+            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
+              <div className="flex flex-col items-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path
+                      d="M8 12.5l2.5 2.5L16 9.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
+                <p className="mt-2 text-[15px] text-ink-muted">
+                  Check your inbox shortly for your Thunderbird Plugin license.
+                </p>
+              </div>
+            </div>
+          )}
 
-              <div className="text-center">
-                <button
-                  type="button"
-                  onClick={handleCompleteJoin}
-                  className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          {/* ===== Available domains ===== */}
+          <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
+            <p className="text-[13px] font-semibold text-ink">
+              Available now for the following domains:
+            </p>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
+                <div
+                  key={domain}
+                  className="flex min-h-[92px] flex-col items-center justify-center rounded-lg bg-white px-3 py-3 text-center"
                 >
-                  Complete Join
-                </button>
+                  <DomainIcon provider={provider} />
+                  <span className="mt-2 text-[12.5px] font-semibold text-ink">
+                    {domain}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 text-center">
+              <Link
+                to="/joinfree/request-domain"
+                className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Request My Domain
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {showStep3Modal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-8">
+          <div className="max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-lg bg-white p-6 shadow-xl sm:p-8">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-[13px] font-semibold text-ink-muted">Email</p>
+                <p className="mt-1 text-[15px] font-semibold text-ink">{values.email}</p>
               </div>
+              <button
+                type="button"
+                onClick={() => setShowStep3Modal(false)}
+                aria-label="Close"
+                className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full text-ink-muted transition-colors hover:bg-[#f4f5f8] hover:text-ink"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-4 w-4" aria-hidden>
+                  <path d="M6 6l12 12M6 18L18 6" />
+                </svg>
+              </button>
+            </div>
 
-              {emailVerified && (
-                <>
-                  <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                    Step 2
-                  </p>
-
-                  <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                    <div className="flex-1">
-                      <Field label="Enter the code we sent to you email." error={errors.code}>
-                        <input
-                          type="text"
-                          id="code"
-                          autoComplete="one-time-code"
-                          disabled={codeVerified}
-                          ref={(el) => (inputRefs.current.code = el)}
-                          value={values.code}
-                          onChange={(e) => handleChange("code", e.target.value)}
-                          placeholder="Enter code"
-                          className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                        />
-                      </Field>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleVerifyCode}
-                      disabled={codeVerified}
-                      className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
-                    >
-                      {codeVerified ? "Code Verified" : "Verify Code"}
-                    </button>
-                  </div>
-                </>
-              )}
-
-              {codeVerified && (
-              <>
-              <p ref={step3Ref} className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+            <form onSubmit={handleSubmit} className="mt-6 space-y-6">
+              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
                 Step 3
               </p>
 
@@ -373,78 +410,14 @@ export default function JoinFree() {
                 </button>
                 <p className="text-center text-[12.5px] text-ink-muted">
                   By submitting, you agree to receive your plugin license by email. We never
-                  share your information.
+                  share your information. You will receive an email shortly, and it will
+                  contain the license for your email address.
                 </p>
               </div>
-              </>
-              )}
             </form>
-          ) : (
-            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
-              <div className="flex flex-col items-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path
-                      d="M8 12.5l2.5 2.5L16 9.5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
-                <p className="mt-2 text-[15px] text-ink-muted">
-                  Check your inbox shortly for your Thunderbird Plugin license.
-                </p>
-              </div>
-            </div>
-          )}
-
-          {/* ===== Available domains ===== */}
-          <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
-            <p className="text-[13px] font-semibold text-ink">
-              Available now for the following domains:
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
-                <div
-                  key={domain}
-                  className="flex min-h-[92px] flex-col items-center justify-center rounded-lg bg-white px-3 py-3 text-center"
-                >
-                  <DomainIcon provider={provider} />
-                  <span className="mt-2 text-[12.5px] font-semibold text-ink">
-                    {domain}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-3 text-center">
-              <Link
-                to="/joinfree/request-domain"
-                className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-              >
-                Request My Domain
-              </Link>
-            </div>
-            <p className="mt-2.5 text-[12.5px] text-ink-muted">
-              You will receive an email shortly, and it will contain the license for your email
-              address.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-6 max-w-[640px] text-center">
-            <a
-              href="https://join.phishflagger.com/membership-form-stripe.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[13px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-            >
-              Continue
-            </a>
           </div>
         </div>
-      </section>
+      )}
     </>
   );
 }

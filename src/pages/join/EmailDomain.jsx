@@ -16,12 +16,10 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <Divider />
-
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <ul className="space-y-3 pl-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
             <li className="list-disc">
               Safeguard your domains with <BrandInline />
               &trade; email numbering to help enhance security and prevent
@@ -37,13 +35,11 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[350px] object-contain"
+              className="h-auto w-full max-w-[280px] object-contain"
             />
           </div>
         </div>
       </section>
-
-      <Divider />
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
@@ -74,11 +70,11 @@ export default function EmailDomain() {
               <h3 className="text-[22px] font-semibold text-ink sm:text-[26px]">
                 Domain
               </h3>
-              <div className="mt-5 flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-3">
+              <div className="mt-5 h-[220px] w-full max-w-[360px] overflow-hidden rounded-2xl border-2 border-black">
                 <img
                   src={digitalDomainImg}
                   alt="Digital diagram showing email server, domain records check, sending domain validation, and verified result"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -95,25 +91,28 @@ export default function EmailDomain() {
             </div>
             <div className="flex flex-col items-center">
               <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
-                <p className="text-center text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
-                  Placeholder text goes here. Replace this copy with the final
-                  content.
-                </p>
+                <ul className="space-y-2 pl-5 text-left text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
+                  <li className="list-disc">
+                    Domain protection for Microsoft, Google and Linux email
+                    servers.
+                  </li>
+                  <li className="list-disc">
+                    Enable all your users across all devices instantly with
+                    our Domain Appliance.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Divider />
-
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-left sm:text-[30px]">
-              <BrandInline trail="Counter" />
-              &trade; Protect your recipients.
+              Protect your Brand and Recipients
             </h2>
 
             <ul className="space-y-2 pl-0">
@@ -135,28 +134,31 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <Divider />
-
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
-        <div className="mx-auto max-w-content text-center">
-          <div className="mx-auto h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
-            <img
-              src="/assets/images/domain image for homepage.png"
-              alt="City skyline representing corporate domain protection"
-              className="h-full w-full object-cover"
-            />
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+          <div className="flex justify-center lg:justify-start">
+            <div className="h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
+              <img
+                src="/assets/images/domain image for homepage.png"
+                alt="City skyline representing corporate domain protection"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-          <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-            Placeholder text goes here. Replace this copy with the final
-            content.
-          </p>
+          <div className="text-center lg:text-left">
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              Protect your Company
+            </h2>
+            <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px] lg:mx-0">
+              Placeholder text goes here. Replace this copy with the final
+              content.
+            </p>
+          </div>
         </div>
       </section>
 
-      <Divider />
-
-      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+      <section className="relative w-full bg-[#eef0f4] px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <SectionCounter value="^0006" />
         <div className="mx-auto max-w-[820px] text-center">
           <a
@@ -181,10 +183,6 @@ function BrandInline({ trail = "Flagger" }) {
       <span className="font-normal text-brand">{trail}</span>
     </em>
   );
-}
-
-function Divider() {
-  return <div className="mx-auto h-px w-[94%] max-w-[1120px] bg-gray-300" />;
 }
 
 function SectionCounter({ value }) {
