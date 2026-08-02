@@ -138,42 +138,10 @@ export default function JoinFree() {
           {/* ===== Page heading ===== */}
           <div className="text-center">
             <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
-              Join Free
+              Join
             </h1>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
               Get you Free Email licenses here.
-            </p>
-          </div>
-
-          {/* ===== Available domains ===== */}
-          <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
-            <p className="text-[13px] font-semibold text-ink">
-              Available now for the following domains:
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
-                <div
-                  key={domain}
-                  className="flex min-h-[92px] flex-col items-center justify-center rounded-lg bg-white px-3 py-3 text-center"
-                >
-                  <DomainIcon provider={provider} />
-                  <span className="mt-2 text-[12.5px] font-semibold text-ink">
-                    {domain}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-3 text-center">
-              <Link
-                to="/joinfree/request-domain"
-                className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-              >
-                Request My Domain
-              </Link>
-            </div>
-            <p className="mt-2.5 text-[12.5px] text-ink-muted">
-              You will receive an email shortly, and it will contain the license for your email
-              address.
             </p>
           </div>
 
@@ -391,6 +359,49 @@ export default function JoinFree() {
               </div>
             </div>
           )}
+
+          {/* ===== Available domains ===== */}
+          <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
+            <p className="text-[13px] font-semibold text-ink">
+              Available now for the following domains:
+            </p>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
+                <div
+                  key={domain}
+                  className="flex min-h-[92px] flex-col items-center justify-center rounded-lg bg-white px-3 py-3 text-center"
+                >
+                  <DomainIcon provider={provider} />
+                  <span className="mt-2 text-[12.5px] font-semibold text-ink">
+                    {domain}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 text-center">
+              <Link
+                to="/joinfree/request-domain"
+                className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Request My Domain
+              </Link>
+            </div>
+            <p className="mt-2.5 text-[12.5px] text-ink-muted">
+              You will receive an email shortly, and it will contain the license for your email
+              address.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-6 max-w-[640px] text-center">
+            <a
+              href="https://join.phishflagger.com/membership-form-stripe.php"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[13px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+            >
+              Purchase
+            </a>
+          </div>
         </div>
       </section>
     </>

@@ -18,11 +18,6 @@ export const nav = [
     children: [
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/help/kickstarter" },
-      {
-        label: "Purchase",
-        href: "https://join.phishflagger.com/membership-form-stripe.php",
-        external: true,
-      },
       { label: "Email - Endorse Us", href: "/help/endorse-us" },
       { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
       { label: "Telecom - Sign Petition", href: "/petition" },

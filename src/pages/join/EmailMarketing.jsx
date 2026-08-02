@@ -2,7 +2,7 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox v2.png";
-import marketerImg from "../../assets/images/5th sec.avif";
+import marketerImg from "../../assets/images/email-marketing-verified-v6.png";
 
 export default function EmailMarketing() {
   return (
@@ -23,7 +23,7 @@ export default function EmailMarketing() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-              Protect your Clients Brand from Impersonation.
+              Brand Protection
             </h2>
             <p>
               You can help prevent phishing and fraud by numbering your outgoing

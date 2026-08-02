@@ -256,15 +256,6 @@ export default function Telecom() {
                 </a>
                 ,&nbsp;&nbsp;&nbsp;
                 <a
-                  href="https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/consultation-tackling-scam-calls-from-abroad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
-                >
-                  July 21, 2025
-                </a>
-                ,&nbsp;&nbsp;&nbsp;
-                <a
                   href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -322,7 +313,7 @@ export default function Telecom() {
             <img
               src="/assets/images/Respresntation%20image.png"
               alt="PhishFlagger using existing infrastructure"
-              className="h-auto w-full max-w-[420px] object-contain"
+              className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain"
             />
           </div>
           <div>

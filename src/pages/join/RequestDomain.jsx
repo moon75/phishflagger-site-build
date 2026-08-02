@@ -66,6 +66,9 @@ export default function RequestDomain() {
             <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
               Request My Domain
             </h1>
+            <p className="mt-3 text-[15px] font-semibold text-ink sm:text-[16px]">
+              Free Email Provider's
+            </p>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
               Don't see your domain in the free plugin list? Let us know and we'll look into
               adding it.

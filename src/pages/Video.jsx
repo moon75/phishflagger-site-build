@@ -67,7 +67,16 @@ const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger K
 
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
-  if (category === "Kickstarter") return KICKSTARTER_VIDEOS;
+  if (category === "Kickstarter") {
+    return [
+      ...KICKSTARTER_VIDEOS,
+      ...Array.from({ length: 4 }, () => ({
+        type: "placeholder",
+        title: "Coming Soon",
+        description: "",
+      })),
+    ];
+  }
   if (category === "In Progress") {
     return [
       {

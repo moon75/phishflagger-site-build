@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox v2.png";
-import heroInfoBoxImg from "../assets/images/email-inbox portrait.png";
+import heroInfoBoxImg from "../assets/images/email-inbox v2.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
-import whoCanUseImg from "../assets/images/email-marketing-verified-v4.png";
+import whoCanUseImg from "../assets/images/email-marketing-verified-v6.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -16,7 +16,7 @@ import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import twoGuysPhoneImg from "../assets/images/two-men-on-phones.jpg";
-import messagingIconsImg from "../assets/images/Icons-2.jpg";
+import messagingIconsImg from "../assets/images/Icons-2.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg },
@@ -53,17 +53,22 @@ export default function Home() {
       </p>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-12 flex flex-wrap items-start justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
+      <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         {SCREENS.map((s, i) => (
           <div key={i} className="flex flex-col items-center">
             <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
               {s.label}
             </span>
-            <PhonePlaceholder
-              src={s.src}
-              alt={`${s.label} screen`}
-              large={i === 0}
-            />
+            {i === 0 ? (
+              <div className="flex flex-1 items-center">
+                <PhonePlaceholder src={s.src} alt={`${s.label} screen`} large />
+              </div>
+            ) : (
+              <PhonePlaceholder
+                src={s.src}
+                alt={`${s.label} screen`}
+              />
+            )}
           </div>
         ))}
       </div>
@@ -103,7 +108,7 @@ export default function Home() {
           <img
             src={howDoesItWorkImg}
             alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-            className="h-auto w-full max-w-[520px] object-contain"
+            className="h-auto w-full max-w-[480px] object-contain"
           />
         </div>
         <div className="space-y-6">
@@ -431,7 +436,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[540px] object-contain"
+            className="h-auto w-full max-w-[405px] object-contain"
           />
         </div>
         <div>
@@ -503,7 +508,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline />™ for Telecom / Text
+            <BrandInline />™ for Telecom / SMS
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Phishing doesn't stop at email. <BrandInline />™ for Telecom and
@@ -513,7 +518,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-start justify-center gap-8 lg:justify-start">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-start">
             <img
               src={textPhoneImg}
               alt="Phone displaying PhishFlagger text messages"
@@ -538,19 +543,26 @@ export default function Home() {
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0010" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
-        <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          <BrandInline />™ for Messages
-        </h2>
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <BrandInline />™ for Messages
+          </h2>
+          <p className="mt-5 max-w-[420px] text-[15px] leading-[1.65] text-ink-muted sm:text-[16px]">
+            Placeholder text goes here. Replace this copy with the final
+            content describing PhishFlagger protection across messaging
+            platforms.
+          </p>
+        </div>
         <div className="flex items-start justify-center gap-14 lg:justify-start">
-          <div className="flex w-[58%] max-w-[306px] flex-col items-start">
+          <div className="flex w-full max-w-[380px] flex-col items-start">
             <img
               src={messagingIconsImg}
               alt="Popular messaging companies"
-              className="h-auto w-[82%] object-contain"
+              className="h-auto w-full object-contain"
             />
             <Link
               to="/join/telecom"
-              className="ml-8 mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Telecom
             </Link>

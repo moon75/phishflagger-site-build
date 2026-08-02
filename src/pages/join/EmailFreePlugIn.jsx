@@ -38,16 +38,6 @@ export default function EmailFreePlugIn() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pb-12 pt-14 sm:px-6 sm:pb-16 sm:pt-20">
-        <div className="mx-auto max-w-content text-center">
-          <h1 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            PhishFlagger Plug-In
-          </h1>
-        </div>
-      </section>
-
-      <Divider />
-
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
@@ -107,9 +97,6 @@ export default function EmailFreePlugIn() {
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 2. Get your Free Key
           </h2>
-          <h3 className="mt-8 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:mt-10 sm:text-[38px]">
-            Available for
-          </h3>
           <div className="mx-auto mt-9 grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
             {PROVIDERS.map((provider) => (
               <div

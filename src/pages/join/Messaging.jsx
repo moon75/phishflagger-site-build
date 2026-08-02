@@ -1,6 +1,6 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import messagingIconsImg from "../../assets/images/Icons-2.jpg";
+import messagingIconsImg from "../../assets/images/Icons-2.png";
 
 export default function Messaging() {
   return (

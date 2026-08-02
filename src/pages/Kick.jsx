@@ -78,6 +78,15 @@ export default function Kick() {
         >
           8. Join Free
         </Link>
+
+        <a
+          href="https://join.phishflagger.com/membership-form-stripe.php"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          9. Purchase
+        </a>
       </section>
     </>
   );
