@@ -47,6 +47,14 @@ export default function JoinFree() {
   const [emailVerified, setEmailVerified] = useState(false);
   const [codeVerified, setCodeVerified] = useState(false);
   const inputRefs = useRef({});
+  const step3Ref = useRef(null);
+
+  function handleCompleteJoin() {
+    setCodeVerified(true);
+    requestAnimationFrame(() => {
+      step3Ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 
   function validateField(fieldName, valueOverride) {
     const value = (valueOverride !== undefined ? valueOverride : values[fieldName]).trim();
@@ -183,6 +191,24 @@ export default function JoinFree() {
                 </button>
               </div>
 
+              <div className="rounded-lg bg-[#f4f5f8] px-5 py-4">
+                <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                  Step 2
+                </p>
+                <p className="mt-1 text-[13px] font-semibold text-ink">
+                  Get your Free Key
+                </p>
+                <div className="mt-4 text-center">
+                  <button
+                    type="button"
+                    onClick={handleCompleteJoin}
+                    className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  >
+                    Complete Join
+                  </button>
+                </div>
+              </div>
+
               {emailVerified && (
                 <>
                   <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
@@ -219,7 +245,7 @@ export default function JoinFree() {
 
               {codeVerified && (
               <>
-              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+              <p ref={step3Ref} className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
                 Step 3
               </p>
 

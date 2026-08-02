@@ -25,12 +25,12 @@ const DOWNLOADS = [
 ];
 
 const PROVIDERS = [
-  "Outlook",
-  "Gmail",
+  "Outlook.com",
+  "Gmail.com",
   "Live.com",
-  "Yahoo",
-  "AOL",
-  "Hotmail",
+  "Yahoo.com",
+  "AOL.com",
+  "Hotmail.com",
 ];
 
 export default function EmailFreePlugIn() {
@@ -95,7 +95,7 @@ export default function EmailFreePlugIn() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
-            Step 2. Get your Free Key
+            Step 2. Get your Free Key.&nbsp; Works with ....
           </h2>
           <div className="mx-auto mt-9 grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
             {PROVIDERS.map((provider) => (
@@ -130,7 +130,7 @@ export default function EmailFreePlugIn() {
               href="https://join.phishflagger.com/individual/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#e4e6ea] px-7 text-[14px] font-semibold text-[#c7cad0] transition-colors hover:bg-[#d8dade]"
             >
               Join2
             </a>
@@ -169,7 +169,7 @@ export default function EmailFreePlugIn() {
 }
 
 function ProviderIcon({ provider }) {
-  if (provider === "Gmail") {
+  if (provider === "Gmail.com") {
     return (
       <svg viewBox="0 0 64 48" className="h-8 w-11" aria-label="Gmail">
         <path d="M5 10v31h10V20l17 13 17-13v21h10V10l-7-5-20 16L12 5Z" fill="#ea4335" />
@@ -179,7 +179,7 @@ function ProviderIcon({ provider }) {
     );
   }
 
-  if (provider === "Yahoo") {
+  if (provider === "Yahoo.com") {
     return (
       <span className="text-[18px] font-black italic tracking-[-0.08em] text-[#6001d2]">
         YAHOO!
@@ -187,7 +187,7 @@ function ProviderIcon({ provider }) {
     );
   }
 
-  if (provider === "AOL") {
+  if (provider === "AOL.com") {
     return <span className="text-[18px] font-black text-black">AOL.</span>;
   }
 

@@ -389,7 +389,7 @@ export default function Home() {
             </div>
             <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
               <img
-                src="/assets/images/corporate%20image%20and%20design.png"
+                src="/assets/images/corporate-image-homepage-v5.png"
                 alt="Domain protection illustration"
                 className="h-full w-full object-cover"
               />

@@ -72,12 +72,14 @@ export default function Kick() {
           7. Kickstarter Rewards
         </a>
 
-        <Link
-          to="/joinfree"
+        <a
+          href="https://join.phishflagger.com/individual/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           8. Join Free
-        </Link>
+        </a>
 
         <a
           href="https://join.phishflagger.com/membership-form-stripe.php"

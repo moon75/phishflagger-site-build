@@ -21,6 +21,7 @@ const PRODUCT_IMAGES = [
 export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
   const hideFaq = pathname === "/about/faq";
+  const faqHeading = pathname === "/join/email-free-plug-in" ? "FAQ" : "Frequently asked questions";
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
     "#numberingemail", "#cybersecurity", "#emailsecurity",
@@ -37,7 +38,7 @@ export default function Footer({ logoSrc = logoImg }) {
           <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
             <div className="mx-auto max-w-[1000px]">
               <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
-                Frequently asked questions
+                {faqHeading}
               </h2>
 
               <div className="mt-8 sm:mt-12">

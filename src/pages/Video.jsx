@@ -138,7 +138,9 @@ export default function Video() {
                 onClick={() => {
                   const slug = CATEGORY_SLUGS[category];
                   setPlaying(null);
-                  navigate(slug ? `/about/video/${slug}` : "/about/video");
+                  navigate(slug ? `/about/video/${slug}` : "/about/video", {
+                    replace: true,
+                  });
                 }}
                 className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
                   category === activeCategory
