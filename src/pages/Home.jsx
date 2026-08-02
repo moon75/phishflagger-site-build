@@ -198,7 +198,7 @@ export default function Home() {
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[560px] rounded-lg border-2 border-black object-contain"
+            className="h-auto w-full max-w-[448px] rounded-lg border-2 border-black object-contain"
           />
           <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
             Email client view from enabled Domain
@@ -444,6 +444,14 @@ export default function Home() {
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Place Holder text for Marketing home page
           </p>
+          <a
+            href="https://phishflagger.netlify.app/join/email-marketing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+          >
+            Marketing
+          </a>
         </div>
       </div>
     </section>
@@ -520,7 +528,7 @@ export default function Home() {
             <img
               src={textPhoneImg}
               alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-[280px] object-contain"
+              className="h-auto w-[171px] object-contain"
             />
             <Link
               to="/join/telecom"
@@ -532,7 +540,7 @@ export default function Home() {
           <img
             src={smsPhoneImg}
             alt="Phone displaying PhishFlagger SMS messages"
-            className="h-auto w-[280px] object-contain"
+            className="h-auto w-[200px] object-contain"
           />
         </div>
       </div>
@@ -558,12 +566,14 @@ export default function Home() {
               alt="Popular messaging companies"
               className="h-auto w-full object-contain"
             />
-            <Link
-              to="/join/telecom"
+            <a
+              href="https://phishflagger.netlify.app/join/messaging"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              Telecom
-            </Link>
+              Messaging
+            </a>
           </div>
           <img
             src={messagesPhoneImg}

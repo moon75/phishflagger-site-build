@@ -195,18 +195,33 @@ export default function JoinFree() {
                 <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
                   Step 2
                 </p>
-                <p className="mt-1 text-[13px] font-semibold text-ink">
-                  Get your Free Key
-                </p>
-                <div className="mt-4 text-center">
+
+                <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                  <div className="flex-1 rounded-md bg-white px-3 py-3 sm:px-4">
+                    <input
+                      type="text"
+                      placeholder="Enter code"
+                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                    />
+                  </div>
                   <button
                     type="button"
-                    onClick={handleCompleteJoin}
-                    className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
                   >
-                    Complete Join
+                    Get Code
                   </button>
                 </div>
+
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="button"
+                  onClick={handleCompleteJoin}
+                  className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Complete Join
+                </button>
               </div>
 
               {emailVerified && (

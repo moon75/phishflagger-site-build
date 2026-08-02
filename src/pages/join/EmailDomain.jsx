@@ -20,27 +20,18 @@ export default function EmailDomain() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
-        <div className="mx-auto max-w-content">
-          <p className="text-center text-[28px] leading-[1.5] text-ink-muted sm:text-[30px]">
-            Safeguard your domains with <BrandInline />
-            &trade; email numbering to help enhance security and prevent
-            impersonation, phishing and other email-based fraud.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="space-y-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <p>
+          <ul className="space-y-3 pl-5 text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <li className="list-disc">
               Safeguard your domains with <BrandInline />
               &trade; email numbering to help enhance security and prevent
               impersonation, phishing and other email-based fraud.
-            </p>
-          </div>
+            </li>
+            <li className="list-disc">
+              Placeholder text goes here. Replace this copy with the final
+              content.
+            </li>
+          </ul>
 
           <div className="flex justify-center lg:justify-end">
             <img
@@ -55,7 +46,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Two Ways To Join
@@ -117,7 +108,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-left sm:text-[30px]">
@@ -147,7 +138,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0006" />
+        <SectionCounter value="^0005" />
         <div className="mx-auto max-w-content text-center">
           <div className="mx-auto h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
             <img
@@ -166,7 +157,7 @@ export default function EmailDomain() {
       <Divider />
 
       <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0006" />
         <div className="mx-auto max-w-[820px] text-center">
           <a
             href="https://join.phishflagger.com/membership-form-stripe.php"
