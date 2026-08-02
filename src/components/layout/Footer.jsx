@@ -6,7 +6,7 @@ import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/ph
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import inboxImg from "../../assets/images/email-inbox v2.png";
+import inboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const PRODUCT_IMAGES = [
@@ -100,8 +100,8 @@ export default function Footer({ logoSrc = logoImg }) {
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
-              </em>
-              ™ prevents impersonation.
+              </em>{" "}
+              prevents impersonation.
               We sequentially number outgoing digital communications and validate sending domain or email.
             </p>
           </div>
@@ -286,12 +286,12 @@ export default function Footer({ logoSrc = logoImg }) {
           <p className="mx-auto mt-0.5 text-[10px] text-[#4a4a4a]">
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Flagger</strong>
-            </em>
-            ™ and{" "}
+            </em>{" "}
+            and{" "}
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Counter</strong>
-            </em>
-            ™ are Trademarks of{" "}
+            </em>{" "}
+            are Trademarks of{" "}
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Flagger</strong>
             </em>{" "}

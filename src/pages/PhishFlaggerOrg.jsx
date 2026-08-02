@@ -19,13 +19,11 @@ export default function PhishFlaggerOrg() {
 
           {/* Intro paragraph */}
           <p className="mx-auto mt-5 max-w-[640px] text-center text-[13px] leading-[1.7] text-ink sm:mt-6 sm:text-[13.5px]">
-            <BrandInline />
-            <Tm />{" "}
+            <BrandInline />{" "}
             prevents Phishing cybercrime. Our mission is to make emails safer.
             To solve this crisis, we bring together developers, email forwarders
             and consumers. Implementation of the{" "}
-            <BrandInline />
-            <Tm />{" "}
+            <BrandInline />{" "}
             Protocol can empower everyone to identify malicious Phishing
             attempts. Whether you can contribute as a developer, need resources
             or want to share your knowledge or if you have been victimized or
@@ -63,15 +61,11 @@ export default function PhishFlaggerOrg() {
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                ™
-              </span>
             </h2>
 
             <p className="mx-auto mt-4 max-w-[520px] text-[13px] leading-[1.7] text-ink sm:mt-5 lg:mx-0">
               There are a number of ways to get involved with{" "}
               <BrandInline />
-              <Tm />
               <br />
               General discussions, Questions, and Comments
               <br />
@@ -113,8 +107,4 @@ function BrandInline() {
       <span className="font-normal text-brand">Flagger</span>
     </em>
   );
-}
-
-function Tm() {
-  return <span className="ml-0.5 align-super text-[9px] not-italic">™</span>;
 }

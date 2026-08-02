@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import emailInboxImg from "../../assets/images/email-inbox v2.png";
+import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 
 const DOWNLOADS = [
@@ -76,16 +76,6 @@ export default function EmailFreePlugIn() {
                 </Link>
               </div>
             </article>
-
-            <p className="text-center text-[13.5px] text-ink-muted md:col-start-3">
-              Don&rsquo;t see your domain?{" "}
-              <Link
-                to="/joinfree/request-domain"
-                className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-              >
-                Request My Domain
-              </Link>
-            </p>
           </div>
         </div>
       </section>

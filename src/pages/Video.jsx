@@ -10,7 +10,7 @@ const BASE_VIDEOS = [
     type: "youtube",
     id: YOUTUBE_VIDEO_ID,
     title: "PhishFlagger Overview",
-    description: "How PhishFlagger™ and human validation protects against phishing and fraud.",
+    description: "How PhishFlagger and human validation protects against phishing and fraud.",
     thumb: `https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`,
   },
   {
@@ -46,7 +46,7 @@ const VIDEOS = [
   ...Array.from({ length: PLACEHOLDER_COUNT }, (_, i) => ({
     type: "placeholder",
     title: "Coming Soon",
-    description: "More PhishFlagger™ videos are on the way.",
+    description: "More PhishFlagger videos are on the way.",
   })),
 ];
 
@@ -125,7 +125,7 @@ export default function Video() {
           <div className="text-center">
             <p className="mx-auto max-w-[900px] text-[31.5px] leading-[1.6] text-ink sm:text-[33.75px]">
               {brandify(
-                "See how PhishFlagger™ and human validation protects against phishing and fraud.",
+                "See how PhishFlagger and human validation protects against phishing and fraud.",
               )}
             </p>
           </div>

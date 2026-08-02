@@ -42,9 +42,6 @@ export default function HallOfFame() {
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>
-              <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-                ™
-              </span>
             </Link>
           </div>
           <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
@@ -60,8 +57,8 @@ export default function HallOfFame() {
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
-            </em>
-            ™ from day one. Thank you.
+            </em>{" "}
+            from day one. Thank you.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">

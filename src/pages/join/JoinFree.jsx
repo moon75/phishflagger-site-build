@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 
 const DOMAIN_PROVIDERS = [
@@ -13,12 +13,6 @@ const DOMAIN_PROVIDERS = [
 
 const ALLOWED_DOMAINS = DOMAIN_PROVIDERS.map(({ domain }) => domain);
 
-const REQUIRED_MESSAGES = {
-  firstName: "First name is required.",
-  lastName: "Last name is required.",
-  email: "Email address is required.",
-};
-
 function isValidEmailFormat(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
@@ -29,31 +23,18 @@ function getDomain(email) {
 }
 
 export default function JoinFree() {
-  const [values, setValues] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    code: "",
-    address: "",
-    city: "",
-    zip: "",
-    state: "",
-    country: "",
-    phone: "",
-  });
+  const navigate = useNavigate();
+  const [values, setValues] = useState({ email: "", code: "" });
   const [errors, setErrors] = useState({});
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [emailVerified, setEmailVerified] = useState(false);
   const [codeVerified, setCodeVerified] = useState(false);
-  const [showStep3Modal, setShowStep3Modal] = useState(false);
   const inputRefs = useRef({});
 
   function validateField(fieldName, valueOverride) {
     const value = (valueOverride !== undefined ? valueOverride : values[fieldName]).trim();
 
-    if (REQUIRED_MESSAGES[fieldName] && !value) {
-      setErrors((prev) => ({ ...prev, [fieldName]: REQUIRED_MESSAGES[fieldName] }));
+    if (fieldName === "email" && !value) {
+      setErrors((prev) => ({ ...prev, email: "Email address is required." }));
       return false;
     }
 
@@ -83,10 +64,6 @@ export default function JoinFree() {
     }
   }
 
-  function handleBlur(fieldName) {
-    validateField(fieldName);
-  }
-
   function handleVerifyEmail() {
     if (!validateField("email")) {
       inputRefs.current.email?.focus();
@@ -104,32 +81,11 @@ export default function JoinFree() {
     }
     setErrors((prev) => ({ ...prev, code: "" }));
     setCodeVerified(true);
-    setShowStep3Modal(true);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const fieldNames = Object.keys(REQUIRED_MESSAGES);
-    const validity = fieldNames.map((fieldName) => [fieldName, validateField(fieldName)]);
-    const firstInvalid = validity.find(([, isValid]) => !isValid);
-
-    if (firstInvalid) {
-      const [fieldName] = firstInvalid;
-      if (inputRefs.current[fieldName]) {
-        inputRefs.current[fieldName].focus();
-      }
-      return;
-    }
-
-    setSubmitting(true);
-
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-      setShowStep3Modal(false);
-      console.log("Registration submitted:", values);
-    }, 900);
+  function handleJoin() {
+    if (!codeVerified) return;
+    navigate("/joinfree/register", { state: { email: values.email } });
   }
 
   return (
@@ -149,102 +105,103 @@ export default function JoinFree() {
           </div>
 
           {/* ===== Form ===== */}
-          {!submitted ? (
-            <form
-              onSubmit={handleSubmit}
-              className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
+          <div className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14">
+            <div
+              className={`transition-opacity ${
+                emailVerified ? "pointer-events-none opacity-50" : ""
+              }`}
             >
-              <div className={`transition-opacity ${emailVerified ? "opacity-50" : ""}`}>
-                <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                  Step 1
-                </p>
+              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                Step 1
+              </p>
 
-                <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                  <div className="flex-1">
-                    <Field label="Email Address" error={errors.email}>
-                      <input
-                        type="email"
-                        id="email"
-                        autoComplete="email"
-                        required
-                        disabled={emailVerified}
-                        ref={(el) => (inputRefs.current.email = el)}
-                        value={values.email}
-                        onChange={(e) => handleChange("email", e.target.value)}
-                        onBlur={() => handleBlur("email")}
-                        placeholder="you@gmail.com"
-                        className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                      />
-                    </Field>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={handleVerifyEmail}
-                    disabled={emailVerified}
-                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
-                  >
-                    {emailVerified ? "Email Verified" : "Verify Email"}
-                  </button>
-                </div>
-              </div>
-
-              <div
-                className={`transition-opacity ${
-                  emailVerified ? "" : "pointer-events-none opacity-50"
-                }`}
-              >
-                <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                  Step 2
-                </p>
-
-                <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                  <div className="flex-1">
-                    <Field label="Enter the code we sent to you email." error={errors.code}>
-                      <input
-                        type="text"
-                        id="code"
-                        autoComplete="one-time-code"
-                        disabled={!emailVerified || codeVerified}
-                        ref={(el) => (inputRefs.current.code = el)}
-                        value={values.code}
-                        onChange={(e) => handleChange("code", e.target.value)}
-                        placeholder="Enter code"
-                        className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                      />
-                    </Field>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={handleVerifyCode}
-                    disabled={!emailVerified || codeVerified}
-                    className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
-                  >
-                    {codeVerified ? "Code Verified" : "Verify Code"}
-                  </button>
-                </div>
-              </div>
-            </form>
-          ) : (
-            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
-              <div className="flex flex-col items-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path
-                      d="M8 12.5l2.5 2.5L16 9.5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+              <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                <div className="flex-1">
+                  <Field label="Email Address" error={errors.email}>
+                    <input
+                      type="email"
+                      id="email"
+                      autoComplete="email"
+                      required
+                      disabled={emailVerified}
+                      ref={(el) => (inputRefs.current.email = el)}
+                      value={values.email}
+                      onChange={(e) => handleChange("email", e.target.value)}
+                      placeholder="you@gmail.com"
+                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
                     />
-                  </svg>
-                </span>
-                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
-                <p className="mt-2 text-[15px] text-ink-muted">
-                  Check your inbox shortly for your Thunderbird Plugin license.
-                </p>
+                  </Field>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleVerifyEmail}
+                  disabled={emailVerified}
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                >
+                  {emailVerified ? "Email Verified" : "Verify Email"}
+                </button>
               </div>
             </div>
-          )}
+
+            <div
+              className={`transition-opacity ${
+                emailVerified ? "" : "pointer-events-none opacity-50"
+              } ${codeVerified ? "pointer-events-none opacity-50" : ""}`}
+            >
+              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
+                Step 2
+              </p>
+
+              <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
+                <div className="flex-1">
+                  <Field label="Enter the code we sent to you email." error={errors.code}>
+                    <input
+                      type="text"
+                      id="code"
+                      autoComplete="one-time-code"
+                      disabled={!emailVerified || codeVerified}
+                      ref={(el) => (inputRefs.current.code = el)}
+                      value={values.code}
+                      onChange={(e) => handleChange("code", e.target.value)}
+                      placeholder="Enter code"
+                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                    />
+                  </Field>
+                  {codeVerified && (
+                    <p className="mt-2 flex items-center gap-2 text-[14px] font-semibold text-[#16a34a]">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#16a34a] text-[11px] font-bold leading-none text-white">
+                        ✓
+                      </span>
+                      Your Code is Valid
+                    </p>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={handleVerifyCode}
+                  disabled={!emailVerified || codeVerified}
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                >
+                  {codeVerified ? "Code Verified" : "Verify Code"}
+                </button>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={handleJoin}
+                disabled={!codeVerified}
+                className={`h-[50px] w-full cursor-pointer rounded-md px-6 text-[15px] font-semibold shadow-sm transition-colors disabled:cursor-default ${
+                  codeVerified
+                    ? "bg-[#585858] text-white hover:bg-[#3f3f3f]"
+                    : "bg-[#e4e6ea] text-[#c7cad0]"
+                }`}
+              >
+                Join
+              </button>
+            </div>
+          </div>
 
           {/* ===== Available domains ===== */}
           <div className="mx-auto mt-10 max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4 sm:mt-14">
@@ -275,154 +232,11 @@ export default function JoinFree() {
           </div>
         </div>
       </section>
-
-      {showStep3Modal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-8">
-          <div className="max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-lg bg-white p-6 shadow-xl sm:p-8">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-[13px] font-semibold text-ink-muted">Email</p>
-                <p className="mt-1 text-[15px] font-semibold text-ink">{values.email}</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowStep3Modal(false)}
-                aria-label="Close"
-                className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full text-ink-muted transition-colors hover:bg-[#f4f5f8] hover:text-ink"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-4 w-4" aria-hidden>
-                  <path d="M6 6l12 12M6 18L18 6" />
-                </svg>
-              </button>
-            </div>
-
-            <form onSubmit={handleSubmit} className="mt-6 space-y-6">
-              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                Step 3
-              </p>
-
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <Field label="First Name" error={errors.firstName}>
-                  <input
-                    type="text"
-                    id="firstName"
-                    autoComplete="given-name"
-                    required
-                    ref={(el) => (inputRefs.current.firstName = el)}
-                    value={values.firstName}
-                    onChange={(e) => handleChange("firstName", e.target.value)}
-                    onBlur={() => handleBlur("firstName")}
-                    placeholder="First Name"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-
-                <Field label="Last Name" error={errors.lastName}>
-                  <input
-                    type="text"
-                    id="lastName"
-                    autoComplete="family-name"
-                    required
-                    ref={(el) => (inputRefs.current.lastName = el)}
-                    value={values.lastName}
-                    onChange={(e) => handleChange("lastName", e.target.value)}
-                    onBlur={() => handleBlur("lastName")}
-                    placeholder="Last Name"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-              </div>
-
-              <Field label="Address">
-                <textarea
-                  rows={2}
-                  autoComplete="street-address"
-                  value={values.address}
-                  onChange={(e) => handleChange("address", e.target.value)}
-                  placeholder="Address"
-                  className="w-full resize-none bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                />
-              </Field>
-
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                <Field label="City">
-                  <input
-                    type="text"
-                    autoComplete="address-level2"
-                    value={values.city}
-                    onChange={(e) => handleChange("city", e.target.value)}
-                    placeholder="City"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-                <Field label="Zip/Postal Code">
-                  <input
-                    type="text"
-                    autoComplete="postal-code"
-                    value={values.zip}
-                    onChange={(e) => handleChange("zip", e.target.value)}
-                    placeholder="Zip/Postal Code"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-                <Field label="Province/State">
-                  <input
-                    type="text"
-                    autoComplete="address-level1"
-                    value={values.state}
-                    onChange={(e) => handleChange("state", e.target.value)}
-                    placeholder="Province/State"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-              </div>
-
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <Field label="Country">
-                  <input
-                    type="text"
-                    autoComplete="country-name"
-                    value={values.country}
-                    onChange={(e) => handleChange("country", e.target.value)}
-                    placeholder="Country"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-                <Field label="Phone Number (optional)">
-                  <input
-                    type="tel"
-                    autoComplete="tel"
-                    value={values.phone}
-                    onChange={(e) => handleChange("phone", e.target.value)}
-                    placeholder="Phone Number"
-                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
-                  />
-                </Field>
-              </div>
-
-              <div className="flex flex-col items-center gap-4 pt-2">
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:opacity-70"
-                >
-                  {submitting ? "Joining..." : "Join Free"}
-                </button>
-                <p className="text-center text-[12.5px] text-ink-muted">
-                  By submitting, you agree to receive your plugin license by email. We never
-                  share your information. You will receive an email shortly, and it will
-                  contain the license for your email address.
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </>
   );
 }
 
-function Field({ label, children, error }) {
+export function Field({ label, children, error }) {
   return (
     <label className="block">
       <span className="mb-2 block text-[14px] font-semibold text-ink sm:text-[15px]">

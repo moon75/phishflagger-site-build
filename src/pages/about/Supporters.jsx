@@ -62,9 +62,6 @@ export default function Supporters() {
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>
-            <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-              ™
-            </span>
           </Link>
           <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications

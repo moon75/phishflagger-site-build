@@ -2,34 +2,32 @@
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v4-transparent.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
+import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 
 export default function EmailDomain() {
   return (
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
-        <div className="mx-auto max-w-content">
-          <p className="text-center text-[34px] font-semibold leading-tight tracking-tight sm:text-[46px] lg:text-[54px]">
-            Corporate
-          </p>
-        </div>
-      </section>
-
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-            <li className="list-disc">
-              Safeguard your domains with <BrandInline />
-              &trade; email numbering to help enhance security and prevent
-              impersonation, phishing and other email-based fraud.
-            </li>
-            <li className="list-disc">
-              Placeholder text goes here. Replace this copy with the final
-              content.
-            </li>
-          </ul>
+          <div>
+            <h2 className="mb-6 text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
+              Corporate
+            </h2>
+            <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+              <li className="list-disc">
+                Safeguard your domains with <BrandInline />
+                &trade; email numbering to help enhance security and prevent
+                impersonation, phishing and other email-based fraud.
+              </li>
+              <li className="list-disc">
+                Placeholder text goes here. Replace this copy with the final
+                content.
+              </li>
+            </ul>
+          </div>
 
           <div className="flex justify-center lg:justify-end">
             <img
@@ -137,12 +135,19 @@ export default function EmailDomain() {
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex flex-wrap justify-center gap-6">
             <div className="h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex h-[240px] w-[240px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
+              <img
+                src={emailInboxImg}
+                alt="PhishFlagger inbox showing numbered emails"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
@@ -158,7 +163,7 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <SectionCounter value="^0006" />
         <div className="mx-auto max-w-[820px] text-center">
           <a

@@ -1,0 +1,236 @@
+import { useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import CloseButton from "../../components/ui/CloseButton.jsx";
+import { Field } from "./JoinFree.jsx";
+
+const REQUIRED_MESSAGES = {
+  firstName: "First name is required.",
+  lastName: "Last name is required.",
+};
+
+export default function JoinFreeRegister() {
+  const location = useLocation();
+  const email = location.state?.email || "";
+
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+    city: "",
+    zip: "",
+    state: "",
+    country: "",
+    phone: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const inputRefs = useRef({});
+
+  function validateField(fieldName) {
+    const value = values[fieldName].trim();
+    if (REQUIRED_MESSAGES[fieldName] && !value) {
+      setErrors((prev) => ({ ...prev, [fieldName]: REQUIRED_MESSAGES[fieldName] }));
+      return false;
+    }
+    setErrors((prev) => ({ ...prev, [fieldName]: "" }));
+    return true;
+  }
+
+  function handleChange(fieldName, value) {
+    setValues((prev) => ({ ...prev, [fieldName]: value }));
+    if (errors[fieldName]) {
+      validateField(fieldName);
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const fieldNames = Object.keys(REQUIRED_MESSAGES);
+    const validity = fieldNames.map((fieldName) => [fieldName, validateField(fieldName)]);
+    const firstInvalid = validity.find(([, isValid]) => !isValid);
+
+    if (firstInvalid) {
+      const [fieldName] = firstInvalid;
+      if (inputRefs.current[fieldName]) {
+        inputRefs.current[fieldName].focus();
+      }
+      return;
+    }
+
+    setSubmitting(true);
+
+    setTimeout(() => {
+      setSubmitting(false);
+      setSubmitted(true);
+      console.log("Registration submitted:", { email, ...values });
+    }, 900);
+  }
+
+  return (
+    <>
+      <CloseButton to="/joinfree" />
+
+      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+        <div className="mx-auto max-w-content">
+          <div className="text-center">
+            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+              Complete Your Registration
+            </h1>
+            {email && (
+              <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
+                {email}
+              </p>
+            )}
+          </div>
+
+          {!submitted ? (
+            <form
+              onSubmit={handleSubmit}
+              className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
+            >
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <Field label="First Name" error={errors.firstName}>
+                  <input
+                    type="text"
+                    id="firstName"
+                    autoComplete="given-name"
+                    required
+                    ref={(el) => (inputRefs.current.firstName = el)}
+                    value={values.firstName}
+                    onChange={(e) => handleChange("firstName", e.target.value)}
+                    placeholder="First Name"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+
+                <Field label="Last Name" error={errors.lastName}>
+                  <input
+                    type="text"
+                    id="lastName"
+                    autoComplete="family-name"
+                    required
+                    ref={(el) => (inputRefs.current.lastName = el)}
+                    value={values.lastName}
+                    onChange={(e) => handleChange("lastName", e.target.value)}
+                    placeholder="Last Name"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <Field label="Address">
+                <textarea
+                  rows={2}
+                  autoComplete="street-address"
+                  value={values.address}
+                  onChange={(e) => handleChange("address", e.target.value)}
+                  placeholder="Address"
+                  className="w-full resize-none bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                />
+              </Field>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <Field label="City">
+                  <input
+                    type="text"
+                    autoComplete="address-level2"
+                    value={values.city}
+                    onChange={(e) => handleChange("city", e.target.value)}
+                    placeholder="City"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Zip/Postal Code">
+                  <input
+                    type="text"
+                    autoComplete="postal-code"
+                    value={values.zip}
+                    onChange={(e) => handleChange("zip", e.target.value)}
+                    placeholder="Zip/Postal Code"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Province/State">
+                  <input
+                    type="text"
+                    autoComplete="address-level1"
+                    value={values.state}
+                    onChange={(e) => handleChange("state", e.target.value)}
+                    placeholder="Province/State"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <Field label="Country">
+                  <input
+                    type="text"
+                    autoComplete="country-name"
+                    value={values.country}
+                    onChange={(e) => handleChange("country", e.target.value)}
+                    placeholder="Country"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+                <Field label="Phone Number (optional)">
+                  <input
+                    type="tel"
+                    autoComplete="tel"
+                    value={values.phone}
+                    onChange={(e) => handleChange("phone", e.target.value)}
+                    placeholder="Phone Number"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+                  />
+                </Field>
+              </div>
+
+              <div className="flex flex-col items-center gap-4 pt-2">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:opacity-70"
+                >
+                  {submitting ? "Joining..." : "Join Free"}
+                </button>
+                <p className="text-center text-[12.5px] text-ink-muted">
+                  By submitting, you agree to receive your plugin license by email. We never
+                  share your information. You will receive an email shortly, and it will
+                  contain the license for your email address.
+                </p>
+              </div>
+            </form>
+          ) : (
+            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
+              <div className="flex flex-col items-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path
+                      d="M8 12.5l2.5 2.5L16 9.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
+                <p className="mt-2 text-[15px] text-ink-muted">
+                  Check your inbox shortly for your Thunderbird Plugin license.
+                </p>
+                <Link
+                  to="/"
+                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Back to Home
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  );
+}

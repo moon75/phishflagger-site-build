@@ -1,7 +1,7 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
-import inboxImg from "../../assets/images/email-inbox v2.png";
+import inboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 import marketerImg from "../../assets/images/email-marketing-verified-v6.png";
 
 export default function EmailMarketing() {
@@ -31,7 +31,7 @@ export default function EmailMarketing() {
               increasing your campaign reach.
             </p>
             <p>
-              Protect all email recipients from phishing and fraud.
+              Protect your email recipients from phishing and fraud.
             </p>
           </div>
 

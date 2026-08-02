@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import infoBoxImg from "../assets/images/email-inbox v2.png";
-import heroInfoBoxImg from "../assets/images/email-inbox v2.png";
+import infoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
+import heroInfoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
-const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work.png";
+const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v6.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
@@ -17,6 +17,7 @@ import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 const smsPhoneImg = "/assets/images/only%204%20messages%20now.png";
 import messagingIconsImg from "../assets/images/Icons-2.png";
+import cloudServerImg from "../assets/images/digital-domain-diagram-v4-transparent.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg },
@@ -47,7 +48,7 @@ export default function Home() {
       </h1>
 
       <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5]">
-        <BrandInline />™ protects consumers and companies from brand
+        <BrandInline /> protects consumers and companies from brand
         destruction by imposters. We secure Email, Text, SMS, Instant Messaging
         and CallerID through sequential numbering.
       </p>
@@ -92,194 +93,19 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 2 — How Does PhishFlagger Work? (white) ===== */}
+    {/* ===== Section 1b — Top Links (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0002" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        <div className="flex flex-col items-center lg:items-start">
-          <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
-            How Does{" "}
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span> Work?
-          </h2>
-          <img
-            src={howDoesItWorkImg}
-            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-            className="h-auto w-full max-w-[480px] object-contain"
-          />
-        </div>
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Human.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" />™ adds a unique, sequential
-              identifier to the subject line called the{" "}
-              <BrandInline trail="Counter" />™ on every outgoing communication.
-              Recipients can quickly verify if the sequence matches the
-              previous email they received from the same sender. If the
-              number is missing or out of sequence, it provides an immediate
-              warning that the message may not be authentic, giving users a
-              simple way to spot phishing attempts.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Digital.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" />™ strengthens email
-              authentication by verifying sender identity at the domain
-              level. Working alongside existing email security standards and
-              authentication technologies, our domain validation screens
-              messages that originate from authorized senders, adding an
-              extra layer of protection against impersonation and phishing
-              attacks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 3 — What is PhishFlagger? (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0003" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        {/* Left — heading + bullets */}
-        <div>
-          <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span> Human
-          </h2>
-
-          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>Provides a defense against impersonation and fraud.</span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Human-compatible solution that validates legitimate
-                communications and highlights fraud attempts.
-              </span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Provides protection by adding a unique sequential number, the{" "}
-                <em className="italic font-semibold">
-                  <span className="text-ink">Phish</span>
-                  <span className="text-brand">Flagger</span>
-                </em>
-                <span className="not-italic">™</span>, visible to the user.
-              </span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Flags fraud attempts that do not have the expected sequential
-                number.
-              </span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Right — info box image */}
-        <div className="flex flex-col items-center">
-          <img
-            src={infoBoxImg}
-            alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[448px] rounded-lg border-2 border-black object-contain"
-          />
-          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-            Email client view from enabled Domain
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 4 — Domain protection (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0004" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        {/* Left — email authentication diagram */}
-        <div className="flex justify-center lg:justify-start">
-          <div className="w-full max-w-[560px] rounded-2xl border-2 border-black p-6 sm:p-8">
-            <img
-              src={domainProtectionImg}
-              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Right — heading + subheading */}
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span>
-            <br />
-            Email Domain protection
-          </h2>
-          <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
-            Domain Protection
-          </h3>
-          <p className="mt-2 text-[15px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.55]">
-            PlaceHolder text for Domain Protection SPF
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 5 — Individual protection: Free Plug-In (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0005" />
-      <div className="mx-auto max-w-content">
-        <div className="flex justify-center">
-          <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
-            <img
-              src={outlookImg}
-              alt="Microsoft Outlook"
-              className="h-full w-1/2 rounded-xl object-contain"
-            />
-            <img
-              src="/assets/images/thunderbird new pick.avif"
-              alt="Mozilla Thunderbird"
-              className="h-full w-1/2 rounded-xl object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 6 — Who Can Use (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0006" />
+      <SectionCounter value="^0001" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="font-normal not-italic">™</span> Email
+            Top Links
           </h2>
           <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:mt-6 sm:text-[16px] sm:leading-[1.6]">
-            <BrandInline />™ is designed for individuals and organizations who
+            <BrandInline /> is designed for individuals and organizations who
             want greater confidence in the authenticity of their emails.
             Whether you are using a custom domain or a supported email
-            service, <BrandInline />™ adds an extra layer of protection
+            service, <BrandInline /> adds an extra layer of protection
             against phishing and email impersonation.
           </p>
         </div>
@@ -351,6 +177,206 @@ export default function Home() {
       </div>
     </section>
 
+    {/* ===== Section 2 — How Does PhishFlagger Work? (gray) ===== */}
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0002" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+        <div className="flex flex-col items-center lg:items-start">
+          <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
+            How Does{" "}
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            Work?
+          </h2>
+          <img
+            src={howDoesItWorkImg}
+            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
+            className="h-auto w-full max-w-[480px] object-contain"
+          />
+        </div>
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Human.
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <BrandInline trail="Flagger" /> adds a unique, sequential
+              identifier to the subject line called the{" "}
+              <BrandInline trail="Counter" /> on every outgoing communication.
+              Recipients can quickly verify if the sequence matches the
+              previous email they received from the same sender. If the
+              number is missing or out of sequence, it provides an immediate
+              warning that the message may not be authentic, giving users a
+              simple way to spot phishing attempts.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
+              Digital.
+            </h2>
+            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <BrandInline trail="Flagger" /> strengthens email
+              authentication by verifying sender identity at the domain
+              level. Working alongside existing email security standards and
+              authentication technologies, our domain validation screens
+              messages that originate from authorized senders, adding an
+              extra layer of protection against impersonation and phishing
+              attacks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 3 — What is PhishFlagger? (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0003" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+        {/* Left — heading + bullets */}
+        <div>
+          <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            Human
+          </h2>
+
+          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>Provides a defense against impersonation and fraud.</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Human-compatible solution that validates legitimate
+                communications and highlights fraud attempts.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Provides protection by adding a unique sequential number, the{" "}
+                <em className="italic font-semibold">
+                  <span className="text-ink">Phish</span>
+                  <span className="text-brand">Flagger</span>
+                </em>
+                , visible to the user.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Flags fraud attempts that do not have the expected sequential
+                number.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right — info box image */}
+        <div className="flex flex-col items-center">
+          <img
+            src={infoBoxImg}
+            alt="PhishFlagger inbox demonstration"
+            className="h-auto w-full max-w-[448px] rounded-lg border-2 border-black object-contain"
+          />
+          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 4 — Domain protection (gray) ===== */}
+    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0004" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+        {/* Left — email authentication diagram */}
+        <div className="flex justify-center lg:justify-start">
+          <div className="w-full max-w-[560px] rounded-2xl border-2 border-black p-6 sm:p-8">
+            <img
+              src={domainProtectionImg}
+              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Right — heading + subheading */}
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <br />
+            Email Domain protection
+          </h2>
+          <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
+            Domain Protection
+          </h3>
+          <p className="mt-2 text-[15px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.55]">
+            PlaceHolder text for Domain Protection SPF
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0005" />
+      <div className="mx-auto max-w-content">
+        <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          Two Options.
+        </h2>
+        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-6 sm:mt-16 sm:gap-16">
+          <div className="flex w-auto flex-col items-center">
+            <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+              Plug-In
+            </span>
+            <div className="flex h-[140px] w-[140px] items-center justify-center gap-2 rounded-xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[225px] sm:w-[225px] sm:gap-3 sm:p-6">
+              <img
+                src={outlookImg}
+                alt="Microsoft Outlook"
+                className="h-full w-1/2 rounded-xl object-contain"
+              />
+              <img
+                src="/assets/images/thunderbird new pick.avif"
+                alt="Mozilla Thunderbird"
+                className="h-full w-1/2 rounded-xl object-contain"
+              />
+            </div>
+            <p className="mt-5 max-w-[280px] text-center text-[15px] leading-[1.65] text-ink sm:text-[16px]">
+              Free for Individuals.
+              <br />
+              Perfect for small business.
+            </p>
+          </div>
+
+          <div className="flex w-auto flex-col items-center">
+            <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+              Domain Appliance
+            </span>
+            <div className="h-[140px] w-[140px] overflow-hidden rounded-xl border-2 border-black sm:h-[225px] sm:w-[225px]">
+              <img
+                src={cloudServerImg}
+                alt="Cloud connected to a server appliance"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <p className="mt-5 max-w-[280px] text-center text-[15px] leading-[1.65] text-ink sm:text-[16px]">
+              Our Appliance will enable the protocol across your entire
+              Domain. No Install or Downloads required by users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* ===== Section 7 — Caller ID (gray) ===== */}
     <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0007" />
@@ -364,7 +390,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline />™ Email Marketing
+            <BrandInline /> Email Marketing
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Place Holder text for Marketing home page
@@ -413,7 +439,7 @@ export default function Home() {
         {/* Right — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline />™ for Telecom / Caller ID
+            <BrandInline /> for Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.
@@ -446,11 +472,11 @@ export default function Home() {
       <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
-          <h2 className="text-[32px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[40px] lg:text-[46px]">
-            <BrandInline />™ for Telecom / SMS
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <BrandInline /> for Telecom / SMS
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Phishing doesn't stop at email. <BrandInline />™ for Telecom and
+            Phishing doesn't stop at email. <BrandInline /> for Telecom and
             Text adds an additional layer of verification to SMS and mobile
             messaging, helping protect customers from text-based scams and
             impersonation.
@@ -484,7 +510,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline />™ for Messages
+            <BrandInline /> for Messages
           </h2>
           <p className="mt-5 max-w-[420px] text-[15px] leading-[1.65] text-ink-muted sm:text-[16px]">
             Placeholder text goes here. Replace this copy with the final

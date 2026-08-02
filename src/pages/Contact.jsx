@@ -81,9 +81,6 @@ export default function Contact() {
                       Flagger
                     </span>
                   </em>
-                  <span className="ml-0.5 align-super text-[9px] not-italic">
-                    ™
-                  </span>
                 </div>
                 <a
                   href="mailto:contact@PhishFlagger.com"
