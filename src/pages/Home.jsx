@@ -90,7 +90,13 @@ export default function Home() {
   return (
     <>
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+      }}
+    >
       <div className="mx-auto max-w-content">
       {/* Logo */}
       <div className="flex items-center justify-center">
