@@ -46,50 +46,49 @@ export default function EmailDomain() {
             Two Ways To Join
           </h2>
           <div className="mx-auto mt-10 grid max-w-[820px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
-            <div className="flex flex-col items-center">
-              <h3 className="text-[22px] font-semibold text-ink sm:text-[26px]">
-                Plug-In
-              </h3>
-              <div className="mt-5 flex h-[220px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
+            <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="flex h-[200px] items-center justify-center gap-4 bg-gradient-to-b from-[#f7f8fb] to-[#eef0f5] px-8">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-full w-1/2 rounded-xl object-contain"
+                  className="h-[72px] w-[72px] rounded-2xl border border-black/20 object-contain"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-full w-1/2 rounded-xl object-contain"
+                  className="h-[72px] w-[72px] rounded-2xl border border-black/20 object-contain"
                 />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 border-t-2 border-black p-7">
+                <div className="flex items-center gap-2.5">
+                  <span className="h-[3px] w-6 rounded-full bg-brand" />
+                  <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+                    Plug-In
+                  </h3>
+                </div>
+                <p className="text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  Placeholder text goes here. Replace this copy with the
+                  final content.
+                </p>
               </div>
             </div>
 
-            <div className="flex flex-col items-center">
-              <h3 className="text-[22px] font-semibold text-ink sm:text-[26px]">
-                Domain
-              </h3>
-              <div className="mt-5 h-[220px] w-full max-w-[360px] overflow-hidden rounded-2xl border-2 border-black">
+            <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="h-[200px] overflow-hidden">
                 <img
                   src={digitalDomainImg}
                   alt="Digital diagram showing email server, domain records check, sending domain validation, and verified result"
                   className="h-full w-full object-cover"
                 />
               </div>
-            </div>
-          </div>
-
-          <div className="mx-auto mt-8 grid max-w-[820px] grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
-            <div className="flex flex-col items-center">
-              <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
-                <p className="text-center text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
-                  Placeholder text goes here. Replace this copy with the final
-                  content.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex h-[220px] w-full max-w-[360px] items-center justify-center rounded-2xl border-2 border-black bg-[#f7f8fb] p-6">
-                <ul className="space-y-2 pl-5 text-left text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
+              <div className="flex flex-1 flex-col gap-3 border-t-2 border-black p-7">
+                <div className="flex items-center gap-2.5">
+                  <span className="h-[3px] w-6 rounded-full bg-brand" />
+                  <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+                    Domain
+                  </h3>
+                </div>
+                <ul className="space-y-2 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted marker:text-brand sm:text-[15px]">
                   <li className="list-disc">
                     Domain protection for Microsoft, Google and Linux email
                     servers.

@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import williamImg from "../../assets/images/william.avif";
 
 export function TelecomFormPage({
   title,
@@ -63,61 +64,89 @@ export function TelecomFormPage({
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
-          <div className="space-y-8 sm:space-y-10">
-            <div className="flex items-start gap-4 sm:gap-6">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-gray-300 sm:h-12 sm:w-12">
+          <div className="flex flex-wrap items-start gap-8 sm:gap-10">
+            <div className="space-y-4 sm:space-y-5">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-300 sm:h-12 sm:w-12">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-5 w-5 text-ink"
+                    aria-hidden
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                </span>
+                <div>
+                  <div className="text-[15px]">
+                    <em className="italic">
+                      <span className="font-extrabold text-ink">Phish</span>
+                      <span className="font-normal text-brand italic">
+                        Flagger
+                      </span>
+                    </em>
+                    <span className="ml-0.5 align-super text-[9px] not-italic">
+                      &trade;
+                    </span>
+                  </div>
+                  <a
+                    href="mailto:callerid@phishflagger.com"
+                    className="mt-1 inline-block text-[15px] text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  >
+                    callerid@phishflagger.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="text-[14px] leading-[1.7] text-ink sm:text-[15px]">
+                <div>
+                  <em className="italic">
+                    <span className="font-extrabold text-ink">Phish</span>
+                    <span className="font-normal text-brand italic">Flagger</span>
+                  </em>
+                  <span className="font-semibold text-ink">.com</span>
+                </div>
+                <div className="mt-4">
+                  <em className="italic">
+                    <span className="font-extrabold text-ink">Phish</span>
+                    <span className="font-normal text-brand italic">Flagger</span>
+                  </em>
+                  <span className="font-semibold text-ink"> Inc.</span>
+                </div>
+                <div>2300 Yonge Street, Suite 1600</div>
+                <div>Toronto, ON M4P 1E4</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.8"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-5 w-5 text-ink"
+                  className="h-14 w-14 text-ink"
                   aria-hidden
                 >
                   <rect x="3" y="5" width="18" height="14" rx="2" />
                   <path d="M3 7l9 6 9-6" />
                 </svg>
-              </span>
-              <div>
-                <div className="text-[15px]">
-                  <em className="italic">
-                    <span className="font-extrabold text-ink">Phish</span>
-                    <span className="font-normal text-brand italic">
-                      Flagger
-                    </span>
-                  </em>
-                  <span className="ml-0.5 align-super text-[9px] not-italic">
-                    &trade;
-                  </span>
-                </div>
-                <a
-                  href="mailto:callerid@phishflagger.com"
-                  className="mt-1 inline-block text-[15px] text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-                >
-                  callerid@phishflagger.com
-                </a>
               </div>
-            </div>
 
-            <div className="text-[14px] leading-[1.7] text-ink sm:text-[15px]">
-              <div>
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand italic">Flagger</span>
-                </em>
-                <span className="font-semibold text-ink">.com</span>
+              <div className="h-36 w-36 overflow-hidden rounded-lg border-2 border-black">
+                <img
+                  src={williamImg}
+                  alt="William Pearce"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="mt-4">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand italic">Flagger</span>
-                </em>
-                <span className="font-semibold text-ink"> Inc.</span>
-              </div>
-              <div>2300 Yonge Street, Suite 1600</div>
-              <div>Toronto, ON M4P 1E4</div>
             </div>
           </div>
 

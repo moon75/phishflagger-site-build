@@ -25,12 +25,12 @@ const DOWNLOADS = [
 ];
 
 const PROVIDERS = [
-  "Outlook.com",
   "Gmail.com",
-  "Live.com",
   "Yahoo.com",
-  "AOL.com",
+  "Outlook.com",
+  "Live.com",
   "Hotmail.com",
+  "AOL.com",
 ];
 
 export default function EmailFreePlugIn() {

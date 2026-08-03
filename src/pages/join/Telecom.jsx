@@ -92,7 +92,7 @@ export default function Telecom() {
 
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
               Human-compatible solution that validates legitimate
@@ -109,6 +109,9 @@ export default function Telecom() {
               Flags fraud attempts that do not have the expected sequential
               number.
             </li>
+            <li className="list-disc">
+              Provides immediate protection even with old Handsets.
+            </li>
           </ul>
           <div className="flex items-center justify-center gap-6">
             <img
@@ -117,8 +120,8 @@ export default function Telecom() {
               className="h-auto w-full max-w-[160px] object-contain"
             />
             <img
-              src={callerIdBoxImg}
-              alt="Caller ID box showing a PhishCounter sequence number"
+              src={desktopPhoneImg}
+              alt="Caller ID box with PhishCounter sequence number"
               className="h-auto w-full max-w-[210px] object-contain"
             />
           </div>
@@ -127,21 +130,12 @@ export default function Telecom() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0006" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
-            <li className="list-disc">
-              As the Caller ID rail is interoperable between technologies and
-              carriers globally, a sequence number can be implemented easily to
-              authenticate calls and help prevent fraud.
-            </li>
-            <li className="list-disc">
-              Provides immediate protection even with old Handsets.
-            </li>
-          </ul>
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
+          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left"></ul>
           <div className="flex justify-center">
             <img
-              src={desktopPhoneImg}
-              alt="Caller ID box with PhishCounter sequence number"
+              src={callerIdBoxImg}
+              alt="Caller ID box showing a PhishCounter sequence number"
               className="h-auto w-full max-w-[320px] object-contain"
             />
           </div>
@@ -150,7 +144,7 @@ export default function Telecom() {
 
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0007" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
               src="/assets/images/image-stir.png"
@@ -181,7 +175,7 @@ export default function Telecom() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0008" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
               src="/assets/images/existing%20CLI.jpg"

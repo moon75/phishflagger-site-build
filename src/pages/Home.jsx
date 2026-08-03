@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
-import whoCanUseImg from "../assets/images/email-marketing-verified-v6.png";
+import whoCanUseImg from "../assets/images/email-marketing-verified-v8.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -15,7 +15,7 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-const smsPhoneImg = "/assets/images/only%204%20messages%20now.png";
+const smsPhoneImg = "/assets/images/sms-messages-staircase-transparent-v2.png";
 import messagingIconsImg from "../assets/images/Icons-2.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v4-transparent.png";
 
@@ -108,6 +108,12 @@ export default function Home() {
             service, <BrandInline /> adds an extra layer of protection
             against phishing and email impersonation.
           </p>
+          <Link
+            to="/help/endorse-us"
+            className="mt-4 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[16px]"
+          >
+            Endorse Us
+          </Link>
         </div>
         <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-end">
           <div className="flex w-auto flex-col items-center">
@@ -322,6 +328,12 @@ export default function Home() {
           <p className="mt-2 text-[15px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.55]">
             PlaceHolder text for Domain Protection SPF
           </p>
+          <Link
+            to="/digital-ino"
+            className="mt-2 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+          >
+            More info Here.
+          </Link>
         </div>
       </div>
     </section>
@@ -333,45 +345,49 @@ export default function Home() {
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           Two Options.
         </h2>
-        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-6 sm:mt-16 sm:gap-16">
+        <div className="mx-auto mt-10 flex flex-wrap items-start justify-center gap-10 sm:mt-16 sm:gap-14">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Plug-In
             </span>
-            <div className="flex h-[140px] w-[140px] items-center justify-center gap-2 rounded-xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[225px] sm:w-[225px] sm:gap-3 sm:p-6">
-              <img
-                src={outlookImg}
-                alt="Microsoft Outlook"
-                className="h-full w-1/2 rounded-xl object-contain"
-              />
-              <img
-                src="/assets/images/thunderbird new pick.avif"
-                alt="Mozilla Thunderbird"
-                className="h-full w-1/2 rounded-xl object-contain"
-              />
+            <div className="flex w-[280px] flex-col overflow-hidden rounded-2xl border-2 border-black sm:w-[480px]">
+              <div className="flex h-[200px] items-center justify-center gap-2 bg-[#f7f8fb] p-3 sm:h-[260px] sm:gap-3 sm:p-6">
+                <img
+                  src={outlookImg}
+                  alt="Microsoft Outlook"
+                  className="h-full w-1/2 rounded-xl object-contain"
+                />
+                <img
+                  src="/assets/images/thunderbird new pick.avif"
+                  alt="Mozilla Thunderbird"
+                  className="h-full w-1/2 rounded-xl object-contain"
+                />
+              </div>
+              <p className="border-t-2 border-black p-4 text-center text-[13px] leading-[1.6] text-ink sm:p-5 sm:text-[15px]">
+                Free for Individuals.
+                <br />
+                Perfect for small business.
+              </p>
             </div>
-            <p className="mt-5 max-w-[280px] text-center text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              Free for Individuals.
-              <br />
-              Perfect for small business.
-            </p>
           </div>
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="h-[140px] w-[140px] overflow-hidden rounded-xl border-2 border-black sm:h-[225px] sm:w-[225px]">
-              <img
-                src={cloudServerImg}
-                alt="Cloud connected to a server appliance"
-                className="h-full w-full object-cover"
-              />
+            <div className="flex w-[280px] flex-col overflow-hidden rounded-2xl border-2 border-black sm:w-[480px]">
+              <div className="h-[200px] sm:h-[260px]">
+                <img
+                  src={cloudServerImg}
+                  alt="Cloud connected to a server appliance"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <p className="border-t-2 border-black p-4 text-center text-[13px] leading-[1.6] text-ink sm:p-5 sm:text-[15px]">
+                Our Appliance will enable the protocol across your entire
+                Domain. No Install or Downloads required by users.
+              </p>
             </div>
-            <p className="mt-5 max-w-[280px] text-center text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              Our Appliance will enable the protocol across your entire
-              Domain. No Install or Downloads required by users.
-            </p>
           </div>
         </div>
       </div>
@@ -455,6 +471,13 @@ export default function Home() {
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
               Sign our Petition
+            </Link>{" "}
+            and{" "}
+            <Link
+              to="/help/telecom-endorse-us"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Endorse Us
             </Link>
           </p>
           <Link
@@ -482,7 +505,7 @@ export default function Home() {
             impersonation.
           </p>
         </div>
-        <div className="flex items-start justify-center gap-8 lg:justify-start">
+        <div className="flex flex-col items-start gap-6 sm:flex-row sm:justify-center lg:justify-start">
           <div className="flex flex-col items-start">
             <img
               src={textPhoneImg}
@@ -499,7 +522,7 @@ export default function Home() {
           <img
             src={smsPhoneImg}
             alt="Phone displaying PhishFlagger SMS messages"
-            className="h-auto w-[200px] object-contain"
+            className="h-auto w-full max-w-[400px] object-contain"
           />
         </div>
       </div>
