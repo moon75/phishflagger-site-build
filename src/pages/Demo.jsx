@@ -1,4 +1,5 @@
-﻿import CloseButton from "../components/ui/CloseButton.jsx";
+﻿import { Link } from "react-router-dom";
+import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function Demo() {
   return (
@@ -27,6 +28,31 @@ export default function Demo() {
             Gmail, etc.). Subject or Content is not required. Just click
             send.
           </p>
+
+          <div className="mx-auto mt-14 max-w-[640px] text-left">
+            <h2 className="text-[20px] font-semibold text-ink sm:text-[24px]">
+              What should I expect:
+            </h2>
+            <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
+              We will email you a series of 5 emails simulating bank
+              communications. One of them will be a Phish. This will allow
+              you a way to examine your emails should you suspect they are
+              fraudulent.
+            </p>
+            <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
+              With PhishFlagger on your side also the validation would be
+              automated.
+            </p>
+            <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
+              We also validate Digitally.{" "}
+              <Link
+                to="/digital-ino"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                More Info Here
+              </Link>
+            </p>
+          </div>
         </div>
       </section>
     </>

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { Field } from "./JoinFree.jsx";
 
@@ -10,6 +10,7 @@ const REQUIRED_MESSAGES = {
 
 export default function JoinFreeRegister() {
   const location = useLocation();
+  const navigate = useNavigate();
   const email = location.state?.email || "";
 
   const [values, setValues] = useState({
@@ -23,8 +24,6 @@ export default function JoinFreeRegister() {
     phone: "",
   });
   const [errors, setErrors] = useState({});
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const inputRefs = useRef({});
 
   function validateField(fieldName) {
@@ -59,13 +58,7 @@ export default function JoinFreeRegister() {
       return;
     }
 
-    setSubmitting(true);
-
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-      console.log("Registration submitted:", { email, ...values });
-    }, 900);
+    navigate("/joinfree/terms", { state: { email, ...values } });
   }
 
   return (
@@ -75,7 +68,7 @@ export default function JoinFreeRegister() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+            <h1 className="text-[20px] font-semibold leading-none tracking-tight text-ink sm:text-[26px] lg:text-[32px]">
               Complete Your Registration
             </h1>
             {email && (
@@ -85,11 +78,10 @@ export default function JoinFreeRegister() {
             )}
           </div>
 
-          {!submitted ? (
-            <form
-              onSubmit={handleSubmit}
-              className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
-            >
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
+          >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <Field label="First Name" error={errors.firstName}>
                   <input
@@ -190,10 +182,9 @@ export default function JoinFreeRegister() {
               <div className="flex flex-col items-center gap-4 pt-2">
                 <button
                   type="submit"
-                  disabled={submitting}
-                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:opacity-70"
+                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f]"
                 >
-                  {submitting ? "Joining..." : "Join Free"}
+                  Join Free
                 </button>
                 <p className="text-center text-[12.5px] text-ink-muted">
                   By submitting, you agree to receive your plugin license by email. We never
@@ -201,34 +192,7 @@ export default function JoinFreeRegister() {
                   contain the license for your email address.
                 </p>
               </div>
-            </form>
-          ) : (
-            <div className="mx-auto mt-10 max-w-[640px] flex-col items-center text-center sm:mt-14">
-              <div className="flex flex-col items-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#585858] text-[#585858]">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path
-                      d="M8 12.5l2.5 2.5L16 9.5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <h2 className="mt-5 text-[24px] font-semibold text-ink">You're all set!</h2>
-                <p className="mt-2 text-[15px] text-ink-muted">
-                  Check your inbox shortly for your Thunderbird Plugin license.
-                </p>
-                <Link
-                  to="/"
-                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
-                  Back to Home
-                </Link>
-              </div>
-            </div>
-          )}
+          </form>
         </div>
       </section>
     </>

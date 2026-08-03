@@ -99,21 +99,24 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Top Links
+            Top Email Links
           </h2>
           <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:mt-6 sm:text-[16px] sm:leading-[1.6]">
-            <BrandInline /> is designed for individuals and organizations who
+            <BrandInline /> protects individuals and organizations who
             want greater confidence in the authenticity of their emails.
             Whether you are using a custom domain or a supported email
-            service, <BrandInline /> adds an extra layer of protection
+            service, <BrandInline /> adds extra layers of protection
             against phishing and email impersonation.
           </p>
-          <Link
-            to="/help/endorse-us"
-            className="mt-4 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[16px]"
-          >
-            Endorse Us
-          </Link>
+          <p className="mt-4 text-[15px] text-ink sm:text-[16px]">
+            Like what you see.{" "}
+            <Link
+              to="/help/endorse-us"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Endorse Us
+            </Link>
+          </p>
         </div>
         <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-end">
           <div className="flex w-auto flex-col items-center">
@@ -319,8 +322,7 @@ export default function Home() {
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>
-            <br />
-            Email Domain protection
+            {" "}Digital
           </h2>
           <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
             Domain Protection
@@ -343,7 +345,7 @@ export default function Home() {
       <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          Two Options.
+          Email
         </h2>
         <div className="mx-auto mt-10 flex flex-wrap items-start justify-center gap-10 sm:mt-16 sm:gap-14">
           <div className="flex w-auto flex-col items-center">
@@ -370,6 +372,10 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <span className="self-center text-[16px] font-bold uppercase tracking-wide text-ink-muted sm:text-[18px]">
+            Or
+          </span>
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
@@ -479,6 +485,7 @@ export default function Home() {
             >
               Endorse Us
             </Link>
+            .
           </p>
           <Link
             to="/join/telecom"

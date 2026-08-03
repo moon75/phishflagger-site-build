@@ -33,7 +33,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[280px] object-contain"
+              className="h-auto w-full max-w-[470px] object-contain"
             />
           </div>
         </div>
@@ -51,12 +51,12 @@ export default function EmailDomain() {
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-[72px] w-[72px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[108px] w-[108px] rounded-2xl border border-black/20 object-contain"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-[72px] w-[72px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[108px] w-[108px] rounded-2xl border border-black/20 object-contain"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 border-t-2 border-black p-7">
@@ -142,11 +142,11 @@ export default function EmailDomain() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex h-[240px] w-[240px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
+            <div className="flex h-[240px] w-auto items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
-                className="h-full w-full object-contain"
+                className="h-full w-auto object-contain"
               />
             </div>
           </div>

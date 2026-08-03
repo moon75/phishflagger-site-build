@@ -106,10 +106,6 @@ export default function Telecom() {
               Provides a defense against impersonation and fraud.
             </li>
             <li className="list-disc">
-              Flags fraud attempts that do not have the expected sequential
-              number.
-            </li>
-            <li className="list-disc">
               Provides immediate protection even with old Handsets.
             </li>
           </ul>
@@ -119,9 +115,22 @@ export default function Telecom() {
               alt="Phones with caller ID display"
               className="h-auto w-full max-w-[160px] object-contain"
             />
+            <div className="relative flex items-center">
+              <img
+                src={desktopPhoneImg}
+                alt="Caller ID box with PhishCounter sequence number"
+                className="h-auto w-full max-w-[210px] object-contain"
+              />
+              <span className="absolute -top-2 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
+                <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
+                  ✓
+                </span>
+                Verified
+              </span>
+            </div>
             <img
-              src={desktopPhoneImg}
-              alt="Caller ID box with PhishCounter sequence number"
+              src={callerIdBoxImg}
+              alt="Caller ID box showing a PhishCounter sequence number"
               className="h-auto w-full max-w-[210px] object-contain"
             />
           </div>
@@ -130,20 +139,6 @@ export default function Telecom() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0006" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
-          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left"></ul>
-          <div className="flex justify-center">
-            <img
-              src={callerIdBoxImg}
-              alt="Caller ID box showing a PhishCounter sequence number"
-              className="h-auto w-full max-w-[320px] object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -173,8 +168,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0008" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -314,8 +309,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0009" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0008" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -340,8 +335,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0010" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0009" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -367,8 +362,8 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0011" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0010" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -402,8 +397,8 @@ export default function Telecom() {
       </section>
 
       {/* ===== Bottom CTA panel ===== */}
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0012" />
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0011" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">

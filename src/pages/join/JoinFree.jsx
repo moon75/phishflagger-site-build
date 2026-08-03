@@ -111,26 +111,28 @@ export default function JoinFree() {
                 emailVerified ? "pointer-events-none opacity-50" : ""
               }`}
             >
-              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                Step 1
-              </p>
 
-              <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                <div className="flex-1">
-                  <Field label="Email Address" error={errors.email}>
-                    <input
-                      type="email"
-                      id="email"
-                      autoComplete="email"
-                      required
-                      disabled={emailVerified}
-                      ref={(el) => (inputRefs.current.email = el)}
-                      value={values.email}
-                      onChange={(e) => handleChange("email", e.target.value)}
-                      placeholder="you@gmail.com"
-                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                    />
-                  </Field>
+              <span className="mb-2 mt-3 block text-[14px] font-semibold text-ink sm:text-[15px]">
+                Email Address
+              </span>
+              <div className="flex flex-col items-stretch gap-3 sm:flex-row">
+                <div
+                  className={`flex flex-1 items-center gap-3 rounded-md bg-[#f4f5f8] px-3 py-3 sm:px-4 ${
+                    errors.email ? "ring-1 ring-red-400" : ""
+                  }`}
+                >
+                  <input
+                    type="email"
+                    id="email"
+                    autoComplete="email"
+                    required
+                    disabled={emailVerified}
+                    ref={(el) => (inputRefs.current.email = el)}
+                    value={values.email}
+                    onChange={(e) => handleChange("email", e.target.value)}
+                    placeholder="you@gmail.com"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                  />
                 </div>
                 <button
                   type="button"
@@ -141,6 +143,11 @@ export default function JoinFree() {
                   {emailVerified ? "Email Verified" : "Verify Email"}
                 </button>
               </div>
+              {errors.email && (
+                <span className="mt-1.5 block text-[12px] text-red-600">
+                  {errors.email}
+                </span>
+              )}
             </div>
 
             <div
@@ -148,33 +155,27 @@ export default function JoinFree() {
                 emailVerified ? "" : "pointer-events-none opacity-50"
               } ${codeVerified ? "pointer-events-none opacity-50" : ""}`}
             >
-              <p className="text-[13px] font-bold uppercase tracking-wide text-ink-muted">
-                Step 2
-              </p>
 
-              <div className="mt-3 flex flex-col items-stretch gap-3 sm:flex-row sm:items-end">
-                <div className="flex-1">
-                  <Field label="Enter the code we sent to you email." error={errors.code}>
-                    <input
-                      type="text"
-                      id="code"
-                      autoComplete="one-time-code"
-                      disabled={!emailVerified || codeVerified}
-                      ref={(el) => (inputRefs.current.code = el)}
-                      value={values.code}
-                      onChange={(e) => handleChange("code", e.target.value)}
-                      placeholder="Enter code"
-                      className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
-                    />
-                  </Field>
-                  {codeVerified && (
-                    <p className="mt-2 flex items-center gap-2 text-[14px] font-semibold text-[#16a34a]">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#16a34a] text-[11px] font-bold leading-none text-white">
-                        ✓
-                      </span>
-                      Your Code is Valid
-                    </p>
-                  )}
+              <span className="mb-2 mt-3 block text-[14px] font-semibold text-ink sm:text-[15px]">
+                Enter the code we sent to you email.
+              </span>
+              <div className="flex flex-col items-stretch gap-3 sm:flex-row">
+                <div
+                  className={`flex flex-1 items-center gap-3 rounded-md bg-[#f4f5f8] px-3 py-3 sm:px-4 ${
+                    errors.code ? "ring-1 ring-red-400" : ""
+                  }`}
+                >
+                  <input
+                    type="text"
+                    id="code"
+                    autoComplete="one-time-code"
+                    disabled={!emailVerified || codeVerified}
+                    ref={(el) => (inputRefs.current.code = el)}
+                    value={values.code}
+                    onChange={(e) => handleChange("code", e.target.value)}
+                    placeholder="Enter code"
+                    className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none disabled:text-ink-muted"
+                  />
                 </div>
                 <button
                   type="button"
@@ -185,6 +186,19 @@ export default function JoinFree() {
                   {codeVerified ? "Code Verified" : "Verify Code"}
                 </button>
               </div>
+              {errors.code && (
+                <span className="mt-1.5 block text-[12px] text-red-600">
+                  {errors.code}
+                </span>
+              )}
+              {codeVerified && (
+                <p className="mt-2 flex items-center gap-2 text-[14px] font-semibold text-[#16a34a]">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#16a34a] text-[11px] font-bold leading-none text-white">
+                    ✓
+                  </span>
+                  Your Code is Valid
+                </p>
+              )}
             </div>
 
             <div className="pt-2">
