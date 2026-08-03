@@ -1,6 +1,6 @@
 ﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/digital-domain-diagram-v4-transparent.png";
+import digitalDomainImg from "../../assets/images/digital-domain-diagram-v5-wide.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 
@@ -9,7 +9,13 @@ export default function EmailDomain() {
     <>
       <CloseButton />
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        }}
+      >
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
@@ -33,7 +39,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[282px] object-contain"
+              className="h-auto w-full max-w-[451px] object-contain"
             />
           </div>
         </div>
@@ -45,9 +51,9 @@ export default function EmailDomain() {
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Two Ways To Join
           </h2>
-          <div className="mx-auto mt-10 grid max-w-[820px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-10">
+          <div className="mx-auto mt-10 grid max-w-[900px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-24">
             <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center gap-4 bg-gradient-to-b from-[#f7f8fb] to-[#eef0f5] px-8">
+              <div className="flex h-[200px] items-center justify-center gap-4 px-8">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
@@ -59,7 +65,7 @@ export default function EmailDomain() {
                   className="h-[108px] w-[108px] rounded-2xl border border-black/20 object-contain"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-3 border-t-2 border-black p-7">
+              <div className="flex flex-1 flex-col gap-3 p-7">
                 <div className="flex items-center gap-2.5">
                   <span className="h-[3px] w-6 rounded-full bg-brand" />
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
@@ -81,14 +87,14 @@ export default function EmailDomain() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-3 border-t-2 border-black p-7">
+              <div className="flex flex-1 flex-col gap-3 p-7">
                 <div className="flex items-center gap-2.5">
                   <span className="h-[3px] w-6 rounded-full bg-brand" />
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Domain
                   </h3>
                 </div>
-                <ul className="space-y-2 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted marker:text-brand sm:text-[15px]">
+                <ul className="space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted marker:text-brand sm:text-[15px]">
                   <li className="list-disc">
                     Domain protection for Microsoft, Google and Linux email
                     servers.
@@ -196,4 +202,3 @@ function SectionCounter({ value }) {
     </span>
   );
 }
-

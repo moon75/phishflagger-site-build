@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
-import whoCanUseImg from "../assets/images/email-marketing-verified-v8.png";
+import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookImg from "../assets/images/outlook image 90.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
@@ -16,7 +16,7 @@ import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import messagingIconsImg from "../assets/images/Icons-2.png";
-import cloudServerImg from "../assets/images/digital-domain-diagram-v4-transparent.png";
+import cloudServerImg from "../assets/images/digital-domain-diagram-v5-wide.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg },
@@ -29,26 +29,31 @@ const SCREENS = [
 const SMS_STEPS = [
   {
     date: "Tuesday, Mar 10 · 2:58 PM",
-    code: "^5201",
-    message: "About your account renewal — all looks great.",
-    position: "left-0 top-0 -rotate-[0.35deg]",
+    message: "^5201 About your account renewal — all looks great.",
+    position: "left-0 top-0",
+    size: "w-[34%]",
+    bubbleSize: "min-h-[48px]",
   },
   {
     date: "Wednesday, Mar 11 · 12:41 PM",
-    code: "^5202",
-    message: "Everything looks good! Your subscription is active until April.",
-    position: "left-[9%] top-[19%] rotate-[0.3deg]",
+    message: "^5202 Everything looks good! Your subscription is active until April.",
+    position: "left-[20%] top-[21%]",
+    size: "w-[38%]",
+    bubbleSize: "min-h-[72px]",
   },
   {
     date: "Friday, Mar 13 · 9:38 AM",
-    code: "^5204",
-    message: "We have a new renewal offer. Visit our site for details.",
-    position: "left-[18%] top-[39%] -rotate-[0.25deg]",
+    message: "^5204 We have a new renewal offer. Visit our site for details.",
+    position: "left-[43%] top-[47%]",
+    size: "w-[36%]",
+    bubbleSize: "min-h-[64px]",
   },
   {
     date: "Friday, Mar 13 · 8:20 AM",
     message: "Message is missing. Expected ^5203 above but received ^5204",
-    position: "left-[26%] top-[59%] rotate-[0.25deg]",
+    position: "left-[65%] top-[70%]",
+    size: "w-[34%]",
+    bubbleSize: "min-h-[72px]",
     warning: true,
   },
 ];
@@ -56,29 +61,24 @@ const SMS_STEPS = [
 function SmsMessageSteps() {
   return (
     <div
-      className="flex w-full max-w-[340px] shrink-0 flex-col gap-2.5"
+      className="relative h-[260px] w-full max-w-[420px] shrink-0"
       aria-label="Sequential SMS messages showing a missing message warning"
     >
-      {SMS_STEPS.map(({ date, code, message, warning }) => (
-        <div key={date} className="flex flex-col items-start">
-          <div className="mb-1 ml-2.5 inline-flex items-center gap-1.5 rounded-full border border-white/80 bg-[#eef0f4]/95 px-2 py-0.5 text-[9px] font-semibold leading-none text-[#4b5563] backdrop-blur sm:text-[10px]">
-            <span className={`h-1.5 w-1.5 rounded-full ${warning ? "bg-[#e11616]" : "bg-[#64748b]"}`} />
-            <span className="whitespace-nowrap">{date}</span>
-          </div>
+      {SMS_STEPS.map(({ date, message, position, size, bubbleSize, warning }, index) => (
+        <div
+          key={date}
+          className={`absolute ${size} ${position}`}
+          style={{ zIndex: index + 1 }}
+        >
+          <p className="mb-1 whitespace-nowrap text-[9px] font-medium leading-none text-[#454545] sm:text-[10px]">
+            {date}
+          </p>
           <div
-            className={`relative w-full rounded-[14px] border px-3 py-2 text-[11px] font-medium leading-[1.35] sm:text-[12px] ${
-              warning
-                ? "border-red-500/60 bg-gradient-to-br from-[#ef2626] to-[#c90f16] pr-11 text-white"
-                : "border-black/10 bg-white text-[#111827]"
+            className={`flex items-center rounded-[10px] px-2.5 py-2 text-[10px] font-medium leading-[1.25] shadow-[0_2px_5px_rgba(0,0,0,0.12)] sm:text-[11px] ${bubbleSize} ${
+              warning ? "bg-[#e11616] text-white" : "bg-white text-black"
             }`}
           >
-            {code && <span className="mr-1 font-extrabold tracking-tight">{code}</span>}
-            <span>{message}</span>
-            {warning && (
-              <span className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/15 text-[14px] font-black">
-                !
-              </span>
-            )}
+            {message}
           </div>
         </div>
       ))}
@@ -158,7 +158,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Top Email Links
+            Our Top Email Links
           </h2>
           <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:mt-6 sm:text-[16px] sm:leading-[1.6]">
             <BrandInline /> protects individuals and organizations who
@@ -347,7 +347,7 @@ export default function Home() {
 
         {/* Right — info box image */}
         <div className="flex flex-col items-center">
-          <p className="mb-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+          <p className="mb-4 text-center text-[28px] italic text-ink-muted sm:text-[30px]">
             Email client view from enabled Domain
           </p>
           <img
@@ -410,12 +410,13 @@ export default function Home() {
           </em>{" "}
           Email
         </h2>
-        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-10 px-4 sm:mt-16 sm:gap-14">
+
+        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-[60px] px-4 sm:mt-16 sm:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Plug-In
             </span>
-            <div className="flex h-[220px] w-[300px] items-center justify-center gap-2 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[300px] sm:w-[460px] sm:gap-3 sm:p-6">
+            <div className="flex h-[140px] w-[300px] items-center justify-center gap-2 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:w-[460px] sm:gap-3 sm:p-6">
               <img
                 src={outlookImg}
                 alt="Microsoft Outlook"
@@ -427,44 +428,56 @@ export default function Home() {
                 className="h-full w-1/2 rounded-xl object-contain"
               />
             </div>
-            <p className="w-[300px] p-6 text-center text-[13px] leading-[1.6] text-ink sm:w-[460px] sm:p-8 sm:text-[15px]">
+            <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
               Free for Individuals.
               <br />
               Perfect for small business.
             </p>
-            <Link
-              to="/join/email-free-plug-in"
-              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Join Free
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
+              <Link
+                to="/join/email-free-plug-in"
+                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Join Free
+              </Link>
+              <Link
+                to="/join/email-corporate"
+                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Corporate
+              </Link>
+            </div>
           </div>
 
-          <span className="self-center text-[32px] font-bold uppercase tracking-wide text-ink-muted sm:text-[36px]">
-            Or
-          </span>
+          <div className="flex h-[220px] items-center justify-center sm:h-[300px]" style={{ marginTop: "45px" }}>
+            <span className="text-[64px] font-bold uppercase tracking-wide text-ink-muted sm:text-[72px]">
+              Or
+            </span>
+          </div>
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="h-[220px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[300px] sm:w-[460px]">
+            <div className="h-[140px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:w-[460px]">
               <img
                 src={cloudServerImg}
                 alt="Cloud connected to a server appliance"
-                className="h-full w-full object-cover"
+                className="h-full w-full scale-105 object-contain"
               />
             </div>
-            <p className="w-[300px] p-6 text-center text-[13px] leading-[1.6] text-ink sm:w-[460px] sm:p-8 sm:text-[15px]">
+            <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
-            <Link
-              to="/join/email-corporate"
-              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Corporate
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
+              <Link
+                to="/join/email-corporate"
+                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Corporate
+              </Link>
+            </div>
           </div>
         </div>
       </div>

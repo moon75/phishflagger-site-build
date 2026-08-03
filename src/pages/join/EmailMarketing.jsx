@@ -2,7 +2,7 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox-v3-balanced.png";
-import marketerImg from "../../assets/images/email-marketing-verified-v8.png";
+import marketerImg from "../../assets/images/email-marketing-verified-v9.png";
 
 export default function EmailMarketing() {
   return (

@@ -69,6 +69,11 @@ export default function JoinFreeTerms() {
                   >
                     {submitting ? "Creating..." : "Create My Free Key"}
                   </button>
+                  <p className="text-center text-[12.5px] text-ink-muted">
+                    By submitting, you agree to receive your plugin license by email. We never
+                    share your information. You will receive an email shortly, and it will
+                    contain the license for your email address.
+                  </p>
                 </div>
               </form>
             </>
