@@ -161,7 +161,7 @@ export default function Telecom() {
                 Immediate benefit even without enabled receiver.
               </li>
               <li className="list-disc">
-                Interrogable among Telecoms and Carriers worldwide.
+                Interoperable among Telecoms and Carriers worldwide.
               </li>
             </ul>
           </div>

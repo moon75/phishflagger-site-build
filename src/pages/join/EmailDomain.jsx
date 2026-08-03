@@ -1,6 +1,6 @@
 ﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/digital-domain-diagram-v5-wide.png";
+import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v2.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 
@@ -39,7 +39,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[451px] object-contain"
+              className="h-auto w-full max-w-[361px] object-contain"
             />
           </div>
         </div>
@@ -53,21 +53,20 @@ export default function EmailDomain() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-[900px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-24">
             <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center gap-4 px-8">
+              <div className="flex h-[200px] items-center justify-center gap-3 px-5">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-[108px] w-[108px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl border border-black/20 object-contain"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-[108px] w-[108px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl border border-black/20 object-contain"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7">
-                <div className="flex items-center gap-2.5">
-                  <span className="h-[3px] w-6 rounded-full bg-brand" />
+                <div className="flex items-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Plug-In
                   </h3>
@@ -80,26 +79,25 @@ export default function EmailDomain() {
             </div>
 
             <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="h-[200px] overflow-hidden">
+              <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
                 <img
                   src={digitalDomainImg}
                   alt="Digital diagram showing email server, domain records check, sending domain validation, and verified result"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7">
-                <div className="flex items-center gap-2.5">
-                  <span className="h-[3px] w-6 rounded-full bg-brand" />
+                <div className="flex items-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Domain
                   </h3>
                 </div>
-                <ul className="space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted marker:text-brand sm:text-[15px]">
-                  <li className="list-disc">
+                <ul className="space-y-4 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <li>
                     Domain protection for Microsoft, Google and Linux email
                     servers.
                   </li>
-                  <li className="list-disc">
+                  <li>
                     Enable all your users across all devices instantly with
                     our Domain Appliance.
                   </li>
@@ -168,8 +166,20 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0006" />
+        <div className="mx-auto max-w-content text-center">
+          <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            Pricing
+          </h2>
+          <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+            Placeholder pricing
+          </p>
+        </div>
+      </section>
+
+      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
+        <SectionCounter value="^0007" />
         <div className="mx-auto max-w-[820px] text-center">
           <a
             href="https://join.phishflagger.com/membership-form-stripe.php"

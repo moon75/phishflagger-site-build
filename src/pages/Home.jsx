@@ -31,29 +31,29 @@ const SMS_STEPS = [
     date: "Tuesday, Mar 10 · 2:58 PM",
     message: "^5201 About your account renewal — all looks great.",
     position: "left-0 top-0",
-    size: "w-[34%]",
-    bubbleSize: "min-h-[48px]",
+    size: "w-[72%]",
+    bubbleSize: "min-h-[72px]",
   },
   {
     date: "Wednesday, Mar 11 · 12:41 PM",
     message: "^5202 Everything looks good! Your subscription is active until April.",
-    position: "left-[20%] top-[21%]",
-    size: "w-[38%]",
-    bubbleSize: "min-h-[72px]",
+    position: "left-[8%] top-[18%]",
+    size: "w-[76%]",
+    bubbleSize: "min-h-[90px]",
   },
   {
     date: "Friday, Mar 13 · 9:38 AM",
     message: "^5204 We have a new renewal offer. Visit our site for details.",
-    position: "left-[43%] top-[47%]",
-    size: "w-[36%]",
-    bubbleSize: "min-h-[64px]",
+    position: "left-[16%] top-[39%]",
+    size: "w-[74%]",
+    bubbleSize: "min-h-[78px]",
   },
   {
     date: "Friday, Mar 13 · 8:20 AM",
     message: "Message is missing. Expected ^5203 above but received ^5204",
-    position: "left-[65%] top-[70%]",
-    size: "w-[34%]",
-    bubbleSize: "min-h-[72px]",
+    position: "left-[24%] top-[60%]",
+    size: "w-[72%]",
+    bubbleSize: "min-h-[86px]",
     warning: true,
   },
 ];
@@ -61,7 +61,7 @@ const SMS_STEPS = [
 function SmsMessageSteps() {
   return (
     <div
-      className="relative h-[260px] w-full max-w-[420px] shrink-0"
+      className="relative h-[270px] w-full max-w-[360px] shrink-0"
       aria-label="Sequential SMS messages showing a missing message warning"
     >
       {SMS_STEPS.map(({ date, message, position, size, bubbleSize, warning }, index) => (
@@ -70,11 +70,11 @@ function SmsMessageSteps() {
           className={`absolute ${size} ${position}`}
           style={{ zIndex: index + 1 }}
         >
-          <p className="mb-1 whitespace-nowrap text-[9px] font-medium leading-none text-[#454545] sm:text-[10px]">
+          <p className="mb-1 whitespace-nowrap text-[10px] font-medium leading-none text-[#454545] sm:text-[11px]">
             {date}
           </p>
           <div
-            className={`flex items-center rounded-[10px] px-2.5 py-2 text-[10px] font-medium leading-[1.25] shadow-[0_2px_5px_rgba(0,0,0,0.12)] sm:text-[11px] ${bubbleSize} ${
+            className={`flex items-center rounded-[12px] px-3 py-2.5 text-[12px] font-medium leading-[1.25] shadow-[0_3px_8px_rgba(0,0,0,0.14)] sm:text-[14px] ${bubbleSize} ${
               warning ? "bg-[#e11616] text-white" : "bg-white text-black"
             }`}
           >
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
             <Link
               to="/join/email-free-plug-in"
-              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
             </Link>
@@ -216,7 +216,7 @@ export default function Home() {
             </div>
             <Link
               to="/join/email-corporate"
-              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
             </Link>
@@ -236,7 +236,7 @@ export default function Home() {
             </div>
             <Link
               to="/join/email-marketing"
-              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Marketing
             </Link>
@@ -347,7 +347,7 @@ export default function Home() {
 
         {/* Right — info box image */}
         <div className="flex flex-col items-center">
-          <p className="mb-4 text-center text-[28px] italic text-ink-muted sm:text-[30px]">
+          <p className="mb-4 text-center text-[16px] italic text-ink-muted sm:text-[18px]">
             Email client view from enabled Domain
           </p>
           <img
@@ -436,21 +436,21 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
               <Link
                 to="/join/email-free-plug-in"
-                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
               >
                 Join Free
               </Link>
               <Link
                 to="/join/email-corporate"
-                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
               >
                 Corporate
               </Link>
             </div>
           </div>
 
-          <div className="flex h-[220px] items-center justify-center sm:h-[300px]" style={{ marginTop: "45px" }}>
-            <span className="text-[64px] font-bold uppercase tracking-wide text-ink-muted sm:text-[72px]">
+          <div className="flex h-[220px] items-center justify-center sm:h-[300px]">
+            <span className="text-[38px] font-bold uppercase tracking-wide text-ink-muted sm:text-[43px]">
               Or
             </span>
           </div>
@@ -473,7 +473,7 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
               <Link
                 to="/join/email-corporate"
-                className="inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
               >
                 Corporate
               </Link>
@@ -484,7 +484,13 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7 — Caller ID (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+      }}
+    >
       <SectionCounter value="^0007" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">

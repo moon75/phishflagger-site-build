@@ -88,14 +88,28 @@ export default function JoinFree() {
     navigate("/joinfree/register", { state: { email: values.email } });
   }
 
+  function handleTestFill() {
+    setValues({ email: "test.user@gmail.com", code: "123456" });
+    setErrors({});
+    setEmailVerified(true);
+    setCodeVerified(true);
+  }
+
   return (
     <>
       <CloseButton to="/kick" />
 
-      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+      <section className="relative w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           {/* ===== Page heading ===== */}
-          <div className="text-center">
+          <div className="relative text-center">
+            <button
+              type="button"
+              onClick={handleTestFill}
+              className="absolute right-0 top-0 cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink-muted transition-colors hover:bg-gray-50"
+            >
+              Test Fill
+            </button>
             <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
               Join
             </h1>

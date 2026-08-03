@@ -54,7 +54,13 @@ export default function Footer({ logoSrc = logoImg }) {
       {!hideFaq && (
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
-          <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+          <section
+            className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+            }}
+          >
             <div className="mx-auto max-w-[1200px]">
               <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                 Protecting Communications
@@ -207,7 +213,13 @@ export default function Footer({ logoSrc = logoImg }) {
         </div>
 
         <div className="mx-auto max-w-[980px] px-6 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4">
-        <div className="mx-auto inline-block rounded-2xl bg-[#eef0f4] px-6 py-6 sm:px-8">
+        <div
+          className="mx-auto inline-block rounded-2xl bg-[#eef0f4] bg-cover bg-center px-6 py-6 sm:px-8"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          }}
+        >
           <ul
             aria-label="Social media"
             className="flex flex-wrap justify-center gap-[18px] list-none p-0"
