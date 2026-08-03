@@ -58,13 +58,13 @@ export function TelecomFormPage({
           <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications.
           </p>
-          <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+          <h1 className="mt-8 text-[40px] font-normal leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
             {title}
           </h1>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
-          <div className="flex flex-wrap items-start gap-8 sm:gap-10">
+          <div className="flex flex-wrap items-start gap-8 sm:gap-10 lg:ml-16 xl:ml-24">
             <div className="space-y-4 sm:space-y-5">
               <div className="flex items-start gap-4 sm:gap-6">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-300 sm:h-12 sm:w-12">
@@ -123,8 +123,8 @@ export function TelecomFormPage({
               </div>
             </div>
 
-            <div className="flex flex-col gap-5">
-              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+            <div className="-mt-8 flex flex-col gap-5">
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"

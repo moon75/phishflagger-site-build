@@ -25,7 +25,7 @@ export default function JoinFreeTerms() {
 
   return (
     <>
-      <CloseButton to="/joinfree" />
+      <CloseButton to="/" />
 
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
@@ -46,7 +46,7 @@ export default function JoinFreeTerms() {
                 onSubmit={handleSubmit}
                 className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
               >
-                <div className="max-h-[280px] overflow-y-auto rounded-md bg-[#f4f5f8] p-4 text-[14px] leading-[1.65] text-ink-muted sm:p-6">
+                <div className="h-[260px] overflow-y-auto rounded-md border border-gray-300 bg-white p-4 text-left text-[14px] leading-[1.65] text-ink sm:p-6">
                   License key placeholder text for Terms of Service
                 </div>
 

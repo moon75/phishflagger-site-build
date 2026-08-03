@@ -56,74 +56,114 @@ export default function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
           {/* Left — contact info */}
           <div className="space-y-8 sm:space-y-10">
-            {/* Email block with icon */}
-            <div className="flex items-start gap-4 sm:gap-6">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-300 sm:h-12 sm:w-12">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5 text-ink"
-                  aria-hidden
-                >
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="M3 7l9 6 9-6" />
-                </svg>
-              </span>
+            <div className="flex flex-wrap items-start gap-8 sm:gap-10">
               <div>
-                <div className="text-[15px]">
-                  <em className="italic">
-                    <span className="font-extrabold text-ink">Phish</span>
-                    <span className="font-normal text-brand italic">
-                      Flagger
-                    </span>
-                  </em>
+                {/* Email block with icon */}
+                <div className="flex items-start gap-4 sm:gap-6">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-300 sm:h-12 sm:w-12">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-5 w-5 text-ink"
+                      aria-hidden
+                    >
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="M3 7l9 6 9-6" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div className="text-[15px]">
+                      <em className="italic">
+                        <span className="font-extrabold text-ink">Phish</span>
+                        <span className="font-normal text-brand italic">
+                          Flagger
+                        </span>
+                      </em>
+                    </div>
+                    <a
+                      href="mailto:contact@PhishFlagger.com"
+                      className="mt-1 inline-block text-[15px] text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                    >
+                      contact@PhishFlagger.com
+                    </a>
+                  </div>
                 </div>
-                <a
-                  href="mailto:contact@PhishFlagger.com"
-                  className="mt-1 inline-block text-[15px] text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-                >
-                  contact@PhishFlagger.com
-                </a>
-              </div>
-            </div>
 
-            {/* Address block */}
-            <div className="text-[14px] leading-[1.7] text-ink sm:text-[15px]">
-              <div>
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand italic">
-                    Flagger
-                  </span>
-                </em>
-                <span className="font-semibold text-ink">.com</span>
-              </div>
-              <div className="mt-4">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand italic">
-                    Flagger
-                  </span>
-                </em>
-                <span className="font-semibold text-ink"> Inc.</span>
-              </div>
-              <div>2300 Yonge Street, Suite 1600</div>
-              <div>Toronto, ON M4P 1E4</div>
-            </div>
+                {/* Address block */}
+                <div className="mt-8 text-[14px] leading-[1.7] text-ink sm:mt-10 sm:text-[15px]">
+                  <div>
+                    <em className="italic">
+                      <span className="font-extrabold text-ink">Phish</span>
+                      <span className="font-normal text-brand italic">
+                        Flagger
+                      </span>
+                    </em>
+                    <span className="font-semibold text-ink">.com</span>
+                  </div>
+                  <div className="mt-4">
+                    <em className="italic">
+                      <span className="font-extrabold text-ink">Phish</span>
+                      <span className="font-normal text-brand italic">
+                        Flagger
+                      </span>
+                    </em>
+                    <span className="font-semibold text-ink"> Inc.</span>
+                  </div>
+                  <div>2300 Yonge Street, Suite 1600</div>
+                  <div>Toronto, ON M4P 1E4</div>
+                </div>
 
-            {/* Telecom / Caller ID link */}
-            <div className="text-[14px] text-ink sm:text-[15px]">
-              Contact for Telecom or Caller ID{" "}
-              <Link
-                to="/join/telecom/contact"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Click Here
-              </Link>
+                {/* Telecom / Caller ID link */}
+                <div className="mt-8 text-[14px] text-ink sm:mt-10 sm:text-[15px]">
+                  Contact for Telecom or Caller ID{" "}
+                  <Link
+                    to="/join/telecom/contact"
+                    className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                  >
+                    Click Here
+                  </Link>
+                </div>
+              </div>
+
+              <div className="ml-6 flex flex-col gap-5 sm:ml-10">
+                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-14 w-14 text-ink"
+                    aria-hidden
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                </div>
+
+                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-14 w-14 text-ink"
+                    aria-hidden
+                  >
+                    <path d="M4 18v-1a8 8 0 0 1 16 0v1" />
+                    <rect x="2.5" y="15" width="4" height="6" rx="1.5" />
+                    <rect x="17.5" y="15" width="4" height="6" rx="1.5" />
+                    <path d="M18 21a4 4 0 0 1-4 2h-1" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 

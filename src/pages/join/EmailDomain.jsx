@@ -33,7 +33,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[470px] object-contain"
+              className="h-auto w-full max-w-[282px] object-contain"
             />
           </div>
         </div>

@@ -43,6 +43,20 @@ export default function JoinFreeRegister() {
     }
   }
 
+  function handleTestFill() {
+    setValues({
+      firstName: "Mickey",
+      lastName: "Mouse",
+      address: "101 Duck Lane",
+      city: "Toontown",
+      zip: "90210",
+      state: "CA",
+      country: "USA",
+      phone: "(555) 123-4567",
+    });
+    setErrors({});
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -65,7 +79,7 @@ export default function JoinFreeRegister() {
     <>
       <CloseButton to="/joinfree" />
 
-      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+      <section className="relative w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <div className="text-center">
             <h1 className="text-[20px] font-semibold leading-none tracking-tight text-ink sm:text-[26px] lg:text-[32px]">
@@ -80,8 +94,16 @@ export default function JoinFreeRegister() {
 
           <form
             onSubmit={handleSubmit}
-            className="mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
+            className="relative mx-auto mt-10 max-w-[640px] space-y-6 sm:mt-14"
           >
+              <button
+                type="button"
+                onClick={handleTestFill}
+                className="absolute -top-2 right-0 cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink-muted transition-colors hover:bg-gray-50 sm:right-0 sm:translate-x-[calc(100%+16px)]"
+              >
+                Test Fill
+              </button>
+
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <Field label="First Name" error={errors.firstName}>
                   <input

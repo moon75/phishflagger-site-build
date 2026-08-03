@@ -15,7 +15,6 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-const smsPhoneImg = "/assets/images/sms-messages-staircase-transparent-v2.png";
 import messagingIconsImg from "../assets/images/Icons-2.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v4-transparent.png";
 
@@ -26,6 +25,66 @@ const SCREENS = [
   { label: "Text/SMS", src: textPhoneImg },
   { label: "Caller ID", src: callerIdHandsetImg },
 ];
+
+const SMS_STEPS = [
+  {
+    date: "Tuesday, Mar 10 · 2:58 PM",
+    code: "^5201",
+    message: "About your account renewal — all looks great.",
+    position: "left-0 top-0 -rotate-[0.35deg]",
+  },
+  {
+    date: "Wednesday, Mar 11 · 12:41 PM",
+    code: "^5202",
+    message: "Everything looks good! Your subscription is active until April.",
+    position: "left-[9%] top-[19%] rotate-[0.3deg]",
+  },
+  {
+    date: "Friday, Mar 13 · 9:38 AM",
+    code: "^5204",
+    message: "We have a new renewal offer. Visit our site for details.",
+    position: "left-[18%] top-[39%] -rotate-[0.25deg]",
+  },
+  {
+    date: "Friday, Mar 13 · 8:20 AM",
+    message: "Message is missing. Expected ^5203 above but received ^5204",
+    position: "left-[26%] top-[59%] rotate-[0.25deg]",
+    warning: true,
+  },
+];
+
+function SmsMessageSteps() {
+  return (
+    <div
+      className="flex w-full max-w-[340px] shrink-0 flex-col gap-2.5"
+      aria-label="Sequential SMS messages showing a missing message warning"
+    >
+      {SMS_STEPS.map(({ date, code, message, warning }) => (
+        <div key={date} className="flex flex-col items-start">
+          <div className="mb-1 ml-2.5 inline-flex items-center gap-1.5 rounded-full border border-white/80 bg-[#eef0f4]/95 px-2 py-0.5 text-[9px] font-semibold leading-none text-[#4b5563] backdrop-blur sm:text-[10px]">
+            <span className={`h-1.5 w-1.5 rounded-full ${warning ? "bg-[#e11616]" : "bg-[#64748b]"}`} />
+            <span className="whitespace-nowrap">{date}</span>
+          </div>
+          <div
+            className={`relative w-full rounded-[14px] border px-3 py-2 text-[11px] font-medium leading-[1.35] sm:text-[12px] ${
+              warning
+                ? "border-red-500/60 bg-gradient-to-br from-[#ef2626] to-[#c90f16] pr-11 text-white"
+                : "border-black/10 bg-white text-[#111827]"
+            }`}
+          >
+            {code && <span className="mr-1 font-extrabold tracking-tight">{code}</span>}
+            <span>{message}</span>
+            {warning && (
+              <span className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-white/15 text-[14px] font-black">
+                !
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -250,7 +309,7 @@ export default function Home() {
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>{" "}
-            Human
+            / Human
           </h2>
 
           <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -288,14 +347,14 @@ export default function Home() {
 
         {/* Right — info box image */}
         <div className="flex flex-col items-center">
+          <p className="mb-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            Email client view from enabled Domain
+          </p>
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
             className="h-auto w-full max-w-[448px] rounded-lg border-2 border-black object-contain"
           />
-          <p className="mt-4 text-center text-[14px] italic text-ink-muted sm:text-[15px]">
-            Email client view from enabled Domain
-          </p>
         </div>
       </div>
     </section>
@@ -322,7 +381,7 @@ export default function Home() {
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
             </em>
-            {" "}Digital
+            {" "}/ Digital
           </h2>
           <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
             Domain Protection
@@ -345,35 +404,43 @@ export default function Home() {
       <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <em className="italic">
+            <span className="font-extrabold text-ink">Phish</span>
+            <span className="font-normal text-brand">Flagger</span>
+          </em>{" "}
           Email
         </h2>
-        <div className="mx-auto mt-10 flex flex-wrap items-start justify-center gap-10 sm:mt-16 sm:gap-14">
+        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-10 px-4 sm:mt-16 sm:gap-14">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Plug-In
             </span>
-            <div className="flex w-[280px] flex-col overflow-hidden rounded-2xl border-2 border-black sm:w-[480px]">
-              <div className="flex h-[200px] items-center justify-center gap-2 bg-[#f7f8fb] p-3 sm:h-[260px] sm:gap-3 sm:p-6">
-                <img
-                  src={outlookImg}
-                  alt="Microsoft Outlook"
-                  className="h-full w-1/2 rounded-xl object-contain"
-                />
-                <img
-                  src="/assets/images/thunderbird new pick.avif"
-                  alt="Mozilla Thunderbird"
-                  className="h-full w-1/2 rounded-xl object-contain"
-                />
-              </div>
-              <p className="border-t-2 border-black p-4 text-center text-[13px] leading-[1.6] text-ink sm:p-5 sm:text-[15px]">
-                Free for Individuals.
-                <br />
-                Perfect for small business.
-              </p>
+            <div className="flex h-[220px] w-[300px] items-center justify-center gap-2 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[300px] sm:w-[460px] sm:gap-3 sm:p-6">
+              <img
+                src={outlookImg}
+                alt="Microsoft Outlook"
+                className="h-full w-1/2 rounded-xl object-contain"
+              />
+              <img
+                src="/assets/images/thunderbird new pick.avif"
+                alt="Mozilla Thunderbird"
+                className="h-full w-1/2 rounded-xl object-contain"
+              />
             </div>
+            <p className="w-[300px] p-6 text-center text-[13px] leading-[1.6] text-ink sm:w-[460px] sm:p-8 sm:text-[15px]">
+              Free for Individuals.
+              <br />
+              Perfect for small business.
+            </p>
+            <Link
+              to="/join/email-free-plug-in"
+              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Join Free
+            </Link>
           </div>
 
-          <span className="self-center text-[16px] font-bold uppercase tracking-wide text-ink-muted sm:text-[18px]">
+          <span className="self-center text-[32px] font-bold uppercase tracking-wide text-ink-muted sm:text-[36px]">
             Or
           </span>
 
@@ -381,19 +448,23 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="flex w-[280px] flex-col overflow-hidden rounded-2xl border-2 border-black sm:w-[480px]">
-              <div className="h-[200px] sm:h-[260px]">
-                <img
-                  src={cloudServerImg}
-                  alt="Cloud connected to a server appliance"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <p className="border-t-2 border-black p-4 text-center text-[13px] leading-[1.6] text-ink sm:p-5 sm:text-[15px]">
-                Our Appliance will enable the protocol across your entire
-                Domain. No Install or Downloads required by users.
-              </p>
+            <div className="h-[220px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[300px] sm:w-[460px]">
+              <img
+                src={cloudServerImg}
+                alt="Cloud connected to a server appliance"
+                className="h-full w-full object-cover"
+              />
             </div>
+            <p className="w-[300px] p-6 text-center text-[13px] leading-[1.6] text-ink sm:w-[460px] sm:p-8 sm:text-[15px]">
+              Our Appliance will enable the protocol across your entire
+              Domain. No Install or Downloads required by users.
+            </p>
+            <Link
+              to="/join/email-corporate"
+              className="mt-6 inline-flex h-[51px] items-center justify-center rounded-full bg-[#585858] px-[30px] text-[19px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            >
+              Corporate
+            </Link>
           </div>
         </div>
       </div>
@@ -523,14 +594,10 @@ export default function Home() {
               to="/join/telecom"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              SMS
+              Telecom
             </Link>
           </div>
-          <img
-            src={smsPhoneImg}
-            alt="Phone displaying PhishFlagger SMS messages"
-            className="h-auto w-full max-w-[400px] object-contain"
-          />
+          <SmsMessageSteps />
         </div>
       </div>
     </section>
