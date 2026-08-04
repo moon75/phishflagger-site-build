@@ -1,7 +1,7 @@
 ﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v2.png";
-import outlookImg from "../../assets/images/outlook image 90.png";
+import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v3.png";
+import outlookImg from "../../assets/images/outlook-image-90-square.png";
 import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 
 export default function EmailDomain() {
@@ -16,7 +16,7 @@ export default function EmailDomain() {
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
         }}
       >
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <h2 className="mb-6 text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
@@ -46,23 +46,23 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Two Ways To Join
           </h2>
-          <div className="mx-auto mt-10 grid max-w-[900px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-24">
-            <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
+            <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
               <div className="flex h-[200px] items-center justify-center gap-3 bg-[#EEF0F4] px-5">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-[140px] w-[140px] rounded-2xl object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl object-cover"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-[140px] w-[140px] rounded-2xl object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl object-cover"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
@@ -80,11 +80,19 @@ export default function EmailDomain() {
                     Placeholder text goes here. Replace this copy with the
                     final content.
                   </li>
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+            <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
               <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
                 <img
                   src={digitalDomainImg}
@@ -107,6 +115,14 @@ export default function EmailDomain() {
                     Enable all your users across all devices instantly with
                     our Domain Appliance.
                   </li>
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -115,7 +131,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-left sm:text-[30px]">
@@ -142,7 +158,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-6">
             <div className="h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
@@ -173,7 +189,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0006" />
+        <SectionCounter value="^0005" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
             Pricing
@@ -185,7 +201,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0006" />
         <div className="mx-auto max-w-[820px] text-center">
           <a
             href="https://join.phishflagger.com/membership-form-stripe.php"

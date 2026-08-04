@@ -16,10 +16,10 @@ export default function EmailMarketing() {
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
         }}
       >
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+            <h2 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
               Brand Protection
             </h2>
             <p>
@@ -34,19 +34,17 @@ export default function EmailMarketing() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-[416px] rounded-lg border-2 border-black bg-white p-4">
-              <img
-                src={marketerImg}
-                alt="Email marketing and senders illustration with numbered outgoing emails"
-                className="h-auto w-full object-contain"
-              />
-            </div>
+            <img
+              src={marketerImg}
+              alt="Email marketing and senders illustration with numbered outgoing emails"
+              className="h-auto w-full max-w-[361px] object-contain"
+            />
           </div>
         </div>
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div className="flex justify-center lg:justify-start">
             <img
@@ -76,7 +74,7 @@ export default function EmailMarketing() {
       </section>
 
       <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
@@ -119,7 +117,7 @@ export default function EmailMarketing() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto max-w-[820px] text-center">
           <Link
             to="/contact"

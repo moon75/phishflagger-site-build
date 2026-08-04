@@ -163,7 +163,7 @@ export default function App() {
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
           <Route path="video/:category?" element={<Video />} />
-          <Route path="ip" element={<IP />} />
+          <Route path="intellectual-property" element={<IP />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="blog" element={<Blog />} />
           <Route path="news" element={<News />} />
@@ -181,7 +181,7 @@ export default function App() {
           />
           <Route path="supporters" element={<Supporters />} />
           <Route path="numbering-history" element={<NumberingHistory />} />
-          <Route path="fiction" element={<Fiction />} />
+          <Route path="phishing-ends" element={<Fiction />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

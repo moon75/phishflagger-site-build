@@ -16,6 +16,7 @@ export const nav = [
   {
     label: "Help",
     children: [
+      { label: "Support", href: "/contact" },
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/help/kickstarter" },
       { label: "Email - Endorse Us", href: "/help/endorse-us" },
@@ -31,10 +32,10 @@ export const nav = [
       { label: "Press", href: "/about/press" },
       { label: "Phishing News", href: "/News" },
       { label: "Team", href: "/about/team" },
-      { label: "IP", href: "/about/ip" },
+      { label: "Intellectual Property", href: "/about/intellectual-property" },
       { label: "Blog", href: "/about/blog" },
       { label: "Numbering History", href: "/about/numbering-history" },
-      { label: "Fiction", href: "/about/fiction" },
+      { label: "Phishing Ends", href: "/about/phishing-ends" },
     ],
   },
   { label: "Contact", href: "/contact" },

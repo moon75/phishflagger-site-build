@@ -163,10 +163,7 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Our Top Email Links
-          </h2>
-          <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:mt-6 sm:text-[16px] sm:leading-[1.6]">
+          <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
             <BrandInline /> protects individuals and organizations who
             want greater confidence in the authenticity of their emails.
             Whether you are using a custom domain or a supported email

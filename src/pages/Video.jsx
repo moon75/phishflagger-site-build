@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { brandify } from "../components/Brand.jsx";
+import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
 
@@ -36,6 +37,7 @@ const BASE_VIDEOS = [
     src: "/assets/Videos/PhishFlagger_Kickstarter_video_2.mp4",
     title: "PhishFlagger Kickstarter",
     description: "More on the PhishFlagger Kickstarter campaign.",
+    poster: kickstarterVideo2Poster,
   },
 ];
 
@@ -220,6 +222,7 @@ export default function Video() {
                         ) : (
                           <video
                             src={v.src}
+                            poster={v.poster}
                             preload="metadata"
                             muted
                             className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"

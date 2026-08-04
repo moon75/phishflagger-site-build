@@ -8,7 +8,7 @@ export default function FAQ() {
 
       <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
         <div className="mx-auto max-w-[1000px]">
-          <h1 className="text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
+          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
             FAQ
           </h1>
 

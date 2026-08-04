@@ -192,10 +192,10 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Press", to: "/about/press" },
                     { label: "Phishing News", to: "/News" },
                     { label: "Team", to: "/about/team" },
-                    { label: "IP", to: "/about/ip" },
+                    { label: "Intellectual Property", to: "/about/intellectual-property" },
                     { label: "Blog", to: "/about/blog" },
                     { label: "Numbering History", to: "/about/numbering-history" },
-                    { label: "Fiction", to: "/about/fiction" },
+                    { label: "Phishing Ends", to: "/about/phishing-ends" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link

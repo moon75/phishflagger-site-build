@@ -10,7 +10,7 @@ export default function Kickstarter() {
       <section className="w-full bg-white px-4 pt-6 pb-20 sm:px-6 sm:pt-8 sm:pb-28">
         <div className="mx-auto max-w-[1040px]">
           <div className="text-center">
-            <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+            <h1 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
               Kickstarter
             </h1>
           </div>

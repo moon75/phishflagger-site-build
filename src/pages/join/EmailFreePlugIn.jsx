@@ -38,7 +38,8 @@ export default function EmailFreePlugIn() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 1. Install Plug-In
@@ -80,7 +81,8 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 2. Get your Free Key.&nbsp; Works with ....
@@ -110,7 +112,7 @@ export default function EmailFreePlugIn() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/joinfree"
-              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
             >
               Join
             </Link>
@@ -118,7 +120,7 @@ export default function EmailFreePlugIn() {
               href="https://join.phishflagger.com/individual/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-[42px] items-center justify-center rounded-full bg-[#e4e6ea] px-7 text-[14px] font-semibold text-[#c7cad0] transition-colors hover:bg-[#d8dade]"
+              className="inline-flex items-center justify-center rounded-md bg-[#e4e6ea] px-5 py-3 text-[13px] font-bold text-[#c7cad0] transition-colors hover:bg-[#d8dade]"
             >
               Join2
             </a>
@@ -126,7 +128,8 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">
             <p className="mb-4 text-center text-[28px] text-ink sm:text-[30px]">
@@ -151,6 +154,14 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
     </>
+  );
+}
+
+function SectionCounter({ value }) {
+  return (
+    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+      {value}
+    </span>
   );
 }
 
