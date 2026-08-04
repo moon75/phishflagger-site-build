@@ -456,7 +456,7 @@ export default function Home() {
           </div>
 
           <div className="flex h-[220px] items-center justify-center sm:h-[300px]">
-            <span className="text-[38px] font-bold uppercase tracking-wide text-ink-muted sm:text-[43px]">
+            <span className="text-[23px] font-bold uppercase tracking-wide text-ink-muted sm:text-[26px]">
               Or
             </span>
           </div>

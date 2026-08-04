@@ -1,9 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
-export default function CloseButton({ to = "/" }) {
+export default function CloseButton({ to = "/", force = false }) {
   const navigate = useNavigate();
 
   function handleClose() {
+    if (force) {
+      navigate(to, { replace: true });
+      return;
+    }
+
     const historyIndex = Number(window.history.state?.idx);
 
     if (Number.isFinite(historyIndex) && historyIndex > 0) {

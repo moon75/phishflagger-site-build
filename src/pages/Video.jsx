@@ -85,7 +85,25 @@ function categoryVideos(category) {
         title: "Coming Soon",
         description: "",
       },
-      ...Array.from({ length: 5 }, () => ({
+      {
+        type: "local",
+        src: "/assets/Videos/Get the message part1.mp4",
+        title: "Get the Message - Part 1",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/Videos/The Message Part 2 Final.mp4",
+        title: "Get the Message - Part 2",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/Videos/Get the message Part 3 Final.mp4",
+        title: "Get the Message - Part 3",
+        description: "",
+      },
+      ...Array.from({ length: 2 }, () => ({
         type: "placeholder",
         title: "Coming Soon",
         description: "",

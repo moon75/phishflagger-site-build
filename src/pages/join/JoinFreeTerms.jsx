@@ -25,7 +25,7 @@ export default function JoinFreeTerms() {
 
   return (
     <>
-      <CloseButton to="/" />
+      <CloseButton to="/" force />
 
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">

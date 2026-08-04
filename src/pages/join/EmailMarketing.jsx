@@ -9,16 +9,8 @@ export default function EmailMarketing() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
-        <div className="mx-auto max-w-content">
-          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Marketers and Bulk Emailers
-          </h1>
-        </div>
-      </section>
-
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-14 sm:px-6 sm:pt-20 sm:pb-20"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -42,11 +34,13 @@ export default function EmailMarketing() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <img
-              src={marketerImg}
-              alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[416px] object-contain"
-            />
+            <div className="w-full max-w-[416px] rounded-lg border-2 border-black bg-white p-4">
+              <img
+                src={marketerImg}
+                alt="Email marketing and senders illustration with numbered outgoing emails"
+                className="h-auto w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>

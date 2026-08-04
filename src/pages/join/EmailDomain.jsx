@@ -53,28 +53,34 @@ export default function EmailDomain() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-[900px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-24">
             <div className="mx-auto flex w-full max-w-[380px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center gap-3 px-5">
+              <div className="flex h-[200px] items-center justify-center gap-3 bg-[#EEF0F4] px-5">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-[140px] w-[140px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl object-contain"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-[140px] w-[140px] rounded-2xl border border-black/20 object-contain"
+                  className="h-[140px] w-[140px] rounded-2xl object-contain"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-3 p-7">
+              <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                 <div className="flex items-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Plug-In
                   </h3>
                 </div>
-                <p className="text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                  Placeholder text goes here. Replace this copy with the
-                  final content.
-                </p>
+                <ul className="list-disc space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
+                  <li>
+                    Placeholder text goes here. Replace this copy with the
+                    final content.
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -86,13 +92,13 @@ export default function EmailDomain() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-3 p-7">
+              <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                 <div className="flex items-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Domain
                   </h3>
                 </div>
-                <ul className="space-y-4 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                <ul className="list-disc space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                   <li>
                     Domain protection for Microsoft, Google and Linux email
                     servers.
