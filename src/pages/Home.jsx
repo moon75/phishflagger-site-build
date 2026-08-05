@@ -5,7 +5,7 @@ import heroInfoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
-import outlookImg from "../assets/images/outlook image 90.png";
+import outlookImg from "../assets/images/outlook-image-90-square.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -15,8 +15,8 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import messagingIconsImg from "../assets/images/Icons-3.png";
-import cloudServerImg from "../assets/images/digital-domain-diagram-v5-wide.png";
+import messagingIconsImg from "../assets/images/Icons-5.png";
+import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 const logoMarkImg = "/assets/images/logo-mark.png";
 
 const SCREENS = [
@@ -164,15 +164,12 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
-          <div className="mb-6 flex items-end gap-1">
+          <div className="mb-6">
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
               className="h-12 w-auto object-contain sm:h-14"
             />
-            <span className="mb-1 text-[13px] font-semibold text-ink-muted">
-              &trade;
-            </span>
           </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
             <BrandInline /> protects individuals and organizations who
@@ -384,7 +381,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — email authentication diagram */}
         <div className="flex justify-center lg:justify-start">
-          <div className="w-full max-w-[560px] rounded-2xl border-2 border-black p-6 sm:p-8">
+          <div className="w-full max-w-[560px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <img
               src={domainProtectionImg}
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
@@ -435,16 +432,16 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Plug-In
             </span>
-            <div className="flex h-[140px] w-[300px] items-center justify-center gap-2 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:w-[460px] sm:gap-3 sm:p-6">
+            <div className="flex h-[140px] w-[300px] items-center justify-center gap-10 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:w-[460px] sm:gap-16 sm:p-6">
               <img
                 src={outlookImg}
                 alt="Microsoft Outlook"
-                className="h-full w-1/2 rounded-xl object-contain"
+                className="h-[104px] w-[104px] rounded-xl object-cover sm:h-[140px] sm:w-[140px]"
               />
               <img
                 src="/assets/images/thunderbird new pick.avif"
                 alt="Mozilla Thunderbird"
-                className="h-full w-1/2 rounded-xl object-contain"
+                className="h-[104px] w-[104px] rounded-xl object-cover sm:h-[140px] sm:w-[140px]"
               />
             </div>
             <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
@@ -481,8 +478,8 @@ export default function Home() {
             <div className="h-[140px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:w-[460px]">
               <img
                 src={cloudServerImg}
-                alt="Cloud connected to a server appliance"
-                className="h-full w-full scale-105 object-contain"
+                alt="Cloud and server appliance"
+                className="h-full w-full scale-150 object-contain"
               />
             </div>
             <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
@@ -516,7 +513,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[405px] object-contain"
+            className="h-auto w-full max-w-[405px] rounded-lg border-2 border-black bg-white object-contain"
           />
         </div>
         <div>

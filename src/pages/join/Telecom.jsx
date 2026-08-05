@@ -125,7 +125,7 @@ export default function Telecom() {
               <img
                 src={desktopPhoneImg}
                 alt="Caller ID box with PhishCounter sequence number"
-                className="h-auto w-full max-w-[300px] object-contain"
+                className="h-auto w-full max-w-[205px] object-contain"
               />
               <span className="absolute -top-2 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
                 <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">

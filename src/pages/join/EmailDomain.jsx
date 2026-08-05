@@ -39,7 +39,7 @@ export default function EmailDomain() {
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"
-              className="h-auto w-full max-w-[361px] object-contain"
+              className="h-auto w-full max-w-[217px] object-contain"
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function EmailDomain() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center gap-3 bg-[#EEF0F4] px-5">
+              <div className="flex h-[200px] items-center justify-center gap-12 bg-[#EEF0F4] px-5">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
@@ -116,12 +116,13 @@ export default function EmailDomain() {
                     our Domain Appliance.
                   </li>
                   <li>
-                    Placeholder text goes here. Replace this copy with the
-                    final content.
+                    Hosted on AWS, VMware, Azure, or any server with Open
+                    Port 25. Available as a Linux, Kubernetes, or Docker
+                    appliance.
                   </li>
                   <li>
-                    Placeholder text goes here. Replace this copy with the
-                    final content.
+                    Also available on-site with Linux (Postfix) or Microsoft
+                    Exchange.
                   </li>
                 </ul>
               </div>
