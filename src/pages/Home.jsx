@@ -449,19 +449,33 @@ export default function Home() {
               <br />
               Perfect for small business.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
-              <Link
-                to="/join/email-free-plug-in"
-                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                Join Free
-              </Link>
-              <Link
-                to="/join/email-corporate"
-                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                Corporate
-              </Link>
+            <div className="mt-7 flex flex-wrap items-start justify-center gap-8">
+              <div className="flex w-[120px] flex-col items-center gap-3">
+                <span className="flex min-h-[48px] items-center text-center text-[12.5px] italic leading-snug text-ink-muted">
+                  Works with
+                  <br />
+                  Gmail, Outlook, Yahoo, Etc.
+                </span>
+                <Link
+                  to="/join/email-free-plug-in"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Join Free
+                </Link>
+              </div>
+              <div className="flex w-[120px] flex-col items-center gap-3">
+                <span className="flex min-h-[48px] items-center text-center text-[12.5px] italic leading-snug text-ink-muted">
+                  Enable any
+                  <br />
+                  Email Addresses
+                </span>
+                <Link
+                  to="/join/email-corporate"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Join
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -473,7 +487,7 @@ export default function Home() {
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Domain Appliance
+              Our Best Protection
             </span>
             <div className="h-[140px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:w-[460px]">
               <img
@@ -486,13 +500,18 @@ export default function Home() {
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
-              <Link
-                to="/join/email-corporate"
-                className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                Corporate
-              </Link>
+            <div className="mt-7 flex flex-wrap items-start justify-center gap-6">
+              <div className="flex w-[140px] flex-col items-center gap-3">
+                <span className="text-center text-[12.5px] italic leading-snug text-ink-muted">
+                  Our Best Protection
+                </span>
+                <Link
+                  to="/join/email-corporate"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Join
+                </Link>
+              </div>
             </div>
           </div>
         </div>

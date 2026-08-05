@@ -34,11 +34,11 @@ export default function NumberingHistory() {
 
 function HistoryCard({ img, imgAlt }) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center">
       <img
         src={img}
         alt={imgAlt}
-        className="h-auto w-full max-w-[240px] object-contain sm:max-w-[280px]"
+        className="h-auto w-full rounded-2xl object-contain"
       />
     </div>
   );
