@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import infoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
-import heroInfoBoxImg from "../assets/images/email-inbox-v3-balanced.png";
+import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
+import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookImg from "../assets/images/outlook-image-90-square.png";
-import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
+import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
@@ -546,12 +546,6 @@ export default function Home() {
               alt="Desktop corded phone with PhishFlagger Caller ID"
               className="h-auto w-full max-w-[200px] object-contain"
             />
-            <span className="absolute top-1 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
-              <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
-                ✓
-              </span>
-              Verified
-            </span>
           </div>
           <img
             src={threePhoneImg}

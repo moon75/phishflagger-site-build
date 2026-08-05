@@ -35,7 +35,7 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center">
             <img
               src="/assets/images/corporate%20image%20and%20design.png"
               alt="Corporate email protection design"

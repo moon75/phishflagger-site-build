@@ -1,7 +1,6 @@
 ﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import williamImg from "../../assets/images/william.avif";
 
 export function TelecomFormPage({
   title,
@@ -124,7 +123,7 @@ export function TelecomFormPage({
             </div>
 
             <div className="-mt-8 flex flex-col gap-5">
-              <div className="flex h-36 w-36 items-center justify-center rounded-lg">
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -140,12 +139,22 @@ export function TelecomFormPage({
                 </svg>
               </div>
 
-              <div className="h-36 w-36 overflow-hidden rounded-lg border-2 border-black">
-                <img
-                  src={williamImg}
-                  alt="William Pearce"
-                  className="h-full w-full object-cover"
-                />
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-14 w-14 text-ink"
+                  aria-hidden
+                >
+                  <path d="M4 18v-1a8 8 0 0 1 16 0v1" />
+                  <rect x="2.5" y="15" width="4" height="6" rx="1.5" />
+                  <rect x="17.5" y="15" width="4" height="6" rx="1.5" />
+                  <path d="M18 21a4 4 0 0 1-4 2h-1" />
+                </svg>
               </div>
             </div>
           </div>

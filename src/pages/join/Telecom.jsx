@@ -6,7 +6,7 @@ import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
-import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
+import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
@@ -121,19 +121,11 @@ export default function Telecom() {
               alt="Phones with caller ID display"
               className="h-auto w-full max-w-[160px] object-contain"
             />
-            <div className="relative flex items-center">
-              <img
-                src={desktopPhoneImg}
-                alt="Caller ID box with PhishCounter sequence number"
-                className="h-auto w-full max-w-[205px] object-contain"
-              />
-              <span className="absolute -top-2 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
-                <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
-                  ✓
-                </span>
-                Verified
-              </span>
-            </div>
+            <img
+              src={desktopPhoneImg}
+              alt="Caller ID box with PhishCounter sequence number, verified"
+              className="h-auto w-full max-w-[240px] object-contain"
+            />
             <img
               src={callerIdBoxImg}
               alt="Caller ID box showing a PhishCounter sequence number"
@@ -159,7 +151,7 @@ export default function Telecom() {
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>{" "}
-              Method using existing CLI
+              Method using existing Calling Line Identifier
             </h2>
             <ul className="mt-6 space-y-3 pl-5 text-[17px] leading-relaxed text-ink sm:text-[19px]">
               <li className="list-disc">Easily deployable.</li>
@@ -537,7 +529,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter }) {
           <img
             src={image}
             alt={imageAlt}
-            className="h-auto w-full max-w-[300px] object-contain"
+            className="h-auto w-full max-w-[210px] object-contain"
           />
         </div>
         {bullets ? (

@@ -11,16 +11,6 @@ const DOMAIN_PROVIDERS = [
   { domain: "aol.com", provider: "AOL" },
 ];
 
-const ALLOWED_DOMAINS = DOMAIN_PROVIDERS.map(({ domain }) => domain);
-
-function isValidEmailFormat(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function getDomain(email) {
-  const parts = email.split("@");
-  return parts.length === 2 ? parts[1].toLowerCase().trim() : "";
-}
 
 export default function JoinFree() {
   const navigate = useNavigate();
@@ -36,21 +26,6 @@ export default function JoinFree() {
     if (fieldName === "email" && !value) {
       setErrors((prev) => ({ ...prev, email: "Email address is required." }));
       return false;
-    }
-
-    if (fieldName === "email" && value) {
-      if (!isValidEmailFormat(value)) {
-        setErrors((prev) => ({ ...prev, email: "Enter a valid email address." }));
-        return false;
-      }
-      const domain = getDomain(value);
-      if (!ALLOWED_DOMAINS.includes(domain)) {
-        setErrors((prev) => ({
-          ...prev,
-          email: "Domain not supported. Use " + ALLOWED_DOMAINS.join(", ") + ".",
-        }));
-        return false;
-      }
     }
 
     setErrors((prev) => ({ ...prev, [fieldName]: "" }));
