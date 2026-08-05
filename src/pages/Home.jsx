@@ -15,8 +15,9 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import messagingIconsImg from "../assets/images/Icons-2.png";
+import messagingIconsImg from "../assets/images/Icons-3.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v5-wide.png";
+const logoMarkImg = "/assets/images/logo-mark.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg },
@@ -163,6 +164,16 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
+          <div className="mb-6 flex items-end gap-1">
+            <img
+              src={logoMarkImg}
+              alt="PhishFlagger envelope and flag mark"
+              className="h-12 w-auto object-contain sm:h-14"
+            />
+            <span className="mb-1 text-[13px] font-semibold text-ink-muted">
+              &trade;
+            </span>
+          </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
             <BrandInline /> protects individuals and organizations who
             want greater confidence in the authenticity of their emails.
@@ -363,7 +374,12 @@ export default function Home() {
     </section>
 
     {/* ===== Section 4 — Domain protection (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-top px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage: "url('/assets/images/nice%20background%20shade.png')",
+      }}
+    >
       <SectionCounter value="^0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — email authentication diagram */}

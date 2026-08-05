@@ -37,7 +37,7 @@ export default function Telecom() {
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+            "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0003" />

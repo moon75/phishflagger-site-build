@@ -1,5 +1,6 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
-import cloudServerImg from "../assets/images/digital-domain-diagram-v5-wide.png";
+import cloudImg from "../assets/images/domain-cloud-only.png";
+import serverImg from "../assets/images/domain-server-only.png";
 
 export default function DigitalIno() {
   return (
@@ -12,72 +13,76 @@ export default function DigitalIno() {
             Digital Verification
           </h1>
 
-          <div className="mx-auto mt-14 grid max-w-[900px] grid-cols-1 gap-14 sm:mt-20 sm:grid-cols-2 sm:gap-16">
-            <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
-              <h2 className="text-[22px] font-semibold leading-tight tracking-tight text-ink sm:text-[26px]">
-                Cloud
-              </h2>
+          <div className="mx-auto mt-14 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-16">
+            <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
+                <img
+                  src={cloudImg}
+                  alt="Cloud email service"
+                  className="h-auto w-full max-w-[210px] object-contain"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
+                <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+                  Cloud
+                </h3>
+                <div className="space-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <p>
+                    Microsoft Email
+                    <br />
+                    Exchange 365
+                    <br />
+                    Office 365
+                    <br />
+                    Outlook 365
+                  </p>
 
-              <img
-                src={cloudServerImg}
-                alt="Cloud connected to a server appliance"
-                className="mt-6 h-auto w-full max-w-[280px] object-contain"
-              />
+                  <p>
+                    Google Workspace
+                    <br />
+                    Business Email Solution
+                  </p>
 
-              <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-ink sm:text-[16px]">
-                <p>
-                  Microsoft Email
-                  <br />
-                  Exchange 365
-                  <br />
-                  Office 365
-                  <br />
-                  Outlook 365
-                </p>
+                  <p>
+                    Hosted on: AWS, VMware, Azure,
+                    <br />
+                    or any server with Open Port 25.
+                  </p>
 
-                <p>
-                  Google Workspace
-                  <br />
-                  Business Email Solution
-                </p>
-
-                <p>
-                  Hosted on: AWS, VMware, Azure,
-                  <br />
-                  or any server with Open Port 25.
-                </p>
-
-                <p>
-                  Appliance forms:
-                  <br />
-                  Linux Kubernetes Docker
-                </p>
+                  <p>
+                    Appliance forms:
+                    <br />
+                    Linux Kubernetes Docker
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
-              <h2 className="text-[22px] font-semibold leading-tight tracking-tight text-ink sm:text-[26px]">
-                On-Site Server
-              </h2>
+            <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
+                <img
+                  src={serverImg}
+                  alt="On-site email server appliance"
+                  className="h-auto w-full max-w-[170px] object-contain"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
+                <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+                  On-Site Server
+                </h3>
+                <div className="space-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <p>
+                    Linux
+                    <br />
+                    Postfix
+                  </p>
 
-              <img
-                src={cloudServerImg}
-                alt="Cloud connected to a server appliance"
-                className="mt-6 h-auto w-full max-w-[280px] object-contain"
-              />
-
-              <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-ink sm:text-[16px]">
-                <p>
-                  Linux
-                  <br />
-                  Postfix
-                </p>
-
-                <p>
-                  Microsoft
-                  <br />
-                  Exchange
-                </p>
+                  <p>
+                    Microsoft
+                    <br />
+                    Exchange
+                  </p>
+                </div>
               </div>
             </div>
           </div>
