@@ -257,7 +257,13 @@ export default function Home() {
     </section>
 
     {/* ===== Section 2 — How Does PhishFlagger Work? (gray) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+      }}
+    >
       <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex flex-col items-center lg:items-start">
@@ -449,7 +455,7 @@ export default function Home() {
               <br />
               Perfect for small business.
             </p>
-            <div className="mt-7 flex flex-wrap items-start justify-center gap-8">
+            <div className="-mt-3 flex flex-wrap items-start justify-center gap-8">
               <div className="flex w-[120px] flex-col items-center gap-3">
                 <span className="flex min-h-[48px] items-center text-center text-[12.5px] italic leading-snug text-ink-muted">
                   Works with
@@ -500,8 +506,8 @@ export default function Home() {
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
-            <div className="mt-7 flex flex-wrap items-start justify-center gap-6">
-              <div className="flex w-[140px] flex-col items-center gap-3">
+            <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
+              <div className="mt-[2rem] flex w-[140px] flex-col items-center gap-3">
                 <span className="text-center text-[12.5px] italic leading-snug text-ink-muted">
                   Our Best Protection
                 </span>
@@ -580,7 +586,7 @@ export default function Home() {
         {/* Right — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for Telecom / Caller ID
+            <BrandInline /> for Telecom / Caller ID CLI
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.
@@ -674,7 +680,7 @@ export default function Home() {
               href="https://phishflagger.netlify.app/join/messaging"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mt-10 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Messaging
             </a>

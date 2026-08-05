@@ -35,12 +35,14 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center">
-            <img
-              src="/assets/images/corporate%20image%20and%20design.png"
-              alt="Corporate email protection design"
-              className="h-auto w-full max-w-[217px] object-contain"
-            />
+          <div className="flex justify-center lg:justify-end lg:pr-6">
+            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black">
+              <img
+                src="/assets/images/corporate%20image%20and%20design.png"
+                alt="Corporate email protection design"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -131,7 +133,13 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        }}
+      >
         <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
@@ -161,19 +169,19 @@ export default function EmailDomain() {
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="flex flex-wrap justify-center gap-6">
-            <div className="h-[240px] w-[240px] overflow-hidden rounded-xl border-2 border-black">
+          <div className="flex flex-nowrap justify-center gap-6">
+            <div className="h-[240px] w-[240px] shrink-0 overflow-hidden rounded-xl border-2 border-black">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex h-[240px] w-auto items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
+            <div className="flex h-[240px] w-[240px] shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
-                className="h-full w-auto object-contain"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
@@ -189,7 +197,13 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        }}
+      >
         <SectionCounter value="^0005" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">

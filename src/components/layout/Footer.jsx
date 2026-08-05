@@ -6,7 +6,7 @@ import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/ph
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import inboxImg from "../../assets/images/email-inbox-v3-balanced.png";
+import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const PRODUCT_IMAGES = [

@@ -1,6 +1,7 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 import cloudImg from "../assets/images/domain-cloud-only.png";
 import serverImg from "../assets/images/domain-server-only.png";
+import topImg from "../assets/images/3rd section left image.avif";
 
 export default function DigitalIno() {
   return (
@@ -12,6 +13,24 @@ export default function DigitalIno() {
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
             Digital Verification
           </h1>
+
+          <div className="mx-auto mt-10 flex justify-center">
+            <img
+              src={topImg}
+              alt="Digital verification overview"
+              className="h-auto w-full max-w-[420px] object-contain"
+            />
+          </div>
+
+          <p className="mx-auto mt-8 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
+            Placeholder text goes here. Replace this copy with the final
+            content.
+          </p>
+
+          <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
+            Placeholder text goes here. Replace this copy with the final
+            content.
+          </p>
 
           <div className="mx-auto mt-14 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
@@ -86,6 +105,11 @@ export default function DigitalIno() {
               </div>
             </div>
           </div>
+
+          <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
+            Placeholder text goes here. Replace this copy with the final
+            content.
+          </p>
         </div>
       </section>
     </>
