@@ -101,8 +101,8 @@ function categoryVideos(category) {
       },
       {
         type: "local",
-        src: "/assets/Videos/Get the message Part 3 Final.mp4",
-        title: "Get the Message - Part 3",
+        src: "/assets/Videos/PhishFlagger_8.04.26_Part3.mp4",
+        title: "PhishFlagger 8.04.26 - Part 3",
         description: "",
       },
       ...Array.from({ length: 2 }, () => ({
