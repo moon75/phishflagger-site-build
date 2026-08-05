@@ -206,7 +206,7 @@ export default function Home() {
               to="/join/email-free-plug-in"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              Join
+              Join Free
             </Link>
           </div>
           <div className="flex w-auto flex-col items-center">
@@ -436,7 +436,7 @@ export default function Home() {
         <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-[60px] px-4 sm:mt-16 sm:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Plug-In
+              Client Plug-In
             </span>
             <div className="flex h-[140px] w-[300px] items-center justify-center gap-10 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:w-[460px] sm:gap-16 sm:p-6">
               <img

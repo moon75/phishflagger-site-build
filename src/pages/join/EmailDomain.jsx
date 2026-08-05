@@ -224,7 +224,7 @@ export default function EmailDomain() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
-            Purchase Corporate
+            Join
           </a>
         </div>
       </section>
