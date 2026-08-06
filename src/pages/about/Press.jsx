@@ -6,8 +6,8 @@ const PRESS_ITEMS = [
     title:
       'PhishFlagger™ announces a breakthrough in the global fight against Caller ID fraud.',
     url: "https://www.einpresswire.com/article/905767982/phishflagger-announces-a-breakthrough-in-the-global-fight-against-caller-id-fraud",
-    image: "/assets/images/PhishFlagger Presswire img.png",
-    fit: "contain",
+    image: "/assets/images/granny image.png",
+    fit: "cover",
   },
   {
     title: "PhishFlagger anti-phishing email solution released",
