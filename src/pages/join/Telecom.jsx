@@ -127,21 +127,21 @@ export default function Telecom() {
               Provides immediate protection even with old Handsets.
             </li>
           </ul>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <img
               src={threePhoneImg}
               alt="Phones with caller ID display"
-              className="h-auto w-full max-w-[160px] object-contain"
+              className="h-auto w-[24vw] max-w-[85px] object-contain sm:w-full sm:max-w-[130px]"
             />
             <img
               src={desktopPhoneImg}
               alt="Caller ID box with PhishCounter sequence number, verified"
-              className="h-auto w-full max-w-[240px] object-contain"
+              className="h-auto w-[32vw] max-w-[125px] object-contain sm:w-full sm:max-w-[195px]"
             />
             <img
               src={callerIdBoxImg}
               alt="Caller ID box showing a PhishCounter sequence number"
-              className="h-auto w-full max-w-[220px] object-contain"
+              className="h-auto w-[28vw] max-w-[115px] object-contain sm:w-full sm:max-w-[180px]"
             />
           </div>
         </div>
@@ -369,16 +369,16 @@ export default function Telecom() {
               final copy for this section.
             </p>
           </div>
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <img
               src={textPhoneImg}
               alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-full max-w-[171px] object-contain"
+              className="h-auto w-[42vw] max-w-[120px] object-contain sm:w-full sm:max-w-[171px]"
             />
             <img
               src={smsPhoneImg}
               alt="Phone displaying PhishFlagger SMS messages"
-              className="h-auto w-full max-w-[200px] object-contain"
+              className="h-auto w-[46vw] max-w-[140px] object-contain sm:w-full sm:max-w-[200px]"
             />
           </div>
         </div>

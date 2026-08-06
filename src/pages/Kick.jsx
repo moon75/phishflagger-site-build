@@ -4,6 +4,8 @@ import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
 import kickstarterRewardsDoc from "../assets/Pdf/Kickstarter Rewards.docx";
+import rewardsDoc from "../assets/Pdf/Rewards.txt";
+import campaignDoc from "../assets/Pdf/Campaign.txt";
 
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
@@ -99,21 +101,17 @@ export default function Kick() {
           9. Purchase
         </a>
 
-        {/* TODO: replace with the real "Anyone with the link can edit" Google Doc URL once created */}
         <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={rewardsDoc}
+          download
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           10. Rewards
         </a>
 
-        {/* TODO: replace with the real "Anyone with the link can edit" Google Doc URL once created */}
         <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={campaignDoc}
+          download
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           11. Campaign

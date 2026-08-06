@@ -31,30 +31,18 @@ const SMS_STEPS = [
   {
     date: "Tuesday, Mar 10 · 2:58 PM",
     message: "^5201 About your account renewal — all looks great.",
-    position: "left-0 top-0",
-    size: "w-[72%]",
-    bubbleSize: "min-h-[86px]",
   },
   {
     date: "Wednesday, Mar 11 · 12:41 PM",
     message: "^5202 Everything looks good! Your subscription is active until April.",
-    position: "left-[8%] top-[64px]",
-    size: "w-[76%]",
-    bubbleSize: "min-h-[100px]",
   },
   {
     date: "Friday, Mar 13 · 9:38 AM",
     message: "^5204 We have a new renewal offer. Visit our site for details.",
-    position: "left-[16%] top-[136px]",
-    size: "w-[74%]",
-    bubbleSize: "min-h-[92px]",
   },
   {
     date: "Friday, Mar 13 · 8:20 AM",
     message: "Message is missing. Expected ^5203 above but received ^5204",
-    position: "left-[24%] top-[202px]",
-    size: "w-[72%]",
-    bubbleSize: "min-h-[96px]",
     warning: true,
   },
 ];
@@ -62,29 +50,24 @@ const SMS_STEPS = [
 function SmsMessageSteps() {
   return (
     <div
-      className="relative h-[310px] w-full max-w-[360px] shrink-0"
+      className="flex w-full max-w-[230px] flex-col gap-2"
       aria-label="Sequential SMS messages showing a missing message warning"
     >
-      {SMS_STEPS.map(({ date, message, position, size, bubbleSize, warning }, index) => (
+      {SMS_STEPS.map(({ date, message, warning }) => (
         <div
           key={date}
-          className={`absolute ${size} ${position}`}
-          style={{ zIndex: index + 1 }}
+          className={`flex flex-col gap-0.5 rounded-[10px] px-2.5 py-2 text-[11px] font-medium leading-[1.3] shadow-[0_2px_6px_rgba(0,0,0,0.1)] ${
+            warning ? "bg-[#e11616] text-white" : "bg-white text-black"
+          }`}
         >
-          <div
-            className={`flex flex-col justify-center gap-1 rounded-[12px] px-3 py-2.5 text-[12px] font-medium leading-[1.25] shadow-[0_3px_8px_rgba(0,0,0,0.14)] sm:text-[14px] ${bubbleSize} ${
-              warning ? "bg-[#e11616] text-white" : "bg-white text-black"
+          <p
+            className={`text-[9px] font-medium leading-none ${
+              warning ? "text-white/80" : "text-[#454545]"
             }`}
           >
-            <p
-              className={`whitespace-nowrap text-[10px] font-medium leading-none sm:text-[11px] ${
-                warning ? "text-white/80" : "text-[#454545]"
-              }`}
-            >
-              {date}
-            </p>
-            <p>{message}</p>
-          </div>
+            {date}
+          </p>
+          <p>{message}</p>
         </div>
       ))}
     </div>
@@ -172,7 +155,7 @@ export default function Home() {
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[111px] w-auto object-contain sm:h-[130px]"
+              className="h-[83px] w-auto object-contain sm:h-[98px]"
             />
           </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
@@ -222,11 +205,11 @@ export default function Home() {
                 Plug-In or Domain
               </span>
             </div>
-            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black">
+            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-2">
               <img
                 src="/assets/images/corporate-image-homepage-v5.png"
                 alt="Domain protection illustration"
-                className="h-full w-full object-cover"
+                className="h-full w-full rounded-lg object-contain"
               />
             </div>
             <Link
@@ -437,12 +420,12 @@ export default function Home() {
           Email
         </h2>
 
-        <div className="mx-auto mt-10 flex flex-nowrap items-start justify-center gap-[60px] px-4 sm:mt-16 sm:gap-[84px]">
+        <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Client Plug-In
             </span>
-            <div className="flex h-[140px] w-[300px] items-center justify-center gap-10 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:w-[460px] sm:gap-16 sm:p-6">
+            <div className="flex h-[140px] w-full max-w-[300px] items-center justify-center gap-10 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:max-w-[460px] sm:gap-16 sm:p-6">
               <img
                 src={outlookImg}
                 alt="Microsoft Outlook"
@@ -454,7 +437,7 @@ export default function Home() {
                 className="h-[104px] w-[104px] rounded-xl object-cover sm:h-[140px] sm:w-[140px]"
               />
             </div>
-            <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
+            <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Free for Individuals.
               <br />
               Perfect for small business.
@@ -475,9 +458,11 @@ export default function Home() {
               </div>
               <div className="flex w-[170px] flex-col items-center gap-3">
                 <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Enable any
+                  Enable multiple
                   <br />
                   Email Addresses
+                  <br />
+                  (works with all domains)
                 </span>
                 <Link
                   to="/join/email-corporate"
@@ -489,7 +474,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex h-[220px] items-center justify-center sm:h-[300px]">
+          <div className="flex h-12 items-center justify-center sm:h-16 lg:h-[220px] xl:h-[300px]">
             <span className="text-[23px] font-bold uppercase tracking-wide text-ink-muted sm:text-[26px]">
               Or
             </span>
@@ -499,14 +484,14 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="h-[140px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:w-[460px]">
+            <div className="h-[140px] w-full max-w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:max-w-[460px]">
               <img
                 src={cloudServerImg}
                 alt="Cloud and server appliance"
                 className="h-full w-full scale-150 object-contain"
               />
             </div>
-            <p className="flex h-[130px] w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:w-[460px] sm:p-8 sm:text-[22px]">
+            <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
@@ -604,23 +589,23 @@ export default function Home() {
           </Link>
         </div>
         {/* Right — 3 phones in a row */}
-        <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-end">
-          <div className="relative flex items-end pt-2">
+        <div className="flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
+          <div className="relative flex min-w-0 items-end pt-2">
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[200px] object-contain"
+              className="h-auto w-full max-w-[130px] object-contain sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 max-w-[135px] object-contain"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 max-w-[160px] object-contain"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain sm:max-w-[160px]"
           />
         </div>
       </div>
@@ -673,7 +658,7 @@ export default function Home() {
             platforms.
           </p>
         </div>
-        <div className="flex items-start justify-center gap-14 lg:justify-start">
+        <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-14 lg:justify-start">
           <div className="flex w-full max-w-[380px] flex-col items-start">
             <img
               src={messagingIconsImg}
@@ -692,7 +677,7 @@ export default function Home() {
           <img
             src={messagesPhoneImg}
             alt="Phone displaying PhishFlagger messages"
-            className="h-auto w-[32%] max-w-[171px] object-contain"
+            className="h-auto w-1/2 max-w-[171px] object-contain sm:w-[32%]"
           />
         </div>
       </div>

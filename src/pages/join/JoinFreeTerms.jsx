@@ -97,7 +97,7 @@ export default function JoinFreeTerms() {
                 </p>
                 <Link
                   to="/"
-                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Back to Home
                 </Link>

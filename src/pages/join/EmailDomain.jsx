@@ -37,11 +37,11 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex justify-center lg:justify-end lg:pr-6">
-            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black">
+            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-2">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
                 alt="Corporate email protection design"
-                className="h-full w-full object-cover"
+                className="h-full w-full rounded-lg object-contain"
               />
             </div>
           </div>
@@ -56,16 +56,16 @@ export default function EmailDomain() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center gap-12 bg-[#EEF0F4] px-5">
+              <div className="flex h-[140px] items-center justify-center gap-4 bg-[#EEF0F4] px-5 sm:h-[200px] sm:gap-12">
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-[140px] w-[140px] rounded-2xl object-cover"
+                  className="h-[90px] w-[90px] max-w-full rounded-2xl object-cover sm:h-[140px] sm:w-[140px]"
                 />
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-[140px] w-[140px] rounded-2xl object-cover"
+                  className="h-[90px] w-[90px] max-w-full rounded-2xl object-cover sm:h-[140px] sm:w-[140px]"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
@@ -170,15 +170,15 @@ export default function EmailDomain() {
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="flex flex-nowrap justify-center gap-6">
-            <div className="h-[240px] w-[240px] shrink-0 overflow-hidden rounded-xl border-2 border-black">
+          <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
+            <div className="h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black p-2 sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
-                className="h-full w-full scale-110 object-cover"
+                className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="flex h-[240px] w-[240px] shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
+            <div className="flex h-[130px] w-[130px] shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2 sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
