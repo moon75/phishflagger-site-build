@@ -444,7 +444,7 @@ export default function Home() {
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
-                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
                   Gmail, Outlook, Yahoo, Etc.
@@ -457,7 +457,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex w-[170px] flex-col items-center gap-3">
-                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Enable multiple
                   <br />
                   Email Addresses
@@ -466,7 +466,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/email-corporate"
-                  className="mt-[0.8rem] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Join
                 </Link>
@@ -497,12 +497,12 @@ export default function Home() {
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
               <div className="flex w-[190px] flex-col items-center gap-3">
-                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Join your Domain
                 </span>
                 <Link
                   to="/join/email-corporate"
-                  className="mt-[0.8rem] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Join
                 </Link>
