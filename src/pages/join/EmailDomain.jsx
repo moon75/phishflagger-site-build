@@ -233,6 +233,12 @@ export default function EmailDomain() {
           >
             Join
           </Link>
+          <Link
+            to="/join-free"
+            className="inline-flex items-center justify-center rounded-md bg-[#e4e6ea] px-5 py-3 text-[13px] font-bold text-[#585858] transition-colors hover:bg-[#d8dade]"
+          >
+            Join2
+          </Link>
         </div>
       </section>
 
