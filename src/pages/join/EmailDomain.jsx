@@ -158,7 +158,7 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex flex-col items-center">
-            <h2 className="mb-6 text-center text-[18px] text-ink sm:text-[21px]">
+            <h2 className="mb-1 text-center text-[18px] text-ink sm:text-[21px]">
               <BrandInline trail="Counter" /> protect your Recipients.
             </h2>
             <img
