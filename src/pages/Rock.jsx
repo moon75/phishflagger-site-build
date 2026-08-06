@@ -102,8 +102,8 @@ export default function Rock() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <form onSubmit={onSubmit} className="space-y-8 sm:space-y-10">
-            {/* Picture boxes — .5x size */}
-            <div className="mx-auto grid max-w-[50%] grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
+            {/* Picture boxes — .5x size on larger screens; full width on mobile so the drop zones stay usable */}
+            <div className="mx-auto grid w-full max-w-[280px] grid-cols-1 gap-2 sm:max-w-[50%] sm:grid-cols-3 sm:gap-3">
               {images.map((file, idx) => (
                 <PictureBox
                   key={idx}

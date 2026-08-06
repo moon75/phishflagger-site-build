@@ -26,16 +26,16 @@ export default function Messaging() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-14 lg:justify-end lg:gap-20">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 lg:flex-nowrap lg:justify-end lg:gap-20">
             <img
               src={messagingIconsImg}
               alt="Grid of popular messaging app icons"
-              className="h-auto w-[58%] max-w-[300px] object-contain"
+              className="h-auto w-[45%] max-w-[300px] object-contain sm:w-[58%]"
             />
             <img
               src={messagesImg}
               alt="Phone showing PhishFlagger numbered messages"
-              className="h-auto w-[36%] max-w-[190px] object-contain"
+              className="h-auto w-[28%] max-w-[190px] object-contain sm:w-[36%]"
             />
           </div>
         </div>
