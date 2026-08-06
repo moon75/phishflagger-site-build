@@ -295,7 +295,7 @@ export default function Home() {
               authentication technologies, our domain validation screens
               messages that originate from authorized senders, adding an
               extra layer of protection against impersonation and phishing
-              attacks.
+              and other attacks.
             </p>
           </div>
         </div>
