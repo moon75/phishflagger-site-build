@@ -44,7 +44,7 @@ export default function EmailMarketing() {
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div className="flex flex-col items-center lg:items-start">
-            <h2 className="mb-6 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-left">
+            <h2 className="mb-6 text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:text-left">
               PhishCounter protects recipients.
             </h2>
             <img
