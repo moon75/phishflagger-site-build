@@ -16,7 +16,7 @@ export default function Demo() {
 
           <div className="mt-10 flex justify-center">
             <a
-              href="mailto:demo@PhishFlagger.com?subject=001%20-%20PhishFlagger%20Demo&body=Hi%20PhishFlagger%20team%2C%0A%0AI%27d%20like%20to%20try%20the%20demo."
+              href="mailto:demo@phishflaggerkey.com?subject=001%20-%20PhishFlagger%20Demo&body=Hi%20PhishFlagger%20team%2C%0A%0AI%27d%20like%20to%20try%20the%20demo."
               className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#2a6df4] px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition-colors hover:bg-[#1a52c9] sm:px-10 sm:py-4 sm:text-[16px]"
             >
               Click to Email

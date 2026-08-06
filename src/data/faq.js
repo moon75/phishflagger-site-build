@@ -36,12 +36,8 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "Email - Corporate",
+    name: "Email - Plug-In (Free)",
     items: [
-      {
-        q: "Do I need to change my DNS settings, MX records, or email provider?",
-        a: "Plug-in: No DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is plug-in for your client. Perfect for individual and small companies.\n\nDomain: Yes DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
-      },
       {
         q: "Do email recipients need to install anything?",
         a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
@@ -53,8 +49,12 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "Email - Plug-In (Free)",
+    name: "Email - Corporate",
     items: [
+      {
+        q: "Do I need to change my DNS settings, MX records, or email provider?",
+        a: "Plug-in: No DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is plug-in for your client. Perfect for individual and small companies.\n\nDomain: Yes DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
+      },
       {
         q: "Do email recipients need to install anything?",
         a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",

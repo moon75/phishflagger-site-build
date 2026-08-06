@@ -25,12 +25,10 @@ const DOWNLOADS = [
 ];
 
 const PROVIDERS = [
-  "Gmail.com",
-  "Yahoo.com",
-  "Outlook.com",
-  "Live.com",
-  "Hotmail.com",
-  "AOL.com",
+  { key: "Gmail.com", labels: ["Gmail.com"] },
+  { key: "Yahoo.com", labels: ["Yahoo.com"] },
+  { key: "Outlook.com", labels: ["Outlook.com", "Live.com", "Hotmail.com"] },
+  { key: "AOL.com", labels: ["AOL.com"] },
 ];
 
 export default function EmailFreePlugIn() {
@@ -81,22 +79,35 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 2. Get your Free Key.&nbsp; Works with ....
           </h2>
-          <div className="mx-auto mt-9 grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
-            {PROVIDERS.map((provider) => (
+          <div className="mx-auto mt-9 grid max-w-[820px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+            {PROVIDERS.map(({ key, labels }) => (
               <div
-                key={provider}
+                key={key}
                 className="flex min-h-[142px] flex-col items-center justify-center rounded-2xl border-2 border-black bg-white px-4 py-6 shadow-[0_5px_20px_rgba(15,23,42,0.05)]"
               >
-                <ProviderIcon provider={provider} />
-                <span className="mt-4 text-[15px] font-semibold text-ink">
-                  {provider}
-                </span>
+                <ProviderIcon provider={key} />
+                <div className="mt-4 flex flex-col items-center gap-1">
+                  {labels.map((label) => (
+                    <span
+                      key={label}
+                      className="text-[15px] font-semibold text-ink"
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
