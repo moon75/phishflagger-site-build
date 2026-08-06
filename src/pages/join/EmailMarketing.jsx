@@ -20,7 +20,7 @@ export default function EmailMarketing() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
-              Brand Protection
+              PhishCounter protects recipients.
             </h2>
             <p>
               You can help prevent phishing and fraud by numbering your outgoing
@@ -37,7 +37,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[361px] object-contain"
+              className="h-auto w-full max-w-[361px] rounded-lg border-2 border-black bg-white object-contain"
             />
           </div>
         </div>

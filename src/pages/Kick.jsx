@@ -99,6 +99,26 @@ export default function Kick() {
           9. Purchase
         </a>
 
+        {/* TODO: replace with the real "Anyone with the link can edit" Google Doc URL once created */}
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          10. Rewards
+        </a>
+
+        {/* TODO: replace with the real "Anyone with the link can edit" Google Doc URL once created */}
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          11. Campaign
+        </a>
+
         {/* ===== Available domains ===== */}
         <div className="mx-auto mt-10 w-full max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4">
           <p className="text-[13px] font-semibold text-ink">

@@ -33,28 +33,28 @@ const SMS_STEPS = [
     message: "^5201 About your account renewal — all looks great.",
     position: "left-0 top-0",
     size: "w-[72%]",
-    bubbleSize: "min-h-[72px]",
+    bubbleSize: "min-h-[86px]",
   },
   {
     date: "Wednesday, Mar 11 · 12:41 PM",
     message: "^5202 Everything looks good! Your subscription is active until April.",
-    position: "left-[8%] top-[18%]",
+    position: "left-[8%] top-[64px]",
     size: "w-[76%]",
-    bubbleSize: "min-h-[90px]",
+    bubbleSize: "min-h-[100px]",
   },
   {
     date: "Friday, Mar 13 · 9:38 AM",
     message: "^5204 We have a new renewal offer. Visit our site for details.",
-    position: "left-[16%] top-[39%]",
+    position: "left-[16%] top-[136px]",
     size: "w-[74%]",
-    bubbleSize: "min-h-[78px]",
+    bubbleSize: "min-h-[92px]",
   },
   {
     date: "Friday, Mar 13 · 8:20 AM",
     message: "Message is missing. Expected ^5203 above but received ^5204",
-    position: "left-[24%] top-[60%]",
+    position: "left-[24%] top-[202px]",
     size: "w-[72%]",
-    bubbleSize: "min-h-[86px]",
+    bubbleSize: "min-h-[96px]",
     warning: true,
   },
 ];
@@ -62,7 +62,7 @@ const SMS_STEPS = [
 function SmsMessageSteps() {
   return (
     <div
-      className="relative h-[270px] w-full max-w-[360px] shrink-0"
+      className="relative h-[310px] w-full max-w-[360px] shrink-0"
       aria-label="Sequential SMS messages showing a missing message warning"
     >
       {SMS_STEPS.map(({ date, message, position, size, bubbleSize, warning }, index) => (
@@ -71,15 +71,19 @@ function SmsMessageSteps() {
           className={`absolute ${size} ${position}`}
           style={{ zIndex: index + 1 }}
         >
-          <p className="mb-1 whitespace-nowrap text-[10px] font-medium leading-none text-[#454545] sm:text-[11px]">
-            {date}
-          </p>
           <div
-            className={`flex items-center rounded-[12px] px-3 py-2.5 text-[12px] font-medium leading-[1.25] shadow-[0_3px_8px_rgba(0,0,0,0.14)] sm:text-[14px] ${bubbleSize} ${
+            className={`flex flex-col justify-center gap-1 rounded-[12px] px-3 py-2.5 text-[12px] font-medium leading-[1.25] shadow-[0_3px_8px_rgba(0,0,0,0.14)] sm:text-[14px] ${bubbleSize} ${
               warning ? "bg-[#e11616] text-white" : "bg-white text-black"
             }`}
           >
-            {message}
+            <p
+              className={`whitespace-nowrap text-[10px] font-medium leading-none sm:text-[11px] ${
+                warning ? "text-white/80" : "text-[#454545]"
+              }`}
+            >
+              {date}
+            </p>
+            <p>{message}</p>
           </div>
         </div>
       ))}
@@ -164,11 +168,11 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
-          <div className="mb-6">
+          <div className="mb-6 flex justify-center">
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-12 w-auto object-contain sm:h-14"
+              className="h-[111px] w-auto object-contain sm:h-[130px]"
             />
           </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
@@ -455,9 +459,9 @@ export default function Home() {
               <br />
               Perfect for small business.
             </p>
-            <div className="-mt-3 flex flex-wrap items-start justify-center gap-8">
-              <div className="flex w-[120px] flex-col items-center gap-3">
-                <span className="flex min-h-[48px] items-center text-center text-[12.5px] italic leading-snug text-ink-muted">
+            <div className="-mt-3 flex flex-wrap items-start justify-center gap-4">
+              <div className="flex w-[170px] flex-col items-center gap-3">
+                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
                   Gmail, Outlook, Yahoo, Etc.
@@ -469,15 +473,15 @@ export default function Home() {
                   Join Free
                 </Link>
               </div>
-              <div className="flex w-[120px] flex-col items-center gap-3">
-                <span className="flex min-h-[48px] items-center text-center text-[12.5px] italic leading-snug text-ink-muted">
+              <div className="flex w-[170px] flex-col items-center gap-3">
+                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Enable any
                   <br />
                   Email Addresses
                 </span>
                 <Link
                   to="/join/email-corporate"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-[0.8rem] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Join
                 </Link>
@@ -493,7 +497,7 @@ export default function Home() {
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Our Best Protection
+              Domain Appliance
             </span>
             <div className="h-[140px] w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:w-[460px]">
               <img
@@ -507,13 +511,13 @@ export default function Home() {
               Domain. No Install or Downloads required by users.
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
-              <div className="mt-[2rem] flex w-[140px] flex-col items-center gap-3">
-                <span className="text-center text-[12.5px] italic leading-snug text-ink-muted">
-                  Our Best Protection
+              <div className="flex w-[190px] flex-col items-center gap-3">
+                <span className="flex min-h-[70px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                  Join your Domain
                 </span>
                 <Link
                   to="/join/email-corporate"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-[0.8rem] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Join
                 </Link>
@@ -563,27 +567,7 @@ export default function Home() {
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        {/* Left — 3 phones in a row */}
-        <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-start">
-          <div className="relative flex items-end pt-2">
-            <img
-              src={callerIdDesktopImg}
-              alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[200px] object-contain"
-            />
-          </div>
-          <img
-            src={threePhoneImg}
-            alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 max-w-[135px] object-contain"
-          />
-          <img
-            src={callerIdHandsetImg}
-            alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 max-w-[160px] object-contain"
-          />
-        </div>
-        {/* Right — heading + text */}
+        {/* Left — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
             <BrandInline /> for Telecom / Caller ID CLI
@@ -618,6 +602,26 @@ export default function Home() {
           >
             Telecom
           </Link>
+        </div>
+        {/* Right — 3 phones in a row */}
+        <div className="flex items-end justify-center gap-4 sm:gap-6 lg:justify-end">
+          <div className="relative flex items-end pt-2">
+            <img
+              src={callerIdDesktopImg}
+              alt="Desktop corded phone with PhishFlagger Caller ID"
+              className="h-auto w-full max-w-[200px] object-contain"
+            />
+          </div>
+          <img
+            src={threePhoneImg}
+            alt="PhishFlagger Caller ID phones"
+            className="h-auto w-1/3 max-w-[135px] object-contain"
+          />
+          <img
+            src={callerIdHandsetImg}
+            alt="Cordless handset with PhishFlagger Caller ID"
+            className="h-auto w-1/3 max-w-[160px] object-contain"
+          />
         </div>
       </div>
     </section>

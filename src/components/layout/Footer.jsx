@@ -162,6 +162,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Help</p>
                 <ul className="space-y-2.5 list-none p-0">
                   {[
+                    { label: "Support", to: "/contact" },
                     { label: "PhishFlagger.org", to: "/phishflagger-org" },
                     { label: "Kickstarter", to: "/help/kickstarter" },
                     { label: "Hall of Fame", to: "/help/hall-of-fame" },
@@ -298,11 +299,13 @@ export default function Footer({ logoSrc = logoImg }) {
           <p className="mx-auto mt-0.5 text-[10px] text-[#4a4a4a]">
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Flagger</strong>
-            </em>{" "}
+            </em>
+            <sup>&trade;</sup>{" "}
             and{" "}
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Counter</strong>
-            </em>{" "}
+            </em>
+            <sup>&trade;</sup>{" "}
             are Trademarks of{" "}
             <em className="text-black">
               Phish<strong className="text-[#FF0033]">Flagger</strong>

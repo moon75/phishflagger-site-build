@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import messagingIconsImg from "../../assets/images/Icons-5.png";
@@ -7,16 +8,8 @@ export default function Messaging() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
-        <div className="mx-auto max-w-content">
-          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Messaging
-          </h1>
-        </div>
-      </section>
-
       <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -24,6 +17,9 @@ export default function Messaging() {
       >
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
+            <h1 className="mb-6 text-left text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
+              Messaging
+            </h1>
             <p>
               Placeholder text goes here. Replace this paragraph with the
               final copy for this section.
@@ -42,6 +38,15 @@ export default function Messaging() {
               className="h-auto w-[36%] max-w-[190px] object-contain"
             />
           </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-content text-center sm:mt-14">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+          >
+            Contact Us
+          </Link>
         </div>
       </section>
     </>

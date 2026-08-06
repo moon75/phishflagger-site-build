@@ -17,7 +17,13 @@ export default function Telecom() {
     <>
       <CloseButton />
 
-      <section className="relative w-full bg-white px-4 pt-12 pb-16 sm:px-6 sm:pb-24">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-16 sm:px-6 sm:pb-24"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
@@ -96,7 +102,13 @@ export default function Telecom() {
         ]}
       />
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
@@ -166,7 +178,13 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
@@ -333,7 +351,13 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0009" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -395,7 +419,13 @@ export default function Telecom() {
       </section>
 
       {/* ===== Bottom CTA panel ===== */}
-      <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0011" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">

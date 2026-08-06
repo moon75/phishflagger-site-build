@@ -1,6 +1,7 @@
-﻿import CloseButton from "../../components/ui/CloseButton.jsx";
+﻿import { Link } from "react-router-dom";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v3.png";
+import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v4.png";
 import outlookImg from "../../assets/images/outlook-image-90-square.png";
 import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
 
@@ -68,7 +69,7 @@ export default function EmailDomain() {
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Plug-In
                   </h3>
@@ -99,11 +100,11 @@ export default function EmailDomain() {
                 <img
                   src={digitalDomainImg}
                   alt="Digital diagram showing email server, domain records check, sending domain validation, and verified result"
-                  className="h-full w-full object-contain"
+                  className="h-[92%] w-[92%] object-contain"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                   <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                     Domain
                   </h3>
@@ -174,7 +175,7 @@ export default function EmailDomain() {
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
-                className="h-full w-full object-cover"
+                className="h-full w-full scale-110 object-cover"
               />
             </div>
             <div className="flex h-[240px] w-[240px] shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2">
@@ -217,7 +218,7 @@ export default function EmailDomain() {
 
       <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <SectionCounter value="^0006" />
-        <div className="mx-auto max-w-[820px] text-center">
+        <div className="mx-auto flex max-w-[820px] flex-wrap items-center justify-center gap-4 text-center">
           <a
             href="https://join.phishflagger.com/membership-form-stripe.php"
             target="_blank"
@@ -226,6 +227,12 @@ export default function EmailDomain() {
           >
             Join
           </a>
+          <Link
+            to="/join-free"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+          >
+            Join
+          </Link>
         </div>
       </section>
 
