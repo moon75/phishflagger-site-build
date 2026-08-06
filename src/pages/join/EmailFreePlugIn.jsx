@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
+import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 
 const DOWNLOADS = [
@@ -127,13 +127,19 @@ export default function EmailFreePlugIn() {
             >
               Join
             </Link>
+            <Link
+              to="/join-free"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              Join2
+            </Link>
             <a
               href="https://join.phishflagger.com/individual/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md bg-[#e4e6ea] px-5 py-3 text-[13px] font-bold text-[#c7cad0] transition-colors hover:bg-[#d8dade]"
             >
-              Join2
+              Join3
             </a>
           </div>
         </div>

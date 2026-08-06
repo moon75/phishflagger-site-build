@@ -3,7 +3,7 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v4.png";
 import outlookImg from "../../assets/images/outlook-image-90-square.png";
-import emailInboxImg from "../../assets/images/email-inbox-v3-balanced.png";
+import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
 export default function EmailDomain() {
   return (
@@ -37,7 +37,7 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex justify-center lg:justify-end lg:pr-6">
-            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-2">
+            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
                 alt="Corporate email protection design"
@@ -157,7 +157,10 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center lg:items-end">
+          <div className="flex flex-col items-center">
+            <h2 className="mb-6 text-center text-[18px] text-ink sm:text-[21px]">
+              <BrandInline trail="Counter" /> protect your Recipients.
+            </h2>
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
@@ -171,7 +174,7 @@ export default function EmailDomain() {
         <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
-            <div className="h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black p-2 sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
+            <div className="h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black p-1 sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
