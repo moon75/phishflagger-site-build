@@ -131,17 +131,17 @@ export default function Telecom() {
             <img
               src={threePhoneImg}
               alt="Phones with caller ID display"
-              className="h-auto w-[28vw] max-w-[100px] object-contain sm:w-full sm:max-w-[160px]"
+              className="h-auto w-[24vw] max-w-[85px] object-contain sm:w-full sm:max-w-[130px]"
             />
             <img
               src={desktopPhoneImg}
               alt="Caller ID box with PhishCounter sequence number, verified"
-              className="h-auto w-[38vw] max-w-[150px] object-contain sm:w-full sm:max-w-[240px]"
+              className="h-auto w-[32vw] max-w-[125px] object-contain sm:w-full sm:max-w-[195px]"
             />
             <img
               src={callerIdBoxImg}
               alt="Caller ID box showing a PhishCounter sequence number"
-              className="h-auto w-[34vw] max-w-[140px] object-contain sm:w-full sm:max-w-[220px]"
+              className="h-auto w-[28vw] max-w-[115px] object-contain sm:w-full sm:max-w-[180px]"
             />
           </div>
         </div>

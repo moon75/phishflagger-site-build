@@ -55,7 +55,7 @@ export default function EmailMarketing() {
           </div>
 
           <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
-            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:mt-16">
               The Human Part
             </h2>
             <ul className="mt-5 space-y-2 pl-5">
