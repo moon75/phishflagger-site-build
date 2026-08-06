@@ -178,11 +178,11 @@ export default function EmailDomain() {
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="flex h-[130px] w-[130px] shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2 sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
+            <div className="flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-2 sm:h-[180px] lg:h-[240px]">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
-                className="h-full w-full object-contain"
+                className="h-full w-auto object-contain"
               />
             </div>
           </div>
