@@ -105,7 +105,13 @@ function categoryVideos(category) {
         title: "PhishFlagger 8.04.26 - Part 3",
         description: "",
       },
-      ...Array.from({ length: 2 }, () => ({
+      {
+        type: "local",
+        src: "/assets/Videos/Fake_message_reveal_offer_202608071511.mp4",
+        title: "Fake Message Reveal Offer",
+        description: "",
+      },
+      ...Array.from({ length: 1 }, () => ({
         type: "placeholder",
         title: "Coming Soon",
         description: "",
@@ -191,8 +197,16 @@ export default function Video() {
                       <div className="flex h-full w-full items-center justify-center bg-black/5">
                         <span className="text-[13px] font-medium text-ink/40">Coming Soon</span>
                       </div>
+                    ) : v.type === "local" ? (
+                      <video
+                        src={v.src}
+                        poster={v.poster}
+                        controls
+                        preload="metadata"
+                        playsInline
+                        className="h-full w-full object-contain"
+                      />
                     ) : isPlaying ? (
-                      v.type === "youtube" ? (
                         <iframe
                           src={`https://www.youtube.com/embed/${v.id}?rel=0`}
                           title={v.title}
@@ -200,34 +214,17 @@ export default function Video() {
                           allowFullScreen
                           className="h-full w-full"
                         />
-                      ) : (
-                        <video
-                          src={v.src}
-                          controls
-                          className="h-full w-full"
-                        />
-                      )
                     ) : (
                       <button
                         type="button"
                         onClick={() => setPlaying(i)}
                         className="absolute inset-0 h-full w-full text-left"
                       >
-                        {v.type === "youtube" ? (
-                          <img
-                            src={v.thumb}
-                            alt={v.title}
-                            className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
-                          />
-                        ) : (
-                          <video
-                            src={v.src}
-                            poster={v.poster}
-                            preload="metadata"
-                            muted
-                            className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
-                          />
-                        )}
+                        <img
+                          src={v.thumb}
+                          alt={v.title}
+                          className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
+                        />
                         <div className="absolute inset-0 flex items-center justify-center">
                           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-black shadow sm:h-10 sm:w-10">
                             <svg viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-4 w-4">
