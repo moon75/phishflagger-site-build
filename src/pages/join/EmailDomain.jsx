@@ -205,7 +205,7 @@ export default function EmailDomain() {
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(238,240,244,1), rgba(238,240,244,1)), url('/assets/images/domain%20image%20for%20homepage.png')",
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
         }}
       >
         <SectionCounter value="^0005" />
