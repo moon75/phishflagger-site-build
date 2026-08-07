@@ -1,7 +1,7 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/domain-card-side-by-side-transparent-v4.png";
+import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
 import outlookImg from "../../assets/images/outlook-image-90-square.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
@@ -86,6 +86,14 @@ export default function EmailDomain() {
                       Placeholder text goes here. Replace this copy with the
                       final content.
                     </li>
+                    <li>
+                      Placeholder text goes here. Replace this copy with the
+                      final content.
+                    </li>
+                    <li>
+                      Placeholder text goes here. Replace this copy with the
+                      final content.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -96,11 +104,11 @@ export default function EmailDomain() {
                 Domain
               </h3>
               <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
+                <div className="h-[200px] w-full overflow-hidden">
                   <img
                     src={digitalDomainImg}
-                    alt="Digital diagram showing email server, domain records check, sending domain validation, and verified result"
-                    className="h-[92%] w-[92%] object-contain"
+                    alt="Cloud and server email hosting"
+                    className="h-full w-full scale-[1.7] object-cover"
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
