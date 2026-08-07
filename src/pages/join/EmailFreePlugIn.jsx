@@ -133,14 +133,6 @@ export default function EmailFreePlugIn() {
             >
               Join2
             </Link>
-            <a
-              href="https://join.phishflagger.com/individual/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md bg-[#e4e6ea] px-5 py-3 text-[13px] font-bold text-[#c7cad0] transition-colors hover:bg-[#d8dade]"
-            >
-              Join3
-            </a>
           </div>
         </div>
       </section>
