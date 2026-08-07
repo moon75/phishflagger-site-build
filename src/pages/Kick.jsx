@@ -4,6 +4,8 @@ import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
 
+const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
+
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
   { domain: "yahoo.com", provider: "Yahoo" },
@@ -19,6 +21,12 @@ export default function Kick() {
       <CloseButton />
 
       <section className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-3 bg-white px-4 py-20">
+        <img
+          src={howDoesItWorkImg}
+          alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
+          className="mb-6 h-auto w-full max-w-[480px] object-contain"
+        />
+
         <a
           href={kickstarterPdf}
           target="_blank"

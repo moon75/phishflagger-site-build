@@ -22,7 +22,7 @@ export default function EmailDomain() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <h2 className="mb-6 text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
-              Corporate
+              Domain
             </h2>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-disc">
@@ -102,7 +102,7 @@ export default function EmailDomain() {
 
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
               <h3 className="mb-3 text-center text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
-                Domain
+                Appliance
               </h3>
               <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
                 <div className="h-[200px] w-full overflow-hidden">
@@ -112,26 +112,55 @@ export default function EmailDomain() {
                     className="h-full w-full scale-[1.7] object-cover"
                   />
                 </div>
-                <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                  <ul className="list-disc space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>
-                      Domain protection for Microsoft, Google and Linux email
-                      servers.
-                    </li>
-                    <li>
-                      Enable all your users across all devices instantly with
-                      our Domain Appliance.
-                    </li>
-                    <li>
-                      Also available on-site with Linux (Postfix) or
-                      Microsoft Exchange.
-                    </li>
-                    <li>
-                      Hosted on: AWS, VMware, Azure, or any server with Open
-                      Port 25.
-                    </li>
-                    <li>Appliance forms: Linux, Kubernetes, Docker.</li>
-                  </ul>
+                {/* Content split into two columns beneath the image — Cloud
+                    (left, under the cloud icon) and On-Site Server (right,
+                    under the server rack icon) */}
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <div className="space-y-4">
+                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
+                      Cloud
+                    </p>
+                    <p>
+                      Microsoft Email
+                      <br />
+                      Exchange 365
+                      <br />
+                      Office 365
+                      <br />
+                      Outlook 365
+                    </p>
+                    <p>
+                      Google Workspace
+                      <br />
+                      Business Email Solution
+                    </p>
+                    <p>
+                      Hosted on: AWS, VMware, Azure,
+                      <br />
+                      or any server with Open Port 25.
+                    </p>
+                    <p>
+                      Appliance forms:
+                      <br />
+                      Linux Kubernetes Docker
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
+                      On-Site Server
+                    </p>
+                    <p>
+                      Linux
+                      <br />
+                      Postfix
+                    </p>
+                    <p>
+                      Microsoft
+                      <br />
+                      Exchange
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,8 +229,8 @@ export default function EmailDomain() {
               Protect your Company
             </h2>
             <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px] lg:mx-0">
-              Placeholder text goes here. Replace this copy with the final
-              content.
+              Firewall your important communication with your company
+              network, including your customers and suppliers. Stop fraud.
             </p>
           </div>
         </div>
@@ -221,7 +250,7 @@ export default function EmailDomain() {
             Pricing
           </h2>
           <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-            Placeholder pricing
+            As low as $10.00 per Year / Email
           </p>
         </div>
       </section>
@@ -233,7 +262,7 @@ export default function EmailDomain() {
             to="/join-corporate"
             className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
-            Join
+            Join Domain
           </Link>
         </div>
       </section>

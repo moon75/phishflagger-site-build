@@ -34,11 +34,11 @@ export default function EmailMarketing() {
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end lg:pr-16">
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[361px] rounded-lg border-2 border-black bg-white object-contain"
+              className="h-auto w-full max-w-[217px] rounded-lg border-2 border-black bg-white object-contain"
             />
           </div>
         </div>
