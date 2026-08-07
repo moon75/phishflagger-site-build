@@ -154,7 +154,7 @@ export default function Telecom() {
             <img
               src="/assets/images/image-stir.png"
               alt="Existing CLI"
-              className="h-auto w-full max-w-[420px]"
+              className="h-auto w-full max-w-[500px]"
             />
           </div>
           <div>

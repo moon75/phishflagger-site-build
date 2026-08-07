@@ -205,7 +205,7 @@ export default function EmailDomain() {
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+            "linear-gradient(rgba(238,240,244,1), rgba(238,240,244,1)), url('/assets/images/domain%20image%20for%20homepage.png')",
         }}
       >
         <SectionCounter value="^0005" />
@@ -222,25 +222,11 @@ export default function EmailDomain() {
       <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
         <SectionCounter value="^0006" />
         <div className="mx-auto flex max-w-[820px] flex-wrap items-center justify-center gap-4 text-center">
-          <a
-            href="https://join.phishflagger.com/membership-form-stripe.php"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/join-corporate"
             className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
             Join
-          </a>
-          <Link
-            to="/join-free"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-          >
-            Join
-          </Link>
-          <Link
-            to="/join-free"
-            className="inline-flex items-center justify-center rounded-md bg-[#e4e6ea] px-5 py-3 text-[13px] font-bold text-[#585858] transition-colors hover:bg-[#d8dade]"
-          >
-            Join2
           </Link>
         </div>
       </section>

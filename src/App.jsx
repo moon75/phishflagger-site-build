@@ -22,6 +22,7 @@ import HumanVsDigital from "./pages/HumanVsDigital.jsx";
 import TestStripe from "./pages/TestStripe.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import JoinFreeIframe from "./pages/JoinFreeIframe.jsx";
+import JoinCorporateIframe from "./pages/JoinCorporateIframe.jsx";
 
 import EmailDomain from "./pages/join/EmailDomain.jsx";
 import EmailFreePlugIn from "./pages/join/EmailFreePlugIn.jsx";
@@ -105,6 +106,7 @@ export default function App() {
         <Route path="petition" element={<Petition />} />
         <Route path="petition/thanks" element={<PetitionThanks />} />
         <Route path="join-free" element={<JoinFreeIframe />} />
+        <Route path="join-corporate" element={<JoinCorporateIframe />} />
         <Route path="joinfree" element={<JoinFree />} />
         <Route path="joinfree/register" element={<JoinFreeRegister />} />
         <Route path="joinfree/terms" element={<JoinFreeTerms />} />
