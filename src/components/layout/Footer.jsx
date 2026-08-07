@@ -59,6 +59,7 @@ export default function Footer({ logoSrc = logoImg }) {
             style={{
               backgroundImage:
                 "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+              backgroundSize: "140%",
             }}
           >
             <div className="mx-auto max-w-[1200px]">
@@ -219,6 +220,7 @@ export default function Footer({ logoSrc = logoImg }) {
           style={{
             backgroundImage:
               "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+            backgroundSize: "140%",
           }}
         >
           <ul
