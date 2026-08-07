@@ -150,13 +150,11 @@ export default function Home() {
     {/* ===== Section 1b — Top Links (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0002" />
-      <div className="mb-10 flex w-full justify-center sm:mb-14">
-        <h2 className="ml-[43rem] text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          Email Solutions
-        </h2>
-      </div>
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
+          <h2 className="mb-8 text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            Email Solutions
+          </h2>
           <div className="mb-6 flex justify-center">
             <img
               src={logoMarkImg}
@@ -304,16 +302,18 @@ export default function Home() {
         </div>
 
         {/* Right — info box image */}
-        <div className="flex flex-col items-center">
-          <p className="mb-4 text-center text-[16px] italic text-ink-muted sm:text-[18px]">
-            Email client view from enabled Domain
-          </p>
-          <img
-            src={infoBoxImg}
-            alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
-          />
-          <p className="mt-6 max-w-[400px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+        <div className="grid w-full grid-cols-1 items-center gap-6 sm:grid-cols-2 sm:gap-8">
+          <div className="flex flex-col items-center">
+            <p className="mb-4 text-center text-[16px] italic text-ink-muted sm:text-[18px]">
+              Email client view from enabled Domain
+            </p>
+            <img
+              src={infoBoxImg}
+              alt="PhishFlagger inbox demonstration"
+              className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
+            />
+          </div>
+          <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
             <BrandInline trail="Flagger" /> adds a unique, sequential
             identifier to the subject line called the{" "}
             <BrandInline trail="Counter" /> on every outgoing communication.
@@ -340,14 +340,6 @@ export default function Home() {
               className="h-auto w-full object-contain"
             />
           </div>
-          <p className="mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            <BrandInline trail="Flagger" /> strengthens email authentication
-            by verifying sender identity at the domain level. Working
-            alongside existing email security standards and authentication
-            technologies, our domain validation screens messages that
-            originate from authorized senders, adding an extra layer of
-            protection against impersonation and phishing and other attacks.
-          </p>
         </div>
 
         {/* Right — heading + subheading */}
@@ -359,15 +351,17 @@ export default function Home() {
             </em>
             {" "}/ Digital
           </h2>
-          <h3 className="mt-4 text-[18px] font-semibold text-ink sm:mt-6 sm:text-[22px]">
-            Domain Protection
-          </h3>
-          <p className="mt-2 text-[15px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.55]">
-            PlaceHolder text for Domain Protection SPF
+          <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            <BrandInline trail="Flagger" /> strengthens email authentication
+            by verifying sender identity at the domain level. Working
+            alongside existing email security standards and authentication
+            technologies, our domain validation screens messages that
+            originate from authorized senders, adding an extra layer of
+            protection against impersonation and phishing and other attacks.
           </p>
           <Link
             to="/digital-ino"
-            className="mt-2 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+            className="mt-4 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
           >
             More info Here.
           </Link>
@@ -589,24 +583,21 @@ export default function Home() {
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0009" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.7fr_1.3fr]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.45fr_1.55fr]">
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for SMS / Messages
-          </h2>
-          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+          <p className="max-w-[280px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
             Phishing doesn't stop at email. <BrandInline /> for SMS and
             Messages adds an additional layer of verification to SMS and mobile
             messaging, helping protect customers from text-based scams and
             impersonation.
           </p>
         </div>
-        <div className="flex flex-nowrap items-start gap-6">
+        <div className="flex flex-nowrap items-start gap-12">
           <div className="flex flex-col items-center">
             <span className="mb-4 whitespace-nowrap text-center text-[18px] font-semibold text-ink sm:text-[20px]">
               SMS
             </span>
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-10">
               <div className="flex flex-col items-start">
                 <img
                   src={textPhoneImg}
@@ -625,10 +616,10 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[18px] font-semibold text-ink sm:text-[20px]">
+            <span className="mb-4 whitespace-nowrap text-center text-[24px] font-semibold text-ink sm:text-[28px]">
               Message
             </span>
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-10">
               <div className="flex w-full max-w-[380px] flex-col items-start">
                 <img
                   src={messagingIconsImg}
@@ -639,7 +630,7 @@ export default function Home() {
                   href="https://phishflagger.netlify.app/join/messaging"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-10 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-7 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Messaging
                 </a>
@@ -647,7 +638,7 @@ export default function Home() {
               <img
                 src={messagesPhoneImg}
                 alt="Phone displaying PhishFlagger messages"
-                className="h-auto w-1/2 max-w-[171px] object-contain sm:w-[32%]"
+                className="h-auto w-[171px] object-contain"
               />
             </div>
           </div>
