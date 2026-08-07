@@ -3,9 +3,6 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
-import kickstarterRewardsDoc from "../assets/Pdf/Kickstarter Rewards.docx";
-import rewardsDoc from "../assets/Pdf/Rewards.txt";
-import campaignDoc from "../assets/Pdf/Campaign.txt";
 
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
@@ -75,7 +72,7 @@ export default function Kick() {
         </a>
 
         <a
-          href={kickstarterRewardsDoc}
+          href="https://docs.google.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
@@ -102,16 +99,18 @@ export default function Kick() {
         </a>
 
         <a
-          href={rewardsDoc}
-          download
+          href="https://docs.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           10. Rewards
         </a>
 
         <a
-          href={campaignDoc}
-          download
+          href="https://docs.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           11. Campaign

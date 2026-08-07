@@ -15,6 +15,7 @@ export default function EmailDomain() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0001" />
@@ -36,7 +37,7 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:pr-6">
+          <div className="flex justify-center lg:justify-end lg:pr-16">
             <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
@@ -143,6 +144,7 @@ export default function EmailDomain() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0003" />
@@ -210,6 +212,7 @@ export default function EmailDomain() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0005" />

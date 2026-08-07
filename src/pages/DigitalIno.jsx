@@ -22,12 +22,12 @@ export default function DigitalIno() {
           </div>
 
           <p className="mx-auto mt-8 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
-            Placeholder text goes here. Replace this copy with the final
+            PLACEHOLDER-DIGITALINO-1. Replace this copy with the final
             content.
           </p>
 
           <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
-            Placeholder text goes here. Replace this copy with the final
+            PLACEHOLDER-DIGITALINO-2. Replace this copy with the final
             content.
           </p>
 
@@ -114,7 +114,7 @@ export default function DigitalIno() {
           </div>
 
           <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
-            Placeholder text goes here. Replace this copy with the final
+            PLACEHOLDER-DIGITALINO-3. Replace this copy with the final
             content.
           </p>
         </div>

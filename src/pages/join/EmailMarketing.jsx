@@ -14,6 +14,7 @@ export default function EmailMarketing() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0001" />
@@ -81,6 +82,7 @@ export default function EmailMarketing() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0003" />

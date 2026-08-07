@@ -83,6 +83,7 @@ export default function Home() {
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
       }}
     >
       <div className="mx-auto max-w-content">
@@ -249,6 +250,7 @@ export default function Home() {
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
       }}
     >
       <SectionCounter value="^0002" />
@@ -357,7 +359,7 @@ export default function Home() {
           <img
             src={infoBoxImg}
             alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[448px] rounded-lg border-2 border-black object-contain"
+            className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
           />
         </div>
       </div>
@@ -519,6 +521,7 @@ export default function Home() {
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
       }}
     >
       <SectionCounter value="^0007" />

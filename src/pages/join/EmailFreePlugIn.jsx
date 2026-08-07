@@ -129,9 +129,9 @@ export default function EmailFreePlugIn() {
             </Link>
             <Link
               to="/join-free"
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              className="inline-flex items-center justify-center rounded-md bg-gray-200 px-5 py-3 text-[13px] font-bold text-ink transition-colors hover:bg-gray-300"
             >
-              Join2
+              Join
             </Link>
           </div>
         </div>
