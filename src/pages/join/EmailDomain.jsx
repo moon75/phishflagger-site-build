@@ -112,26 +112,55 @@ export default function EmailDomain() {
                     className="h-full w-full scale-[1.7] object-cover"
                   />
                 </div>
-                <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                  <ul className="list-disc space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>
-                      Domain protection for Microsoft, Google and Linux email
-                      servers.
-                    </li>
-                    <li>
-                      Enable all your users across all devices instantly with
-                      our Domain Appliance.
-                    </li>
-                    <li>
-                      Also available on-site with Linux (Postfix) or
-                      Microsoft Exchange.
-                    </li>
-                    <li>
-                      Hosted on: AWS, VMware, Azure, or any server with Open
-                      Port 25.
-                    </li>
-                    <li>Appliance forms: Linux, Kubernetes, Docker.</li>
-                  </ul>
+                {/* Content split into two columns beneath the image — Cloud
+                    (left, under the cloud icon) and On-Site Server (right,
+                    under the server rack icon) */}
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 p-7 pb-10 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <div className="space-y-4">
+                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
+                      Cloud
+                    </p>
+                    <p>
+                      Microsoft Email
+                      <br />
+                      Exchange 365
+                      <br />
+                      Office 365
+                      <br />
+                      Outlook 365
+                    </p>
+                    <p>
+                      Google Workspace
+                      <br />
+                      Business Email Solution
+                    </p>
+                    <p>
+                      Hosted on: AWS, VMware, Azure,
+                      <br />
+                      or any server with Open Port 25.
+                    </p>
+                    <p>
+                      Appliance forms:
+                      <br />
+                      Linux Kubernetes Docker
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
+                      On-Site Server
+                    </p>
+                    <p>
+                      Linux
+                      <br />
+                      Postfix
+                    </p>
+                    <p>
+                      Microsoft
+                      <br />
+                      Exchange
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

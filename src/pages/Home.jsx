@@ -3,7 +3,6 @@ import messagesPhoneImg from "../../telecom Webpage/assets/images/products/Phish
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
-const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookImg from "../assets/images/outlook-image-90-square.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
@@ -244,7 +243,7 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 2 — How Does PhishFlagger Work? (gray) ===== */}
+    {/* ===== Section 3 — What is PhishFlagger? (gray/tower) ===== */}
     <section
       className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
@@ -254,59 +253,6 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0002" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        <div className="flex flex-col items-center lg:items-start">
-          <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px] lg:text-left">
-            How Does{" "}
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>{" "}
-            Work?
-          </h2>
-          <img
-            src={howDoesItWorkImg}
-            alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-            className="h-auto w-full max-w-[480px] object-contain"
-          />
-        </div>
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Human.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" /> adds a unique, sequential
-              identifier to the subject line called the{" "}
-              <BrandInline trail="Counter" /> on every outgoing communication.
-              Recipients can quickly verify if the sequence matches the
-              previous email they received from the same sender. If the
-              number is missing or out of sequence, it provides an immediate
-              warning that the message may not be authentic, giving users a
-              simple way to spot phishing attempts.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-[20px] font-bold leading-tight tracking-tight text-ink sm:text-[24px]">
-              Digital.
-            </h2>
-            <p className="mt-3 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              <BrandInline trail="Flagger" /> strengthens email
-              authentication by verifying sender identity at the domain
-              level. Working alongside existing email security standards and
-              authentication technologies, our domain validation screens
-              messages that originate from authorized senders, adding an
-              extra layer of protection against impersonation and phishing
-              and other attacks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 3 — What is PhishFlagger? (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + bullets */}
         <div>
@@ -361,21 +307,26 @@ export default function Home() {
             alt="PhishFlagger inbox demonstration"
             className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
           />
+          <p className="mt-6 max-w-[400px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+            <BrandInline trail="Flagger" /> adds a unique, sequential
+            identifier to the subject line called the{" "}
+            <BrandInline trail="Counter" /> on every outgoing communication.
+            Recipients can quickly verify if the sequence matches the
+            previous email they received from the same sender. If the
+            number is missing or out of sequence, it provides an immediate
+            warning that the message may not be authentic, giving users a
+            simple way to spot phishing attempts.
+          </p>
         </div>
       </div>
     </section>
 
-    {/* ===== Section 4 — Domain protection (gray) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-top px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage: "url('/assets/images/nice%20background%20shade.png')",
-      }}
-    >
-      <SectionCounter value="^0004" />
+    {/* ===== Section 4 — Domain protection (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — email authentication diagram */}
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex flex-col items-center lg:items-start">
           <div className="w-full max-w-[560px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <img
               src={domainProtectionImg}
@@ -383,6 +334,14 @@ export default function Home() {
               className="h-auto w-full object-contain"
             />
           </div>
+          <p className="mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+            <BrandInline trail="Flagger" /> strengthens email authentication
+            by verifying sender identity at the domain level. Working
+            alongside existing email security standards and authentication
+            technologies, our domain validation screens messages that
+            originate from authorized senders, adding an extra layer of
+            protection against impersonation and phishing and other attacks.
+          </p>
         </div>
 
         {/* Right — heading + subheading */}
@@ -410,9 +369,16 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0005" />
+    {/* ===== Section 5 — Individual protection: Free Plug-In (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0004" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <em className="italic">
@@ -515,16 +481,9 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Caller ID (gray) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0007" />
+    {/* ===== Section 7 — Caller ID (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0006" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -552,13 +511,20 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0008" />
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0007" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for Telecom / Caller ID CLI
+            <BrandInline /> for Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.
@@ -615,8 +581,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0009" />
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -648,8 +614,15 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0010" />
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -687,8 +660,8 @@ export default function Home() {
     </section>
 
     {/* ===== Section 8 — Numbering history (white) ===== */}
-    <section className="relative w-full bg-[#eef0f4] px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0011" />
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0010" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to

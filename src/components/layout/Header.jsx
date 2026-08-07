@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 bg-white">
-        <div className="mx-auto flex min-h-[88px] items-center justify-between gap-7 px-6 py-5 lg:justify-center lg:gap-9">
+        <div className="mx-auto flex min-h-[88px] w-[80%] items-center justify-between gap-7 py-5 lg:justify-center lg:gap-9">
           {/* Logo */}
           <NavLink
             to="/"
