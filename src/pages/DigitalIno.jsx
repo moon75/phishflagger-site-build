@@ -1,6 +1,5 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
-import cloudImg from "../assets/images/domain-cloud-only.png";
-import serverImg from "../assets/images/domain-server-only.png";
+import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import topImg from "../assets/images/3rd section left image.avif";
 
 export default function DigitalIno() {
@@ -34,73 +33,81 @@ export default function DigitalIno() {
 
           <div className="mx-auto mt-14 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
+              <div className="h-[200px] w-full overflow-hidden">
                 <img
-                  src={cloudImg}
-                  alt="Cloud email service"
-                  className="h-auto w-full max-w-[210px] object-contain"
+                  src={cloudServerImg}
+                  alt="Cloud and server email hosting"
+                  className="h-full w-full scale-[1.7] object-cover"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                 <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                   Cloud
                 </h3>
-                <div className="space-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                  <p>
-                    Microsoft Email
-                    <br />
-                    Exchange 365
-                    <br />
-                    Office 365
-                    <br />
-                    Outlook 365
-                  </p>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <div className="space-y-4">
+                    <p>
+                      Microsoft Email
+                      <br />
+                      Exchange 365
+                      <br />
+                      Office 365
+                      <br />
+                      Outlook 365
+                    </p>
 
-                  <p>
-                    Google Workspace
-                    <br />
-                    Business Email Solution
-                  </p>
+                    <p>
+                      Google Workspace
+                      <br />
+                      Business Email Solution
+                    </p>
+                  </div>
 
-                  <p>
-                    Hosted on: AWS, VMware, Azure,
-                    <br />
-                    or any server with Open Port 25.
-                  </p>
+                  <div className="space-y-4">
+                    <p>
+                      Hosted on: AWS, VMware, Azure,
+                      <br />
+                      or any server with Open Port 25.
+                    </p>
 
-                  <p>
-                    Appliance forms:
-                    <br />
-                    Linux Kubernetes Docker
-                  </p>
+                    <p>
+                      Appliance forms:
+                      <br />
+                      Linux Kubernetes Docker
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-              <div className="flex h-[200px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-4 py-5">
+              <div className="h-[200px] w-full overflow-hidden">
                 <img
-                  src={serverImg}
-                  alt="On-site email server appliance"
-                  className="h-auto w-full max-w-[170px] object-contain"
+                  src={cloudServerImg}
+                  alt="Cloud and server email hosting"
+                  className="h-full w-full scale-[1.7] object-cover"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                 <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                   On-Site Server
                 </h3>
-                <div className="space-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                  <p>
-                    Linux
-                    <br />
-                    Postfix
-                  </p>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <div>
+                    <p>
+                      Linux
+                      <br />
+                      Postfix
+                    </p>
+                  </div>
 
-                  <p>
-                    Microsoft
-                    <br />
-                    Exchange
-                  </p>
+                  <div>
+                    <p>
+                      Microsoft
+                      <br />
+                      Exchange
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
