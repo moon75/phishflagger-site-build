@@ -16,7 +16,6 @@ const DOWNLOADS = [
     name: "Thunderbird",
     image: "/assets/images/thunderbird new pick.avif",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
-    fit: "contain",
     actions: [
       { label: "Windows Download", to: "/plugin-download?client=Thunderbird&download=Windows%20Download" },
       { label: "Linux Download", to: "/plugin-download?client=Thunderbird&download=Linux%20Download" },
@@ -42,7 +41,7 @@ export default function EmailFreePlugIn() {
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 1. Install Plug-In
           </h2>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
             {DOWNLOADS.map((item) => (
               <DownloadCard key={item.name} {...item} />
             ))}
@@ -53,7 +52,7 @@ export default function EmailFreePlugIn() {
                   <img
                     src="/assets/images/logo-mark.png"
                     alt=""
-                    className="h-11 w-11 object-contain"
+                    className="h-9 w-9 object-contain"
                   />
                   <span className="mt-3 text-[15px] font-semibold text-ink">
                     Download Page
@@ -91,7 +90,7 @@ export default function EmailFreePlugIn() {
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 2. Get your Free Key.&nbsp; Works with ....
           </h2>
-          <div className="mx-auto mt-9 grid max-w-[820px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+          <div className="mx-auto mt-9 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             {PROVIDERS.map(({ key, labels }) => (
               <div
                 key={key}
@@ -207,18 +206,16 @@ function ProviderIcon({ provider }) {
   );
 }
 
-function DownloadCard({ name, image, alt, actions, fit = "cover" }) {
+function DownloadCard({ name, image, alt, actions }) {
   return (
     <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
       <div
-        className={`flex h-[176px] items-center justify-center overflow-hidden bg-[#f7f8fb] ${
-          fit === "contain" ? "p-4" : ""
-        }`}
+        className="flex h-[176px] items-center justify-center overflow-hidden bg-[#f7f8fb]"
       >
         <img
           src={image}
           alt={alt}
-          className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+          className="h-[80%] w-[80%] object-contain"
         />
       </div>
       <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">

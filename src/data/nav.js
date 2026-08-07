@@ -7,7 +7,7 @@ export const nav = [
     label: "Join",
     children: [
       { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
-      { label: "Email - Corporate", href: "/join/email-corporate" },
+      { label: "Email - Domain", href: "/join/email-domain" },
       { label: "Email - Marketing", href: "/join/email-marketing" },
       { label: "Telecom", href: "/join/telecom" },
       { label: "Messaging", href: "/join/messaging" },

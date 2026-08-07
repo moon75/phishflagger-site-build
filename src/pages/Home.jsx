@@ -85,6 +85,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
+      <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
       {/* Logo */}
       <div className="flex items-center justify-center">
@@ -148,7 +149,12 @@ export default function Home() {
 
     {/* ===== Section 1b — Top Links (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0001" />
+      <SectionCounter value="^0002" />
+      <div className="mb-10 flex w-full justify-center sm:mb-14">
+        <h2 className="ml-[43rem] text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          Email Solutions
+        </h2>
+      </div>
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <div className="mb-6 flex justify-center">
@@ -213,7 +219,7 @@ export default function Home() {
               />
             </div>
             <Link
-              to="/join/email-corporate"
+              to="/join/email-domain"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Join
@@ -252,7 +258,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0002" />
+      <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + bullets */}
         <div>
@@ -323,7 +329,7 @@ export default function Home() {
 
     {/* ===== Section 4 — Domain protection (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0003" />
+      <SectionCounter value="^0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — email authentication diagram */}
         <div className="flex flex-col items-center lg:items-start">
@@ -378,7 +384,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0004" />
+      <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <em className="italic">
@@ -433,10 +439,10 @@ export default function Home() {
                   (works with all domains)
                 </span>
                 <Link
-                  to="/join/email-corporate"
+                  to="/join/email-domain"
                   className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
-                  Join
+                  Join Domain
                 </Link>
               </div>
             </div>
@@ -469,10 +475,10 @@ export default function Home() {
                   Join your Domain
                 </span>
                 <Link
-                  to="/join/email-corporate"
+                  to="/join/email-domain"
                   className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
-                  Join
+                  Join Domain
                 </Link>
               </div>
             </div>
@@ -483,7 +489,7 @@ export default function Home() {
 
     {/* ===== Section 7 — Caller ID (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0006" />
+      <SectionCounter value="^0007" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -519,7 +525,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0007" />
+      <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -582,38 +588,74 @@ export default function Home() {
 
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0008" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
+      <SectionCounter value="^0009" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.7fr_1.3fr]">
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for Telecom / SMS
+            <BrandInline /> for SMS / Messages
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Phishing doesn't stop at email. <BrandInline /> for Telecom and
-            Text adds an additional layer of verification to SMS and mobile
+            Phishing doesn't stop at email. <BrandInline /> for SMS and
+            Messages adds an additional layer of verification to SMS and mobile
             messaging, helping protect customers from text-based scams and
             impersonation.
           </p>
         </div>
-        <div className="flex flex-col items-start gap-6 sm:flex-row sm:justify-center lg:justify-start">
-          <div className="flex flex-col items-start">
-            <img
-              src={textPhoneImg}
-              alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-[171px] object-contain"
-            />
-            <Link
-              to="/join/telecom"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Telecom
-            </Link>
+        <div className="flex flex-nowrap items-start gap-6">
+          <div className="flex flex-col items-center">
+            <span className="mb-4 whitespace-nowrap text-center text-[18px] font-semibold text-ink sm:text-[20px]">
+              SMS
+            </span>
+            <div className="flex items-start gap-6">
+              <div className="flex flex-col items-start">
+                <img
+                  src={textPhoneImg}
+                  alt="Phone displaying PhishFlagger text messages"
+                  className="h-auto w-[171px] object-contain"
+                />
+                <Link
+                  to="/join/telecom"
+                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Telecom
+                </Link>
+              </div>
+              <SmsMessageSteps />
+            </div>
           </div>
-          <SmsMessageSteps />
+
+          <div className="flex flex-col items-center">
+            <span className="mb-4 whitespace-nowrap text-center text-[18px] font-semibold text-ink sm:text-[20px]">
+              Message
+            </span>
+            <div className="flex items-start gap-6">
+              <div className="flex w-full max-w-[380px] flex-col items-start">
+                <img
+                  src={messagingIconsImg}
+                  alt="Popular messaging companies"
+                  className="h-auto w-full object-contain"
+                />
+                <a
+                  href="https://phishflagger.netlify.app/join/messaging"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-10 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Messaging
+                </a>
+              </div>
+              <img
+                src={messagesPhoneImg}
+                alt="Phone displaying PhishFlagger messages"
+                className="h-auto w-1/2 max-w-[171px] object-contain sm:w-[32%]"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    {/* ===== Section 8 — Numbering history (gray/tower) ===== */}
     <section
       className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
@@ -622,45 +664,6 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0009" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr]">
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for Messages
-          </h2>
-          <p className="mt-5 max-w-[420px] text-[15px] leading-[1.65] text-ink-muted sm:text-[16px]">
-            Placeholder text goes here. Replace this copy with the final
-            content describing PhishFlagger protection across messaging
-            platforms.
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center sm:gap-14 lg:justify-start">
-          <div className="flex w-full max-w-[380px] flex-col items-start">
-            <img
-              src={messagingIconsImg}
-              alt="Popular messaging companies"
-              className="h-auto w-full object-contain"
-            />
-            <a
-              href="https://phishflagger.netlify.app/join/messaging"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-10 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Messaging
-            </a>
-          </div>
-          <img
-            src={messagesPhoneImg}
-            alt="Phone displaying PhishFlagger messages"
-            className="h-auto w-1/2 max-w-[171px] object-contain sm:w-[32%]"
-          />
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 8 — Numbering history (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0010" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
