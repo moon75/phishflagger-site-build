@@ -182,11 +182,11 @@ export default function Home() {
                 Plug-In Free
               </span>
             </div>
-            <div className="flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
+            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
               <img
                 src="/assets/images/individual.png"
                 alt="Individual protection illustration"
-                className="h-[195px] w-[195px] object-contain"
+                className="h-full w-full object-contain"
               />
             </div>
             <Link
@@ -205,7 +205,7 @@ export default function Home() {
                 Plug-In or Domain
               </span>
             </div>
-            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-2">
+            <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate-image-homepage-v5.png"
                 alt="Domain protection illustration"

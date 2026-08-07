@@ -19,6 +19,9 @@ export default function EmailMarketing() {
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              Brand Protection
+            </h2>
             <p>
               You can help prevent phishing and fraud by numbering your outgoing
               emails. <BrandInline />
@@ -45,7 +48,7 @@ export default function EmailMarketing() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div className="flex flex-col items-center lg:items-start">
             <h2 className="mb-6 text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:text-left">
-              PhishCounter protects recipients.
+              <BrandInline trail="Counter" /> protects recipients.
             </h2>
             <img
               src={phishCounterImg}
@@ -110,7 +113,7 @@ export default function EmailMarketing() {
           </div>
 
           <div className="flex flex-col items-center lg:items-end">
-            <p className="mb-4 w-full max-w-[560px] text-center text-[14px] italic text-ink-muted sm:text-[15px]">
+            <p className="mb-4 w-full max-w-[560px] text-center text-[28px] italic text-ink-muted sm:text-[30px]">
               Email client view from enabled Domain
             </p>
             <img
