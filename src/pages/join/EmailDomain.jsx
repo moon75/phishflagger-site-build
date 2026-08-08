@@ -74,23 +74,11 @@ export default function EmailDomain() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                  <ul className="list-disc space-y-4 pl-5 text-left text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </li>
-                    <li>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </li>
-                    <li>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </li>
-                    <li>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </li>
+                  <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                    <li>Outlook</li>
+                    <li>Thunderbird</li>
+                    <li>Linux Window</li>
+                    <li>Windows</li>
                     <li>
                       Placeholder text goes here. Replace this copy with the
                       final content.
@@ -252,15 +240,9 @@ export default function EmailDomain() {
           <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
             As low as $10.00 per Year / Email
           </p>
-        </div>
-      </section>
-
-      <section className="relative w-full bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-24">
-        <SectionCounter value="^0006" />
-        <div className="mx-auto flex max-w-[820px] flex-wrap items-center justify-center gap-4 text-center">
           <Link
             to="/join-corporate"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
           >
             Join Domain
           </Link>

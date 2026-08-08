@@ -129,19 +129,21 @@ export default function Home() {
       </div>
 
       {/* Demo / Video links */}
-      <div className="mt-10 flex justify-center gap-10 sm:mt-12 sm:gap-12">
-        <Link
-          to="/demo"
-          className="cursor-pointer text-base font-bold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-lg"
-        >
-          Demo
-        </Link>
-        <Link
-          to="/video"
-          className="cursor-pointer text-base font-bold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-lg"
-        >
-          Video
-        </Link>
+      <div className="mt-10 flex justify-center sm:mt-12">
+        <div className="inline-flex items-center divide-x-2 divide-black/20 rounded-full border-2 border-ink bg-white">
+          <Link
+            to="/demo"
+            className="cursor-pointer rounded-l-full px-9 py-3.5 text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white sm:px-12 sm:text-lg"
+          >
+            Demo
+          </Link>
+          <Link
+            to="/video"
+            className="cursor-pointer rounded-r-full px-9 py-3.5 text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white sm:px-12 sm:text-lg"
+          >
+            Video
+          </Link>
+        </div>
       </div>
 
       </div>
@@ -258,21 +260,9 @@ export default function Home() {
     >
       <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        {/* Left — heading + bullets */}
+        {/* Left — bullets */}
         <div>
-          <h2 className="mb-6 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:mb-8 sm:text-[34px] lg:text-[40px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>{" "}
-            / Human
-          </h2>
-
           <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>Provides a defense against impersonation and fraud.</span>
-            </li>
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -283,10 +273,11 @@ export default function Home() {
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
-                Provides protection by adding a unique sequential number, the{" "}
+                Bring back common sense by adding a unique sequential
+                number, the{" "}
                 <em className="italic font-semibold">
                   <span className="text-ink">Phish</span>
-                  <span className="text-brand">Flagger</span>
+                  <span className="text-brand">Counter</span>
                 </em>
                 , visible to the user.
               </span>
@@ -313,16 +304,25 @@ export default function Home() {
               className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
             />
           </div>
-          <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            <BrandInline trail="Flagger" /> adds a unique, sequential
-            identifier to the subject line called the{" "}
-            <BrandInline trail="Counter" /> on every outgoing communication.
-            Recipients can quickly verify if the sequence matches the
-            previous email they received from the same sender. If the
-            number is missing or out of sequence, it provides an immediate
-            warning that the message may not be authentic, giving users a
-            simple way to spot phishing attempts.
-          </p>
+          <div>
+            <h2 className="mb-4 text-[22px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[26px]">
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>{" "}
+              / Human
+            </h2>
+            <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <BrandInline trail="Flagger" /> adds a unique, sequential
+              identifier to the subject line called the{" "}
+              <BrandInline trail="Counter" /> on every outgoing communication.
+              Recipients can quickly verify if the sequence matches the
+              previous email they received from the same sender. If the
+              number is missing or out of sequence, it provides an immediate
+              warning that the message may not be authentic, giving users a
+              simple way to spot phishing attempts.
+            </p>
+          </div>
         </div>
       </div>
     </section>
