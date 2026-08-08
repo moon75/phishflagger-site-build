@@ -378,7 +378,7 @@ export default function Telecom() {
             <img
               src={smsPhoneImg}
               alt="Phone displaying PhishFlagger SMS messages"
-              className="h-auto w-[46vw] max-w-[140px] object-contain sm:w-full sm:max-w-[200px]"
+              className="h-auto w-[70vw] max-w-[240px] object-contain sm:w-full sm:max-w-[400px]"
             />
           </div>
         </div>
