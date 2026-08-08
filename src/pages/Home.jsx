@@ -13,6 +13,7 @@ import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
+import history4Img from "../assets/images/7 4rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import messagingIconsImg from "../assets/images/Icons-5.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
@@ -662,7 +663,7 @@ export default function Home() {
           records and documents, thereby reducing fraud.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
           <HistoryCard
             year="1470"
             topic="Pagination"
@@ -690,6 +691,7 @@ export default function Home() {
             img={history3Img}
             imgAlt="PhishFlagger email numbering"
           />
+          <HistoryCard img={history4Img} imgAlt="PhishFlagger numbering history" />
         </div>
       </div>
     </section>

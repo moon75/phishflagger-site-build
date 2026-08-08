@@ -24,7 +24,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
             Telecoms and Regulators
@@ -46,7 +46,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="max-w-[440px] text-[20px] font-bold leading-snug tracking-tight text-ink [text-wrap:balance] sm:text-[26px]">
@@ -92,7 +92,7 @@ export default function Telecom() {
       </section>
 
       <SplitSection
-        counter="^0004"
+        counter="^0003"
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
@@ -109,7 +109,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
@@ -148,7 +148,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0006" />
+        <SectionCounter value="^0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -185,7 +185,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -326,7 +326,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0008" />
+        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -358,7 +358,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0009" />
+        <SectionCounter value="^0008" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -385,7 +385,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0010" />
+        <SectionCounter value="^0009" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -426,7 +426,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0011" />
+        <SectionCounter value="^0010" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">
