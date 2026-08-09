@@ -182,13 +182,13 @@ export default function Home() {
       <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-5">
         <Link
           to="/demo"
-          className="cursor-pointer rounded-lg border-2 border-ink px-7 py-3 text-sm font-bold text-ink sm:px-9 sm:py-3.5 sm:text-base"
+          className="cursor-pointer rounded-lg border-2 border-ink bg-white px-7 py-3 text-sm font-bold text-ink sm:px-9 sm:py-3.5 sm:text-base"
         >
           Demo
         </Link>
         <Link
           to="/video"
-          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
+          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
         >
           <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
           Watch Our Videos
@@ -204,14 +204,14 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
           <div className="mb-6 flex items-center justify-start gap-5">
-            <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-              Email Solutions
-            </h2>
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
               className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
             />
+            <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              Email Solutions
+            </h2>
           </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
             <BrandInline /> protects individuals and organizations who
