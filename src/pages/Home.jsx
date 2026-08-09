@@ -737,7 +737,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 8 — Numbering history (white) ===== */}
+    {/* ===== Section 8 — Numbering history (white) — HIDDEN, superseded by Section 9 gallery below ===== */}
+    {false && (
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
@@ -777,17 +778,11 @@ export default function Home() {
         </div>
       </div>
     </section>
+    )}
 
-    {/* ===== Section 9 — Numbering history gallery (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0012" />
+    {/* ===== Section 9 — Numbering history gallery (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to
@@ -816,11 +811,11 @@ export default function Home() {
             <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               1892
             </span>
-            <div className="flex h-[280px] items-end">
+            <div className="flex h-[300px] items-end">
               <img
                 src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
                 alt="Numbering stamp"
-                className="h-[280px] w-auto object-contain"
+                className="h-[260px] w-auto object-contain"
               />
             </div>
           </div>
