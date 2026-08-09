@@ -2,7 +2,7 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
-import outlookImg from "../../assets/images/outlook-image-90-square.png";
+import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
 export default function EmailDomain() {
@@ -57,22 +57,15 @@ export default function EmailDomain() {
                 Plug-In
               </h3>
               <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                <div className="flex h-[140px] items-center justify-center gap-4 bg-[#EEF0F4] px-5 sm:h-[200px] sm:gap-12">
+                <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
                   <img
-                    src={outlookImg}
-                    alt="Microsoft Outlook"
-                    className="h-[90px] w-[90px] max-w-full rounded-2xl object-cover sm:h-[140px] sm:w-[140px]"
-                  />
-                  <img
-                    src="/assets/images/thunderbird new pick.avif"
-                    alt="Mozilla Thunderbird"
-                    className="h-[90px] w-[90px] max-w-full rounded-2xl object-cover sm:h-[140px] sm:w-[140px]"
+                    src={outlookThunderbirdImg}
+                    alt="Microsoft Outlook and Mozilla Thunderbird"
+                    className="h-full w-full translate-y-1 scale-[1.5] object-contain"
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                   <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>Outlook</li>
-                    <li>Thunderbird</li>
                     <li>Linux Window</li>
                     <li>Windows</li>
                     <li>
@@ -93,7 +86,7 @@ export default function EmailDomain() {
                   <img
                     src={digitalDomainImg}
                     alt="Cloud and server email hosting"
-                    className="h-full w-full scale-[1.7] object-cover"
+                    className="h-full w-full scale-[1.42] object-contain"
                   />
                 </div>
                 {/* Content split into two columns beneath the image — Cloud
@@ -101,9 +94,6 @@ export default function EmailDomain() {
                     under the server rack icon) */}
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4 p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                   <div className="space-y-4">
-                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
-                      Cloud
-                    </p>
                     <p>
                       Microsoft Email
                       <br />
@@ -131,9 +121,6 @@ export default function EmailDomain() {
                   </div>
 
                   <div className="space-y-4">
-                    <p className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink">
-                      On-Site Server
-                    </p>
                     <p>
                       Linux
                       <br />

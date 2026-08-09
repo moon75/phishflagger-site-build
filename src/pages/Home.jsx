@@ -4,7 +4,7 @@ import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import domainProtectionImg from "../assets/images/3rd section left image.avif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
-import outlookImg from "../assets/images/outlook-image-90-square.png";
+import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -477,16 +477,11 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Client Plug-In
             </span>
-            <div className="flex h-[140px] w-full max-w-[300px] items-center justify-center gap-10 overflow-hidden rounded-2xl border-2 border-black bg-[#f7f8fb] p-3 sm:h-[190px] sm:max-w-[460px] sm:gap-16 sm:p-6">
+            <div className="flex h-[140px] w-full max-w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] p-3 sm:h-[190px] sm:max-w-[460px] sm:p-6">
               <img
-                src={outlookImg}
-                alt="Microsoft Outlook"
-                className="h-[104px] w-[104px] rounded-xl object-cover sm:h-[140px] sm:w-[140px]"
-              />
-              <img
-                src="/assets/images/thunderbird new pick.avif"
-                alt="Mozilla Thunderbird"
-                className="h-[104px] w-[104px] rounded-xl object-cover sm:h-[140px] sm:w-[140px]"
+                src={outlookThunderbirdImg}
+                alt="Microsoft Outlook and Mozilla Thunderbird"
+                className="h-full w-full translate-y-2 scale-[1.7] object-contain"
               />
             </div>
             <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
@@ -540,7 +535,7 @@ export default function Home() {
               <img
                 src={cloudServerImg}
                 alt="Cloud and server appliance"
-                className="h-full w-full scale-150 object-contain"
+                className="h-full w-full scale-[1.42] object-contain"
               />
             </div>
             <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
