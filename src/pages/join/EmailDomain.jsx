@@ -33,7 +33,7 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:pr-16">
+          <div className="flex justify-center lg:justify-end lg:pr-52">
             <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
@@ -53,7 +53,7 @@ export default function EmailDomain() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
-              <h3 className="mb-3 text-center text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+              <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Plug-In
               </h3>
               <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
@@ -78,7 +78,7 @@ export default function EmailDomain() {
             </div>
 
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
-              <h3 className="mb-3 text-center text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
+              <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Appliance
               </h3>
               <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">

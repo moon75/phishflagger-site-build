@@ -21,12 +21,6 @@ export default function Kick() {
       <CloseButton />
 
       <section className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-3 bg-white px-4 py-20">
-        <img
-          src={howDoesItWorkImg}
-          alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-          className="mb-6 h-auto w-full max-w-[480px] object-contain"
-        />
-
         <a
           href={kickstarterPdf}
           target="_blank"
@@ -58,7 +52,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          4. joe1
+          4. Joe Launch Plan
         </a>
 
         <a
@@ -76,7 +70,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          6. Kickstarter Requirements
+          6. Alex Kickstarter Requirements
         </a>
 
         <a
@@ -85,7 +79,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          7. Tools
+          7. AAA Tools
         </a>
 
         <a
@@ -123,6 +117,12 @@ export default function Kick() {
         >
           11. Campaign
         </a>
+
+        <img
+          src={howDoesItWorkImg}
+          alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
+          className="mt-6 h-auto w-full max-w-[480px] object-contain"
+        />
 
         {/* ===== Available domains ===== */}
         <div className="mx-auto mt-10 w-full max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4">

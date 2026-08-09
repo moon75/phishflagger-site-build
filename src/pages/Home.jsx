@@ -605,11 +605,11 @@ export default function Home() {
               Message
             </span>
             <div className="flex flex-1 items-start gap-10">
-              <div className="flex h-full w-full max-w-[380px] flex-col items-start justify-between">
+              <div className="flex h-full flex-col items-center justify-between">
                 <img
-                  src={messagingIconsImg}
-                  alt="Popular messaging companies"
-                  className="h-auto w-full object-contain"
+                  src={messagesPhoneImg}
+                  alt="Phone displaying PhishFlagger messages"
+                  className="h-auto w-[143px] shrink-0 object-contain"
                 />
                 <a
                   href="https://phishflagger.netlify.app/join/messaging"
@@ -621,9 +621,9 @@ export default function Home() {
                 </a>
               </div>
               <img
-                src={messagesPhoneImg}
-                alt="Phone displaying PhishFlagger messages"
-                className="h-auto w-[143px] shrink-0 self-start object-contain"
+                src={messagingIconsImg}
+                alt="Popular messaging companies"
+                className="h-auto w-full max-w-[380px] object-contain"
               />
             </div>
           </div>

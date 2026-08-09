@@ -6,8 +6,15 @@ const logoMarkImg = "/assets/images/logo-mark.png";
 export default function Join() {
   return (
     <>
-      {/* ===== Pane 1 — Email Solutions (white) ===== */}
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      {/* ===== Pane 1 — Email Solutions (gray/tower) ===== */}
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
           <div className="lg:w-[500px]">

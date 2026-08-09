@@ -6,7 +6,14 @@ export default function FAQ() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
+      <section
+        className="w-full min-h-screen bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[1000px]">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
             FAQ
