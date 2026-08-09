@@ -74,6 +74,55 @@ function SmsMessageSteps() {
   );
 }
 
+function RetroTvIcon({ className }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      {/* antenna */}
+      <path
+        d="M8 3.5 12 7M16 3.5 12 7"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      {/* TV body */}
+      <rect
+        x="3"
+        y="7"
+        width="18"
+        height="13.5"
+        rx="3"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      {/* screen */}
+      <rect
+        x="5.5"
+        y="9.5"
+        width="9.5"
+        height="8.5"
+        rx="1.4"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      />
+      {/* knobs */}
+      <circle cx="18" cy="12" r="1" fill="currentColor" />
+      <circle cx="18" cy="16" r="1" fill="currentColor" />
+      {/* feet */}
+      <path
+        d="M8 20.5 6.5 22.5M16 20.5 17.5 22.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -130,21 +179,20 @@ export default function Home() {
       </div>
 
       {/* Demo / Video links */}
-      <div className="mt-10 flex justify-center sm:mt-12">
-        <div className="inline-flex items-center divide-x-2 divide-black/20 rounded-full border-2 border-ink bg-white">
-          <Link
-            to="/demo"
-            className="cursor-pointer rounded-l-full px-9 py-3.5 text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white sm:px-12 sm:text-lg"
-          >
-            Demo
-          </Link>
-          <Link
-            to="/video"
-            className="cursor-pointer rounded-r-full px-9 py-3.5 text-base font-bold text-ink transition-colors hover:bg-ink hover:text-white sm:px-12 sm:text-lg"
-          >
-            Video
-          </Link>
-        </div>
+      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-5">
+        <Link
+          to="/demo"
+          className="cursor-pointer rounded-lg border-2 border-ink px-7 py-3 text-sm font-bold text-ink sm:px-9 sm:py-3.5 sm:text-base"
+        >
+          Demo
+        </Link>
+        <Link
+          to="/video"
+          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
+        >
+          <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
+          Watch Our Videos
+        </Link>
       </div>
 
       </div>
@@ -155,14 +203,14 @@ export default function Home() {
       <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
         <div className="lg:w-[500px]">
-          <h2 className="mb-8 text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Email Solutions
-          </h2>
-          <div className="mb-6 flex justify-center">
+          <div className="mb-6 flex items-center justify-start gap-5">
+            <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              Email Solutions
+            </h2>
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[83px] w-auto object-contain sm:h-[98px]"
+              className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
             />
           </div>
           <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
@@ -490,7 +538,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[405px] rounded-lg border-2 border-black bg-white object-contain"
+            className="h-auto w-full max-w-[324px] rounded-lg border-2 border-black bg-white object-contain"
           />
         </div>
         <div>
@@ -584,18 +632,10 @@ export default function Home() {
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0009" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.45fr_1.55fr]">
-        <div>
-          <p className="max-w-[280px] text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            Phishing doesn't stop at email. <BrandInline /> for SMS and
-            Messages adds an additional layer of verification to SMS and mobile
-            messaging, helping protect customers from text-based scams and
-            impersonation.
-          </p>
-        </div>
-        <div className="flex flex-nowrap items-start gap-12">
+      <div className="mx-auto max-w-content">
+        <div className="flex flex-wrap items-start justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[18px] font-semibold text-ink sm:text-[20px]">
+            <span className="mb-4 whitespace-nowrap text-center text-[26px] font-semibold text-ink sm:text-[30px]">
               SMS
             </span>
             <div className="flex items-start gap-10">
@@ -616,8 +656,15 @@ export default function Home() {
             </div>
           </div>
 
+          <p className="mt-2 max-w-[280px] shrink-0 self-center text-[16px] leading-[1.65] text-ink sm:text-[17px] sm:leading-[1.6]">
+            Phishing doesn't stop at email. <BrandInline /> for SMS and
+            Messages adds an additional layer of verification to SMS and mobile
+            messaging, helping protect customers from text-based scams and
+            impersonation.
+          </p>
+
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[24px] font-semibold text-ink sm:text-[28px]">
+            <span className="mb-4 whitespace-nowrap text-center text-[26px] font-semibold text-ink sm:text-[30px]">
               Message
             </span>
             <div className="flex items-start gap-10">
@@ -631,7 +678,7 @@ export default function Home() {
                   href="https://phishflagger.netlify.app/join/messaging"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-7 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-[calc(1.75rem+1rem)] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
                   Messaging
                 </a>

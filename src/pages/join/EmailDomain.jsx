@@ -27,12 +27,8 @@ export default function EmailDomain() {
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-disc">
                 Safeguard your domains with <BrandInline />
-                &trade; email numbering to help enhance security and prevent
-                impersonation, phishing and other email-based fraud.
-              </li>
-              <li className="list-disc">
-                Placeholder text goes here. Replace this copy with the final
-                content.
+                &trade; email numbering to prevent impersonation, phishing and
+                other email-based fraud.
               </li>
             </ul>
           </div>
@@ -238,7 +234,7 @@ export default function EmailDomain() {
             Pricing
           </h2>
           <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-            As low as $10.00 per Year / Email
+            As low as $10.00 per Year / per Email
           </p>
           <Link
             to="/join-corporate"
