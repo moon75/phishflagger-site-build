@@ -5,8 +5,9 @@ import outlookImg from "../../assets/images/outlook image 90.png";
 
 const DOWNLOADS = [
   {
-    name: "Outlook",
+    name: "Microsoft Outlook",
     image: outlookImg,
+    imageScale: "scale-150",
     alt: "Microsoft Outlook with the PhishFlagger plug-in",
     actions: [
       { label: "Windows Download", to: "/plugin-download?client=Outlook&download=Windows%20Download" },
@@ -15,6 +16,7 @@ const DOWNLOADS = [
   {
     name: "Thunderbird",
     image: "/assets/images/thunderbird new pick.avif",
+    imageScale: "scale-125",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
     actions: [
       { label: "Windows Download", to: "/plugin-download?client=Thunderbird&download=Windows%20Download" },
@@ -141,7 +143,8 @@ export default function EmailFreePlugIn() {
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
-            "url('/assets/images/nice%20background%20shade.png')",
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
         <SectionCounter value="^0003" />
@@ -213,7 +216,7 @@ function ProviderIcon({ provider }) {
   );
 }
 
-function DownloadCard({ name, image, alt, actions }) {
+function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
   return (
     <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
       <div
@@ -222,7 +225,7 @@ function DownloadCard({ name, image, alt, actions }) {
         <img
           src={image}
           alt={alt}
-          className="h-[80%] w-[80%] object-contain"
+          className={`h-full w-full object-contain ${imageScale}`}
         />
       </div>
       <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">

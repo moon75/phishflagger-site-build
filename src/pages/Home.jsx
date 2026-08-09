@@ -190,8 +190,15 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 3 — What is PhishFlagger? (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 3 — What is PhishFlagger? (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
       <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
@@ -317,7 +324,13 @@ export default function Home() {
             </em>{" "}
             Digital Verification
           </span>
-          <div className="h-[225px] w-[358px] shrink-0 rounded-lg border-2 border-black bg-white" />
+          <div className="flex h-[225px] w-[358px] shrink-0 items-center justify-center rounded-lg border-2 border-black bg-white p-4">
+            <img
+              src="/assets/images/homepage%200003%20digital%20verification.png"
+              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+              className="h-full w-full object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -682,16 +695,16 @@ export default function Home() {
             <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               1470
             </span>
-            <div className="flex h-[280px] items-end gap-2">
+            <div className="flex h-[140px] items-end gap-2">
               <img
                 src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
                 alt="Numbered papers"
-                className="h-[240px] w-auto object-contain"
+                className="h-[120px] w-auto object-contain"
               />
               <img
                 src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
                 alt="Bundle of numbered books"
-                className="h-[240px] w-auto object-contain"
+                className="h-[120px] w-auto object-contain"
               />
             </div>
           </div>
@@ -699,11 +712,11 @@ export default function Home() {
             <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               1892
             </span>
-            <div className="flex h-[300px] items-end">
+            <div className="flex h-[150px] items-end">
               <img
                 src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
                 alt="Numbering stamp"
-                className="h-[260px] w-auto object-contain"
+                className="h-[130px] w-auto object-contain"
               />
             </div>
           </div>
@@ -711,11 +724,11 @@ export default function Home() {
             <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               2026
             </span>
-            <div className="flex h-[280px] items-end">
+            <div className="flex h-[140px] items-end">
               <img
                 src={infoBoxImg}
                 alt="PhishFlagger inbox demonstration"
-                className="h-[240px] w-auto rounded-lg border-2 border-black object-contain"
+                className="h-[120px] w-auto rounded-lg border-2 border-black object-contain"
               />
             </div>
           </div>
