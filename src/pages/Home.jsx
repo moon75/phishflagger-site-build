@@ -794,12 +794,12 @@ export default function Home() {
           records and documents, thereby reducing fraud.
         </p>
 
-        <div className="mt-10 flex flex-nowrap items-end justify-between overflow-x-auto sm:mt-12">
+        <div className="mt-10 flex flex-nowrap items-start justify-between overflow-x-auto sm:mt-12">
           <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               1470
             </span>
-            <div className="flex items-end gap-2">
+            <div className="flex h-[280px] items-end gap-2">
               <img
                 src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
                 alt="Numbered papers"
@@ -813,24 +813,28 @@ export default function Home() {
             </div>
           </div>
           <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               1892
             </span>
-            <img
-              src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
-              alt="Numbering stamp"
-              className="h-[280px] w-auto object-contain"
-            />
+            <div className="flex h-[280px] items-end">
+              <img
+                src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
+                alt="Numbering stamp"
+                className="h-[280px] w-auto object-contain"
+              />
+            </div>
           </div>
           <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
               2026
             </span>
-            <img
-              src={infoBoxImg}
-              alt="PhishFlagger inbox demonstration"
-              className="h-[240px] w-auto rounded-lg border-2 border-black object-contain"
-            />
+            <div className="flex h-[280px] items-end">
+              <img
+                src={infoBoxImg}
+                alt="PhishFlagger inbox demonstration"
+                className="h-[240px] w-auto rounded-lg border-2 border-black object-contain"
+              />
+            </div>
           </div>
         </div>
 
