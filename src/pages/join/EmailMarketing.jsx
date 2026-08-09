@@ -38,7 +38,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[217px] rounded-lg border-2 border-black bg-white object-contain"
+              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain"
             />
           </div>
         </div>
@@ -115,13 +115,13 @@ export default function EmailMarketing() {
           </div>
 
           <div className="flex flex-col items-center lg:items-end">
-            <p className="mb-4 w-full max-w-[560px] text-center text-[28px] italic text-ink-muted sm:text-[30px]">
+            <p className="mb-4 w-full max-w-[504px] text-center text-[20px] italic text-ink-muted sm:text-[22px]">
               Email client view from enabled Domain
             </p>
             <img
               src={inboxImg}
               alt="PhishFlagger inbox showing validated and flagged emails"
-              className="h-auto w-full max-w-[560px] rounded-lg border-2 border-black object-contain"
+              className="h-auto w-full max-w-[504px] rounded-lg border-2 border-black object-contain"
             />
           </div>
         </div>
@@ -129,6 +129,28 @@ export default function EmailMarketing() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
+        <div className="mx-auto max-w-[820px] text-center">
+          <h2 className="mb-6 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+            Try a Email Demo Now
+          </h2>
+          <Link
+            to="/demo"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+          >
+            Demo
+          </Link>
+        </div>
+      </section>
+
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
+        <SectionCounter value="^0005" />
         <div className="mx-auto max-w-[820px] text-center">
           <Link
             to="/contact"

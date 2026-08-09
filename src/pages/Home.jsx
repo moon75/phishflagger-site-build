@@ -178,14 +178,8 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Demo / Video links */}
-      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-5">
-        <Link
-          to="/demo"
-          className="cursor-pointer rounded-lg border-2 border-ink bg-white px-7 py-3 text-sm font-bold text-ink sm:px-9 sm:py-3.5 sm:text-base"
-        >
-          Demo
-        </Link>
+      {/* Video link */}
+      <div className="mt-10 flex justify-center sm:mt-12">
         <Link
           to="/video"
           className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
@@ -254,10 +248,10 @@ export default function Home() {
           <div className="flex w-auto flex-col items-center">
             <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
               <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                Corporate
+                Domain
               </span>
               <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                Plug-In or Domain
+                Plug- or Appliance
               </span>
             </div>
             <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
@@ -271,7 +265,7 @@ export default function Home() {
               to="/join/email-domain"
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
-              Join
+              Join Domain
             </Link>
           </div>
           <div className="flex w-auto flex-col items-center">
@@ -421,6 +415,20 @@ export default function Home() {
       </div>
     </section>
 
+    {/* ===== Section 4b — Why PhishFlagger Mail? (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0005" />
+      <div className="mx-auto max-w-content text-center">
+        <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          Why <BrandInline /> Mail?
+        </h2>
+        <p className="mx-auto mt-4 max-w-[720px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+          Placeholder text of why PhishFlagger Mail - typical customer
+          example.
+        </p>
+      </div>
+    </section>
+
     {/* ===== Section 5 — Individual protection: Free Plug-In (gray/tower) ===== */}
     <section
       className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
@@ -430,7 +438,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0005" />
+      <SectionCounter value="^0006" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
           <em className="italic">
@@ -535,7 +543,7 @@ export default function Home() {
 
     {/* ===== Section 7 — Caller ID (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0007" />
+      <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -571,7 +579,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0008" />
+      <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -634,7 +642,7 @@ export default function Home() {
 
     {/* ===== Section 7b — Telecom / Text (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0009" />
+      <SectionCounter value="^0010" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
@@ -706,7 +714,7 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
-      <SectionCounter value="^0010" />
+      <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to

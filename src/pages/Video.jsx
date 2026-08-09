@@ -52,7 +52,15 @@ const VIDEOS = [
   })),
 ];
 
-const VIDEO_CATEGORIES = ["Feature", "Ads", "Shorts", "Manual", "Kickstarter", "In Progress"];
+const VIDEO_CATEGORIES = [
+  "Feature",
+  "Ads",
+  "Shorts",
+  "Manual",
+  "Kickstarter",
+  "In Progress",
+  "Telecom Caller ID",
+];
 const CATEGORY_SLUGS = {
   Feature: "",
   Ads: "ads",
@@ -60,6 +68,7 @@ const CATEGORY_SLUGS = {
   Manual: "manual",
   Kickstarter: "kickstarter",
   "In Progress": "in-progress",
+  "Telecom Caller ID": "telecom-caller-id",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
