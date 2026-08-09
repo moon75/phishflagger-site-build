@@ -143,18 +143,22 @@ export default function Footer({ logoSrc = logoImg }) {
               <div>
                 <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Join</p>
                 <ul className="space-y-2.5 list-none p-0">
-                  {nav
-                    .find((item) => item.label === "Join")
-                    .children.map((link) => (
-                      <li key={link.href}>
-                        <Link
-                          to={link.href}
-                          className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                        >
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
+                  {[
+                    { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
+                    { label: "Email - Domain", href: "/join/email-domain" },
+                    { label: "Email - Marketing", href: "/join/email-marketing" },
+                    { label: "Telecom", href: "/join/telecom" },
+                    { label: "Messaging", href: "/join/messaging" },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        to={link.href}
+                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
 

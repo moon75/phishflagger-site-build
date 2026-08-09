@@ -56,7 +56,7 @@ export default function EmailDomain() {
               <h3 className="mb-3 text-center text-[13px] font-bold uppercase tracking-[0.14em] text-ink">
                 Plug-In
               </h3>
-              <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
                 <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
                   <img
                     src={outlookThunderbirdImg}
@@ -66,8 +66,8 @@ export default function EmailDomain() {
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                   <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>Linux Window</li>
                     <li>Windows</li>
+                    <li>Linux / Window</li>
                     <li>
                       Placeholder text goes here. Replace this copy with the
                       final content.

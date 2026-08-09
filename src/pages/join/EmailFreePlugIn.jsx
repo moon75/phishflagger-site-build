@@ -35,60 +35,18 @@ export default function EmailFreePlugIn() {
     <>
       <CloseButton />
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0001" />
-        <div className="mx-auto max-w-content">
-          <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
-            Step 1. Install Plug-In
-          </h2>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
-            {DOWNLOADS.map((item) => (
-              <DownloadCard key={item.name} {...item} />
-            ))}
-
-            <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
-              <div className="flex h-[176px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-6">
-                <div className="flex h-full w-full flex-col items-center justify-center">
-                  <img
-                    src="/assets/images/logo-mark.png"
-                    alt=""
-                    className="h-9 w-9 object-contain"
-                  />
-                  <span className="mt-3 text-[15px] font-semibold text-ink">
-                    Download Page
-                  </span>
-                  <span className="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-brand text-[19px] font-bold leading-none text-white">
-                    ↓
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
-                <h2 className="text-[15px] font-semibold text-ink">
-                  Download Page
-                </h2>
-                <Link
-                  to="/download"
-                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-                >
-                  Go to Download Page
-                </Link>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
-            "url('/assets/images/nice%20background%20shade.png')",
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
-            Step 2. Get your Free Key.&nbsp; Works with ....
+            Step 1. Get your Free Key.&nbsp; Works with ....
           </h2>
           <div className="mx-auto mt-9 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             {PROVIDERS.map(({ key, labels }) => (
@@ -137,6 +95,55 @@ export default function EmailFreePlugIn() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0002" />
+        <div className="mx-auto max-w-content">
+          <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
+            Step 2. Install Plug-In
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
+            {DOWNLOADS.map((item) => (
+              <DownloadCard key={item.name} {...item} />
+            ))}
+
+            <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
+              <div className="flex h-[176px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-6">
+                <div className="flex h-full w-full flex-col items-center justify-center">
+                  <img
+                    src="/assets/images/logo-mark.png"
+                    alt=""
+                    className="h-9 w-9 object-contain"
+                  />
+                  <span className="mt-3 text-[15px] font-semibold text-ink">
+                    Download Page
+                  </span>
+                  <span className="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-brand text-[19px] font-bold leading-none text-white">
+                    ↓
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
+                <h2 className="text-[15px] font-semibold text-ink">
+                  Download Page
+                </h2>
+                <Link
+                  to="/download"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+                >
+                  Go to Download Page
+                </Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">

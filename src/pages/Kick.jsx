@@ -33,7 +33,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          1. View Kickstarter Campaign
+          1. View Alex
         </a>
 
         <a
@@ -85,7 +85,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          7. Kickstarter Rewards
+          7. Tools
         </a>
 
         <a
