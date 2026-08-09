@@ -80,7 +80,7 @@ export default function Kick() {
         </a>
 
         <a
-          href="https://docs.google.com/"
+          href="https://docs.google.com/document/d/173wHC60O8Tj-eTLNsztZ8SkqT93WkINuMvkVyuT0zD8/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
@@ -107,7 +107,7 @@ export default function Kick() {
         </a>
 
         <a
-          href="https://docs.google.com/"
+          href="https://docs.google.com/document/d/1olfrnOWQUrix5wTU6MGi0ZIAIgynBpMHNr9th3IcYkY/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
@@ -116,7 +116,7 @@ export default function Kick() {
         </a>
 
         <a
-          href="https://docs.google.com/"
+          href="https://docs.google.com/document/d/1KjaMfKx4kps-Gcet5RKJQ4MkjKdWrZ0QIAFN3z0RB50/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"

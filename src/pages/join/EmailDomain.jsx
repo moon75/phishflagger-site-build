@@ -26,7 +26,7 @@ export default function EmailDomain() {
             </h2>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-disc">
-                Safeguard your domains with <BrandInline />
+                Safeguard your domain with <BrandInline />
                 &trade; email numbering to prevent impersonation, phishing and
                 other email-based fraud.
               </li>

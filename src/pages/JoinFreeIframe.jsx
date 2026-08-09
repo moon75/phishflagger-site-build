@@ -19,12 +19,11 @@ export default function JoinFreeIframe() {
           <h1 className="mb-8 text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
             Join Free
           </h1>
-          <div className="w-full overflow-hidden rounded-2xl border-2 border-black bg-white">
+          <div className="mx-auto w-full max-w-[650px] overflow-hidden rounded-2xl border-2 border-black bg-white">
             <iframe
               src={JOIN_FREE_URL}
               title="Join PhishFlagger"
-              scrolling="no"
-              className="block min-h-[2400px] w-full"
+              className="block h-[900px] w-full"
             />
           </div>
         </div>
