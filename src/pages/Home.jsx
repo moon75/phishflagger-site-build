@@ -13,7 +13,6 @@ import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
-import history4Img from "../assets/images/7 4rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import messagingIconsImg from "../assets/images/Icons-5.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
@@ -178,8 +177,14 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Video link */}
-      <div className="mt-10 flex justify-center sm:mt-12">
+      {/* Demo / Video links */}
+      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-5">
+        <Link
+          to="/demo"
+          className="cursor-pointer rounded-lg border-2 border-ink bg-white px-7 py-3 text-sm font-bold text-ink sm:px-9 sm:py-3.5 sm:text-base"
+        >
+          Demo
+        </Link>
         <Link
           to="/video"
           className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
@@ -326,7 +331,7 @@ export default function Home() {
 
         {/* Middle — bullets */}
         <div>
-          <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+          <ul className="space-y-3 rounded-2xl border-2 border-black bg-white p-6 text-[15px] leading-[1.5] text-ink sm:space-y-4 sm:p-6 sm:text-[18px] sm:leading-[1.45]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -373,7 +378,7 @@ export default function Home() {
     {/* ===== Section 4 — Domain protection (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0004" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[1fr_1fr_auto]">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -400,8 +405,8 @@ export default function Home() {
         </div>
 
         {/* Middle — email authentication diagram */}
-        <div className="flex flex-col items-center lg:items-start">
-          <div className="w-full max-w-[560px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+        <div className="flex flex-col items-center">
+          <div className="w-full rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <img
               src={domainProtectionImg}
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
@@ -410,26 +415,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right — empty bordered box */}
-        <div className="hidden h-full min-h-[260px] w-[260px] rounded-xl border-2 border-black lg:block" />
+        {/* Right — PhishFlagger Digital Verification box */}
+        <div className="hidden flex-col items-center lg:ml-[6px] lg:flex">
+          <span className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            Digital Verification
+          </span>
+          <div className="h-[225px] w-[358px] shrink-0 rounded-lg border-2 border-black bg-white" />
+        </div>
       </div>
     </section>
 
-    {/* ===== Section 4b — Why PhishFlagger Mail? (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0005" />
-      <div className="mx-auto max-w-content text-center">
-        <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          Why <BrandInline /> Mail?
-        </h2>
-        <p className="mx-auto mt-4 max-w-[720px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-          Placeholder text of why PhishFlagger Mail - typical customer
-          example.
-        </p>
-      </div>
-    </section>
-
-    {/* ===== Section 5 — Individual protection: Free Plug-In (gray/tower) ===== */}
+    {/* ===== Section 4b — Why PhishFlagger Mail? (gray/tower) ===== */}
     <section
       className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
@@ -438,6 +438,30 @@ export default function Home() {
         backgroundSize: "140%",
       }}
     >
+      <SectionCounter value="^0005" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+        <div>
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            Why <BrandInline /> Mail?
+          </h2>
+          <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            Placeholder text of why PhishFlagger Mail - typical customer
+            example.
+          </p>
+        </div>
+
+        <div className="flex w-full max-w-[380px] justify-center rounded-2xl border-2 border-black bg-white p-5 lg:ml-auto">
+          <img
+            src="/assets/images/0005%20image.png"
+            alt="Why PhishFlagger Mail"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0006" />
       <div className="mx-auto max-w-content">
         <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
@@ -541,8 +565,15 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Caller ID (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 7 — Caller ID (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
       <SectionCounter value="^0008" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
@@ -571,14 +602,8 @@ export default function Home() {
       </div>
     </section>
 
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
+    {/* ===== Section 7c — Telecom / Caller ID (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0009" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
@@ -640,8 +665,15 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7b — Telecom / Text (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    {/* ===== Section 7b — Telecom / Text (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
       <SectionCounter value="^0010" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
@@ -705,15 +737,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 8 — Numbering history (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
+    {/* ===== Section 8 — Numbering history (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0011" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
@@ -721,7 +746,7 @@ export default function Home() {
           records and documents, thereby reducing fraud.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
           <HistoryCard
             year="1470"
             topic="Pagination"
@@ -749,7 +774,73 @@ export default function Home() {
             img={history3Img}
             imgAlt="PhishFlagger email numbering"
           />
-          <HistoryCard img={history4Img} imgAlt="PhishFlagger numbering history" />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 9 — Numbering history gallery (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0012" />
+      <div className="mx-auto max-w-content">
+        <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
+          Numbering has been revolutionary in creating identifiable order to
+          records and documents, thereby reducing fraud.
+        </p>
+
+        <div className="mt-10 flex flex-nowrap items-end justify-between overflow-x-auto sm:mt-12">
+          <div className="flex shrink-0 flex-col items-center">
+            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+              1470
+            </span>
+            <div className="flex items-end gap-2">
+              <img
+                src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
+                alt="Numbered papers"
+                className="h-[240px] w-auto object-contain"
+              />
+              <img
+                src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
+                alt="Bundle of numbered books"
+                className="h-[240px] w-auto object-contain"
+              />
+            </div>
+          </div>
+          <div className="flex shrink-0 flex-col items-center">
+            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+              1892
+            </span>
+            <img
+              src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
+              alt="Numbering stamp"
+              className="h-[280px] w-auto object-contain"
+            />
+          </div>
+          <div className="flex shrink-0 flex-col items-center">
+            <span className="mb-3 text-[16px] font-semibold text-ink sm:text-[18px]">
+              2026
+            </span>
+            <img
+              src={infoBoxImg}
+              alt="PhishFlagger inbox demonstration"
+              className="h-[240px] w-auto rounded-lg border-2 border-black object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="mt-10 flex justify-end sm:mt-12">
+          <Link
+            to="/about/numbering-history"
+            className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+          >
+            Numbering History
+          </Link>
         </div>
       </div>
     </section>
