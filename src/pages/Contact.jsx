@@ -43,7 +43,14 @@ export default function Contact() {
   return (
     <>
     <CloseButton />
-    <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+    <section
+      className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
       <div className="mx-auto max-w-content">
         {/* ===== Top — page heading ===== */}
         <div className="text-center">
@@ -56,7 +63,6 @@ export default function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
           {/* Left — contact info */}
           <div className="space-y-8 sm:space-y-10">
-            <div className="h-40 w-full rounded-2xl border-2 border-black bg-white sm:h-48" />
             <div className="flex flex-wrap items-start gap-8 sm:gap-10">
               <div>
                 {/* Email block with icon */}
@@ -131,7 +137,7 @@ export default function Contact() {
               </div>
 
               <div className="ml-6 flex flex-col gap-5 sm:ml-10">
-                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black bg-white">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -147,7 +153,7 @@ export default function Contact() {
                   </svg>
                 </div>
 
-                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+                <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black bg-white">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"

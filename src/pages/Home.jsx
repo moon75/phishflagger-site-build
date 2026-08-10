@@ -377,13 +377,7 @@ export default function Home() {
                 alt="Microsoft Outlook and Mozilla Thunderbird"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute bottom-4 left-0 right-0 flex items-center justify-around px-4 sm:bottom-6">
-                <Link
-                  to="/download"
-                  className="text-[13px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[14px]"
-                >
-                  Download Page
-                </Link>
+              <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center px-4 sm:bottom-6">
                 <Link
                   to="/download"
                   className="text-[13px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[14px]"
@@ -710,12 +704,12 @@ export default function Home() {
                 <img
                   src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
                   alt="Numbered papers"
-                  className="h-full w-auto object-contain"
+                  className="h-[85%] w-auto object-contain"
                 />
                 <img
                   src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
                   alt="Bundle of numbered books"
-                  className="h-full w-auto object-contain"
+                  className="h-[85%] w-auto object-contain"
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
