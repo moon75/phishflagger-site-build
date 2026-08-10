@@ -27,7 +27,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          1. View Alex
+          Alex
         </a>
 
         <a
@@ -79,25 +79,7 @@ export default function Kick() {
           rel="noopener noreferrer"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
-          7. AAA Tools
-        </a>
-
-        <a
-          href="https://join.phishflagger.com/individual/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-        >
-          8. Join Free
-        </a>
-
-        <a
-          href="https://join.phishflagger.com/membership-form-stripe.php"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-        >
-          9. Purchase
+          Tools
         </a>
 
         <a

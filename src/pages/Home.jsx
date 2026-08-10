@@ -124,15 +124,19 @@ function RetroTvIcon({ className }) {
 export default function Home() {
   return (
     <>
-    {/* ===== Section 1 — Hero (gray) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32"
+    {/* ===== Sections 1–3 share one continuous, non-repeating background ===== */}
+    <div
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center"
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
+        backgroundSize: "120%",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
+    {/* ===== Section 1 — Hero (gray) ===== */}
+    <section className="relative w-full px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
       {/* Logo */}
@@ -190,15 +194,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 3 — What is PhishFlagger? (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
+    {/* ===== Section 3 — What is PhishFlagger? ===== */}
+    <section className="relative w-full px-4 py-10 sm:px-6 sm:py-12">
       <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
@@ -224,7 +221,7 @@ export default function Home() {
 
         {/* Middle — bullets */}
         <div>
-          <ul className="space-y-3 rounded-2xl border-2 border-black bg-white p-6 text-[15px] leading-[1.5] text-ink sm:space-y-4 sm:p-6 sm:text-[18px] sm:leading-[1.45]">
+          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl border-2 border-black bg-white p-5 text-[13px] leading-[1.45] text-ink sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -261,15 +258,8 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 4 — Domain protection (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
+    {/* ===== Section 4 — Domain protection ===== */}
+    <section className="relative w-full px-4 py-10 sm:px-6 sm:py-12">
       <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
@@ -289,17 +279,25 @@ export default function Home() {
             originate from authorized senders, adding an extra layer of
             protection against impersonation and phishing and other attacks.
           </p>
-          <Link
-            to="/digital-ino"
-            className="mt-4 inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
-          >
-            More info Here.
-          </Link>
+          <div className="mt-4 flex items-center gap-6">
+            <Link
+              to="/digital-ino"
+              className="inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+            >
+              More info Here.
+            </Link>
+            <Link
+              to="/white-paper"
+              className="inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+            >
+              White Paper
+            </Link>
+          </div>
         </div>
 
         {/* Middle — email authentication diagram */}
         <div className="flex flex-col items-center">
-          <div className="w-full rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+          <div className="mx-auto w-full max-w-[380px] rounded-2xl border-2 border-black bg-white p-5 sm:p-6">
             <img
               src={domainProtectionImg}
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
@@ -341,6 +339,7 @@ export default function Home() {
         </div>
       </div>
     </section>
+    </div>
 
     {/* ===== Section 4b — Why PhishFlagger Mail? (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
@@ -448,10 +447,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex h-12 items-center justify-center sm:h-16 lg:h-[220px] xl:h-[300px]">
-            <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-white text-[20px] font-bold uppercase tracking-wide text-ink shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:h-[76px] sm:w-[76px] sm:text-[23px]">
+          <div className="flex w-auto flex-col items-center">
+            <span className="invisible mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight sm:text-[25px]" aria-hidden="true">
               Or
             </span>
+            <div className="flex h-[300px] items-center justify-center">
+              <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-white text-[20px] font-bold uppercase tracking-wide text-ink shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:h-[76px] sm:w-[76px] sm:text-[23px]">
+                Or
+              </span>
+            </div>
           </div>
 
           <div className="flex w-auto flex-col items-center">

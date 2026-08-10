@@ -5,16 +5,18 @@ const logoMarkImg = "/assets/images/logo-mark.png";
 
 export default function Join() {
   return (
-    <>
-      {/* ===== Pane 1 — Email Solutions (gray/tower) ===== */}
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
+    <div
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "120%",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* ===== Pane 1 — Email Solutions ===== */}
+      <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
           <div className="lg:w-[500px]">
@@ -52,7 +54,7 @@ export default function Join() {
                   Plug-In Free
                 </span>
               </div>
-              <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
+              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
                 <img
                   src="/assets/images/individual.png"
                   alt="Individual protection illustration"
@@ -75,7 +77,7 @@ export default function Join() {
                   Plug- or Appliance
                 </span>
               </div>
-              <div className="flex h-[225px] w-[225px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
+              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
                   alt="Domain protection illustration"
@@ -95,11 +97,11 @@ export default function Join() {
                   Marketing
                 </span>
               </div>
-              <div className="flex h-[225px] w-[225px] items-center justify-center rounded-xl border-2 border-black bg-white">
+              <div className="flex h-[180px] w-[180px] items-center justify-center rounded-xl border-2 border-black bg-white">
                 <img
                   src={whoCanUseImg}
                   alt="Join PhishFlagger illustration"
-                  className="h-[218px] w-[218px] object-contain"
+                  className="h-[174px] w-[174px] object-contain"
                 />
               </div>
               <Link
@@ -113,22 +115,15 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 2 — Telecom / Messaging (gray/tower) ===== */}
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
+      {/* ===== Pane 2 — Telecom / Messaging ===== */}
+      <section className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-10">
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="flex flex-col items-start">
             <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               Telecom
             </h2>
-            <div className="flex min-h-[200px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
+            <div className="flex min-h-[140px] w-full max-w-[620px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
               <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
                 Placeholder Telecom Join text from join screen
               </p>
@@ -143,11 +138,11 @@ export default function Join() {
             </a>
           </div>
 
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start lg:ml-[80px]">
             <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               Messaging
             </h2>
-            <div className="flex min-h-[200px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
+            <div className="flex min-h-[140px] w-full max-w-[620px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
               <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
                 Placeholder Messaging Join text from join screen
               </p>
@@ -163,7 +158,7 @@ export default function Join() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

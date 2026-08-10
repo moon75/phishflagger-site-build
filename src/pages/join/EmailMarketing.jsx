@@ -131,33 +131,22 @@ export default function EmailMarketing() {
         <SectionCounter value="^0004" />
         <div className="mx-auto max-w-[820px] text-center">
           <h2 className="mb-6 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-            Try a Email Demo Now
+            Try our Email Demo Now
           </h2>
-          <Link
-            to="/demo"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-          >
-            Demo
-          </Link>
-        </div>
-      </section>
-
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
-        <SectionCounter value="^0005" />
-        <div className="mx-auto max-w-[820px] text-center">
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-          >
-            Contact Us
-          </Link>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              to="/demo"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              Demo
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 
