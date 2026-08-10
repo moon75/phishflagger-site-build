@@ -244,19 +244,12 @@ export default function Home() {
                 , visible to the user.
               </span>
             </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Flags fraud attempts that do not have the expected sequential
-                number.
-              </span>
-            </li>
           </ul>
         </div>
 
         {/* Right — info box image */}
         <div className="flex flex-col items-center">
-          <p className="mb-4 text-center text-[16px] italic text-ink-muted sm:text-[18px]">
+          <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
             Email client view from enabled Domain
           </p>
           <img
@@ -397,12 +390,26 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Client Plug-In
             </span>
-            <div className="flex h-[140px] w-full max-w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] p-3 sm:h-[190px] sm:max-w-[460px] sm:p-6">
+            <div className="relative flex h-[300px] w-full max-w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] sm:h-[300px] sm:max-w-[460px]">
               <img
                 src={outlookThunderbirdImg}
                 alt="Microsoft Outlook and Mozilla Thunderbird"
-                className="h-full w-full translate-y-2 scale-[1.7] object-contain"
+                className="h-full w-full object-cover"
               />
+              <div className="absolute bottom-4 left-0 right-0 flex items-center justify-around px-4 sm:bottom-6">
+                <Link
+                  to="/download"
+                  className="text-[13px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[14px]"
+                >
+                  Download Page
+                </Link>
+                <Link
+                  to="/download"
+                  className="text-[13px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[14px]"
+                >
+                  More Clients
+                </Link>
+              </div>
             </div>
             <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Free for Individuals.
@@ -442,7 +449,7 @@ export default function Home() {
           </div>
 
           <div className="flex h-12 items-center justify-center sm:h-16 lg:h-[220px] xl:h-[300px]">
-            <span className="text-[23px] font-bold uppercase tracking-wide text-ink-muted sm:text-[26px]">
+            <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-white text-[20px] font-bold uppercase tracking-wide text-ink shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:h-[76px] sm:w-[76px] sm:text-[23px]">
               Or
             </span>
           </div>
@@ -451,11 +458,11 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="h-[140px] w-full max-w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[190px] sm:max-w-[460px]">
+            <div className="h-[300px] w-full max-w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[300px] sm:max-w-[460px]">
               <img
                 src={cloudServerImg}
                 alt="Cloud and server appliance"
-                className="h-full w-full scale-[1.42] object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
             <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
@@ -586,7 +593,7 @@ export default function Home() {
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[26px] font-semibold text-ink sm:text-[30px]">
+            <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               SMS
             </span>
             <div className="flex flex-1 items-start gap-10">
@@ -615,7 +622,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[26px] font-semibold text-ink sm:text-[30px]">
+            <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               Message
             </span>
             <div className="flex flex-1 items-start gap-10">
@@ -704,51 +711,68 @@ export default function Home() {
           records and documents, thereby reducing fraud.
         </p>
 
-        <div className="mt-10 flex flex-nowrap items-start justify-between overflow-x-auto sm:mt-12">
-          <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
-              1470
-            </span>
-            <div className="flex h-[140px] items-end gap-2">
-              <img
-                src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
-                alt="Numbered papers"
-                className="h-[120px] w-auto object-contain"
-              />
-              <img
-                src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
-                alt="Bundle of numbered books"
-                className="h-[120px] w-auto object-contain"
-              />
+        <div className="relative mt-14 sm:mt-16">
+          {/* Timeline connector */}
+          <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />
+
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-10">
+            <div className="flex flex-col items-center">
+              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                1470
+              </span>
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+                <img
+                  src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
+                  alt="Numbered papers"
+                  className="h-full w-auto object-contain"
+                />
+                <img
+                  src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
+                  alt="Bundle of numbered books"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+                Sequential page numbering brings order to early printed books.
+              </p>
             </div>
-          </div>
-          <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
-              1892
-            </span>
-            <div className="flex h-[150px] items-end">
-              <img
-                src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
-                alt="Numbering stamp"
-                className="h-[130px] w-auto object-contain"
-              />
+
+            <div className="flex flex-col items-center">
+              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                1892
+              </span>
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+                <img
+                  src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
+                  alt="Numbering stamp"
+                  className="h-full w-auto scale-[1.2] object-contain"
+                />
+              </div>
+              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+                Mechanical numbering stamps standardize record-keeping.
+              </p>
             </div>
-          </div>
-          <div className="flex shrink-0 flex-col items-center">
-            <span className="mb-3 text-[32px] font-semibold text-ink sm:text-[36px]">
-              2026
-            </span>
-            <div className="flex h-[140px] items-end">
-              <img
-                src={infoBoxImg}
-                alt="PhishFlagger inbox demonstration"
-                className="h-[120px] w-auto rounded-lg border-2 border-black object-contain"
-              />
+
+            <div className="flex flex-col items-center">
+              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                2026
+              </span>
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+                <img
+                  src={infoBoxImg}
+                  alt="PhishFlagger inbox demonstration"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+                <BrandInline /> brings sequential verification to digital
+                communications.
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex justify-end sm:mt-12">
+        <div className="mt-10 flex justify-end pr-16 sm:mt-12 sm:pr-24">
           <Link
             to="/about/numbering-history"
             className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
