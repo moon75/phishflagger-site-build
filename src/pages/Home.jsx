@@ -389,7 +389,7 @@ export default function Home() {
               />
               <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
                 <div />
-                <div className="flex justify-center pl-20 sm:pl-[102px]">
+                <div className="flex justify-center pl-[90px] sm:pl-[114px]">
                   <Link
                     to="/download"
                     className="text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
