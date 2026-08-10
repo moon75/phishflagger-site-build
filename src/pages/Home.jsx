@@ -135,7 +135,7 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section className="relative w-full px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
+    <section className="relative w-full px-4 pt-12 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
       {/* Headline */}
@@ -203,7 +203,7 @@ export default function Home() {
     </section>
 
     {/* ===== Section 3 — What is PhishFlagger? ===== */}
-    <section className="relative w-full px-4 py-10 sm:px-6 sm:py-12">
+    <section className="relative w-full px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8">
       <SectionCounter value="^0002" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
@@ -252,22 +252,18 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Right — info box image */}
+        {/* Right — info box (blank frame) */}
         <div className="flex flex-col items-center">
           <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
-            Email client view from enabled Domain
+            PLACEHOLDER-HUMAN-HEADER
           </p>
-          <img
-            src={infoBoxImg}
-            alt="PhishFlagger inbox demonstration"
-            className="h-auto w-full max-w-[358px] rounded-lg border-2 border-black object-contain"
-          />
+          <div className="h-[150px] w-[358px] rounded-2xl border-2 border-black bg-white" />
         </div>
       </div>
     </section>
 
     {/* ===== Section 4 — Domain protection ===== */}
-    <section className="relative w-full px-4 py-10 sm:px-6 sm:py-12">
+    <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
       <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
@@ -305,11 +301,11 @@ export default function Home() {
 
         {/* Middle — email authentication diagram */}
         <div className="flex flex-col items-center">
-          <div className="mx-auto w-full max-w-[380px] rounded-2xl border-2 border-black bg-white p-5 sm:p-6">
+          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1">
             <img
               src={domainProtectionImg}
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-              className="h-auto w-full object-contain"
+              className="h-full w-full scale-[1.4] object-contain"
             />
           </div>
         </div>
@@ -323,26 +319,12 @@ export default function Home() {
             </em>{" "}
             Digital Verification
           </span>
-          <div className="flex h-[225px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg border-2 border-black bg-white p-4">
+          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg border-2 border-black bg-white p-4">
             <img
               src="/assets/images/homepage%200003%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
               className="min-h-0 flex-1 w-full object-contain"
             />
-            <div className="mb-2 flex shrink-0 items-center gap-6">
-              <Link
-                to="/digital-ino"
-                className="inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[15px]"
-              >
-                More info Here.
-              </Link>
-              <Link
-                to="/white-paper"
-                className="inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[15px]"
-              >
-                White Paper
-              </Link>
-            </div>
           </div>
         </div>
       </div>

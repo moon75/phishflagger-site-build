@@ -35,10 +35,10 @@ export default function FaqTabs({
               setActiveIndex(idx === activeIndex ? null : idx);
               setOpenQuestion(null);
             }}
-            className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
+            className={`cursor-pointer rounded-full px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
               idx === activeIndex
-                ? "border-[#5a6066] bg-[#5a6066] text-white"
-                : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
+                ? "bg-[#5a6066] text-white"
+                : "text-ink-muted hover:bg-gray-100 hover:text-ink"
             }`}
           >
             {category.name}
@@ -48,7 +48,7 @@ export default function FaqTabs({
           <button
             type="button"
             disabled
-            className="cursor-not-allowed rounded-full border border-gray-200 bg-gray-100 px-4 py-2 text-[13px] font-medium text-gray-400 sm:text-[14px]"
+            className="cursor-not-allowed rounded-full bg-gray-100 px-4 py-2 text-[13px] font-medium text-gray-400 sm:text-[14px]"
           >
             Ask AI coming soon
           </button>

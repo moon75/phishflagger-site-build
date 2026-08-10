@@ -50,9 +50,12 @@ export default function Join() {
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-end">
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[62px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Plug-In Free
-                </span>
+                <Link
+                  to="/join/email-free-plug-in"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Join Free
+                </Link>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
                 <img
@@ -61,21 +64,18 @@ export default function Join() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <Link
-                to="/join/email-free-plug-in"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                Join Free
-              </Link>
+              <span className="mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                Plug-In Free
+              </span>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Domain
-                </span>
-                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  Plug- or Appliance
-                </span>
+              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+                <Link
+                  to="/join/email-domain"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
+                  Join Domain
+                </Link>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
                 <img
@@ -84,18 +84,21 @@ export default function Join() {
                   className="h-full w-full rounded-lg object-contain"
                 />
               </div>
-              <Link
-                to="/join/email-domain"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
-                Join Domain
-              </Link>
+              <span className="relative mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                Domain
+                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                  Plug- or Appliance
+                </span>
+              </span>
             </div>
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[62px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                <Link
+                  to="/join/email-marketing"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                >
                   Marketing
-                </span>
+                </Link>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center rounded-xl border-2 border-black bg-white">
                 <img
@@ -104,57 +107,48 @@ export default function Join() {
                   className="h-[174px] w-[174px] object-contain"
                 />
               </div>
-              <Link
-                to="/join/email-marketing"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-              >
+              <span className="mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                 Marketing
-              </Link>
+              </span>
             </div>
           </div>
         </div>
       </section>
 
       {/* ===== Pane 2 — Telecom / Messaging ===== */}
-      <section className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-10">
+      <section className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-4">
         <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="flex flex-col items-start">
-            <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              Telecom
-            </h2>
-            <div className="flex min-h-[140px] w-full max-w-[620px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
-              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-                Placeholder Telecom Join text from join screen
-              </p>
-            </div>
             <a
               href="https://phishflagger.netlify.app/join/telecom"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mb-4 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Telecom
             </a>
+            <div className="flex min-h-[140px] w-full max-w-[310px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+              <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
+                Placeholder Telecom Join text from join screen
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col items-start lg:ml-[80px]">
-            <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              Messaging
-            </h2>
-            <div className="flex min-h-[140px] w-full max-w-[620px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
-              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-                Placeholder Messaging Join text from join screen
-              </p>
-            </div>
             <a
               href="https://phishflagger.netlify.app/join/messaging"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              className="mb-4 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
             >
               Messaging
             </a>
+            <div className="flex min-h-[140px] w-full max-w-[310px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+              <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
+                Placeholder Messaging Join text from join screen
+              </p>
+            </div>
           </div>
         </div>
       </section>

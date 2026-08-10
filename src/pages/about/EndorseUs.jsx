@@ -59,7 +59,14 @@ export default function EndorseUs() {
   return (
     <>
       <CloseButton />
-      <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
+      <section
+        className="bg-[#eef0f4] bg-cover bg-center px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[1040px]">
           <h1 className="text-center text-[34px] font-semibold leading-none tracking-tight text-[#303030] sm:text-[44px]">
             Endorse Us

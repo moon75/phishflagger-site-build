@@ -8,7 +8,14 @@ export default function NumberingHistory() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-4 sm:px-6 sm:pt-20">
+      <section
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-4 sm:px-6 sm:pt-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[920px] text-center">
           <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             Numbering History
@@ -16,7 +23,14 @@ export default function NumberingHistory() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-content">
           <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
             <HistoryCard img={history1Img} imgAlt="Numbered book pages" />
