@@ -218,7 +218,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
         <div>
-          <h2 className="mb-4 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
@@ -278,7 +278,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
         {/* Left — heading + subheading */}
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
               <span className="font-normal text-brand">Flagger</span>
@@ -387,9 +387,9 @@ export default function Home() {
                 alt="Microsoft Outlook and Mozilla Thunderbird"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute bottom-4 left-0 right-0 grid grid-cols-2 sm:bottom-6">
+              <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
                 <div />
-                <div className="flex justify-center">
+                <div className="flex justify-center pl-20 sm:pl-[102px]">
                   <Link
                     to="/download"
                     className="text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
@@ -607,7 +607,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mx-6 mt-2 max-w-[252px] shrink-0 self-center rounded-xl border-2 border-black px-7 py-3.5 text-[11px] leading-[1.65] text-ink sm:text-[12px] sm:leading-[1.6]">
+          <p className="mx-6 mt-2 max-w-[360px] shrink-0 self-center rounded-xl border-2 border-black px-10 py-5 text-[16px] leading-[1.65] text-ink sm:text-[17px] sm:leading-[1.6]">
             Phishing doesn't stop at email. <BrandInline /> for SMS and
             Messages adds an additional layer of verification to SMS and mobile
             messaging, helping protect customers from text-based scams and

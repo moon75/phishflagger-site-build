@@ -18,7 +18,7 @@ export default function Join() {
       {/* ===== Pane 1 — Email Solutions ===== */}
       <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
         <SectionCounter value="^0001" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
             <div className="mb-6 flex items-center justify-start gap-5">
               <img
@@ -46,8 +46,22 @@ export default function Join() {
                 Endorse Us
               </Link>
             </p>
+            <div className="mt-4 flex items-center gap-6">
+              <Link
+                to="/digital-ino"
+                className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[16px]"
+              >
+                More info Here.
+              </Link>
+              <Link
+                to="/white-paper"
+                className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[16px]"
+              >
+                White Paper
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center">
+          <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[62px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">

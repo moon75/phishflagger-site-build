@@ -38,7 +38,14 @@ export function TelecomFormPage({
   };
 
   return (
-    <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+    <section
+      className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
       <div className="mx-auto max-w-content">
         <div className="text-center">
           <Link
@@ -123,7 +130,7 @@ export function TelecomFormPage({
             </div>
 
             <div className="-mt-8 flex flex-col gap-5">
-              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black bg-white">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -139,7 +146,7 @@ export function TelecomFormPage({
                 </svg>
               </div>
 
-              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black">
+              <div className="flex h-36 w-36 items-center justify-center rounded-lg border-2 border-black bg-white">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -159,7 +166,10 @@ export function TelecomFormPage({
             </div>
           </div>
 
-          <form onSubmit={onSubmit} className="space-y-6">
+          <form
+            onSubmit={onSubmit}
+            className="space-y-6 rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
+          >
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <Field label="First Name">
                 <input
