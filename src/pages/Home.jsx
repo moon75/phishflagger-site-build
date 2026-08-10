@@ -772,7 +772,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-end pr-16 sm:mt-12 sm:pr-24">
+        <div className="mt-10 flex justify-end pr-12 sm:mt-12 sm:pr-16">
           <Link
             to="/about/numbering-history"
             className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"

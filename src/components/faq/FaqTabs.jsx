@@ -25,7 +25,7 @@ export default function FaqTabs({
   }, [pathname]);
 
   return (
-    <div>
+    <div className="rounded-2xl bg-white p-6 sm:p-8">
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {categories.map((category, idx) => (
           <button
