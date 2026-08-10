@@ -54,7 +54,14 @@ export default function Blog() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
+      <section
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[920px]">
           {/* Page header */}
           <div className="text-center">
@@ -64,7 +71,7 @@ export default function Blog() {
           </div>
 
           {/* Table of contents — numbers count down (newest = highest) */}
-          <nav className="mx-auto mt-10 max-w-[680px] rounded-2xl border border-gray-200 bg-[#fafbfc] p-5 sm:mt-12 sm:p-6">
+          <nav className="mx-auto mt-10 max-w-[680px] rounded-2xl border-2 border-black bg-white p-5 sm:mt-12 sm:p-6">
             <ul className="space-y-2 text-[14px] sm:text-[15px]">
               {POSTS.map((p, i) => (
                 <li key={p.id}>

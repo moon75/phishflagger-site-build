@@ -66,7 +66,14 @@ export default function IP() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
+      <section
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[820px]">
           {/* Header */}
           <div className="text-center">
@@ -76,7 +83,7 @@ export default function IP() {
           </div>
 
           {/* Highlight bullets */}
-          <ul className="mx-auto mt-14 max-w-[520px] space-y-3 sm:mt-16">
+          <ul className="mx-auto mt-14 max-w-[520px] space-y-3 rounded-2xl border-2 border-black bg-white p-6 sm:mt-16 sm:p-8">
             {HIGHLIGHTS.map((h) => (
               <li key={h} className="flex items-center gap-3">
                 <svg
@@ -122,7 +129,7 @@ export default function IP() {
 
 function PatentItem({ title, number, issued, url }) {
   return (
-    <div>
+    <div className="rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
       <h3 className="text-[15px] font-semibold leading-[1.45] text-ink sm:text-[16px]">
         {title}
       </h3>
