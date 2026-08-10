@@ -56,6 +56,7 @@ export default function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
           {/* Left — contact info */}
           <div className="space-y-8 sm:space-y-10">
+            <div className="h-40 w-full rounded-2xl border-2 border-black bg-white sm:h-48" />
             <div className="flex flex-wrap items-start gap-8 sm:gap-10">
               <div>
                 {/* Email block with icon */}
@@ -168,7 +169,10 @@ export default function Contact() {
           </div>
 
           {/* Right — form */}
-          <form onSubmit={onSubmit} className="space-y-6">
+          <form
+            onSubmit={onSubmit}
+            className="space-y-6 rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
+          >
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <Field
                 label="First Name"

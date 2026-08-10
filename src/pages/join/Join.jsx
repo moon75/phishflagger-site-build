@@ -8,7 +8,7 @@ export default function Join() {
     <>
       {/* ===== Pane 1 — Email Solutions (gray/tower) ===== */}
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -128,7 +128,7 @@ export default function Join() {
             <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               Telecom
             </h2>
-            <div className="flex min-h-[280px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
+            <div className="flex min-h-[200px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
               <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
                 Placeholder Telecom Join text from join screen
               </p>
@@ -147,7 +147,7 @@ export default function Join() {
             <h2 className="mb-4 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
               Messaging
             </h2>
-            <div className="flex min-h-[280px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
+            <div className="flex min-h-[200px] w-full flex-1 flex-col rounded-2xl border-2 border-black bg-white p-7 sm:p-10">
               <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
                 Placeholder Messaging Join text from join screen
               </p>

@@ -384,7 +384,13 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
         <SectionCounter value="^0009" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
@@ -401,20 +407,22 @@ export default function Telecom() {
             in the following Jurisdictions:
           </p>
           <p className="mx-auto mt-4 max-w-[700px] text-[16px] font-semibold leading-relaxed text-ink sm:text-[18px]">
-            We are offering exceptional opportunities to early adopters.
+            We are offering exceptional adopters.
           </p>
-          <p className="mx-auto mt-8 max-w-[900px] text-[15px] leading-[1.85] text-ink sm:text-[18px]">
-            Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
-            Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
-            Egypt, Estonia, Finland, France, Germany, Greece, Hungary, Iceland,
-            India, Indonesia, Ireland, Israel, Italy, Latvia, Liechtenstein,
-            Lithuania, Luxembourg, Malta, Mexico, Monaco, Montenegro,
-            Netherlands, Nigeria, North Macedonia, Norway, Philippines, Poland,
-            Portugal, Romania, Russia, Saudi Arabia, San Marino, Serbia,
-            Slovakia, Slovenia, Spain, Sweden, Switzerland, Thailand, Turkey,
-            UAE, USA, England, Scotland, Singapore, Vietnam, Wales and Northern
-            Ireland.
-          </p>
+          <div className="mx-auto mt-8 max-w-[900px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+            <p className="text-[15px] leading-[1.85] text-ink sm:text-[18px]">
+              Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
+              Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
+              Egypt, Estonia, Finland, France, Germany, Greece, Hungary, Iceland,
+              India, Indonesia, Ireland, Israel, Italy, Latvia, Liechtenstein,
+              Lithuania, Luxembourg, Malta, Mexico, Monaco, Montenegro,
+              Netherlands, Nigeria, North Macedonia, Norway, Philippines, Poland,
+              Portugal, Romania, Russia, Saudi Arabia, San Marino, Serbia,
+              Slovakia, Slovenia, Spain, Sweden, Switzerland, Thailand, Turkey,
+              UAE, USA, England, Scotland, Singapore, Vietnam, Wales and Northern
+              Ireland.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -10,6 +10,7 @@ import VideoPage from "./pages/Video.jsx";
 import Download from "./pages/Download.jsx";
 import PluginDownload from "./pages/PluginDownload.jsx";
 import DigitalIno from "./pages/DigitalIno.jsx";
+import WhitePaper from "./pages/WhitePaper.jsx";
 import VictimTestimonials from "./pages/VictimTestimonials.jsx";
 import EndorseUs from "./pages/EndorseUs.jsx";
 import EndorseThanks from "./pages/EndorseThanks.jsx";
@@ -103,6 +104,7 @@ export default function App() {
         <Route path="download" element={<Download />} />
         <Route path="plugin-download" element={<PluginDownload />} />
         <Route path="digital-ino" element={<DigitalIno />} />
+        <Route path="white-paper" element={<WhitePaper />} />
         <Route path="News" element={<News />} />
         <Route path="petition" element={<Petition />} />
         <Route path="petition/thanks" element={<PetitionThanks />} />

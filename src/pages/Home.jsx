@@ -324,12 +324,26 @@ export default function Home() {
             </em>{" "}
             Digital Verification
           </span>
-          <div className="flex h-[225px] w-[358px] shrink-0 items-center justify-center rounded-lg border-2 border-black bg-white p-4">
+          <div className="flex h-[225px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg border-2 border-black bg-white p-4">
             <img
               src="/assets/images/homepage%200003%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-              className="h-full w-full object-contain"
+              className="min-h-0 flex-1 w-full object-contain"
             />
+            <div className="mb-2 flex shrink-0 items-center gap-6">
+              <Link
+                to="/digital-ino"
+                className="inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[15px]"
+              >
+                More info Here.
+              </Link>
+              <Link
+                to="/white-paper"
+                className="inline-block text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[15px]"
+              >
+                White Paper
+              </Link>
+            </div>
           </div>
         </div>
       </div>
