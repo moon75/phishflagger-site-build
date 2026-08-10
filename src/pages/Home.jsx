@@ -9,7 +9,6 @@ import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/des
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
-import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
@@ -139,15 +138,6 @@ export default function Home() {
     <section className="relative w-full px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
-      {/* Logo */}
-      <div className="flex items-center justify-center">
-        <img
-          src={logoImg}
-          alt="PhishFlagger"
-          className="h-auto w-full max-w-[360px] sm:max-w-[520px]"
-        />
-      </div>
-
       {/* Headline */}
       <h1 className="mt-2 text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:mt-3 sm:text-[36px] lg:text-[42px]">
         Protecting Communications
@@ -172,21 +162,39 @@ export default function Home() {
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
       <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
-        {SCREENS.map((s, i) => (
-          <div key={i} className="flex flex-col items-center">
-            <span className="mb-3 text-[14px] font-semibold text-ink sm:mb-4 sm:text-base">
+        <div className="flex flex-col items-center">
+          {/* Shared label row, centered above the first two phones */}
+          <div className="mb-3 flex items-center justify-center gap-8 sm:mb-4">
+            <Link
+              to="/join/email-free-plug-in"
+              className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-base"
+            >
+              Email - Free
+            </Link>
+            <Link
+              to="/join/email-domain"
+              className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-base"
+            >
+              Email - Domain
+            </Link>
+          </div>
+          <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
+            <div className="flex flex-1 items-center">
+              <PhonePlaceholder src={SCREENS[0].src} alt={`${SCREENS[0].label} screen`} large />
+            </div>
+            <PhonePlaceholder src={SCREENS[1].src} alt={`${SCREENS[1].label} screen`} />
+          </div>
+        </div>
+
+        {SCREENS.slice(2).map((s, i) => (
+          <div key={i + 2} className="flex flex-col items-center">
+            <Link
+              to={s.label === "Messages" ? "/join/messaging" : "/join/telecom"}
+              className="mb-3 text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:mb-4 sm:text-base"
+            >
               {s.label}
-            </span>
-            {i === 0 ? (
-              <div className="flex flex-1 items-center">
-                <PhonePlaceholder src={s.src} alt={`${s.label} screen`} large />
-              </div>
-            ) : (
-              <PhonePlaceholder
-                src={s.src}
-                alt={`${s.label} screen`}
-              />
-            )}
+            </Link>
+            <PhonePlaceholder src={s.src} alt={`${s.label} screen`} />
           </div>
         ))}
       </div>
@@ -376,18 +384,10 @@ export default function Home() {
     >
       <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
-        <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-          <em className="italic">
-            <span className="font-extrabold text-ink">Phish</span>
-            <span className="font-normal text-brand">Flagger</span>
-          </em>{" "}
-          Email
-        </h2>
-
         <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Client Plug-In
+              Email Client Plug-In
             </span>
             <div className="relative flex h-[300px] w-full max-w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] sm:h-[300px] sm:max-w-[460px]">
               <img
@@ -460,7 +460,7 @@ export default function Home() {
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Domain Appliance
+              Email Domain Appliance
             </span>
             <div className="h-[300px] w-full max-w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[300px] sm:max-w-[460px]">
               <img
@@ -504,7 +504,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> Email Marketing
+            Email Marketing
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Place Holder text for Marketing home page
@@ -535,7 +535,7 @@ export default function Home() {
         {/* Left — heading + text */}
         <div>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <BrandInline /> for Telecom / Caller ID
+            Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.

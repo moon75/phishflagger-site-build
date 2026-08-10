@@ -9,8 +9,15 @@ export default function PhishFlaggerOrg() {
     <>
       <CloseButton />
 
-      {/* ===== Section 1 — Heading + intro + two icons (white) ===== */}
-      <section className="w-full bg-white px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
+      {/* ===== Section 1 — Heading + intro + two icons (gray/tower) ===== */}
+      <section
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-12 sm:px-6 sm:pb-16"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <div className="mx-auto max-w-[820px]">
           {/* Section heading */}
           <h2 className="text-center text-[36px] font-semibold tracking-tight text-ink sm:text-[44px]">
