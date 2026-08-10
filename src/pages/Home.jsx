@@ -159,6 +159,17 @@ export default function Home() {
         and CallerID through sequential numbering.
       </p>
 
+      {/* Video link */}
+      <div className="mt-8 flex justify-center sm:mt-10">
+        <Link
+          to="/video"
+          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
+        >
+          <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
+          Watch Our Videos
+        </Link>
+      </div>
+
       {/* Phones row — flex so phones sit tight together regardless of container width */}
       <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         {SCREENS.map((s, i) => (
@@ -178,17 +189,6 @@ export default function Home() {
             )}
           </div>
         ))}
-      </div>
-
-      {/* Video link */}
-      <div className="mt-10 flex justify-center sm:mt-12">
-        <Link
-          to="/video"
-          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
-        >
-          <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
-          Watch Our Videos
-        </Link>
       </div>
 
       </div>
