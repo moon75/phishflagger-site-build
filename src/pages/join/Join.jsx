@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
 
-const logoMarkImg = "/assets/images/logo-mark.png";
-
 export default function Join() {
   return (
     <div
@@ -18,44 +16,13 @@ export default function Join() {
       {/* ===== Pane 1 — Email Solutions ===== */}
       <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
         <SectionCounter value="^0001" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[0.9fr_1.6fr]">
-          <div className="lg:w-[500px]">
-            <div className="mb-6 flex items-center justify-start gap-5">
-              <img
-                src={logoMarkImg}
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
-              />
-              <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-                Email Solutions
-              </h2>
-            </div>
-            <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
-              <BrandInline /> protects individuals and organizations who
-              want greater confidence in the authenticity of their emails.
-              Whether you are using a custom domain or a supported email
-              service, <BrandInline /> adds extra layers of protection
-              against phishing and email impersonation.
-            </p>
-            <p className="mt-4 text-[15px] text-ink sm:text-[16px]">
-              Like what you see.{" "}
-              <Link
-                to="/help/endorse-us"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Endorse Us
-              </Link>
-            </p>
-          </div>
-          <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-end">
+        <div className="mx-auto max-w-content">
+          <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap">
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[62px] items-end justify-center">
-                <Link
-                  to="/join/email-free-plug-in"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
-                  Join Free
-                </Link>
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  Plug-In Free
+                </span>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
                 <img
@@ -64,18 +31,21 @@ export default function Join() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                Plug-In Free
-              </span>
+              <Link
+                to="/join/email-free-plug-in"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Join Free
+              </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[62px] items-end justify-center">
-                <Link
-                  to="/join/email-domain"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
-                  Join Domain
-                </Link>
+              <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  Domain
+                </span>
+                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                  Plug- or Appliance
+                </span>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
                 <img
@@ -84,21 +54,18 @@ export default function Join() {
                   className="h-full w-full rounded-lg object-contain"
                 />
               </div>
-              <span className="relative mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                Domain
-                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  Plug- or Appliance
-                </span>
-              </span>
+              <Link
+                to="/join/email-domain"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Join Domain
+              </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[62px] items-end justify-center">
-                <Link
-                  to="/join/email-marketing"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   Marketing
-                </Link>
+                </span>
               </div>
               <div className="flex h-[180px] w-[180px] items-center justify-center rounded-xl border-2 border-black bg-white">
                 <img
@@ -107,61 +74,59 @@ export default function Join() {
                   className="h-[174px] w-[174px] object-contain"
                 />
               </div>
-              <span className="mt-6 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+              <Link
+                to="/join/email-marketing"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
                 Marketing
-              </span>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ===== Pane 2 — Telecom / Messaging ===== */}
-      <section className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-4">
-        <SectionCounter value="^0002" />
-        <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
-          <div className="flex flex-col items-start">
-            <a
-              href="https://phishflagger.netlify.app/join/telecom"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-4 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Telecom
-            </a>
-            <div className="flex min-h-[140px] w-full max-w-[310px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
-              <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
-                Placeholder Telecom Join text from join screen
-              </p>
+            <div className="flex w-auto flex-col items-center">
+              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  Telecom
+                </span>
+              </div>
+              <div className="flex h-[180px] w-[180px] flex-col justify-center rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+                <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
+                  Placeholder Telecom Join text from join screen
+                </p>
+              </div>
+              <a
+                href="https://phishflagger.netlify.app/join/telecom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Telecom
+              </a>
             </div>
-          </div>
 
-          <div className="flex flex-col items-start lg:ml-[80px]">
-            <a
-              href="https://phishflagger.netlify.app/join/messaging"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-4 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-            >
-              Messaging
-            </a>
-            <div className="flex min-h-[140px] w-full max-w-[310px] flex-1 flex-col rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
-              <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
-                Placeholder Messaging Join text from join screen
-              </p>
+            <div className="flex w-auto flex-col items-center">
+              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  Messaging
+                </span>
+              </div>
+              <div className="flex h-[180px] w-[180px] flex-col justify-center rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+                <p className="text-[12px] leading-[1.6] text-ink sm:text-[13px]">
+                  Placeholder Messaging Join text from join screen
+                </p>
+              </div>
+              <a
+                href="https://phishflagger.netlify.app/join/messaging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex h-[42px] w-fit items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Messaging
+              </a>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
-}
-
-function BrandInline({ trail = "Flagger" }) {
-  return (
-    <em className="italic">
-      <span className="font-bold text-ink">Phish</span>
-      <span className="font-normal text-brand">{trail}</span>
-    </em>
   );
 }
 

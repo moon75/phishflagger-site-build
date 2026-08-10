@@ -5,6 +5,7 @@ import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
 
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
+const logoMarkImg = "/assets/images/logo-mark.png";
 
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
@@ -132,6 +133,44 @@ export default function Kick() {
               Request My Domain
             </Link>
           </div>
+        </div>
+
+        {/* ===== Email Solutions (moved from /join) ===== */}
+        <div className="mt-16 w-full max-w-[640px] text-left">
+          <div className="mb-6 flex items-center justify-start gap-5">
+            <img
+              src={logoMarkImg}
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
+            />
+            <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              Email Solutions
+            </h2>
+          </div>
+          <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
+            <em className="italic">
+              <span className="font-bold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            protects individuals and organizations who want greater
+            confidence in the authenticity of their emails. Whether you are
+            using a custom domain or a supported email service,{" "}
+            <em className="italic">
+              <span className="font-bold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            adds extra layers of protection against phishing and email
+            impersonation.
+          </p>
+          <p className="mt-4 text-[15px] text-ink sm:text-[16px]">
+            Like what you see.{" "}
+            <Link
+              to="/help/endorse-us"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Endorse Us
+            </Link>
+          </p>
         </div>
       </section>
     </>

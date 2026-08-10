@@ -33,7 +33,14 @@ export default function Fiction() {
       <CloseButton />
 
       {/* Header */}
-      <div className="w-full bg-white px-4 pt-10 pb-8 text-center sm:px-6">
+      <div
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-10 pb-8 text-center sm:px-6"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
         <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[52px]">
           Fiction
         </h1>

@@ -257,7 +257,7 @@ export default function Home() {
           <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
             PLACEHOLDER-HUMAN-HEADER
           </p>
-          <div className="h-[150px] w-[358px] rounded-2xl border-2 border-black bg-white" />
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl border-2 border-black bg-white" />
         </div>
       </div>
     </section>
@@ -286,13 +286,13 @@ export default function Home() {
           <div className="mt-4 flex items-center gap-6">
             <Link
               to="/digital-ino"
-              className="inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+              className="inline-block text-[12px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[13px]"
             >
               More info Here.
             </Link>
             <Link
               to="/white-paper"
-              className="inline-block text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
+              className="inline-block text-[12px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[13px]"
             >
               White Paper
             </Link>
@@ -424,10 +424,10 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
-            <span className="invisible mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight sm:text-[25px]" aria-hidden="true">
+            <span className="invisible hidden mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight sm:text-[25px] lg:block" aria-hidden="true">
               Or
             </span>
-            <div className="flex h-[300px] items-center justify-center">
+            <div className="flex items-center justify-center py-2 lg:h-[300px] lg:py-0">
               <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-white text-[20px] font-bold uppercase tracking-wide text-ink shadow-[0_6px_16px_rgba(15,23,42,0.12)] sm:h-[76px] sm:w-[76px] sm:text-[23px]">
                 Or
               </span>
@@ -729,7 +729,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
-                Mechanical numbering stamps standardize record-keeping.
+                Mechanical numbering stamps stops paper fraud.
               </p>
             </div>
 
