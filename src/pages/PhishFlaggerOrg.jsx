@@ -9,15 +9,18 @@ export default function PhishFlaggerOrg() {
     <>
       <CloseButton />
 
-      {/* ===== Section 1 — Heading + intro + two icons (gray/tower) ===== */}
-      <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-12 sm:px-6 sm:pb-16"
+      <div
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
+      {/* ===== Section 1 — Heading + intro + two icons ===== */}
+      <section className="w-full px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-[820px]">
           {/* Section heading */}
           <h2 className="text-center text-[36px] font-semibold tracking-tight text-ink sm:text-[44px]">
@@ -43,15 +46,8 @@ export default function PhishFlaggerOrg() {
       {/* Divider */}
       <div className="mx-auto h-px w-[88%] max-w-content bg-gray-300" />
 
-      {/* ===== Section 2 — Participate and Help Improve (gray) ===== */}
-      <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
+      {/* ===== Section 2 — Participate and Help Improve ===== */}
+      <section className="w-full px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[1000px] grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-[1fr_1.1fr]">
           {/* Left — community illustration with pill label */}
           <Link to="/community" className="flex flex-col items-center">
@@ -91,6 +87,7 @@ export default function PhishFlaggerOrg() {
           </div>
         </div>
       </section>
+      </div>
 
     </>
   );

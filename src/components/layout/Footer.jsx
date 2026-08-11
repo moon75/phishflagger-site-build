@@ -44,6 +44,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <FaqTabs
                   categoryOrder={[0, 2, 1, 3, 4]}
                   showAskAiComingSoon
+                  classic
                 />
               </div>
             </div>

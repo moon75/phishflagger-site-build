@@ -8,6 +8,7 @@ import { brandify } from "../Brand.jsx";
 export default function FaqTabs({
   showAskAiComingSoon = false,
   categoryOrder = null,
+  classic = false,
 }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const [openQuestion, setOpenQuestion] = useState(null);
@@ -25,7 +26,7 @@ export default function FaqTabs({
   }, [pathname]);
 
   return (
-    <div className="rounded-2xl bg-white p-6 sm:p-8">
+    <div className={classic ? "" : "rounded-2xl bg-white p-6 sm:p-8"}>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
         {categories.map((category, idx) => (
           <button
@@ -36,9 +37,15 @@ export default function FaqTabs({
               setOpenQuestion(null);
             }}
             className={`cursor-pointer rounded-full px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
+              classic ? "border " : ""
+            }${
               idx === activeIndex
-                ? "bg-[#5a6066] text-white"
-                : "text-ink-muted hover:bg-gray-100 hover:text-ink"
+                ? classic
+                  ? "border-[#5a6066] bg-[#5a6066] text-white"
+                  : "bg-[#5a6066] text-white"
+                : classic
+                  ? "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
+                  : "text-ink-muted hover:bg-gray-100 hover:text-ink"
             }`}
           >
             {category.name}
@@ -48,7 +55,9 @@ export default function FaqTabs({
           <button
             type="button"
             disabled
-            className="cursor-not-allowed rounded-full bg-gray-100 px-4 py-2 text-[13px] font-medium text-gray-400 sm:text-[14px]"
+            className={`cursor-not-allowed rounded-full bg-gray-100 px-4 py-2 text-[13px] font-medium text-gray-400 sm:text-[14px] ${
+              classic ? "border border-gray-200" : ""
+            }`}
           >
             Ask AI coming soon
           </button>

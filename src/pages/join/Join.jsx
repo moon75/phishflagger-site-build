@@ -60,6 +60,22 @@ export default function Join() {
                 White Paper
               </Link>
             </div>
+            <p className="mt-4 text-[15px] text-ink sm:text-[16px]">
+              Looking for:{" "}
+              <Link
+                to="/join/telecom"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Telecom
+              </Link>{" "}
+              or{" "}
+              <Link
+                to="/join/messaging"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Messages
+              </Link>
+            </p>
           </div>
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">

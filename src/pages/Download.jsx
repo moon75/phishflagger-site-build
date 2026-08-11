@@ -1,6 +1,6 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { Link } from "react-router-dom";
-import outlookImg from "../assets/images/outlook image.png";
+import outlookImg from "../assets/images/outlook image 90.png";
 
 export default function Download() {
   return (
@@ -47,7 +47,7 @@ export default function Download() {
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full scale-125 object-cover"
                 />
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">

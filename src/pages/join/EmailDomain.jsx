@@ -216,19 +216,32 @@ export default function EmailDomain() {
         }}
       >
         <SectionCounter value="^0005" />
-        <div className="mx-auto max-w-content text-center">
-          <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-            Pricing
-          </h2>
-          <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-            As low as $10.00 per Year / per Email
-          </p>
-          <Link
-            to="/join-corporate"
-            className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
-          >
-            Join Domain
-          </Link>
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+          <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+            <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
+              What you will receive.
+            </h3>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+              <li>Terms of Service</li>
+              <li>Access Key</li>
+              <li>Appliance Install</li>
+              <li>Install Instructions</li>
+            </ul>
+          </div>
+          <div className="text-center">
+            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              Pricing
+            </h2>
+            <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+              As low as $10.00 per Year / per Email
+            </p>
+            <Link
+              to="/join-corporate"
+              className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+            >
+              Join Domain
+            </Link>
+          </div>
         </div>
       </section>
 

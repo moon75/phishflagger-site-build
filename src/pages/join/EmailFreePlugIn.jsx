@@ -37,14 +37,17 @@ export default function EmailFreePlugIn() {
     <>
       <CloseButton />
 
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      <div
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
+      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
@@ -96,7 +99,7 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
@@ -139,14 +142,7 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
+      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">
@@ -171,6 +167,7 @@ export default function EmailFreePlugIn() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }
