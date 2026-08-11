@@ -16,8 +16,8 @@ const JOIN_FREE_URL = "https://join.phishflagger.com/individual/";
 //   }).observe(document.body);
 //
 // ...this page will pick it up automatically and resize live, no further
-// changes needed here. Until then it falls back to a fixed responsive height.
-const FALLBACK_HEIGHT = "clamp(650px, 110vh, 1100px)";
+// changes needed here. Until then it falls back to a fixed height.
+const FALLBACK_HEIGHT = "600px";
 
 export default function JoinFreeIframe() {
   const iframeRef = useRef(null);

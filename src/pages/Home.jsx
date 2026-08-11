@@ -13,7 +13,6 @@ import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import messagingIconsImg from "../assets/images/Icons-5.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
@@ -24,53 +23,6 @@ const SCREENS = [
   { label: "Text/SMS", src: textPhoneImg },
   { label: "Caller ID", src: callerIdHandsetImg },
 ];
-
-const SMS_STEPS = [
-  {
-    date: "Tuesday, Mar 10 · 2:58 PM",
-    message: "^5201 About your account renewal — all looks great.",
-  },
-  {
-    date: "Wednesday, Mar 11 · 12:41 PM",
-    message: "^5202 Everything looks good! Your subscription is active until April.",
-  },
-  {
-    date: "Friday, Mar 13 · 9:38 AM",
-    message: "^5204 We have a new renewal offer. Visit our site for details.",
-  },
-  {
-    date: "Friday, Mar 13 · 8:20 AM",
-    message: "Message is missing. Expected ^5203 above but received ^5204",
-    warning: true,
-  },
-];
-
-function SmsMessageSteps() {
-  return (
-    <div
-      className="flex w-full max-w-[230px] flex-col gap-2"
-      aria-label="Sequential SMS messages showing a missing message warning"
-    >
-      {SMS_STEPS.map(({ date, message, warning }) => (
-        <div
-          key={date}
-          className={`flex flex-col gap-0.5 rounded-[10px] px-2.5 py-2 text-[11px] font-medium leading-[1.3] shadow-[0_2px_6px_rgba(0,0,0,0.1)] ${
-            warning ? "bg-[#e11616] text-white" : "bg-white text-black"
-          }`}
-        >
-          <p
-            className={`text-[9px] font-medium leading-none ${
-              warning ? "text-white/80" : "text-[#454545]"
-            }`}
-          >
-            {date}
-          </p>
-          <p>{message}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function RetroTvIcon({ className }) {
   return (
@@ -209,6 +161,132 @@ export default function Home() {
         ))}
       </div>
 
+      </div>
+    </section>
+
+    {/* ===== Section 3 — What is PhishFlagger? (part of Hero ^0001 pane) ===== */}
+    <section className="relative w-full px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
+        {/* Left — heading + subheading */}
+        <div>
+          <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            / Human
+          </h2>
+          <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+            <BrandInline trail="Flagger" /> adds a unique, sequential
+            identifier to the subject line called the{" "}
+            <BrandInline trail="Counter" /> on every outgoing communication.
+            Recipients can quickly verify if the sequence matches the
+            previous email they received from the same sender. If the
+            number is missing or out of sequence, it provides an immediate
+            warning that the message may not be authentic, giving users a
+            simple way to spot phishing attempts.
+          </p>
+        </div>
+
+        {/* Middle — bullets */}
+        <div>
+          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl border-2 border-black bg-white p-5 text-[13px] leading-[1.45] text-ink sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Human-compatible solution that validates legitimate
+                communications and highlights fraud attempts.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Bring back common sense by adding a unique sequential
+                number, the{" "}
+                <em className="italic font-semibold">
+                  <span className="text-ink">Phish</span>
+                  <span className="text-brand">Counter</span>
+                </em>
+                , visible to the user.
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right — info box (blank frame) */}
+        <div className="flex flex-col items-center">
+          <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
+            PLACEHOLDER-HUMAN-HEADER
+          </p>
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl border-2 border-black bg-white" />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 4 — Domain protection (part of Hero ^0001 pane) ===== */}
+    <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-3">
+        {/* Left — heading + subheading */}
+        <div>
+          <h2 className="text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            {" "}/ Digital
+          </h2>
+          <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            <BrandInline trail="Flagger" /> strengthens email authentication
+            by verifying sender identity at the domain level. Working
+            alongside existing email security standards and authentication
+            technologies, our domain validation screens messages that
+            originate from authorized senders, adding an extra layer of
+            protection against impersonation and phishing and other attacks.
+          </p>
+          <div className="mt-4 flex items-center gap-6">
+            <Link
+              to="/digital-ino"
+              className="inline-block text-[12px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[13px]"
+            >
+              More info Here.
+            </Link>
+            <Link
+              to="/white-paper"
+              className="inline-block text-[12px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[13px]"
+            >
+              White Paper
+            </Link>
+          </div>
+        </div>
+
+        {/* Middle — email authentication diagram */}
+        <div className="flex flex-col items-center">
+          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1">
+            <img
+              src={domainProtectionImg}
+              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+              className="h-full w-full scale-[1.4] object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Right — PhishFlagger Digital Verification box */}
+        <div className="hidden flex-col items-center lg:ml-[6px] lg:flex">
+          <span className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            Digital Verification
+          </span>
+          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg border-2 border-black bg-white p-4">
+            <img
+              src="/assets/images/homepage%200003%20digital%20verification.png"
+              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+              className="min-h-0 flex-1 w-full object-contain"
+            />
+          </div>
+        </div>
       </div>
     </section>
     </div>
@@ -461,21 +539,18 @@ export default function Home() {
             <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               SMS
             </span>
-            <div className="flex flex-1 items-start gap-10">
-              <div className="flex h-full flex-col items-start justify-between">
-                <img
-                  src={textPhoneImg}
-                  alt="Phone displaying PhishFlagger text messages"
-                  className="h-auto w-[171px] shrink-0 object-contain"
-                />
-                <Link
-                  to="/join/telecom"
-                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
-                  Telecom
-                </Link>
-              </div>
-              <SmsMessageSteps />
+            <div className="flex flex-1 flex-col items-center">
+              <img
+                src="/assets/images/sms-phone-and-text.png"
+                alt="Phone displaying PhishFlagger text messages"
+                className="h-auto w-full max-w-[480px] object-contain"
+              />
+              <Link
+                to="/join/telecom"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Telecom
+              </Link>
             </div>
           </div>
 
@@ -490,27 +565,20 @@ export default function Home() {
             <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               Message
             </span>
-            <div className="flex flex-1 items-start gap-10">
-              <div className="flex h-full flex-col items-center justify-between">
-                <img
-                  src={messagesPhoneImg}
-                  alt="Phone displaying PhishFlagger messages"
-                  className="h-auto w-[143px] shrink-0 object-contain"
-                />
-                <a
-                  href="https://phishflagger.netlify.app/join/messaging"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
-                >
-                  Messaging
-                </a>
-              </div>
+            <div className="flex flex-1 flex-col items-center">
               <img
-                src={messagingIconsImg}
-                alt="Popular messaging companies"
-                className="h-auto w-full max-w-[380px] object-contain"
+                src="/assets/images/messaging-icons-and-phone.png"
+                alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
+                className="h-auto w-full max-w-[480px] object-contain"
               />
+              <a
+                href="https://phishflagger.netlify.app/join/messaging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+              >
+                Messaging
+              </a>
             </div>
           </div>
         </div>
@@ -598,7 +666,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
-                Sequential page numbering brings order to early printed books.
+                Sequential page numbering brings order
               </p>
             </div>
 
@@ -614,7 +682,7 @@ export default function Home() {
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
-                Mechanical numbering stamps stops paper fraud.
+                Mechanical numbering stops paper fraud.
               </p>
             </div>
 
