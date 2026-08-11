@@ -539,11 +539,11 @@ export default function Home() {
             <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               SMS
             </span>
-            <div className="flex flex-1 flex-col items-center">
+            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
               <img
                 src="/assets/images/sms-phone-and-text.png"
                 alt="Phone displaying PhishFlagger text messages"
-                className="h-auto w-full max-w-[480px] object-contain"
+                className="h-[260px] w-auto max-w-full object-contain sm:h-[300px]"
               />
               <Link
                 to="/join/telecom"
@@ -565,11 +565,11 @@ export default function Home() {
             <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
               Message
             </span>
-            <div className="flex flex-1 flex-col items-center">
+            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
               <img
                 src="/assets/images/messaging-icons-and-phone.png"
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                className="h-auto w-full max-w-[480px] object-contain"
+                className="h-[260px] w-auto max-w-full object-contain sm:h-[300px]"
               />
               <a
                 href="https://phishflagger.netlify.app/join/messaging"
