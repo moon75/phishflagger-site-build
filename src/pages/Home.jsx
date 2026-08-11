@@ -305,7 +305,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex w-full max-w-[380px] justify-center rounded-2xl border-2 border-black bg-white p-5 lg:ml-auto">
+        <div className="flex w-full max-w-[380px] justify-center lg:ml-auto">
           <img
             src="/assets/images/0005%20image.png"
             alt="Why PhishFlagger Mail"
@@ -438,7 +438,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[324px] rounded-lg border-2 border-black bg-white object-contain"
+            className="h-auto w-full max-w-[324px] object-contain"
           />
         </div>
         <div>
