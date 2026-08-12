@@ -101,7 +101,7 @@ export default function Join() {
             <div className="flex w-auto flex-col items-center">
               <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Business
+                  PRO
                 </span>
                 <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
                   Plug- or Appliance
@@ -115,10 +115,10 @@ export default function Join() {
                 />
               </div>
               <Link
-                to="/join/email-domain"
+                to="/join/pro"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
               >
-                Join Business
+                Join
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">

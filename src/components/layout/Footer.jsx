@@ -146,7 +146,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <ul className="space-y-2.5 list-none p-0">
                   {[
                     { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
-                    { label: "Email - Domain", href: "/join/email-domain" },
+                    { label: "Email - PRO", href: "/join/pro" },
                     { label: "Email - Marketing", href: "/join/email-marketing" },
                     { label: "Telecom", href: "/join/telecom" },
                     { label: "Messaging", href: "/join/messaging" },

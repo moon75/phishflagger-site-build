@@ -133,10 +133,10 @@ export default function Home() {
               Email - Free
             </Link>
             <Link
-              to="/join/email-domain"
+              to="/join/pro"
               className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
             >
-              Email - Domain
+              Email - PRO
             </Link>
           </div>
           <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
@@ -189,7 +189,7 @@ export default function Home() {
 
         {/* Middle — bullets */}
         <div>
-          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl bg-[#dfe3ea] p-5 text-[13px] leading-[1.45] text-ink sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
+          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl bg-[#dfe3ea] p-5 text-[13px] leading-[1.45] text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -217,7 +217,7 @@ export default function Home() {
           <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
             PLACEHOLDER-HUMAN-HEADER
           </p>
-          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea]" />
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea] shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]" />
         </div>
       </div>
     </section>
@@ -260,7 +260,7 @@ export default function Home() {
 
         {/* Middle — email authentication diagram */}
         <div className="flex flex-col items-center">
-          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl bg-[#dfe3ea] p-1">
+          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl bg-[#dfe3ea] p-1 shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/3rd_section_left_image-removebg-for-hero.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
@@ -278,7 +278,7 @@ export default function Home() {
             </em>{" "}
             Digital Verification
           </span>
-          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg bg-[#dfe3ea] p-4">
+          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg bg-[#dfe3ea] p-4 shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/homepage%200003%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
@@ -373,17 +373,17 @@ export default function Home() {
               </div>
               <div className="flex w-[170px] flex-col items-center gap-3">
                 <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Enable multiple
+                  Enable or multiple
                   <br />
                   Email Addresses
                   <br />
                   (works with all domains)
                 </span>
                 <Link
-                  to="/join/email-domain"
+                  to="/join/pro"
                   className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
-                  Join Domain
+                  Join
                 </Link>
               </div>
             </div>
@@ -421,10 +421,10 @@ export default function Home() {
                   Join your Domain
                 </span>
                 <Link
-                  to="/join/email-domain"
+                  to="/join/pro"
                   className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
                 >
-                  Join Domain
+                  Join
                 </Link>
               </div>
             </div>
@@ -707,7 +707,7 @@ export default function Home() {
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
-                delivery and stops fraud.
+                delivery and help stops fraud.
               </p>
             </div>
           </div>
@@ -765,8 +765,8 @@ function PhonePlaceholder({ src, alt, large = false }) {
       alt={alt}
       className={
         large
-          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain sm:w-[300px] lg:w-[300px]"
-          : "block h-auto w-[140px] max-w-full object-contain sm:w-[180px] lg:w-[170px]"
+          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-110 sm:w-[300px] lg:w-[300px]"
+          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-110 sm:w-[180px] lg:w-[170px]"
       }
     />
   );

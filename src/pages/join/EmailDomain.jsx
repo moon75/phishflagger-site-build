@@ -22,7 +22,7 @@ export default function EmailDomain() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <h2 className="mb-6 text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
-              Domain
+              PRO
             </h2>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-disc">
@@ -224,7 +224,7 @@ export default function EmailDomain() {
             <ul className="mt-4 list-disc space-y-2 pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
               <li>Terms of Service</li>
               <li>Access Key</li>
-              <li>Appliance Install</li>
+              <li>Appliance or Plug-In Install</li>
               <li>Install Instructions</li>
             </ul>
           </div>
@@ -239,7 +239,7 @@ export default function EmailDomain() {
               to="/join-corporate"
               className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
             >
-              Join Domain
+              Join
             </Link>
           </div>
         </div>

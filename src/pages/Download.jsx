@@ -47,7 +47,7 @@ export default function Download() {
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-full w-full scale-125 object-cover"
+                  className="h-full w-full scale-[1.2] object-cover"
                 />
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">

@@ -50,39 +50,40 @@ export default function EmailFreePlugIn() {
       <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
+          <p className="mb-2 text-[13.5px] text-ink-muted">
+            Don&rsquo;t see your free email domain?
+          </p>
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 1. Get your Free Key.&nbsp; Works with ....
           </h2>
           <div className="mx-auto mt-9 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             {PROVIDERS.map(({ key, labels }) => (
-              <div
-                key={key}
-                className="flex min-h-[142px] flex-col items-center justify-center rounded-2xl border-2 border-black bg-white px-4 py-6 shadow-[0_5px_20px_rgba(15,23,42,0.05)]"
-              >
-                <ProviderIcon provider={key} />
-                <div className="mt-4 flex flex-col items-center gap-1">
-                  {labels.map((label) => (
-                    <span
-                      key={label}
-                      className="text-[15px] font-semibold text-ink"
-                    >
-                      {label}
-                    </span>
-                  ))}
+              <div key={key} className="flex flex-col items-center">
+                <div className="flex h-[186px] w-full flex-col items-center justify-center rounded-2xl border-2 border-black bg-white px-4 py-6 shadow-[0_5px_20px_rgba(15,23,42,0.05)]">
+                  <ProviderIcon provider={key} />
+                  <div className="mt-4 flex flex-col items-center gap-1">
+                    {labels.map((label) => (
+                      <span
+                        key={label}
+                        className="text-[15px] font-semibold text-ink"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+                {key === "Gmail.com" && (
+                  <Link
+                    to="/joinfree/request-domain"
+                    className="mt-3 text-[12px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+                  >
+                    Request My Domain
+                  </Link>
+                )}
               </div>
             ))}
           </div>
-          <p className="mt-6 text-[13.5px] text-ink-muted">
-            Don&rsquo;t see your free email domain?{" "}
-            <Link
-              to="/joinfree/request-domain"
-              className="font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-            >
-              Request My Domain
-            </Link>
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-wrap items-start justify-center gap-4">
             <Link
               to="/joinfree"
               className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
@@ -93,8 +94,17 @@ export default function EmailFreePlugIn() {
               to="/join-free"
               className="inline-flex items-center justify-center rounded-md bg-gray-200 px-5 py-3 text-[13px] font-bold text-ink transition-colors hover:bg-gray-300"
             >
-              Join
+              Join Free
             </Link>
+            <div className="flex flex-col items-center gap-2">
+              <Link
+                to="/join-corporate"
+                className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#c9002b]"
+              >
+                Join Pro
+              </Link>
+              <span className="text-[12px] text-ink-muted">$10.00 / Year</span>
+            </div>
           </div>
         </div>
       </section>

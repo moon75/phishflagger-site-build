@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { brandify } from "../components/Brand.jsx";
@@ -76,6 +76,8 @@ const SLUG_CATEGORIES = Object.fromEntries(
 
 const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
 
+const VIDEOS_PER_PAGE = 6;
+
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
   if (category === "Kickstarter") {
@@ -149,7 +151,22 @@ export default function Video() {
         ? 3
         : null,
   );
-  const displayedVideos = categoryVideos(activeCategory);
+  const categoryAllVideos = categoryVideos(activeCategory);
+  const realVideos = categoryAllVideos.filter((v) => v.type !== "placeholder");
+  const hasMultiplePages = realVideos.length > VIDEOS_PER_PAGE;
+  const totalPages = hasMultiplePages
+    ? Math.ceil(realVideos.length / VIDEOS_PER_PAGE)
+    : 1;
+  const [page, setPage] = useState(1);
+
+  // Reset to page 1 whenever the category changes.
+  useEffect(() => {
+    setPage(1);
+  }, [activeCategory]);
+
+  const displayedVideos = hasMultiplePages
+    ? realVideos.slice((page - 1) * VIDEOS_PER_PAGE, page * VIDEOS_PER_PAGE)
+    : categoryAllVideos;
 
   return (
     <>
@@ -253,6 +270,29 @@ export default function Video() {
               );
             })}
           </div>
+
+          {hasMultiplePages && (
+            <div className="mt-8 flex justify-center gap-2 sm:mt-10">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => {
+                    setPlaying(null);
+                    setPage(n);
+                  }}
+                  aria-current={n === page ? "page" : undefined}
+                  className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
+                    n === page
+                      ? "bg-[#5a6066] text-white"
+                      : "text-ink-muted hover:bg-gray-100 hover:text-ink"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>
