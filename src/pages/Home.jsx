@@ -299,8 +299,12 @@ export default function Home() {
             Why <BrandInline /> Email?
           </h2>
           <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Placeholder text of why PhishFlagger Mail - typical customer
-            example.
+            Because you should know who you're communicating with.{" "}
+            <BrandInline /> gives every email an additional layer of identity
+            verification, helping people recognize trusted communications and
+            identify messages that may be fraudulent. Simple to understand,
+            easy to verify, and designed to put the power of email
+            authentication in your hands.
           </p>
         </div>
 
@@ -445,7 +449,12 @@ export default function Home() {
             Email Marketing
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Place Holder text for Marketing home page
+            Build greater trust with every campaign. <BrandInline /> helps
+            marketers authenticate their email communications, giving
+            recipients greater confidence that messages are legitimate and
+            protecting your brand from phishing and impersonation. When
+            customers know an email is genuine, they are more likely to
+            open, read, and engage with it.
           </p>
           <a
             href="https://phishflagger.netlify.app/join/email-marketing"
