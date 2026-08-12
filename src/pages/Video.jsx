@@ -120,11 +120,12 @@ function categoryVideos(category) {
         title: "Fake Message Reveal Offer",
         description: "",
       },
-      ...Array.from({ length: 1 }, () => ({
-        type: "placeholder",
-        title: "Coming Soon",
+      {
+        type: "local",
+        src: "/assets/Videos/Taking_over_the_world_202608102121.mp4",
+        title: "Taking Over the World",
         description: "",
-      })),
+      },
     ];
   }
 

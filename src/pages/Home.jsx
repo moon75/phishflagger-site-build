@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
-import domainProtectionImg from "../assets/images/3rd section left image.avif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
@@ -129,13 +128,13 @@ export default function Home() {
           <div className="mb-3 flex items-center justify-center gap-8 sm:mb-4">
             <Link
               to="/join/email-free-plug-in"
-              className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-base"
+              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
             >
               Email - Free
             </Link>
             <Link
               to="/join/email-domain"
-              className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-base"
+              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
             >
               Email - Domain
             </Link>
@@ -152,7 +151,7 @@ export default function Home() {
           <div key={i + 2} className="flex flex-col items-center">
             <Link
               to={s.label === "Messages" ? "/join/messaging" : "/join/telecom"}
-              className="mb-3 text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:mb-4 sm:text-base"
+              className="mb-3 text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-base"
             >
               {s.label}
             </Link>
@@ -190,7 +189,7 @@ export default function Home() {
 
         {/* Middle — bullets */}
         <div>
-          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl border-2 border-black bg-white p-5 text-[13px] leading-[1.45] text-ink sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
+          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl bg-[#dfe3ea] p-5 text-[13px] leading-[1.45] text-ink sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
             <li className="flex gap-4">
               <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
               <span>
@@ -218,7 +217,7 @@ export default function Home() {
           <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
             PLACEHOLDER-HUMAN-HEADER
           </p>
-          <div className="h-[150px] w-full max-w-[358px] rounded-2xl border-2 border-black bg-white" />
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea]" />
         </div>
       </div>
     </section>
@@ -261,9 +260,9 @@ export default function Home() {
 
         {/* Middle — email authentication diagram */}
         <div className="flex flex-col items-center">
-          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1">
+          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl bg-[#dfe3ea] p-1">
             <img
-              src={domainProtectionImg}
+              src="/assets/images/3rd_section_left_image-removebg-for-hero.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
               className="h-full w-full scale-[1.4] object-contain"
             />
@@ -279,7 +278,7 @@ export default function Home() {
             </em>{" "}
             Digital Verification
           </span>
-          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg border-2 border-black bg-white p-4">
+          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg bg-[#dfe3ea] p-4">
             <img
               src="/assets/images/homepage%200003%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
@@ -339,12 +338,12 @@ export default function Home() {
               />
               <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
                 <div />
-                <div className="flex justify-center pl-[90px] sm:pl-[114px]">
+                <div className="flex justify-center pl-[60px] sm:pl-[84px]">
                   <Link
                     to="/download"
                     className="text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
                   >
-                    More Clients
+                    More Clients Coming Soon
                   </Link>
                 </div>
               </div>

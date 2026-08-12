@@ -109,14 +109,14 @@ export default function EmailDomain() {
                       Business Email Solution
                     </p>
                     <p>
-                      Hosted on: AWS, VMware, Azure,
-                      <br />
-                      or any server with Open Port 25.
-                    </p>
-                    <p>
                       Appliance forms:
                       <br />
                       Linux Kubernetes Docker
+                    </p>
+                    <p>
+                      Hosted on: AWS, VMware, Azure,
+                      <br />
+                      or any server with Open Port 25.
                     </p>
                   </div>
 

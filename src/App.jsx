@@ -115,8 +115,9 @@ export default function App() {
         <Route path="joinfree/terms" element={<JoinFreeTerms />} />
         <Route path="joinfree/request-domain" element={<RequestDomain />} />
 
+        <Route path="email" element={<Join />} />
+
         <Route path="join">
-          <Route index element={<Join />} />
           <Route path="email-domain" element={<EmailDomain />} />
           <Route path="email-free-plug-in" element={<EmailFreePlugIn />} />
           <Route path="email-marketing" element={<EmailMarketing />} />

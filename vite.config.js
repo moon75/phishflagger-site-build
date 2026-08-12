@@ -7,7 +7,7 @@ export default defineConfig({
   assetsInclude: ["**/*.docx"],
   server: {
     port: 5173,
-    open: true,
+    open: false,
     watch: {
       // Large video assets can get locked by other processes (OneDrive,
       // media players, AV scans) on Windows, which crashes Vite's watcher.
