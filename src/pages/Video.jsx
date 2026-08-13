@@ -258,19 +258,6 @@ export default function Video() {
             ))}
           </div>
 
-          {activeCategory === "Oracle" && (
-            <div className="mt-4 text-center">
-              <a
-                href="https://docs.google.com/document/d/14U4q9fERZwA2FNdZGCzTwn4layIVYNVLbA8wfIeao6o/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
-              >
-                Oracle Script
-              </a>
-            </div>
-          )}
-
           {/* Video grid */}
           <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
             {displayedVideos.map((v, i) => {

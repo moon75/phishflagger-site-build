@@ -88,23 +88,27 @@ export default function EmailFreePlugIn() {
               </div>
             ))}
           </div>
-          <div className="mt-6 flex flex-wrap items-start justify-center gap-4">
-            <Link
-              to="/joinfree"
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
-            >
-              Free
-            </Link>
-            <Link
-              to="/join-free"
-              className="ml-6 inline-flex items-center justify-center rounded-md bg-[#585858] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
-            >
-              Join Free
-            </Link>
-            <div className="ml-32 flex flex-col items-center gap-2">
+          <div className="mx-auto mt-6 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
+            <div />
+            <div className="flex items-start justify-center gap-3">
+              <Link
+                to="/joinfree"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+              >
+                Join Free
+              </Link>
+              <Link
+                to="/join-free"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#e3e3e3] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#d4d4d4] duration-200 hover:scale-[1.2]"
+              >
+                Join Free
+              </Link>
+            </div>
+            <div />
+            <div className="-ml-8 flex flex-col items-center gap-2">
               <Link
                 to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#c9002b] duration-200 hover:scale-[1.2]"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#FFE066] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#FFD633] duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>

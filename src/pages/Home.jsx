@@ -269,22 +269,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right — PhishFlagger Digital Verification box */}
+        {/* Right — PhishFlagger Digital Verification image */}
         <div className="hidden flex-col items-center lg:ml-[6px] lg:flex">
-          <span className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>{" "}
-            Digital Verification
-          </span>
-          <div className="flex h-[150px] w-[358px] shrink-0 flex-col items-center justify-center gap-2 rounded-lg bg-[#dfe3ea] p-4 shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]">
-            <img
-              src="/assets/images/homepage%200003%20digital%20verification.png"
-              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-              className="min-h-0 flex-1 w-full object-contain"
-            />
-          </div>
+          <img
+            src="/assets/images/phishflagger%20digital%20verification.png"
+            alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+            className="w-[358px] max-w-full rounded-lg object-contain shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
+          />
         </div>
       </div>
     </section>
