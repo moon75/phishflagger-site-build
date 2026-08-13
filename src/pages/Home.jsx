@@ -697,9 +697,9 @@ export default function Home() {
               </span>
               <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
                 <img
-                  src={infoBoxImg}
+                  src="/assets/images/footer%20history%20pic%203rd.png"
                   alt="PhishFlagger inbox demonstration"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full scale-125 object-contain"
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
