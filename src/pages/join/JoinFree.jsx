@@ -72,7 +72,7 @@ export default function JoinFree() {
             <button
               type="button"
               onClick={handleTestFill}
-              className="absolute right-0 top-0 cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink-muted transition-colors hover:bg-gray-50"
+              className="absolute right-0 top-0 cursor-pointer rounded-md border border-gray-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink-muted transition hover:bg-gray-50 duration-200 hover:scale-[1.2]"
             >
               Test Fill
             </button>
@@ -118,7 +118,7 @@ export default function JoinFree() {
                   type="button"
                   onClick={handleVerifyEmail}
                   disabled={emailVerified}
-                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                 >
                   {emailVerified ? "Email Verified" : "Verify Email"}
                 </button>
@@ -161,7 +161,7 @@ export default function JoinFree() {
                   type="button"
                   onClick={handleVerifyCode}
                   disabled={!emailVerified || codeVerified}
-                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                 >
                   {codeVerified ? "Code Verified" : "Verify Code"}
                 </button>
@@ -186,9 +186,9 @@ export default function JoinFree() {
                 type="button"
                 onClick={handleJoin}
                 disabled={!codeVerified}
-                className={`h-[50px] w-full cursor-pointer rounded-md px-6 text-[15px] font-semibold shadow-sm transition-colors disabled:cursor-default ${
+                className={`h-[50px] w-full cursor-pointer rounded-md px-6 text-[15px] font-semibold shadow-sm transition duration-200 disabled:cursor-default ${
                   codeVerified
-                    ? "bg-[#585858] text-white hover:bg-[#3f3f3f]"
+                    ? "bg-[#585858] text-white hover:bg-[#3f3f3f] hover:scale-[1.2]"
                     : "bg-[#e4e6ea] text-[#c7cad0]"
                 }`}
               >

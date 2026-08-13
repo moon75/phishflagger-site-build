@@ -65,7 +65,7 @@ export default function JoinFreeTerms() {
                   <button
                     type="submit"
                     disabled={!agreed || submitting}
-                    className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60"
+                    className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                   >
                     {submitting ? "Creating..." : "Create My Free Key"}
                   </button>

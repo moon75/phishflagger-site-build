@@ -60,6 +60,7 @@ const VIDEO_CATEGORIES = [
   "Kickstarter",
   "In Progress",
   "Telecom Caller ID",
+  "Oracle",
 ];
 const CATEGORY_SLUGS = {
   Feature: "",
@@ -69,6 +70,7 @@ const CATEGORY_SLUGS = {
   Kickstarter: "kickstarter",
   "In Progress": "in-progress",
   "Telecom Caller ID": "telecom-caller-id",
+  Oracle: "oracle",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
@@ -130,6 +132,34 @@ function categoryVideos(category) {
       },
     ];
   }
+  if (category === "Oracle") {
+    return [
+      {
+        type: "local",
+        src: "/assets/Videos/Oracle/Man_and_dog_pet_health_202608130007.mp4",
+        title: "Man and Dog Pet Health",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/Videos/Oracle/Man_testing_dog_ketone_strips_202608130020.mp4",
+        title: "Man Testing Dog Ketone Strips",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/Videos/Oracle/Pet_owner_with_dog_in_202608130010.mp4",
+        title: "Pet Owner with Dog",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/Videos/Oracle/Pet_product_video_advertisement_202608130012.mp4",
+        title: "Pet Product Video Advertisement",
+        description: "",
+      },
+    ];
+  }
 
   return Array.from({ length: 6 }, () => ({
     type: "placeholder",
@@ -181,6 +211,9 @@ export default function Video() {
                 "See how PhishFlagger and human validation protects against phishing and fraud.",
               )}
             </p>
+            <h1 className="mt-4 text-[36px] font-extrabold uppercase tracking-tight text-brand sm:text-[48px]">
+              Development Page
+            </h1>
           </div>
 
           <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-3">

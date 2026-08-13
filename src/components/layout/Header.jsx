@@ -51,7 +51,11 @@ export default function Header() {
                     <li key={item.label}>
                       <NavLink
                         to={item.href}
-                        className="text-[15px] font-medium text-ink transition-colors hover:text-brand"
+                        className={({ isActive }) =>
+                          `text-[15px] font-medium transition-colors hover:text-brand ${
+                            isActive ? "text-brand" : "text-ink"
+                          }`
+                        }
                       >
                         {item.label}
                       </NavLink>

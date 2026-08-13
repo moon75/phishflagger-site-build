@@ -114,7 +114,7 @@ export default function Home() {
       <div className="mt-8 flex justify-center sm:mt-10">
         <Link
           to="/video"
-          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink sm:px-12 sm:text-lg"
+          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink transition-transform duration-200 hover:scale-[1.2] sm:px-12 sm:text-lg"
         >
           <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
           Watch Our Videos
@@ -308,7 +308,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex w-full max-w-[380px] justify-center lg:ml-auto">
+        <div className="flex w-full max-w-[380px] justify-center lg:ml-auto lg:-translate-x-10">
           <img
             src="/assets/images/0005%20image.png"
             alt="Why PhishFlagger Mail"
@@ -334,7 +334,7 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Email Client Plug-In
             </span>
-            <div className="relative flex h-[300px] w-full max-w-[300px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] sm:h-[300px] sm:max-w-[460px]">
+            <div className="relative flex aspect-[46/30] w-full max-w-[380px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
               <img
                 src={outlookThunderbirdImg}
                 alt="Microsoft Outlook and Mozilla Thunderbird"
@@ -342,10 +342,10 @@ export default function Home() {
               />
               <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
                 <div />
-                <div className="flex justify-center pl-[60px] sm:pl-[84px]">
+                <div className="flex justify-center pl-0 sm:pl-[4px]">
                   <Link
                     to="/download"
-                    className="text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
+                    className="whitespace-nowrap text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
                   >
                     More Clients Coming Soon
                   </Link>
@@ -359,29 +359,26 @@ export default function Home() {
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
-                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
                   Gmail, Outlook, Yahoo, Etc.
                 </span>
                 <Link
                   to="/join/email-free-plug-in"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </Link>
               </div>
-              <div className="flex w-[170px] flex-col items-center gap-3">
-                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Enable or multiple
-                  <br />
-                  Email Addresses
-                  <br />
-                  (works with all domains)
+              <div className="flex w-[200px] flex-col items-center gap-3">
+                <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                  Enable one or multiple Email Addresses (works with all
+                  domains)
                 </span>
                 <Link
                   to="/join/pro"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join
                 </Link>
@@ -404,14 +401,14 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Email Domain Appliance
             </span>
-            <div className="h-[300px] w-full max-w-[300px] overflow-hidden rounded-2xl border-2 border-black sm:h-[300px] sm:max-w-[460px]">
+            <div className="aspect-[46/30] w-full max-w-[380px] overflow-hidden rounded-2xl border-2 border-black">
               <img
                 src={cloudServerImg}
                 alt="Cloud and server appliance"
                 className="h-full w-full object-cover"
               />
             </div>
-            <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
+            <p className="mt-4 flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
@@ -422,7 +419,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join
                 </Link>
@@ -460,7 +457,7 @@ export default function Home() {
             href="https://phishflagger.netlify.app/join/email-marketing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
           >
             Marketing
           </a>
@@ -510,7 +507,7 @@ export default function Home() {
           </p>
           <Link
             to="/join/telecom"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
           >
             Telecom
           </Link>
@@ -551,11 +548,11 @@ export default function Home() {
               <img
                 src="/assets/images/sms-phone-and-text.png"
                 alt="Phone displaying PhishFlagger text messages"
-                className="h-[260px] w-auto max-w-full object-contain sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
               />
               <Link
                 to="/join/telecom"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Telecom
               </Link>
@@ -577,13 +574,13 @@ export default function Home() {
               <img
                 src="/assets/images/messaging-icons-and-phone.png"
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                className="h-[260px] w-auto max-w-full object-contain sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
               />
               <a
                 href="https://phishflagger.netlify.app/join/messaging"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Messaging
               </a>

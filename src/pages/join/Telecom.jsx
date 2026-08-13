@@ -406,10 +406,10 @@ export default function Telecom() {
             <br />
             in the following Jurisdictions:
           </p>
-          <p className="mx-auto mt-4 max-w-[700px] text-[16px] font-semibold leading-relaxed text-ink sm:text-[18px]">
-            We are offering exceptional adopters.
-          </p>
-          <div className="mx-auto mt-8 max-w-[900px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+          <div
+            className="mx-auto mt-8 max-w-[900px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
+            style={{ zoom: 0.6 }}
+          >
             <p className="text-[15px] leading-[1.85] text-ink sm:text-[18px]">
               Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
               Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
@@ -534,7 +534,7 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex flex-col items-center transition-opacity hover:opacity-80"
+      className="group flex flex-col items-center transition-transform duration-200 ease-out hover:scale-[1.2]"
     >
       <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
@@ -595,4 +595,3 @@ function SplitSection({ image, imageAlt, text, bullets, counter }) {
     </section>
   );
 }
-

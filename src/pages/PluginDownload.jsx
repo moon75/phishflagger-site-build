@@ -41,7 +41,7 @@ export default function PluginDownload() {
             type="button"
             disabled={!accepted}
             data-download={selectedDownload}
-            className="mt-8 rounded-lg bg-[#585858] px-7 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] disabled:cursor-not-allowed disabled:opacity-45"
+            className="mt-8 rounded-lg bg-[#585858] px-7 py-3 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] disabled:cursor-not-allowed disabled:opacity-45 duration-200 hover:scale-[1.2]"
           >
             Continue with Download
           </button>

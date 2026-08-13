@@ -53,7 +53,7 @@ export default function TelecomSupporters() {
         <div className="mx-auto flex max-w-[980px] justify-center">
           <Link
             to="/help/telecom-endorse-us"
-            className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+            className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
           >
             Endorse Us
           </Link>

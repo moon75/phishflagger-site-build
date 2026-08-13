@@ -140,7 +140,7 @@ function PatentItem({ title, number, issued, url }) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-3 inline-block cursor-pointer rounded-md bg-[#3d3d3d] px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition-colors hover:bg-[#2b2b2b]"
+        className="mt-3 inline-block cursor-pointer rounded-md bg-[#3d3d3d] px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition hover:bg-[#2b2b2b] duration-200 hover:scale-[1.2]"
       >
         Go to Patent
       </a>

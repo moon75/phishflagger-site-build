@@ -80,26 +80,31 @@ export default function EmailFreePlugIn() {
                     Request My Domain
                   </Link>
                 )}
+                {key === "AOL.com" && (
+                  <span className="mt-3 text-[12px] font-semibold text-ink-muted">
+                    Don&rsquo;t see your Domain?
+                  </span>
+                )}
               </div>
             ))}
           </div>
           <div className="mt-6 flex flex-wrap items-start justify-center gap-4">
             <Link
               to="/joinfree"
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
             >
               Join
             </Link>
             <Link
               to="/join-free"
-              className="inline-flex items-center justify-center rounded-md bg-gray-200 px-5 py-3 text-[13px] font-bold text-ink transition-colors hover:bg-gray-300"
+              className="inline-flex items-center justify-center rounded-md bg-gray-200 px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-gray-300 duration-200 hover:scale-[1.2]"
             >
               Join Free
             </Link>
-            <div className="flex flex-col items-center gap-2">
+            <div className="ml-8 flex flex-col items-center gap-2">
               <Link
                 to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#c9002b]"
+                className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#c9002b] duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>
@@ -142,7 +147,7 @@ export default function EmailFreePlugIn() {
                 </h2>
                 <Link
                   to="/download"
-                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
                 >
                   Go to Download Page
                 </Link>
@@ -242,7 +247,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
             <Link
               key={action.label}
               to={action.to}
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
             >
               {action.label}
             </Link>

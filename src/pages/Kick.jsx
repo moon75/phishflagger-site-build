@@ -3,7 +3,6 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
-import nomDoc from "../assets/Pdf/2026.08.10 NoM.docx";
 
 const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 const logoMarkImg = "/assets/images/logo-mark.png";
@@ -100,15 +99,6 @@ export default function Kick() {
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           11. Campaign
-        </a>
-
-        <a
-          href={nomDoc}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-        >
-          12. NoM 2026.08.10
         </a>
 
         <img

@@ -89,7 +89,7 @@ export default function EndorseUs() {
               />
               <Link
                 to="/help/telecom-supporters"
-                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition-colors hover:bg-[#2f2f2f]"
+                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
                 Supporters
               </Link>
@@ -257,7 +257,7 @@ export default function EndorseUs() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60"
+                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60 duration-200 hover:scale-[1.2]"
               >
                 {status === "submitting" ? "Submitting..." : "Submit"}
               </button>

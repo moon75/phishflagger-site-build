@@ -84,7 +84,7 @@ export default function Join() {
                   Plug-In Free
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white">
+              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110">
                 <img
                   src="/assets/images/individual.png"
                   alt="Individual protection illustration"
@@ -93,7 +93,7 @@ export default function Join() {
               </div>
               <Link
                 to="/join/email-free-plug-in"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Join Free
               </Link>
@@ -104,10 +104,10 @@ export default function Join() {
                   PRO
                 </span>
                 <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  Plug- or Appliance
+                  Plug-in Or Appliance
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1">
+              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1 transition-transform duration-200 hover:scale-110">
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
                   alt="Domain protection illustration"
@@ -116,7 +116,7 @@ export default function Join() {
               </div>
               <Link
                 to="/join/pro"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Join
               </Link>
@@ -127,7 +127,7 @@ export default function Join() {
                   Marketing
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center rounded-xl border-2 border-black bg-white">
+              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110">
                 <img
                   src={whoCanUseImg}
                   alt="Join PhishFlagger illustration"
@@ -136,7 +136,7 @@ export default function Join() {
               </div>
               <Link
                 to="/join/email-marketing"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Marketing
               </Link>
