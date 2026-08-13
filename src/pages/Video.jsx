@@ -216,12 +216,12 @@ export default function Video() {
             </h1>
           </div>
 
-          <div className="mt-8 flex items-center justify-between">
+          <div className="mx-auto mt-8 flex max-w-[760px] items-center justify-between">
             <a
               href="https://docs.google.com/document/d/1r39Taeyz0SfKI6bLWvA7xrASlVv1Lm0ESAdZGx7XxQE/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
             >
               Scripts
             </a>
@@ -229,7 +229,7 @@ export default function Video() {
               href="https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
             >
               Scripts
             </a>
@@ -264,7 +264,7 @@ export default function Video() {
                 href="https://docs.google.com/document/d/14U4q9fERZwA2FNdZGCzTwn4layIVYNVLbA8wfIeao6o/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+                className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
               >
                 Oracle Script
               </a>
