@@ -100,7 +100,7 @@ export default function Join() {
             </div>
             <div className="flex w-auto flex-col items-center">
               <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                <span className="whitespace-nowrap rounded-[4px] bg-[#FFE600] px-2 py-0.5 text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   PRO
                 </span>
                 <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">

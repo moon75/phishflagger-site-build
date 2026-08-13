@@ -16,25 +16,25 @@ const BASE_VIDEOS = [
   },
   {
     type: "local",
-    src: "/assets/Videos/v1.mp4",
+    src: "/assets/video1/v1.mp4",
     title: "Thank You Video",
     description: "A closer look at how sequential numbering flags impersonation in real time.",
   },
   {
     type: "local",
-    src: "/assets/Videos/v2.mp4",
+    src: "/assets/video1/v2.mp4",
     title: "Setup & Protection",
     description: "See how quickly your domain or inbox can be protected end to end.",
   },
   {
     type: "local",
-    src: "/assets/Videos/PhishFlagger_Kickstarter_video_1.mp4",
+    src: "/assets/video1/PhishFlagger_Kickstarter_video_1.mp4",
     title: "PhishFlagger Kickstarter",
     description: "An introduction to the PhishFlagger Kickstarter campaign.",
   },
   {
     type: "local",
-    src: "/assets/Videos/PhishFlagger_Kickstarter_video_2.mp4",
+    src: "/assets/video1/PhishFlagger_Kickstarter_video_2.mp4",
     title: "PhishFlagger Kickstarter",
     description: "More on the PhishFlagger Kickstarter campaign.",
     poster: kickstarterVideo2Poster,
@@ -58,7 +58,7 @@ const VIDEO_CATEGORIES = [
   "Shorts",
   "Manual",
   "Kickstarter",
-  "In Progress",
+  "Learning",
   "Telecom Caller ID",
   "Oracle",
 ];
@@ -68,7 +68,7 @@ const CATEGORY_SLUGS = {
   Shorts: "shorts",
   Manual: "manual",
   Kickstarter: "kickstarter",
-  "In Progress": "in-progress",
+  Learning: "learning",
   "Telecom Caller ID": "telecom-caller-id",
   Oracle: "oracle",
 };
@@ -92,41 +92,41 @@ function categoryVideos(category) {
       })),
     ];
   }
-  if (category === "In Progress") {
+  if (category === "Learning") {
     return [
       {
         type: "local",
-        src: "/assets/Videos/monkey video.mp4",
+        src: "/assets/video1/monkey video.mp4",
         title: "Coming Soon",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Get the message part1.mp4",
+        src: "/assets/video1/Get the message part1.mp4",
         title: "Get the Message - Part 1",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/The Message Part 2 Final.mp4",
+        src: "/assets/video1/The Message Part 2 Final.mp4",
         title: "Get the Message - Part 2",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/PhishFlagger_8.04.26_Part3.mp4",
+        src: "/assets/video1/PhishFlagger_8.04.26_Part3.mp4",
         title: "PhishFlagger 8.04.26 - Part 3",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Fake_message_reveal_offer_202608071511.mp4",
+        src: "/assets/video1/Fake_message_reveal_offer_202608071511.mp4",
         title: "Fake Message Reveal Offer",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Taking_over_the_world_202608102121.mp4",
+        src: "/assets/video1/Taking_over_the_world_202608102121.mp4",
         title: "Taking Over the World",
         description: "",
       },
@@ -136,25 +136,25 @@ function categoryVideos(category) {
     return [
       {
         type: "local",
-        src: "/assets/Videos/Oracle/Man_and_dog_pet_health_202608130007.mp4",
+        src: "/assets/video1/Oracle/Man_and_dog_pet_health_202608130007.mp4",
         title: "Man and Dog Pet Health",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Oracle/Man_testing_dog_ketone_strips_202608130020.mp4",
+        src: "/assets/video1/Oracle/Man_testing_dog_ketone_strips_202608130020.mp4",
         title: "Man Testing Dog Ketone Strips",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Oracle/Pet_owner_with_dog_in_202608130010.mp4",
+        src: "/assets/video1/Oracle/Pet_owner_with_dog_in_202608130010.mp4",
         title: "Pet Owner with Dog",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/Videos/Oracle/Pet_product_video_advertisement_202608130012.mp4",
+        src: "/assets/video1/Oracle/Pet_product_video_advertisement_202608130012.mp4",
         title: "Pet Product Video Advertisement",
         description: "",
       },
@@ -216,7 +216,26 @@ export default function Video() {
             </h1>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-3">
+          <div className="mt-8 flex items-center justify-between">
+            <a
+              href="https://docs.google.com/document/d/1r39Taeyz0SfKI6bLWvA7xrASlVv1Lm0ESAdZGx7XxQE/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+            >
+              Scripts
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+            >
+              Scripts
+            </a>
+          </div>
+
+          <div className="mt-2 flex flex-wrap justify-center gap-2 sm:mt-4 sm:gap-3">
             {VIDEO_CATEGORIES.map((category) => (
               <button
                 key={category}
@@ -238,6 +257,19 @@ export default function Video() {
               </button>
             ))}
           </div>
+
+          {activeCategory === "Oracle" && (
+            <div className="mt-4 text-center">
+              <a
+                href="https://docs.google.com/document/d/14U4q9fERZwA2FNdZGCzTwn4layIVYNVLbA8wfIeao6o/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[14px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+              >
+                Oracle Script
+              </a>
+            </div>
+          )}
 
           {/* Video grid */}
           <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">

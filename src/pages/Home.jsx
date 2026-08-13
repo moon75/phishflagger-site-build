@@ -658,7 +658,7 @@ export default function Home() {
               <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1470
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
                 <img
                   src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
                   alt="Numbered papers"
@@ -679,7 +679,7 @@ export default function Home() {
               <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1892
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
                 <img
                   src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
                   alt="Numbering stamp"
