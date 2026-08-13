@@ -258,15 +258,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Middle — email authentication diagram */}
-        <div className="flex flex-col items-center">
-          <div className="mx-auto flex h-[190px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-2xl bg-[#dfe3ea] p-1 shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]">
-            <img
-              src="/assets/images/3rd_section_left_image-removebg-for-hero.png"
-              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-              className="h-full w-full scale-[1.4] object-contain"
-            />
-          </div>
+        {/* Middle — email authentication diagram (fills the pane, matches right) */}
+        <div className="flex w-full flex-col items-center">
+          <img
+            src="/assets/images/email%20auth.png"
+            alt="Email authentication: DKIM, SPF, DMARC, and PhishFlagger pass/fail flow to verified inbox"
+            className="w-full max-w-none rounded-lg object-cover shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
+          />
         </div>
 
         {/* Right — PhishFlagger Digital Verification image (fills the pane) */}

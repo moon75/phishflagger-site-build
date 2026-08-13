@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
@@ -9,6 +9,11 @@ import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png"
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // "Home" and "Email" navigate on mouse-over, like the dropdown menus that
+  // already open on hover — no click required.
+  const HOVER_NAV_LABELS = new Set(["Home", "Email"]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -51,6 +56,11 @@ export default function Header() {
                     <li key={item.label}>
                       <NavLink
                         to={item.href}
+                        onMouseEnter={
+                          HOVER_NAV_LABELS.has(item.label)
+                            ? () => navigate(item.href)
+                            : undefined
+                        }
                         className={({ isActive }) =>
                           `text-[15px] font-medium transition-colors hover:text-brand ${
                             isActive ? "text-brand" : "text-ink"
