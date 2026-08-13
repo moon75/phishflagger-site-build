@@ -261,9 +261,9 @@ export default function Home() {
         {/* Middle — email authentication diagram (fills the pane, matches right) */}
         <div className="flex w-full flex-col items-center">
           <img
-            src="/assets/images/email%20auth.png"
-            alt="Email authentication: DKIM, SPF, DMARC, and PhishFlagger pass/fail flow to verified inbox"
-            className="w-full max-w-none rounded-lg object-cover shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
+            src="/assets/images/phishflagger%20email%20authentication.png"
+            alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+            className="w-full max-w-none object-contain"
           />
         </div>
 
