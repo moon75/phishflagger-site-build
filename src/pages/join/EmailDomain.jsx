@@ -108,16 +108,6 @@ export default function EmailDomain() {
                       <br />
                       Business Email Solution
                     </p>
-                    <p>
-                      Appliance forms:
-                      <br />
-                      Linux Kubernetes Docker
-                    </p>
-                    <p>
-                      Hosted on: AWS, VMware, Azure,
-                      <br />
-                      or any server with Open Port 25.
-                    </p>
                   </div>
 
                   <div className="space-y-4">
@@ -130,6 +120,20 @@ export default function EmailDomain() {
                       Microsoft
                       <br />
                       Exchange
+                    </p>
+                  </div>
+
+                  {/* Applies to both sides (Cloud + On-Site) — spans full width */}
+                  <div className="col-span-2 space-y-4 border-t border-gray-200 pt-4">
+                    <p>
+                      Appliance forms:
+                      <br />
+                      Linux Kubernetes Docker
+                    </p>
+                    <p>
+                      Hosted on: AWS, VMware, Azure,
+                      <br />
+                      or any server with Open Port 25.
                     </p>
                   </div>
                 </div>

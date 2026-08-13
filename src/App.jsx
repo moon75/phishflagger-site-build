@@ -171,7 +171,7 @@ export default function App() {
         <Route path="about">
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
-          <Route path="video/:category?" element={<Video />} />
+          <Route path="video1/:category?" element={<Video />} />
           <Route path="intellectual-property" element={<IP />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="blog" element={<Blog />} />

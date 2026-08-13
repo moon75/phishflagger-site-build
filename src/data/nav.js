@@ -19,7 +19,7 @@ export const nav = [
   {
     label: "About",
     children: [
-      { label: "Video", href: "/about/video" },
+      { label: "Video", href: "/about/video1" },
       { label: "Press", href: "/about/press" },
       { label: "Phishing News", href: "/News" },
       { label: "Team", href: "/about/team" },

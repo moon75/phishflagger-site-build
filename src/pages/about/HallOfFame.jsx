@@ -63,13 +63,13 @@ export default function HallOfFame() {
 
           <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
             <Link
-              to="/about/video?video=thank-you"
+              to="/about/video1?video=thank-you"
               className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
             >
               Thank You Video
             </Link>
             <Link
-              to="/about/video?video=kickstarter"
+              to="/about/video1?video=kickstarter"
               className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
             >
               Kickstarter Videos

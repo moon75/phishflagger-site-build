@@ -243,7 +243,7 @@ export default function Video() {
                 onClick={() => {
                   const slug = CATEGORY_SLUGS[category];
                   setPlaying(null);
-                  navigate(slug ? `/about/video/${slug}` : "/about/video", {
+                  navigate(slug ? `/about/video1/${slug}` : "/about/video1", {
                     replace: true,
                   });
                 }}

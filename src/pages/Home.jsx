@@ -269,12 +269,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right — PhishFlagger Digital Verification image */}
-        <div className="hidden flex-col items-center lg:ml-[6px] lg:flex">
+        {/* Right — PhishFlagger Digital Verification image (fills the pane) */}
+        <div className="hidden w-full flex-col items-center lg:flex">
           <img
             src="/assets/images/phishflagger%20digital%20verification.png"
             alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-            className="w-[358px] max-w-full rounded-lg object-contain shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
+            className="w-full max-w-none rounded-lg object-cover shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
           />
         </div>
       </div>
