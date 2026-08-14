@@ -202,7 +202,13 @@ export default function Video() {
         ? 3
         : null,
   );
-  const categoryAllVideos = categoryVideos(activeCategory);
+  const categoryAllVideosRaw = categoryVideos(activeCategory);
+  // Number every real video sequentially within its category, starting at 1;
+  // placeholders ("Coming Soon") stay unnumbered.
+  let realCounter = 0;
+  const categoryAllVideos = categoryAllVideosRaw.map((v) =>
+    v.type === "placeholder" ? v : { ...v, number: ++realCounter },
+  );
   const realVideos = categoryAllVideos.filter((v) => v.type !== "placeholder");
   const hasMultiplePages = realVideos.length > VIDEOS_PER_PAGE;
   const totalPages = hasMultiplePages
@@ -326,7 +332,10 @@ export default function Video() {
                     )}
                   </div>
                   <div className="bg-white px-3 py-3">
-                    <p className="text-[13px] font-semibold text-ink">{v.title}</p>
+                    <p className="text-[13px] font-semibold text-ink">
+                      {v.number ? `${v.number}: ` : ""}
+                      {v.title}
+                    </p>
                     <p className="mt-1 text-[12px] leading-snug text-ink/70">{v.description}</p>
                   </div>
                 </div>
@@ -334,28 +343,26 @@ export default function Video() {
             })}
           </div>
 
-          {hasMultiplePages && (
-            <div className="mt-8 flex justify-center gap-2 sm:mt-10">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-                <button
-                  key={n}
-                  type="button"
-                  onClick={() => {
-                    setPlaying(null);
-                    setPage(n);
-                  }}
-                  aria-current={n === page ? "page" : undefined}
-                  className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
-                    n === page
-                      ? "bg-[#5a6066] text-white"
-                      : "text-ink-muted hover:bg-gray-100 hover:text-ink"
-                  }`}
-                >
-                  {n}
-                </button>
-              ))}
-            </div>
-          )}
+          <div className="mt-8 flex justify-center gap-2 sm:mt-10">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => {
+                  setPlaying(null);
+                  setPage(n);
+                }}
+                aria-current={n === page ? "page" : undefined}
+                className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
+                  n === page
+                    ? "bg-[#5a6066] text-white"
+                    : "text-ink-muted hover:bg-gray-100 hover:text-ink"
+                }`}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
     </>
