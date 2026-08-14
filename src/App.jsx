@@ -4,6 +4,7 @@ import SiteLayout from "./components/layout/SiteLayout.jsx";
 import Home from "./pages/Home.jsx";
 import PhishFlaggerOrg from "./pages/PhishFlaggerOrg.jsx";
 import Contact from "./pages/Contact.jsx";
+import SupportDesk from "./pages/SupportDesk.jsx";
 import Community from "./pages/Community.jsx";
 import Demo from "./pages/Demo.jsx";
 import VideoPage from "./pages/Video.jsx";
@@ -86,6 +87,16 @@ export default function App() {
             <GenericThanks
               message="Thank you. Your message has been received."
               closeTo="/contact"
+            />
+          }
+        />
+        <Route path="help/support-desk" element={<SupportDesk />} />
+        <Route
+          path="help/support-desk/thanks"
+          element={
+            <GenericThanks
+              message="Thank you. Your support request has been received."
+              closeTo="/help/support-desk"
             />
           }
         />

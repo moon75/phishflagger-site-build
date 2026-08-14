@@ -179,6 +179,36 @@ function categoryVideos(category) {
         title: "Save Your Dog Too",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Website_text_display_sequence_202608141319.mp4",
+        title: "Website Text Display Sequence",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Man%20and%20dog%20pet%20health.mp4",
+        title: "Man and Dog Pet Health - Full",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Man%20testing%20dog%20ketone%20full.mp4",
+        title: "Man Testing Dog Ketone - Full",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Pet%20owner%20with%20dog%20full.mp4",
+        title: "Pet Owner with Dog - Full",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Pet%20product%20video%20ad%20full.mp4",
+        title: "Pet Product Video Ad - Full",
+        description: "",
+      },
     ];
   }
 
@@ -303,7 +333,7 @@ export default function Video() {
               const isPlaying = playing === i;
               return (
                 <div
-                  key={i}
+                  key={v.src || `${activeCategory}-${page}-${i}`}
                   className={`group overflow-hidden rounded-xl transition ${
                     isPlaying
                       ? "ring-2 ring-brand ring-offset-2"
@@ -317,6 +347,7 @@ export default function Video() {
                       </div>
                     ) : v.type === "local" ? (
                       <video
+                        key={v.src}
                         src={v.src}
                         poster={v.poster}
                         controls

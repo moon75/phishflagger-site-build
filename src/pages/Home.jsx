@@ -105,9 +105,10 @@ export default function Home() {
       </h1>
 
       <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5]">
-        <BrandInline /> protects consumers and companies from brand
-        destruction by imposters. We secure Email, Text, SMS, Instant Messaging
-        and CallerID through sequential numbering.
+        Because you should know who you're communicating with.{" "}
+        <BrandInline /> gives every email an additional layer of identity
+        verification, helping people recognize trusted communications and
+        identify messages that may be fraudulent.
       </p>
 
       {/* Video link */}
@@ -260,20 +261,24 @@ export default function Home() {
 
         {/* Middle — email authentication diagram (fills the pane, matches right) */}
         <div className="flex w-full flex-col items-center">
-          <img
-            src="/assets/images/phishflagger%20email%20authentication.png"
-            alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-            className="w-full max-w-none object-contain"
-          />
+          <div className="w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+            <img
+              src="/assets/images/phishflagger%20email%20authentication.png"
+              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+              className="w-full max-w-none object-contain"
+            />
+          </div>
         </div>
 
         {/* Right — PhishFlagger Digital Verification image (fills the pane) */}
         <div className="hidden w-full flex-col items-center lg:flex">
-          <img
-            src="/assets/images/phishflagger%20digital%20verification.png"
-            alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-            className="w-full max-w-none rounded-lg object-cover shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
-          />
+          <div className="aspect-[3/2] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+            <img
+              src="/assets/images/phishflagger%20digital%20verification.png"
+              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+              className="h-auto w-full -translate-y-2 object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -427,7 +432,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[324px] object-contain"
+            className="h-auto w-full max-w-[324px] object-contain transition-transform duration-200 hover:animate-bounce"
           />
         </div>
         <div>
@@ -502,23 +507,23 @@ export default function Home() {
           </Link>
         </div>
         {/* Right — 3 phones in a row */}
-        <div className="flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
+        <div className="group flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
           <div className="relative flex min-w-0 items-end pt-2">
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[130px] object-contain sm:max-w-[200px]"
+              className="h-auto w-full max-w-[130px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain sm:max-w-[135px]"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain sm:max-w-[160px]"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[160px]"
           />
         </div>
       </div>
@@ -693,7 +698,7 @@ export default function Home() {
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
-                delivery and help stop fraud.
+                delivery and helps stop fraud.
               </p>
             </div>
           </div>

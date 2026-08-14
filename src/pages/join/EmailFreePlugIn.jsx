@@ -83,24 +83,35 @@ export default function EmailFreePlugIn() {
               </div>
             ))}
           </div>
-          <div className="mx-auto mt-6 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
+          <div className="mx-auto -mt-2 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             <div />
-            <div className="flex items-start justify-center gap-3">
+            <div className="mt-4 flex items-start justify-center gap-3">
               <Link
                 to="/joinfree"
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
                 Join Free
               </Link>
-              <Link
-                to="/join-free"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#e3e3e3] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#d4d4d4] duration-200 hover:scale-[1.2]"
-              >
-                Join Free
-              </Link>
+              <div className="relative">
+                <span className="absolute -top-4 -right-4 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-sm">
+                  Coming Soon
+                </span>
+                <Link
+                  to="/join-free"
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#e3e3e3] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#d4d4d4] duration-200 hover:scale-[1.2]"
+                >
+                  Join Free
+                </Link>
+              </div>
             </div>
             <div />
             <div className="-ml-8 flex flex-col items-center gap-2">
+              <Link
+                to="/joinfree/request-domain"
+                className="whitespace-nowrap text-[18px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Don&rsquo;t see your Domain?
+              </Link>
               <Link
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#FFE066] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#FFD633] duration-200 hover:scale-[1.2]"
@@ -108,12 +119,6 @@ export default function EmailFreePlugIn() {
                 Join Pro
               </Link>
               <span className="text-[12px] text-ink-muted">$10.00 / Year</span>
-              <Link
-                to="/joinfree/request-domain"
-                className="text-[12px] font-semibold text-ink-muted underline decoration-2 hover:text-ink"
-              >
-                Don&rsquo;t see your Domain?
-              </Link>
             </div>
           </div>
         </div>

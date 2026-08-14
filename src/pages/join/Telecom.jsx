@@ -18,41 +18,34 @@ export default function Telecom() {
       <CloseButton />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-4 sm:px-6 sm:pb-6"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-14 sm:px-6 sm:pb-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0001" />
-        <div className="mx-auto max-w-content">
-          <h1 className="text-center text-[20px] font-normal leading-[1.12] tracking-tight text-ink sm:text-[29px] lg:text-[36px]">
-            Telecoms and Regulators
-            <br />
-            <span className="text-brand">Help stop Call Spoofing</span>
-          </h1>
-          <p className="mx-auto mt-8 max-w-[860px] text-center text-[18px] leading-relaxed text-ink sm:text-[22px]">
-            {brandify(
-              "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
-            )}
-          </p>
-        </div>
-      </section>
+        <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
+          {/* 1 — heading + intro */}
+          <div className="lg:max-w-[340px]">
+            <h1 className="text-[24px] font-normal leading-[1.15] tracking-tight text-ink sm:text-[30px]">
+              Telecoms and Regulators
+              <br />
+              <span className="text-brand">Help stop Call Spoofing</span>
+            </h1>
+            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+              {brandify(
+                "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
+              )}
+            </p>
+          </div>
 
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "url('/assets/images/nice%20background%20shade.png')",
-        }}
-      >
-        <SectionCounter value="^0002" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <h2 className="max-w-[440px] text-[20px] font-bold leading-snug tracking-tight text-ink [text-wrap:balance] sm:text-[26px]">
+          {/* 2 — Caller ID list */}
+          <div className="lg:ml-40 lg:max-w-[400px]">
+            <h2 className="max-w-[400px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
               Existing Caller ID can be used to validate calls now.
             </h2>
-            <ul className="mt-8 space-y-2 text-[12px] leading-relaxed text-ink sm:text-[15px] lg:text-[18px]">
+            <ul className="mt-6 space-y-2 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
@@ -81,17 +74,86 @@ export default function Telecom() {
             </ul>
           </div>
 
-          <div className="flex justify-center">
+          {/* 3 — granny image */}
+          <div className="flex justify-start lg:ml-auto">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-auto w-full max-w-[280px] object-contain sm:max-w-[340px]"
+              className="h-auto w-full max-w-[280px] object-contain sm:max-w-[300px]"
             />
           </div>
         </div>
 
-        {/* Merged from former pane ^0004 */}
-        <div className="mx-auto mt-14 grid max-w-content grid-cols-1 items-center gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2 lg:gap-28">
+        {/* Merged from former Bottom CTA panel */}
+        <div className="mx-auto mt-14 max-w-content sm:mt-20">
+          <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
+            <em className="italic">
+              <span className="font-extrabold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            for Telecom
+          </h2>
+          <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
+            <ActionCard
+              to="/join/telecom/contact"
+              label="Contact"
+              src={contactIcon}
+              alt="Contact"
+              imageClassName="rounded-full object-cover"
+            />
+            <ActionCard
+              to="/join/telecom/subscribe"
+              label="Subscribe"
+              src={subscribeIcon}
+              alt="Subscribe"
+              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
+            />
+            <ActionCard
+              to="/help/telecom-endorse-us"
+              label="Endorse Us"
+              src={endorseIcon}
+              alt="Endorse Us"
+            />
+            <ActionCard
+              to="/petition"
+              label="Sign Petition"
+              alt="Sign Petition"
+              svgIcon={
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-5 h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
+                  <rect x="18" y="14" width="28" height="36" rx="3" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
+                  <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="23" y1="35" x2="34" y2="35" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M32 48 L50 28 L56 34 L38 54 L30 57 Z" fill="#2a6df4" stroke="white" strokeWidth="1.5"/>
+                  <line x1="47" y1="31" x2="53" y2="37" stroke="white" strokeWidth="2"/>
+                </svg>
+              }
+            />
+          </div>
+        </div>
+      </section>
+
+      <SplitSection
+        counter="^0002"
+        image={callerIdPhoneImg}
+        imageAlt="PhishFlagger Caller ID"
+        bullets={[
+          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
+          "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
+          "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
+        ]}
+      />
+
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "url('/assets/images/nice%20background%20shade.png')",
+        }}
+      >
+        <SectionCounter value="^0003" />
+        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
               Human-compatible solution that validates legitimate
@@ -127,18 +189,6 @@ export default function Telecom() {
           </div>
         </div>
       </section>
-
-      <SplitSection
-        counter="^0003"
-        tone="gray"
-        image={callerIdPhoneImg}
-        imageAlt="PhishFlagger Caller ID"
-        bullets={[
-          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
-          "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
-          "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
-        ]}
-      />
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0004" />
@@ -415,64 +465,6 @@ export default function Telecom() {
               UAE, USA, England, Scotland, Singapore, Vietnam, Wales and Northern
               Ireland.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Bottom CTA panel ===== */}
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "url('/assets/images/nice%20background%20shade.png')",
-        }}
-      >
-        <SectionCounter value="^0009" />
-        <div className="mx-auto max-w-content">
-          <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>{" "}
-            for Telecom
-          </h2>
-          <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
-            <ActionCard
-              to="/join/telecom/contact"
-              label="Contact"
-              src={contactIcon}
-              alt="Contact"
-              imageClassName="rounded-full object-cover"
-            />
-            <ActionCard
-              to="/join/telecom/subscribe"
-              label="Subscribe"
-              src={subscribeIcon}
-              alt="Subscribe"
-              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
-            />
-            <ActionCard
-              to="/help/telecom-endorse-us"
-              label="Endorse Us"
-              src={endorseIcon}
-              alt="Endorse Us"
-            />
-            <ActionCard
-              to="/petition"
-              label="Sign Petition"
-              alt="Sign Petition"
-              svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-5 h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
-                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
-                  <rect x="18" y="14" width="28" height="36" rx="3" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
-                  <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="23" y1="35" x2="34" y2="35" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M32 48 L50 28 L56 34 L38 54 L30 57 Z" fill="#2a6df4" stroke="white" strokeWidth="1.5"/>
-                  <line x1="47" y1="31" x2="53" y2="37" stroke="white" strokeWidth="2"/>
-                </svg>
-              }
-            />
           </div>
         </div>
       </section>

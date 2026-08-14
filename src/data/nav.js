@@ -8,7 +8,8 @@ export const nav = [
   {
     label: "Help",
     children: [
-      { label: "Support", href: "/contact" },
+      { label: "Contact", href: "/contact" },
+      { label: "Support Desk", href: "/help/support-desk" },
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/help/kickstarter" },
       { label: "FAQ", href: "/about/faq" },
@@ -27,5 +28,4 @@ export const nav = [
       { label: "Phishing Ends", href: "/about/phishing-ends" },
     ],
   },
-  { label: "Contact", href: "/contact" },
 ];
