@@ -80,11 +80,6 @@ export default function EmailFreePlugIn() {
                     Request My Domain
                   </Link>
                 )}
-                {key === "AOL.com" && (
-                  <span className="mt-3 text-[12px] font-semibold text-ink-muted">
-                    Don&rsquo;t see your Domain?
-                  </span>
-                )}
               </div>
             ))}
           </div>
@@ -113,6 +108,12 @@ export default function EmailFreePlugIn() {
                 Join Pro
               </Link>
               <span className="text-[12px] text-ink-muted">$10.00 / Year</span>
+              <Link
+                to="/joinfree/request-domain"
+                className="text-[12px] font-semibold text-ink-muted underline decoration-2 hover:text-ink"
+              >
+                Don&rsquo;t see your Domain?
+              </Link>
             </div>
           </div>
         </div>

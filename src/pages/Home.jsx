@@ -187,44 +187,37 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Middle — PhishFlagger Human Benefits image (same wrapper/shadow/crop treatment as Section 4 images) */}
-        <div className="flex w-full flex-col items-center">
-          {/* Adjustment box — transparent, positions the card independently of the
-              image crop below. Nudge via translateY here without touching the
-              image's own crop offset or the card's shadow/clip. */}
-          <div className="w-full translate-y-0 rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-300 ease-out hover:scale-[1.2]">
-            <div
-              className="w-full overflow-hidden rounded-lg"
-              style={{ aspectRatio: "1536 / 884" }}
-            >
-              <img
-                src="/assets/images/PhihsFlagger%20Human%20Benefits.png"
-                alt="PhishFlagger Human Benefits: validate communications, highlight fraud attempts, bring back common sense"
-                className="w-full max-w-none"
-                style={{ marginTop: "-4.62%" }}
-              />
-            </div>
-          </div>
+        {/* Middle — bullets */}
+        <div>
+          <ul className="mx-auto max-w-[420px] space-y-2 rounded-2xl bg-[#dfe3ea] p-5 text-[13px] leading-[1.45] text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Human-compatible solution that validates legitimate
+                communications and highlights fraud attempts.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
+              <span>
+                Bring back common sense by adding a unique sequential
+                number, the{" "}
+                <em className="italic font-semibold">
+                  <span className="text-ink">Phish</span>
+                  <span className="text-brand">Counter</span>
+                </em>
+                , visible to the user.
+              </span>
+            </li>
+          </ul>
         </div>
 
-        {/* Right — "See the sequence" image (same wrapper/shadow/crop treatment as the other images) */}
-        <div className="flex w-full flex-col items-center">
-          {/* Adjustment box — transparent, positions the card independently of the
-              image crop below. Nudge via translateY here without touching the
-              image's own crop offset or the card's shadow/clip. */}
-          <div className="w-full translate-y-0 rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-300 ease-out hover:scale-[1.2]">
-            <div
-              className="w-full overflow-hidden rounded-lg"
-              style={{ aspectRatio: "1536 / 884" }}
-            >
-              <img
-                src="/assets/images/see%20the%20sequence.png"
-                alt="See the sequence: PhishFlagger tracks the full conversation sequence so you can verify legitimacy and spot phishing"
-                className="w-full max-w-none"
-                style={{ marginTop: "-5.7%" }}
-              />
-            </div>
-          </div>
+        {/* Right — info box (blank frame) */}
+        <div className="flex flex-col items-center">
+          <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
+            PLACEHOLDER-HUMAN-HEADER
+          </p>
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea] shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]" />
         </div>
       </div>
     </section>
@@ -267,46 +260,20 @@ export default function Home() {
 
         {/* Middle — email authentication diagram (fills the pane, matches right) */}
         <div className="flex w-full flex-col items-center">
-          {/* Adjustment box — transparent, positions the card independently of the
-              image crop below. Nudge via translateY here without touching the
-              image's own crop offset or the card's shadow/clip. */}
-          <div
-            className="w-full translate-y-0 rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-300 ease-out hover:scale-[1.2]"
-          >
-            <div
-              className="w-full overflow-hidden rounded-lg"
-              style={{ aspectRatio: "1536 / 884" }}
-            >
-              <img
-                src="/assets/images/phishflagger%20email%20authentication.png"
-                alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-                className="w-full max-w-none"
-                style={{ marginTop: "-3.19%" }}
-              />
-            </div>
-          </div>
+          <img
+            src="/assets/images/phishflagger%20email%20authentication.png"
+            alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+            className="w-full max-w-none object-contain"
+          />
         </div>
 
         {/* Right — PhishFlagger Digital Verification image (fills the pane) */}
         <div className="hidden w-full flex-col items-center lg:flex">
-          {/* Adjustment box — transparent, positions the card independently of the
-              image crop below. Nudge via translateY here without touching the
-              image's own crop offset or the card's shadow/clip. */}
-          <div
-            className="w-full translate-y-0 rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-300 ease-out hover:scale-[1.2]"
-          >
-            <div
-              className="w-full overflow-hidden rounded-lg"
-              style={{ aspectRatio: "1536 / 884" }}
-            >
-              <img
-                src="/assets/images/phishflagger%20digital%20verification.png"
-                alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-                className="w-full max-w-none"
-                style={{ marginTop: "-5.0%" }}
-              />
-            </div>
-          </div>
+          <img
+            src="/assets/images/phishflagger%20digital%20verification.png"
+            alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+            className="w-full max-w-none rounded-lg object-cover shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]"
+          />
         </div>
       </div>
     </section>

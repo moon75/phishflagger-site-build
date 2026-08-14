@@ -76,6 +76,21 @@ const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
 );
 
+// Each category has its own script doc. Feature keeps the original
+// "all videos" doc; Oracle keeps its existing doc; the rest point at the
+// new placeholder-outline docs created for them (still owner-only in
+// Drive until sharing is switched to "Anyone with the link").
+const CATEGORY_SCRIPTS = {
+  Feature: "https://docs.google.com/document/d/1r39Taeyz0SfKI6bLWvA7xrASlVv1Lm0ESAdZGx7XxQE/edit?usp=sharing",
+  Ads: "https://docs.google.com/document/d/1vvnN3lnYhQ0xROslrgKhOzFcVJBEPXJiztPKaVg5OFU/edit?usp=sharing",
+  Shorts: "https://docs.google.com/document/d/1McbM3xzzbegxLIK2C20CkcwUvWqZ3G1LFqaf_Oloqss/edit?usp=sharing",
+  Manual: "https://docs.google.com/document/d/1RxLhKRARbMXgNNCpyPTJp3XEN2sSfKtxKq9vtX2zBjI/edit?usp=sharing",
+  Kickstarter: "https://docs.google.com/document/d/1fG9xmR13I6qq9CaGTstLV1UUjNKSKLRFAD_lS5HF_4g/edit?usp=sharing",
+  Learning: "https://docs.google.com/document/d/1nh8GnkkCM9uDDPFNhSAr9Gfhu49pk_l4YpRbvTsSP4c/edit?usp=sharing",
+  "Telecom Caller ID": "https://docs.google.com/document/d/1HsqXIfQIE4AkhKF8tk_Yq0AFoL0UH9xD3qduP0PzGFU/edit?usp=sharing",
+  Oracle: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
+};
+
 const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
 
 const VIDEOS_PER_PAGE = 6;
@@ -134,6 +149,12 @@ function categoryVideos(category) {
   }
   if (category === "Oracle") {
     return [
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/save%20your%20dog%20too.mp4",
+        title: "Save Your Dog Too",
+        description: "",
+      },
       {
         type: "local",
         src: "/assets/video1/Oracle/Man_and_dog_pet_health_202608130007.mp4",
@@ -216,45 +237,35 @@ export default function Video() {
             </h1>
           </div>
 
-          <div className="mx-auto mt-8 flex max-w-[760px] items-center justify-between">
-            <a
-              href="https://docs.google.com/document/d/1r39Taeyz0SfKI6bLWvA7xrASlVv1Lm0ESAdZGx7XxQE/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
-            >
-              Scripts
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] font-semibold text-brand underline hover:text-[#c9002b]"
-            >
-              Scripts
-            </a>
-          </div>
-
-          <div className="mt-2 flex flex-wrap justify-center gap-2 sm:mt-4 sm:gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-3">
             {VIDEO_CATEGORIES.map((category) => (
-              <button
-                key={category}
-                type="button"
-                onClick={() => {
-                  const slug = CATEGORY_SLUGS[category];
-                  setPlaying(null);
-                  navigate(slug ? `/about/video1/${slug}` : "/about/video1", {
-                    replace: true,
-                  });
-                }}
-                className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
-                  category === activeCategory
-                    ? "border-[#5a6066] bg-[#5a6066] text-white"
-                    : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
-                }`}
-              >
-                {category}
-              </button>
+              <div key={category} className="flex flex-col items-center gap-1.5">
+                <a
+                  href={CATEGORY_SCRIPTS[category]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-semibold text-brand underline hover:text-[#c9002b]"
+                >
+                  Scripts
+                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const slug = CATEGORY_SLUGS[category];
+                    setPlaying(null);
+                    navigate(slug ? `/about/video1/${slug}` : "/about/video1", {
+                      replace: true,
+                    });
+                  }}
+                  className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
+                    category === activeCategory
+                      ? "border-[#5a6066] bg-[#5a6066] text-white"
+                      : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
+                  }`}
+                >
+                  {category}
+                </button>
+              </div>
             ))}
           </div>
 
