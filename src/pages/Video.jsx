@@ -275,8 +275,30 @@ export default function Video() {
             ))}
           </div>
 
+          {/* Page number — shown above the grid so it's easy to spot */}
+          <div className="mt-6 flex justify-center gap-2 sm:mt-8">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => {
+                  setPlaying(null);
+                  setPage(n);
+                }}
+                aria-current={n === page ? "page" : undefined}
+                className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
+                  n === page
+                    ? "bg-[#5a6066] text-white"
+                    : "text-ink-muted hover:bg-gray-100 hover:text-ink"
+                }`}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
+
           {/* Video grid */}
-          <div className="mx-auto mt-10 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-6 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
             {displayedVideos.map((v, i) => {
               const isPlaying = playing === i;
               return (
@@ -341,27 +363,6 @@ export default function Video() {
                 </div>
               );
             })}
-          </div>
-
-          <div className="mt-8 flex justify-center gap-2 sm:mt-10">
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-              <button
-                key={n}
-                type="button"
-                onClick={() => {
-                  setPlaying(null);
-                  setPage(n);
-                }}
-                aria-current={n === page ? "page" : undefined}
-                className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
-                  n === page
-                    ? "bg-[#5a6066] text-white"
-                    : "text-ink-muted hover:bg-gray-100 hover:text-ink"
-                }`}
-              >
-                {n}
-              </button>
-            ))}
           </div>
         </div>
       </section>
