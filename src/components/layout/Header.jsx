@@ -11,9 +11,9 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // "Home" and "Email" navigate on mouse-over, like the dropdown menus that
-  // already open on hover — no click required.
-  const HOVER_NAV_LABELS = new Set(["Home", "Email"]);
+  // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
+  // menus that already open on hover — no click required.
+  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom"]);
 
   // Close mobile menu on route change
   useEffect(() => {

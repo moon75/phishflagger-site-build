@@ -693,7 +693,7 @@ export default function Home() {
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
-                delivery and help stops fraud.
+                delivery and help stop fraud.
               </p>
             </div>
           </div>

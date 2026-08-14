@@ -4,15 +4,13 @@
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Email", href: "/email" },
+  { label: "Telecom", href: "/join/telecom" },
   {
     label: "Help",
     children: [
       { label: "Support", href: "/contact" },
       { label: "PhishFlagger.org", href: "/phishflagger-org" },
       { label: "Kickstarter", href: "/help/kickstarter" },
-      { label: "Email - Endorse Us", href: "/help/endorse-us" },
-      { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
-      { label: "Telecom - Sign Petition", href: "/petition" },
       { label: "FAQ", href: "/about/faq" },
     ],
   },

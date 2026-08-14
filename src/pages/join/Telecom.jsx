@@ -18,7 +18,7 @@ export default function Telecom() {
       <CloseButton />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-16 sm:px-6 sm:pb-24"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-4 sm:px-6 sm:pb-6"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -89,28 +89,9 @@ export default function Telecom() {
             />
           </div>
         </div>
-      </section>
 
-      <SplitSection
-        counter="^0003"
-        image={callerIdPhoneImg}
-        imageAlt="PhishFlagger Caller ID"
-        bullets={[
-          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
-          "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
-          "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
-        ]}
-      />
-
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "url('/assets/images/nice%20background%20shade.png')",
-        }}
-      >
-        <SectionCounter value="^0004" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
+        {/* Merged from former pane ^0004 */}
+        <div className="mx-auto mt-14 grid max-w-content grid-cols-1 items-center gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
               Human-compatible solution that validates legitimate
@@ -147,8 +128,20 @@ export default function Telecom() {
         </div>
       </section>
 
+      <SplitSection
+        counter="^0003"
+        tone="gray"
+        image={callerIdPhoneImg}
+        imageAlt="PhishFlagger Caller ID"
+        bullets={[
+          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
+          "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
+          "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
+        ]}
+      />
+
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -185,7 +178,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0006" />
+        <SectionCounter value="^0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -326,7 +319,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -358,7 +351,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0008" />
+        <SectionCounter value="^0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -391,7 +384,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0009" />
+        <SectionCounter value="^0008" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -434,7 +427,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0010" />
+        <SectionCounter value="^0009" />
         <div className="mx-auto max-w-content">
           <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
             <em className="italic">
@@ -558,9 +551,20 @@ function SectionCounter({ value }) {
   );
 }
 
-function SplitSection({ image, imageAlt, text, bullets, counter }) {
+function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" }) {
   return (
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section
+      className={
+        tone === "gray"
+          ? "relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+          : "relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20"
+      }
+      style={
+        tone === "gray"
+          ? { backgroundImage: "url('/assets/images/nice%20background%20shade.png')" }
+          : undefined
+      }
+    >
       {counter && <SectionCounter value={counter} />}
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
