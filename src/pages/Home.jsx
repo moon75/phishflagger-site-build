@@ -213,12 +213,15 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Right — info box (blank frame) */}
-        <div className="flex flex-col items-center">
-          <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
-            PLACEHOLDER-HUMAN-HEADER
-          </p>
-          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea] shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]" />
+        {/* Right — human validation image */}
+        <div className="flex w-full flex-col items-center">
+          <div className="aspect-[3/2] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+            <img
+              src="/assets/images/women%20ai.png"
+              alt="Woman reviewing trusted and suspicious PhishCounter email sequences"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -41,7 +41,7 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:ml-40 lg:max-w-[400px]">
+          <div className="lg:ml-40 lg:max-w-[400px] lg:scale-[0.85]">
             <h2 className="max-w-[400px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
               Existing Caller ID can be used to validate calls now.
             </h2>
@@ -75,7 +75,7 @@ export default function Telecom() {
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex justify-start lg:ml-auto">
+          <div className="flex justify-start lg:ml-auto lg:scale-100">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
@@ -86,13 +86,6 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-14 max-w-content sm:mt-20">
-          <h2 className="mb-10 text-center text-[24px] font-semibold tracking-tight text-ink sm:text-[30px]">
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>{" "}
-            for Telecom
-          </h2>
           <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
             <ActionCard
               to="/join/telecom/contact"
@@ -119,7 +112,7 @@ export default function Telecom() {
               label="Sign Petition"
               alt="Sign Petition"
               svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-5 h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <rect width="68" height="68" rx="34" fill="#eef0f4"/>
                   <rect x="18" y="14" width="28" height="36" rx="3" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
                   <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
@@ -524,13 +517,15 @@ function ActionCard({
       <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
-      {svgIcon ?? (
-        <img
-          src={src}
-          alt={alt}
-          className={`mt-5 object-contain ${imageSize} ${imageClassName}`}
-        />
-      )}
+      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">
+        {svgIcon ?? (
+          <img
+            src={src}
+            alt={alt}
+            className={`object-contain ${imageSize} ${imageClassName}`}
+          />
+        )}
+      </div>
     </Link>
   );
 }
