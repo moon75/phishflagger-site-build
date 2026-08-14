@@ -151,12 +151,6 @@ function categoryVideos(category) {
     return [
       {
         type: "local",
-        src: "/assets/video1/Oracle/save%20your%20dog%20too.mp4",
-        title: "Save Your Dog Too",
-        description: "",
-      },
-      {
-        type: "local",
         src: "/assets/video1/Oracle/Man_and_dog_pet_health_202608130007.mp4",
         title: "Man and Dog Pet Health",
         description: "",
@@ -177,6 +171,12 @@ function categoryVideos(category) {
         type: "local",
         src: "/assets/video1/Oracle/Pet_product_video_advertisement_202608130012.mp4",
         title: "Pet Product Video Advertisement",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/save%20your%20dog%20too.mp4",
+        title: "Save Your Dog Too",
         description: "",
       },
     ];
