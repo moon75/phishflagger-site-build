@@ -684,11 +684,11 @@ export default function Home() {
               <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 2026
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
                 <img
                   src="/assets/images/footer%20history%20pic%203rd.png"
                   alt="PhishFlagger inbox demonstration"
-                  className="h-full w-full scale-125 object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
