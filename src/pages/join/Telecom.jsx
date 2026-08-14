@@ -41,10 +41,17 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:ml-40 lg:max-w-[400px] lg:scale-[0.85]">
-            <h2 className="max-w-[400px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
-              Existing Caller ID can be used to validate calls now.
-            </h2>
+          <div className="lg:ml-40 lg:max-w-[460px] lg:scale-[0.85]">
+            <div className="flex items-start gap-2">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="mt-1 h-[44px] w-auto shrink-0 object-contain sm:h-[52px]"
+              />
+              <h2 className="max-w-[440px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
+                Existing Caller ID can be used to validate calls now.
+              </h2>
+            </div>
             <ul className="mt-6 space-y-2 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               {CALL_EXAMPLES.map((item) => (
                 <li

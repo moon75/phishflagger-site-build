@@ -219,7 +219,7 @@ export default function Home() {
             <img
               src="/assets/images/women%20ai.png"
               alt="Woman reviewing trusted and suspicious PhishCounter email sequences"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>

@@ -187,26 +187,8 @@ function categoryVideos(category) {
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Man%20and%20dog%20pet%20health.mp4",
-        title: "Man and Dog Pet Health - Full",
-        description: "",
-      },
-      {
-        type: "local",
-        src: "/assets/video1/Oracle/Man%20testing%20dog%20ketone%20full.mp4",
-        title: "Man Testing Dog Ketone - Full",
-        description: "",
-      },
-      {
-        type: "local",
         src: "/assets/video1/Oracle/Pet%20owner%20with%20dog%20full.mp4",
         title: "Pet Owner with Dog - Full",
-        description: "",
-      },
-      {
-        type: "local",
-        src: "/assets/video1/Oracle/Pet%20product%20video%20ad%20full.mp4",
-        title: "Pet Product Video Ad - Full",
         description: "",
       },
     ];
