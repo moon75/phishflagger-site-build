@@ -69,20 +69,17 @@ export default function EmailFreePlugIn() {
                     ))}
                   </div>
                 </div>
-                {key === "Gmail.com" && (
-                  <Link
-                    to="/joinfree/request-domain"
-                    className="mt-3 text-[12px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
-                  >
-                    Request My Domain be on the FREE list.
-                  </Link>
-                )}
               </div>
             ))}
           </div>
-          <div className="mx-auto -mt-2 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
-            <div />
-            <div className="mt-4 flex items-start justify-center gap-3">
+          <div className="mx-auto mt-6 flex max-w-[892px] flex-wrap items-center justify-between gap-8">
+            <Link
+              to="/joinfree/request-domain"
+              className="text-[12px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+            >
+              Request My Domain be on the FREE list.
+            </Link>
+            <div className="flex items-center gap-3">
               <Link
                 to="/joinfree"
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
@@ -101,8 +98,7 @@ export default function EmailFreePlugIn() {
                 </Link>
               </div>
             </div>
-            <div />
-            <div className="-ml-8 flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2">
               <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
                 Don&rsquo;t see your Domain
               </span>

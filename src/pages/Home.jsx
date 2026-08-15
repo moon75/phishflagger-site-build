@@ -93,9 +93,16 @@ export default function Home() {
         {/* Left — headline, copy, video button */}
         <div>
           {/* Headline */}
-          <h1 className="text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[36px] lg:text-left lg:text-[42px]">
-            Protecting Communications
-          </h1>
+          <div className="flex items-center justify-center gap-3 lg:justify-start">
+            <img
+              src="/assets/images/logo-mark.png"
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[30px] w-auto shrink-0 object-contain sm:h-[38px] lg:h-[42px]"
+            />
+            <h1 className="text-center text-[24px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[32px] lg:text-left lg:text-[36px]">
+              Protecting Communications
+            </h1>
+          </div>
 
           <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5] lg:mx-0 lg:text-left">
             Because you should know who you're communicating with.{" "}
@@ -121,7 +128,7 @@ export default function Home() {
           <img
             src="/assets/images/women%20ai.png"
             alt="Woman using AI-protected email"
-            className="h-auto w-full max-w-[850px] object-contain"
+            className="h-auto w-full max-w-[950px] object-contain"
           />
         </div>
       </div>
@@ -418,7 +425,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[324px] object-contain"
+            className="h-auto w-full max-w-[324px] object-contain transition-transform duration-200 hover:scale-[1.2]"
           />
         </div>
         <div>
@@ -491,18 +498,18 @@ export default function Home() {
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[130px] object-contain sm:max-w-[200px]"
+              className="h-auto w-full max-w-[130px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain sm:max-w-[135px]"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain sm:max-w-[160px]"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[160px]"
           />
         </div>
       </div>
@@ -735,8 +742,8 @@ function PhonePlaceholder({ src, alt, large = false }) {
       alt={alt}
       className={
         large
-          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-110 sm:w-[300px] lg:w-[300px]"
-          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-110 sm:w-[180px] lg:w-[170px]"
+          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-[2] sm:w-[300px] lg:w-[300px]"
+          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-[2] sm:w-[180px] lg:w-[170px]"
       }
     />
   );

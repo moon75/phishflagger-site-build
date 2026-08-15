@@ -19,7 +19,7 @@ export default function Join() {
       }}
     >
       {/* ===== Pane 1 — Email Solutions ===== */}
-      <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
+      <section className="relative w-full px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-10">
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
@@ -110,10 +110,10 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 2 — Contact / Endorse Us / More Info / White Paper / Messages (no background) ===== */}
-      <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
+      <section className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-3">
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
-          <div className="flex flex-nowrap justify-center gap-2 overflow-x-auto sm:gap-4">
+          <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
               to="/contact"
               label="Contact"
@@ -135,18 +135,11 @@ export default function Join() {
               alt="Endorse Us"
             />
             <ActionCard
-              to="/join/email-subscribe"
-              label="Subscribe for PhishFlagger Email Updates"
-              src={subscribeIcon}
-              alt="Subscribe"
-              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
-            />
-            <ActionCard
               to="/digital-ino"
               label="More Info"
               alt="More Info"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#2a6df4" />
                   <rect x="10.9" y="10.4" width="2.2" height="7" rx="1.1" fill="white" />
                   <circle cx="12" cy="7.1" r="1.4" fill="white" />
@@ -158,7 +151,7 @@ export default function Join() {
               label="White Paper"
               alt="White Paper"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#e63950" />
                   <rect x="7" y="4.5" width="10" height="15" rx="1.6" fill="white" />
                   <rect x="9" y="7.5" width="6" height="1.4" rx="0.7" fill="#e63950" />
@@ -172,7 +165,7 @@ export default function Join() {
               label="Messages"
               alt="Messages"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#14b8a6" />
                   <path
                     d="M6 8.5h12v7.5H10l-3.3 2.6V16H6V8.5z"
@@ -189,7 +182,7 @@ export default function Join() {
               label="FAQ"
               alt="FAQ"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#f59e0b" />
                   <path
                     d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
@@ -208,7 +201,7 @@ export default function Join() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#e63950" />
                   <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
                 </svg>
@@ -233,9 +226,9 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9]"
+      className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
-      <span className="max-w-[140px] text-center text-[11px] font-bold uppercase leading-tight tracking-[0.1em] text-ink-muted sm:max-w-[170px] sm:text-[13px]">
+      <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">

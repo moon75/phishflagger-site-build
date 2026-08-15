@@ -16,7 +16,7 @@ export default function Telecom() {
       <CloseButton />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-14 sm:px-6 sm:pb-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -25,13 +25,13 @@ export default function Telecom() {
         <SectionCounter value="^0001" />
         <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
           {/* 1 — heading + intro */}
-          <div className="lg:max-w-[340px]">
+          <div className="lg:max-w-[380px]">
             <h1 className="text-[24px] font-normal leading-[1.15] tracking-tight text-ink sm:text-[30px]">
               Telecoms and Regulators
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <p className="mt-6 text-[16px] leading-relaxed text-ink sm:text-[20px]">
               {brandify(
                 "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
               )}
@@ -39,18 +39,18 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:ml-40 lg:max-w-[560px] lg:scale-[0.85]">
-            <div className="flex items-start gap-2">
+          <div className="lg:ml-40 lg:max-w-[640px] lg:scale-[0.85]">
+            <div className="flex items-start gap-1">
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
                 className="mt-1 h-[44px] w-auto shrink-0 object-contain sm:h-[52px]"
               />
-              <h2 className="max-w-[540px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
+              <h2 className="max-w-[420px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
                 Existing Caller ID can be used to validate calls now.
               </h2>
             </div>
-            <ul className="mt-6 max-w-[400px] space-y-2 rounded-2xl border-2 border-black bg-white p-5 text-[15px] leading-relaxed text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:p-6 sm:text-[17px]">
+            <ul className="mt-6 max-w-[400px] space-y-1 rounded-2xl border-2 border-black bg-white px-5 py-3 text-[15px] leading-snug text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:px-6 sm:py-4 sm:text-[17px]">
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
@@ -90,8 +90,8 @@ export default function Telecom() {
         </div>
 
         {/* Merged from former Bottom CTA panel */}
-        <div className="mx-auto mt-14 max-w-content sm:mt-20">
-          <div className="flex flex-wrap justify-center gap-12 sm:gap-16 lg:gap-20">
+        <div className="mx-auto mt-6 max-w-content sm:mt-8">
+          <div className="grid grid-cols-[repeat(3,max-content)] place-items-center justify-center gap-x-2 gap-y-4 sm:grid-cols-[repeat(6,max-content)] sm:gap-x-2">
             <ActionCard
               to="/join/telecom/contact"
               label="Contact"
@@ -133,16 +133,17 @@ export default function Telecom() {
               label="FAQ"
               alt="FAQ"
               svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
-                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
                   <path
-                    d="M27 26a7 7 0 1 1 10.5 6.05c-2 1.15-3.5 2.2-3.5 4.45"
-                    stroke="#9ca3af"
-                    strokeWidth="2.4"
+                    d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+                    stroke="white"
+                    strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    fill="none"
                   />
-                  <circle cx="34" cy="45.5" r="2.6" fill="#2a6df4" />
+                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
                 </svg>
               }
             />
@@ -151,10 +152,9 @@ export default function Telecom() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
-                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
-                  <rect x="16" y="20" width="36" height="28" rx="4" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
-                  <path d="M29 27.5v13l11-6.5-11-6.5z" fill="#2a6df4"/>
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                  <circle cx="12" cy="12" r="11" fill="#e63950" />
+                  <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
                 </svg>
               }
             />
@@ -542,9 +542,9 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9]"
+      className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
-      <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
+      <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">
