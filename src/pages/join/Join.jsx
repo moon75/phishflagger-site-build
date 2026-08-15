@@ -190,6 +190,36 @@ export default function Join() {
                 </svg>
               }
             />
+            <ActionCard
+              to="/about/faq?category=General"
+              label="FAQ"
+              alt="FAQ"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
+                  <path
+                    d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+                    stroke="white"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
+                </svg>
+              }
+            />
+            <ActionCard
+              to="/about/video1"
+              label="Video"
+              alt="Video"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                  <circle cx="12" cy="12" r="11" fill="#e63950" />
+                  <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
+                </svg>
+              }
+            />
           </div>
         </div>
       </section>

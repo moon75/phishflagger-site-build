@@ -9,20 +9,27 @@ export default function FaqTabs({
   showAskAiComingSoon = false,
   categoryOrder = null,
   classic = false,
+  initialCategory = null,
 }) {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [openQuestion, setOpenQuestion] = useState(null);
   const categories = categoryOrder
     ? categoryOrder.map((index) => FAQ_CATEGORIES[index])
     : FAQ_CATEGORIES;
+  const initialIndex = initialCategory
+    ? categories.findIndex((c) => c.name === initialCategory)
+    : -1;
+  const [activeIndex, setActiveIndex] = useState(
+    initialIndex >= 0 ? initialIndex : null,
+  );
+  const [openQuestion, setOpenQuestion] = useState(null);
   const active = activeIndex === null ? null : categories[activeIndex];
   const { pathname } = useLocation();
 
   // The Footer (and this FAQ block) persists across route changes, so an
   // expanded category/question would otherwise stay open when navigating away.
   useEffect(() => {
-    setActiveIndex(null);
+    setActiveIndex(initialIndex >= 0 ? initialIndex : null);
     setOpenQuestion(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

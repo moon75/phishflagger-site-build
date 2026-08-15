@@ -90,36 +90,50 @@ export default function Home() {
     <section className="relative w-full px-4 pt-12 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
-      {/* Logo */}
-      <div className="flex items-center justify-center">
-        <img
-          src={logoImg}
-          alt="PhishFlagger"
-          className="h-auto w-full max-w-[360px] sm:max-w-[520px]"
-        />
-      </div>
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        {/* Left — logo, headline, copy, video button */}
+        <div>
+          {/* Logo */}
+          <div className="flex items-center justify-center lg:justify-start">
+            <img
+              src={logoImg}
+              alt="PhishFlagger"
+              className="h-auto w-full max-w-[330px] sm:max-w-[470px]"
+            />
+          </div>
 
-      {/* Headline */}
-      <h1 className="mt-2 text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:mt-3 sm:text-[36px] lg:text-[42px]">
-        Protecting Communications
-      </h1>
+          {/* Headline */}
+          <h1 className="mt-2 text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:mt-3 sm:text-[36px] lg:text-left lg:text-[42px]">
+            Protecting Communications
+          </h1>
 
-      <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5]">
-        Because you should know who you're communicating with.{" "}
-        <BrandInline /> gives every email an additional layer of identity
-        verification, helping people recognize trusted communications and
-        identify messages that may be fraudulent.
-      </p>
+          <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5] lg:mx-0 lg:text-left">
+            Because you should know who you're communicating with.{" "}
+            <BrandInline /> gives every email an additional layer of identity
+            verification, helping people recognize trusted communications and
+            identify messages that may be fraudulent.
+          </p>
 
-      {/* Video link */}
-      <div className="mt-8 flex justify-center sm:mt-10">
-        <Link
-          to="/video"
-          className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink transition-transform duration-200 hover:scale-[1.2] sm:px-12 sm:text-lg"
-        >
-          <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
-          Watch Our Videos
-        </Link>
+          {/* Video link */}
+          <div className="mt-8 flex justify-center sm:mt-10 lg:justify-start">
+            <Link
+              to="/video"
+              className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink transition-transform duration-200 hover:scale-[1.2] sm:px-12 sm:text-lg"
+            >
+              <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
+              Watch Our Videos
+            </Link>
+          </div>
+        </div>
+
+        {/* Right — women ai image */}
+        <div className="flex justify-center">
+          <img
+            src="/assets/images/women%20ai.png"
+            alt="Woman using AI-protected email"
+            className="h-auto w-full max-w-[750px] object-contain"
+          />
+        </div>
       </div>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
@@ -213,15 +227,12 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Right — human validation image */}
-        <div className="flex w-full flex-col items-center">
-          <div className="aspect-[3/2] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
-            <img
-              src="/assets/images/women%20ai.png"
-              alt="Woman reviewing trusted and suspicious PhishCounter email sequences"
-              className="h-full w-full object-contain"
-            />
-          </div>
+        {/* Right — human reader placeholder */}
+        <div className="flex flex-col items-center">
+          <p className="mb-4 whitespace-nowrap text-center text-[18px] font-bold leading-tight text-ink sm:text-[20px]">
+            PLACEHOLDER-HUMAN-HEADER
+          </p>
+          <div className="h-[150px] w-full max-w-[358px] rounded-2xl bg-[#dfe3ea] shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)]" />
         </div>
       </div>
     </section>
@@ -435,7 +446,7 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[324px] object-contain transition-transform duration-200 hover:animate-bounce"
+            className="h-auto w-full max-w-[324px] object-contain"
           />
         </div>
         <div>
@@ -510,23 +521,23 @@ export default function Home() {
           </Link>
         </div>
         {/* Right — 3 phones in a row */}
-        <div className="group flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
+        <div className="flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
           <div className="relative flex min-w-0 items-end pt-2">
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[130px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[200px]"
+              className="h-auto w-full max-w-[130px] object-contain sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[135px]"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain transition-transform duration-200 group-hover:animate-bounce sm:max-w-[160px]"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain sm:max-w-[160px]"
           />
         </div>
       </div>

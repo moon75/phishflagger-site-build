@@ -1,7 +1,11 @@
+import { useSearchParams } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import FaqTabs from "../../components/faq/FaqTabs.jsx";
 
 export default function FAQ() {
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get("category");
+
   return (
     <>
       <CloseButton />
@@ -20,7 +24,7 @@ export default function FAQ() {
           </h1>
 
           <div className="mt-8 sm:mt-12">
-            <FaqTabs showAskAiComingSoon />
+            <FaqTabs showAskAiComingSoon initialCategory={category} />
           </div>
         </div>
       </section>

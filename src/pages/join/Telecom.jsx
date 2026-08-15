@@ -130,6 +130,36 @@ export default function Telecom() {
                 </svg>
               }
             />
+            <ActionCard
+              to="/about/faq?category=Telecom"
+              label="FAQ"
+              alt="FAQ"
+              svgIcon={
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
+                  <path
+                    d="M27 26a7 7 0 1 1 10.5 6.05c-2 1.15-3.5 2.2-3.5 4.45"
+                    stroke="#9ca3af"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <circle cx="34" cy="45.5" r="2.6" fill="#2a6df4" />
+                </svg>
+              }
+            />
+            <ActionCard
+              to="/about/video1/telecom-caller-id"
+              label="Video"
+              alt="Video"
+              svgIcon={
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
+                  <rect x="16" y="20" width="36" height="28" rx="4" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
+                  <path d="M29 27.5v13l11-6.5-11-6.5z" fill="#2a6df4"/>
+                </svg>
+              }
+            />
           </div>
         </div>
       </section>

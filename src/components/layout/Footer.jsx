@@ -21,6 +21,10 @@ const PRODUCT_IMAGES = [
 export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
   const hideFaq = pathname === "/about/faq";
+  // FAQ block only — the rest of the footer stays global. Per request,
+  // /email and /join/telecom hide just the FAQ section.
+  const hideFaqSection =
+    hideFaq || pathname === "/email" || pathname === "/join/telecom";
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
     "#numberingemail", "#cybersecurity", "#emailsecurity",
@@ -31,7 +35,7 @@ export default function Footer({ logoSrc = logoImg }) {
 
   return (
     <>
-      {!hideFaq && (
+      {!hideFaqSection && (
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
