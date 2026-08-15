@@ -56,23 +56,28 @@ export default function EmailDomain() {
               <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Plug-In
               </h3>
-              <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
-                  <img
-                    src={outlookThunderbirdImg}
-                    alt="Microsoft Outlook and Mozilla Thunderbird"
-                    className="h-full w-full translate-y-1 scale-[1.5] object-contain"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                  <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                    <li>Windows</li>
-                    <li>Linux / Window</li>
-                    <li>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </li>
-                  </ul>
+              <div className="relative">
+                <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+                  Coming Soon
+                </span>
+                <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+                  <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
+                    <img
+                      src={outlookThunderbirdImg}
+                      alt="Microsoft Outlook and Mozilla Thunderbird"
+                      className="h-full w-full translate-y-1 scale-[1.5] object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
+                    <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                      <li>Windows</li>
+                      <li>Linux / Window</li>
+                      <li>
+                        Placeholder text goes here. Replace this copy with the
+                        final content.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,7 +86,11 @@ export default function EmailDomain() {
               <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Appliance
               </h3>
-              <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="relative">
+                <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+                  Coming Soon
+                </span>
+                <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
                 <div className="h-[200px] w-full overflow-hidden">
                   <img
                     src={digitalDomainImg}
@@ -136,6 +145,7 @@ export default function EmailDomain() {
                       or any server with Open Port 25.
                     </p>
                   </div>
+                </div>
                 </div>
               </div>
             </div>

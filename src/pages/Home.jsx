@@ -342,21 +342,26 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Email Client Plug-In
             </span>
-            <div className="relative flex aspect-[46/30] w-full max-w-[380px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
-              <img
-                src={outlookThunderbirdImg}
-                alt="Microsoft Outlook and Mozilla Thunderbird"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
-                <div />
-                <div className="flex justify-center pl-0 sm:pl-[4px]">
-                  <Link
-                    to="/download"
-                    className="whitespace-nowrap text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
-                  >
-                    More Clients Coming Soon
-                  </Link>
+            <div className="relative w-full max-w-[380px]">
+              <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+                Coming Soon
+              </span>
+              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
+                <img
+                  src={outlookThunderbirdImg}
+                  alt="Microsoft Outlook and Mozilla Thunderbird"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute bottom-[11px] left-0 right-0 grid grid-cols-2">
+                  <div />
+                  <div className="flex justify-center pl-0 sm:pl-[4px]">
+                    <Link
+                      to="/download"
+                      className="whitespace-nowrap text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
+                    >
+                      More Clients Coming Soon
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -409,12 +414,17 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Email Domain Appliance
             </span>
-            <div className="aspect-[46/30] w-full max-w-[380px] overflow-hidden rounded-2xl border-2 border-black">
-              <img
-                src={cloudServerImg}
-                alt="Cloud and server appliance"
-                className="h-full w-full object-cover"
-              />
+            <div className="relative w-full max-w-[380px]">
+              <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+                Coming Soon
+              </span>
+              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black">
+                <img
+                  src={cloudServerImg}
+                  alt="Cloud and server appliance"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
             <p className="mt-4 flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
