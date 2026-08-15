@@ -35,6 +35,7 @@ import Telecom from "./pages/join/Telecom.jsx";
 import Messaging from "./pages/join/Messaging.jsx";
 import TelecomContact from "./pages/join/TelecomContact.jsx";
 import TelecomSubscribe from "./pages/join/TelecomSubscribe.jsx";
+import EmailSubscribe from "./pages/join/EmailSubscribe.jsx";
 import {
   TelecomThanksContact,
   TelecomThanksSubscribe,
@@ -145,6 +146,16 @@ export default function App() {
           <Route path="telecom" element={<Telecom />} />
           <Route path="telecom/contact" element={<TelecomContact />} />
           <Route path="telecom/subscribe" element={<TelecomSubscribe />} />
+          <Route path="email-subscribe" element={<EmailSubscribe />} />
+          <Route
+            path="email-subscribe/thanks"
+            element={
+              <GenericThanks
+                message="Thank you. You're subscribed for PhishFlagger Email updates."
+                closeTo="/email"
+              />
+            }
+          />
           <Route
             path="telecom/thanks-contact"
             element={<TelecomThanksContact />}

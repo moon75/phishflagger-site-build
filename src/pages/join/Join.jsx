@@ -135,6 +135,13 @@ export default function Join() {
               alt="Endorse Us"
             />
             <ActionCard
+              to="/join/email-subscribe"
+              label="Subscribe for PhishFlagger Email Updates"
+              src={subscribeIcon}
+              alt="Subscribe"
+              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
+            />
+            <ActionCard
               to="/digital-ino"
               label="More Info"
               alt="More Info"
@@ -201,7 +208,7 @@ export default function Join() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] scale-[0.7] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
                   <circle cx="12" cy="12" r="11" fill="#e63950" />
                   <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
                 </svg>
@@ -228,7 +235,7 @@ function ActionCard({
       to={to}
       className="group flex scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9]"
     >
-      <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
+      <span className="max-w-[140px] text-center text-[11px] font-bold uppercase leading-tight tracking-[0.1em] text-ink-muted sm:max-w-[170px] sm:text-[13px]">
         {label}
       </span>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">

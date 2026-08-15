@@ -1,5 +1,4 @@
 ﻿import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export function TelecomFormPage({
@@ -48,28 +47,12 @@ export function TelecomFormPage({
     >
       <div className="mx-auto max-w-content">
         <div className="text-center">
-          <Link
-            to="/"
-            aria-label="PhishFlagger home"
-            className="inline-block text-[28px] leading-none tracking-tight transition-opacity hover:opacity-80 sm:text-[34px]"
-          >
-            <em className="italic">
-              <span className="font-extrabold text-ink">Phish</span>
-              <span className="font-normal text-brand">Flagger</span>
-            </em>
-            <span className="ml-1 align-super text-[14px] font-normal not-italic sm:text-[16px]">
-              &trade;
-            </span>
-          </Link>
-          <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
-            Protecting Communications.
-          </p>
-          <h1 className="mt-8 text-[40px] font-normal leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+          <h1 className="text-[40px] font-normal leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
             {title}
           </h1>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-20 sm:gap-16 lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-12 sm:mt-24 sm:gap-16 lg:grid-cols-2">
           <div className="flex flex-wrap items-start gap-8 sm:gap-10 lg:ml-16 xl:ml-24">
             <div className="space-y-4 sm:space-y-5">
               <div className="flex items-start gap-4 sm:gap-6">

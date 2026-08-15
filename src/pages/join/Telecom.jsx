@@ -151,7 +151,7 @@ export default function Telecom() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] scale-[0.7] sm:h-[83px] sm:w-[83px]">
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <rect width="68" height="68" rx="34" fill="#eef0f4"/>
                   <rect x="16" y="20" width="36" height="28" rx="4" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
                   <path d="M29 27.5v13l11-6.5-11-6.5z" fill="#2a6df4"/>
