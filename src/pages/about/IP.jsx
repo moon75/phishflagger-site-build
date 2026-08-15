@@ -83,7 +83,7 @@ export default function IP() {
           </div>
 
           {/* Highlight bullets */}
-          <ul className="mx-auto mt-14 max-w-[520px] space-y-3 rounded-2xl border-2 border-black bg-white p-6 sm:mt-16 sm:p-8">
+          <ul className="mx-auto mt-14 max-w-[650px] space-y-3 rounded-2xl border-2 border-black bg-white p-6 sm:mt-16 sm:p-8">
             {HIGHLIGHTS.map((h) => (
               <li key={h} className="flex items-center gap-3">
                 <svg
@@ -99,16 +99,16 @@ export default function IP() {
                 </span>
               </li>
             ))}
-          </ul>
 
-          {/* Trademark + license line */}
-          <p className="mt-8 text-[13px] leading-[1.6] text-ink-muted sm:text-[13.5px]">
-            <Brand />
-            <sup>&trade;</sup> and <Brand trail="Counter" />
-            <sup>&trade;</sup> are Trademarks of <Brand /> Inc. 2026.
-            <br />
-            License is required.
-          </p>
+            {/* Trademark + license line */}
+            <li className="border-t border-gray-200 pt-3 text-[13px] leading-[1.6] text-ink-muted sm:text-[13.5px]">
+              <Brand />
+              <sup>&trade;</sup> and <Brand trail="Counter" />
+              <sup>&trade;</sup> are Trademarks of <Brand /> Inc. 2026.
+              <br />
+              License is required.
+            </li>
+          </ul>
 
           {/* Patents list */}
           <div className="mt-12 space-y-10 sm:mt-14">

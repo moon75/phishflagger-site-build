@@ -172,6 +172,42 @@ export default function Kick() {
             </Link>
           </p>
         </div>
+
+        {/* ===== Why PhishFlagger Email? (moved from Home ^0002) ===== */}
+        <div className="mt-16 w-full max-w-[900px] text-left">
+          <div className="grid grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+            <div>
+              <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+                Why{" "}
+                <em className="italic">
+                  <span className="font-bold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                Email?
+              </h2>
+              <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+                Because you should know who you're communicating with.{" "}
+                <em className="italic">
+                  <span className="font-bold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                gives every email an additional layer of identity
+                verification, helping people recognize trusted communications
+                and identify messages that may be fraudulent. Simple to
+                understand, easy to verify, and designed to put the power of
+                email authentication in your hands.
+              </p>
+            </div>
+
+            <div className="flex w-full max-w-[380px] justify-center lg:ml-auto">
+              <img
+                src="/assets/images/0005%20image.png"
+                alt="Why PhishFlagger Mail"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

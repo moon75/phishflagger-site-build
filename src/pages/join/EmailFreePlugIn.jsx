@@ -50,9 +50,6 @@ export default function EmailFreePlugIn() {
       <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
-          <p className="mb-2 text-[13.5px] text-ink-muted">
-            Don&rsquo;t see your free email domain?
-          </p>
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Step 1. Get your Free Key.&nbsp; Works with ....
           </h2>
@@ -77,7 +74,7 @@ export default function EmailFreePlugIn() {
                     to="/joinfree/request-domain"
                     className="mt-3 text-[12px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
                   >
-                    Request My Domain
+                    Request My Domain be on the FREE list.
                   </Link>
                 )}
               </div>
@@ -106,12 +103,9 @@ export default function EmailFreePlugIn() {
             </div>
             <div />
             <div className="-ml-8 flex flex-col items-center gap-2">
-              <Link
-                to="/joinfree/request-domain"
-                className="whitespace-nowrap text-[18px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Don&rsquo;t see your Domain?
-              </Link>
+              <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
+                Don&rsquo;t see your Domain
+              </span>
               <Link
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#FFE066] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#FFD633] duration-200 hover:scale-[1.2]"

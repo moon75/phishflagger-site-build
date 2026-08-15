@@ -9,8 +9,6 @@ import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/call
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
-import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-const smsPhoneImg = "/assets/images/only%204%20messages%20now.png";
 
 export default function Telecom() {
   return (
@@ -41,18 +39,18 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:ml-40 lg:max-w-[460px] lg:scale-[0.85]">
+          <div className="lg:ml-40 lg:max-w-[560px] lg:scale-[0.85]">
             <div className="flex items-start gap-2">
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
                 className="mt-1 h-[44px] w-auto shrink-0 object-contain sm:h-[52px]"
               />
-              <h2 className="max-w-[440px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
+              <h2 className="max-w-[540px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
                 Existing Caller ID can be used to validate calls now.
               </h2>
             </div>
-            <ul className="mt-6 space-y-2 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <ul className="mt-6 max-w-[400px] space-y-2 rounded-2xl border-2 border-black bg-white p-5 text-[15px] leading-relaxed text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:p-6 sm:text-[17px]">
               {CALL_EXAMPLES.map((item) => (
                 <li
                   key={`${item.seq}-${item.status}`}
@@ -153,7 +151,7 @@ export default function Telecom() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] scale-[0.7] sm:h-[83px] sm:w-[83px]">
                   <rect width="68" height="68" rx="34" fill="#eef0f4"/>
                   <rect x="16" y="20" width="36" height="28" rx="4" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
                   <path d="M29 27.5v13l11-6.5-11-6.5z" fill="#2a6df4"/>
@@ -442,16 +440,11 @@ export default function Telecom() {
               final copy for this section.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <div className="flex justify-center">
             <img
-              src={textPhoneImg}
-              alt="Phone displaying PhishFlagger text messages"
-              className="h-auto w-[42vw] max-w-[120px] object-contain sm:w-full sm:max-w-[171px]"
-            />
-            <img
-              src={smsPhoneImg}
-              alt="Phone displaying PhishFlagger SMS messages"
-              className="h-auto w-[70vw] max-w-[240px] object-contain sm:w-full sm:max-w-[400px]"
+              src="/assets/images/sms-phone-and-text.png"
+              alt="Phone showing PhishFlagger SMS messages next to numbered message sequence detail"
+              className="h-auto w-full max-w-[560px] object-contain"
             />
           </div>
         </div>
@@ -480,7 +473,7 @@ export default function Telecom() {
             in the following Jurisdictions:
           </p>
           <div
-            className="mx-auto mt-8 max-w-[900px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
+            className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
             style={{ zoom: 0.6 }}
           >
             <p className="text-[15px] leading-[1.85] text-ink sm:text-[18px]">
@@ -549,7 +542,7 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex flex-col items-center transition-transform duration-200 ease-out hover:scale-[1.2]"
+      className="group flex scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9]"
     >
       <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}

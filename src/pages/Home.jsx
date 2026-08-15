@@ -13,7 +13,6 @@ import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
-import logoImg from "../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg },
@@ -87,23 +86,14 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section className="relative w-full px-4 pt-12 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
+    <section className="relative w-full px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        {/* Left — logo, headline, copy, video button */}
+        {/* Left — headline, copy, video button */}
         <div>
-          {/* Logo */}
-          <div className="flex items-center justify-center lg:justify-start">
-            <img
-              src={logoImg}
-              alt="PhishFlagger"
-              className="h-auto w-full max-w-[330px] sm:max-w-[470px]"
-            />
-          </div>
-
           {/* Headline */}
-          <h1 className="mt-2 text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:mt-3 sm:text-[36px] lg:text-left lg:text-[42px]">
+          <h1 className="text-center text-[28px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[36px] lg:text-left lg:text-[42px]">
             Protecting Communications
           </h1>
 
@@ -131,7 +121,7 @@ export default function Home() {
           <img
             src="/assets/images/women%20ai.png"
             alt="Woman using AI-protected email"
-            className="h-auto w-full max-w-[750px] object-contain"
+            className="h-auto w-full max-w-[850px] object-contain"
           />
         </div>
       </div>
@@ -298,44 +288,9 @@ export default function Home() {
     </section>
     </div>
 
-    {/* ===== Section 4b — Why PhishFlagger Mail? (white) ===== */}
+    {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
     <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0002" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            Why <BrandInline /> Email?
-          </h2>
-          <p className="mt-4 max-w-[560px] text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Because you should know who you're communicating with.{" "}
-            <BrandInline /> gives every email an additional layer of identity
-            verification, helping people recognize trusted communications and
-            identify messages that may be fraudulent. Simple to understand,
-            easy to verify, and designed to put the power of email
-            authentication in your hands.
-          </p>
-        </div>
-
-        <div className="flex w-full max-w-[380px] justify-center lg:ml-auto lg:-translate-x-10">
-          <img
-            src="/assets/images/0005%20image.png"
-            alt="Why PhishFlagger Mail"
-            className="h-auto w-full object-contain"
-          />
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 5 — Individual protection: Free Plug-In (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0003" />
       <div className="mx-auto max-w-content">
         <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
@@ -448,9 +403,16 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7 — Caller ID (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0004" />
+    {/* ===== Section 7 — Caller ID (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0003" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -483,16 +445,9 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7c — Telecom / Caller ID (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0005" />
+    {/* ===== Section 7c — Telecom / Caller ID (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -553,9 +508,16 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7b — Telecom / Text (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0006" />
+    {/* ===== Section 7b — Telecom / Text (gray/tower) ===== */}
+    <section
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0005" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
@@ -651,16 +613,9 @@ export default function Home() {
     </section>
     )}
 
-    {/* ===== Section 9 — Numbering history gallery (gray/tower) ===== */}
-    <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0007" />
+    {/* ===== Section 9 — Numbering history gallery (white) ===== */}
+    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0006" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating identifiable order to

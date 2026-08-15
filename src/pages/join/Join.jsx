@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
+import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
+import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
+import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
 
@@ -110,42 +113,26 @@ export default function Join() {
       <section className="relative w-full px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
-          <div className="flex flex-wrap justify-center gap-10 sm:gap-14">
+          <div className="flex flex-nowrap justify-center gap-2 overflow-x-auto sm:gap-4">
             <ActionCard
               to="/contact"
               label="Contact"
+              src={contactIcon}
               alt="Contact"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
-                  <circle cx="12" cy="12" r="11" fill="#2a6df4" />
-                  <circle cx="12" cy="9.6" r="3.4" fill="white" />
-                  <path
-                    d="M5 19c0-3.7 3.13-6.5 7-6.5s7 2.8 7 6.5"
-                    fill="white"
-                  />
-                </svg>
-              }
+              imageClassName="rounded-full object-cover"
+            />
+            <ActionCard
+              to="/join/telecom/subscribe"
+              label="Subscribe"
+              src={subscribeIcon}
+              alt="Subscribe"
+              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
             />
             <ActionCard
               to="/help/endorse-us"
               label="Endorse Us"
+              src={endorseIcon}
               alt="Endorse Us"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
-                  <circle cx="12" cy="12" r="11" fill="#7c3aed" />
-                  <circle cx="9.3" cy="9" r="2.7" fill="white" />
-                  <path d="M4.5 18.5c0-2.9 2.15-5.2 4.8-5.2 1.1 0 2.1.4 2.9 1.05a5.3 5.3 0 0 0-1.5 3.7v.45H4.5z" fill="white" />
-                  <circle cx="17" cy="15.5" r="4.7" fill="#22c55e" />
-                  <path
-                    d="M14.8 15.6l1.5 1.5 3-3.2"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-              }
             />
             <ActionCard
               to="/digital-ino"
@@ -214,7 +201,7 @@ export default function Join() {
               label="Video"
               alt="Video"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] sm:h-[52px] sm:w-[52px]">
+                <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] scale-[0.7] sm:h-[52px] sm:w-[52px]">
                   <circle cx="12" cy="12" r="11" fill="#e63950" />
                   <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
                 </svg>
@@ -239,7 +226,7 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex flex-col items-center transition-transform duration-200 ease-out hover:scale-[1.2]"
+      className="group flex scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9]"
     >
       <span className="text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
