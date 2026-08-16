@@ -742,8 +742,8 @@ function PhonePlaceholder({ src, alt, large = false }) {
       alt={alt}
       className={
         large
-          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-[2] sm:w-[300px] lg:w-[300px]"
-          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-[2] sm:w-[180px] lg:w-[170px]"
+          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-115 sm:w-[300px] lg:w-[300px]"
+          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-115 sm:w-[180px] lg:w-[170px]"
       }
     />
   );

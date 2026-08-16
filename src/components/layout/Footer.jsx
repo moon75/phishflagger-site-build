@@ -75,7 +75,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 {PRODUCT_IMAGES.map((item) => (
                   <div
                     key={item.alt}
-                    className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2] sm:h-[190px] ${item.offsetClass || ""}`}
+                    className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-150 sm:h-[190px] ${item.offsetClass || ""}`}
                   >
                     <img
                       src={item.src}
