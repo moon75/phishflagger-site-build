@@ -18,9 +18,8 @@ export default function Join() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* ===== Pane 1 — Email Solutions ===== */}
+      {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative w-full px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-10">
-        <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
             <div className="mb-6 flex items-center justify-start gap-5">
@@ -109,9 +108,9 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 2 — Contact / Endorse Us / More Info / White Paper / Messages (no background) ===== */}
+      {/* ===== Pane 2 — Contact / Endorse Us / More Info / White Paper / FAQ (no background) ===== */}
       <section className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-3">
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
@@ -138,6 +137,7 @@ export default function Join() {
               to="/digital-ino"
               label="More Info"
               alt="More Info"
+              hideLabel
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#2a6df4" />
@@ -161,23 +161,6 @@ export default function Join() {
               }
             />
             <ActionCard
-              to="/join/messaging"
-              label="Messages"
-              alt="Messages"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#14b8a6" />
-                  <path
-                    d="M6 8.5h12v7.5H10l-3.3 2.6V16H6V8.5z"
-                    fill="white"
-                  />
-                  <circle cx="9" cy="12.2" r="0.9" fill="#14b8a6" />
-                  <circle cx="12" cy="12.2" r="0.9" fill="#14b8a6" />
-                  <circle cx="15" cy="12.2" r="0.9" fill="#14b8a6" />
-                </svg>
-              }
-            />
-            <ActionCard
               to="/about/faq?category=General"
               label="FAQ"
               alt="FAQ"
@@ -196,17 +179,6 @@ export default function Join() {
                 </svg>
               }
             />
-            <ActionCard
-              to="/about/video1"
-              label="Video"
-              alt="Video"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#e63950" />
-                  <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
-                </svg>
-              }
-            />
           </div>
         </div>
       </section>
@@ -222,13 +194,18 @@ function ActionCard({
   imageClassName = "",
   svgIcon,
   imageSize = "h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]",
+  hideLabel = false,
 }) {
   return (
     <Link
       to={to}
       className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
-      <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
+      <span
+        className={`whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px] ${
+          hideLabel ? "invisible" : ""
+        }`}
+      >
         {label}
       </span>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">

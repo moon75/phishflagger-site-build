@@ -13,7 +13,7 @@ export default function Header() {
 
   // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
   // menus that already open on hover — no click required.
-  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom"]);
+  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video"]);
 
   // Close mobile menu on route change
   useEffect(() => {

@@ -23,7 +23,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0001" />
-        <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
+        <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
           {/* 1 — heading + intro */}
           <div className="lg:max-w-[380px]">
             <h1 className="text-[24px] font-normal leading-[1.15] tracking-tight text-ink sm:text-[30px]">
@@ -31,7 +31,7 @@ export default function Telecom() {
               <br />
               <span className="text-brand">Help stop Call Spoofing</span>
             </h1>
-            <p className="mt-6 text-[16px] leading-relaxed text-ink sm:text-[20px]">
+            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               {brandify(
                 "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
               )}
@@ -147,17 +147,6 @@ export default function Telecom() {
                 </svg>
               }
             />
-            <ActionCard
-              to="/about/video1/telecom-caller-id"
-              label="Video"
-              alt="Video"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#e63950" />
-                  <path d="M10 8.3v7.4l6-3.7-6-3.7z" fill="white" />
-                </svg>
-              }
-            />
           </div>
         </div>
       </section>
@@ -202,17 +191,17 @@ export default function Telecom() {
             <img
               src={threePhoneImg}
               alt="Phones with caller ID display"
-              className="h-auto w-[24vw] max-w-[85px] object-contain sm:w-full sm:max-w-[130px]"
+              className="h-auto w-[24vw] max-w-[85px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[130px]"
             />
             <img
               src={desktopPhoneImg}
               alt="Caller ID box with PhishCounter sequence number, verified"
-              className="h-auto w-[32vw] max-w-[125px] object-contain sm:w-full sm:max-w-[195px]"
+              className="h-auto w-[32vw] max-w-[125px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[195px]"
             />
             <img
               src={callerIdBoxImg}
               alt="Caller ID box showing a PhishCounter sequence number"
-              className="h-auto w-[28vw] max-w-[115px] object-contain sm:w-full sm:max-w-[180px]"
+              className="h-auto w-[28vw] max-w-[115px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[180px]"
             />
           </div>
         </div>
@@ -588,7 +577,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" 
           <img
             src={image}
             alt={imageAlt}
-            className="h-auto w-full max-w-[210px] object-contain"
+            className="h-auto w-full max-w-[210px] object-contain transition-transform duration-200 hover:scale-120"
           />
         </div>
         {bullets ? (
