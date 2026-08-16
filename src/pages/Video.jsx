@@ -253,7 +253,7 @@ export default function Video() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+      <section className="w-full bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1000px]">
           {/* Intro */}
           <div className="text-center">
@@ -262,12 +262,12 @@ export default function Video() {
                 "See how PhishFlagger and human validation protects against phishing and fraud.",
               )}
             </p>
-            <h1 className="mt-4 text-[36px] font-extrabold uppercase tracking-tight text-brand sm:text-[48px]">
+            <h1 className="mt-4 text-[18px] font-extrabold uppercase tracking-tight text-brand sm:text-[22px]">
               Development Page
             </h1>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-2 sm:mt-10 sm:gap-3">
+          <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
             {VIDEO_CATEGORIES.map((category) => (
               <div key={category} className="flex flex-col items-center gap-1.5">
                 <a
@@ -300,7 +300,7 @@ export default function Video() {
           </div>
 
           {/* Page number — shown above the grid so it's easy to spot */}
-          <div className="mt-6 flex justify-center gap-2 sm:mt-8">
+          <div className="mt-3 flex justify-center gap-2 sm:mt-4">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
               <button
                 key={n}
@@ -322,13 +322,13 @@ export default function Video() {
           </div>
 
           {/* Video grid */}
-          <div className="mx-auto mt-6 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-4 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-5 sm:grid-cols-2 lg:grid-cols-3">
             {displayedVideos.map((v, i) => {
               const isPlaying = playing === i;
               return (
                 <div
                   key={v.src || `${activeCategory}-${page}-${i}`}
-                  className={`group overflow-hidden rounded-xl transition ${
+                  className={`group relative overflow-hidden rounded-xl transition-all duration-200 hover:z-10 hover:scale-120 ${
                     isPlaying
                       ? "ring-2 ring-brand ring-offset-2"
                       : "ring-1 ring-black/10 hover:ring-black/25"

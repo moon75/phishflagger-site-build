@@ -214,7 +214,7 @@ export default function Telecom() {
             <img
               src="/assets/images/image-stir.png"
               alt="Existing CLI"
-              className="h-auto w-full max-w-[500px]"
+              className="h-auto w-full max-w-[500px] transition-transform duration-200 hover:scale-120"
             />
           </div>
           <div>
@@ -251,7 +251,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20CLI.jpg"
               alt="STIR/SHAKEN anti-spoofing ecosystem diagram"
-              className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain"
+              className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain transition-transform duration-200 hover:scale-120"
             />
           </div>
           <div className="lg:order-1">
@@ -392,7 +392,7 @@ export default function Telecom() {
             <img
               src="/assets/images/Respresntation%20image.png"
               alt="PhishFlagger using existing infrastructure"
-              className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain"
+              className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain transition-transform duration-200 hover:scale-120"
             />
           </div>
           <div>
@@ -433,7 +433,7 @@ export default function Telecom() {
             <img
               src="/assets/images/sms-phone-and-text.png"
               alt="Phone showing PhishFlagger SMS messages next to numbered message sequence detail"
-              className="h-auto w-full max-w-[560px] object-contain"
+              className="h-auto w-full max-w-[560px] object-contain transition-transform duration-200 hover:scale-120"
             />
           </div>
         </div>

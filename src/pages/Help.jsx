@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
-import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 
 const LINKS = [
   { to: "/contact", label: "Contact" },
@@ -23,24 +22,7 @@ export default function Help() {
         }}
       >
         <div className="mx-auto max-w-content">
-          <div className="text-center">
-            <div className="mx-auto mb-6 flex h-[100px] w-[100px] items-center justify-center overflow-hidden rounded-full border-2 border-black bg-white transition-transform duration-200 hover:scale-110 sm:h-[120px] sm:w-[120px]">
-              <img
-                src={contactIcon}
-                alt="Support representative"
-                className="h-full w-full rounded-full object-cover"
-              />
-            </div>
-            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
-              Help
-            </h1>
-            <p className="mx-auto mt-6 max-w-[560px] text-[15px] leading-relaxed text-ink sm:text-[16px]">
-              Get in touch, find answers, or learn how you can support{" "}
-              <em className="not-italic font-semibold">PhishFlagger</em>.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-12 grid max-w-[720px] grid-cols-2 gap-4 sm:mt-16 sm:grid-cols-3 sm:gap-6">
+          <div className="mx-auto grid max-w-[720px] grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
             {LINKS.map((item) => (
               <Link
                 key={item.to}

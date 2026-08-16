@@ -49,13 +49,17 @@ export default function Join() {
                   Plug-In Free
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110">
+              <Link
+                to="/join/email-free-plug-in"
+                aria-label="Join Free — Plug-In Free"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
+              >
                 <img
                   src="/assets/images/individual.png"
                   alt="Individual protection illustration"
                   className="h-full w-full object-contain"
                 />
-              </div>
+              </Link>
               <Link
                 to="/join/email-free-plug-in"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
@@ -72,13 +76,17 @@ export default function Join() {
                   Plug-in Or Appliance
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1 transition-transform duration-200 hover:scale-110">
+              <Link
+                to="/join/pro"
+                aria-label="Join PRO — Plug-in Or Appliance"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1 transition-transform duration-200 hover:scale-110"
+              >
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
                   alt="Domain protection illustration"
                   className="h-full w-full rounded-lg object-contain"
                 />
-              </div>
+              </Link>
               <Link
                 to="/join/pro"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
@@ -92,13 +100,17 @@ export default function Join() {
                   Marketing
                 </span>
               </div>
-              <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110">
+              <Link
+                to="/join/email-marketing"
+                aria-label="Marketing"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
+              >
                 <img
                   src={whoCanUseImg}
                   alt="Join PhishFlagger illustration"
                   className="h-[174px] w-[174px] object-contain"
                 />
-              </div>
+              </Link>
               <Link
                 to="/join/email-marketing"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
