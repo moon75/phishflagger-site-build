@@ -8,6 +8,7 @@ export const nav = [
   { label: "Telecom", href: "/join/telecom" },
   {
     label: "Help",
+    href: "/help",
     children: [
       { label: "Contact", href: "/contact" },
       { label: "Support Desk", href: "/help/support-desk" },

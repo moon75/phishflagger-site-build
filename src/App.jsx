@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import PhishFlaggerOrg from "./pages/PhishFlaggerOrg.jsx";
 import Contact from "./pages/Contact.jsx";
 import SupportDesk from "./pages/SupportDesk.jsx";
+import Help from "./pages/Help.jsx";
 import Community from "./pages/Community.jsx";
 import Demo from "./pages/Demo.jsx";
 import VideoPage from "./pages/Video.jsx";
@@ -169,6 +170,7 @@ export default function App() {
         </Route>
 
         <Route path="help">
+          <Route index element={<Help />} />
           <Route path="endorse-us" element={<AboutEndorseUs />} />
           <Route
             path="endorse-us/thanks"

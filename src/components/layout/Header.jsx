@@ -13,7 +13,7 @@ export default function Header() {
 
   // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
   // menus that already open on hover — no click required.
-  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video"]);
+  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help"]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -50,7 +50,10 @@ export default function Header() {
                 {nav.map((item) =>
                   item.children ? (
                     <li key={item.label}>
-                      <NavDropdown item={item} />
+                      <NavDropdown
+                        item={item}
+                        hoverNavigate={HOVER_NAV_LABELS.has(item.label)}
+                      />
                     </li>
                   ) : (
                     <li key={item.label}>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { cn } from "../../lib/utils.js";
 
 function ChevronDown({ className }) {
@@ -19,10 +19,11 @@ function ChevronDown({ className }) {
   );
 }
 
-export default function NavDropdown({ item }) {
+export default function NavDropdown({ item, hoverNavigate = false }) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
   const closeTimer = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!open) return;
@@ -45,6 +46,7 @@ export default function NavDropdown({ item }) {
   const handleEnter = () => {
     clearTimeout(closeTimer.current);
     setOpen(true);
+    if (hoverNavigate && item.href) navigate(item.href);
   };
   const handleLeave = () => {
     closeTimer.current = setTimeout(() => setOpen(false), 120);
@@ -57,21 +59,50 @@ export default function NavDropdown({ item }) {
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <button
-        type="button"
-        className="inline-flex items-center gap-1 text-[15px] font-medium text-ink transition-colors hover:text-brand"
-        aria-expanded={open}
-        aria-haspopup="true"
-        onClick={() => setOpen((o) => !o)}
-      >
-        {item.label}
-        <ChevronDown
-          className={cn(
-            "h-3.5 w-3.5 transition-transform duration-200",
-            open && "rotate-180",
-          )}
-        />
-      </button>
+      {item.href ? (
+        <NavLink
+          to={item.href}
+          className={({ isActive }) =>
+            cn(
+              "inline-flex items-center gap-1 text-[15px] font-medium transition-colors hover:text-brand",
+              isActive ? "text-brand" : "text-ink",
+            )
+          }
+          aria-expanded={open}
+          aria-haspopup="true"
+          onClick={(e) => {
+            // Let the chevron toggle the menu without navigating away.
+            if (e.target.closest("svg")) {
+              e.preventDefault();
+              setOpen((o) => !o);
+            }
+          }}
+        >
+          {item.label}
+          <ChevronDown
+            className={cn(
+              "h-3.5 w-3.5 transition-transform duration-200",
+              open && "rotate-180",
+            )}
+          />
+        </NavLink>
+      ) : (
+        <button
+          type="button"
+          className="inline-flex items-center gap-1 text-[15px] font-medium text-ink transition-colors hover:text-brand"
+          aria-expanded={open}
+          aria-haspopup="true"
+          onClick={() => setOpen((o) => !o)}
+        >
+          {item.label}
+          <ChevronDown
+            className={cn(
+              "h-3.5 w-3.5 transition-transform duration-200",
+              open && "rotate-180",
+            )}
+          />
+        </button>
+      )}
 
       <div
         role="menu"

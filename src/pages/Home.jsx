@@ -22,54 +22,6 @@ const SCREENS = [
   { label: "Caller ID", src: callerIdHandsetImg },
 ];
 
-function RetroTvIcon({ className }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className}
-      aria-hidden="true"
-    >
-      {/* antenna */}
-      <path
-        d="M8 3.5 12 7M16 3.5 12 7"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      {/* TV body */}
-      <rect
-        x="3"
-        y="7"
-        width="18"
-        height="13.5"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-      {/* screen */}
-      <rect
-        x="5.5"
-        y="9.5"
-        width="9.5"
-        height="8.5"
-        rx="1.4"
-        stroke="currentColor"
-        strokeWidth="1.4"
-      />
-      {/* knobs */}
-      <circle cx="18" cy="12" r="1" fill="currentColor" />
-      <circle cx="18" cy="16" r="1" fill="currentColor" />
-      {/* feet */}
-      <path
-        d="M8 20.5 6.5 22.5M16 20.5 17.5 22.5"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
 
 export default function Home() {
   return (
@@ -89,48 +41,12 @@ export default function Home() {
     <section className="relative w-full px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
-      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        {/* Left — headline, copy, video button */}
-        <div>
-          {/* Headline */}
-          <div className="flex items-center justify-center gap-3 lg:justify-start">
-            <img
-              src="/assets/images/logo-mark.png"
-              alt="PhishFlagger envelope and flag mark"
-              className="h-[30px] w-auto shrink-0 object-contain sm:h-[38px] lg:h-[42px]"
-            />
-            <h1 className="text-center text-[24px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[32px] lg:text-left lg:text-[36px]">
-              Protecting Communications
-            </h1>
-          </div>
-
-          <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5] lg:mx-0 lg:text-left">
-            Because you should know who you're communicating with.{" "}
-            <BrandInline /> gives every email an additional layer of identity
-            verification, helping people recognize trusted communications and
-            identify messages that may be fraudulent.
-          </p>
-
-          {/* Video link */}
-          <div className="mt-8 flex justify-center sm:mt-10 lg:justify-start">
-            <Link
-              to="/video"
-              className="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border-2 border-ink bg-white px-9 py-3.5 text-base font-bold text-ink transition-transform duration-200 hover:scale-[1.2] sm:px-12 sm:text-lg"
-            >
-              <RetroTvIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
-              Watch Our Videos
-            </Link>
-          </div>
-        </div>
-
-        {/* Right — women ai image */}
-        <div className="flex justify-center">
-          <img
-            src="/assets/images/women%20ai.png"
-            alt="Woman using AI-protected email"
-            className="h-auto w-full max-w-[950px] object-contain"
-          />
-        </div>
+      <div className="mt-10 flex justify-center sm:mt-14">
+        <img
+          src="/assets/images/women%20ai.png"
+          alt="Woman using AI-protected email"
+          className="h-auto w-full max-w-[1400px] object-contain"
+        />
       </div>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}

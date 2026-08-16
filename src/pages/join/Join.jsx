@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
@@ -18,6 +19,7 @@ export default function Join() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <CloseButton />
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative w-full px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-10">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
@@ -108,9 +110,8 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 2 — Contact / Endorse Us / More Info / White Paper / FAQ (no background) ===== */}
+      {/* ===== Pane 2 — Contact / Endorse Us / White Paper / FAQ (no background) ===== */}
       <section className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-3">
-        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
@@ -132,19 +133,6 @@ export default function Join() {
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
-            />
-            <ActionCard
-              to="/digital-ino"
-              label="More Info"
-              alt="More Info"
-              hideLabel
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#2a6df4" />
-                  <rect x="10.9" y="10.4" width="2.2" height="7" rx="1.1" fill="white" />
-                  <circle cx="12" cy="7.1" r="1.4" fill="white" />
-                </svg>
-              }
             />
             <ActionCard
               to="/white-paper"

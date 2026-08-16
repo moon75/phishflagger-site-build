@@ -208,6 +208,30 @@ export default function Kick() {
             </div>
           </div>
         </div>
+
+        {/* ===== Protecting Communications (moved from Home hero ^0001) ===== */}
+        <div className="mt-16 w-full max-w-[900px] text-left">
+          <div className="flex items-center justify-center gap-3 lg:justify-start">
+            <img
+              src={logoMarkImg}
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[30px] w-auto shrink-0 object-contain sm:h-[38px] lg:h-[42px]"
+            />
+            <h2 className="text-center text-[24px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[32px] lg:text-left lg:text-[36px]">
+              Protecting Communications
+            </h2>
+          </div>
+          <p className="mx-auto mt-5 max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[20px] sm:leading-[1.5] lg:mx-0 lg:text-left">
+            Because you should know who you're communicating with.{" "}
+            <em className="italic">
+              <span className="font-bold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>{" "}
+            gives every email an additional layer of identity
+            verification, helping people recognize trusted communications and
+            identify messages that may be fraudulent.
+          </p>
+        </div>
       </section>
     </>
   );

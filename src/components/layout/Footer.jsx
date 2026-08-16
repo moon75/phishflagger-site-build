@@ -60,22 +60,32 @@ export default function Footer({ logoSrc = logoImg }) {
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section
-            className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+            className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
             style={{
               backgroundImage:
                 "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
               backgroundSize: "140%",
             }}
           >
+            <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+              ^0001
+            </span>
             <div className="mx-auto max-w-[1200px]">
-              <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
-                Protecting Communications
-              </h2>
+              <div className="flex items-center justify-center gap-3">
+                <img
+                  src="/assets/images/logo-mark.png"
+                  alt="PhishFlagger envelope and flag mark"
+                  className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px]"
+                />
+                <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
+                  Protecting Communications
+                </h2>
+              </div>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
                 {PRODUCT_IMAGES.map((item) => (
                   <div
                     key={item.alt}
-                    className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-150 sm:h-[190px] ${item.offsetClass || ""}`}
+                    className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-130 sm:h-[190px] ${item.offsetClass || ""}`}
                   >
                     <img
                       src={item.src}
@@ -110,6 +120,11 @@ export default function Footer({ logoSrc = logoImg }) {
           {/* Description paragraph */}
           <div className="mx-auto max-w-[1280px]">
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="mr-2 inline-block h-[26px] w-auto shrink-0 align-middle object-contain sm:h-[30px]"
+              />
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
               </em>{" "}

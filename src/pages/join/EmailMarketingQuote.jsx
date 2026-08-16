@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 
 const initialForm = {
   firstName: "",
@@ -54,7 +55,9 @@ export default function EmailMarketingQuote() {
   };
 
   return (
-    <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+    <>
+      <CloseButton to="/join/email-marketing" />
+      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
       <div className="mx-auto max-w-content">
         <div className="text-center">
           <Link
@@ -290,7 +293,8 @@ export default function EmailMarketingQuote() {
           )}
         </form>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 
