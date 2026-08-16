@@ -191,6 +191,18 @@ function categoryVideos(category) {
         title: "Pet Owner with Dog - Full",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Granny_with_cat_save_your_cat_too.mp4",
+        title: "Granny: Save Your Cat Too Use Code SAVE123",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/save%20your%20dog%20too_usecode-save123.mp4",
+        title: "Save Your Dog Too Use Code SAVE123",
+        description: "",
+      },
     ];
   }
 
