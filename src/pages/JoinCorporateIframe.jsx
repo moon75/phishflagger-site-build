@@ -1,6 +1,6 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 
-const JOIN_CORPORATE_URL = "https://join.phishflagger.com/membership-form-stripe.php";
+const JOIN_CORPORATE_URL = "https://join.phishflagger.com/business/";
 
 export default function JoinCorporateIframe() {
   return (
