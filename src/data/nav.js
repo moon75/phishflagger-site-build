@@ -15,7 +15,7 @@ export const nav = [
       { label: "Intellectual Property", href: "/about/intellectual-property" },
       { label: "Blog", href: "/about/blog" },
       { label: "Numbering History", href: "/about/numbering-history" },
-      { label: "Phishing Ends", href: "/about/phishing-ends" },
+      { label: "Phishing Ends - Fiction", href: "/about/phishing-ends" },
       { label: "Phishing News", href: "/News" },
     ],
   },

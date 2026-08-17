@@ -45,7 +45,7 @@ export default function Home() {
         <img
           src="/assets/images/women%20ai.png"
           alt="Woman using AI-protected email"
-          className="h-auto w-full max-w-[1400px] object-contain"
+          className="h-auto w-[80%] max-w-[1120px] -translate-x-6 object-contain"
         />
       </div>
 
@@ -541,8 +541,8 @@ export default function Home() {
       <SectionCounter value="^0006" />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
-          Numbering has been revolutionary in creating identifiable order to
-          records and documents, thereby reducing fraud.
+          Numbering has been revolutionary in creating order and reducing
+          fraud.
         </p>
 
         <div className="relative mt-14 sm:mt-16">
@@ -551,7 +551,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-10">
             <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1470
               </span>
               <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
@@ -566,13 +566,13 @@ export default function Home() {
                   className="h-[85%] w-auto object-contain"
                 />
               </div>
-              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+              <p className="mt-4 max-w-[320px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 Sequential page numbering brings order.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1892
               </span>
               <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
@@ -582,13 +582,13 @@ export default function Home() {
                   className="h-full w-auto scale-[1.2] object-contain"
                 />
               </div>
-              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+              <p className="mt-4 max-w-[320px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 Mechanical numbering stops paper fraud.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 rounded-full bg-[#eef0f4] px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 2026
               </span>
               <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
@@ -598,7 +598,7 @@ export default function Home() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <p className="mt-4 max-w-[320px] text-center text-[14px] leading-[1.5] text-ink-muted sm:text-[15px]">
+              <p className="mt-4 max-w-[320px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
                 delivery and helps stop fraud.
               </p>

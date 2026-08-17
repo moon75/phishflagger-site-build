@@ -19,7 +19,7 @@ export default function Join() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <CloseButton />
+      <CloseButton force />
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative w-full px-4 pb-6 pt-8 sm:px-6 sm:pb-8 sm:pt-10">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
@@ -134,7 +134,7 @@ export default function Join() {
               imageClassName="rounded-full object-cover"
             />
             <ActionCard
-              to="/join/telecom/subscribe"
+              to="/join/email-subscribe"
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
@@ -208,7 +208,7 @@ function ActionCard({
       >
         {label}
       </span>
-      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">
+      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 sm:h-[120px] sm:w-[120px]">
         {svgIcon ?? (
           <img
             src={src}

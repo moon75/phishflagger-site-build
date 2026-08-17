@@ -13,7 +13,7 @@ import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phon
 export default function Telecom() {
   return (
     <>
-      <CloseButton />
+      <CloseButton force />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
@@ -536,7 +536,7 @@ function ActionCard({
       <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
-      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white sm:h-[120px] sm:w-[120px]">
+      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 sm:h-[120px] sm:w-[120px]">
         {svgIcon ?? (
           <img
             src={src}

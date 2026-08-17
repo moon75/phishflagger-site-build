@@ -11,16 +11,29 @@ export default function Demo() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[960px] px-6 text-center sm:px-12">
           <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
-            Request Email Demo
+            Request Demo
           </h1>
 
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:demo@phishflaggerkey.com?subject=001%20-%20PhishFlagger%20Demo&body=Hi%20PhishFlagger%20team%2C%0A%0AI%27d%20like%20to%20try%20the%20demo."
               className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#2a6df4] px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition hover:bg-[#1a52c9] sm:px-10 sm:py-4 sm:text-[16px] duration-200 hover:scale-[1.2]"
             >
-              Click to Email
+              ABC Bank
             </a>
+
+            <div className="relative inline-flex">
+              <span className="absolute -top-3 right-0 z-10 -translate-y-1/2 rotate-6 rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+                Coming Soon
+              </span>
+              <button
+                type="button"
+                disabled
+                className="inline-flex cursor-not-allowed items-center justify-center rounded-lg bg-[#2a6df4]/50 px-8 py-3.5 text-[15px] font-bold text-white shadow-sm sm:px-10 sm:py-4 sm:text-[16px]"
+              >
+                Text ACME Co.
+              </button>
+            </div>
           </div>
 
           <p className="mx-auto mt-8 max-w-[640px] text-[16px] leading-[1.6] text-ink-muted sm:mt-10 sm:text-[17px]">
@@ -34,7 +47,7 @@ export default function Demo() {
               What should I expect:
             </h2>
             <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              We will email you a series of 5 emails simulating bank
+              We will email you a series of 7 emails simulating bank
               communications. One of them will be a Phish. This will allow
               you a way to examine your emails should you suspect they are
               fraudulent.

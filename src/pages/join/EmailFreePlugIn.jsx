@@ -84,7 +84,7 @@ export default function EmailFreePlugIn() {
                 to="/joinfree"
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
-                Join Free
+                JF
               </Link>
               <div className="relative">
                 <span className="absolute -top-4 -right-4 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-sm">
@@ -92,7 +92,7 @@ export default function EmailFreePlugIn() {
                 </span>
                 <Link
                   to="/join-free"
-                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#e3e3e3] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#d4d4d4] duration-200 hover:scale-[1.2]"
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </Link>

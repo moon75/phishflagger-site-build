@@ -243,18 +243,20 @@ export default function EmailDomain() {
             </ul>
           </div>
           <div className="text-center">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              Pricing
-            </h2>
-            <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+            <p className="mx-auto max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
               As low as $10.00 per Year / per Email
             </p>
-            <Link
-              to="/join-corporate"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
-            >
-              Join
-            </Link>
+            <div className="relative mt-6 inline-flex">
+              <span className="absolute -top-3 right-0 z-10 -translate-y-1/2 rotate-6 rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+                Coming Soon
+              </span>
+              <Link
+                to="/join-corporate"
+                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+              >
+                Join
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -251,7 +251,7 @@ export default function Video() {
 
   return (
     <>
-      <CloseButton />
+      <CloseButton force />
 
       <section className="w-full bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1000px]">
@@ -259,7 +259,7 @@ export default function Video() {
           <div className="text-center">
             <p className="mx-auto max-w-[900px] text-[31.5px] leading-[1.6] text-ink sm:text-[33.75px]">
               {brandify(
-                "See how PhishFlagger and human validation protects against phishing and fraud.",
+                "See how PhishFlagger protects against phishing and fraud.",
               )}
             </p>
             <h1 className="mt-4 text-[18px] font-extrabold uppercase tracking-tight text-brand sm:text-[22px]">
@@ -287,7 +287,7 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-colors sm:text-[14px] ${
+                  className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-120 sm:text-[14px] ${
                     category === activeCategory
                       ? "border-[#5a6066] bg-[#5a6066] text-white"
                       : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"

@@ -12,7 +12,7 @@ const LINKS = [
 export default function Help() {
   return (
     <>
-      <CloseButton />
+      <CloseButton force />
       <section
         className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24"
         style={{

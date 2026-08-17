@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 
 export default function WhitePaper() {
@@ -13,6 +14,15 @@ export default function WhitePaper() {
 
           <p className="mx-auto mt-8 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
             PLACEHOLDER-WHITEPAPER. Replace this copy with the final content.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
+            <Link
+              to="/digital-ino"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              More Info Here
+            </Link>
           </p>
         </div>
       </section>
