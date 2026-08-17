@@ -59,6 +59,7 @@ const VIDEO_CATEGORIES = [
   "Manual",
   "Kickstarter",
   "Learning",
+  "CISO",
   "Telecom Caller ID",
   "Oracle",
 ];
@@ -71,6 +72,7 @@ const CATEGORY_SLUGS = {
   Learning: "learning",
   "Telecom Caller ID": "telecom-caller-id",
   Oracle: "oracle",
+  CISO: "ciso",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
@@ -89,6 +91,7 @@ const CATEGORY_SCRIPTS = {
   Learning: "https://docs.google.com/document/d/1nh8GnkkCM9uDDPFNhSAr9Gfhu49pk_l4YpRbvTsSP4c/edit?usp=sharing",
   "Telecom Caller ID": "https://docs.google.com/document/d/1HsqXIfQIE4AkhKF8tk_Yq0AFoL0UH9xD3qduP0PzGFU/edit?usp=sharing",
   Oracle: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
+  CISO: "https://docs.google.com/document/d/1yEJY1sn-JPJcrRg2w34hihlrBzNlzBKAEidvqMaEW6M/edit?usp=sharing",
 };
 
 const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
@@ -257,12 +260,10 @@ export default function Video() {
         <div className="mx-auto max-w-[1000px]">
           {/* Intro */}
           <div className="text-center">
-            <p className="mx-auto max-w-[900px] text-[31.5px] leading-[1.6] text-ink sm:text-[33.75px]">
-              {brandify(
-                "See how PhishFlagger protects against phishing and fraud.",
-              )}
+            <p className="mx-auto max-w-[900px] text-[22px] leading-[1.6] text-ink sm:text-[24px]">
+              {brandify("See how PhishFlagger protects against phishing.")}
             </p>
-            <h1 className="mt-4 text-[18px] font-extrabold uppercase tracking-tight text-brand sm:text-[22px]">
+            <h1 className="mt-4 text-[9px] font-extrabold uppercase tracking-tight text-brand sm:text-[11px]">
               Development Page
             </h1>
           </div>
@@ -310,7 +311,7 @@ export default function Video() {
                   setPage(n);
                 }}
                 aria-current={n === page ? "page" : undefined}
-                className={`h-8 w-8 rounded-full text-[13px] font-medium transition-colors ${
+                className={`h-8 w-8 rounded-full text-[13px] font-medium transition-all duration-200 hover:scale-120 ${
                   n === page
                     ? "bg-[#5a6066] text-white"
                     : "text-ink-muted hover:bg-gray-100 hover:text-ink"
@@ -328,7 +329,7 @@ export default function Video() {
               return (
                 <div
                   key={v.src || `${activeCategory}-${page}-${i}`}
-                  className={`group relative overflow-hidden rounded-xl transition-all duration-200 hover:z-10 hover:scale-120 ${
+                  className={`group relative overflow-hidden rounded-xl transition-all duration-200 hover:z-10 hover:scale-110 ${
                     isPlaying
                       ? "ring-2 ring-brand ring-offset-2"
                       : "ring-1 ring-black/10 hover:ring-black/25"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
@@ -33,9 +34,18 @@ export default function NumberingHistory() {
       >
         <div className="mx-auto max-w-content">
           <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
-            <HistoryCard img={history1Img} imgAlt="Numbered book pages" />
-            <HistoryCard img={history2Img} imgAlt="Mechanical numbering stamp" />
             <HistoryCard
+              to="/about/numbering-history/books"
+              img={history1Img}
+              imgAlt="Numbered book pages"
+            />
+            <HistoryCard
+              to="/about/numbering-history/documents"
+              img={history2Img}
+              imgAlt="Mechanical numbering stamp"
+            />
+            <HistoryCard
+              to="/about/numbering-history/communications"
               img={history3Img}
               imgAlt="PhishFlagger email numbering"
             />
@@ -46,14 +56,17 @@ export default function NumberingHistory() {
   );
 }
 
-function HistoryCard({ img, imgAlt }) {
+function HistoryCard({ to, img, imgAlt }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center">
+    <Link
+      to={to}
+      className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center transition-transform duration-200 hover:z-10 hover:scale-105"
+    >
       <img
         src={img}
         alt={imgAlt}
         className="h-auto w-full rounded-2xl object-contain"
       />
-    </div>
+    </Link>
   );
 }

@@ -267,7 +267,7 @@ export default function Telecom() {
                     href="https://commsrisk.com/fraud-dashboard/#ftcDncVsPhoneLosses"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
+                    className="ml-2 inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                   >
                     Link
                   </a>
@@ -281,7 +281,7 @@ export default function Telecom() {
                     href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
+                    className="ml-2 inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                   >
                     Link
                   </a>
@@ -295,7 +295,7 @@ export default function Telecom() {
                     href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
+                    className="ml-2 inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                   >
                     Link
                   </a>
@@ -309,7 +309,7 @@ export default function Telecom() {
                     href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 text-blue-600 underline underline-offset-2"
+                    className="ml-2 inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                   >
                     Link
                   </a>
@@ -320,7 +320,7 @@ export default function Telecom() {
                   href="https://www.magrathea-telecom.co.uk/ofcom-attempt-to-close-the-cli-spoofing-loophole-but-are-there-holes-in-the-plan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   September 2, 2025
                 </a>
@@ -329,7 +329,7 @@ export default function Telecom() {
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-1-10-weeks/tackling-scam-calls-from-abroad/consultation---tackling-scam-calls-from-abroad.pdf?v=403699"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   July 21, 2025
                 </a>
@@ -338,7 +338,7 @@ export default function Telecom() {
                   href="https://commsrisk.com/uk-rejects-stir-shaken-us-plan-to-control-global-caller-id-now-dead/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   February 2, 2024
                 </a>
@@ -347,7 +347,7 @@ export default function Telecom() {
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/276698---further-action-to-tackle--scam-calls/associated-documents/consultation-tackling-scam-calls--expecting-providers-to-block-more-calls-with-spoofed-numbers?v=330862"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   February 2, 2024
                 </a>
@@ -356,7 +356,7 @@ export default function Telecom() {
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/scams/calling-line-identification-cli-authentication-assessment-and-future-roadmap?v=330857"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   February 1, 2024
                 </a>
@@ -365,7 +365,7 @@ export default function Telecom() {
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/responses/uk-competitive-telecommunications-association?v=202723"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   June 2023
                 </a>
@@ -374,7 +374,7 @@ export default function Telecom() {
                   href="https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-2-6-weeks/260545-cli-authentication/associated-documents/cli-authentication-potential-approach-to-detect-and-block-spoof-numbers.pdf?v=329617"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 underline underline-offset-2"
+                  className="inline-block text-blue-600 underline underline-offset-2 transition-transform duration-200 hover:scale-[1.2]"
                 >
                   April 28, 2023
                 </a>
@@ -462,7 +462,7 @@ export default function Telecom() {
             in the following Jurisdictions:
           </p>
           <div
-            className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8"
+            className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-6 transition-transform duration-200 hover:z-10 hover:scale-[1.5] sm:p-8"
             style={{ zoom: 0.6 }}
           >
             <p className="text-[15px] leading-[1.85] text-ink sm:text-[18px]">
@@ -536,7 +536,7 @@ function ActionCard({
       <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
-      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 sm:h-[120px] sm:w-[120px]">
+      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
         {svgIcon ?? (
           <img
             src={src}

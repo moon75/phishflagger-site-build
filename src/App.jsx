@@ -56,6 +56,9 @@ import Blog from "./pages/about/Blog.jsx";
 import News from "./pages/about/News.jsx";
 import Fiction from "./pages/about/Fiction.jsx";
 import NumberingHistory from "./pages/about/NumberingHistory.jsx";
+import HistoryBooks from "./pages/about/history/Books.jsx";
+import HistoryDocuments from "./pages/about/history/Documents.jsx";
+import HistoryCommunications from "./pages/about/history/Communications.jsx";
 import Kickstarter from "./pages/about/Kickstarter.jsx";
 import HallOfFame from "./pages/about/HallOfFame.jsx";
 import AboutEndorseUs from "./pages/about/EndorseUs.jsx";
@@ -214,6 +217,9 @@ export default function App() {
           />
           <Route path="supporters" element={<Supporters />} />
           <Route path="numbering-history" element={<NumberingHistory />} />
+          <Route path="numbering-history/books" element={<HistoryBooks />} />
+          <Route path="numbering-history/documents" element={<HistoryDocuments />} />
+          <Route path="numbering-history/communications" element={<HistoryCommunications />} />
           <Route path="phishing-ends" element={<Fiction />} />
         </Route>
 

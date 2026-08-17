@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import topImg from "../assets/images/3rd section left image.avif";
@@ -20,6 +21,15 @@ export default function DigitalIno() {
               className="h-auto w-full max-w-[420px] object-contain"
             />
           </div>
+
+          <p className="mx-auto mt-6 max-w-[640px] text-center text-[15px] leading-relaxed sm:text-[16px]">
+            <Link
+              to="/white-paper"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              White Paper
+            </Link>
+          </p>
 
           <p className="mx-auto mt-8 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
             PLACEHOLDER-DIGITALINO-1. Replace this copy with the final

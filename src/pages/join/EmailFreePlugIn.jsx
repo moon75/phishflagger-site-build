@@ -82,7 +82,7 @@ export default function EmailFreePlugIn() {
             <div className="flex items-center gap-3">
               <Link
                 to="/joinfree"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#fafafa] px-5 py-3 text-[13px] font-bold text-[#d8d8d8] transition hover:bg-[#f0f0f0] duration-200 hover:scale-[1.2]"
               >
                 JF
               </Link>

@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
-import FaqTabs from "../faq/FaqTabs.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -21,10 +20,6 @@ const PRODUCT_IMAGES = [
 export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
   const hideFaq = pathname === "/about/faq";
-  // FAQ block only — the rest of the footer stays global. Per request,
-  // /email and /join/telecom hide just the FAQ section.
-  const hideFaqSection =
-    hideFaq || pathname === "/email" || pathname === "/join/telecom";
   const tags = [
     "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
     "#numberingemail", "#cybersecurity", "#emailsecurity",
@@ -35,27 +30,6 @@ export default function Footer({ logoSrc = logoImg }) {
 
   return (
     <>
-      {!hideFaqSection && (
-        <>
-          <div className="h-1.5 w-full bg-gray-300" aria-hidden />
-          <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-            <div className="mx-auto max-w-[1000px]">
-              <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
-                FAQ
-              </h2>
-
-              <div className="mt-8 sm:mt-12">
-                <FaqTabs
-                  categoryOrder={[0, 2, 1, 3, 4]}
-                  showAskAiComingSoon
-                  classic
-                />
-              </div>
-            </div>
-          </section>
-        </>
-      )}
-
       {!hideFaq && (
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
@@ -80,6 +54,12 @@ export default function Footer({ logoSrc = logoImg }) {
                 <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                   Protecting Communications
                 </h2>
+                <Link
+                  to="/about/faq"
+                  className="ml-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:ml-10 sm:text-[14px]"
+                >
+                  FAQ
+                </Link>
               </div>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
                 {PRODUCT_IMAGES.map((item) => (
@@ -195,7 +175,6 @@ export default function Footer({ logoSrc = logoImg }) {
                     { label: "Email - Supporters", to: "/help/supporters" },
                     { label: "Telecom - Endorse Us", to: "/help/telecom-endorse-us" },
                     { label: "Telecom - Sign Petition", to: "/petition" },
-                    { label: "FAQ", to: "/about/faq" },
                   ].map((link) => (
                     <li key={link.to}>
                       <Link
