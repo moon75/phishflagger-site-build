@@ -25,17 +25,12 @@ export default function Telecom() {
         <SectionCounter value="^0001" />
         <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
           {/* 1 — heading + intro */}
-          <div className="lg:max-w-[380px]">
-            <h1 className="text-[24px] font-normal leading-[1.15] tracking-tight text-ink sm:text-[30px]">
-              Telecoms and Regulators
-              <br />
-              <span className="text-brand">Help stop Call Spoofing</span>
-            </h1>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-              {brandify(
-                "PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field providing a simple way to identify fake calls.",
-              )}
-            </p>
+          <div className="lg:max-w-[420px]">
+            <img
+              src="/assets/images/Telecoms%20and%20regulators.png"
+              alt="Telecoms and Regulators — Help stop Call Spoofing"
+              className="h-auto w-full object-contain"
+            />
           </div>
 
           {/* 2 — Caller ID list */}

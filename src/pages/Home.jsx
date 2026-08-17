@@ -122,7 +122,7 @@ export default function Home() {
 
     {/* ===== Section 4 — Domain protection (part of Hero ^0001 pane) ===== */}
     <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-6 sm:gap-8 lg:grid-cols-2">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
           <div className="w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
