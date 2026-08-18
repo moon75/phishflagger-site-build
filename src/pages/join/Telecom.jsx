@@ -24,6 +24,13 @@ export default function Telecom() {
       >
         <SectionCounter value="^0001" />
         <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
+          {/* A — placeholder */}
+          <div className="hidden h-full items-center justify-center lg:flex lg:flex-1">
+            <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+              <PlaceholderIcon />
+            </div>
+          </div>
+
           {/* 1 — heading + intro */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
@@ -47,8 +54,15 @@ export default function Telecom() {
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-full w-auto max-w-full rounded-2xl object-cover"
+              className="h-[75%] w-auto max-w-full rounded-2xl object-cover"
             />
+          </div>
+
+          {/* B — placeholder */}
+          <div className="hidden h-full items-center justify-center lg:flex lg:flex-1">
+            <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+              <PlaceholderIcon />
+            </div>
           </div>
         </div>
 
@@ -475,6 +489,25 @@ function ActionCard({
         )}
       </div>
     </Link>
+  );
+}
+
+function PlaceholderIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-14 w-14 text-gray-300"
+      aria-hidden
+    >
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <circle cx="8.5" cy="9.5" r="1.5" />
+      <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L3 20" />
+    </svg>
   );
 }
 

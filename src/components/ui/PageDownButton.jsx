@@ -1,10 +1,19 @@
 // Small floating "Page Down" button, styled to match CloseButton. Clicking
-// it scrolls to the top of the next <section> below the current scroll
-// position, within the given container (or the whole document if no
-// container is supplied).
-export default function PageDownButton({ containerRef }) {
+// it scrolls to a target element. Pass `targetSelector` to pin an exact
+// element (recommended); otherwise it falls back to scrolling to the next
+// <section> below the current scroll position within `containerRef`.
+export default function PageDownButton({ containerRef, targetSelector }) {
   function handleClick() {
     const root = containerRef?.current ?? document;
+
+    if (targetSelector) {
+      const target = root.querySelector(targetSelector);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
     const sections = Array.from(root.querySelectorAll("section"));
     const scrollY = window.scrollY;
 
