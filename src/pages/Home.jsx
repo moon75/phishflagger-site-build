@@ -122,7 +122,7 @@ export default function Home() {
 
     {/* ===== Section 4 — Domain protection (part of Hero ^0001 pane) ===== */}
     <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-6 sm:gap-8 lg:grid-cols-2">
+      <div className="mx-auto grid w-3/5 max-w-[960px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
           <div className="w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
@@ -135,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Right — PhishFlagger Digital Verification image */}
-        <div className="hidden w-full flex-col items-center lg:flex">
+        <div className="flex w-full flex-col items-center">
           <div className="aspect-[3/2] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/phishflagger%20digital%20verification.png"

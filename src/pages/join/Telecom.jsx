@@ -23,9 +23,9 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0001" />
-        <div className="mx-auto flex max-w-content flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-10 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center lg:gap-24">
           {/* 1 — heading + intro */}
-          <div className="lg:max-w-[420px]">
+          <div className="lg:max-w-[540px]">
             <img
               src="/assets/images/Telecoms%20and%20regulators.png"
               alt="Telecoms and Regulators — Help stop Call Spoofing"
@@ -34,52 +34,20 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:ml-40 lg:max-w-[640px] lg:scale-[0.85]">
-            <div className="flex items-start gap-1">
-              <img
-                src="/assets/images/logo-mark.png"
-                alt="PhishFlagger envelope and flag mark"
-                className="mt-1 h-[44px] w-auto shrink-0 object-contain sm:h-[52px]"
-              />
-              <h2 className="max-w-[420px] text-[24px] font-bold leading-tight tracking-tight text-ink [text-wrap:balance] sm:text-[30px]">
-                Existing Caller ID can be used to validate calls now.
-              </h2>
-            </div>
-            <ul className="mt-6 max-w-[400px] space-y-1 rounded-2xl border-2 border-black bg-white px-5 py-3 text-[15px] leading-snug text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:px-6 sm:py-4 sm:text-[17px]">
-              {CALL_EXAMPLES.map((item) => (
-                <li
-                  key={`${item.seq}-${item.status}`}
-                  className="font-medium tabular-nums"
-                >
-                  <span>{item.number}</span>
-                  {item.seq && (
-                    <>
-                      {" "}
-                      <span className="font-bold text-[#1f6e5f]">
-                        {item.seq}
-                      </span>
-                    </>
-                  )}{" "}
-                  <span>{item.name}</span>
-                  {item.status && (
-                    <>
-                      {" "}
-                      <span className="font-bold text-brand">
-                        {item.status}
-                      </span>
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
+          <div className="lg:max-w-[500px]">
+            <img
+              src="/assets/images/Existing%20Caller%20ID%20.png"
+              alt="Existing Caller ID can be used to validate calls now."
+              className="h-auto w-full object-contain"
+            />
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex justify-start lg:ml-auto lg:scale-100">
+          <div className="flex w-full max-w-[300px] justify-center sm:max-w-[370px] lg:w-[370px] lg:shrink-0">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-auto w-full max-w-[280px] object-contain sm:max-w-[300px]"
+              className="h-auto w-full object-contain"
             />
           </div>
         </div>
@@ -479,40 +447,6 @@ export default function Telecom() {
     </>
   );
 }
-
-const CALL_EXAMPLES = [
-  {
-    number: "...613-861-8600",
-    seq: "2031",
-    name: "ABC Bank",
-    status: "",
-  },
-  {
-    number: "...613-861-8600",
-    seq: "2032",
-    name: "ABC Bank",
-    status: "",
-  },
-  {
-    number: "...613-861-8600",
-    seq: "2033",
-    name: "ABC Bank",
-    status: "",
-  },
-  {
-    number: "...613-861-8600",
-    seq: "",
-    name: "ABC Bank",
-    status: "<<< Fake",
-  },
-  {
-    number: "...613-861-8600",
-    seq: "3531",
-    name: "ABC Bank",
-    status: "<<< Fake",
-  },
-];
-
 
 function ActionCard({
   to,
