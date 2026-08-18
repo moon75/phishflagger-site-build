@@ -23,31 +23,31 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0001" />
-        <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-10 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center lg:gap-24">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
           {/* 1 — heading + intro */}
-          <div className="lg:max-w-[540px]">
+          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
               src="/assets/images/Telecoms%20and%20regulators.png"
               alt="Telecoms and Regulators — Help stop Call Spoofing"
-              className="h-auto w-full object-contain"
+              className="h-full w-auto max-w-full object-contain"
             />
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="lg:max-w-[500px]">
+          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
               src="/assets/images/existing%20caller%20id.png"
               alt="Existing Caller ID can be used to validate calls now."
-              className="h-auto w-full object-contain"
+              className="h-full w-auto max-w-full rounded-2xl object-contain"
             />
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex w-full max-w-[300px] justify-center sm:max-w-[370px] lg:w-[370px] lg:shrink-0">
+          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-auto w-full object-contain"
+              className="h-full w-auto max-w-full rounded-2xl object-cover"
             />
           </div>
         </div>
