@@ -27,7 +27,7 @@ export default function Join() {
       <CloseButton force />
       <PageDownButton containerRef={containerRef} />
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
-      <section className="relative w-full px-4 pb-6 pt-28 sm:px-6 sm:pb-8 sm:pt-28">
+      <section className="relative w-full px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
             <div className="mb-6 flex items-center justify-start gap-5">
@@ -190,7 +190,7 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 1.5 — What is PhishFlagger? (Human + Digital text) ===== */}
-      <section className="relative w-full px-4 pt-6 pb-6 sm:px-6 sm:pt-8 sm:pb-8">
+      <section className="relative w-full bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <div className="mx-auto max-w-content">
           <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
             <div>

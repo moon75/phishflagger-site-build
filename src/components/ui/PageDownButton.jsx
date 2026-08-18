@@ -1,14 +1,20 @@
-// Small floating "scroll down" indicator. Clicking it scrolls to the top of
-// the 2nd <section> in the given container (or the whole document if no
+// Small floating "Page Down" button, styled to match CloseButton. Clicking
+// it scrolls to the top of the next <section> below the current scroll
+// position, within the given container (or the whole document if no
 // container is supplied).
-export default function PageDownButton({ containerRef, targetIndex = 1 }) {
+export default function PageDownButton({ containerRef }) {
   function handleClick() {
     const root = containerRef?.current ?? document;
     const sections = Array.from(root.querySelectorAll("section"));
-    const target = sections[targetIndex] ?? sections[sections.length - 1];
+    const scrollY = window.scrollY;
 
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const next = sections.find((section) => {
+      const top = section.getBoundingClientRect().top + scrollY;
+      return top > scrollY + 10;
+    });
+
+    if (next) {
+      next.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       window.scrollBy({ top: window.innerHeight * 0.9, behavior: "smooth" });
     }
@@ -18,29 +24,21 @@ export default function PageDownButton({ containerRef, targetIndex = 1 }) {
     <button
       type="button"
       onClick={handleClick}
-      aria-label="Scroll to next section"
-      className="group absolute left-1/2 top-4 z-10 flex -translate-x-1/2 cursor-pointer flex-col items-center gap-0.5 text-ink transition hover:scale-110 sm:top-6"
+      aria-label="Page down to the next section"
+      className="absolute left-1/2 top-2 z-10 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#4a4a4a] text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-10 sm:w-10"
     >
-      <Chevron className="opacity-40 [animation-delay:-0.3s]" />
-      <Chevron className="-mt-3 opacity-70 [animation-delay:-0.15s]" />
-      <Chevron className="-mt-3" />
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-4 w-4 sm:h-5 sm:w-5"
+        aria-hidden
+      >
+        <path d="M6 9l6 6 6-6" />
+      </svg>
     </button>
-  );
-}
-
-function Chevron({ className = "" }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`h-5 w-5 animate-bounce sm:h-6 sm:w-6 ${className}`}
-      aria-hidden
-    >
-      <path d="M6 9l6 6 6-6" />
-    </svg>
   );
 }
