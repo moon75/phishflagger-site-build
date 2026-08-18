@@ -125,7 +125,7 @@ export default function Home() {
       <div className="mx-auto grid w-3/5 max-w-[960px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
-          <div className="w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <div className="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/phishflagger%20email%20authentication.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
