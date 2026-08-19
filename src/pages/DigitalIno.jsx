@@ -22,6 +22,15 @@ export default function DigitalIno() {
             />
           </div>
 
+          {/* ===== Digital verification diagram (moved from Home) ===== */}
+          <div className="mx-auto mt-10 w-full max-w-[900px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+            <img
+              src="/assets/images/phishflagger%20digital%20verification.png"
+              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+
           <p className="mx-auto mt-6 max-w-[640px] text-center text-[15px] leading-relaxed sm:text-[16px]">
             <Link
               to="/white-paper"

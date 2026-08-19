@@ -107,6 +107,15 @@ export default function Kick() {
           className="mt-6 h-auto w-full max-w-[480px] object-contain"
         />
 
+        {/* ===== Email authentication diagram (moved from Home) ===== */}
+        <div className="mt-10 w-full max-w-[1000px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <img
+            src="/assets/images/phishflagger%20email%20authentication.png"
+            alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+
         {/* ===== Available domains ===== */}
         <div className="mx-auto mt-10 w-full max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4">
           <p className="text-[13px] font-semibold text-ink">

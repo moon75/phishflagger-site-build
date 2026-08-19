@@ -90,39 +90,6 @@ export default function Home() {
 
       </div>
     </section>
-
-    {/* ===== Section 4 — Domain protection (part of Hero ^0001 pane) ===== */}
-    <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
-      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
-        {/* Left — email authentication diagram */}
-        <div className="flex w-full flex-col items-center">
-          <Link
-            to="/kick"
-            className="flex aspect-[1672/401] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-200 hover:scale-[1.02]"
-          >
-            <img
-              src="/assets/images/phishflagger%20email%20authentication.png"
-              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-              className="w-full max-w-none object-contain"
-            />
-          </Link>
-        </div>
-
-        {/* Right — PhishFlagger Digital Verification image */}
-        <div className="flex w-full flex-col items-center">
-          <Link
-            to="/digital-ino"
-            className="aspect-[1472/624] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-200 hover:scale-[1.02]"
-          >
-            <img
-              src="/assets/images/phishflagger%20digital%20verification.png"
-              alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-              className="h-auto w-full object-contain"
-            />
-          </Link>
-        </div>
-      </div>
-    </section>
     </div>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}

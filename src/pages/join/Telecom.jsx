@@ -45,7 +45,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20caller%20id.png"
               alt="Existing Caller ID can be used to validate calls now."
-              className="h-full w-auto max-w-full rounded-2xl object-contain"
+              className="block h-auto w-auto max-h-full max-w-full rounded-xl object-contain"
             />
           </div>
 
