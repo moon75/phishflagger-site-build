@@ -22,6 +22,15 @@ export default function DigitalIno() {
             />
           </div>
 
+          {/* ===== Email authentication diagram (moved from Home) ===== */}
+          <div className="mx-auto mt-10 w-full max-w-[1000px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+            <img
+              src="/assets/images/phishflagger%20email%20authentication.png"
+              alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+
           {/* ===== Digital verification diagram (moved from Home) ===== */}
           <div className="mx-auto mt-10 w-full max-w-[900px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
