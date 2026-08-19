@@ -22,10 +22,9 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0001" />
         <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
           {/* A — placeholder */}
-          <div className="hidden h-full items-center justify-center lg:flex lg:flex-1">
+          <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.5]">
             <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
               <PlaceholderIcon />
             </div>
@@ -42,11 +41,15 @@ export default function Telecom() {
 
           {/* 2 — Caller ID list */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <img
-              src="/assets/images/existing%20caller%20id.png"
-              alt="Existing Caller ID can be used to validate calls now."
-              className="h-full w-auto max-w-full rounded-2xl object-contain"
-            />
+            <div className="relative h-full">
+              <div className="absolute -top-1.5 left-2 right-0 h-2 rounded-full bg-black/20 blur-[3px]" />
+              <div className="absolute -right-1.5 top-2 bottom-0 w-2 rounded-full bg-black/20 blur-[3px]" />
+              <img
+                src="/assets/images/existing%20caller%20id.png"
+                alt="Existing Caller ID can be used to validate calls now."
+                className="relative h-full w-auto max-w-full rounded-2xl object-contain"
+              />
+            </div>
           </div>
 
           {/* 3 — granny image */}
@@ -59,7 +62,7 @@ export default function Telecom() {
           </div>
 
           {/* B — placeholder */}
-          <div className="hidden h-full items-center justify-center lg:flex lg:flex-1">
+          <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.5]">
             <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
               <PlaceholderIcon />
             </div>
@@ -129,7 +132,7 @@ export default function Telecom() {
       </section>
 
       <SplitSection
-        counter="^0002"
+        counter="^0001"
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
@@ -146,7 +149,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
@@ -185,7 +188,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -222,7 +225,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -363,7 +366,7 @@ export default function Telecom() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0006" />
+        <SectionCounter value="^0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -395,7 +398,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0007" />
+        <SectionCounter value="^0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -423,7 +426,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <SectionCounter value="^0008" />
+        <SectionCounter value="^0007" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
