@@ -96,7 +96,7 @@ export default function Home() {
       <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
-          <div className="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <div className="flex aspect-[1672/401] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/phishflagger%20email%20authentication.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
@@ -107,11 +107,11 @@ export default function Home() {
 
         {/* Right — PhishFlagger Digital Verification image */}
         <div className="flex w-full flex-col items-center">
-          <div className="aspect-[3/2] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <div className="aspect-[1472/624] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
               src="/assets/images/phishflagger%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-              className="h-auto w-full -translate-y-2 object-contain"
+              className="h-auto w-full object-contain"
             />
           </div>
         </div>

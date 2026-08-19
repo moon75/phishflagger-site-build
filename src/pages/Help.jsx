@@ -29,10 +29,17 @@ export default function Help() {
 
       {/* ===== Pane 1 — Org / Kickstarter placeholder images ===== */}
       <section className="w-full px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
-        <div className="mx-auto max-w-content">
-          <div className="mx-auto grid max-w-[820px] grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+        <div className="mx-auto w-full">
+          <div className="mx-auto flex w-full flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center">
+            {/* Edge placeholder */}
+            <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.4]">
+              <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+                <ImagePlaceholderIcon />
+              </div>
+            </div>
+
             {PLACEHOLDER_PANE.map((item) => (
-              <div key={item.title} className="flex flex-col items-center">
+              <div key={item.title} className="flex flex-col items-center lg:flex-[1.6]">
                 <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
                   {item.title}
                 </h2>
@@ -44,6 +51,13 @@ export default function Help() {
                 </p>
               </div>
             ))}
+
+            {/* Edge placeholder */}
+            <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.4]">
+              <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+                <ImagePlaceholderIcon />
+              </div>
+            </div>
           </div>
         </div>
       </section>
