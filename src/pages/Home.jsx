@@ -96,24 +96,30 @@ export default function Home() {
       <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
-          <div className="flex aspect-[1672/401] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <Link
+            to="/kick"
+            className="flex aspect-[1672/401] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-200 hover:scale-[1.02]"
+          >
             <img
               src="/assets/images/phishflagger%20email%20authentication.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
               className="w-full max-w-none object-contain"
             />
-          </div>
+          </Link>
         </div>
 
         {/* Right — PhishFlagger Digital Verification image */}
         <div className="flex w-full flex-col items-center">
-          <div className="aspect-[1472/624] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
+          <Link
+            to="/digital-ino"
+            className="aspect-[1472/624] w-full overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)] transition-transform duration-200 hover:scale-[1.02]"
+          >
             <img
               src="/assets/images/phishflagger%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
               className="h-auto w-full object-contain"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>
@@ -179,7 +185,7 @@ export default function Home() {
                   to="/join/pro"
                   className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
-                  Join
+                  Join Pro
                 </Link>
               </div>
             </div>
@@ -225,7 +231,7 @@ export default function Home() {
                   to="/join/pro"
                   className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
-                  Join
+                  Join Pro
                 </Link>
               </div>
             </div>
