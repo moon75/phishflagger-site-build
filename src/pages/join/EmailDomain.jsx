@@ -33,7 +33,7 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start lg:pl-40">
             <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
@@ -211,11 +211,11 @@ export default function EmailDomain() {
           </div>
           <div className="text-center lg:text-left">
             <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              Protect your Company
+              Protect your Network
             </h2>
             <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px] lg:mx-0">
-              Firewall your important communication with your company
-              network, including your customers and suppliers. Stop fraud.
+              Firewall your important communication with your network,
+              including your customers and suppliers. Stop fraud.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function EmailDomain() {
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
-                Join
+                Join Pro
               </Link>
             </div>
           </div>

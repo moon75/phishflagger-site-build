@@ -90,6 +90,14 @@ export default function Home() {
 
       </div>
     </section>
+
+    {/* ===== Section 4 — placeholder (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
+    <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
+        <div className="flex aspect-[1672/401] w-full items-center justify-center rounded-lg border-2 border-black bg-gray-300" />
+        <div className="flex aspect-[1472/624] w-full items-center justify-center rounded-lg border-2 border-black bg-gray-300" />
+      </div>
+    </section>
     </div>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
