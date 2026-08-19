@@ -21,7 +21,7 @@ export default function EmailDomain() {
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
-            <h2 className="mb-6 inline-block rounded-[6px] bg-[#FFE600] px-3 py-0.5 text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
+            <h2 className="mb-6 inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
               PRO
             </h2>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -33,7 +33,7 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:pr-52">
+          <div className="flex justify-center lg:justify-start">
             <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
