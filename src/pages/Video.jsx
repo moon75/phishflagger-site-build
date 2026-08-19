@@ -209,6 +209,22 @@ function categoryVideos(category) {
     ];
   }
 
+  if (category === "Ads") {
+    return [
+      {
+        type: "local",
+        src: "/assets/video1/PhishFlagger_protecting_communications.mp4",
+        title: "PhishFlagger - Protecting Communications",
+        description: "",
+      },
+      ...Array.from({ length: 5 }, () => ({
+        type: "placeholder",
+        title: "Coming Soon",
+        description: "",
+      })),
+    ];
+  }
+
   return Array.from({ length: 6 }, () => ({
     type: "placeholder",
     title: "Coming Soon",

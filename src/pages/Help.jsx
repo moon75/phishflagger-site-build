@@ -38,19 +38,45 @@ export default function Help() {
               </div>
             </div>
 
-            {PLACEHOLDER_PANE.map((item) => (
-              <div key={item.title} className="flex flex-col items-center lg:flex-[1.6]">
-                <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
-                  {item.title}
-                </h2>
-                <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
-                  <ImagePlaceholderIcon />
+            {PLACEHOLDER_PANE.map((item) =>
+              item.title === "PhishFlagger.org" ? (
+                <Link
+                  key={item.title}
+                  to="/phishflagger-org"
+                  className="flex flex-col items-center transition-transform duration-200 hover:scale-[1.02] lg:flex-[1.6]"
+                >
+                  <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
+                    {item.title}
+                  </h2>
+                  <div className="flex h-[220px] w-full flex-col justify-center gap-2 rounded-2xl border-2 border-black bg-white px-6 py-5 text-left sm:px-8">
+                    <h3 className="text-[15px] font-semibold leading-snug tracking-tight text-ink sm:text-[17px]">
+                      Our Community of participants who want to help
+                    </h3>
+                    <p className="line-clamp-4 text-[12px] leading-[1.6] text-ink-muted sm:text-[13px]">
+                      <BrandInline /> prevents Phishing cybercrime. Our
+                      mission is to make emails safer. We bring together
+                      developers, email forwarders and consumers so everyone
+                      can identify malicious phishing attempts.
+                    </p>
+                    <span className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-brand">
+                      Visit PhishFlagger.org →
+                    </span>
+                  </div>
+                </Link>
+              ) : (
+                <div key={item.title} className="flex flex-col items-center lg:flex-[1.6]">
+                  <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
+                    {item.title}
+                  </h2>
+                  <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+                    <ImagePlaceholderIcon />
+                  </div>
+                  <p className="mt-3 text-center text-[13px] text-ink-muted sm:text-[14px]">
+                    {item.caption}
+                  </p>
                 </div>
-                <p className="mt-3 text-center text-[13px] text-ink-muted sm:text-[14px]">
-                  {item.caption}
-                </p>
-              </div>
-            ))}
+              )
+            )}
 
             {/* Edge placeholder */}
             <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.4]">
@@ -143,5 +169,14 @@ function FaqIcon() {
       />
       <circle cx="12" cy="16.7" r="1.05" fill="white" />
     </svg>
+  );
+}
+
+function BrandInline() {
+  return (
+    <em className="italic">
+      <span className="font-bold text-ink">Phish</span>
+      <span className="font-normal text-brand">Flagger</span>
+    </em>
   );
 }

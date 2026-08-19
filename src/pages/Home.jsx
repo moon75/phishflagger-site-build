@@ -110,9 +110,6 @@ export default function Home() {
               Email Client Plug-In
             </span>
             <div className="relative w-full max-w-[380px]">
-              <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
-                Coming Soon
-              </span>
               <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
                 <img
                   src={outlookThunderbirdImg}
@@ -142,7 +139,7 @@ export default function Home() {
                 <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
-                  Gmail, Outlook, Yahoo, Etc.
+                  Gmail, Outlook, Yahoo, Etc. Coming Soon
                 </span>
                 <Link
                   to="/join/email-free-plug-in"
@@ -154,7 +151,7 @@ export default function Home() {
               <div className="flex w-[200px] flex-col items-center gap-3">
                 <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Enable one or multiple Email Addresses (works with all
-                  domains)
+                  domains) Coming Soon
                 </span>
                 <Link
                   to="/join/pro"
@@ -182,9 +179,6 @@ export default function Home() {
               Email Domain Appliance
             </span>
             <div className="relative w-full max-w-[380px]">
-              <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
-                Coming Soon
-              </span>
               <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black">
                 <img
                   src={cloudServerImg}
@@ -200,7 +194,7 @@ export default function Home() {
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
               <div className="flex w-[190px] flex-col items-center gap-3">
                 <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Join your Domain
+                  Join your Domain Coming Soon
                 </span>
                 <Link
                   to="/join/pro"
