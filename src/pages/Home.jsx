@@ -41,12 +41,28 @@ export default function Home() {
     <section className="relative w-full px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <SectionCounter value="^0001" />
       <div className="mx-auto max-w-content">
-      <div className="mt-10 flex justify-center sm:mt-14">
-        <img
-          src="/assets/images/women%20ai.png"
-          alt="Woman using AI-protected email"
-          className="h-auto w-[80%] max-w-[1120px] -translate-x-6 object-contain"
-        />
+      <div className="mx-auto mt-10 flex w-full max-w-[1120px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-6">
+        <div className="min-w-0 lg:flex-1">
+          <img
+            src="/assets/images/hero%20v1.png"
+            alt="See the difference. Trust the messages."
+            className="h-auto w-full object-contain"
+          />
+        </div>
+        <div className="min-w-0 lg:flex-1">
+          <img
+            src="/assets/images/hero%20v2.png"
+            alt="PhishCounter sequence verification on ABC Bank messages"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+        <div className="min-w-0 lg:flex-1">
+          <img
+            src="/assets/images/hero%20v3.png"
+            alt="Woman using PhishFlagger-protected email"
+            className="h-auto w-full object-contain"
+          />
+        </div>
       </div>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
