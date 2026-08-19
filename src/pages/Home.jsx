@@ -91,38 +91,9 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 3 — What is PhishFlagger? (part of Hero ^0001 pane) ===== */}
-    <section className="relative w-full px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8">
-      <div className="mx-auto flex max-w-content justify-center">
-        <div className="w-full max-w-[420px]">
-          <ul className="space-y-2 rounded-2xl bg-[#dfe3ea] p-5 text-[13px] leading-[1.45] text-ink shadow-[0_4px_10px_-4px_rgba(15,23,42,0.15)] sm:space-y-3 sm:p-5 sm:text-[15px] sm:leading-[1.4]">
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Human-compatible solution that validates legitimate
-                communications and highlights fraud attempts.
-              </span>
-            </li>
-            <li className="flex gap-4">
-              <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-              <span>
-                Bring back common sense by adding a unique sequential
-                number, the{" "}
-                <em className="italic font-semibold">
-                  <span className="text-ink">Phish</span>
-                  <span className="text-brand">Counter</span>
-                </em>
-                , visible to the user.
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     {/* ===== Section 4 — Domain protection (part of Hero ^0001 pane) ===== */}
     <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
-      <div className="mx-auto grid w-3/5 max-w-[960px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-2 items-center gap-2 sm:gap-8 lg:gap-8">
         {/* Left — email authentication diagram */}
         <div className="flex w-full flex-col items-center">
           <div className="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-transparent shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
