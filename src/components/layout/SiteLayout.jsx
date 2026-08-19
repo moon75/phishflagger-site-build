@@ -45,10 +45,11 @@ export default function SiteLayout() {
   }, [navigationType, scrollKey]);
 
   const hideFooter = pathname === "/about/faq";
+  const hideHeader = pathname === "/join-free" || pathname === "/join-corporate";
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      {!hideHeader && <Header />}
       <main id="main" className="flex-1">
         <Outlet />
       </main>

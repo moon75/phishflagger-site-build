@@ -30,45 +30,38 @@ export default function Help() {
       {/* ===== Pane 1 — Org / Kickstarter placeholder images ===== */}
       <section className="w-full px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
         <div className="mx-auto w-full">
-          <div className="mx-auto flex w-full flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center">
-            {/* Edge placeholder */}
-            <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.4]">
-              <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
-                <ImagePlaceholderIcon />
-              </div>
-            </div>
-
+          <div className="mx-auto flex w-full max-w-content flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center">
             {PLACEHOLDER_PANE.map((item) =>
               item.title === "PhishFlagger.org" ? (
                 <Link
                   key={item.title}
                   to="/phishflagger-org"
-                  className="flex flex-col items-center transition-transform duration-200 hover:scale-[1.02] lg:flex-[1.6]"
+                  className="flex flex-1 flex-col items-center transition-transform duration-200 hover:scale-[1.02]"
                 >
                   <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
                     {item.title}
                   </h2>
-                  <div className="flex h-[220px] w-full flex-col justify-center gap-2 rounded-2xl border-2 border-black bg-white px-6 py-5 text-left sm:px-8">
-                    <h3 className="text-[15px] font-semibold leading-snug tracking-tight text-ink sm:text-[17px]">
+                  <div className="flex h-[340px] w-full flex-col justify-center gap-3 rounded-2xl border-2 border-black bg-white px-8 py-6 text-left sm:px-10">
+                    <h3 className="text-[19px] font-semibold leading-snug tracking-tight text-ink sm:text-[22px]">
                       Our Community of participants who want to help
                     </h3>
-                    <p className="line-clamp-4 text-[12px] leading-[1.6] text-ink-muted sm:text-[13px]">
+                    <p className="line-clamp-5 text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
                       <BrandInline /> prevents Phishing cybercrime. Our
                       mission is to make emails safer. We bring together
                       developers, email forwarders and consumers so everyone
                       can identify malicious phishing attempts.
                     </p>
-                    <span className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-brand">
+                    <span className="mt-1 inline-flex items-center gap-1 text-[14px] font-semibold text-brand">
                       Visit PhishFlagger.org →
                     </span>
                   </div>
                 </Link>
               ) : (
-                <div key={item.title} className="flex flex-col items-center lg:flex-[1.6]">
+                <div key={item.title} className="flex flex-1 flex-col items-center">
                   <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
                     {item.title}
                   </h2>
-                  <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
+                  <div className="flex h-[340px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
                     <ImagePlaceholderIcon />
                   </div>
                   <p className="mt-3 text-center text-[13px] text-ink-muted sm:text-[14px]">
@@ -77,13 +70,6 @@ export default function Help() {
                 </div>
               )
             )}
-
-            {/* Edge placeholder */}
-            <div className="hidden h-full items-center justify-center lg:flex lg:flex-[0.4]">
-              <div className="flex h-[220px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
-                <ImagePlaceholderIcon />
-              </div>
-            </div>
           </div>
         </div>
       </section>
