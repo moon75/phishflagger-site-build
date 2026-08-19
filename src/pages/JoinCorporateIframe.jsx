@@ -17,7 +17,7 @@ export default function JoinCorporateIframe() {
       >
         <div className="mx-auto max-w-content">
           <h1 className="mb-8 text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
-            Join
+            Join Pro
           </h1>
           <div className="w-full overflow-hidden rounded-2xl border-2 border-black bg-white">
             <iframe
