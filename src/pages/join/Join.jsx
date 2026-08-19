@@ -75,7 +75,7 @@ export default function Join() {
             </div>
             <div className="flex w-auto flex-col items-center">
               <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
-                <span className="whitespace-nowrap rounded-[4px] bg-[#FFE600] px-2 py-0.5 text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   PRO
                 </span>
                 <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
@@ -97,7 +97,7 @@ export default function Join() {
                 to="/join/pro"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
-                Join
+                Join Pro
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
@@ -129,7 +129,7 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 2 — Contact / Endorse Us / White Paper / FAQ (no background) ===== */}
-      <section id="join-icon-links" className="relative w-full px-4 pb-14 pt-2 sm:px-6 sm:pb-20 sm:pt-3">
+      <section id="join-icon-links" className="relative w-full px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
         <div className="mx-auto max-w-content">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
