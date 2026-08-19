@@ -525,8 +525,8 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" 
       id={counter === "^0001" ? "telecom-pane-0001" : undefined}
       className={
         tone === "gray"
-          ? "relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-          : "relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20"
+          ? "relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+          : "relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20"
       }
       style={
         tone === "gray"
