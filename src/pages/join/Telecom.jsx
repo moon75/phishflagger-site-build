@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
@@ -11,9 +13,12 @@ import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/ph
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 
 export default function Telecom() {
+  const containerRef = useRef(null);
+
   return (
-    <>
+    <div ref={containerRef} className="relative w-full">
       <CloseButton force />
+      <PageDownButton containerRef={containerRef} targetSelector="#telecom-pane-0001" />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
@@ -35,21 +40,17 @@ export default function Telecom() {
             <img
               src="/assets/images/Telecoms%20and%20regulators.png"
               alt="Telecoms and Regulators — Help stop Call Spoofing"
-              className="h-full w-auto max-w-full object-contain"
+              className="h-full w-auto max-w-full rounded-2xl object-contain"
             />
           </div>
 
           {/* 2 — Caller ID list */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <div className="relative h-full">
-              <div className="absolute -top-1.5 left-2 right-0 h-2 rounded-full bg-black/20 blur-[3px]" />
-              <div className="absolute -right-1.5 top-2 bottom-0 w-2 rounded-full bg-black/20 blur-[3px]" />
-              <img
-                src="/assets/images/existing%20caller%20id.png"
-                alt="Existing Caller ID can be used to validate calls now."
-                className="relative h-full w-auto max-w-full rounded-2xl object-contain"
-              />
-            </div>
+            <img
+              src="/assets/images/existing%20caller%20id.png"
+              alt="Existing Caller ID can be used to validate calls now."
+              className="h-full w-auto max-w-full rounded-2xl object-contain"
+            />
           </div>
 
           {/* 3 — granny image */}
@@ -461,7 +462,7 @@ export default function Telecom() {
         </div>
       </section>
 
-    </>
+    </div>
   );
 }
 
@@ -525,6 +526,7 @@ function SectionCounter({ value }) {
 function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" }) {
   return (
     <section
+      id={counter === "^0001" ? "telecom-pane-0001" : undefined}
       className={
         tone === "gray"
           ? "relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
