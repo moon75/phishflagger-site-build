@@ -5,6 +5,8 @@ import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-c
 import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
+const logoMarkImg = "/assets/images/logo-mark.png";
+
 export default function EmailDomain() {
   return (
     <>
@@ -21,9 +23,20 @@ export default function EmailDomain() {
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
-            <h2 className="mb-6 inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
-              PRO
-            </h2>
+            <div className="mb-6 flex items-center gap-4">
+              <img
+                src={logoMarkImg}
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[38px] w-auto shrink-0 object-contain sm:h-[48px]"
+              />
+              <h2 className="inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
+                <em className="italic">
+                  <span className="font-extrabold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                PRO
+              </h2>
+            </div>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-disc">
                 Safeguard your domain with <BrandInline />

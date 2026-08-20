@@ -125,6 +125,21 @@ export default function Home() {
               Email Client Plug-In
             </span>
             <div className="relative w-full max-w-[380px]">
+              <Link
+                to="/kick"
+                className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
+              >
+                <span>Coming Soon</span>
+                <span>on Kickstarter</span>
+              </Link>
+              <Link
+                to="/kick"
+                className="absolute top-2 -right-2 z-10 flex rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
+              >
+                <span>Coming Soon</span>
+                <span>Available now on</span>
+                <span>Kickstarter.</span>
+              </Link>
               <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
                 <img
                   src={outlookThunderbirdImg}
@@ -158,7 +173,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/email-free-plug-in"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </Link>
@@ -170,7 +185,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -213,7 +228,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>

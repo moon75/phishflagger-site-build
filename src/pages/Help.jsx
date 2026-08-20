@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
+import communityImg from "../assets/images/commnity image.avif";
 
-const PLACEHOLDER_PANE = [
-  { title: "PhishFlagger.org", caption: "Placeholder image for org." },
-  { title: "Kickstarter", caption: "Placeholder image for kick." },
+const logoMarkImg = "/assets/images/logo-mark.png";
+const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
+
+const DOMAIN_PROVIDERS = [
+  { domain: "gmail.com", provider: "Gmail" },
+  { domain: "yahoo.com", provider: "Yahoo" },
+  { domain: "hotmail.com", provider: "Hotmail" },
+  { domain: "outlook.com", provider: "Outlook" },
 ];
 
 const LINKS = [
@@ -27,49 +33,151 @@ export default function Help() {
     >
       <CloseButton force />
 
-      {/* ===== Pane 1 — Org / Kickstarter placeholder images ===== */}
+      {/* ===== Pane 1 — Org / Kickstarter ===== */}
       <section className="w-full px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
         <div className="mx-auto w-full">
-          <div className="mx-auto flex w-full max-w-content flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-center">
-            {PLACEHOLDER_PANE.map((item) =>
-              item.title === "PhishFlagger.org" ? (
-                <Link
-                  key={item.title}
-                  to="/phishflagger-org"
-                  className="flex flex-1 flex-col items-center transition-transform duration-200 hover:scale-[1.02]"
-                >
-                  <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
-                    {item.title}
-                  </h2>
-                  <div className="flex h-[340px] w-full flex-col justify-center gap-3 rounded-2xl border-2 border-black bg-white px-8 py-6 text-left sm:px-10">
-                    <h3 className="text-[19px] font-semibold leading-snug tracking-tight text-ink sm:text-[22px]">
-                      Our Community of participants who want to help
-                    </h3>
-                    <p className="line-clamp-5 text-[14px] leading-[1.6] text-ink-muted sm:text-[15px]">
-                      <BrandInline /> prevents Phishing cybercrime. Our
-                      mission is to make emails safer. We bring together
-                      developers, email forwarders and consumers so everyone
-                      can identify malicious phishing attempts.
-                    </p>
-                    <span className="mt-1 inline-flex items-center gap-1 text-[14px] font-semibold text-brand">
-                      Visit PhishFlagger.org →
-                    </span>
-                  </div>
-                </Link>
-              ) : (
-                <div key={item.title} className="flex flex-1 flex-col items-center">
-                  <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
-                    {item.title}
-                  </h2>
-                  <div className="flex h-[340px] w-full items-center justify-center rounded-2xl border-2 border-black bg-white">
-                    <ImagePlaceholderIcon />
-                  </div>
-                  <p className="mt-3 text-center text-[13px] text-ink-muted sm:text-[14px]">
-                    {item.caption}
+          <div className="mx-auto flex w-full max-w-content flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
+            {/* Left — PhishFlagger.org, full production card */}
+            <div className="flex flex-[1.3] flex-col items-center">
+              <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
+                PhishFlagger.org
+              </h2>
+              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-white">
+                <div className="flex items-center gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
+                  <img
+                    src={logoMarkImg}
+                    alt="PhishFlagger envelope and flag mark"
+                    className="h-[30px] w-auto object-contain sm:h-[36px]"
+                  />
+                  <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
+                    Phish<span className="font-normal text-brand">Flagger</span>.org
+                  </span>
+                </div>
+
+                <div className="px-6 py-6 sm:px-8 sm:py-8">
+                  <h3 className="text-[22px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
+                    Our Community of participants who want to help
+                  </h3>
+                  <p className="mt-3 text-[13.5px] leading-[1.7] text-ink-muted sm:text-[14.5px]">
+                    <BrandInline /> prevents Phishing cybercrime. Our mission
+                    is to make emails safer. To solve this crisis, we bring
+                    together developers, email forwarders and consumers.
+                    Implementation of the <BrandInline /> Protocol can
+                    empower everyone to identify malicious Phishing attempts.
+                    Whether you can contribute as a developer, need
+                    resources, want to share your knowledge, or have been
+                    victimized — our Community is open to anyone who cares.
                   </p>
                 </div>
-              )
-            )}
+
+                <div className="h-px w-full bg-gray-200" />
+
+                <div className="grid grid-cols-1 items-center gap-6 px-6 py-6 sm:grid-cols-[160px_1fr] sm:px-8 sm:py-8">
+                  <Link to="/community" className="mx-auto flex flex-col items-center sm:mx-0">
+                    <img
+                      src={communityImg}
+                      alt="People holding hands in community"
+                      className="h-auto w-full max-w-[160px] object-contain"
+                    />
+                    <span className="mt-3 inline-block rounded-md bg-[#2b2b2b] px-3 py-1 text-[11px] font-semibold text-white">
+                      Community
+                    </span>
+                  </Link>
+
+                  <div className="text-center sm:text-left">
+                    <h4 className="text-[17px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[19px]">
+                      Participate and Help Improve{" "}
+                      <BrandInline />
+                    </h4>
+                    <p className="mt-2 text-[13px] leading-[1.65] text-ink-muted sm:text-[13.5px]">
+                      There are a number of ways to get involved with{" "}
+                      <BrandInline />: general discussions, questions, and
+                      comments. Join the email discussion list to ask
+                      questions about deploying <BrandInline /> or share your
+                      operational experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-auto flex items-center justify-center border-t border-gray-200 px-6 py-5 sm:justify-end sm:px-8">
+                  <Link
+                    to="/phishflagger-org"
+                    className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                  >
+                    Visit PhishFlagger.org →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Right — Kickstarter, full production card */}
+            <div className="flex flex-[1.3] flex-col items-center">
+              <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
+                Kickstarter
+              </h2>
+              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-white">
+                <div className="flex items-center gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
+                  <img
+                    src={logoMarkImg}
+                    alt="PhishFlagger envelope and flag mark"
+                    className="h-[30px] w-auto object-contain sm:h-[36px]"
+                  />
+                  <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
+                    <BrandInline /> Kickstarter
+                  </span>
+                </div>
+
+                <div className="px-6 py-6 sm:px-8 sm:py-8">
+                  <h3 className="text-[22px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
+                    How Does <BrandInline /> Work?
+                  </h3>
+                  <p className="mt-3 text-[13.5px] leading-[1.7] text-ink-muted sm:text-[14.5px]">
+                    Every email gets a human-readable{" "}
+                    <span className="font-semibold text-ink">PhishCounter</span>{" "}
+                    in the subject line and a domain-level check under the
+                    hood, so recipients can validate a message both by eye
+                    and by protocol before they ever click a link.
+                  </p>
+                  <div className="mt-5 flex justify-center rounded-xl bg-[#f4f5f8] p-4">
+                    <img
+                      src={howDoesItWorkImg}
+                      alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
+                      className="h-auto w-full max-w-[280px] object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="h-px w-full bg-gray-200" />
+
+                <div className="px-6 py-6 sm:px-8 sm:py-8">
+                  <h4 className="text-[17px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[19px]">
+                    Available now for these domains
+                  </h4>
+                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
+                      <div
+                        key={domain}
+                        className="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#f4f5f8] px-3 py-4 text-center"
+                      >
+                        <DomainIcon provider={provider} />
+                        <span className="text-[11.5px] font-semibold text-ink">
+                          {domain}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-auto flex items-center justify-center border-t border-gray-200 px-6 py-5 sm:justify-end sm:px-8">
+                  <Link
+                    to="/kick"
+                    className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                  >
+                    Visit Kickstarter →
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -164,5 +272,34 @@ function BrandInline() {
       <span className="font-bold text-ink">Phish</span>
       <span className="font-normal text-brand">Flagger</span>
     </em>
+  );
+}
+
+function DomainIcon({ provider }) {
+  if (provider === "Gmail") {
+    return (
+      <svg viewBox="0 0 64 48" className="h-6 w-9" aria-label="Gmail">
+        <path d="M5 10v31h10V20l17 13 17-13v21h10V10l-7-5-20 16L12 5Z" fill="#ea4335" />
+        <path d="M5 10v31h10V20L5 13Z" fill="#4285f4" />
+        <path d="M49 20v21h10V13Z" fill="#34a853" />
+      </svg>
+    );
+  }
+
+  if (provider === "Yahoo") {
+    return (
+      <span className="text-[15px] font-black italic tracking-[-0.08em] text-[#6001d2]">
+        YAHOO!
+      </span>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 40 40" className="h-6 w-6" aria-hidden="true">
+      <rect x="2" y="2" width="17" height="17" fill="#f25022" />
+      <rect x="21" y="2" width="17" height="17" fill="#7fba00" />
+      <rect x="2" y="21" width="17" height="17" fill="#00a4ef" />
+      <rect x="21" y="21" width="17" height="17" fill="#ffb900" />
+    </svg>
   );
 }

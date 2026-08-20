@@ -50,8 +50,22 @@ export default function EmailFreePlugIn() {
       <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
+          <div className="mb-4 mt-6 flex items-center justify-center gap-4 sm:mt-8">
+            <img
+              src="/assets/images/logo-mark.png"
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[34px] w-auto shrink-0 self-center object-contain sm:h-[42px]"
+            />
+            <h1 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              <em className="italic">
+                <span className="font-extrabold text-ink">Phish</span>
+                <span className="font-normal text-brand">Flagger</span>
+              </em>{" "}
+              FREE
+            </h1>
+          </div>
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
-            Step 1. Get your Free Key.&nbsp; Works with ....
+            Step 1. Get your Key.&nbsp; Works with ....
           </h2>
           <div className="mx-auto mt-9 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             {PROVIDERS.map(({ key, labels }) => (

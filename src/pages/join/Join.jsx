@@ -129,7 +129,7 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 2 — Contact / Endorse Us / White Paper / FAQ (no background) ===== */}
-      <section id="join-icon-links" className="relative w-full px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
+      <section id="join-icon-links" className="relative w-full scroll-mt-24 px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
         <div className="mx-auto max-w-content">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
