@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import communityImg from "../assets/images/commnity image.avif";
@@ -20,6 +20,8 @@ const LINKS = [
 ];
 
 export default function Help() {
+  const navigate = useNavigate();
+
   return (
     <div
       className="relative w-full bg-[#eef0f4] bg-cover bg-center"
@@ -64,6 +66,7 @@ export default function Help() {
                   </div>
                   <Link
                     to="/phishflagger-org"
+                    onMouseEnter={() => navigate("/phishflagger-org")}
                     className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
                   >
                     Visit PhishFlagger.org →
@@ -133,6 +136,7 @@ export default function Help() {
                   </div>
                   <Link
                     to="/kick"
+                    onMouseEnter={() => navigate("/kick")}
                     className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
                   >
                     Visit Kickstarter →
