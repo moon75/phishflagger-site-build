@@ -53,14 +53,14 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="h-auto w-full object-contain"
+            className="mx-auto h-auto w-[92%] translate-y-11 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v3.png"
             alt="Woman using PhishFlagger-protected email"
-            className="h-auto w-full object-contain"
+            className="mx-auto h-auto w-[85%] translate-y-8 object-contain"
           />
         </div>
       </div>
