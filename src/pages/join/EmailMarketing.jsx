@@ -20,7 +20,12 @@ export default function EmailMarketing() {
         <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
-            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+            <h2 className="flex items-center gap-3 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+              />
               Brand Protection
             </h2>
             <p>

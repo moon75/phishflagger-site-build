@@ -33,25 +33,41 @@ export default function Help() {
     >
       <CloseButton force />
 
+      {/* ===== Pane 2 — Help links (icon squares) ===== */}
+      <section className="w-full px-4 pt-14 pb-4 sm:px-6 sm:pt-20 sm:pb-6">
+        <div className="mx-auto max-w-content">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 sm:gap-x-10">
+            {LINKS.map((item) => (
+              <HelpCard key={item.to} {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== Pane 1 — Org / Kickstarter ===== */}
-      <section className="w-full px-4 pt-14 pb-10 sm:px-6 sm:pt-20 sm:pb-14">
+      <section className="w-full px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <div className="mx-auto w-full">
           <div className="mx-auto flex w-full max-w-content flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
             {/* Left — PhishFlagger.org, full production card */}
             <div className="flex flex-[1.3] flex-col items-center">
-              <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
-                PhishFlagger.org
-              </h2>
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-white">
-                <div className="flex items-center gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
-                  <img
-                    src={logoMarkImg}
-                    alt="PhishFlagger envelope and flag mark"
-                    className="h-[30px] w-auto object-contain sm:h-[36px]"
-                  />
-                  <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
-                    Phish<span className="font-normal text-brand">Flagger</span>.org
-                  </span>
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={logoMarkImg}
+                      alt="PhishFlagger envelope and flag mark"
+                      className="h-[30px] w-auto object-contain sm:h-[36px]"
+                    />
+                    <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
+                      Phish<span className="font-normal text-brand">Flagger</span>.org
+                    </span>
+                  </div>
+                  <Link
+                    to="/phishflagger-org"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                  >
+                    Visit PhishFlagger.org →
+                  </Link>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -98,33 +114,29 @@ export default function Help() {
                     </p>
                   </div>
                 </div>
-
-                <div className="mt-auto flex items-center justify-center border-t border-gray-200 px-6 py-5 sm:justify-end sm:px-8">
-                  <Link
-                    to="/phishflagger-org"
-                    className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
-                  >
-                    Visit PhishFlagger.org →
-                  </Link>
-                </div>
               </div>
             </div>
 
             {/* Right — Kickstarter, full production card */}
             <div className="flex flex-[1.3] flex-col items-center">
-              <h2 className="mb-4 text-center text-[20px] font-bold tracking-tight text-ink sm:text-[24px]">
-                Kickstarter
-              </h2>
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-white">
-                <div className="flex items-center gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
-                  <img
-                    src={logoMarkImg}
-                    alt="PhishFlagger envelope and flag mark"
-                    className="h-[30px] w-auto object-contain sm:h-[36px]"
-                  />
-                  <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
-                    <BrandInline /> Kickstarter
-                  </span>
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={logoMarkImg}
+                      alt="PhishFlagger envelope and flag mark"
+                      className="h-[30px] w-auto object-contain sm:h-[36px]"
+                    />
+                    <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
+                      <BrandInline /> Kickstarter
+                    </span>
+                  </div>
+                  <Link
+                    to="/kick"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                  >
+                    Visit Kickstarter →
+                  </Link>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -134,9 +146,7 @@ export default function Help() {
                   <p className="mt-3 text-[13.5px] leading-[1.7] text-ink-muted sm:text-[14.5px]">
                     Every email gets a human-readable{" "}
                     <span className="font-semibold text-ink">PhishCounter</span>{" "}
-                    in the subject line and a domain-level check under the
-                    hood, so recipients can validate a message both by eye
-                    and by protocol before they ever click a link.
+                    in the subject line and a domain-level check.
                   </p>
                   <div className="mt-5 flex justify-center rounded-xl bg-[#f4f5f8] p-4">
                     <img
@@ -167,31 +177,12 @@ export default function Help() {
                     ))}
                   </div>
                 </div>
-
-                <div className="mt-auto flex items-center justify-center border-t border-gray-200 px-6 py-5 sm:justify-end sm:px-8">
-                  <Link
-                    to="/kick"
-                    className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
-                  >
-                    Visit Kickstarter →
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="w-full px-4 pb-16 pt-4 sm:px-6 sm:pb-24 sm:pt-6">
-        <div className="mx-auto max-w-content">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 sm:gap-x-10">
-            {LINKS.map((item) => (
-              <HelpCard key={item.to} {...item} />
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

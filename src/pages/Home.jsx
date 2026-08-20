@@ -258,7 +258,12 @@ export default function Home() {
           />
         </div>
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <img
+              src="/assets/images/logo-mark.png"
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+            />
             Email Marketing
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
@@ -287,7 +292,12 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <img
+              src="/assets/images/logo-mark.png"
+              alt="PhishFlagger envelope and flag mark"
+              className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+            />
             Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
@@ -357,7 +367,12 @@ export default function Home() {
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+            <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+              />
               SMS
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
@@ -383,7 +398,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col items-center">
-            <span className="mb-4 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+            <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+              />
               Message
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
@@ -467,7 +487,10 @@ export default function Home() {
               <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1470
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
+              <Link
+                to="/about/numbering-history"
+                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+              >
                 <img
                   src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
                   alt="Numbered papers"
@@ -478,7 +501,7 @@ export default function Home() {
                   alt="Bundle of numbered books"
                   className="h-[85%] w-auto object-contain"
                 />
-              </div>
+              </Link>
               <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 Sequential page numbering brings order.
               </p>
@@ -488,13 +511,16 @@ export default function Home() {
               <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1892
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
+              <Link
+                to="/about/numbering-history"
+                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+              >
                 <img
                   src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
                   alt="Numbering stamp"
                   className="h-full w-auto scale-[1.2] object-contain"
                 />
-              </div>
+              </Link>
               <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 Mechanical numbering stops paper fraud.
               </p>
@@ -504,15 +530,18 @@ export default function Home() {
               <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1991
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
+              <Link
+                to="/about/numbering-history"
+                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+              >
                 <img
                   src="/assets/images/blockchain.png"
                   alt="Blockchain ledger"
                   className="h-full w-auto object-contain"
                 />
-              </div>
+              </Link>
               <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
-                Blockchain brings tamper-proof, distributed ordering.
+                Blockchain brings tamper-proof sequence.
               </p>
             </div>
 
@@ -520,13 +549,16 @@ export default function Home() {
               <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 2026
               </span>
-              <div className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
+              <Link
+                to="/about/numbering-history"
+                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+              >
                 <img
                   src="/assets/images/footer%20history%20pic%203rd.png"
                   alt="PhishFlagger inbox demonstration"
                   className="h-full w-full object-contain"
                 />
-              </div>
+              </Link>
               <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
                 delivery and helps stop fraud.
@@ -536,12 +568,15 @@ export default function Home() {
         </div>
 
         <div className="mt-10 flex justify-end pr-12 sm:mt-12 sm:pr-16">
-          <Link
-            to="/about/numbering-history"
-            className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[18px]"
-          >
-            Numbering History
-          </Link>
+          <p className="text-[15px] text-ink sm:text-[18px]">
+            Like what you see:{" "}
+            <Link
+              to="/help/endorse-us"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Endorse Us
+            </Link>
+          </p>
         </div>
       </div>
     </section>

@@ -189,8 +189,9 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 1.5 — What is PhishFlagger? (Human + Digital text) ===== */}
-      <section className="relative w-full bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
+      {/* ===== Pane 2 — What is PhishFlagger? (Human + Digital text) ===== */}
+      <section id="join-human-digital" className="relative w-full scroll-mt-24 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto max-w-content">
           <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
             <div>
