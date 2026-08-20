@@ -76,9 +76,20 @@ export default function JoinFree() {
             >
               Test Fill
             </button>
-            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
-              Join
-            </h1>
+            <div className="flex items-center justify-center gap-4">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[38px] w-auto shrink-0 object-contain sm:h-[50px] lg:h-[60px]"
+              />
+              <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+                <em className="italic">
+                  <span className="font-extrabold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                Join
+              </h1>
+            </div>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
               Get you Free Email licenses here.
             </p>
