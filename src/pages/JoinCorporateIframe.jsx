@@ -9,7 +9,7 @@ export default function JoinCorporateIframe() {
       <CloseButton />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-3 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -17,13 +17,13 @@ export default function JoinCorporateIframe() {
         }}
       >
         <div className="mx-auto max-w-content">
-          <div className="mb-8 flex items-center justify-center gap-4">
+          <div className="mb-5 flex flex-wrap items-center justify-center gap-3 sm:mb-8 sm:gap-4">
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px]"
+              className="h-[28px] w-auto shrink-0 object-contain sm:h-[42px]"
             />
-            <h1 className="text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
+            <h1 className="text-center text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
@@ -31,12 +31,11 @@ export default function JoinCorporateIframe() {
               Join Pro
             </h1>
           </div>
-          <div className="w-full overflow-hidden rounded-2xl border-2 border-black bg-white">
+          <div className="mx-auto max-h-[75vh] w-full max-w-[650px] overflow-y-auto overscroll-contain rounded-2xl border-2 border-black bg-white [-webkit-overflow-scrolling:touch]">
             <iframe
               src={JOIN_CORPORATE_URL}
               title="Join PhishFlagger Corporate"
-              scrolling="no"
-              className="block min-h-[1700px] w-full"
+              className="block h-[2400px] w-full"
             />
           </div>
         </div>
