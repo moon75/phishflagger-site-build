@@ -462,7 +462,7 @@ export default function Home() {
           {/* Timeline connector */}
           <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />
 
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-10">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6 lg:gap-10">
             <div className="flex flex-col items-center">
               <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                 1470
@@ -497,6 +497,22 @@ export default function Home() {
               </div>
               <p className="mt-4 max-w-[320px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
                 Mechanical numbering stops paper fraud.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                1991
+              </span>
+              <div className="flex aspect-[1448/1017] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]">
+                <img
+                  src="/assets/images/blockchain.png"
+                  alt="Blockchain ledger"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <p className="mt-4 max-w-[320px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
+                Blockchain brings tamper-proof, distributed ordering.
               </p>
             </div>
 
