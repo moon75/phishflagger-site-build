@@ -39,8 +39,9 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section className="relative w-full px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
+    <section id="pane-0001" className="relative w-full scroll-mt-24 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <SectionCounter value="^0001" />
+      <PageDownButton targetSelector="#pane-0002" />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-10 flex w-full max-w-[1120px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-6">
         <div className="min-w-0 lg:flex-1">
@@ -119,6 +120,7 @@ export default function Home() {
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
     <section id="pane-0002" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0002" />
+      <PageDownButton targetSelector="#pane-0003" />
       <div className="mx-auto max-w-content">
         <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">

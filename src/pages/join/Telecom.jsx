@@ -134,13 +134,15 @@ export default function Telecom() {
       />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        id="telecom-pane-0002"
+        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0002" />
+        <PageDownButton targetSelector="#telecom-pane-0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
@@ -178,8 +180,9 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section id="telecom-pane-0003" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
+        <PageDownButton targetSelector="#telecom-pane-0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -210,13 +213,15 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        id="telecom-pane-0004"
+        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0004" />
+        <PageDownButton targetSelector="#telecom-pane-0005" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -356,8 +361,9 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section id="telecom-pane-0005" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
+        <PageDownButton targetSelector="#telecom-pane-0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -383,13 +389,15 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        id="telecom-pane-0006"
+        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0006" />
+        <PageDownButton targetSelector="#telecom-pane-0007" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="flex items-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -416,13 +424,15 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        id="telecom-pane-0007"
+        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
         <SectionCounter value="^0007" />
+        <PageDownButton />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
             The{" "}
@@ -534,6 +544,9 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" 
       }
     >
       {counter && <SectionCounter value={counter} />}
+      {counter === "^0001" && (
+        <PageDownButton targetSelector="#telecom-pane-0002" />
+      )}
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img
