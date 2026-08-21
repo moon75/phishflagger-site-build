@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import { cn } from "../../lib/utils.js";
@@ -10,6 +10,24 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const headerRef = useRef(null);
+
+  // Publish the header's real rendered height as a CSS variable so pages can
+  // set scroll-margin-top to exactly this value (via scroll-mt-[var(--header-h)]).
+  // Measuring live — rather than hardcoding a px guess — keeps "page down"
+  // landing pane tops flush under the header even if the header's height
+  // changes (breakpoint, copy change, logo swap, etc.).
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const setVar = () => {
+      document.documentElement.style.setProperty("--header-h", `${el.offsetHeight}px`);
+    };
+    setVar();
+    const observer = new ResizeObserver(setVar);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
   // menus that already open on hover — no click required.
@@ -28,7 +46,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-white lg:relative">
+      <header ref={headerRef} className="sticky top-0 z-40 bg-white lg:relative">
         {/* Logo — pinned to the far left edge of the page on desktop */}
         <NavLink
           to="/"

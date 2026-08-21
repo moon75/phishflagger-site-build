@@ -41,7 +41,7 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section id="pane-0001" className="relative w-full scroll-mt-24 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
+    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <SectionCounter value="^0001" />
       <PageDownButton targetSelector="#pane-0002" />
       <div className="mx-auto max-w-content">
@@ -125,7 +125,7 @@ export default function Home() {
     </div>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
-    <section id="pane-0002" className="relative w-full scroll-mt-24 bg-white px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
+    <section id="pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
       <SectionCounter value="^0002" />
       <PageDownButton targetSelector="#pane-0003" />
       <div className="mx-auto max-w-content">
@@ -269,7 +269,7 @@ export default function Home() {
     {/* ===== Section 7 — Caller ID (gray/tower) ===== */}
     <section
       id="pane-0003"
-      className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -314,7 +314,7 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7c — Telecom / Caller ID (white) ===== */}
-    <section id="pane-0004" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0004" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0004" />
       <PageDownButton targetSelector="#pane-0005" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
@@ -385,7 +385,7 @@ export default function Home() {
     {/* ===== Section 7b — Telecom / Text (gray/tower) ===== */}
     <section
       id="pane-0005"
-      className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -498,7 +498,7 @@ export default function Home() {
     )}
 
     {/* ===== Section 9 — Numbering history gallery (white) ===== */}
-    <section id="pane-0006" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0006" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0006" />
       <PageDownButton />
       <div className="mx-auto max-w-content">

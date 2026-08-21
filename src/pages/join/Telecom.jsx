@@ -135,7 +135,7 @@ export default function Telecom() {
       />
 
       <section
-        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -180,7 +180,7 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
@@ -213,7 +213,7 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -360,7 +360,7 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
@@ -388,7 +388,7 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -422,7 +422,7 @@ export default function Telecom() {
       </section>
 
       <section
-        className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -530,8 +530,8 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
     <section
       className={
         tone === "gray"
-          ? "relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-          : "relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20"
+          ? "relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+          : "relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20"
       }
       style={
         tone === "gray"

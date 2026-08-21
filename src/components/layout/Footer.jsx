@@ -99,7 +99,7 @@ export default function Footer({ logoSrc = logoImg }) {
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
 
-        <div className="mx-auto max-w-[980px] px-6 pt-16 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-14">
+        <div className="mx-auto max-w-[980px] px-6 pt-20 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-[72px]">
           {/* Description paragraph */}
           <div className="mx-auto max-w-[1280px]">
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
@@ -117,27 +117,33 @@ export default function Footer({ logoSrc = logoImg }) {
           </div>
         </div>
 
-        {/* Site index — mirrors the header nav (data/nav.js) so the two never drift apart */}
+        {/* Site index — Menu row links to Home/Join sub-pages/Help; About column mirrors the header nav (data/nav.js) */}
         <div className="mt-8 w-full bg-white px-4 py-8 sm:px-6">
           <div className="mx-auto flex w-full max-w-[520px] flex-col items-stretch gap-10 text-left sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:gap-20">
-            {/* Column 1 — top-level nav */}
-            <div className="w-full sm:w-[160px]">
-              <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
-                Menu
-              </p>
-              <ul className="space-y-2.5 list-none p-0">
-                {nav
-                  .filter((item) => item.href)
-                  .map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        to={item.href}
-                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
+            {/* Column 1 — top-level nav, laid out horizontally; Email and Telecom
+                open their sub-pages in a hover dropdown instead of a separate column */}
+            <div className="w-full sm:w-auto">
+              <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 list-none p-0 m-0">
+                <FooterMenuItem label="Home" href="/" />
+                <FooterMenuItem
+                  label="Email"
+                  href="/email"
+                  children_={[
+                    { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
+                    { label: "Email - PRO", href: "/join/pro" },
+                    { label: "Email - Marketing", href: "/join/email-marketing" },
+                  ]}
+                />
+                <FooterMenuItem
+                  label="Telecom"
+                  href="/join/telecom"
+                  children_={[
+                    { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
+                    { label: "Telecom - Sign Petition", href: "/petition" },
+                  ]}
+                />
+                <FooterMenuItem label="Messaging" href="/join/messaging" />
+                <FooterMenuItem label="Help" href="/help" />
               </ul>
             </div>
 
@@ -278,5 +284,41 @@ export default function Footer({ logoSrc = logoImg }) {
         ))}
       </section>
     </>
+  );
+}
+
+// A single footer nav link. When `children_` is passed, hovering reveals a
+// dropdown of sub-page links below it — same idea as the header's nav
+// dropdown, kept lightweight (pure CSS group-hover, no JS state) since it's
+// footer-only chrome.
+function FooterMenuItem({ label, href, children_ }) {
+  if (!children_) {
+    return (
+      <li>
+        <Link to={href} className="text-[13px] text-black transition-colors hover:text-[#FF0033]">
+          {label}
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <li className="group relative">
+      <Link to={href} className="text-[13px] text-black transition-colors hover:text-[#FF0033]">
+        {label}
+      </Link>
+      <ul className="invisible absolute left-0 top-full z-10 mt-2 w-max min-w-[160px] list-none space-y-2 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-lg transition-all duration-150 group-hover:visible group-hover:opacity-100">
+        {children_.map((item) => (
+          <li key={item.href}>
+            <Link
+              to={item.href}
+              className="block whitespace-nowrap text-[13px] text-black transition-colors hover:text-[#FF0033]"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
   );
 }

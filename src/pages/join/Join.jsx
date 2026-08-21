@@ -127,7 +127,7 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 2 — Contact / Endorse Us / White Paper / FAQ (no background) ===== */}
-      <section id="join-icon-links" className="relative w-full scroll-mt-24 px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
+      <section id="join-icon-links" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
         <div className="mx-auto max-w-content">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
@@ -188,7 +188,7 @@ export default function Join() {
       </section>
 
       {/* ===== Pane 2 — What is PhishFlagger? (Human + Digital text) ===== */}
-      <section id="join-human-digital" className="relative w-full scroll-mt-24 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
+      <section id="join-human-digital" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto max-w-content">
           <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">

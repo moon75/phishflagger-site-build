@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  /* Fallback before Header measures itself on mount (see Header.jsx);
+     kept close to the header's real height to avoid a first-paint jump. */
+  --header-h: 88px;
+}
+
 /* ==========================================================================
    Design tokens — exposed as Tailwind utilities via @theme.
    Values match the original Framer site exactly.
