@@ -1,9 +1,10 @@
 // Small floating "Page Down" button, styled to match CloseButton. Clicking
 // it scrolls to a target element. Pass `targetSelector` to pin an exact
-// element (recommended); otherwise it falls back to scrolling to the next
-// <section> below the current scroll position within `containerRef`.
+// element (recommended); otherwise it scrolls to the next <section> in DOM
+// order after the one this button lives in (or the first <section> in
+// `containerRef`/document if the button sits outside any section).
 export default function PageDownButton({ containerRef, targetSelector }) {
-  function handleClick() {
+  function handleClick(event) {
     const root = containerRef?.current ?? document;
 
     if (targetSelector) {
@@ -15,12 +16,17 @@ export default function PageDownButton({ containerRef, targetSelector }) {
     }
 
     const sections = Array.from(root.querySelectorAll("section"));
-    const scrollY = window.scrollY;
+    // A button rendered above the first <section> (e.g. an intro/hero
+    // button) treats that first section as "current" so it still advances
+    // to the section after it, rather than just landing on the one it's
+    // already sitting on top of.
+    const currentSection = event.currentTarget.closest("section") ?? sections[0];
+    const currentIndex = currentSection ? sections.indexOf(currentSection) : -1;
 
-    const next = sections.find((section) => {
-      const top = section.getBoundingClientRect().top + scrollY;
-      return top > scrollY + 10;
-    });
+    // Position-based lookup (DOM order), not scroll-position guessing — a
+    // button's own section may legitimately sit below the current scroll
+    // offset (e.g. below a sticky header), which broke the old heuristic.
+    const next = currentIndex >= 0 ? sections[currentIndex + 1] : sections[0];
 
     if (next) {
       next.scrollIntoView({ behavior: "smooth", block: "start" });
