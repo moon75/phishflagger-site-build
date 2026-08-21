@@ -47,10 +47,10 @@ export default function EmailFreePlugIn() {
           backgroundRepeat: "no-repeat",
         }}
       >
-      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full px-4 pb-6 pt-7 sm:px-6 sm:pb-8 sm:pt-10">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content text-center">
-          <div className="mb-4 mt-6 flex items-center justify-center gap-4 sm:mt-8">
+          <div className="mb-4 mt-3 flex items-center justify-center gap-4 sm:mt-4">
             <img
               src="/assets/images/logo-mark.png"
               alt="PhishFlagger envelope and flag mark"
@@ -118,17 +118,19 @@ export default function EmailFreePlugIn() {
               </span>
               <Link
                 to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#FFE066] px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-[#FFD633] duration-200 hover:scale-[1.2]"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>
-              <span className="text-[12px] text-ink-muted">$10.00 / Year</span>
+              <span className="rounded bg-yellow-300 px-2 py-0.5 text-[12px] text-ink">
+                $10.00 / Year
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
         <SectionCounter value="^0002" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">

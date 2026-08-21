@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import CloseButton from "../../components/ui/CloseButton.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
@@ -24,7 +23,6 @@ export default function Join() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <CloseButton force />
       <PageDownButton containerRef={containerRef} targetSelector="#join-icon-links" />
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative w-full px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8">

@@ -33,6 +33,17 @@
       max-width: clamp(1100px, 75vw, 1600px);
     }
   }
+
+  /* GLOBAL STANDARD — use on any page picture/illustration/screenshot that
+     should grow 20% on hover. Do not hand-roll `transition hover:scale-[1.2]`
+     inline anymore; use this class name instead so it stays one tweakable
+     rule site-wide. */
+  .img-hover-zoom {
+    transition: transform 200ms ease-out;
+  }
+  .img-hover-zoom:hover {
+    transform: scale(1.2);
+  }
 }
 
 @layer base {

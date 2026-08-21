@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import CloseButton from "../components/ui/CloseButton.jsx";
 import { brandify } from "../components/Brand.jsx";
 import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
 
@@ -270,7 +269,6 @@ export default function Video() {
 
   return (
     <>
-      <CloseButton force />
 
       <section className="w-full bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1000px]">

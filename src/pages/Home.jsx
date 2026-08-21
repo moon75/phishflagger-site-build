@@ -285,14 +285,12 @@ export default function Home() {
             customers know an email is genuine, they are more likely to
             open, read, and engage with it.
           </p>
-          <a
-            href="https://phishflagger.netlify.app/join/email-marketing"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/join/email-marketing"
             className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
           >
             Marketing
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -426,14 +424,12 @@ export default function Home() {
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
                 className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
               />
-              <a
-                href="https://phishflagger.netlify.app/join/messaging"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/join/messaging"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Messaging
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -582,8 +578,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-end pr-12 sm:mt-12 sm:pr-16">
-          <p className="text-[15px] text-ink sm:text-[18px]">
+        <div className="relative z-20 mt-2 flex justify-center sm:mt-3">
+          <p className="rounded-full border-2 border-black bg-white px-5 py-2 text-[15px] text-ink sm:text-[18px]">
             Like what you see:{" "}
             <Link
               to="/help/endorse-us"

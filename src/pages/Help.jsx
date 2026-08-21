@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CloseButton from "../components/ui/CloseButton.jsx";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import communityImg from "../assets/images/commnity image.avif";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
@@ -18,6 +17,7 @@ const LINKS = [
   { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
+  { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
 ];
 
 // Hover-scales 20% and auto-navigates after a 1s hover dwell (no click
@@ -56,8 +56,6 @@ export default function Help() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <CloseButton force />
-
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
       <section className="w-full px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
         <div className="mx-auto max-w-content">
@@ -87,12 +85,12 @@ export default function Help() {
                       Phish<span className="font-normal text-brand">Flagger</span>.org
                     </span>
                   </div>
-                  <HoverAutoLink
-                    to="/phishflagger-org"
-                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white hover:bg-[#3f3f3f]"
+                  <Link
+                    to="/community"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition hover:bg-[#3f3f3f]"
                   >
-                    Visit PhishFlagger.org →
-                  </HoverAutoLink>
+                    Community
+                  </Link>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -120,9 +118,6 @@ export default function Help() {
                       alt="People holding hands in community"
                       className="h-auto w-full max-w-[130px] object-contain"
                     />
-                    <span className="mt-3 inline-block rounded-md bg-[#2b2b2b] px-3 py-1 text-[11px] font-semibold text-white">
-                      Community
-                    </span>
                   </Link>
 
                   <div className="text-center sm:text-left">
@@ -278,6 +273,18 @@ function FaqIcon() {
         fill="none"
       />
       <circle cx="12" cy="16.7" r="1.05" fill="white" />
+    </svg>
+  );
+}
+
+function MessagingIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+      <circle cx="12" cy="12" r="11" fill="#2a6df4" />
+      <path
+        d="M6 8.5A1.5 1.5 0 0 1 7.5 7h9A1.5 1.5 0 0 1 18 8.5v5A1.5 1.5 0 0 1 16.5 15H10l-3 2.5V15h-.5A1.5 1.5 0 0 1 5 13.5v-5Z"
+        fill="white"
+      />
     </svg>
   );
 }

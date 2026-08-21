@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import CloseButton from "../../components/ui/CloseButton.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
@@ -17,7 +16,6 @@ export default function Telecom() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <CloseButton force />
       <PageDownButton containerRef={containerRef} targetSelector="#telecom-pane-0001" />
 
       <section
@@ -394,10 +392,15 @@ export default function Telecom() {
         <SectionCounter value="^0006" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            <h2 className="flex items-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[26px] w-auto shrink-0 object-contain sm:h-[30px]"
+              />
               SMS
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <p className="mt-6 rounded-lg bg-yellow-300 px-4 py-3 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               Placeholder text goes here. Replace this paragraph with the
               final copy for this section.
             </p>

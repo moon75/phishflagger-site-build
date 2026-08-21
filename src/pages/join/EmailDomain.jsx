@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
 import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
@@ -47,7 +48,7 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex justify-center lg:justify-start lg:pl-40">
-            <div className="h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
+            <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate%20image%20and%20design.png"
                 alt="Corporate email protection design"
@@ -177,7 +178,8 @@ export default function EmailDomain() {
         <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <h2 className="mb-6 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-left sm:text-[30px]">
+            <h2 className="mb-6 flex items-center justify-center gap-3 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-left sm:text-[30px]">
+              <LogoMark />
               Protect your Brand and Recipients
             </h2>
 
@@ -197,7 +199,7 @@ export default function EmailDomain() {
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
-              className="h-auto w-full max-w-[500px] object-contain"
+              className="img-hover-zoom h-auto w-full max-w-[500px] object-contain"
             />
           </div>
         </div>
@@ -207,14 +209,14 @@ export default function EmailDomain() {
         <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
-            <div className="h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
+            <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src="/assets/images/domain image for homepage.png"
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
+            <div className="img-hover-zoom flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
@@ -223,7 +225,8 @@ export default function EmailDomain() {
             </div>
           </div>
           <div className="text-center lg:text-left">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            <h2 className="flex items-center justify-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-[30px]">
+              <LogoMark />
               Protect your Network
             </h2>
             <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px] lg:mx-0">

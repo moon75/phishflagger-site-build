@@ -64,15 +64,19 @@ export default function EmailMarketing() {
           </div>
 
           <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
-            <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:mt-16">
+            <h2 className="flex items-center gap-3 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:mt-16">
+              <img
+                src="/assets/images/logo-mark.png"
+                alt="PhishFlagger envelope and flag mark"
+                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+              />
               The Human Part
             </h2>
             <ul className="mt-5 space-y-2 pl-5">
               <li className="list-disc">
                 <BrandInline />
                 &trade; email numbering in your outgoing email campaigns helps
-                prevent others from impersonating you, your organization, clients,
-                partners, and your brand.
+                prevent others from impersonating you and your brand.
               </li>
               <li className="list-disc">
                 Designed for marketers and bulk emails.

@@ -34,6 +34,7 @@ import EmailMarketing from "./pages/join/EmailMarketing.jsx";
 import EmailMarketingQuote from "./pages/join/EmailMarketingQuote.jsx";
 import Telecom from "./pages/join/Telecom.jsx";
 import Messaging from "./pages/join/Messaging.jsx";
+import MessagingAppRequest from "./pages/join/MessagingAppRequest.jsx";
 import TelecomContact from "./pages/join/TelecomContact.jsx";
 import TelecomSubscribe from "./pages/join/TelecomSubscribe.jsx";
 import EmailSubscribe from "./pages/join/EmailSubscribe.jsx";
@@ -170,6 +171,16 @@ export default function App() {
             element={<TelecomThanksSubscribe />}
           />
           <Route path="messaging" element={<Messaging />} />
+          <Route path="messaging/request" element={<MessagingAppRequest />} />
+          <Route
+            path="messaging/request/thanks"
+            element={
+              <GenericThanks
+                message="Thank you. We'll let you know when your app is supported."
+                closeTo="/join/messaging"
+              />
+            }
+          />
           <Route path="other" element={<Other />} />
         </Route>
 
