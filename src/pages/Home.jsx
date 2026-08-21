@@ -132,12 +132,6 @@ export default function Home() {
               >
                 <span>Coming Soon</span>
               </Link>
-              <Link
-                to="/kick"
-                className="absolute top-2 -right-2 z-10 flex rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
-              >
-                <span>Coming Soon</span>
-              </Link>
               <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
                 <img
                   src={outlookThunderbirdImg}
@@ -159,38 +153,50 @@ export default function Home() {
             </div>
             <Link
               to="/kick"
-              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-white px-6 py-4 text-center transition hover:bg-gray-50"
+              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center transition hover:bg-red-100"
             >
-              <span className="text-[16px] font-semibold text-ink sm:text-[18px]">
+              <span className="text-[20px] font-semibold text-ink sm:text-[22px]">
                 Beta our Plug-In
               </span>
-              <span className="text-[13px] font-medium text-brand sm:text-[14px]">
+              <span className="text-[16px] font-medium text-brand sm:text-[18px]">
                 Support us on Kickstarter
               </span>
             </Link>
-            <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
-              Free for Individuals.
-              <br />
+            <p className="flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
               Perfect for small business.
             </p>
             <div className="-mt-3 flex flex-wrap items-stretch justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
+                <span className="text-[28px] font-extrabold uppercase tracking-wide text-ink">
+                  Free
+                </span>
                 <span className="flex flex-1 items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
-                  Gmail, Outlook, Yahoo, Etc. Coming Soon
+                  Gmail, Outlook, Yahoo, Etc.
                 </span>
-                <Link
-                  to="/join/email-free-plug-in"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
-                >
-                  Join Free
-                </Link>
+                <div className="relative mt-3">
+                  <Link
+                    to="/kick"
+                    className="absolute -top-3 -left-4 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-2 py-0.5 text-center text-[7px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105"
+                  >
+                    <span>Coming Soon</span>
+                  </Link>
+                  <Link
+                    to="/join/email-free-plug-in"
+                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  >
+                    Join Free
+                  </Link>
+                </div>
               </div>
               <div className="flex w-[200px] flex-col items-center gap-3">
+                <span className="text-[28px] font-extrabold uppercase tracking-wide text-ink">
+                  Pro
+                </span>
                 <span className="flex flex-1 items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Enable one or multiple Email Addresses (works with all
-                  domains) Coming Soon
+                  domains)
                 </span>
                 <Link
                   to="/join/pro"
@@ -226,14 +232,14 @@ export default function Home() {
                 />
               </div>
             </div>
-            <p className="mt-4 flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
+            <p className="mt-4 flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
               <div className="flex w-[190px] flex-col items-center gap-3">
-                <span className="flex h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Join your Domain Coming Soon
+                <span className="flex items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                  Join your Domain
                 </span>
                 <Link
                   to="/join/pro"

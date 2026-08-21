@@ -64,8 +64,8 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
           to={item.href}
           className={({ isActive }) =>
             cn(
-              "inline-flex items-center gap-1 text-[15px] font-medium transition-colors hover:text-brand",
-              isActive ? "text-brand" : "text-ink",
+              "inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand",
+              isActive ? "bg-gray-100 text-brand" : "text-ink",
             )
           }
           aria-expanded={open}
@@ -130,7 +130,12 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
                 <NavLink
                   to={child.href}
                   role="menuitem"
-                  className="block whitespace-nowrap px-5 py-2 text-[15px] text-ink transition-colors hover:text-brand"
+                  className={({ isActive }) =>
+                    cn(
+                      "block whitespace-nowrap px-5 py-2 text-[15px] text-ink transition-colors hover:text-brand",
+                      isActive && "bg-gray-100 text-brand",
+                    )
+                  }
                 >
                   {child.label}
                 </NavLink>

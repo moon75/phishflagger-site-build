@@ -17,7 +17,7 @@ const LINKS = [
   { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
+  { to: "/join/messaging", label: "Looking for Messaging", icon: <MessagingIcon /> },
 ];
 
 // Hover-scales 20% and auto-navigates after a 1s hover dwell (no click
@@ -160,15 +160,7 @@ export default function Help() {
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
-                  <h3 className="text-[22px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[26px]">
-                    How Does <BrandInline /> Work?
-                  </h3>
-                  <p className="mt-3 text-[13.5px] leading-[1.7] text-ink-muted sm:text-[14.5px]">
-                    Every email gets a human-readable{" "}
-                    <span className="font-semibold text-ink">PhishCounter</span>{" "}
-                    in the subject line and a domain-level check.
-                  </p>
-                  <div className="mt-5 flex justify-center overflow-hidden rounded-xl">
+                  <div className="flex justify-center overflow-hidden rounded-xl">
                     <img
                       src={outlookThunderbirdImg}
                       alt="Microsoft Outlook and Mozilla Thunderbird"
@@ -213,7 +205,7 @@ function HelpCard({ to, label, icon, src, imageClassName = "" }) {
       to={to}
       className="group flex w-[110px] flex-col items-center transition-transform duration-200 hover:scale-105"
     >
-      <span className="mb-3 whitespace-nowrap text-center text-[13px] font-bold uppercase tracking-[0.14em] text-ink-muted sm:text-[14px]">
+      <span className="mb-3 flex h-[48px] items-end justify-center text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">
         {label}
       </span>
       <div className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[100px] sm:w-[100px]">

@@ -28,12 +28,25 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-white">
+      <header className="sticky top-0 z-40 bg-white lg:relative">
+        {/* Logo — pinned to the far left edge of the page on desktop */}
+        <NavLink
+          to="/"
+          className="hidden lg:absolute lg:left-4 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center"
+          aria-label="PhishFlagger home"
+        >
+          <img
+            src={logoImg}
+            alt="PhishFlagger"
+            className="h-auto w-[190px] sm:w-[220px]"
+          />
+        </NavLink>
+
         <div className="mx-auto flex min-h-[88px] w-[80%] items-center justify-between gap-7 py-5 lg:justify-center lg:gap-9">
-          {/* Logo */}
+          {/* Logo (mobile/tablet) */}
           <NavLink
             to="/"
-            className="flex shrink-0 items-center"
+            className="flex shrink-0 items-center lg:hidden"
             aria-label="PhishFlagger home"
           >
             <img
@@ -65,8 +78,8 @@ export default function Header() {
                             : undefined
                         }
                         className={({ isActive }) =>
-                          `text-[15px] font-medium transition-colors hover:text-brand ${
-                            isActive ? "text-brand" : "text-ink"
+                          `rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
+                            isActive ? "bg-gray-100 text-brand" : "text-ink"
                           }`
                         }
                       >
@@ -79,7 +92,7 @@ export default function Header() {
             </nav>
 
             {/* ^0001 badge — sits right next to Contact */}
-            <span className="ml-4 shrink-0 font-normal text-brand sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+            <span className="ml-4 shrink-0 font-normal text-green-600 sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
               ^0001
             </span>
           </div>
@@ -113,9 +126,6 @@ export default function Header() {
             />
           </button>
         </div>
-
-        {/* Bottom strip — full red */}
-        <div className="h-1.5 w-full bg-brand" aria-hidden />
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
