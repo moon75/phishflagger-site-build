@@ -125,11 +125,11 @@ export default function Home() {
     </div>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
-    <section id="pane-0002" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0002" className="relative w-full scroll-mt-24 bg-white px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
       <SectionCounter value="^0002" />
       <PageDownButton targetSelector="#pane-0003" />
       <div className="mx-auto max-w-content">
-        <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
+        <div className="mx-auto mt-6 flex flex-col items-center justify-center gap-10 px-4 sm:mt-8 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Email Client Plug-In
@@ -164,6 +164,9 @@ export default function Home() {
               to="/kick"
               className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center transition hover:bg-red-100"
             >
+              <span className="text-[13px] font-bold uppercase tracking-wide text-ink sm:text-[14px]">
+                Help Us Stop Phishing
+              </span>
               <span className="text-[20px] font-semibold text-ink sm:text-[22px]">
                 Beta our Plug-In
               </span>
@@ -187,7 +190,7 @@ export default function Home() {
                 <div className="relative mt-3">
                   <Link
                     to="/kick"
-                    className="absolute -top-3 -left-4 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-2 py-0.5 text-center text-[7px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105"
+                    className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
                   >
                     <span>Coming Soon</span>
                   </Link>
@@ -204,8 +207,8 @@ export default function Home() {
                   Pro
                 </span>
                 <span className="flex flex-1 items-center text-center text-[20px] italic leading-snug text-ink-muted">
-                  Enable one or multiple Email Addresses (works with all
-                  domains)
+                  Enable one or multiple Email Addresses (works with
+                  any email)
                 </span>
                 <Link
                   to="/join/pro"
