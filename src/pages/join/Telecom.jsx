@@ -16,7 +16,7 @@ export default function Telecom() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <PageDownButton containerRef={containerRef} targetSelector="#telecom-pane-0001" />
+      <PageDownButton containerRef={containerRef} />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
@@ -123,6 +123,7 @@ export default function Telecom() {
       </section>
 
       <SplitSection
+        containerRef={containerRef}
         counter="^0001"
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
@@ -134,7 +135,6 @@ export default function Telecom() {
       />
 
       <section
-        id="telecom-pane-0002"
         className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
@@ -142,7 +142,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0002" />
-        <PageDownButton targetSelector="#telecom-pane-0003" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
             <li className="list-disc">
@@ -180,9 +180,9 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section id="telecom-pane-0003" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
-        <PageDownButton targetSelector="#telecom-pane-0004" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
@@ -213,7 +213,6 @@ export default function Telecom() {
       </section>
 
       <section
-        id="telecom-pane-0004"
         className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
@@ -221,7 +220,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0004" />
-        <PageDownButton targetSelector="#telecom-pane-0005" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -361,9 +360,9 @@ export default function Telecom() {
         </div>
       </section>
 
-      <section id="telecom-pane-0005" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0005" />
-        <PageDownButton targetSelector="#telecom-pane-0006" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
@@ -389,7 +388,6 @@ export default function Telecom() {
       </section>
 
       <section
-        id="telecom-pane-0006"
         className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
@@ -397,7 +395,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0006" />
-        <PageDownButton targetSelector="#telecom-pane-0007" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="flex items-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
@@ -424,7 +422,6 @@ export default function Telecom() {
       </section>
 
       <section
-        id="telecom-pane-0007"
         className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
@@ -528,10 +525,9 @@ function SectionCounter({ value }) {
   );
 }
 
-function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" }) {
+function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white", containerRef }) {
   return (
     <section
-      id={counter === "^0001" ? "telecom-pane-0001" : undefined}
       className={
         tone === "gray"
           ? "relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
@@ -544,9 +540,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white" 
       }
     >
       {counter && <SectionCounter value={counter} />}
-      {counter === "^0001" && (
-        <PageDownButton targetSelector="#telecom-pane-0002" />
-      )}
+      <PageDownButton containerRef={containerRef} />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img

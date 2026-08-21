@@ -7,6 +7,7 @@ import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/Ph
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
+import PageUpButton from "../ui/PageUpButton.jsx";
 
 const PRODUCT_IMAGES = [
   { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
@@ -92,11 +93,13 @@ export default function Footer({ logoSrc = logoImg }) {
         </>
       )}
 
-      <footer className="bg-white font-['Mulish',sans-serif]">
+      <footer className="relative bg-white font-['Mulish',sans-serif]">
+        <PageUpButton />
+
         {/* Top strip — full red, matches header */}
         <div className="h-1.5 w-full bg-brand" aria-hidden />
 
-        <div className="mx-auto max-w-[980px] px-6 pt-9 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-7">
+        <div className="mx-auto max-w-[980px] px-6 pt-16 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-14">
           {/* Description paragraph */}
           <div className="mx-auto max-w-[1280px]">
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
