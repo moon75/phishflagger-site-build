@@ -59,6 +59,7 @@ import NumberingHistory from "./pages/about/NumberingHistory.jsx";
 import HistoryBooks from "./pages/about/history/Books.jsx";
 import HistoryDocuments from "./pages/about/history/Documents.jsx";
 import HistoryCommunications from "./pages/about/history/Communications.jsx";
+import HistoryBlockchain from "./pages/about/history/Blockchain.jsx";
 import Kickstarter from "./pages/about/Kickstarter.jsx";
 import HallOfFame from "./pages/about/HallOfFame.jsx";
 import AboutEndorseUs from "./pages/about/EndorseUs.jsx";
@@ -220,6 +221,7 @@ export default function App() {
           <Route path="numbering-history/books" element={<HistoryBooks />} />
           <Route path="numbering-history/documents" element={<HistoryDocuments />} />
           <Route path="numbering-history/communications" element={<HistoryCommunications />} />
+          <Route path="numbering-history/blockchain" element={<HistoryBlockchain />} />
           <Route path="phishing-ends" element={<Fiction />} />
         </Route>
 

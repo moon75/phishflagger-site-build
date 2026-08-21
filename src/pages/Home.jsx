@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
@@ -116,7 +117,7 @@ export default function Home() {
     </div>
 
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0002" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0002" />
       <div className="mx-auto max-w-content">
         <div className="mx-auto mt-10 flex flex-col items-center justify-center gap-10 px-4 sm:mt-16 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
@@ -130,15 +131,12 @@ export default function Home() {
                 className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
               >
                 <span>Coming Soon</span>
-                <span>on Kickstarter</span>
               </Link>
               <Link
                 to="/kick"
                 className="absolute top-2 -right-2 z-10 flex rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
               >
                 <span>Coming Soon</span>
-                <span>Available now on</span>
-                <span>Kickstarter.</span>
               </Link>
               <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
                 <img
@@ -159,33 +157,44 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <Link
+              to="/kick"
+              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-white px-6 py-4 text-center transition hover:bg-gray-50"
+            >
+              <span className="text-[16px] font-semibold text-ink sm:text-[18px]">
+                Beta our Plug-In
+              </span>
+              <span className="text-[13px] font-medium text-brand sm:text-[14px]">
+                Support us on Kickstarter
+              </span>
+            </Link>
             <p className="flex h-[130px] w-full max-w-[300px] items-center justify-center p-6 text-center text-[22px] leading-[1.6] text-ink sm:h-[130px] sm:max-w-[460px] sm:p-8 sm:text-[22px]">
               Free for Individuals.
               <br />
               Perfect for small business.
             </p>
-            <div className="-mt-3 flex flex-wrap items-start justify-center gap-4">
+            <div className="-mt-3 flex flex-wrap items-stretch justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
-                <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex flex-1 items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Works with
                   <br />
                   Gmail, Outlook, Yahoo, Etc. Coming Soon
                 </span>
                 <Link
                   to="/join/email-free-plug-in"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </Link>
               </div>
               <div className="flex w-[200px] flex-col items-center gap-3">
-                <span className="flex min-h-[100px] items-center text-center text-[20px] italic leading-snug text-ink-muted">
+                <span className="flex flex-1 items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Enable one or multiple Email Addresses (works with all
                   domains) Coming Soon
                 </span>
                 <Link
                   to="/join/pro"
-                  className="inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -228,7 +237,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] border-2 border-black bg-white px-7 text-[14px] font-semibold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -241,7 +250,8 @@ export default function Home() {
 
     {/* ===== Section 7 — Caller ID (gray/tower) ===== */}
     <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      id="pane-0003"
+      className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -249,6 +259,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0003" />
+      <PageDownButton targetSelector="#pane-0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex justify-center lg:justify-start">
           <img
@@ -287,8 +298,9 @@ export default function Home() {
     </section>
 
     {/* ===== Section 7c — Telecom / Caller ID (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0004" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0004" />
+      <PageDownButton targetSelector="#pane-0005" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -356,7 +368,8 @@ export default function Home() {
 
     {/* ===== Section 7b — Telecom / Text (gray/tower) ===== */}
     <section
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      id="pane-0005"
+      className="relative w-full scroll-mt-24 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
       style={{
         backgroundImage:
           "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -364,6 +377,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0005" />
+      <PageDownButton targetSelector="#pane-0006" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
@@ -390,7 +404,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mx-6 mt-2 max-w-[360px] shrink-0 self-center rounded-xl border-2 border-black px-10 py-5 text-[16px] leading-[1.65] text-ink sm:text-[17px] sm:leading-[1.6]">
+          <p className="mx-6 mt-2 max-w-[360px] shrink-0 self-center border-2 border-black bg-white px-10 py-5 text-[16px] leading-[1.65] text-ink sm:text-[17px] sm:leading-[1.6]">
             Phishing doesn't stop at email. <BrandInline /> for SMS and
             Messages adds an additional layer of verification to SMS and mobile
             messaging, helping protect customers from text-based scams and
@@ -470,8 +484,9 @@ export default function Home() {
     )}
 
     {/* ===== Section 9 — Numbering history gallery (white) ===== */}
-    <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+    <section id="pane-0006" className="relative w-full scroll-mt-24 bg-white px-4 py-14 sm:px-6 sm:py-20">
       <SectionCounter value="^0006" />
+      <PageDownButton />
       <div className="mx-auto max-w-content">
         <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating order and reducing

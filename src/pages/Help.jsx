@@ -1,10 +1,11 @@
+import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import communityImg from "../assets/images/commnity image.avif";
+import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
-const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
 
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
@@ -19,9 +20,31 @@ const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
 ];
 
-export default function Help() {
+// Hover-scales 20% and auto-navigates after a 1s hover dwell (no click
+// needed); moving the mouse away cancels the pending navigation.
+function HoverAutoLink({ to, className = "", children }) {
   const navigate = useNavigate();
+  const timerRef = useRef(null);
 
+  const onMouseEnter = () => {
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => navigate(to), 300);
+  };
+  const onMouseLeave = () => clearTimeout(timerRef.current);
+
+  return (
+    <Link
+      to={to}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className={`transition duration-200 hover:scale-[1.2] ${className}`}
+    >
+      {children}
+    </Link>
+  );
+}
+
+export default function Help() {
   return (
     <div
       className="relative w-full bg-[#eef0f4] bg-cover bg-center"
@@ -36,7 +59,7 @@ export default function Help() {
       <CloseButton force />
 
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="w-full px-4 pt-14 pb-4 sm:px-6 sm:pt-20 sm:pb-6">
+      <section className="w-full px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
         <div className="mx-auto max-w-content">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 sm:gap-x-10">
             {LINKS.map((item) => (
@@ -47,7 +70,7 @@ export default function Help() {
       </section>
 
       {/* ===== Pane 1 — Org / Kickstarter ===== */}
-      <section className="w-full px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
+      <section className="w-full px-4 pt-9 pb-9 sm:px-6 sm:pt-[50px] sm:pb-[50px]">
         <div className="mx-auto w-full">
           <div className="mx-auto flex w-full max-w-content flex-col items-stretch justify-center gap-6 sm:gap-8 lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
             {/* Left — PhishFlagger.org, full production card */}
@@ -64,13 +87,12 @@ export default function Help() {
                       Phish<span className="font-normal text-brand">Flagger</span>.org
                     </span>
                   </div>
-                  <Link
+                  <HoverAutoLink
                     to="/phishflagger-org"
-                    onMouseEnter={() => navigate("/phishflagger-org")}
-                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white hover:bg-[#3f3f3f]"
                   >
                     Visit PhishFlagger.org →
-                  </Link>
+                  </HoverAutoLink>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -91,12 +113,12 @@ export default function Help() {
 
                 <div className="h-px w-full bg-gray-200" />
 
-                <div className="grid grid-cols-1 items-center gap-6 px-6 py-6 sm:grid-cols-[160px_1fr] sm:px-8 sm:py-8">
+                <div className="grid flex-1 grid-cols-1 content-center gap-6 px-6 py-5 sm:grid-cols-[160px_1fr] sm:px-8 sm:py-6">
                   <Link to="/community" className="mx-auto flex flex-col items-center sm:mx-0">
                     <img
                       src={communityImg}
                       alt="People holding hands in community"
-                      className="h-auto w-full max-w-[160px] object-contain"
+                      className="h-auto w-full max-w-[130px] object-contain"
                     />
                     <span className="mt-3 inline-block rounded-md bg-[#2b2b2b] px-3 py-1 text-[11px] font-semibold text-white">
                       Community
@@ -134,13 +156,12 @@ export default function Help() {
                       <BrandInline /> Kickstarter
                     </span>
                   </div>
-                  <Link
+                  <HoverAutoLink
                     to="/kick"
-                    onMouseEnter={() => navigate("/kick")}
-                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition duration-200 hover:scale-[1.05] hover:bg-[#3f3f3f]"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white hover:bg-[#3f3f3f]"
                   >
                     Visit Kickstarter →
-                  </Link>
+                  </HoverAutoLink>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -152,11 +173,11 @@ export default function Help() {
                     <span className="font-semibold text-ink">PhishCounter</span>{" "}
                     in the subject line and a domain-level check.
                   </p>
-                  <div className="mt-5 flex justify-center rounded-xl bg-[#f4f5f8] p-4">
+                  <div className="mt-5 flex justify-center overflow-hidden rounded-xl">
                     <img
-                      src={howDoesItWorkImg}
-                      alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-                      className="h-auto w-full max-w-[280px] object-contain"
+                      src={outlookThunderbirdImg}
+                      alt="Microsoft Outlook and Mozilla Thunderbird"
+                      className="h-[160px] w-full max-w-[650px] rounded-lg object-cover"
                     />
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
 import history3Img from "../../assets/images/7 3rd.avif";
+import blockchainHistoryImg from "../../assets/images/bloch chain history.png";
 
 export default function NumberingHistory() {
   return (
@@ -33,7 +34,7 @@ export default function NumberingHistory() {
         }}
       >
         <div className="mx-auto max-w-content">
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
             <HistoryCard
               to="/about/numbering-history/books"
               img={history1Img}
@@ -43,6 +44,11 @@ export default function NumberingHistory() {
               to="/about/numbering-history/documents"
               img={history2Img}
               imgAlt="Mechanical numbering stamp"
+            />
+            <HistoryCard
+              to="/about/numbering-history/blockchain"
+              img={blockchainHistoryImg}
+              imgAlt="Blockchain digital timestamping"
             />
             <HistoryCard
               to="/about/numbering-history/communications"
