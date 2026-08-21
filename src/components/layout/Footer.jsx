@@ -117,105 +117,49 @@ export default function Footer({ logoSrc = logoImg }) {
           </div>
         </div>
 
-        {/* Four-column site index — full-width child of <footer>, no vw-based hacks needed */}
+        {/* Site index — mirrors the header nav (data/nav.js) so the two never drift apart */}
         <div className="mt-8 w-full bg-white px-4 py-8 sm:px-6">
-          <div className="mx-auto max-w-[860px] text-left">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
-              {/* Column 1 — Company */}
-              <div>
-                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Company</p>
-                <ul className="space-y-2.5 list-none p-0">
-                  {[
-                    { label: "Home", to: "/" },
-                    { label: "Demo", to: "/demo" },
-                    { label: "Video", to: "/video" },
-                  ].map((link) => (
-                    <li key={link.to}>
+          <div className="mx-auto flex w-full max-w-[520px] flex-col items-stretch gap-10 text-left sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:gap-20">
+            {/* Column 1 — top-level nav */}
+            <div className="w-full sm:w-[160px]">
+              <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
+                Menu
+              </p>
+              <ul className="space-y-2.5 list-none p-0">
+                {nav
+                  .filter((item) => item.href)
+                  .map((item) => (
+                    <li key={item.href}>
                       <Link
-                        to={link.to}
+                        to={item.href}
                         className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
-                        {link.label}
+                        {item.label}
                       </Link>
                     </li>
                   ))}
-                </ul>
-              </div>
+              </ul>
+            </div>
 
-              {/* Column 2 — Join */}
-              <div>
-                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Join</p>
-                <ul className="space-y-2.5 list-none p-0">
-                  {[
-                    { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
-                    { label: "Email - PRO", href: "/join/pro" },
-                    { label: "Email - Marketing", href: "/join/email-marketing" },
-                    { label: "Telecom", href: "/join/telecom" },
-                    { label: "Messaging", href: "/join/messaging" },
-                  ].map((link) => (
-                    <li key={link.href}>
+            {/* Column 2 — About dropdown */}
+            <div className="w-full sm:w-[200px]">
+              <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
+                About
+              </p>
+              <ul className="space-y-2.5 list-none p-0">
+                {nav
+                  .find((item) => item.label === "About")
+                  ?.children.map((child) => (
+                    <li key={child.href}>
                       <Link
-                        to={link.href}
+                        to={child.href}
                         className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
                       >
-                        {link.label}
+                        {child.label}
                       </Link>
                     </li>
                   ))}
-                </ul>
-              </div>
-
-              {/* Column 3 — Help */}
-              <div>
-                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">Help</p>
-                <ul className="space-y-2.5 list-none p-0">
-                  {[
-                    { label: "Support", to: "/contact" },
-                    { label: "PhishFlagger.org", to: "/phishflagger-org" },
-                    { label: "Kickstarter", to: "/help/kickstarter" },
-                    { label: "Hall of Fame", to: "/help/hall-of-fame" },
-                    { label: "Email - Endorse Us", to: "/help/endorse-us" },
-                    { label: "Email - Supporters", to: "/help/supporters" },
-                    { label: "Telecom - Endorse Us", to: "/help/telecom-endorse-us" },
-                    { label: "Telecom - Sign Petition", to: "/petition" },
-                  ].map((link) => (
-                    <li key={link.to}>
-                      <Link
-                        to={link.to}
-                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Column 4 — About */}
-              <div>
-                <p className="mb-4 text-[15px] font-bold uppercase tracking-widest text-black">About</p>
-                <ul className="space-y-2.5 list-none p-0">
-                  {[
-                    { label: "Video", to: "/about/video1" },
-                    { label: "Press", to: "/about/press" },
-                    { label: "Phishing News", to: "/News" },
-                    { label: "Team", to: "/about/team" },
-                    { label: "Intellectual Property", to: "/about/intellectual-property" },
-                    { label: "Blog", to: "/about/blog" },
-                    { label: "Numbering History", to: "/about/numbering-history" },
-                    { label: "Phishing Ends", to: "/about/phishing-ends" },
-                  ].map((link) => (
-                    <li key={link.to}>
-                      <Link
-                        to={link.to}
-                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </ul>
             </div>
           </div>
         </div>

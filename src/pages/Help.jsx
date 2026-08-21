@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import communityImg from "../assets/images/commnity image.avif";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
@@ -17,32 +16,7 @@ const LINKS = [
   { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/join/messaging", label: "Looking for Messaging", icon: <MessagingIcon /> },
 ];
-
-// Hover-scales 20% and auto-navigates after a 1s hover dwell (no click
-// needed); moving the mouse away cancels the pending navigation.
-function HoverAutoLink({ to, className = "", children }) {
-  const navigate = useNavigate();
-  const timerRef = useRef(null);
-
-  const onMouseEnter = () => {
-    clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => navigate(to), 300);
-  };
-  const onMouseLeave = () => clearTimeout(timerRef.current);
-
-  return (
-    <Link
-      to={to}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      className={`transition duration-200 hover:scale-[1.2] ${className}`}
-    >
-      {children}
-    </Link>
-  );
-}
 
 export default function Help() {
   return (
@@ -151,12 +125,12 @@ export default function Help() {
                       <BrandInline /> Kickstarter
                     </span>
                   </div>
-                  <HoverAutoLink
+                  <Link
                     to="/kick"
-                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white hover:bg-[#3f3f3f]"
+                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition hover:bg-[#3f3f3f]"
                   >
                     Visit Kickstarter →
-                  </HoverAutoLink>
+                  </Link>
                 </div>
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
@@ -173,7 +147,7 @@ export default function Help() {
 
                 <div className="px-6 py-6 sm:px-8 sm:py-8">
                   <h4 className="text-[17px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[19px]">
-                    Available now for these domains
+                    Available soon for these domains
                   </h4>
                   <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
                     {DOMAIN_PROVIDERS.map(({ domain, provider }) => (
@@ -203,9 +177,9 @@ function HelpCard({ to, label, icon, src, imageClassName = "" }) {
   return (
     <Link
       to={to}
-      className="group flex w-[110px] flex-col items-center transition-transform duration-200 hover:scale-105"
+      className="group flex w-[130px] flex-col items-center transition-transform duration-200 hover:scale-105"
     >
-      <span className="mb-3 flex h-[48px] items-end justify-center text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">
+      <span className="mb-3 flex h-[24px] items-end justify-center whitespace-nowrap text-center text-[13px] font-bold uppercase tracking-[0.1em] text-ink-muted sm:text-[14px]">
         {label}
       </span>
       <div className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[100px] sm:w-[100px]">
@@ -265,18 +239,6 @@ function FaqIcon() {
         fill="none"
       />
       <circle cx="12" cy="16.7" r="1.05" fill="white" />
-    </svg>
-  );
-}
-
-function MessagingIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
-      <circle cx="12" cy="12" r="11" fill="#2a6df4" />
-      <path
-        d="M6 8.5A1.5 1.5 0 0 1 7.5 7h9A1.5 1.5 0 0 1 18 8.5v5A1.5 1.5 0 0 1 16.5 15H10l-3 2.5V15h-.5A1.5 1.5 0 0 1 5 13.5v-5Z"
-        fill="white"
-      />
     </svg>
   );
 }

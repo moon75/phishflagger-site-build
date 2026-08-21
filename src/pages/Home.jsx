@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
+import heroInfoBoxGif from "../assets/images/email-inbox-v4-gray-header-animated.gif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
@@ -16,7 +18,7 @@ import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlag
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 
 const SCREENS = [
-  { label: "Email Inbox", src: heroInfoBoxImg },
+  { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
   { label: "Email", src: emailPhoneImg },
   { label: "Messages", src: messagesPhoneImg },
   { label: "Text/SMS", src: textPhoneImg },
@@ -87,7 +89,12 @@ export default function Home() {
           </div>
           <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
             <div className="flex flex-1 items-center">
-              <PhonePlaceholder src={SCREENS[0].src} alt={`${SCREENS[0].label} screen`} large />
+              <PhonePlaceholder
+                src={SCREENS[0].src}
+                hoverSrc={SCREENS[0].hoverSrc}
+                alt={`${SCREENS[0].label} screen`}
+                large
+              />
             </div>
             <PhonePlaceholder src={SCREENS[1].src} alt={`${SCREENS[1].label} screen`} />
           </div>
@@ -586,16 +593,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-20 mt-2 flex justify-center sm:mt-3">
-          <p className="rounded-full border-2 border-black bg-white px-5 py-2 text-[15px] text-ink sm:text-[18px]">
-            Like what you see:{" "}
-            <Link
-              to="/help/endorse-us"
-              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-            >
-              Endorse Us
-            </Link>
-          </p>
+        <div className="relative z-20 flex justify-center">
+          <Link
+            to="/help/endorse-us"
+            className="rounded-full border-2 border-black bg-gray-100 px-5 py-2 text-[15px] text-ink transition-transform duration-200 ease-out hover:scale-[1.2] hover:text-[#FF0033] sm:text-[18px]"
+          >
+            Like what you see: <span className="font-semibold">Endorse Us</span>
+          </Link>
         </div>
       </div>
     </section>
@@ -634,15 +638,20 @@ function SectionCounter({ value }) {
   );
 }
 
-function PhonePlaceholder({ src, alt, large = false }) {
+function PhonePlaceholder({ src, hoverSrc, alt, large = false }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <img
-      src={src}
+      key={isHovered && hoverSrc ? "animated" : "static"}
+      src={isHovered && hoverSrc ? hoverSrc : src}
       alt={alt}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className={
         large
-          ? "mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-135 sm:w-[300px] lg:w-[300px]"
-          : "block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:scale-135 sm:w-[180px] lg:w-[170px]"
+          ? "relative z-10 mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[300px] lg:w-[300px]"
+          : "relative z-10 block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[180px] lg:w-[170px]"
       }
     />
   );
