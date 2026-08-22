@@ -45,7 +45,7 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <PageDownButton targetSelector="#pane-0002" />
       <div className="mx-auto max-w-content">
-      <div className="mx-auto mt-10 flex w-full max-w-[1120px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-6">
+      <div className="mx-auto mt-10 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-6">
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v1.png"
@@ -57,7 +57,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[92%] translate-y-11 object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none translate-x-4 translate-y-11 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
