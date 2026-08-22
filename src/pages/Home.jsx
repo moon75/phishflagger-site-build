@@ -44,7 +44,7 @@ export default function Home() {
     <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
       <PageDownButton targetSelector="#pane-0002" />
       <div className="mx-auto max-w-content">
-      <div className="mx-auto mt-10 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-6">
+      <div className="mx-auto mt-10 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v1.png"
@@ -56,14 +56,14 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none translate-x-4 translate-y-11 object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-10 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v3.png"
             alt="Woman using PhishFlagger-protected email"
-            className="mx-auto h-auto w-full translate-y-8 object-contain"
+            className="relative left-1/2 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain"
           />
         </div>
       </div>

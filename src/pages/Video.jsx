@@ -205,6 +205,18 @@ function categoryVideos(category) {
         title: "Save Your Dog Too Use Code SAVE123",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Granny_monitoring_dog_health_202608212143.mp4",
+        title: "Granny Monitoring Dog Health",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Woman_caring_for_pets_at_202608212137.mp4",
+        title: "Woman Caring for Pets",
+        description: "",
+      },
     ];
   }
 
