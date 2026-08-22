@@ -36,3 +36,11 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
+
+# Scratch/superseded assets — never commit anything with "old" in the name
+public/assets/images/*old*
+public/assets/images/*Old*
+public/assets/images/*OLD*
+src/assets/images/*old*
+src/assets/images/*Old*
+src/assets/images/*OLD*
