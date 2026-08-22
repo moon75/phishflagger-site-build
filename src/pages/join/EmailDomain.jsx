@@ -21,7 +21,6 @@ export default function EmailDomain() {
           backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <div className="mb-6 flex items-center gap-4">
@@ -60,7 +59,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Two Ways To Join
@@ -71,7 +70,7 @@ export default function EmailDomain() {
                 Plug-In
               </h3>
               <div className="relative">
-                <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+                <span className="absolute top-2 -left-2 z-10 -rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
                   Coming Soon
                 </span>
                 <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
@@ -101,9 +100,6 @@ export default function EmailDomain() {
                 Appliance
               </h3>
               <div className="relative">
-                <span className="absolute top-2 -right-2 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
-                  Coming Soon
-                </span>
                 <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
                 <div className="h-[200px] w-full overflow-hidden">
                   <img
@@ -175,7 +171,7 @@ export default function EmailDomain() {
           backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="mb-6 flex items-center justify-center gap-3 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-left sm:text-[30px]">
@@ -206,7 +202,7 @@ export default function EmailDomain() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
             <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
@@ -245,7 +241,7 @@ export default function EmailDomain() {
           backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0005" />
+        <SectionCounter value="^0004" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">

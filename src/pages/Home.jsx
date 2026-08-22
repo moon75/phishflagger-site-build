@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
@@ -288,11 +289,7 @@ export default function Home() {
         </div>
         <div>
           <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <img
-              src="/assets/images/logo-mark.png"
-              alt="PhishFlagger envelope and flag mark"
-              className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
-            />
+            <LogoMark />
             Email Marketing
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
@@ -321,11 +318,7 @@ export default function Home() {
         {/* Left — heading + text */}
         <div>
           <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
-            <img
-              src="/assets/images/logo-mark.png"
-              alt="PhishFlagger envelope and flag mark"
-              className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
-            />
+            <LogoMark />
             Telecom / Caller ID
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
@@ -398,11 +391,7 @@ export default function Home() {
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
             <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
-              <img
-                src="/assets/images/logo-mark.png"
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
-              />
+              <LogoMark />
               SMS
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
@@ -429,11 +418,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center">
             <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
-              <img
-                src="/assets/images/logo-mark.png"
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
-              />
+              <LogoMark />
               Message
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">

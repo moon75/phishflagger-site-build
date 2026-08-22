@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
-import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
+const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
 

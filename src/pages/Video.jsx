@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { brandify } from "../components/Brand.jsx";
+import { BrandInline } from "../components/Brand.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
@@ -294,8 +295,11 @@ export default function Video() {
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">
-            <p className="mx-auto max-w-[900px] text-[22px] leading-[1.6] text-ink sm:text-[24px]">
-              {brandify("See how PhishFlagger protects against phishing.")}
+            <p className="mx-auto flex max-w-[900px] flex-wrap items-center justify-center gap-x-2 text-[22px] leading-[1.6] text-ink sm:text-[24px]">
+              <span>See how</span>
+              <LogoMark />
+              <BrandInline />
+              <span>protects against phishing.</span>
             </p>
             <h1 className="mt-4 text-[9px] font-extrabold uppercase tracking-tight text-brand sm:text-[11px]">
               Development Page

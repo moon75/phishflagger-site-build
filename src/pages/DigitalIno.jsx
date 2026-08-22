@@ -14,6 +14,15 @@ export default function DigitalIno() {
             Digital Verification
           </h1>
 
+          <div className="mt-3 flex justify-center">
+            <Link
+              to="/white-paper"
+              className="text-[14px] font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9] sm:text-[15px]"
+            >
+              White Paper
+            </Link>
+          </div>
+
           <div className="mx-auto mt-10 flex justify-center">
             <img
               src={topImg}

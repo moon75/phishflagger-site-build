@@ -59,7 +59,7 @@ export default function Footer({ logoSrc = logoImg }) {
             <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
               ^0001
             </span>
-            <PageDownButton />
+            <PageDownButton targetSelector="#site-footer" />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex items-center justify-center gap-3">
                 <img
@@ -114,7 +114,7 @@ export default function Footer({ logoSrc = logoImg }) {
         </>
       )}
 
-      <footer className="relative bg-white font-['Mulish',sans-serif]">
+      <footer id="site-footer" className="relative scroll-mt-[var(--header-h)] bg-white font-['Mulish',sans-serif]">
         <PageUpButton />
 
         {/* Top strip — full red, matches header */}
