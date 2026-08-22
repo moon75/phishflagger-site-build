@@ -50,7 +50,7 @@ export default function Header() {
         {/* Logo — pinned to the far left edge of the page on desktop */}
         <NavLink
           to="/"
-          className="hidden lg:absolute lg:left-4 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center"
+          className="hidden lg:absolute lg:left-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center"
           aria-label="PhishFlagger home"
         >
           <img
@@ -110,7 +110,7 @@ export default function Header() {
             </nav>
 
             {/* ^0001 badge — sits right next to Contact */}
-            <span className="ml-4 shrink-0 font-normal text-green-600 sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+            <span className="ml-4 shrink-0 font-bold text-green-600 sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
               ^0001
             </span>
           </div>
