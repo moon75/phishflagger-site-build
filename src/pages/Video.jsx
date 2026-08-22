@@ -95,7 +95,7 @@ const CATEGORY_SCRIPTS = {
 
 const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
 
-const VIDEOS_PER_PAGE = 6;
+const VIDEOS_PER_PAGE = 8;
 
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
@@ -280,10 +280,18 @@ export default function Video() {
     : categoryAllVideos;
 
   return (
-    <>
-
-      <section className="w-full bg-white px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
-        <div className="mx-auto max-w-[1000px]">
+    <div
+      className="relative w-full bg-[#eef0f4] bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <section className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
+        <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">
             <p className="mx-auto max-w-[900px] text-[22px] leading-[1.6] text-ink sm:text-[24px]">
@@ -310,7 +318,7 @@ export default function Video() {
                   onClick={() => {
                     const slug = CATEGORY_SLUGS[category];
                     setPlaying(null);
-                    navigate(slug ? `/about/video1/${slug}` : "/about/video1", {
+                    navigate(slug ? `/video1/${slug}` : "/video1", {
                       replace: true,
                     });
                   }}
@@ -349,7 +357,7 @@ export default function Video() {
           </div>
 
           {/* Video grid */}
-          <div className="mx-auto mt-4 grid w-full max-w-[1000px] grid-cols-1 gap-5 sm:mt-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-4 grid w-full max-w-[1300px] grid-cols-1 gap-5 sm:mt-5 sm:grid-cols-2 lg:grid-cols-4">
             {displayedVideos.map((v, i) => {
               const isPlaying = playing === i;
               return (
@@ -418,6 +426,6 @@ export default function Video() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

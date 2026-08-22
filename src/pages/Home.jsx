@@ -49,14 +49,14 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full object-contain"
+            className="h-auto w-full -translate-y-20 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-10 object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-6 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -102,7 +102,7 @@ export default function Home() {
         {SCREENS.slice(2).map((s, i) => (
           <div key={i + 2} className="flex flex-col items-center">
             <Link
-              to={s.label === "Messages" ? "/join/messaging" : "/join/telecom"}
+              to={s.label === "Messages" ? "/join/messaging" : "/telecom"}
               className="mb-3 text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-base"
             >
               {s.label}
@@ -118,7 +118,11 @@ export default function Home() {
     {/* ===== Section 4 — placeholder (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
     <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
       <div className="mx-auto w-[85%] max-w-[1360px]">
-        <div className="flex h-[220px] w-full items-center justify-center rounded-lg border-2 border-black bg-gray-300" />
+        <div className="flex h-[220px] w-full items-center justify-center rounded-lg border-2 border-black bg-yellow-300 px-6 text-center">
+          <p className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            Placeholder text goes here. Replace this paragraph with the final copy for this section.
+          </p>
+        </div>
       </div>
     </section>
     </div>
@@ -167,16 +171,13 @@ export default function Home() {
                 Help Us Stop Phishing
               </span>
               <span className="text-[20px] font-semibold text-ink sm:text-[22px]">
-                Beta our Plug-In
+                Beta our Plug-In Now!
               </span>
               <span className="text-[16px] font-medium text-brand sm:text-[18px]">
                 Support us on Kickstarter
               </span>
             </Link>
-            <p className="flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
-              Perfect for small business.
-            </p>
-            <div className="-mt-3 flex flex-wrap items-stretch justify-center gap-4">
+            <div className="mt-8 flex flex-wrap items-stretch justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
                 <span className="text-[28px] font-extrabold uppercase tracking-wide text-ink">
                   Free
@@ -347,12 +348,12 @@ export default function Home() {
               to="/help/telecom-endorse-us"
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
-              Endorse Us
+              Endorse Safe Calls
             </Link>
             .
           </p>
           <Link
-            to="/join/telecom"
+            to="/telecom"
             className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
           >
             Telecom
@@ -411,7 +412,7 @@ export default function Home() {
                 className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
               />
               <Link
-                to="/join/telecom"
+                to="/telecom"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
               >
                 Telecom
@@ -595,14 +596,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-20 flex justify-center">
-          <Link
-            to="/help/endorse-us"
-            className="rounded-full border-2 border-black bg-gray-100 px-5 py-2 text-[15px] text-ink transition-transform duration-200 ease-out hover:scale-[1.2] hover:text-[#FF0033] sm:text-[18px]"
-          >
-            Like what you see: <span className="font-semibold">Endorse Us</span>
-          </Link>
-        </div>
       </div>
     </section>
 

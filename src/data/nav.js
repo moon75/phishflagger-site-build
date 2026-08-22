@@ -3,9 +3,9 @@
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "Video", href: "/about/video1" },
+  { label: "Video", href: "/video1" },
   { label: "Email", href: "/email" },
-  { label: "Telecom", href: "/join/telecom" },
+  { label: "Telecom", href: "/telecom" },
   { label: "Help", href: "/help" },
   {
     label: "About",

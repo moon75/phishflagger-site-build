@@ -128,7 +128,7 @@ export default function Contact() {
                 <div className="mt-8 text-[14px] text-ink sm:mt-10 sm:text-[15px]">
                   Contact for Telecom or Caller ID{" "}
                   <Link
-                    to="/join/telecom/contact"
+                    to="/telecom/contact"
                     className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                   >
                     Click Here

@@ -135,6 +135,18 @@ export default function App() {
 
         <Route path="email" element={<Join />} />
 
+        <Route path="telecom" element={<Telecom />} />
+        <Route path="telecom/contact" element={<TelecomContact />} />
+        <Route path="telecom/subscribe" element={<TelecomSubscribe />} />
+        <Route
+          path="telecom/thanks-contact"
+          element={<TelecomThanksContact />}
+        />
+        <Route
+          path="telecom/thanks-subscribe"
+          element={<TelecomThanksSubscribe />}
+        />
+
         <Route path="join">
           <Route path="pro" element={<EmailDomain />} />
           <Route path="email-free-plug-in" element={<EmailFreePlugIn />} />
@@ -149,9 +161,6 @@ export default function App() {
               />
             }
           />
-          <Route path="telecom" element={<Telecom />} />
-          <Route path="telecom/contact" element={<TelecomContact />} />
-          <Route path="telecom/subscribe" element={<TelecomSubscribe />} />
           <Route path="email-subscribe" element={<EmailSubscribe />} />
           <Route
             path="email-subscribe/thanks"
@@ -161,14 +170,6 @@ export default function App() {
                 closeTo="/email"
               />
             }
-          />
-          <Route
-            path="telecom/thanks-contact"
-            element={<TelecomThanksContact />}
-          />
-          <Route
-            path="telecom/thanks-subscribe"
-            element={<TelecomThanksSubscribe />}
           />
           <Route path="messaging" element={<Messaging />} />
           <Route path="messaging/request" element={<MessagingAppRequest />} />
@@ -207,10 +208,11 @@ export default function App() {
           <Route path="telecom-supporters" element={<TelecomSupporters />} />
         </Route>
 
+        <Route path="video1/:category?" element={<Video />} />
+
         <Route path="about">
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
-          <Route path="video1/:category?" element={<Video />} />
           <Route path="intellectual-property" element={<IP />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="blog" element={<Blog />} />

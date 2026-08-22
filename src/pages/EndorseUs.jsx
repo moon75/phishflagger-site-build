@@ -54,7 +54,7 @@ export default function EndorseUs() {
 
   return (
     <>
-      <CloseButton to="/join/telecom" />
+      <CloseButton to="/telecom" />
       <section
         className="bg-[#eef0f4] bg-cover bg-center px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14"
         style={{

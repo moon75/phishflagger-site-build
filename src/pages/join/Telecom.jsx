@@ -64,14 +64,14 @@ export default function Telecom() {
         <div className="mx-auto mt-6 max-w-content sm:mt-8">
           <div className="grid grid-cols-[repeat(3,max-content)] place-items-center justify-center gap-x-2 gap-y-4 sm:grid-cols-[repeat(6,max-content)] sm:gap-x-2">
             <ActionCard
-              to="/join/telecom/contact"
+              to="/telecom/contact"
               label="Contact"
               src={contactIcon}
               alt="Contact"
               imageClassName="rounded-full object-cover"
             />
             <ActionCard
-              to="/join/telecom/subscribe"
+              to="/telecom/subscribe"
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"

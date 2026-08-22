@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
+import PageUpButton from "../ui/PageUpButton.jsx";
+import PageDownButton from "../ui/PageDownButton.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -7,7 +9,19 @@ import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/Ph
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
-import PageUpButton from "../ui/PageUpButton.jsx";
+
+// Mirrors CATEGORY_SLUGS in pages/Video.jsx — keep in sync if categories change there.
+const VIDEO_CATEGORY_LINKS = [
+  { label: "Feature", href: "/video1" },
+  { label: "Ads", href: "/video1/ads" },
+  { label: "Shorts", href: "/video1/shorts" },
+  { label: "Manual", href: "/video1/manual" },
+  { label: "Kickstarter", href: "/video1/kickstarter" },
+  { label: "Learning", href: "/video1/learning" },
+  { label: "CISO", href: "/video1/ciso" },
+  { label: "Telecom Caller ID", href: "/video1/telecom-caller-id" },
+  { label: "Oracle", href: "/video1/oracle" },
+];
 
 const PRODUCT_IMAGES = [
   { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
@@ -45,6 +59,7 @@ export default function Footer({ logoSrc = logoImg }) {
             <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
               ^0001
             </span>
+            <PageDownButton />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex items-center justify-center gap-3">
                 <img
@@ -60,6 +75,12 @@ export default function Footer({ logoSrc = logoImg }) {
                   className="ml-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:ml-10 sm:text-[14px]"
                 >
                   FAQ
+                </Link>
+                <Link
+                  to="/help/endorse-us"
+                  className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                >
+                  Endorse Us
                 </Link>
               </div>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
@@ -117,56 +138,74 @@ export default function Footer({ logoSrc = logoImg }) {
           </div>
         </div>
 
-        {/* Site index — Menu row links to Home/Join sub-pages/Help; About column mirrors the header nav (data/nav.js) */}
+        {/* Site index — one column per header nav item, listing every real
+            link found on that page, plus an About column mirroring the
+            header's own About dropdown (data/nav.js) */}
         <div className="mt-8 w-full bg-white px-4 py-8 sm:px-6">
-          <div className="mx-auto flex w-full max-w-[520px] flex-col items-stretch gap-10 text-left sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:gap-20">
-            {/* Column 1 — top-level nav, laid out horizontally; Email and Telecom
-                open their sub-pages in a hover dropdown instead of a separate column */}
-            <div className="w-full sm:w-auto">
-              <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 list-none p-0 m-0">
-                <FooterMenuItem label="Home" href="/" />
-                <FooterMenuItem
-                  label="Email"
-                  href="/email"
-                  children_={[
-                    { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
-                    { label: "Email - PRO", href: "/join/pro" },
-                    { label: "Email - Marketing", href: "/join/email-marketing" },
-                  ]}
-                />
-                <FooterMenuItem
-                  label="Telecom"
-                  href="/join/telecom"
-                  children_={[
-                    { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
-                    { label: "Telecom - Sign Petition", href: "/petition" },
-                  ]}
-                />
-                <FooterMenuItem label="Messaging" href="/join/messaging" />
-                <FooterMenuItem label="Help" href="/help" />
-              </ul>
-            </div>
-
-            {/* Column 2 — About dropdown */}
-            <div className="w-full sm:w-[200px]">
-              <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
-                About
-              </p>
-              <ul className="space-y-2.5 list-none p-0">
-                {nav
-                  .find((item) => item.label === "About")
-                  ?.children.map((child) => (
-                    <li key={child.href}>
-                      <Link
-                        to={child.href}
-                        className="text-[13px] text-black transition-colors hover:text-[#FF0033]"
-                      >
-                        {child.label}
-                      </Link>
-                    </li>
-                  ))}
-              </ul>
-            </div>
+          <div className="mx-auto grid w-full max-w-[1300px] grid-cols-2 gap-x-6 gap-y-10 text-left sm:grid-cols-3 lg:grid-cols-6">
+            <FooterSitemapColumn
+              heading="Home"
+              headingHref="/"
+              links={[
+                { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
+                { label: "Email - PRO", href: "/join/pro" },
+                { label: "Email - Marketing", href: "/join/email-marketing" },
+                { label: "Messaging", href: "/join/messaging" },
+                { label: "Telecom", href: "/telecom" },
+                { label: "Kickstarter", href: "/kick" },
+                { label: "Download", href: "/download" },
+                { label: "Sign Petition", href: "/petition" },
+                { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
+                { label: "Email - Endorse Us", href: "/help/endorse-us" },
+                { label: "Numbering History", href: "/about/numbering-history" },
+              ]}
+            />
+            <FooterSitemapColumn
+              heading="Video"
+              headingHref="/video1"
+              links={VIDEO_CATEGORY_LINKS}
+            />
+            <FooterSitemapColumn
+              heading="Email"
+              headingHref="/email"
+              links={[
+                { label: "Free Plug-In", href: "/join/email-free-plug-in" },
+                { label: "PRO", href: "/join/pro" },
+                { label: "Marketing", href: "/join/email-marketing" },
+                { label: "Contact", href: "/contact" },
+                { label: "Subscribe", href: "/join/email-subscribe" },
+                { label: "Endorse Us", href: "/help/endorse-us" },
+                { label: "White Paper", href: "/white-paper" },
+                { label: "FAQ", href: "/about/faq?category=General" },
+              ]}
+            />
+            <FooterSitemapColumn
+              heading="Telecom"
+              headingHref="/telecom"
+              links={[
+                { label: "Contact", href: "/telecom/contact" },
+                { label: "Subscribe", href: "/telecom/subscribe" },
+                { label: "Endorse Us", href: "/help/telecom-endorse-us" },
+                { label: "Sign Petition", href: "/petition" },
+                { label: "FAQ", href: "/about/faq?category=Telecom" },
+              ]}
+            />
+            <FooterSitemapColumn
+              heading="Help"
+              headingHref="/help"
+              links={[
+                { label: "Contact", href: "/contact" },
+                { label: "Support Desk", href: "/help/support-desk" },
+                { label: "FAQ", href: "/about/faq" },
+                { label: "Messaging", href: "/join/messaging" },
+                { label: "PhishFlagger.org", href: "/phishflagger-org" },
+                { label: "Kickstarter", href: "/kick" },
+              ]}
+            />
+            <FooterSitemapColumn
+              heading="About"
+              links={nav.find((item) => item.label === "About")?.children ?? []}
+            />
           </div>
         </div>
 
@@ -291,34 +330,44 @@ export default function Footer({ logoSrc = logoImg }) {
 // dropdown of sub-page links below it — same idea as the header's nav
 // dropdown, kept lightweight (pure CSS group-hover, no JS state) since it's
 // footer-only chrome.
-function FooterMenuItem({ label, href, children_ }) {
-  if (!children_) {
-    return (
-      <li>
-        <Link to={href} className="text-[13px] text-black transition-colors hover:text-[#FF0033]">
-          {label}
-        </Link>
-      </li>
-    );
-  }
+// One footer sitemap column: a bold heading (optionally itself a link) and
+// the full list of real links found on that page.
+function FooterSitemapColumn({ heading, headingHref, links }) {
+  const location = useLocation();
+  const currentPath = location.pathname + location.search;
+  const isActive = (href) =>
+    href.includes("?") ? currentPath === href : location.pathname === href;
 
   return (
-    <li className="group relative">
-      <Link to={href} className="text-[13px] text-black transition-colors hover:text-[#FF0033]">
-        {label}
-      </Link>
-      <ul className="invisible absolute left-0 top-full z-10 mt-2 w-max min-w-[160px] list-none space-y-2 rounded-lg border border-gray-200 bg-white p-3 opacity-0 shadow-lg transition-all duration-150 group-hover:visible group-hover:opacity-100">
-        {children_.map((item) => (
+    <div>
+      {headingHref ? (
+        <Link
+          to={headingHref}
+          className={`mb-4 block rounded-md px-2 py-1 -mx-2 text-[13px] font-bold uppercase tracking-[0.14em] transition-colors hover:text-[#FF0033] ${
+            isActive(headingHref) ? "bg-gray-100 text-black" : "text-black"
+          }`}
+        >
+          {heading}
+        </Link>
+      ) : (
+        <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-black">
+          {heading}
+        </p>
+      )}
+      <ul className="space-y-2.5 list-none p-0">
+        {links.map((item) => (
           <li key={item.href}>
             <Link
               to={item.href}
-              className="block whitespace-nowrap text-[13px] text-black transition-colors hover:text-[#FF0033]"
+              className={`block rounded-md px-2 py-1 -mx-2 text-[13px] transition-colors hover:text-[#FF0033] ${
+                isActive(item.href) ? "bg-gray-100 text-black" : "text-black"
+              }`}
             >
               {item.label}
             </Link>
           </li>
         ))}
       </ul>
-    </li>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 export default function PetitionThanks() {
   return (
     <>
-      <CloseButton to="/join/telecom" />
+      <CloseButton to="/telecom" />
       <section className="flex min-h-screen flex-col items-center justify-center bg-white px-4 text-center">
         <div className="text-[52px] text-green-500">✓</div>
         <h2 className="mt-4 text-[28px] font-semibold text-[#303030]">

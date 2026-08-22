@@ -13,11 +13,11 @@ export default function TelecomContact() {
 
   return (
     <>
-      <CloseButton to="/join/telecom" />
+      <CloseButton to="/telecom" />
       <TelecomFormPage
         title="Contact Us (For Telecom)"
         buttonLabel="Send"
-        thanksPath="/join/telecom/thanks-contact"
+        thanksPath="/telecom/thanks-contact"
         formsparkEndpoint="https://submit-form.com/ZlULesKxU"
         form={form}
         setForm={setForm}

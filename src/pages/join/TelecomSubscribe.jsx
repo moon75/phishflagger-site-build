@@ -13,11 +13,11 @@ export default function TelecomSubscribe() {
 
   return (
     <>
-      <CloseButton to="/join/telecom" />
+      <CloseButton to="/telecom" />
       <TelecomFormPage
         title="Subscribe for PhishFlagger Telecom Updates"
         buttonLabel="Subscribe"
-        thanksPath="/join/telecom/thanks-subscribe"
+        thanksPath="/telecom/thanks-subscribe"
         formsparkEndpoint="https://submit-form.com/j82Iv58GQ"
         form={form}
         setForm={setForm}
