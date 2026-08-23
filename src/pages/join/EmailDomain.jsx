@@ -247,19 +247,29 @@ export default function EmailDomain() {
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
               What you will receive.
             </h3>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                Domain Appliance
+              </span>
+              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                Plug-In
+              </span>
+            </div>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
               <li>Terms of Service</li>
               <li>Access Key</li>
-              <li>Appliance or Plug-In Install</li>
+              <li>Appliance Install</li>
               <li>Install Instructions</li>
             </ul>
           </div>
-          <div className="text-center">
-            <p className="mx-auto max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-              As low as $10.00 per Year / per Email
+          <div className="p-6 text-center sm:p-8">
+            <p className="mx-auto max-w-[560px]">
+              <span className="inline-block rounded-lg bg-[#fff4c2] px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                As low as $10.00 per Year / per Email
+              </span>
             </p>
-            <div className="relative mt-6 inline-flex">
-              <span className="absolute -top-3 right-0 z-10 -translate-y-1/2 rotate-6 rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+            <div className="relative mt-6 inline-block">
+              <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
                 Coming Soon
               </span>
               <Link
