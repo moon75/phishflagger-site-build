@@ -129,7 +129,7 @@ export default function JoinFree() {
                   type="button"
                   onClick={handleVerifyEmail}
                   disabled={emailVerified}
-                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] hover:text-brand disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                 >
                   {emailVerified ? "Email Verified" : "Verify Email"}
                 </button>
@@ -172,7 +172,7 @@ export default function JoinFree() {
                   type="button"
                   onClick={handleVerifyCode}
                   disabled={!emailVerified || codeVerified}
-                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
+                  className="h-[50px] shrink-0 cursor-pointer rounded-md bg-[#585858] px-6 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] hover:text-brand disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                 >
                   {codeVerified ? "Code Verified" : "Verify Code"}
                 </button>
@@ -199,7 +199,7 @@ export default function JoinFree() {
                 disabled={!codeVerified}
                 className={`h-[50px] w-full cursor-pointer rounded-md px-6 text-[15px] font-semibold shadow-sm transition duration-200 disabled:cursor-default ${
                   codeVerified
-                    ? "bg-[#585858] text-white hover:bg-[#3f3f3f] hover:scale-[1.2]"
+                    ? "bg-[#585858] text-white hover:bg-[#3f3f3f] hover:text-brand hover:scale-[1.2]"
                     : "bg-[#e4e6ea] text-[#c7cad0]"
                 }`}
               >

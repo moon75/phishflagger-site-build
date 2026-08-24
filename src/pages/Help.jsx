@@ -49,26 +49,7 @@ export default function Help() {
             {/* Kickstarter, full production card */}
             <div className="flex flex-col items-center">
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-yellow-100">
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 px-6 py-4 sm:px-8">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={logoMarkImg}
-                      alt="PhishFlagger envelope and flag mark"
-                      className="h-[30px] w-auto object-contain sm:h-[36px]"
-                    />
-                    <span className="text-[15px] font-bold tracking-tight text-ink sm:text-[17px]">
-                      <BrandInline /> Kickstarter
-                    </span>
-                  </div>
-                  <Link
-                    to="/kick"
-                    className="inline-flex h-[36px] items-center justify-center gap-1.5 rounded-[7px] bg-[#585858] px-5 text-[13px] font-semibold text-white transition hover:bg-[#3f3f3f]"
-                  >
-                    Visit Kickstarter →
-                  </Link>
-                </div>
-
-                <div className="py-6 sm:py-8">
+                <div className="bg-white pb-3 sm:pb-4">
                   <div className="flex aspect-[1916/821] w-full justify-center overflow-hidden">
                     <img
                       src={outlookThunderbirdImg}
@@ -80,7 +61,7 @@ export default function Help() {
 
                 <div className="h-px w-full bg-gray-200" />
 
-                <div className="px-6 py-6 sm:px-8 sm:py-8">
+                <div className="px-6 py-3 sm:px-8 sm:py-4">
                   <h4 className="text-[17px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[19px]">
                     Available soon for these domains
                   </h4>

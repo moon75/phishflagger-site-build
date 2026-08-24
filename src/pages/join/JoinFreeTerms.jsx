@@ -65,7 +65,7 @@ export default function JoinFreeTerms() {
                   <button
                     type="submit"
                     disabled={!agreed || submitting}
-                    className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
+                    className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] hover:text-brand disabled:cursor-default disabled:opacity-60 duration-200 hover:scale-[1.2]"
                   >
                     {submitting ? "Creating..." : "Create My Free Key"}
                   </button>
@@ -97,7 +97,7 @@ export default function JoinFreeTerms() {
                 </p>
                 <Link
                   to="/"
-                  className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f]"
+                  className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#585858] px-7 text-[14px] font-semibold text-white transition-colors hover:bg-[#3f3f3f] hover:text-brand"
                 >
                   Back to Home
                 </Link>
