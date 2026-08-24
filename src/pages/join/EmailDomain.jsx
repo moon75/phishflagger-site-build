@@ -49,7 +49,7 @@ export default function EmailDomain() {
           <div className="flex justify-center lg:justify-start lg:pl-40">
             <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
-                src="/assets/images/corporate%20image%20and%20design.png"
+                src="/assets/images/corporate-image-homepage-v5.png"
                 alt="Corporate email protection design"
                 className="h-full w-full rounded-lg object-contain"
               />

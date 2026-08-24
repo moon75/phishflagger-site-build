@@ -41,16 +41,26 @@ const BASE_VIDEOS = [
   },
 ];
 
-const PLACEHOLDER_COUNT = 1;
+const VIDEOS_PER_PAGE = 8;
 
-const VIDEOS = [
-  ...BASE_VIDEOS,
-  ...Array.from({ length: PLACEHOLDER_COUNT }, (_, i) => ({
-    type: "placeholder",
-    title: "Coming Soon",
-    description: "More PhishFlagger videos are on the way.",
-  })),
-];
+// Pads a category's video list with "Coming Soon" placeholders up to
+// VIDEOS_PER_PAGE, so every category's first page fills a full grid.
+// Categories that already have more than VIDEOS_PER_PAGE (e.g. Oracle)
+// are left untouched.
+function padToFullPage(videos) {
+  const missing = VIDEOS_PER_PAGE - videos.length;
+  if (missing <= 0) return videos;
+  return [
+    ...videos,
+    ...Array.from({ length: missing }, () => ({
+      type: "placeholder",
+      title: "Coming Soon",
+      description: "",
+    })),
+  ];
+}
+
+const VIDEOS = padToFullPage(BASE_VIDEOS);
 
 const VIDEO_CATEGORIES = [
   "Feature",
@@ -96,22 +106,13 @@ const CATEGORY_SCRIPTS = {
 
 const KICKSTARTER_VIDEOS = BASE_VIDEOS.filter((v) => v.title === "PhishFlagger Kickstarter");
 
-const VIDEOS_PER_PAGE = 8;
-
 function categoryVideos(category) {
   if (category === "Feature") return VIDEOS;
   if (category === "Kickstarter") {
-    return [
-      ...KICKSTARTER_VIDEOS,
-      ...Array.from({ length: 4 }, () => ({
-        type: "placeholder",
-        title: "Coming Soon",
-        description: "",
-      })),
-    ];
+    return padToFullPage(KICKSTARTER_VIDEOS);
   }
   if (category === "Learning") {
-    return [
+    return padToFullPage([
       {
         type: "local",
         src: "/assets/video1/monkey video.mp4",
@@ -148,7 +149,7 @@ function categoryVideos(category) {
         title: "Taking Over the World",
         description: "",
       },
-    ];
+    ]);
   }
   if (category === "Oracle") {
     return [
@@ -222,26 +223,17 @@ function categoryVideos(category) {
   }
 
   if (category === "Ads") {
-    return [
+    return padToFullPage([
       {
         type: "local",
         src: "/assets/video1/PhishFlagger_protecting_communications.mp4",
         title: "PhishFlagger - Protecting Communications",
         description: "",
       },
-      ...Array.from({ length: 5 }, () => ({
-        type: "placeholder",
-        title: "Coming Soon",
-        description: "",
-      })),
-    ];
+    ]);
   }
 
-  return Array.from({ length: VIDEOS_PER_PAGE }, () => ({
-    type: "placeholder",
-    title: "Coming Soon",
-    description: "",
-  }));
+  return padToFullPage([]);
 }
 
 export default function Video() {
