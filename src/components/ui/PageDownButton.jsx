@@ -3,14 +3,14 @@
 // element (recommended); otherwise it scrolls to the next <section> in DOM
 // order after the one this button lives in (or the first <section> in
 // `containerRef`/document if the button sits outside any section).
-export default function PageDownButton({ containerRef, targetSelector }) {
+export default function PageDownButton({ containerRef, targetSelector, block = "start" }) {
   function handleClick(event) {
     const root = containerRef?.current ?? document;
 
     if (targetSelector) {
       const target = root.querySelector(targetSelector);
       if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ behavior: "smooth", block });
         return;
       }
     }

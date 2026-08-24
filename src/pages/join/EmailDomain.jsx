@@ -226,8 +226,8 @@ export default function EmailDomain() {
               Protect your Network
             </h2>
             <p className="mx-auto mt-6 max-w-[560px] text-[14px] leading-[1.65] text-ink-muted sm:text-[15px] lg:mx-0">
-              Firewall your important communication with your network,
-              including your customers and suppliers. Stop fraud.
+              Protect your communication within your network, including
+              your customers and suppliers. Stop fraud.
             </p>
           </div>
         </div>
