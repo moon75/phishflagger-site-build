@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 
 export default function Demo() {
   return (
@@ -8,7 +9,8 @@ export default function Demo() {
         <CloseButton />
       </div>
 
-      <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <PageDownButton />
         <div className="mx-auto max-w-[960px] px-6 text-center sm:px-12">
           <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
             Request Demo

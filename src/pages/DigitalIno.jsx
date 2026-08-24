@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import topImg from "../assets/images/3rd section left image.avif";
 
@@ -8,7 +9,8 @@ export default function DigitalIno() {
     <>
       <CloseButton to="/join/email-marketing" />
 
-      <section className="w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
+      <section className="relative w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
+        <PageDownButton />
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
             Digital Verification

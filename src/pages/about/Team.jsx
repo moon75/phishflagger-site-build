@@ -1,4 +1,5 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import williamImg from "../../assets/images/william.avif";
 import mikeImg from "../../assets/images/mike.avif";
 import toddImg from "../../assets/images/todd.avif";
@@ -64,13 +65,14 @@ export default function Team() {
       <CloseButton />
 
       <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
         }}
       >
+        <PageDownButton />
         <div className="mx-auto max-w-[1200px]">
           {/* Header */}
           <div className="text-center">

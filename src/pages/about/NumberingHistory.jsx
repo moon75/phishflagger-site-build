@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
 import history3Img from "../../assets/images/7 3rd.avif";
@@ -11,13 +12,14 @@ export default function NumberingHistory() {
       <CloseButton />
 
       <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-4 sm:px-6 sm:pt-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-4 sm:px-6 sm:pt-20"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
         }}
       >
+        <PageDownButton />
         <div className="mx-auto max-w-[920px] text-center">
           <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             Numbering History

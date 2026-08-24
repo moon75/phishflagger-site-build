@@ -1,4 +1,5 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import { Link } from "react-router-dom";
 import outlookImg from "../assets/images/outlook image 90.png";
 
@@ -7,7 +8,8 @@ export default function Download() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
+      <section className="relative w-full bg-white px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
+        <PageDownButton />
         <div className="mx-auto max-w-content">
           <div className="text-center">
             <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">

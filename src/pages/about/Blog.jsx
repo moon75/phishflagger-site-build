@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import blog1Img from "../../assets/images/blog one feature image of blackhat.avif";
 import blog2Img from "../../assets/images/blog 2 feature.avif";
 import blog3Img from "../../assets/images/blog 3 feature image.avif";
@@ -55,13 +56,14 @@ export default function Blog() {
       <CloseButton />
 
       <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
         }}
       >
+        <PageDownButton />
         <div className="mx-auto max-w-[920px]">
           {/* Page header */}
           <div className="text-center">

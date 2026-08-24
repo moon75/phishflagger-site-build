@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
@@ -21,7 +22,8 @@ export default function Kick() {
     <>
       <CloseButton />
 
-      <section className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-3 bg-white px-4 py-20">
+      <section className="relative flex min-h-[60vh] w-full flex-col items-center justify-center gap-3 bg-white px-4 py-20">
+        <PageDownButton />
         <a
           href={kickstarterPdf}
           target="_blank"
@@ -99,6 +101,15 @@ export default function Kick() {
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           11. Campaign
+        </a>
+
+        <a
+          href="https://docs.google.com/document/d/1eaUA95JVGbALRbThnSx9dUFPLGYOq34Po9ikeK9yC9k/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
+        >
+          12. Marketing
         </a>
 
         <img

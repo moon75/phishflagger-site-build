@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
@@ -283,6 +284,7 @@ export default function Video() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <PageDownButton />
       <section className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}

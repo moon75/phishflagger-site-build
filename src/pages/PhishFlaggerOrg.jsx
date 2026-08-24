@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import PageDownButton from "../components/ui/PageDownButton.jsx";
 import victimImg from "../assets/images/victim testimonials.avif";
 import endorseImg from "../assets/images/endorse us.avif";
 import communityImg from "../assets/images/commnity image.avif";
@@ -19,6 +20,7 @@ export default function PhishFlaggerOrg() {
           backgroundRepeat: "no-repeat",
         }}
       >
+      <PageDownButton />
       {/* ===== Section 1 — Heading + intro + two icons ===== */}
       <section className="w-full px-4 pt-12 pb-12 sm:px-6 sm:pb-16">
         <div className="mx-auto max-w-[820px]">

@@ -1,4 +1,5 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 const PRESS_ITEMS = [
@@ -36,7 +37,8 @@ export default function Press() {
     <>
       <CloseButton />
 
-      <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+      <section className="relative w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
+        <PageDownButton />
         <div className="mx-auto max-w-[1000px]">
           {/* Header */}
           <div className="text-center">

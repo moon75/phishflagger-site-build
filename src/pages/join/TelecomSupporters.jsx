@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 const TELECOM_SUPPORTERS = [
@@ -29,7 +30,8 @@ export default function TelecomSupporters() {
       <CloseButton to="/help/telecom-endorse-us" />
 
       {/* Header */}
-      <section className="w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
+      <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
+        <PageDownButton />
         <div className="mx-auto max-w-[920px] text-center">
           <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             Telecom Supporters

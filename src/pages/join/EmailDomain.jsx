@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
@@ -21,6 +22,7 @@ export default function EmailDomain() {
           backgroundSize: "140%",
         }}
       >
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <div className="mb-6 flex items-center gap-4">
@@ -247,20 +249,31 @@ export default function EmailDomain() {
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
               What you will receive.
             </h3>
-            <div className="mt-3 flex flex-wrap gap-3">
-              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                Domain Appliance
-              </span>
-              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                Plug-In
-              </span>
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
+              <div className="flex flex-col items-center">
+                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                  Domain Appliance
+                </span>
+                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+                  <li>Terms of Service</li>
+                  <li>Access Key</li>
+                  <li>Appliance Install</li>
+                  <li>Install Instructions</li>
+                </ul>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                  Plug-In
+                </span>
+                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+                  <li>Terms of Service</li>
+                  <li>Access Key</li>
+                  <li>Appliance Install</li>
+                  <li>Install Instructions</li>
+                  <li>Install Plug-In</li>
+                </ul>
+              </div>
             </div>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
-              <li>Terms of Service</li>
-              <li>Access Key</li>
-              <li>Appliance Install</li>
-              <li>Install Instructions</li>
-            </ul>
           </div>
           <div className="p-6 text-center sm:p-8">
             <p className="mx-auto max-w-[560px]">

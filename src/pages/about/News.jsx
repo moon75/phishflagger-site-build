@@ -1,4 +1,5 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import newsCardImg from "../../assets/images/phishing-news-card.png";
 
 const NEWS_ITEMS = [
@@ -61,7 +62,8 @@ export default function News() {
   return (
     <>
       <CloseButton />
-      <section className="bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
+      <section className="relative bg-white px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14">
+        <PageDownButton />
         <div className="mx-auto max-w-[1040px]">
           <form className="mx-auto mt-12 max-w-[640px] rounded-[6px] bg-[#f5f8fa] px-6 py-5 text-center sm:px-8">
             <h2 className="text-[22px] font-semibold leading-tight text-[#435154] sm:text-[26px]">

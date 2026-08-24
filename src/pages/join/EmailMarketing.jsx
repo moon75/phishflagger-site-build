@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import marketerImg from "../../assets/images/email-marketing-verified-v9.png";
@@ -18,6 +19,7 @@ export default function EmailMarketing() {
         }}
       >
         <SectionCounter value="^0001" />
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="flex items-center gap-3 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
