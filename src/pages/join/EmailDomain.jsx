@@ -81,7 +81,7 @@ export default function EmailDomain() {
                       className="h-full w-full translate-y-1 scale-[1.5] object-contain"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
+                  <div className="flex flex-1 flex-col gap-3 bg-[#fff4c2] p-7 pb-10">
                     <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                       <li>Windows</li>
                       <li>Linux / Window</li>
@@ -111,7 +111,7 @@ export default function EmailDomain() {
                 {/* Content split into two columns beneath the image — Cloud
                     (left, under the cloud icon) and On-Site Server (right,
                     under the server rack icon) */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-4 p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#fff4c2] p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                   <div className="space-y-4">
                     <p>
                       Microsoft Email

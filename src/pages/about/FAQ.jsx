@@ -18,7 +18,7 @@ export default function FAQ() {
           backgroundSize: "140%",
         }}
       >
-        <div className="mx-auto max-w-[1000px]">
+        <div className="mx-auto max-w-[1240px]">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
             FAQ
           </h1>

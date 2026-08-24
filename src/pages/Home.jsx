@@ -50,7 +50,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-20 object-contain"
+            className="h-auto w-full -translate-y-6 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -136,7 +136,7 @@ export default function Home() {
         <div className="mx-auto mt-6 flex flex-col items-center justify-center gap-10 px-4 sm:mt-8 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Email Client Plug-In
+              Client Plug-In
             </span>
             <div className="relative w-full max-w-[380px]">
               <Link
@@ -166,7 +166,7 @@ export default function Home() {
             </div>
             <Link
               to="/kick"
-              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center transition hover:bg-red-100"
+              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center transition duration-200 hover:scale-[1.5] hover:bg-red-100"
             >
               <span className="text-[13px] font-bold uppercase tracking-wide text-ink sm:text-[14px]">
                 Help Us Stop Phishing
@@ -197,7 +197,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/join/email-free-plug-in"
-                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
                   >
                     Join Free
                   </Link>
@@ -213,7 +213,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -222,19 +222,22 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
-            <span className="invisible hidden mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight sm:text-[25px] lg:block" aria-hidden="true">
-              Or
-            </span>
             <div className="flex items-center justify-center py-2 lg:h-[300px] lg:py-0">
-              <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-white text-[20px] font-bold uppercase tracking-wide text-ink sm:h-[76px] sm:w-[76px] sm:text-[23px]">
-                Or
-              </span>
+              <div className="flex flex-col items-center gap-6">
+                <h2 className="flex items-center justify-center gap-3 whitespace-nowrap text-center text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[25px]">
+                  <LogoMark />
+                  Email
+                </h2>
+                <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-white text-[20px] font-bold uppercase tracking-wide text-ink sm:h-[76px] sm:w-[76px] sm:text-[23px]">
+                  Or
+                </span>
+              </div>
             </div>
           </div>
 
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-              Email Domain Appliance
+              Domain Appliance
             </span>
             <div className="relative w-full max-w-[380px]">
               <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black">
@@ -250,13 +253,16 @@ export default function Home() {
               Domain. No Install or Downloads required by users.
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
-              <div className="flex w-[190px] flex-col items-center gap-3">
+              <div className="flex w-[260px] flex-col items-center gap-3">
+                <span className="whitespace-nowrap text-[28px] font-extrabold uppercase tracking-wide text-ink">
+                  PRO - Appliance
+                </span>
                 <span className="flex items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Join your Domain
                 </span>
                 <Link
                   to="/join/pro"
-                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -302,7 +308,7 @@ export default function Home() {
           </p>
           <Link
             to="/join/email-marketing"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
           >
             Marketing
           </Link>
@@ -347,7 +353,7 @@ export default function Home() {
           </p>
           <Link
             to="/telecom"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
           >
             Telecom
           </Link>
@@ -402,7 +408,7 @@ export default function Home() {
               />
               <Link
                 to="/telecom"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
               >
                 Telecom
               </Link>
@@ -429,7 +435,7 @@ export default function Home() {
               />
               <Link
                 to="/join/messaging"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
               >
                 Messaging
               </Link>

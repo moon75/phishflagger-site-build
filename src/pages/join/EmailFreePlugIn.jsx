@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 
@@ -47,8 +48,8 @@ export default function EmailFreePlugIn() {
           backgroundRepeat: "no-repeat",
         }}
       >
-      <section className="relative w-full px-4 pb-6 pt-7 sm:px-6 sm:pb-8 sm:pt-10">
-        <SectionCounter value="^0001" />
+      <section id="efp-pane-1" className="relative w-full px-4 pb-6 pt-7 sm:px-6 sm:pb-8 sm:pt-10">
+        <PageDownButton targetSelector="#efp-pane-2" />
         <div className="mx-auto max-w-content text-center">
           <div className="mb-4 mt-3 flex items-center justify-center gap-4 sm:mt-4">
             <img
@@ -101,7 +102,7 @@ export default function EmailFreePlugIn() {
                 JF
               </Link>
               <div className="relative">
-                <span className="absolute -top-4 -right-4 z-10 rotate-12 whitespace-nowrap rounded-full bg-brand px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-sm">
+                <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
                   Coming Soon
                 </span>
                 <Link
@@ -130,10 +131,11 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
-        <SectionCounter value="^0002" />
+      <section id="efp-pane-2" className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
+        <SectionCounter value="^0001" />
+        <PageDownButton targetSelector="#efp-pane-3" />
         <div className="mx-auto max-w-content">
-          <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
+          <h2 className="mt-10 text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:mt-12 sm:text-[32px]">
             Step 2. Install Plug-In
           </h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
@@ -173,8 +175,9 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0003" />
+      <section id="efp-pane-3" className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0002" />
+        <PageDownButton targetSelector="#site-footer" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">
             <p className="mb-4 text-center text-[28px] text-ink sm:text-[30px]">
@@ -253,7 +256,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
         <img
           src={image}
           alt={alt}
-          className={`h-full w-full object-contain ${imageScale}`}
+          className={`h-full w-full -translate-y-3 object-contain ${imageScale}`}
         />
       </div>
       <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">

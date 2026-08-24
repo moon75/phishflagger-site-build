@@ -36,19 +36,48 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "Email - Corporate",
+    name: "Email - Domain Appliance",
     items: [
       {
         q: "Do I need to change my DNS settings, MX records, or email provider?",
-        a: "Plug-in: No DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is plug-in for your client. Perfect for individual and small companies.\n\nDomain: Yes DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
+        a: "Yes, DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
       },
       {
         q: "Do email recipients need to install anything?",
-        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side.",
       },
       {
-        q: "What is the difference between the FREE and CORPORATE Plug-In?",
-        a: "Nothing, Once you install the Plug-In you can use Free and/or Corporate emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nCORPORATE\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or CORPORATE accounts.\nEach Email requires a key. Get your keys here.",
+        q: "How does PhishFlagger™ authenticate corporate email?",
+        a: "PhishFlagger™ uses sender and domain information together with the PhishCounter™ to provide additional verification that an email is associated with an authorized sender.",
+      },
+      {
+        q: "Does PhishFlagger™ replace existing email security?",
+        a: "No. PhishFlagger™ is designed to complement existing email security and authentication technologies by adding another layer of verification.",
+      },
+      {
+        q: "Can PhishFlagger™ help protect our brand from impersonation?",
+        a: "PhishFlagger™ provides an additional method for recipients to distinguish legitimate communications from messages attempting to impersonate your organization.",
+      },
+      {
+        q: "Can PhishFlagger™ work with our existing email infrastructure?",
+        a: "PhishFlagger™ is designed to work alongside existing email systems and security technologies. Specific implementation requirements may vary depending on your organization's environment.",
+      },
+    ],
+  },
+  {
+    name: "Email - Plug-In Pro",
+    items: [
+      {
+        q: "Do I need to change my DNS settings, MX records, or email provider?",
+        a: "No DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure remains unchanged. All you require is the plug-in for your client. Perfect for individuals and small companies.",
+      },
+      {
+        q: "Do email recipients need to install anything?",
+        a: "No. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. The sender needs the Plug-In or a compliant email client.",
+      },
+      {
+        q: "What is the difference between the FREE and PRO Plug-In?",
+        a: "Nothing, Once you install the Plug-In you can use Free and/or Pro emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nPRO\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or PRO accounts.\nEach Email requires a key. Get your keys here.",
       },
       {
         q: "How does PhishFlagger™ authenticate corporate email?",

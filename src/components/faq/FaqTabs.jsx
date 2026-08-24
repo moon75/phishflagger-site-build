@@ -26,8 +26,8 @@ export default function FaqTabs({
   const hoverTimer = useRef(null);
 
   function selectCategory(idx) {
-    setActiveIndex((prev) => (idx === prev ? null : idx));
-    setOpenQuestion(null);
+    if (idx !== activeIndex) setOpenQuestion(null);
+    setActiveIndex(idx);
   }
 
   // Selects the tab after a brief 0.2s hover dwell — no click required.
@@ -56,7 +56,6 @@ export default function FaqTabs({
           <button
             key={category.name}
             type="button"
-            onClick={() => selectCategory(idx)}
             onMouseEnter={() => handleTabHoverEnter(idx)}
             onMouseLeave={handleTabHoverLeave}
             className={`cursor-pointer rounded-full px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-[1.1] sm:text-[14px] ${

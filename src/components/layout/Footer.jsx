@@ -153,10 +153,6 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "Telecom", href: "/telecom" },
                 { label: "Kickstarter", href: "/kick" },
-                { label: "Download", href: "/download" },
-                { label: "Sign Petition", href: "/petition" },
-                { label: "Telecom - Endorse Us", href: "/help/telecom-endorse-us" },
-                { label: "Email - Endorse Us", href: "/help/endorse-us" },
                 { label: "Numbering History", href: "/about/numbering-history" },
               ]}
             />
@@ -176,7 +172,6 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Subscribe", href: "/join/email-subscribe" },
                 { label: "Endorse Us", href: "/help/endorse-us" },
                 { label: "White Paper", href: "/white-paper" },
-                { label: "FAQ", href: "/about/faq?category=General" },
               ]}
             />
             <FooterSitemapColumn
@@ -187,7 +182,6 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Subscribe", href: "/telecom/subscribe" },
                 { label: "Endorse Us", href: "/help/telecom-endorse-us" },
                 { label: "Sign Petition", href: "/petition" },
-                { label: "FAQ", href: "/about/faq?category=Telecom" },
               ]}
             />
             <FooterSitemapColumn
@@ -200,11 +194,14 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },
                 { label: "Kickstarter", href: "/kick" },
+                { label: "Intellectual Property", href: "/about/intellectual-property" },
               ]}
             />
             <FooterSitemapColumn
               heading="About"
-              links={nav.find((item) => item.label === "About")?.children ?? []}
+              links={(nav.find((item) => item.label === "About")?.children ?? []).filter(
+                (item) => item.label !== "Press",
+              )}
             />
           </div>
         </div>

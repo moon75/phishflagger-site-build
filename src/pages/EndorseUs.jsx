@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import supportersImg from "../assets/images/supporters-cartoon.png";
 
@@ -87,12 +87,17 @@ export default function EndorseUs() {
                 alt="Happy PhishFlagger supporters"
                 className="h-[220px] w-full max-w-[600px] object-contain"
               />
-              <Link
-                to="/help/telecom-supporters"
-                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
-              >
-                Supporters
-              </Link>
+              <div className="relative mt-auto inline-block">
+                <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
+                  Coming Soon
+                </span>
+                <span
+                  aria-disabled="true"
+                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition duration-200 hover:bg-[#d0d0d0] hover:text-[#4a4a4a]"
+                >
+                  Supporters
+                </span>
+              </div>
             </div>
           </div>
 
@@ -257,7 +262,7 @@ export default function EndorseUs() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60 duration-200 hover:scale-[1.2]"
+                className="h-[49px] cursor-pointer rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand focus:outline-none focus:ring-2 focus:ring-[#585858] focus:ring-offset-2 disabled:opacity-60 duration-200 hover:scale-[1.2]"
               >
                 {status === "submitting" ? "Submitting..." : "Submit"}
               </button>

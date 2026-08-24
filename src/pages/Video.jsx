@@ -237,7 +237,7 @@ function categoryVideos(category) {
     ];
   }
 
-  return Array.from({ length: 6 }, () => ({
+  return Array.from({ length: VIDEOS_PER_PAGE }, () => ({
     type: "placeholder",
     title: "Coming Soon",
     description: "",

@@ -24,6 +24,9 @@ import Rock from "./pages/Rock.jsx";
 import HumanVsDigital from "./pages/HumanVsDigital.jsx";
 import TestStripe from "./pages/TestStripe.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import CountrySelect from "./pages/CountrySelect.jsx";
 import JoinFreeIframe from "./pages/JoinFreeIframe.jsx";
 import JoinCorporateIframe from "./pages/JoinCorporateIframe.jsx";
 
@@ -118,6 +121,9 @@ export default function App() {
           }
         />
         <Route path="demo" element={<Demo />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="country" element={<CountrySelect />} />
         <Route path="video/:category?" element={<VideoPage />} />
         <Route path="download" element={<Download />} />
         <Route path="plugin-download" element={<PluginDownload />} />

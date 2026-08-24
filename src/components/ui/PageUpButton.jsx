@@ -10,7 +10,7 @@ export default function PageUpButton() {
       type="button"
       onClick={handleClick}
       aria-label="Scroll back to the top of the page"
-      className="absolute left-1/2 top-2 z-10 flex h-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#4a4a4a] px-4 text-[11px] font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-10 sm:text-[12px]"
+      className="absolute left-1/2 top-2 z-10 flex h-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#4a4a4a] px-4 text-[11px] font-semibold uppercase tracking-wide text-white shadow-md transition hover:bg-[#d9d9d9] hover:text-[#2b2b2b] active:bg-[#2b2b2b] active:text-white sm:h-10 sm:text-[12px]"
     >
       Top
     </button>

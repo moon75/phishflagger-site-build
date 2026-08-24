@@ -66,7 +66,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-free-plug-in"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
               >
                 Join Free
               </Link>
@@ -93,7 +93,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/pro"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>
@@ -117,7 +117,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-marketing"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
               >
                 Marketing
               </Link>
@@ -166,8 +166,8 @@ export default function Join() {
             />
             <ActionCard
               to="/about/faq?category=General"
-              label="FAQ"
-              alt="FAQ"
+              label="FAQ - Email"
+              alt="FAQ - Email"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <circle cx="12" cy="12" r="11" fill="#f59e0b" />
