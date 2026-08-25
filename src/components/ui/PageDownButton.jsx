@@ -1,27 +1,49 @@
-// Small floating "Page Down" button, styled to match CloseButton. Clicking
-// it scrolls to a target element. Pass `targetSelector` to pin an exact
-// element (recommended); otherwise it scrolls to the next <section> in DOM
-// order after the one this button lives in (or the first <section> in
-// `containerRef`/document if the button sits outside any section).
+// Small floating pair of "Page Down" / "Page Up" tabs, styled to match
+// CloseButton. Left half scrolls down; pass `targetSelector` to pin an
+// exact element (recommended) — otherwise it advances to the next
+// <section> in DOM order after the one this button lives in (or the first
+// <section> in `containerRef`/document if the button sits outside any
+// section). Right half is the symmetric opposite: scrolls up to the
+// previous <section>, or does nothing if there isn't one (e.g. the very
+// first pane on a page).
 export default function PageDownButton({ containerRef, targetSelector, block = "start" }) {
-  function handleClick(event) {
+  // window.scrollTo(behavior:"smooth") to an absolute Y, rather than
+  // element.scrollIntoView(behavior:"smooth") — scrollIntoView's smooth
+  // animation was observed to silently no-op on some sections on this
+  // page (likely a competing scroll/animation on the same frame), while
+  // an absolute scrollTo is reliable.
+  function scrollToElement(el, blockPos) {
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const targetY =
+      blockPos === "center"
+        ? window.scrollY + rect.top - (window.innerHeight - rect.height) / 2
+        : window.scrollY + rect.top;
+    window.scrollTo({ top: targetY, behavior: "smooth" });
+  }
+
+  function currentIndexFor(event, sections) {
+    // A button rendered above the first <section> (e.g. an intro/hero
+    // button) treats that first section as "current" so it still advances
+    // relative to it, rather than just landing on the one it's already
+    // sitting on top of.
+    const currentSection = event.currentTarget.closest("section") ?? sections[0];
+    return currentSection ? sections.indexOf(currentSection) : -1;
+  }
+
+  function handleDown(event) {
     const root = containerRef?.current ?? document;
 
     if (targetSelector) {
       const target = root.querySelector(targetSelector);
       if (target) {
-        target.scrollIntoView({ behavior: "smooth", block });
+        scrollToElement(target, block);
         return;
       }
     }
 
     const sections = Array.from(root.querySelectorAll("section"));
-    // A button rendered above the first <section> (e.g. an intro/hero
-    // button) treats that first section as "current" so it still advances
-    // to the section after it, rather than just landing on the one it's
-    // already sitting on top of.
-    const currentSection = event.currentTarget.closest("section") ?? sections[0];
-    const currentIndex = currentSection ? sections.indexOf(currentSection) : -1;
+    const currentIndex = currentIndexFor(event, sections);
 
     // Position-based lookup (DOM order), not scroll-position guessing — a
     // button's own section may legitimately sit below the current scroll
@@ -29,30 +51,59 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
     const next = currentIndex >= 0 ? sections[currentIndex + 1] : sections[0];
 
     if (next) {
-      next.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollToElement(next, "start");
     } else {
       window.scrollBy({ top: window.innerHeight * 0.9, behavior: "smooth" });
     }
   }
 
+  function handleUp(event) {
+    const root = containerRef?.current ?? document;
+    const sections = Array.from(root.querySelectorAll("section"));
+    const currentIndex = currentIndexFor(event, sections);
+    const prev = currentIndex > 0 ? sections[currentIndex - 1] : null;
+
+    scrollToElement(prev, "start");
+  }
+
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      aria-label="Page down to the next section"
-      className="group absolute left-1/2 top-0 z-10 flex h-4 w-11 -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl bg-[#4a4a4a] pb-0.5 text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
-        aria-hidden
+    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl shadow-md">
+      <button
+        type="button"
+        onClick={handleDown}
+        aria-label="Page down to the next section"
+        className="group flex h-4 w-11 cursor-pointer items-end justify-center bg-[#4a4a4a] pb-0.5 text-white transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
       >
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </button>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
+          aria-hidden
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        onClick={handleUp}
+        aria-label="Page up to the previous section"
+        className="group flex h-4 w-11 cursor-pointer items-end justify-center border-l border-white/20 bg-[#4a4a4a] pb-0.5 text-white transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-3 w-3 rotate-180 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
+          aria-hidden
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+    </div>
   );
 }

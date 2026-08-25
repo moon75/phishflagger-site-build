@@ -60,6 +60,12 @@
        (and centered content) doesn't shift sideways when navigating
        between a page that scrolls and one that doesn't. */
     scrollbar-gutter: stable;
+    /* The header-top page-down tab mounts/unmounts on scroll, changing
+       the header's height slightly above the viewport. Without this,
+       the browser's automatic scroll-anchor correction fights in-flight
+       smooth scrollIntoView/scrollTo animations and can cancel them
+       outright (observed: page-up scrolls silently no-op'ing). */
+    overflow-anchor: none;
   }
 
   body {
