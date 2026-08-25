@@ -18,7 +18,6 @@ export default function EmailMarketing() {
           backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0001" />
         <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
@@ -45,14 +44,14 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain"
+              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-[1.2]"
             />
           </div>
         </div>
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0002" />
+        <SectionCounter value="^0001" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div className="flex flex-col items-center lg:items-start">
             <h2 className="mb-6 text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:text-left">
@@ -61,7 +60,7 @@ export default function EmailMarketing() {
             <img
               src={phishCounterImg}
               alt="PhishCounter subject line example"
-              className="h-auto w-full max-w-[560px] object-contain"
+              className="h-auto w-full max-w-[560px] object-contain transition-transform duration-200 hover:scale-[1.2]"
             />
           </div>
 
@@ -96,7 +95,7 @@ export default function EmailMarketing() {
           backgroundSize: "140%",
         }}
       >
-        <SectionCounter value="^0003" />
+        <SectionCounter value="^0002" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
@@ -133,7 +132,7 @@ export default function EmailMarketing() {
               <img
                 src={inboxImg}
                 alt="PhishFlagger inbox showing validated and flagged emails"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-200 hover:scale-[1.2]"
               />
             </div>
           </div>
@@ -141,7 +140,7 @@ export default function EmailMarketing() {
       </section>
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0004" />
+        <SectionCounter value="^0003" />
         <div className="mx-auto max-w-[820px] text-center">
           <h2 className="mb-6 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Try our Email Demo Now

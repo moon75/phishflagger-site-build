@@ -119,7 +119,7 @@ export default function Home() {
     {/* ===== Section 4 — placeholder (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
     <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
       <div className="mx-auto w-[85%] max-w-[1360px]">
-        <div className="flex h-[220px] w-full items-center justify-center rounded-lg border-2 border-black bg-yellow-300 px-6 text-center">
+        <div className="flex h-[220px] w-full items-center justify-center rounded-lg border-2 border-black bg-[#FFFF00] px-6 text-center">
           <p className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             Placeholder text goes here. Replace this paragraph with the final copy for this section.
           </p>
@@ -222,16 +222,14 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
+            <h2 className="mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[27px] font-bold leading-tight tracking-tight text-ink sm:text-[31px]">
+              <LogoMark className="h-[32px] sm:h-[37px]" />
+              Email
+            </h2>
             <div className="flex items-center justify-center py-2 lg:h-[300px] lg:py-0">
-              <div className="flex flex-col items-center gap-6">
-                <h2 className="flex items-center justify-center gap-3 whitespace-nowrap text-center text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[25px]">
-                  <LogoMark />
-                  Email
-                </h2>
-                <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-white text-[20px] font-bold uppercase tracking-wide text-ink sm:h-[76px] sm:w-[76px] sm:text-[23px]">
-                  Or
-                </span>
-              </div>
+              <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-white text-[20px] font-bold uppercase tracking-wide text-ink sm:h-[76px] sm:w-[76px] sm:text-[23px]">
+                Or
+              </span>
             </div>
           </div>
 

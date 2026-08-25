@@ -128,7 +128,7 @@ export default function Telecom() {
         image={callerIdPhoneImg}
         imageAlt="PhishFlagger Caller ID"
         bullets={[
-          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers worldwide.",
+          "The solution can be deployed quickly and easily on an international basis, as the existing Caller ID rail is fully interoperable between carriers and devices worldwide.",
           "In early deployment the callee may notice the sequence number, and — as the system matures — apps, hardware, and cell makers, etc. will flag any out-of-sequence calls automatically.",
           "In both cases, fraudulent callers who do not know the expected next number are easily exposed.",
         ]}
@@ -406,7 +406,7 @@ export default function Telecom() {
               />
               SMS
             </h2>
-            <p className="mt-6 rounded-lg bg-yellow-300 px-4 py-3 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <p className="mt-6 rounded-lg bg-[#FFFF00] px-4 py-3 text-[15px] leading-relaxed text-ink sm:text-[17px]">
               Placeholder text goes here. Replace this paragraph with the
               final copy for this section.
             </p>
@@ -421,6 +421,7 @@ export default function Telecom() {
         </div>
       </section>
 
+      <div className="h-1.5 w-full bg-gray-300" aria-hidden />
       <section
         className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{

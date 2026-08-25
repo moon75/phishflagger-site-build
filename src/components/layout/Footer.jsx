@@ -70,41 +70,49 @@ export default function Footer({ logoSrc = logoImg }) {
                 <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                   Protecting Communications
                 </h2>
-                <Link
-                  to="/about/faq"
-                  className="ml-6 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:ml-10 sm:text-[14px]"
-                >
-                  FAQ
-                </Link>
-                <Link
-                  to="/help/endorse-us"
-                  className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
-                >
-                  Endorse Us
-                </Link>
               </div>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
-                {PRODUCT_IMAGES.map((item) => (
+              <div className="mt-10 flex flex-wrap items-start justify-center gap-6">
+                {PRODUCT_IMAGES.map((item, idx) => (
                   <div
                     key={item.alt}
-                    className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-130 sm:h-[190px] ${item.offsetClass || ""}`}
+                    className="flex flex-col items-center gap-4"
                   >
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      className={`${
-                        item.frame
-                          ? "h-full w-auto rounded-lg border-2 border-black object-contain"
-                          : "h-full w-auto object-contain"
-                      } ${item.imageClass || ""}`}
-                    />
-                    {item.verified && (
-                      <span className="absolute top-1 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
-                        <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
-                          ✓
+                    <div
+                      className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-130 sm:h-[190px] ${item.offsetClass || ""}`}
+                    >
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className={`${
+                          item.frame
+                            ? "h-full w-auto rounded-lg border-2 border-black object-contain"
+                            : "h-full w-auto object-contain"
+                        } ${item.imageClass || ""}`}
+                      />
+                      {item.verified && (
+                        <span className="absolute top-1 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
+                          <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
+                            ✓
+                          </span>
+                          Verified
                         </span>
-                        Verified
-                      </span>
+                      )}
+                    </div>
+                    {idx === 0 && (
+                      <Link
+                        to="/about/faq"
+                        className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                      >
+                        FAQ
+                      </Link>
+                    )}
+                    {idx === PRODUCT_IMAGES.length - 1 && (
+                      <Link
+                        to="/help/endorse-us"
+                        className="mt-3 -translate-x-12 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:mt-4 sm:-translate-x-20 sm:text-[14px]"
+                      >
+                        Endorse Us
+                      </Link>
                     )}
                   </div>
                 ))}
@@ -117,8 +125,8 @@ export default function Footer({ logoSrc = logoImg }) {
       <footer id="site-footer" className="relative scroll-mt-[var(--header-h)] bg-white font-['Mulish',sans-serif]">
         <PageUpButton />
 
-        {/* Top strip — full red, matches header */}
-        <div className="h-1.5 w-full bg-brand" aria-hidden />
+        {/* Top strip */}
+        <div className="h-1.5 w-full bg-gray-200" aria-hidden />
 
         <div className="mx-auto max-w-[980px] px-6 pt-20 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-[72px]">
           {/* Description paragraph */}

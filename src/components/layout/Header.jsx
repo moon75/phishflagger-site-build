@@ -56,7 +56,7 @@ export default function Header() {
           <img
             src={logoImg}
             alt="PhishFlagger"
-            className="h-auto w-[190px] sm:w-[220px]"
+            className="h-auto w-[190px] transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
           />
         </NavLink>
 
@@ -153,7 +153,7 @@ export default function Header() {
             </nav>
 
             {/* ^0001 badge — sits right next to Contact */}
-            <span className="ml-4 shrink-0 font-bold text-green-600 sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+            <span className="ml-4 shrink-0 font-semibold text-green-600 transition-[font-weight] duration-200 hover:font-extrabold sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
               ^0001
             </span>
           </div>

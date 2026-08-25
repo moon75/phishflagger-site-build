@@ -36,35 +36,6 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
-    name: "Email - Domain Appliance",
-    items: [
-      {
-        q: "Do I need to change my DNS settings, MX records, or email provider?",
-        a: "Yes, DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
-      },
-      {
-        q: "Do email recipients need to install anything?",
-        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side.",
-      },
-      {
-        q: "How does PhishFlagger™ authenticate corporate email?",
-        a: "PhishFlagger™ uses sender and domain information together with the PhishCounter™ to provide additional verification that an email is associated with an authorized sender.",
-      },
-      {
-        q: "Does PhishFlagger™ replace existing email security?",
-        a: "No. PhishFlagger™ is designed to complement existing email security and authentication technologies by adding another layer of verification.",
-      },
-      {
-        q: "Can PhishFlagger™ help protect our brand from impersonation?",
-        a: "PhishFlagger™ provides an additional method for recipients to distinguish legitimate communications from messages attempting to impersonate your organization.",
-      },
-      {
-        q: "Can PhishFlagger™ work with our existing email infrastructure?",
-        a: "PhishFlagger™ is designed to work alongside existing email systems and security technologies. Specific implementation requirements may vary depending on your organization's environment.",
-      },
-    ],
-  },
-  {
     name: "Email - Plug-In Pro",
     items: [
       {
@@ -123,6 +94,35 @@ export const FAQ_CATEGORIES = [
       {
         q: "Why should I use PhishFlagger™ if my email provider already has spam protection?",
         a: "Spam filters and security systems are important, but PhishFlagger™ approaches the problem from another angle by helping users verify the identity and authenticity of communications.",
+      },
+    ],
+  },
+  {
+    name: "Email - Domain Appliance",
+    items: [
+      {
+        q: "Do I need to change my DNS settings, MX records, or email provider?",
+        a: "Yes, DNS or MX changes are required. PhishFlagger numbering is implemented at the application or sending layer — a back-end process that inserts the sequential counter into outgoing subject lines before delivery. Your existing email infrastructure requires minor change, and yes you can keep your provider. Perfect for medium and large companies.",
+      },
+      {
+        q: "Do email recipients need to install anything?",
+        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side.",
+      },
+      {
+        q: "How does PhishFlagger™ authenticate corporate email?",
+        a: "PhishFlagger™ uses sender and domain information together with the PhishCounter™ to provide additional verification that an email is associated with an authorized sender.",
+      },
+      {
+        q: "Does PhishFlagger™ replace existing email security?",
+        a: "No. PhishFlagger™ is designed to complement existing email security and authentication technologies by adding another layer of verification.",
+      },
+      {
+        q: "Can PhishFlagger™ help protect our brand from impersonation?",
+        a: "PhishFlagger™ provides an additional method for recipients to distinguish legitimate communications from messages attempting to impersonate your organization.",
+      },
+      {
+        q: "Can PhishFlagger™ work with our existing email infrastructure?",
+        a: "PhishFlagger™ is designed to work alongside existing email systems and security technologies. Specific implementation requirements may vary depending on your organization's environment.",
       },
     ],
   },

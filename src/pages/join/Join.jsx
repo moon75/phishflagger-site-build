@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
+import cloudServerImg from "../../assets/images/domain-server-only.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
@@ -74,20 +75,44 @@ export default function Join() {
             <div className="flex w-auto flex-col items-center">
               <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  PRO
+                  Plug-In Pro
                 </span>
                 <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  Plug-in Or Appliance
+                  One or Many
                 </span>
               </div>
               <Link
                 to="/join/pro"
-                aria-label="Join PRO — Plug-in Or Appliance"
+                aria-label="Join PRO — One or Many"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1 transition-transform duration-200 hover:scale-110"
               >
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
                   alt="Domain protection illustration"
+                  className="h-full w-full rounded-lg object-contain"
+                />
+              </Link>
+              <Link
+                to="/join/pro"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+              >
+                Join Pro
+              </Link>
+            </div>
+            <div className="flex w-auto flex-col items-center">
+              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  Domain Appliance
+                </span>
+              </div>
+              <Link
+                to="/join/pro"
+                aria-label="Join PRO — Domain Appliance"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-transform duration-200 hover:scale-110"
+              >
+                <img
+                  src={cloudServerImg}
+                  alt="Cloud and server appliance illustration"
                   className="h-full w-full rounded-lg object-contain"
                 />
               </Link>

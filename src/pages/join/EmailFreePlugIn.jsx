@@ -102,7 +102,7 @@ export default function EmailFreePlugIn() {
                 JF
               </Link>
               <div className="relative">
-                <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
+                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                   Coming Soon
                 </span>
                 <Link
@@ -123,7 +123,7 @@ export default function EmailFreePlugIn() {
               >
                 Join Pro
               </Link>
-              <span className="rounded bg-yellow-300 px-2 py-0.5 text-[12px] text-ink">
+              <span className="rounded bg-[#FFFF00] px-2 py-0.5 text-[12px] text-ink">
                 $10.00 / Year
               </span>
             </div>

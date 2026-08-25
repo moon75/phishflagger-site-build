@@ -18,6 +18,7 @@ const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
   { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
+  { to: "/demo", label: "Demo", icon: <DemoIcon /> },
 ];
 
 export default function Help() {
@@ -50,7 +51,7 @@ export default function Help() {
           <div className="mx-auto flex w-full max-w-[950px] flex-col items-stretch justify-center">
             {/* Kickstarter, full production card */}
             <div className="flex flex-col items-center">
-              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-yellow-100">
+              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-[#FFFF00]">
                 <div className="bg-white pb-3 sm:pb-4">
                   <div className="flex aspect-[1916/575] w-full justify-center overflow-hidden">
                     <img
@@ -171,6 +172,15 @@ function MessagingIcon() {
         d="M6 8.5A1.5 1.5 0 0 1 7.5 7h9A1.5 1.5 0 0 1 18 8.5v5A1.5 1.5 0 0 1 16.5 15H10l-3 2.5V15h-.5A1.5 1.5 0 0 1 5 13.5v-5Z"
         fill="white"
       />
+    </svg>
+  );
+}
+
+function DemoIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+      <circle cx="12" cy="12" r="11" fill="#8b5cf6" />
+      <path d="M10 8.3v7.4a.9.9 0 0 0 1.36.77l6.1-3.7a.9.9 0 0 0 0-1.54l-6.1-3.7A.9.9 0 0 0 10 8.3Z" fill="white" />
     </svg>
   );
 }

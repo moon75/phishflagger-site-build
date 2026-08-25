@@ -22,7 +22,7 @@ export default function Messaging() {
             <h1 className="mb-6 text-left text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
               Messaging
             </h1>
-            <p>
+            <p className="rounded-lg bg-[#FFFF00] px-4 py-3 text-ink">
               Placeholder text goes here. Replace this paragraph with the
               final copy for this section.
             </p>
@@ -32,12 +32,12 @@ export default function Messaging() {
             <img
               src={messagingIconsImg}
               alt="Grid of popular messaging app icons"
-              className="h-auto w-[45%] max-w-[300px] object-contain sm:w-[58%]"
+              className="h-auto w-[45%] max-w-[300px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:w-[58%]"
             />
             <img
               src={messagesImg}
               alt="Phone showing PhishFlagger numbered messages"
-              className="h-auto w-[28%] max-w-[190px] object-contain sm:w-[36%]"
+              className="h-auto w-[28%] max-w-[190px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:w-[36%]"
             />
           </div>
         </div>

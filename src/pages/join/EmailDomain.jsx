@@ -41,9 +41,14 @@ export default function EmailDomain() {
             </div>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
               <li className="list-none">
-                Safeguard your domain with <BrandInline />
-                &trade; email numbering to prevent impersonation, phishing and
-                other email-based fraud.
+                <strong className="font-bold text-ink">
+                  Advanced Email Authentication
+                </strong>{" "}
+                Strengthen the verification of emails sent and helps
+                recipients distinguish legitimate communications from
+                impersonated messages. Use the PhishCounter&trade; to provide
+                a simple, recognizable method of verifying the sequence and
+                authenticity of communications.
               </li>
             </ul>
           </div>
@@ -62,6 +67,7 @@ export default function EmailDomain() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
+        <PageDownButton />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
             Two Ways To Join
@@ -83,7 +89,7 @@ export default function EmailDomain() {
                       className="h-full w-full translate-y-1 scale-[1.5] object-contain"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-3 bg-[#fff4c2] p-7 pb-10">
+                  <div className="flex flex-1 flex-col gap-3 bg-[#FFFF00] p-7 pb-10">
                     <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                       <li>Windows</li>
                       <li>Linux / Window</li>
@@ -113,7 +119,7 @@ export default function EmailDomain() {
                 {/* Content split into two columns beneath the image — Cloud
                     (left, under the cloud icon) and On-Site Server (right,
                     under the server rack icon) */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#fff4c2] p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#FFFF00] p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                   <div className="space-y-4">
                     <p>
                       Microsoft Email
@@ -145,7 +151,7 @@ export default function EmailDomain() {
                   </div>
 
                   {/* Applies to both sides (Cloud + On-Site) — spans full width */}
-                  <div className="col-span-2 space-y-4 border-t border-gray-200 pt-4">
+                  <div className="col-span-2 space-y-4 border-t border-[#f0e2a0] pt-4">
                     <p>
                       Appliance forms:
                       <br />
@@ -155,6 +161,10 @@ export default function EmailDomain() {
                       Hosted on: AWS, VMware, Azure,
                       <br />
                       or any server with Open Port 25.
+                    </p>
+                    <p>
+                      Placeholder text goes here. Replace this copy with the
+                      final content.
                     </p>
                   </div>
                 </div>
@@ -174,6 +184,7 @@ export default function EmailDomain() {
         }}
       >
         <SectionCounter value="^0002" />
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="mb-6 flex items-center justify-center gap-3 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-left sm:text-[30px]">
@@ -205,6 +216,7 @@ export default function EmailDomain() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
             <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
@@ -244,6 +256,7 @@ export default function EmailDomain() {
         }}
       >
         <SectionCounter value="^0004" />
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
@@ -277,12 +290,12 @@ export default function EmailDomain() {
           </div>
           <div className="p-6 text-center sm:p-8">
             <p className="mx-auto max-w-[560px]">
-              <span className="inline-block rounded-lg bg-[#fff4c2] px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+              <span className="inline-block rounded-lg bg-[#FFFF00] px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                 As low as $10.00 per Year / per Email
               </span>
             </p>
             <div className="relative mt-6 inline-block">
-              <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
+              <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                 Coming Soon
               </span>
               <Link
