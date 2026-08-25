@@ -1,8 +1,19 @@
-// Small floating "TOP" button. Clicking it smooth-scrolls the window back
-// to the top of the page.
+// Small floating "TOP" button. Clicking it smooth-scrolls back up to the
+// last content pane — the one right before the shared "Protecting
+// Communications" footer section — rather than all the way to the very top
+// of the document.
 export default function PageUpButton() {
   function handleClick() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const sections = Array.from(document.querySelectorAll("section"));
+    const footerProducts = document.getElementById("footer-products");
+    const footerIndex = footerProducts ? sections.indexOf(footerProducts) : -1;
+    const lastPane = footerIndex > 0 ? sections[footerIndex - 1] : null;
+
+    if (lastPane) {
+      lastPane.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   return (

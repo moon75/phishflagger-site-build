@@ -48,6 +48,7 @@ export default function Footer({ logoSrc = logoImg }) {
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <section
+            id="footer-products"
             className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
             style={{
               backgroundImage:
@@ -99,7 +100,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     {idx === 0 && (
                       <Link
                         to="/about/faq"
-                        className="mt-3 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:mt-4 sm:text-[14px]"
+                        className="mt-16 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
                       >
                         FAQ
                       </Link>
@@ -107,7 +108,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     {idx === PRODUCT_IMAGES.length - 1 && (
                       <Link
                         to="/help/endorse-us"
-                        className="mt-3 -translate-x-12 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:mt-4 sm:-translate-x-20 sm:text-[14px]"
+                        className="mt-16 -translate-x-12 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:-translate-x-20 sm:text-[14px]"
                       >
                         Endorse Us
                       </Link>
