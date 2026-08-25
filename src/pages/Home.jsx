@@ -44,7 +44,6 @@ export default function Home() {
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
     <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
-      <PageDownButton targetSelector="#pane-0002" />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-10 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">

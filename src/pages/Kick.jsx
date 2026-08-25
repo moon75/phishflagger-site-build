@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
-import PageDownButton from "../components/ui/PageDownButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
@@ -23,7 +22,6 @@ export default function Kick() {
       <CloseButton />
 
       <section className="relative flex min-h-[60vh] w-full flex-col items-center justify-center gap-3 bg-white px-4 py-20">
-        <PageDownButton />
         <a
           href={kickstarterPdf}
           target="_blank"

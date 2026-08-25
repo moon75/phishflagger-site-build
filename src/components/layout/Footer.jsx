@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import PageUpButton from "../ui/PageUpButton.jsx";
-import PageDownButton from "../ui/PageDownButton.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -59,7 +58,6 @@ export default function Footer({ logoSrc = logoImg }) {
             <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
               ^0001
             </span>
-            <PageDownButton targetSelector="#site-footer" />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex items-center justify-center gap-3">
                 <img
@@ -71,7 +69,7 @@ export default function Footer({ logoSrc = logoImg }) {
                   Protecting Communications
                 </h2>
               </div>
-              <div className="mt-10 flex flex-wrap items-start justify-center gap-6">
+              <div className="mt-10 flex flex-wrap items-start justify-center gap-6 sm:gap-10">
                 {PRODUCT_IMAGES.map((item, idx) => (
                   <div
                     key={item.alt}
@@ -101,7 +99,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     {idx === 0 && (
                       <Link
                         to="/about/faq"
-                        className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                        className="mt-3 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:mt-4 sm:text-[14px]"
                       >
                         FAQ
                       </Link>

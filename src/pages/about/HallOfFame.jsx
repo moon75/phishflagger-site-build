@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 const SUPPORTERS = [
@@ -36,7 +35,6 @@ export default function HallOfFame() {
       <CloseButton to="/about/kickstarter" />
 
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
-        <PageDownButton />
         <div className="mx-auto max-w-[920px] text-center">
           <div className="text-[28px] leading-none tracking-tight sm:text-[34px]">
             <Link to="/" className="inline-block hover:opacity-80">

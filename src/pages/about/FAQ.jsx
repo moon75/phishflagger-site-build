@@ -1,6 +1,5 @@
 import { useSearchParams } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import FaqTabs from "../../components/faq/FaqTabs.jsx";
 
 export default function FAQ() {
@@ -19,7 +18,6 @@ export default function FAQ() {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto max-w-[1240px]">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
             FAQ

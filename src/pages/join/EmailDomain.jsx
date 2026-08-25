@@ -22,7 +22,6 @@ export default function EmailDomain() {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <div className="mb-6 flex items-center gap-4">

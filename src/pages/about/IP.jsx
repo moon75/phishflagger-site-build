@@ -1,5 +1,4 @@
 ﻿import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 
 function Brand({ trail = "Flagger" }) {
   return (
@@ -75,7 +74,6 @@ export default function IP() {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto max-w-[820px]">
           {/* Header */}
           <div className="text-center">

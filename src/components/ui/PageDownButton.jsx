@@ -40,7 +40,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
       type="button"
       onClick={handleClick}
       aria-label="Page down to the next section"
-      className="group absolute left-1/2 top-0 z-10 flex h-6 w-11 -translate-x-1/2 items-end justify-center rounded-b-2xl bg-[#4a4a4a] pb-1 text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-7 sm:w-12"
+      className="group absolute left-1/2 top-0 z-10 flex h-4 w-11 -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl bg-[#4a4a4a] pb-0.5 text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
     >
       <svg
         viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-3.5 w-3.5 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-4 sm:w-4"
+        className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
         aria-hidden
       >
         <path d="M6 9l6 6 6-6" />

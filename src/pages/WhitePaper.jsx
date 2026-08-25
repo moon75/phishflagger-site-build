@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
-import PageDownButton from "../components/ui/PageDownButton.jsx";
 
 export default function WhitePaper() {
   return (
@@ -8,7 +7,6 @@ export default function WhitePaper() {
       <CloseButton />
 
       <section className="relative w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
-        <PageDownButton />
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
             White Paper

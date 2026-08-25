@@ -4,6 +4,7 @@ import { nav } from "../../data/nav.js";
 import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
+import HeaderTopPageDownTab from "./HeaderTopPageDownTab.jsx";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
@@ -46,7 +47,7 @@ export default function Header() {
 
   return (
     <>
-      <header ref={headerRef} className="sticky top-0 z-40 bg-white lg:relative">
+      <header ref={headerRef} className="relative z-40 bg-white">
         {/* Logo — pinned to the far left edge of the page on desktop */}
         <NavLink
           to="/"
@@ -191,6 +192,8 @@ export default function Header() {
             />
           </button>
         </div>
+
+        <HeaderTopPageDownTab />
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />

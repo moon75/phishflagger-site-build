@@ -1,5 +1,4 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import williamImg from "../../assets/images/william.avif";
 import mikeImg from "../../assets/images/mike.avif";
 import toddImg from "../../assets/images/todd.avif";
@@ -72,7 +71,6 @@ export default function Team() {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto max-w-[1200px]">
           {/* Header */}
           <div className="text-center">

@@ -49,7 +49,6 @@ export default function EmailFreePlugIn() {
         }}
       >
       <section id="efp-pane-1" className="relative w-full px-4 pb-6 pt-7 sm:px-6 sm:pb-8 sm:pt-10">
-        <PageDownButton targetSelector="#efp-pane-2" />
         <div className="mx-auto max-w-content text-center">
           <div className="mb-4 mt-3 flex items-center justify-center gap-4 sm:mt-4">
             <img

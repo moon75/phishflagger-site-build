@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import messagingIconsImg from "../../assets/images/Icons-5.png";
 
@@ -16,7 +15,6 @@ export default function Messaging() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h1 className="mb-6 text-left text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">

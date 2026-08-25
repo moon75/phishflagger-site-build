@@ -56,6 +56,10 @@
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    /* Reserve the scrollbar's width on every page so the sticky header
+       (and centered content) doesn't shift sideways when navigating
+       between a page that scrolls and one that doesn't. */
+    scrollbar-gutter: stable;
   }
 
   body {

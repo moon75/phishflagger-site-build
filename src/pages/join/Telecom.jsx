@@ -16,7 +16,6 @@ export default function Telecom() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <PageDownButton containerRef={containerRef} />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
@@ -84,7 +83,7 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-6 max-w-content sm:mt-8">
-          <div className="grid grid-cols-[repeat(3,max-content)] place-items-center justify-center gap-x-2 gap-y-4 sm:grid-cols-[repeat(6,max-content)] sm:gap-x-2">
+          <div className="grid grid-cols-[repeat(3,max-content)] place-items-center justify-center gap-x-6 gap-y-4 sm:grid-cols-[repeat(6,max-content)] sm:gap-x-8">
             <ActionCard
               to="/telecom/contact"
               label="Contact"
@@ -101,9 +100,9 @@ export default function Telecom() {
             />
             <ActionCard
               to="/help/telecom-endorse-us"
-              label="Endorse Us"
+              label="Endorse Safe Calls"
               src={endorseIcon}
-              alt="Endorse Us"
+              alt="Endorse Safe Calls"
             />
             <ActionCard
               to="/petition"

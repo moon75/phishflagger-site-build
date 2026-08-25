@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PageDownButton from "../components/ui/PageDownButton.jsx";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage.png";
 
@@ -33,7 +32,6 @@ export default function Help() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <PageDownButton />
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
       <section className="w-full px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
         <div className="mx-auto max-w-content">

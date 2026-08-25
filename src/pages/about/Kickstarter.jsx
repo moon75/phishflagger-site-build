@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import supportersImg from "../../assets/images/supporters-cartoon.png";
 
 export default function Kickstarter() {
@@ -16,7 +15,6 @@ export default function Kickstarter() {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto max-w-[1040px]">
           <div className="text-center">
             <h1 className="text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">

@@ -24,7 +24,6 @@ export default function Join() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <PageDownButton containerRef={containerRef} targetSelector="#join-icon-links" block="center" />
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative w-full px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">

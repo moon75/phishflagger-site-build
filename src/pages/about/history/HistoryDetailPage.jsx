@@ -1,5 +1,4 @@
 import CloseButton from "../../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../../components/ui/PageDownButton.jsx";
 
 // Shared layout for the three individual numbering-history detail pages
 // (Books / Documents / Communications). Each one shows its full card image
@@ -17,7 +16,6 @@ export default function HistoryDetailPage({ title, img, imgAlt }) {
           backgroundSize: "140%",
         }}
       >
-        <PageDownButton />
         <div className="mx-auto max-w-[920px] text-center">
           <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
             {title}
