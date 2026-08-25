@@ -31,11 +31,33 @@ export default function Telecom() {
 
           {/* 1 — heading + intro */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <img
-              src="/assets/images/Telecoms%20and%20regulators.png"
-              alt="Telecoms and Regulators — Help stop Call Spoofing"
-              className="h-full w-auto max-w-full rounded-2xl object-contain"
-            />
+            <div className="flex h-full w-full max-w-[600px] flex-col items-center justify-center">
+              <div className="flex items-center justify-center gap-2 sm:gap-3">
+                <img
+                  src="/assets/images/logo-mark.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-auto w-[58px] shrink-0 sm:w-[70px]"
+                />
+                <h1 className="text-[23px] leading-[0.98] tracking-[-0.035em] text-black sm:text-[29px] lg:text-[31px]">
+                  Telecoms and Regulators
+                  <br />
+                  Help stop <span className="text-brand">Call Spoofing</span>
+                </h1>
+              </div>
+
+              <div className="mt-4 flex min-h-[118px] w-[80%] items-center justify-center rounded-xl bg-white px-5 py-4 sm:min-h-[138px] sm:px-7 lg:min-h-[150px]">
+                <p className="text-center text-[11px] leading-[1.55] text-black sm:text-[13px] lg:text-[14px]">
+                  <em className="font-bold">
+                    <span className="text-black">Phish</span>
+                    <span className="text-brand">Flagger</span>
+                  </em>{" "}
+                  protocols introduce a sequence number, known only by the valid
+                  carrier and the callee into the Caller ID field, providing a
+                  simple way to identify fake calls.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* 2 — Caller ID list */}

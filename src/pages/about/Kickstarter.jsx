@@ -41,7 +41,7 @@ export default function Kickstarter() {
               />
               <Link
                 to="/about/hall-of-fame"
-                className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
               >
                 Hall of Fame
               </Link>

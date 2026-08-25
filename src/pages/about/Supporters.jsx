@@ -94,7 +94,7 @@ export default function Supporters() {
         <div className="mx-auto flex max-w-[980px] justify-center">
           <Link
             to={closeTo}
-            className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+            className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
           >
             Endorse Us
           </Link>

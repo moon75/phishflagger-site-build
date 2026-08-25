@@ -153,7 +153,11 @@ export default function Header() {
             </nav>
 
             {/* ^0001 badge — sits right next to Contact */}
-            <span className="ml-4 shrink-0 font-semibold text-green-600 transition-[font-weight] duration-200 hover:font-extrabold sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+            <span className="ml-4 flex shrink-0 items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+              <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden>
+                <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
+                <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              </svg>
               ^0001
             </span>
           </div>

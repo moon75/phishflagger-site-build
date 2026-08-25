@@ -320,10 +320,10 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-full border bg-white px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-120 sm:text-[14px] ${
+                  className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-120 sm:text-[14px] ${
                     category === activeCategory
-                      ? "border-[#5a6066] text-[#5a6066] font-semibold"
-                      : "border-gray-300 text-ink-muted hover:bg-gray-100 hover:text-ink"
+                      ? "border-[#5a6066] bg-[#5a6066] text-white font-semibold"
+                      : "border-gray-300 bg-white text-ink-muted hover:border-[#e63950] hover:text-[#e63950]"
                   }`}
                 >
                   {category}

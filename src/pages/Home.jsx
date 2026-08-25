@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
+import { brandify } from "../components/Brand.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
@@ -116,12 +117,40 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 4 — placeholder (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
-    <section className="relative w-full px-4 pt-6 pb-10 sm:px-6 sm:pt-8 sm:pb-12">
-      <div className="mx-auto w-[85%] max-w-[1360px]">
-        <div className="flex h-[220px] w-full items-center justify-center rounded-lg border-2 border-black bg-[#FFFF00] px-6 text-center">
-          <p className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
-            Placeholder text goes here. Replace this paragraph with the final copy for this section.
+    {/* ===== Section 4 — Human / Digital verification (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
+    <section className="relative w-full px-4 pt-6 pb-16 sm:px-6 sm:pt-8 sm:pb-24">
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20">
+        <div>
+          <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
+            {brandify("PhishFlagger™")} / Human
+          </span>
+          <h2 className="mt-2 text-[24px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[28px]">
+            Put Verification in the Hands of People
+          </h2>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+            {brandify("PhishFlagger™")} gives people a simple way to
+            recognize trusted communications. Every outgoing email receives
+            a unique, sequential {brandify("PhishCounter™")} in the subject
+            line. Recipients can compare the number with the previous
+            message from that sender. If the sequence is missing or
+            doesn't match, it's a clear signal to stop and take a closer
+            look.
+          </p>
+        </div>
+        <div>
+          <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
+            {brandify("PhishFlagger™")} / Digital
+          </span>
+          <h2 className="mt-2 text-[24px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[28px]">
+            Authenticate Communications Automatically
+          </h2>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+            {brandify("PhishFlagger™")} adds a digital layer of protection
+            by helping verify that communications originate from
+            authorized senders and domains. Working alongside existing
+            email security and authentication technologies,{" "}
+            {brandify("PhishFlagger™")} helps identify communications that
+            may be impersonating a trusted organization or sender.
           </p>
         </div>
       </div>
@@ -197,7 +226,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/join/email-free-plug-in"
-                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
                   >
                     Join Free
                   </Link>
@@ -213,7 +242,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -222,8 +251,8 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
-            <h2 className="mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[27px] font-bold leading-tight tracking-tight text-ink sm:text-[31px]">
-              <LogoMark className="h-[32px] sm:h-[37px]" />
+            <h2 className="mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              <LogoMark />
               Email
             </h2>
             <div className="flex items-center justify-center py-2 lg:h-[300px] lg:py-0">
@@ -260,7 +289,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -306,7 +335,7 @@ export default function Home() {
           </p>
           <Link
             to="/join/email-marketing"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
           >
             Marketing
           </Link>
@@ -351,7 +380,7 @@ export default function Home() {
           </p>
           <Link
             to="/telecom"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
           >
             Telecom
           </Link>
@@ -406,7 +435,7 @@ export default function Home() {
               />
               <Link
                 to="/telecom"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
               >
                 Telecom
               </Link>
@@ -433,7 +462,7 @@ export default function Home() {
               />
               <Link
                 to="/join/messaging"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-brand duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
               >
                 Messaging
               </Link>
