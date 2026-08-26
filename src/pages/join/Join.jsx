@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
-import whoCanUseImg from "../../assets/images/email-marketing-verified-v9.png";
 import cloudServerImg from "../../assets/images/domain-server-only.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
@@ -105,8 +104,8 @@ export default function Join() {
                 </span>
               </div>
               <Link
-                to="/join/pro"
-                aria-label="Join PRO — Domain Appliance"
+                to="/join/domain"
+                aria-label="Join Domain — Domain Appliance"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-transform duration-200 hover:scale-110"
               >
                 <img
@@ -116,10 +115,10 @@ export default function Join() {
                 />
               </Link>
               <Link
-                to="/join/pro"
+                to="/join/domain"
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
               >
-                Join Pro
+                Join Domain
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
@@ -134,9 +133,9 @@ export default function Join() {
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
               >
                 <img
-                  src={whoCanUseImg}
+                  src="/assets/images/footer%20history%20pic%203rd.png"
                   alt="Join PhishFlagger illustration"
-                  className="h-[174px] w-[174px] object-contain"
+                  className="h-[174px] w-[174px] translate-x-5 scale-150 object-contain"
                 />
               </Link>
               <Link

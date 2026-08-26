@@ -45,8 +45,8 @@ export default function Telecom() {
                 </h1>
               </div>
 
-              <div className="mt-4 flex min-h-[118px] w-[80%] items-center justify-center rounded-xl border-2 border-black bg-white px-5 py-4 sm:min-h-[138px] sm:px-7 lg:min-h-[150px]">
-                <p className="text-left text-[15px] leading-[1.65] text-black sm:text-[16px] sm:leading-[1.6]">
+              <div className="mt-4 flex min-h-[128px] w-[88%] items-center justify-center rounded-xl border-2 border-black bg-white px-6 py-4 sm:min-h-[150px] sm:px-8 lg:min-h-[165px]">
+                <p className="text-left text-[17px] leading-[1.65] text-black sm:text-[19px] sm:leading-[1.6]">
                   <em className="font-bold">
                     <span className="text-black">Phish</span>
                     <span className="text-brand">Flagger</span>

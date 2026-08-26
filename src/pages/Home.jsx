@@ -265,15 +265,15 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <div className="relative w-full max-w-[380px]">
-              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black">
+            <Link to="/join/domain" className="relative w-full max-w-[380px]">
+              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-105">
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server appliance"
                   className="h-full w-full object-cover"
                 />
               </div>
-            </div>
+            </Link>
             <p className="mt-4 flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
@@ -287,10 +287,10 @@ export default function Home() {
                   Join your Domain
                 </span>
                 <Link
-                  to="/join/pro"
+                  to="/join/domain"
                   className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
                 >
-                  Join Pro
+                  Join Domain
                 </Link>
               </div>
             </div>

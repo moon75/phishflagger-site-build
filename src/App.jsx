@@ -32,6 +32,7 @@ import JoinCorporateIframe from "./pages/JoinCorporateIframe.jsx";
 
 import Join from "./pages/join/Join.jsx";
 import EmailDomain from "./pages/join/EmailDomain.jsx";
+import DomainAppliance from "./pages/join/DomainAppliance.jsx";
 import EmailFreePlugIn from "./pages/join/EmailFreePlugIn.jsx";
 import EmailMarketing from "./pages/join/EmailMarketing.jsx";
 import EmailMarketingQuote from "./pages/join/EmailMarketingQuote.jsx";
@@ -155,6 +156,7 @@ export default function App() {
 
         <Route path="join">
           <Route path="pro" element={<EmailDomain />} />
+          <Route path="domain" element={<DomainAppliance />} />
           <Route path="email-free-plug-in" element={<EmailFreePlugIn />} />
           <Route path="email-marketing" element={<EmailMarketing />} />
           <Route path="email-marketing/quote" element={<EmailMarketingQuote />} />

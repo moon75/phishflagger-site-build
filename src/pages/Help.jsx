@@ -12,12 +12,12 @@ const DOMAIN_PROVIDERS = [
 ];
 
 const LINKS = [
-  { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
-  { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
+  { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
+  { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
   { to: "/demo", label: "Demo", icon: <DemoIcon /> },
+  { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
 ];
 
 export default function Help() {

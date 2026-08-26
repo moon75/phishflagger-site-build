@@ -9,7 +9,7 @@ import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
 
-export default function EmailDomain() {
+export default function DomainAppliance() {
   return (
     <>
       <CloseButton />
@@ -30,12 +30,12 @@ export default function EmailDomain() {
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[38px] w-auto shrink-0 object-contain sm:h-[48px]"
               />
-              <h2 className="inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
+              <h2 className="inline-block whitespace-nowrap text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
                 <em className="italic">
                   <span className="font-extrabold text-ink">Phish</span>
                   <span className="font-normal text-brand">Flagger</span>
                 </em>{" "}
-                PRO
+                Domain Appliance
               </h2>
             </div>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -55,8 +55,8 @@ export default function EmailDomain() {
           <div className="flex justify-center lg:justify-start lg:pl-40">
             <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
-                src="/assets/images/corporate-image-homepage-v5.png"
-                alt="Corporate email protection design"
+                src="/assets/images/Email-Authentication-Join-Domain-Pro.png"
+                alt="Email authentication for domain appliance"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
@@ -280,8 +280,9 @@ export default function EmailDomain() {
                 <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
                   <li>Terms of Service</li>
                   <li>Access Key</li>
-                  <li>Install Plug-In</li>
+                  <li>Appliance Install</li>
                   <li>Install Instructions</li>
+                  <li>Install Plug-In</li>
                 </ul>
               </div>
             </div>

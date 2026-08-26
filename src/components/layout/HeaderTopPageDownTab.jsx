@@ -54,7 +54,7 @@ export default function HeaderTopPageDownTab() {
       type="button"
       onClick={handleClick}
       aria-label="Page down to the next section"
-      className="group absolute left-1/2 top-1.5 z-10 flex h-4 w-11 -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl bg-[#4a4a4a] pb-0.5 text-white shadow-md transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
+      className="group absolute left-1/2 top-0 z-10 flex h-4 w-11 -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-transparent pb-0.5 text-[#4a4a4a] transition hover:border-[#2b2b2b] hover:bg-[#2b2b2b] hover:text-white sm:h-5 sm:w-12"
     >
       <svg
         viewBox="0 0 24 24"
