@@ -38,7 +38,7 @@ export default function Join() {
                 Email Solutions
               </h2>
             </div>
-            <p className="text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
+            <p className="max-w-[380px] rounded-xl border-2 border-black bg-white px-5 py-4 text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
               <BrandInline /> protects individuals and organizations who
               want greater confidence in the authenticity of their emails.
               Whether you host a domain or use an email client,{" "}
@@ -83,7 +83,7 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 aria-label="Join PRO — One or Many"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black p-1 transition-transform duration-200 hover:scale-110"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black transition-transform duration-200 hover:scale-110"
               >
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
