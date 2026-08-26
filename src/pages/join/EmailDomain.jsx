@@ -51,16 +51,30 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center lg:pl-40">
-            <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
-              Many
-            </span>
-            <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
-              <img
-                src="/assets/images/corporate-image-homepage-v5.png"
-                alt="Corporate email protection design"
-                className="h-full w-full rounded-lg object-contain"
-              />
+          <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
+            <div className="flex flex-col items-center">
+              <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
+                Many
+              </span>
+              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
+                <img
+                  src="/assets/images/corporate-image-homepage-v5.png"
+                  alt="Corporate email protection design"
+                  className="h-full w-full rounded-lg object-contain"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
+                One
+              </span>
+              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
+                <img
+                  src="/assets/images/corporate-image-homepage-center-person.png"
+                  alt="Individual email protection design"
+                  className="h-full w-full rounded-lg object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
