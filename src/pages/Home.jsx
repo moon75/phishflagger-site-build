@@ -312,11 +312,16 @@ export default function Home() {
       <SectionCounter value="^0002" />
       <PageDownButton targetSelector="#pane-0004" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[324px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+            className="h-auto w-full max-w-[220px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
+          />
+          <img
+            src="/assets/images/footer%20history%20pic%203rd.png"
+            alt="PhishFlagger email inbox showing numbered messages"
+            className="h-auto w-full max-w-[220px] object-contain transition-transform duration-200 hover:scale-[1.2]"
           />
         </div>
         <div>
