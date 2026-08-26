@@ -45,7 +45,7 @@ export default function Telecom() {
                 </h1>
               </div>
 
-              <div className="mt-4 flex min-h-[128px] w-[88%] items-center justify-center rounded-xl border-2 border-black bg-white px-6 py-4 sm:min-h-[150px] sm:px-8 lg:min-h-[165px]">
+              <div className="mt-4 flex min-h-[128px] w-[88%] items-center justify-center rounded-xl bg-white px-6 py-4 sm:min-h-[150px] sm:px-8 lg:min-h-[165px]">
                 <p className="text-left text-[17px] leading-[1.65] text-black sm:text-[19px] sm:leading-[1.6]">
                   <em className="font-bold">
                     <span className="text-black">Phish</span>
@@ -73,7 +73,7 @@ export default function Telecom() {
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-[85%] w-auto max-w-full -translate-y-10 rounded-2xl object-cover"
+              className="h-[95%] w-auto max-w-full -translate-y-10 rounded-2xl object-cover"
             />
           </div>
 

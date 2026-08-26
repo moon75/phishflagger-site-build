@@ -11,7 +11,6 @@ import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
-import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
@@ -21,7 +20,7 @@ import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connec
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
-  { label: "Email", src: emailPhoneImg },
+  { label: "Email", src: "/assets/images/PhishFlagger%20Email%20Gif%20v2.gif" },
   { label: "Messages", src: messagesPhoneImg },
   { label: "Text/SMS", src: textPhoneImg },
   { label: "Caller ID", src: callerIdHandsetImg },
@@ -57,7 +56,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-11 object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">

@@ -34,6 +34,34 @@ export default function Header() {
   // menus that already open on hover — no click required.
   const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help"]);
 
+  // Desktop nav split into two blocks of 3 (see JSX below) — first half /
+  // second half of the 6-item nav array.
+  const navLeft = nav.slice(0, 3);
+  const navRight = nav.slice(3);
+
+  function renderNavItem(item) {
+    if (item.children) {
+      return (
+        <NavDropdown item={item} hoverNavigate={HOVER_NAV_LABELS.has(item.label)} />
+      );
+    }
+    return (
+      <NavLink
+        to={item.href}
+        onMouseEnter={
+          HOVER_NAV_LABELS.has(item.label) ? () => navigate(item.href) : undefined
+        }
+        className={({ isActive }) =>
+          `rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
+            isActive ? "bg-gray-100 text-brand" : "text-ink"
+          }`
+        }
+      >
+        {item.label}
+      </NavLink>
+    );
+  }
+
   // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
@@ -61,8 +89,15 @@ export default function Header() {
           />
         </NavLink>
 
-        {/* Globe (country/region) + Login — pinned to the far right edge on desktop */}
+        {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
+          <span className="flex shrink-0 items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
+              <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+            ^0001
+          </span>
           <Link
             to="/country"
             aria-label="Choose your country"
@@ -121,46 +156,23 @@ export default function Header() {
           {/* Desktop nav + badge — kept tight together */}
           <div className="hidden items-center gap-3 lg:flex">
             <nav aria-label="Primary">
-              <ul className="flex items-center gap-4">
-                {nav.map((item) =>
-                  item.children ? (
-                    <li key={item.label}>
-                      <NavDropdown
-                        item={item}
-                        hoverNavigate={HOVER_NAV_LABELS.has(item.label)}
-                      />
-                    </li>
-                  ) : (
-                    <li key={item.label}>
-                      <NavLink
-                        to={item.href}
-                        onMouseEnter={
-                          HOVER_NAV_LABELS.has(item.label)
-                            ? () => navigate(item.href)
-                            : undefined
-                        }
-                        className={({ isActive }) =>
-                          `rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
-                            isActive ? "bg-gray-100 text-brand" : "text-ink"
-                          }`
-                        }
-                      >
-                        {item.label}
-                      </NavLink>
-                    </li>
-                  ),
-                )}
-              </ul>
+              {/* Split into two blocks of 3 with a gap between them the
+                  width of the header-top page-down tab, left block nudged
+                  left and right block nudged right. */}
+              <div className="flex items-center gap-x-[88px] sm:gap-x-[96px]">
+                <ul className="-ml-4 flex items-center gap-4">
+                  {navLeft.map((item) => (
+                    <li key={item.label}>{renderNavItem(item)}</li>
+                  ))}
+                </ul>
+                <ul className="-mr-4 flex items-center gap-4">
+                  {navRight.map((item) => (
+                    <li key={item.label}>{renderNavItem(item)}</li>
+                  ))}
+                </ul>
+              </div>
             </nav>
 
-            {/* ^0001 badge — sits right next to Contact */}
-            <span className="ml-4 flex shrink-0 items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold sm:ml-6" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
-              <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
-                <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
-                <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
-              ^0001
-            </span>
           </div>
 
           {/* Mobile toggle */}
