@@ -3,7 +3,6 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
 import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
@@ -52,7 +51,10 @@ export default function EmailDomain() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-start lg:pl-40">
+          <div className="flex flex-col items-center lg:pl-40">
+            <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
+              Many
+            </span>
             <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/corporate-image-homepage-v5.png"
@@ -68,10 +70,7 @@ export default function EmailDomain() {
         <SectionCounter value="^0001" />
         <PageDownButton />
         <div className="mx-auto max-w-content">
-          <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-            Two Ways To Join
-          </h2>
-          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
+          <div className="mx-auto mt-10 flex justify-center sm:mt-14">
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
               <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Plug-In
@@ -98,75 +97,6 @@ export default function EmailDomain() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mx-auto flex w-full max-w-[460px] flex-col">
-              <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
-                Appliance
-              </h3>
-              <div className="relative">
-                <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                <div className="h-[200px] w-full overflow-hidden">
-                  <img
-                    src={digitalDomainImg}
-                    alt="Cloud and server email hosting"
-                    className="h-full w-full scale-[1.42] object-contain"
-                  />
-                </div>
-                {/* Content split into two columns beneath the image — Cloud
-                    (left, under the cloud icon) and On-Site Server (right,
-                    under the server rack icon) */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#FFFF00] p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                  <div className="space-y-4">
-                    <p>
-                      Microsoft Email
-                      <br />
-                      Exchange 365
-                      <br />
-                      Office 365
-                      <br />
-                      Outlook 365
-                    </p>
-                    <p>
-                      Google Workspace
-                      <br />
-                      Business Email Solution
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <p>
-                      Linux
-                      <br />
-                      Postfix
-                    </p>
-                    <p>
-                      Microsoft
-                      <br />
-                      Exchange
-                    </p>
-                  </div>
-
-                  {/* Applies to both sides (Cloud + On-Site) — spans full width */}
-                  <div className="col-span-2 space-y-4 border-t border-[#f0e2a0] pt-4">
-                    <p>
-                      Appliance forms:
-                      <br />
-                      Linux Kubernetes Docker
-                    </p>
-                    <p>
-                      Hosted on: AWS, VMware, Azure,
-                      <br />
-                      or any server with Open Port 25.
-                    </p>
-                    <p>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
-                    </p>
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -273,7 +203,7 @@ export default function EmailDomain() {
                   <li>Install Instructions</li>
                 </ul>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
                   Plug-In
                 </span>
@@ -300,7 +230,7 @@ export default function EmailDomain() {
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
-                Join Pro
+                Join
               </Link>
             </div>
           </div>

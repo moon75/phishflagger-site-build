@@ -59,7 +59,7 @@ export default function Demo() {
             <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
               We also validate Digitally.{" "}
               <Link
-                to="/digital-ino"
+                to="/digital-verification"
                 className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
               >
                 More Info Here

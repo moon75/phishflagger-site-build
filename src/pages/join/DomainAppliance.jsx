@@ -4,7 +4,6 @@ import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
-import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
@@ -68,40 +67,7 @@ export default function DomainAppliance() {
         <SectionCounter value="^0001" />
         <PageDownButton />
         <div className="mx-auto max-w-content">
-          <h2 className="text-center text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
-            Two Ways To Join
-          </h2>
-          <div className="mx-auto mt-10 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-16">
-            <div className="mx-auto flex w-full max-w-[460px] flex-col">
-              <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
-                Plug-In
-              </h3>
-              <div className="relative">
-                <span className="absolute top-2 -left-2 z-10 -rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
-                  Coming Soon
-                </span>
-                <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                  <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
-                    <img
-                      src={outlookThunderbirdImg}
-                      alt="Microsoft Outlook and Mozilla Thunderbird"
-                      className="h-full w-full translate-y-1 scale-[1.5] object-contain"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-3 bg-[#FFFF00] p-7 pb-10">
-                    <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                      <li>Windows</li>
-                      <li>Linux / Window</li>
-                      <li>
-                        Placeholder text goes here. Replace this copy with the
-                        final content.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="mx-auto mt-10 flex justify-center sm:mt-14">
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
               <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
                 Appliance
@@ -273,7 +239,7 @@ export default function DomainAppliance() {
                   <li>Install Instructions</li>
                 </ul>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
                   Plug-In
                 </span>
@@ -301,7 +267,7 @@ export default function DomainAppliance() {
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
-                Join Pro
+                Join
               </Link>
             </div>
           </div>

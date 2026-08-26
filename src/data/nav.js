@@ -9,6 +9,7 @@ export const nav = [
   { label: "Help", href: "/help" },
   {
     label: "About",
+    href: "/about",
     children: [
       { label: "Press", href: "/about/press" },
       { label: "Team", href: "/about/team" },

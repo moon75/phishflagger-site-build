@@ -63,7 +63,14 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
     const currentIndex = currentIndexFor(event, sections);
     const prev = currentIndex > 0 ? sections[currentIndex - 1] : null;
 
-    scrollToElement(prev, "start");
+    if (prev) {
+      scrollToElement(prev, "start");
+    } else {
+      // Exception: the up-arrow on the very first pane has nowhere to go
+      // "up" to, so it scrolls all the way to the top of the page instead
+      // of doing nothing.
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   return (

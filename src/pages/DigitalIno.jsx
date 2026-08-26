@@ -11,7 +11,7 @@ export default function DigitalIno() {
       <section className="relative w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
         <div className="mx-auto max-w-content">
           <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
-            Digital Verification
+            Domain Verification
           </h1>
 
           <div className="mt-3 flex justify-center">

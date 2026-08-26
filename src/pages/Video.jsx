@@ -288,7 +288,7 @@ export default function Video() {
           {/* Intro */}
           <div className="text-center">
             <p className="mx-auto flex max-w-[900px] flex-wrap items-center justify-center gap-x-2 text-[22px] leading-[1.6] text-ink sm:text-[24px]">
-              <span>See how</span>
+              <span>Watch how</span>
               <LogoMark />
               <BrandInline />
               <span>protects against phishing.</span>
@@ -318,10 +318,10 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-120 sm:text-[14px] ${
+                  className={`cursor-pointer rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
                     category === activeCategory
-                      ? "border-[#5a6066] bg-[#5a6066] text-white font-semibold"
-                      : "border-gray-300 bg-white text-ink-muted hover:border-[#e63950] hover:text-[#e63950]"
+                      ? "bg-gray-100 text-brand"
+                      : "text-ink"
                   }`}
                 >
                   {category}

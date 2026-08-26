@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import PageUpButton from "../ui/PageUpButton.jsx";
+import PageDownButton from "../ui/PageDownButton.jsx";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
@@ -56,9 +57,7 @@ export default function Footer({ logoSrc = logoImg }) {
               backgroundSize: "140%",
             }}
           >
-            <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
-              ^0001
-            </span>
+            <PageDownButton />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex items-center justify-center gap-3">
                 <img
@@ -122,10 +121,12 @@ export default function Footer({ logoSrc = logoImg }) {
       )}
 
       <footer id="site-footer" className="relative scroll-mt-[var(--header-h)] bg-white font-['Mulish',sans-serif]">
-        <PageUpButton />
-
         {/* Top strip */}
         <div className="h-1.5 w-full bg-gray-200" aria-hidden />
+
+        <div className="flex justify-center pb-6">
+          <PageUpButton inline />
+        </div>
 
         <div className="mx-auto max-w-[980px] px-6 pt-20 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-[72px]">
           {/* Description paragraph */}

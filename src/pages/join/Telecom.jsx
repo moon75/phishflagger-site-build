@@ -57,9 +57,9 @@ export default function Telecom() {
           {/* 2 — Caller ID list */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
-              src="/assets/images/existing%20caller%20id.png"
-              alt="Existing Caller ID can be used to validate calls now."
-              className="block h-auto w-auto max-h-full max-w-full rounded-xl object-contain"
+              src="/assets/images/existing-caller-id-with-status.png"
+              alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
+              className="block h-auto max-h-full w-auto max-w-full rounded-xl object-contain"
             />
           </div>
 

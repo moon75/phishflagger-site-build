@@ -36,6 +36,35 @@ export const FAQ_CATEGORIES = [
     ],
   },
   {
+    name: "Email - Plug-In (Free)",
+    items: [
+      {
+        q: "Do email recipients need to install anything?",
+        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
+      },
+      {
+        q: "What is the difference between the FREE and CORPORATE Plug-In?",
+        a: "Nothing, Once you install the Plug-In you can use Free and/or Corporate emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nCORPORATE\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or CORPORATE accounts.\nEach Email requires a key. Get your keys here.",
+      },
+      {
+        q: "How does the plug-in work?",
+        a: "The plug-in works with supported email services to provide PhishFlagger™ verification within the user's email experience, helping identify whether a message appears to be from the expected sender.",
+      },
+      {
+        q: "Can I use the plug-in with any email service?",
+        a: "Availability depends on the email service and platform being supported by PhishFlagger™. Check the current list of supported platforms before installing.",
+      },
+      {
+        q: "Does the plug-in guarantee that an email is safe?",
+        a: "No security solution can guarantee that every fraudulent message will be detected. PhishFlagger™ provides an additional layer of verification to help users make more informed decisions about the messages they receive.",
+      },
+      {
+        q: "Why should I use PhishFlagger™ if my email provider already has spam protection?",
+        a: "Spam filters and security systems are important, but PhishFlagger™ approaches the problem from another angle by helping users verify the identity and authenticity of communications.",
+      },
+    ],
+  },
+  {
     name: "Email - Plug-In Pro",
     items: [
       {
@@ -65,35 +94,6 @@ export const FAQ_CATEGORIES = [
       {
         q: "Can PhishFlagger™ work with our existing email infrastructure?",
         a: "PhishFlagger™ is designed to work alongside existing email systems and security technologies. Specific implementation requirements may vary depending on your organization's environment.",
-      },
-    ],
-  },
-  {
-    name: "Email - Plug-In (Free)",
-    items: [
-      {
-        q: "Do email recipients need to install anything?",
-        a: "For our Domain customers nothing at all. The PhishCounter number appears in the subject line of every email — visible in any email client, on any device. No app, no account, and no setup is required on the recipient's side. For Individuals a Plug-in or compliant Email client is required.",
-      },
-      {
-        q: "What is the difference between the FREE and CORPORATE Plug-In?",
-        a: "Nothing, Once you install the Plug-In you can use Free and/or Corporate emails.\n\nFREE\nEnable PhishFlagger email protection from the following Domains:\n\ngmail.com\nyahoo.com\noutlook.com\nhotmail.com\nlive.com\naol.com\nSee full list here\n\nCORPORATE\nPurchase PhishFlagger email protection for ANY email address.\n\nExample:\nsally@joespluming.com\njoe@joespluming.com\nray@joespluming.com\nbob@acme.com\nmuhe@acme.com\ninfo@acme.com\n\nYou can enable your Plugin with unlimited* FREE or CORPORATE accounts.\nEach Email requires a key. Get your keys here.",
-      },
-      {
-        q: "How does the plug-in work?",
-        a: "The plug-in works with supported email services to provide PhishFlagger™ verification within the user's email experience, helping identify whether a message appears to be from the expected sender.",
-      },
-      {
-        q: "Can I use the plug-in with any email service?",
-        a: "Availability depends on the email service and platform being supported by PhishFlagger™. Check the current list of supported platforms before installing.",
-      },
-      {
-        q: "Does the plug-in guarantee that an email is safe?",
-        a: "No security solution can guarantee that every fraudulent message will be detected. PhishFlagger™ provides an additional layer of verification to help users make more informed decisions about the messages they receive.",
-      },
-      {
-        q: "Why should I use PhishFlagger™ if my email provider already has spam protection?",
-        a: "Spam filters and security systems are important, but PhishFlagger™ approaches the problem from another angle by helping users verify the identity and authenticity of communications.",
       },
     ],
   },

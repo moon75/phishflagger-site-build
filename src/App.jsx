@@ -13,6 +13,7 @@ import VideoPage from "./pages/Video.jsx";
 import Download from "./pages/Download.jsx";
 import PluginDownload from "./pages/PluginDownload.jsx";
 import DigitalIno from "./pages/DigitalIno.jsx";
+import HumanCompatible from "./pages/HumanCompatible.jsx";
 import WhitePaper from "./pages/WhitePaper.jsx";
 import VictimTestimonials from "./pages/VictimTestimonials.jsx";
 import EndorseUs from "./pages/EndorseUs.jsx";
@@ -53,6 +54,7 @@ import JoinFreeRegister from "./pages/join/JoinFreeRegister.jsx";
 import JoinFreeTerms from "./pages/join/JoinFreeTerms.jsx";
 import RequestDomain from "./pages/join/RequestDomain.jsx";
 
+import AboutIndex from "./pages/AboutIndex.jsx";
 import Team from "./pages/about/Team.jsx";
 import Press from "./pages/about/Press.jsx";
 import Video from "./pages/about/Video.jsx";
@@ -130,7 +132,8 @@ export default function App() {
         <Route path="video/:category?" element={<VideoPage />} />
         <Route path="download" element={<Download />} />
         <Route path="plugin-download" element={<PluginDownload />} />
-        <Route path="digital-ino" element={<DigitalIno />} />
+        <Route path="digital-verification" element={<DigitalIno />} />
+        <Route path="human-compatible" element={<HumanCompatible />} />
         <Route path="white-paper" element={<WhitePaper />} />
         <Route path="News" element={<News />} />
         <Route path="petition" element={<Petition />} />
@@ -221,6 +224,7 @@ export default function App() {
         <Route path="video1/:category?" element={<Video />} />
 
         <Route path="about">
+          <Route index element={<AboutIndex />} />
           <Route path="team" element={<Team />} />
           <Route path="press" element={<Press />} />
           <Route path="intellectual-property" element={<IP />} />

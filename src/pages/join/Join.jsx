@@ -37,7 +37,7 @@ export default function Join() {
                 Email Solutions
               </h2>
             </div>
-            <p className="max-w-[380px] rounded-xl border-2 border-black bg-white px-5 py-4 text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
+            <p className="max-w-[380px] border-2 border-black bg-white px-5 py-4 text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
               <BrandInline /> protects individuals and organizations who
               want greater confidence in the authenticity of their emails.
               Whether you host a domain or use an email client,{" "}
@@ -47,7 +47,7 @@ export default function Join() {
           </div>
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+              <div className="mb-[34px] flex h-[86px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   Plug-In Free
                 </span>
@@ -71,7 +71,7 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="relative mb-[34px] flex h-[62px] items-end justify-center">
+              <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   Plug-In Pro
                 </span>
@@ -98,9 +98,12 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+              <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Domain Appliance
+                  Domain
+                </span>
+                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                  Appliance
                 </span>
               </div>
               <Link
@@ -122,7 +125,7 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[62px] items-end justify-center">
+              <div className="mb-[34px] flex h-[86px] items-end justify-center">
                 <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   Marketing
                 </span>

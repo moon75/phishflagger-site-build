@@ -135,6 +135,14 @@ export default function Home() {
             doesn't match, it's a clear signal to stop and take a closer
             look.
           </p>
+          <div className="flex justify-center">
+            <Link
+              to="/human-compatible"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+            >
+              Human Compatible
+            </Link>
+          </div>
         </div>
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
@@ -151,6 +159,14 @@ export default function Home() {
             {brandify("PhishFlagger™")} helps identify communications that
             may be impersonating a trusted organization or sender.
           </p>
+          <div className="flex justify-center">
+            <Link
+              to="/digital-verification"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+            >
+              Domain Verification
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -281,7 +297,7 @@ export default function Home() {
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
               <div className="flex w-[260px] flex-col items-center gap-3">
                 <span className="whitespace-nowrap text-[28px] font-extrabold uppercase tracking-wide text-ink">
-                  PRO - Appliance
+                  Domain
                 </span>
                 <span className="flex items-center text-center text-[20px] italic leading-snug text-ink-muted">
                   Join your Domain

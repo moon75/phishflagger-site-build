@@ -113,7 +113,7 @@ export default function EmailMarketing() {
                 verification method that validates the sending domain similar
                 to SPF.{" "}
                 <Link
-                  to="/digital-ino"
+                  to="/digital-verification"
                   className="font-semibold text-[#2a6df4] underline underline-offset-4"
                 >
                   More info Here.
