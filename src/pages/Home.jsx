@@ -4,9 +4,10 @@ import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import { brandify } from "../components/Brand.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
+import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
-import heroInfoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
-import heroInfoBoxGif from "../assets/images/email-inbox-v4-gray-header-animated.gif";
+import heroInfoBoxImg from "../assets/images/email-inbox-v6-gray-header-5004.png";
+import heroInfoBoxGif from "../assets/images/email-inbox-v6-gray-header-5004-animated.gif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
@@ -20,7 +21,7 @@ import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connec
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
-  { label: "Email", src: "/assets/images/PhishFlagger%20Email%20Gif%20v2.gif" },
+  { label: "Email", src: emailPhoneImg, hoverSrc: "/assets/images/PhishFlagger%20Email%20Gif%20v2.gif" },
   { label: "Messages", src: messagesPhoneImg },
   { label: "Text/SMS", src: textPhoneImg },
   { label: "Caller ID", src: callerIdHandsetImg },
@@ -95,7 +96,7 @@ export default function Home() {
                 large
               />
             </div>
-            <PhonePlaceholder src={SCREENS[1].src} alt={`${SCREENS[1].label} screen`} />
+            <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} alt={`${SCREENS[1].label} screen`} />
           </div>
         </div>
 
