@@ -5,6 +5,7 @@ import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import HeaderTopPageDownTab from "./HeaderTopPageDownTab.jsx";
+import { getVisitCount, formatVisitCount } from "../../lib/visitCounter.js";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
@@ -12,6 +13,14 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const headerRef = useRef(null);
+
+  // "^0001"-style badge — a real cookie-backed visit count instead of a
+  // hardcoded number. Starts at "^0001" during server render / before the
+  // cookie is read, then updates once on mount.
+  const [visitBadge, setVisitBadge] = useState("^0001");
+  useEffect(() => {
+    setVisitBadge(formatVisitCount(getVisitCount()));
+  }, []);
 
   // Publish the header's real rendered height as a CSS variable so pages can
   // set scroll-margin-top to exactly this value (via scroll-mt-[var(--header-h)]).
@@ -96,7 +105,7 @@ export default function Header() {
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
               <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
-            ^0001
+            {visitBadge}
           </span>
           <Link
             to="/country"
@@ -159,7 +168,7 @@ export default function Header() {
               {/* Split into two blocks of 3 with a gap between them the
                   width of the header-top page-down tab, left block nudged
                   left and right block nudged right. */}
-              <div className="flex items-center gap-x-[88px] sm:gap-x-[96px]">
+              <div className="flex items-center gap-x-[120px] sm:gap-x-[132px]">
                 <ul className="-ml-4 flex items-center gap-4">
                   {navLeft.map((item) => (
                     <li key={item.label}>{renderNavItem(item)}</li>

@@ -6,7 +6,7 @@ import { brandify } from "../components/Brand.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
-import heroInfoBoxImg from "../assets/images/email-inbox-v6-gray-header-5004.png";
+import heroInfoBoxImg from "../assets/images/email-inbox-v7-gray-header-ordered.png";
 import heroInfoBoxGif from "../assets/images/email-inbox-v6-gray-header-5004-animated.gif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";

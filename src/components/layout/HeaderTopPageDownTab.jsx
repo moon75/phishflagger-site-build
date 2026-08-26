@@ -43,7 +43,11 @@ export default function HeaderTopPageDownTab() {
     const sections = Array.from(document.querySelectorAll("section"));
     const next = sections.find((section) => section.getBoundingClientRect().top > headerBottom + 1);
     if (next) {
-      next.scrollIntoView({ behavior: "smooth", block: "start" });
+      // window.scrollTo to an absolute Y, not next.scrollIntoView — see
+      // PageDownButton.jsx for why (scrollIntoView's smooth animation was
+      // observed to silently no-op in some cases on this page).
+      const rect = next.getBoundingClientRect();
+      window.scrollTo({ top: window.scrollY + rect.top, behavior: "smooth" });
     }
   }
 

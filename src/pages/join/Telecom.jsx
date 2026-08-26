@@ -10,6 +10,7 @@ import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/call
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
+import telecomProtocolCardImg from "../../assets/images/telecom-protocol-card.png";
 
 export default function Telecom() {
   const containerRef = useRef(null);
@@ -45,17 +46,11 @@ export default function Telecom() {
                 </h1>
               </div>
 
-              <div className="mt-4 flex min-h-[128px] w-[88%] items-center justify-center rounded-xl bg-white px-6 py-4 sm:min-h-[150px] sm:px-8 lg:min-h-[165px]">
-                <p className="text-left text-[17px] leading-[1.65] text-black sm:text-[19px] sm:leading-[1.6]">
-                  <em className="font-bold">
-                    <span className="text-black">Phish</span>
-                    <span className="text-brand">Flagger</span>
-                  </em>{" "}
-                  protocols introduce a sequence number, known only by the valid
-                  carrier and the callee into the Caller ID field, providing a
-                  simple way to identify fake calls.
-                </p>
-              </div>
+              <img
+                src={telecomProtocolCardImg}
+                alt="PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
+                className="mt-4 block h-auto w-[88%] rounded-xl object-contain"
+              />
             </div>
           </div>
 
