@@ -4,6 +4,7 @@ import SiteLayout from "./components/layout/SiteLayout.jsx";
 import Home from "./pages/Home.jsx";
 import PhishFlaggerOrg from "./pages/PhishFlaggerOrg.jsx";
 import Contact from "./pages/Contact.jsx";
+import GlobalSettings from "./pages/GlobalSettings.jsx";
 import SupportDesk from "./pages/SupportDesk.jsx";
 import Help from "./pages/Help.jsx";
 import Community from "./pages/Community.jsx";
@@ -92,6 +93,7 @@ export default function App() {
         <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
         <Route path="test-stripe" element={<TestStripe />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="internal/global-settings" element={<GlobalSettings />} />
         <Route
           path="contact/thanks"
           element={
