@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../../assets/images/domain-server-only.png";
+import oneOrManyImg from "../../assets/images/six plugin one or more.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
@@ -33,7 +34,7 @@ export default function Join() {
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
               />
-              <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              <h2 className="section-title whitespace-nowrap text-left">
                 Email Solutions
               </h2>
             </div>
@@ -85,7 +86,7 @@ export default function Join() {
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black transition-transform duration-200 hover:scale-110"
               >
                 <img
-                  src="/assets/images/corporate-image-homepage-v5.png"
+                  src={oneOrManyImg}
                   alt="Domain protection illustration"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -136,9 +137,9 @@ export default function Join() {
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
               >
                 <img
-                  src="/assets/images/footer%20history%20pic%203rd.png"
+                  src="/assets/images/Marketing%20Email.png"
                   alt="Join PhishFlagger illustration"
-                  className="h-[174px] w-[174px] translate-x-5 scale-150 object-contain"
+                  className="h-full w-full object-contain"
                 />
               </Link>
               <Link

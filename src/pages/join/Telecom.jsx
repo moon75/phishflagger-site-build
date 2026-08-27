@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
@@ -10,7 +11,7 @@ import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/call
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
-import telecomProtocolCardImg from "../../assets/images/telecom-protocol-card.png";
+import telecomIntroCombinedImg from "../../assets/images/telecom-intro-combined.png";
 
 export default function Telecom() {
   const containerRef = useRef(null);
@@ -31,27 +32,11 @@ export default function Telecom() {
 
           {/* 1 — heading + intro */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <div className="flex h-full w-full max-w-[600px] flex-col items-center justify-center">
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <img
-                  src="/assets/images/logo-mark.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="h-auto w-[58px] shrink-0 sm:w-[70px]"
-                />
-                <h1 className="text-[23px] leading-[0.98] tracking-[-0.035em] text-black sm:text-[29px] lg:text-[31px]">
-                  Telecoms and Regulators
-                  <br />
-                  Help stop <span className="text-brand">Call Spoofing</span>
-                </h1>
-              </div>
-
-              <img
-                src={telecomProtocolCardImg}
-                alt="PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-                className="mt-4 block h-auto w-[88%] rounded-xl object-contain"
-              />
-            </div>
+            <img
+              src={telecomIntroCombinedImg}
+              alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
+              className="block h-auto w-[432px] max-h-full max-w-full object-contain"
+            />
           </div>
 
           {/* 2 — Caller ID list */}
@@ -208,7 +193,7 @@ export default function Telecom() {
             />
           </div>
           <div>
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            <h2 className="section-title">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
@@ -246,7 +231,7 @@ export default function Telecom() {
             />
           </div>
           <div className="lg:order-1">
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            <h2 className="section-title">
               UK&rsquo;s regulator does not approve STIR/SHAKEN
             </h2>
             <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
@@ -388,7 +373,7 @@ export default function Telecom() {
             />
           </div>
           <div>
-            <h2 className="text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
+            <h2 className="section-title">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
@@ -414,12 +399,8 @@ export default function Telecom() {
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="flex items-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:text-[30px]">
-              <img
-                src="/assets/images/logo-mark.png"
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[26px] w-auto shrink-0 object-contain sm:h-[30px]"
-              />
+            <h2 className="section-title flex items-center gap-3">
+              <LogoMark />
               SMS
             </h2>
             <p className="mt-6 rounded-lg bg-[#FFFF00] px-4 py-3 text-[15px] leading-relaxed text-ink sm:text-[17px]">

@@ -59,15 +59,29 @@ export default function Footer({ logoSrc = logoImg }) {
           >
             <PageDownButton />
             <div className="mx-auto max-w-[1200px]">
-              <div className="flex items-center justify-center gap-3">
-                <img
-                  src="/assets/images/logo-mark.png"
-                  alt="PhishFlagger envelope and flag mark"
-                  className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px]"
-                />
-                <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
-                  Protecting Communications
-                </h2>
+              <div className="flex items-center justify-center gap-[7.5rem]">
+                <Link
+                  to="/about/faq"
+                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                >
+                  FAQ
+                </Link>
+                <div className="flex items-center justify-center gap-3">
+                  <img
+                    src="/assets/images/logo-mark.png"
+                    alt="PhishFlagger envelope and flag mark"
+                    className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px]"
+                  />
+                  <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
+                    Protecting Communications
+                  </h2>
+                </div>
+                <Link
+                  to="/help/endorse-us"
+                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                >
+                  Endorse Us
+                </Link>
               </div>
               <div className="mt-10 flex flex-wrap items-start justify-center gap-6 sm:gap-10">
                 {PRODUCT_IMAGES.map((item, idx) => (
@@ -96,22 +110,6 @@ export default function Footer({ logoSrc = logoImg }) {
                         </span>
                       )}
                     </div>
-                    {idx === 0 && (
-                      <Link
-                        to="/about/faq"
-                        className="mt-16 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
-                      >
-                        FAQ
-                      </Link>
-                    )}
-                    {idx === PRODUCT_IMAGES.length - 1 && (
-                      <Link
-                        to="/help/endorse-us"
-                        className="mt-16 -translate-x-12 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:-translate-x-20 sm:text-[14px]"
-                      >
-                        Endorse Us
-                      </Link>
-                    )}
                   </div>
                 ))}
               </div>

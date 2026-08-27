@@ -58,7 +58,7 @@ export default function EmailDomain() {
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
                 <img
-                  src="/assets/images/corporate-image-homepage-v5.png"
+                  src="/assets/images/corporate-image-homepage-center-person.png"
                   alt="Corporate email protection design"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -70,7 +70,7 @@ export default function EmailDomain() {
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
-                  src="/assets/images/corporate-image-homepage-center-person.png"
+                  src="/assets/images/corporate-image-homepage-v5.png"
                   alt="Individual email protection design"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -130,7 +130,7 @@ export default function EmailDomain() {
         <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <h2 className="mb-6 flex items-center justify-center gap-3 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-left sm:text-[30px]">
+            <h2 className="section-title mb-6 flex items-center justify-center gap-3 text-center sm:justify-start sm:text-left">
               <LogoMark />
               Protect your Brand and Recipients
             </h2>
@@ -178,7 +178,7 @@ export default function EmailDomain() {
             </div>
           </div>
           <div className="text-center lg:text-left">
-            <h2 className="flex items-center justify-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-[30px]">
+            <h2 className="section-title flex items-center justify-center gap-3 sm:justify-start">
               <LogoMark />
               Protect your Network
             </h2>

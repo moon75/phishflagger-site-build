@@ -161,7 +161,7 @@ export default function Kick() {
               alt="PhishFlagger envelope and flag mark"
               className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
             />
-            <h2 className="whitespace-nowrap text-left text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <h2 className="section-title whitespace-nowrap text-left">
               Email Solutions
             </h2>
           </div>
@@ -195,7 +195,7 @@ export default function Kick() {
         <div className="mt-16 w-full max-w-[900px] text-left">
           <div className="grid grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+              <h2 className="section-title">
                 Why{" "}
                 <em className="italic">
                   <span className="font-bold text-ink">Phish</span>

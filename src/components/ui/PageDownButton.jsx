@@ -74,12 +74,12 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
   }
 
   return (
-    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl shadow-md">
+    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-white">
       <button
         type="button"
         onClick={handleDown}
         aria-label="Page down to the next section"
-        className="group flex h-4 w-11 cursor-pointer items-end justify-center bg-[#4a4a4a] pb-0.5 text-white transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
+        className="group flex h-4 w-11 cursor-pointer items-end justify-center bg-transparent pb-0.5 text-[#4a4a4a] transition hover:bg-[#2b2b2b] hover:text-white sm:h-5 sm:w-12"
       >
         <svg
           viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
         type="button"
         onClick={handleUp}
         aria-label="Page up to the previous section"
-        className="group flex h-4 w-11 cursor-pointer items-end justify-center border-l border-white/20 bg-[#4a4a4a] pb-0.5 text-white transition hover:bg-[#2b2b2b] sm:h-5 sm:w-12"
+        className="group flex h-4 w-11 cursor-pointer items-end justify-center border-l border-[#4a4a4a] bg-transparent pb-0.5 text-[#4a4a4a] transition hover:bg-[#2b2b2b] hover:text-white sm:h-5 sm:w-12"
       >
         <svg
           viewBox="0 0 24 24"

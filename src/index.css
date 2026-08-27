@@ -50,6 +50,15 @@
   .img-hover-zoom:hover {
     transform: scale(1.2);
   }
+
+  /* GLOBAL STANDARD — use on any section heading (the "Email Marketing",
+     "Telecom / Caller ID", "SMS", "Message" style titles paired with
+     LogoMark). Do not hand-roll text-[28px] sm:text-[34px] lg:text-[40px]
+     inline anymore; use this class name so all section titles stay the
+     same size site-wide. */
+  .section-title {
+    @apply text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px];
+  }
 }
 
 @layer base {

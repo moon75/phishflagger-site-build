@@ -152,7 +152,7 @@ export default function DomainAppliance() {
         <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
-            <h2 className="mb-6 flex items-center justify-center gap-3 text-center text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-left sm:text-[30px]">
+            <h2 className="section-title mb-6 flex items-center justify-center gap-3 text-center sm:justify-start sm:text-left">
               <LogoMark />
               Protect your Brand and Recipients
             </h2>
@@ -200,7 +200,7 @@ export default function DomainAppliance() {
             </div>
           </div>
           <div className="text-center lg:text-left">
-            <h2 className="flex items-center justify-center gap-3 text-[24px] font-bold leading-tight tracking-tight text-ink sm:justify-start sm:text-[30px]">
+            <h2 className="section-title flex items-center justify-center gap-3 sm:justify-start">
               <LogoMark />
               Protect your Network
             </h2>
@@ -227,30 +227,16 @@ export default function DomainAppliance() {
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
               What you will receive.
             </h3>
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
-              <div className="flex flex-col items-center">
-                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                  Domain Appliance
-                </span>
-                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
-                  <li>Terms of Service</li>
-                  <li>Access Key</li>
-                  <li>Appliance Install</li>
-                  <li>Install Instructions</li>
-                </ul>
-              </div>
-              <div className="flex flex-col items-start">
-                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                  Plug-In
-                </span>
-                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
-                  <li>Terms of Service</li>
-                  <li>Access Key</li>
-                  <li>Appliance Install</li>
-                  <li>Install Instructions</li>
-                  <li>Install Plug-In</li>
-                </ul>
-              </div>
+            <div className="mt-4 flex flex-col items-start">
+              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                Domain Appliance
+              </span>
+              <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+                <li>Terms of Service</li>
+                <li>Access Key</li>
+                <li>Appliance Install</li>
+                <li>Install Instructions</li>
+              </ul>
             </div>
           </div>
           <div className="p-6 text-center sm:p-8">
@@ -267,7 +253,7 @@ export default function DomainAppliance() {
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
-                Join
+                Join Domain
               </Link>
             </div>
           </div>

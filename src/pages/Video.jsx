@@ -273,17 +273,20 @@ export default function Video() {
     : categoryAllVideos;
 
   return (
-    <div
-      className="relative w-full bg-[#eef0f4] bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <section className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
+    <div className="relative w-full bg-white">
+      {/* Intro + category links — the only part that keeps the textured
+          gray background, spanning the full page width; everything below
+          is plain white. */}
+      <div
+        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-6 sm:px-6"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">
@@ -293,9 +296,6 @@ export default function Video() {
               <BrandInline />
               <span>protects against phishing.</span>
             </p>
-            <h1 className="mt-4 text-[9px] font-extrabold uppercase tracking-tight text-brand sm:text-[11px]">
-              Development Page
-            </h1>
           </div>
 
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
@@ -318,7 +318,7 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
+                  className={`cursor-pointer rounded-md border-2 border-black px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
                     category === activeCategory
                       ? "bg-gray-100 text-brand"
                       : "text-ink"
@@ -331,7 +331,7 @@ export default function Video() {
           </div>
 
           {/* Page number — shown above the grid so it's easy to spot */}
-          <div className="mt-3 flex justify-center gap-2 sm:mt-4">
+          <div className="mt-[60px] flex justify-center gap-2 sm:mt-[72px]">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
               <button
                 key={n}
@@ -351,9 +351,14 @@ export default function Video() {
               </button>
             ))}
           </div>
+        </div>
+      </div>
 
+      <section className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
+        <div className="mx-auto max-w-[1300px]">
           {/* Video grid */}
-          <div className="mx-auto mt-4 grid w-full max-w-[1300px] grid-cols-1 gap-5 sm:mt-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-4 w-full max-w-[1300px] rounded-2xl bg-white p-4 sm:mt-5 sm:p-6">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {displayedVideos.map((v, i) => {
               const isPlaying = playing === i;
               return (
@@ -419,6 +424,7 @@ export default function Video() {
                 </div>
               );
             })}
+          </div>
           </div>
         </div>
       </section>

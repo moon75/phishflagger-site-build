@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { writeCookie } from "../lib/cookies.js";
 
 const REGIONS = [
   {
@@ -75,6 +76,9 @@ export default function CountrySelect() {
     } catch {
       /* localStorage unavailable — selection just won't persist */
     }
+    // Also remember it via cookie — the header's globe icon reads this to
+    // show the saved country in a tooltip on hover.
+    writeCookie("pf_country", country);
     setTimeout(() => navigate("/"), LEAVE_MS);
   }
 

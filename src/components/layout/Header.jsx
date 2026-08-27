@@ -5,7 +5,8 @@ import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import HeaderTopPageDownTab from "./HeaderTopPageDownTab.jsx";
-import { getVisitCount, formatVisitCount } from "../../lib/visitCounter.js";
+import { formatVisitCount } from "../../lib/visitCounter.js";
+import { readCookie } from "../../lib/cookies.js";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
@@ -14,13 +15,19 @@ export default function Header() {
   const navigate = useNavigate();
   const headerRef = useRef(null);
 
-  // "^0001"-style badge — a real cookie-backed visit count instead of a
-  // hardcoded number. Starts at "^0001" during server render / before the
-  // cookie is read, then updates once on mount.
-  const [visitBadge, setVisitBadge] = useState("^0001");
+  // "^0001"-style badge — no longer a real cookie-backed visit count, just
+  // a fun gimmick: it ticks up by one each time you hover over it. Purely
+  // client-side state, resets on reload.
+  const [visitCount, setVisitCount] = useState(1);
+  const visitBadge = formatVisitCount(visitCount);
+
+  // Country badge — shows the country picked on /country, read from a
+  // cookie (set in CountrySelect.jsx) so it's remembered across visits.
+  const [countryName, setCountryName] = useState(null);
+  const [countryHover, setCountryHover] = useState(false);
   useEffect(() => {
-    setVisitBadge(formatVisitCount(getVisitCount()));
-  }, []);
+    setCountryName(readCookie("pf_country"));
+  }, [location.pathname]);
 
   // Publish the header's real rendered height as a CSS variable so pages can
   // set scroll-margin-top to exactly this value (via scroll-mt-[var(--header-h)]).
@@ -100,33 +107,48 @@ export default function Header() {
 
         {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
-          <span className="flex shrink-0 items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold" style={{ fontSize: "19px", letterSpacing: "0.04em" }}>
+          <span
+            className="flex shrink-0 cursor-default items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold"
+            style={{ fontSize: "19px", letterSpacing: "0.04em" }}
+            onMouseEnter={() => setVisitCount((n) => n + 1)}
+          >
             <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
               <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
             {visitBadge}
           </span>
-          <Link
-            to="/country"
-            aria-label="Choose your country"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
+          <div
+            className="relative flex"
+            onMouseEnter={() => setCountryHover(true)}
+            onMouseLeave={() => setCountryHover(false)}
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-              aria-hidden
+            <Link
+              to="/country"
+              aria-label="Choose your country"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
             >
-              <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18" />
-              <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z" />
-            </svg>
-          </Link>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+                aria-hidden
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z" />
+              </svg>
+            </Link>
+            {countryHover && (
+              <span className="absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white shadow-md">
+                {countryName || "Select your country"}
+              </span>
+            )}
+          </div>
           <Link
             to="/login"
             aria-label="Sign in"

@@ -266,7 +266,7 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
-            <h2 className="mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-tight tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+            <h2 className="section-title mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center">
               <LogoMark />
               Email
             </h2>
@@ -332,16 +332,11 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[220px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
-          />
-          <img
-            src="/assets/images/footer%20history%20pic%203rd.png"
-            alt="PhishFlagger email inbox showing numbered messages"
-            className="h-auto w-full max-w-[220px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
           />
         </div>
         <div>
-          <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="section-title flex items-center gap-3">
             <LogoMark />
             Email Marketing
           </h2>
@@ -370,7 +365,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
-          <h2 className="flex items-center gap-3 text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px]">
+          <h2 className="section-title flex items-center gap-3">
             <LogoMark />
             Telecom / Caller ID
           </h2>
@@ -443,7 +438,7 @@ export default function Home() {
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
-            <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
               <LogoMark />
               SMS
             </span>
@@ -470,7 +465,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col items-center">
-            <span className="mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px]">
+            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
               <LogoMark />
               Message
             </span>
