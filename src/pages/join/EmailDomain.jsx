@@ -56,7 +56,7 @@ export default function EmailDomain() {
               <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
                 Many
               </span>
-              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
+              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
                   src="/assets/images/corporate-image-homepage-center-person.png"
                   alt="Corporate email protection design"
@@ -71,7 +71,7 @@ export default function EmailDomain() {
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
                   src="/assets/images/corporate-image-homepage-v5.png"
-                  alt="Individual email protection design"
+                  alt="Six-person email protection design"
                   className="h-full w-full rounded-lg object-contain"
                 />
               </div>
@@ -242,7 +242,7 @@ export default function EmailDomain() {
               </span>
               <Link
                 to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join
               </Link>

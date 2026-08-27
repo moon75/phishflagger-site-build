@@ -281,7 +281,7 @@ export default function EmailMarketingQuote() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="cursor-pointer rounded-md bg-[#4a4a4a] px-7 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] disabled:opacity-60 duration-200 hover:scale-[1.2]"
+              className="cursor-pointer rounded-md bg-[#4a4a4a] px-7 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red disabled:opacity-60 duration-200 hover:scale-[1.2]"
             >
               {status === "submitting" ? "Submitting..." : "Submit Quote Inquiry"}
             </button>

@@ -204,7 +204,7 @@ export default function JoinFreeRegister() {
               <div className="flex flex-col items-center gap-4 pt-2">
                 <button
                   type="submit"
-                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                  className="w-full cursor-pointer rounded-lg bg-[#585858] px-8 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </button>

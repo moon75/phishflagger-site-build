@@ -16,8 +16,6 @@ const LINKS = [
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
-  { to: "/demo", label: "Demo", icon: <DemoIcon /> },
-  { to: "/join/messaging", label: "Messaging", icon: <MessagingIcon /> },
 ];
 
 export default function Help() {
@@ -35,10 +33,25 @@ export default function Help() {
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
       <section className="w-full px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
         <div className="mx-auto max-w-content">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 sm:gap-x-10">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-10">
             {LINKS.map((item) => (
               <HelpCard key={item.to} {...item} />
             ))}
+            <div className="hidden self-stretch border-l-2 border-black sm:block" aria-hidden />
+            <div className="flex flex-col items-start gap-3">
+              <Link
+                to="/demo"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Demo
+              </Link>
+              <Link
+                to="/join/messaging"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Messaging
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -158,27 +171,6 @@ function FaqIcon() {
         fill="none"
       />
       <circle cx="12" cy="16.7" r="1.05" fill="white" />
-    </svg>
-  );
-}
-
-function MessagingIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
-      <circle cx="12" cy="12" r="11" fill="#2a6df4" />
-      <path
-        d="M6 8.5A1.5 1.5 0 0 1 7.5 7h9A1.5 1.5 0 0 1 18 8.5v5A1.5 1.5 0 0 1 16.5 15H10l-3 2.5V15h-.5A1.5 1.5 0 0 1 5 13.5v-5Z"
-        fill="white"
-      />
-    </svg>
-  );
-}
-
-function DemoIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
-      <circle cx="12" cy="12" r="11" fill="#8b5cf6" />
-      <path d="M10 8.3v7.4a.9.9 0 0 0 1.36.77l6.1-3.7a.9.9 0 0 0 0-1.54l-6.1-3.7A.9.9 0 0 0 10 8.3Z" fill="white" />
     </svg>
   );
 }

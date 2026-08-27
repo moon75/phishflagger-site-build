@@ -538,7 +538,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
       }
     >
       {counter && <SectionCounter value={counter} />}
-      <PageDownButton containerRef={containerRef} />
+      <PageDownButton containerRef={containerRef} forceTopOnUp />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img

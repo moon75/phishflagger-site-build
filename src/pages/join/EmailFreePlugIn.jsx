@@ -106,7 +106,7 @@ export default function EmailFreePlugIn() {
                 </span>
                 <Link
                   to="/join-free"
-                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Free
                 </Link>
@@ -118,7 +118,7 @@ export default function EmailFreePlugIn() {
               </span>
               <Link
                 to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>
@@ -164,7 +164,7 @@ export default function EmailFreePlugIn() {
                 </h2>
                 <Link
                   to="/download"
-                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Go to Download Page
                 </Link>
@@ -265,7 +265,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
             <Link
               key={action.label}
               to={action.to}
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               {action.label}
             </Link>

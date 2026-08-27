@@ -15,6 +15,10 @@
   /* Colors */
   --color-brand: #ff0033;
   --color-brand-hover: #d6002b;
+  /* Standard button hover-text red — was hand-typed as #e63950 in ~30
+     places; now one token so "change the hover red" is a single edit here
+     instead of a site-wide find/replace. Lighter than --color-brand. */
+  --color-btn-hover-red: #fee7ed;
 
   --color-ink: #0c2217;          /* Framer rgb(12, 34, 23) — body text */
   --color-ink-muted: #4a4a4a;

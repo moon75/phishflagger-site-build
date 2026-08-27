@@ -5,8 +5,11 @@
 // <section> in `containerRef`/document if the button sits outside any
 // section). Right half is the symmetric opposite: scrolls up to the
 // previous <section>, or does nothing if there isn't one (e.g. the very
-// first pane on a page).
-export default function PageDownButton({ containerRef, targetSelector, block = "start" }) {
+// first pane on a page). Pass `forceTopOnUp` to make the up-arrow always
+// jump straight to the very top of the page (header top) instead of just
+// the previous section — useful for a pane that should always return you
+// to the top regardless of what happens to sit above it.
+export default function PageDownButton({ containerRef, targetSelector, block = "start", forceTopOnUp = false }) {
   // window.scrollTo(behavior:"smooth") to an absolute Y, rather than
   // element.scrollIntoView(behavior:"smooth") — scrollIntoView's smooth
   // animation was observed to silently no-op on some sections on this
@@ -58,6 +61,11 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
   }
 
   function handleUp(event) {
+    if (forceTopOnUp) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const root = containerRef?.current ?? document;
     const sections = Array.from(root.querySelectorAll("section"));
     const currentIndex = currentIndexFor(event, sections);
@@ -87,7 +95,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
           <path d="M6 9l6 6 6-6" />
@@ -105,7 +113,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-3 w-3 rotate-180 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
+          className="h-3 w-3 rotate-180 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
           <path d="M6 9l6 6 6-6" />

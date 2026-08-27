@@ -294,7 +294,7 @@ export default function Video() {
               <span>Watch how</span>
               <LogoMark />
               <BrandInline />
-              <span>protects against phishing.</span>
+              <span>protects against phishing</span>
             </p>
           </div>
 
@@ -318,10 +318,8 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-md border-2 border-black px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
-                    category === activeCategory
-                      ? "bg-gray-100 text-brand"
-                      : "text-ink"
+                  className={`cursor-pointer rounded-md border border-black bg-white px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
+                    category === activeCategory ? "text-brand" : "text-ink"
                   }`}
                 >
                   {category}
@@ -331,7 +329,7 @@ export default function Video() {
           </div>
 
           {/* Page number — shown above the grid so it's easy to spot */}
-          <div className="mt-[60px] flex justify-center gap-2 sm:mt-[72px]">
+          <div className="mt-4 flex justify-center gap-2 sm:mt-5">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
               <button
                 key={n}

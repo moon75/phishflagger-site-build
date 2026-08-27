@@ -96,7 +96,7 @@ export default function HeaderTopPageDownTab() {
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-[#e63950] sm:h-3.5 sm:w-3.5"
+        className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
         aria-hidden
       >
         <path d="M6 9l6 6 6-6" />

@@ -210,7 +210,7 @@ export default function GlobalSettings() {
         <Table>
           <Row where="--color-brand" value="#ff0033" note="Vivid red — nav active state, brand name, some accents" />
           <Row where="--color-brand-hover" value="#d6002b" note="Defined but rarely referenced directly" />
-          <Row where="Muted/soft red used site-wide for hover" value="#e63950" note="Not a CSS variable yet — hand-typed as hover:text-[#e63950] wherever used" />
+          <Row where="Muted/soft red used site-wide for hover" value="#e63950" note="Not a CSS variable yet — hand-typed as hover:text-btn-hover-red wherever used" />
           <Row where="--color-ink / --color-ink-muted" value="#0c2217 / #4a4a4a" note="Body text colors" />
           <Row where="Dark gray CTA fill" value="#4a4a4a → hover #2b2b2b / #3f3f3f (varies)" note={<>Hover-dark shade isn't consistent <Flag>inconsistent</Flag></>} />
         </Table>

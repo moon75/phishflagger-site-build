@@ -86,7 +86,7 @@ export default function News() {
               />
               <button
                 type="submit"
-                className="h-[44px] rounded-[5px] bg-[#565656] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#3f3f3f]"
+                className="h-[44px] rounded-[5px] bg-[#565656] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#3f3f3f] hover:text-btn-hover-red"
               >
                 Subscribe
               </button>

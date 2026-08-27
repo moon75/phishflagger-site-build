@@ -62,7 +62,7 @@ export default function Footer({ logoSrc = logoImg }) {
               <div className="flex items-center justify-center gap-[7.5rem]">
                 <Link
                   to="/about/faq"
-                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
                 >
                   FAQ
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 </div>
                 <Link
                   to="/help/endorse-us"
-                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2] sm:text-[14px]"
+                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
                 >
                   Endorse Us
                 </Link>

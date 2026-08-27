@@ -43,7 +43,7 @@ export default function Messaging() {
         <div className="mx-auto mt-10 flex max-w-content flex-wrap items-center justify-center gap-4 text-center sm:mt-14">
           <Link
             to="/join/messaging/request"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
           >
             Want to see PhishFlagger in your Message App?
           </Link>

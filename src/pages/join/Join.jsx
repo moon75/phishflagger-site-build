@@ -6,8 +6,7 @@ import oneOrManyImg from "../../assets/images/six plugin one or more.png";
 import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
-
-const logoMarkImg = "/assets/images/logo-mark.png";
+import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 
 export default function Join() {
   const containerRef = useRef(null);
@@ -28,23 +27,11 @@ export default function Join() {
       <section className="relative w-full px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8">
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
-            <div className="mb-6 flex items-center justify-start gap-5">
-              <img
-                src={logoMarkImg}
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
-              />
-              <h2 className="section-title whitespace-nowrap text-left">
-                Email Solutions
-              </h2>
-            </div>
-            <p className="max-w-[380px] border-2 border-black bg-white px-5 py-4 text-[15px] leading-[1.65] text-ink sm:text-[16px] sm:leading-[1.6]">
-              <BrandInline /> protects individuals and organizations who
-              want greater confidence in the authenticity of their emails.
-              Whether you host a domain or use an email client,{" "}
-              <BrandInline /> adds extra layers of protection against
-              phishing and email impersonation.
-            </p>
+            <img
+              src={emailSolutionsCardImg}
+              alt="Email Solutions. PhishFlagger protects individuals and organizations who want greater confidence in the authenticity of their emails. Whether you host a domain or use an email client, PhishFlagger adds extra layers of protection against phishing and email impersonation."
+              className="block h-auto w-[380px] max-w-full object-contain"
+            />
           </div>
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">
@@ -66,7 +53,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-free-plug-in"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Free
               </Link>
@@ -93,7 +80,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/pro"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Pro
               </Link>
@@ -120,7 +107,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/domain"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Domain
               </Link>
@@ -144,7 +131,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-marketing"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Marketing
               </Link>
@@ -261,15 +248,6 @@ function ActionCard({
         )}
       </div>
     </Link>
-  );
-}
-
-function BrandInline({ trail = "Flagger" }) {
-  return (
-    <em className="italic">
-      <span className="font-bold text-ink">Phish</span>
-      <span className="font-normal text-brand">{trail}</span>
-    </em>
   );
 }
 

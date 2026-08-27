@@ -6,7 +6,7 @@ import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import HeaderTopPageDownTab from "./HeaderTopPageDownTab.jsx";
 import { formatVisitCount } from "../../lib/visitCounter.js";
-import { readCookie } from "../../lib/cookies.js";
+import { readCookie, writeCookie } from "../../lib/cookies.js";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
@@ -15,10 +15,21 @@ export default function Header() {
   const navigate = useNavigate();
   const headerRef = useRef(null);
 
-  // "^0001"-style badge — no longer a real cookie-backed visit count, just
-  // a fun gimmick: it ticks up by one each time you hover over it. Purely
-  // client-side state, resets on reload.
+  // "^0001"-style badge — no longer a real visit count, just a fun
+  // gimmick: it ticks up by one each time you hover over it. The count is
+  // saved to a cookie so it carries over across reloads/visits too.
   const [visitCount, setVisitCount] = useState(1);
+  useEffect(() => {
+    const saved = Number(readCookie("pf_hover_count"));
+    if (Number.isFinite(saved) && saved > 0) setVisitCount(saved);
+  }, []);
+  function bumpVisitCount() {
+    setVisitCount((n) => {
+      const next = n + 1;
+      writeCookie("pf_hover_count", String(next));
+      return next;
+    });
+  }
   const visitBadge = formatVisitCount(visitCount);
 
   // Country badge — shows the country picked on /country, read from a
@@ -110,7 +121,7 @@ export default function Header() {
           <span
             className="flex shrink-0 cursor-default items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
-            onMouseEnter={() => setVisitCount((n) => n + 1)}
+            onMouseEnter={bumpVisitCount}
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />

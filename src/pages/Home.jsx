@@ -44,9 +44,9 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10">
+    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 pb-8 sm:px-6 sm:pt-3 sm:pb-10">
       <div className="mx-auto max-w-content">
-      <div className="mx-auto mt-10 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-14 lg:flex-row lg:items-center lg:gap-12">
+      <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v1.png"
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Link
               to="/human-compatible"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Human Compatible
             </Link>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Link
               to="/digital-verification"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Domain Verification
             </Link>
@@ -242,7 +242,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/join/email-free-plug-in"
-                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                    className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                   >
                     Join Free
                   </Link>
@@ -258,7 +258,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
-                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                  className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
                 </Link>
@@ -305,7 +305,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/domain"
-                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                  className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Domain
                 </Link>
@@ -335,6 +335,11 @@ export default function Home() {
             alt="PhishFlagger Email Marketing"
             className="h-auto w-full max-w-[286px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
           />
+          <img
+            src="/assets/images/footer%20history%20pic%203rd.png"
+            alt="PhishFlagger email inbox showing numbered messages"
+            className="h-auto w-full max-w-[286px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+          />
         </div>
         <div>
           <h2 className="section-title flex items-center gap-3">
@@ -351,7 +356,7 @@ export default function Home() {
           </p>
           <Link
             to="/join/email-marketing"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
           >
             Marketing
           </Link>
@@ -381,7 +386,7 @@ export default function Home() {
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <Link
               to="/telecom"
-              className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+              className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Telecom
             </Link>
@@ -454,7 +459,7 @@ export default function Home() {
               />
               <Link
                 to="/telecom"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Telecom
               </Link>
@@ -480,7 +485,7 @@ export default function Home() {
               />
               <Link
                 to="/join/messaging"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Messaging
               </Link>
