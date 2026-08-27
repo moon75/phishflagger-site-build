@@ -54,7 +54,7 @@ export default function EmailDomain() {
           <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
             <div className="flex flex-col items-center">
               <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
-                Many
+                One
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
@@ -66,7 +66,7 @@ export default function EmailDomain() {
             </div>
             <div className="flex flex-col items-center">
               <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
-                One
+                Many
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img

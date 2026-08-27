@@ -53,7 +53,7 @@ export default function Telecom() {
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-[95%] w-auto max-w-full -translate-y-10 rounded-2xl object-cover"
+              className="h-[95%] w-auto max-w-full -translate-y-3 rounded-2xl object-cover"
             />
           </div>
 
@@ -80,7 +80,13 @@ export default function Telecom() {
             />
             <ActionCard
               to="/help/telecom-endorse-us"
-              label="Endorse Safe Calls"
+              label={
+                <>
+                  Endorse
+                  <br />
+                  Safe Calls
+                </>
+              }
               src={endorseIcon}
               alt="Endorse Safe Calls"
             />
@@ -145,7 +151,7 @@ export default function Telecom() {
         <SectionCounter value="^0002" />
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
-          <ul className="space-y-4 pl-5 text-[19px] leading-snug text-ink sm:text-[24px]">
+          <ul className="telecom-body-text space-y-4 pl-5">
             <li className="list-disc">
               Human-compatible solution that validates legitimate
               communications and highlights fraud attempts.
@@ -193,14 +199,14 @@ export default function Telecom() {
             />
           </div>
           <div>
-            <h2 className="section-title">
+            <h2 className="telecom-title">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>{" "}
               Method using existing Calling Line Identifier
             </h2>
-            <ul className="mt-6 space-y-3 pl-5 text-[17px] leading-relaxed text-ink sm:text-[19px]">
+            <ul className="telecom-body-text mt-6 space-y-3 pl-5">
               <li className="list-disc">Easily deployable.</li>
               <li className="list-disc">
                 Immediate benefit even without enabled receiver.
@@ -231,10 +237,10 @@ export default function Telecom() {
             />
           </div>
           <div className="lg:order-1">
-            <h2 className="section-title">
+            <h2 className="telecom-title">
               UK&rsquo;s regulator does not approve STIR/SHAKEN
             </h2>
-            <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <ul className="telecom-body-text mt-6 space-y-4">
               <li className="font-semibold text-ink">
                 Fraud has skyrocketed in the 5 years since it was{" "}
                 <span className="whitespace-nowrap">
@@ -373,14 +379,14 @@ export default function Telecom() {
             />
           </div>
           <div>
-            <h2 className="section-title">
+            <h2 className="telecom-title">
               <em className="italic">
                 <span className="font-extrabold text-ink">Phish</span>
                 <span className="font-normal text-brand">Flagger</span>
               </em>{" "}
               uses existing infrastructure.
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <p className="telecom-body-text mt-6">
               A sequence number know only by Valid Telecom and Callee could be
               implemented now to end spoofing.
             </p>
@@ -399,11 +405,11 @@ export default function Telecom() {
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="section-title flex items-center gap-3">
+            <h2 className="telecom-title flex items-center gap-3">
               <LogoMark />
               SMS
             </h2>
-            <p className="mt-6 rounded-lg bg-[#FFFF00] px-4 py-3 text-[15px] leading-relaxed text-ink sm:text-[17px]">
+            <p className="telecom-body-text mt-6 rounded-lg bg-[#FFFF00] px-4 py-3">
               Placeholder text goes here. Replace this paragraph with the
               final copy for this section.
             </p>
@@ -429,7 +435,7 @@ export default function Telecom() {
         <SectionCounter value="^0007" />
         <PageDownButton />
         <div className="mx-auto max-w-[960px] text-center">
-          <p className="text-[19px] leading-relaxed text-ink sm:text-[23px]">
+          <p className="telecom-body-text">
             The{" "}
             <em className="italic">
               <span className="font-extrabold text-ink">Phish</span>
@@ -446,7 +452,7 @@ export default function Telecom() {
             className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-6 transition-transform duration-200 hover:z-10 hover:scale-[1.5] sm:p-8"
             style={{ zoom: 0.6 }}
           >
-            <p className="text-[15px] leading-[1.85] text-ink sm:text-[18px]">
+            <p className="telecom-body-text">
               Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
               Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
               Egypt, Estonia, Finland, France, Germany, Greece, Hungary, Iceland,
@@ -480,7 +486,7 @@ function ActionCard({
       to={to}
       className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
-      <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px]">
+      <span className="text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">
         {label}
       </span>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
@@ -548,7 +554,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
           />
         </div>
         {bullets ? (
-          <ul className="space-y-5 pl-5 text-[19px] leading-relaxed text-ink sm:text-[23px] lg:text-left">
+          <ul className="telecom-body-text space-y-5 pl-5 lg:text-left">
             {bullets.map((item) => (
               <li key={Array.isArray(item) ? item.join(" ") : item} className="list-disc">
                 {Array.isArray(item) ? (
@@ -564,7 +570,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
             ))}
           </ul>
         ) : (
-          <p className="text-center text-[22px] leading-relaxed text-ink sm:text-[28px] lg:text-left">
+          <p className="telecom-body-text text-center lg:text-left">
             {text}
           </p>
         )}

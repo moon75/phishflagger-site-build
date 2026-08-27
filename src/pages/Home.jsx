@@ -63,7 +63,7 @@ export default function Home() {
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
-            src="/assets/images/hero%20v3.png"
+            src="/assets/images/hero%20v3%20need%20logo%20up.png"
             alt="Woman using PhishFlagger-protected email"
             className="relative left-1/2 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain"
           />
@@ -86,6 +86,12 @@ export default function Home() {
               className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
             >
               Email - PRO
+            </Link>
+            <Link
+              to="/join/domain"
+              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
+            >
+              Email - Domain
             </Link>
           </div>
           <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
@@ -122,15 +128,15 @@ export default function Home() {
       <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20">
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
-            {brandify("PhishFlagger™")} / Human
+            {brandify("PhishFlagger")} / Human
           </span>
           <h2 className="mt-2 text-[24px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[28px]">
             Put Verification in the Hands of People
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            {brandify("PhishFlagger™")} gives people a simple way to
+            {brandify("PhishFlagger")} gives people a simple way to
             recognize trusted communications. Every outgoing email receives
-            a unique, sequential {brandify("PhishCounter™")} in the subject
+            a unique, sequential {brandify("PhishCounter")} in the subject
             line. Recipients can compare the number with the previous
             message from that sender. If the sequence is missing or
             doesn't match, it's a clear signal to stop and take a closer
@@ -147,17 +153,17 @@ export default function Home() {
         </div>
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
-            {brandify("PhishFlagger™")} / Digital
+            {brandify("PhishFlagger")} / Digital
           </span>
           <h2 className="mt-2 text-[24px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[28px]">
             Authenticate Communications
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            {brandify("PhishFlagger™")} adds a digital layer of protection
+            {brandify("PhishFlagger")} adds a digital layer of protection
             by helping verify that communications originate from
             authorized senders and domains. Working alongside existing
             email security and authentication technologies,{" "}
-            {brandify("PhishFlagger™")} helps identify communications that
+            {brandify("PhishFlagger")} helps identify communications that
             may be impersonating a trusted organization or sender.
           </p>
           <div className="flex justify-center">
@@ -178,6 +184,10 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <PageDownButton targetSelector="#pane-0003" />
       <div className="mx-auto max-w-content">
+        <h2 className="section-title mt-6 mb-10 flex items-center justify-center gap-3 text-center sm:mt-10 sm:mb-14">
+          <LogoMark />
+          Email
+        </h2>
         <div className="mx-auto mt-6 flex flex-col items-center justify-center gap-10 px-4 sm:mt-8 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
@@ -267,10 +277,6 @@ export default function Home() {
           </div>
 
           <div className="flex w-auto flex-col items-center">
-            <h2 className="section-title mb-5 flex items-center justify-center gap-3 whitespace-nowrap text-center">
-              <LogoMark />
-              Email
-            </h2>
             <div className="flex items-center justify-center py-2 lg:h-[300px] lg:py-0">
               <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-full bg-white text-[20px] font-bold uppercase tracking-wide text-ink sm:h-[76px] sm:w-[76px] sm:text-[23px]">
                 Or
@@ -390,23 +396,24 @@ export default function Home() {
             >
               Telecom
             </Link>
-            <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-              Help stop phone fraud in your country.{" "}
-              <Link
-                to="/petition"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Sign our Petition
-              </Link>{" "}
-              and{" "}
-              <Link
-                to="/help/telecom-endorse-us"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Endorse Safe Calls
-              </Link>
-              .
-            </p>
+            <div className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              <p>Help stop phone fraud in your country.</p>
+              <div className="mt-2 flex flex-wrap items-center gap-1">
+                <Link
+                  to="/petition"
+                  className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                >
+                  Sign our Petition
+                </Link>
+                <span>and</span>
+                <Link
+                  to="/help/telecom-endorse-us"
+                  className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+                >
+                  Endorse Safe Calls
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         {/* Right — 3 phones in a row */}
@@ -543,7 +550,7 @@ export default function Home() {
       <SectionCounter value="^0005" />
       <PageDownButton />
       <div className="mx-auto max-w-content">
-        <p className="mx-auto max-w-[820px] text-center text-[24px] leading-[1.5] text-ink sm:text-[30px] sm:leading-[1.45]">
+        <p className="mx-auto max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
           Numbering has been revolutionary in creating order and reducing
           fraud.
         </p>
@@ -629,7 +636,7 @@ export default function Home() {
                   className="h-full w-full object-contain"
                 />
               </Link>
-              <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
+              <p className="mt-4 max-w-[260px] text-center text-[19px] leading-[1.5] text-ink-muted sm:text-[20px]">
                 <BrandInline /> brings back Human Validation, Order, Proof of
                 delivery and helps stop fraud.
               </p>

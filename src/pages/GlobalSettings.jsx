@@ -6,8 +6,10 @@
 // so it can be updated by hand as things change.
 //
 // Owner's running list of standards (verbatim, keep this in sync):
-//   Text-size-ex-title-home-page-others      10%
-//   Text-size-ex-telecom-bullets-text-others 10%
+//   Text-size-ex-title-home-page-others      5
+//   Text-size-ex-telecom-bullets-text-others 5
+//   text-size-on-telecom-page                5   (DONE — .telecom-body-text in index.css)
+//   title-size-on-telecom-page               5   (DONE — .telecom-title in index.css)
 //   percent-increase-SQUARE-ICON-LINKS       10%
 //   percent-increase-BUTTONS                 10%
 //   percent-increase-FOOTER-PICTURES/gif     10%
@@ -100,11 +102,19 @@ export default function GlobalSettings() {
           <tbody>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">Text-size-ex-title-home-page-others</td>
-              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">5</td>
             </tr>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">Text-size-ex-telecom-bullets-text-others</td>
-              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">5</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">text-size-on-telecom-page</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">5</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">title-size-on-telecom-page</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">5</td>
             </tr>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-SQUARE-ICON-LINKS</td>
@@ -156,12 +166,19 @@ export default function GlobalSettings() {
 
       <Section id="bullets" title="Text-size-ex-telecom-bullets-text-others">
         <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
-          Bulleted list copy. Telecom runs noticeably larger than every other
-          page's bullet lists.
+          Bulleted list copy. Fixed on /telecom (Telecom.jsx): every
+          paragraph/bullet-list on that page now uses the shared
+          <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">.telecom-body-text</code>
+          class (16px → sm:19px, defined once in <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">src/index.css</code>)
+          instead of the 9 different hand-typed sizes (15–24px) it had
+          before. Titles on that same page use
+          <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">.telecom-title</code>
+          (same 28/34/40px scale as <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">.section-title</code>).
+          Other pages still vary below.
         </p>
         <Table>
-          <Row where="Telecom — Human-compatible / benefits list" value="19px → sm:24px" note={<>Largest on the site <Flag>inconsistent</Flag></>} />
-          <Row where="Telecom — footer benefits list" value="19px → sm:23px" note={<>Also large <Flag>inconsistent</Flag></>} />
+          <Row where="Telecom — all body/bullet text (Human-compatible list, footer benefits, SMS/Message placeholders, …)" value=".telecom-body-text — 16px → sm:19px" note="Fixed — one constant for the whole page" />
+          <Row where="Telecom — all in-page titles" value=".telecom-title — 28px → sm:34px → lg:40px" note="Fixed — matches site .section-title" />
           <Row where="EmailDomain / DomainAppliance — Advanced Email Authentication" value="15px → sm:18px" note="" />
           <Row where="EmailDomain / DomainAppliance — Protect your Brand/Network" value="14px → sm:15px" note="Most common size for body/bullet copy" />
           <Row where="Join — Email Solutions paragraph (boxed)" value="15px → sm:16px" note="" />

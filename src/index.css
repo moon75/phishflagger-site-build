@@ -63,6 +63,19 @@
   .section-title {
     @apply text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px];
   }
+
+  /* GLOBAL STANDARD — /telecom (Telecom.jsx) only. Sizes on that page were
+     mixed leftover from development (bullets ranged 15–24px, titles used
+     .section-title already). These two classes are the single constant
+     for each: use .telecom-title on every in-page heading and
+     .telecom-body-text on every paragraph/bullet-list on that page,
+     instead of hand-rolled text-[Npx] sizes. */
+  .telecom-title {
+    @apply text-[28px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[34px] lg:text-[40px];
+  }
+  .telecom-body-text {
+    @apply text-[16px] leading-relaxed text-ink sm:text-[19px];
+  }
 }
 
 @layer base {
