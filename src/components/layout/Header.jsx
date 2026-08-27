@@ -190,12 +190,17 @@ export default function Header() {
               {/* Split into two blocks of 3 with a gap between them the
                   width of the header-top page-down tab, left block nudged
                   left and right block nudged right. */}
-              <div className="flex items-center gap-x-[120px] sm:gap-x-[132px]">
+              <div className="flex items-center">
                 <ul className="-ml-4 flex items-center gap-4">
                   {navLeft.map((item) => (
                     <li key={item.label}>{renderNavItem(item)}</li>
                   ))}
                 </ul>
+                {/* Exact anchor for the header-top page-down tab below —
+                    its own center is always equidistant from both nav
+                    blocks (A=B), regardless of how wide "About ⌄" etc.
+                    make each side. */}
+                <div id="nav-gap-anchor" className="w-[120px] shrink-0 sm:w-[132px]" aria-hidden />
                 <ul className="-mr-4 flex items-center gap-4">
                   {navRight.map((item) => (
                     <li key={item.label}>{renderNavItem(item)}</li>

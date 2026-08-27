@@ -9,6 +9,11 @@ import { useLocation } from "react-router-dom";
 export default function HeaderTopPageDownTab() {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
+  // Horizontal center of #nav-gap-anchor (the empty spacer sitting between
+  // the left/right nav blocks), in px from the header's left edge. Null
+  // (→ falls back to page-center via CSS) below the lg breakpoint, where
+  // that spacer isn't rendered.
+  const [anchorCenter, setAnchorCenter] = useState(null);
 
   useEffect(() => {
     let ticking = false;
@@ -20,6 +25,20 @@ export default function HeaderTopPageDownTab() {
       const sections = Array.from(document.querySelectorAll("section"));
       const hasNext = sections.some((section) => section.getBoundingClientRect().top > headerBottom + 1);
       setVisible(hasNext);
+
+      const headerRect = header ? header.getBoundingClientRect() : null;
+      const anchor = document.getElementById("nav-gap-anchor");
+      if (headerRect && anchor) {
+        const anchorRect = anchor.getBoundingClientRect();
+        // Only trust it if actually laid out (display:none below lg gives a 0-width rect).
+        if (anchorRect.width > 0) {
+          setAnchorCenter(anchorRect.left + anchorRect.width / 2 - headerRect.left);
+        } else {
+          setAnchorCenter(null);
+        }
+      } else {
+        setAnchorCenter(null);
+      }
     };
 
     const onScroll = () => {
@@ -31,9 +50,17 @@ export default function HeaderTopPageDownTab() {
     recompute();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+
+    // Also react to the nav itself changing width (active-link bold text,
+    // font swap, etc.) without a window resize.
+    const nav = document.querySelector("nav[aria-label='Primary']");
+    const observer = nav ? new ResizeObserver(recompute) : null;
+    observer?.observe(nav);
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      observer?.disconnect();
     };
   }, [pathname]);
 
@@ -58,7 +85,10 @@ export default function HeaderTopPageDownTab() {
       type="button"
       onClick={handleClick}
       aria-label="Page down to the next section"
-      className="group absolute left-1/2 top-0 z-10 flex h-4 w-[88px] -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-transparent pb-0.5 text-[#4a4a4a] transition hover:border-[#2b2b2b] hover:bg-[#2b2b2b] hover:text-white sm:h-5 sm:w-[96px]"
+      className={`group absolute top-0 z-10 flex h-4 w-[88px] -translate-x-1/2 cursor-pointer items-end justify-center rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-transparent pb-0.5 text-[#4a4a4a] transition hover:border-[#2b2b2b] hover:bg-[#2b2b2b] hover:text-white sm:h-5 sm:w-[96px] ${
+        anchorCenter == null ? "left-1/2" : ""
+      }`}
+      style={anchorCenter == null ? undefined : { left: `${anchorCenter}px` }}
     >
       <svg
         viewBox="0 0 24 24"

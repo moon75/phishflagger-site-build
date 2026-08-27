@@ -214,50 +214,14 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 2 — What is PhishFlagger? (Human + Digital text) ===== */}
+      {/* ===== Pane 2 placeholder — Human/Digital text moved to /kick ===== */}
       <section id="join-human-digital" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <PageDownButton containerRef={containerRef} />
         <div className="mx-auto max-w-content">
-          <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
-            <div>
-              <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>{" "}
-                / Human
-              </h2>
-              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-                <BrandInline trail="Flagger" /> adds a unique, sequential
-                identifier to the subject line called the{" "}
-                <BrandInline trail="Counter" /> on every outgoing
-                communication. Recipients can quickly verify if the sequence
-                matches the previous email they received from the same
-                sender. If the number is missing or out of sequence, it
-                provides an immediate warning that the message may not be
-                authentic, giving users a simple way to spot phishing
-                attempts.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>
-                {" "}/ Digital
-              </h2>
-              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-                <BrandInline trail="Flagger" /> strengthens email
-                authentication by verifying sender identity at the domain
-                level. Working alongside existing email security standards
-                and authentication technologies, our domain validation
-                screens messages that originate from authorized senders,
-                adding an extra layer of protection against impersonation
-                and phishing and other attacks.
-              </p>
-            </div>
+          <div className="flex min-h-[220px] items-center justify-center rounded-2xl border-2 border-black bg-[#FFFF00]">
+            <span className="text-[16px] font-semibold text-ink sm:text-[18px]">
+              Placeholder
+            </span>
           </div>
         </div>
       </section>

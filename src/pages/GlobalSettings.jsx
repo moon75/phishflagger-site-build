@@ -6,12 +6,12 @@
 // so it can be updated by hand as things change.
 //
 // Owner's running list of standards (verbatim, keep this in sync):
-//   Text-size-ex-title-home-page-others
-//   Text-size-ex-telecom-bullets-text-others
-//   percent-increase-SQUARE-ICON-LINKS     10%
-//   percent-increase-BUTTONS               10%
-//   percent-increase-FOOTER-PICTURES/gif
-//   percent-increase-HOME-TOP-PICTURES/gif
+//   Text-size-ex-title-home-page-others      10%
+//   Text-size-ex-telecom-bullets-text-others 10%
+//   percent-increase-SQUARE-ICON-LINKS       10%
+//   percent-increase-BUTTONS                 10%
+//   percent-increase-FOOTER-PICTURES/gif     10%
+//   percent-increase-HOME-TOP-PICTURES/gif   10%
 
 function Section({ title, id, children }) {
   return (
@@ -87,6 +87,44 @@ export default function GlobalSettings() {
         live site. Rows marked <Flag>inconsistent</Flag> are places where the
         same kind of element uses different values on different pages.
       </p>
+
+      {/* Owner's target numbers — the single source of truth for what each
+          standard below should be set to. Keep this in sync with the
+          "Owner's running list of standards" comment at the top of the
+          file. */}
+      <div className="mt-8 rounded-lg border border-line">
+        <div className="border-b border-line bg-[#f7f8fa] px-4 py-2.5 text-[12px] font-bold uppercase tracking-wide text-ink-muted">
+          Target numbers
+        </div>
+        <table className="w-full border-collapse">
+          <tbody>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">Text-size-ex-title-home-page-others</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">Text-size-ex-telecom-bullets-text-others</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-SQUARE-ICON-LINKS</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-BUTTONS</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-FOOTER-PICTURES/gif</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr>
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-HOME-TOP-PICTURES/gif</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <nav className="mt-8 flex flex-wrap gap-x-5 gap-y-2 rounded-lg bg-[#f7f8fa] px-4 py-3 text-[13px]">
         <a href="#titles" className="text-brand hover:underline">Titles</a>

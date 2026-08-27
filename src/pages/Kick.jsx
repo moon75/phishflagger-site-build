@@ -251,6 +251,63 @@ export default function Kick() {
           </p>
         </div>
       </section>
+
+      {/* ===== Human / Digital text (moved here from /email = Join.jsx) ===== */}
+      <section className="relative w-full bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
+        <div className="mx-auto max-w-content">
+          <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
+            <div>
+              <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
+                <em className="italic">
+                  <span className="font-extrabold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                / Human
+              </h2>
+              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+                <em className="italic">
+                  <span className="font-bold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                adds a unique, sequential identifier to the subject line
+                called the{" "}
+                <em className="italic">
+                  <span className="font-bold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Counter</span>
+                </em>{" "}
+                on every outgoing communication. Recipients can quickly
+                verify if the sequence matches the previous email they
+                received from the same sender. If the number is missing or
+                out of sequence, it provides an immediate warning that the
+                message may not be authentic, giving users a simple way to
+                spot phishing attempts.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
+                <em className="italic">
+                  <span className="font-extrabold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>
+                {" "}/ Digital
+              </h2>
+              <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+                <em className="italic">
+                  <span className="font-bold text-ink">Phish</span>
+                  <span className="font-normal text-brand">Flagger</span>
+                </em>{" "}
+                strengthens email authentication by verifying sender identity
+                at the domain level. Working alongside existing email
+                security standards and authentication technologies, our
+                domain validation screens messages that originate from
+                authorized senders, adding an extra layer of protection
+                against impersonation and phishing and other attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

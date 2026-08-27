@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
-const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage.png";
+const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage-yellow.png";
 
 const logoMarkImg = "/assets/images/logo-mark.png";
 
@@ -50,7 +50,7 @@ export default function Help() {
             {/* Kickstarter, full production card */}
             <div className="flex flex-col items-center">
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-[#FFFF00]">
-                <div className="bg-white pb-3 sm:pb-4">
+                <div className="bg-[#FFFF00] pb-3 sm:pb-4">
                   <div className="flex aspect-[1916/575] w-full justify-center overflow-hidden">
                     <img
                       src={outlookThunderbirdImg}

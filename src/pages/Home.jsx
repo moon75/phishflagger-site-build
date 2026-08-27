@@ -18,6 +18,7 @@ import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
+import pane0004MessageCardImg from "../assets/images/home-pane-0004-message-card.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
@@ -57,7 +58,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.8] object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -149,7 +150,7 @@ export default function Home() {
             {brandify("PhishFlagger™")} / Digital
           </span>
           <h2 className="mt-2 text-[24px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[28px]">
-            Authenticate Communications Automatically
+            Authenticate Communications
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
             {brandify("PhishFlagger™")} adds a digital layer of protection
@@ -376,29 +377,32 @@ export default function Home() {
             impersonation. As the existing Caller ID rail is fully interoperable
             between carriers globally, a &lsquo;sequence number&rsquo; implemented
             by telecoms worldwide would end fake calls.
-            <br />
-            Help stop phone fraud in your country.{" "}
-            <Link
-              to="/petition"
-              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-            >
-              Sign our Petition
-            </Link>{" "}
-            and{" "}
-            <Link
-              to="/help/telecom-endorse-us"
-              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-            >
-              Endorse Safe Calls
-            </Link>
-            .
           </p>
-          <Link
-            to="/telecom"
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
-          >
-            Telecom
-          </Link>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <Link
+              to="/telecom"
+              className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-[#e63950] duration-200 hover:scale-[1.2]"
+            >
+              Telecom
+            </Link>
+            <p className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
+              Help stop phone fraud in your country.{" "}
+              <Link
+                to="/petition"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Sign our Petition
+              </Link>{" "}
+              and{" "}
+              <Link
+                to="/help/telecom-endorse-us"
+                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+              >
+                Endorse Safe Calls
+              </Link>
+              .
+            </p>
+          </div>
         </div>
         {/* Right — 3 phones in a row */}
         <div className="flex flex-wrap items-end justify-center gap-4 sm:flex-nowrap sm:gap-6 lg:justify-end">
@@ -457,12 +461,11 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mx-6 mt-2 max-w-[360px] shrink-0 self-center border-2 border-black bg-white px-10 py-5 text-[16px] leading-[1.65] text-ink sm:text-[17px] sm:leading-[1.6]">
-            Phishing doesn't stop at email. <BrandInline /> for SMS and
-            Messages adds an additional layer of verification to SMS and mobile
-            messaging, helping protect customers from text-based scams and
-            impersonation.
-          </p>
+          <img
+            src={pane0004MessageCardImg}
+            alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
+            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain"
+          />
 
           <div className="flex flex-col items-center">
             <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
