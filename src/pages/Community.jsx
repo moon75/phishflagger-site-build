@@ -58,7 +58,7 @@ export default function Community() {
             <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
               Protecting Communications.
             </p>
-            <h1 className="mt-8 text-[40px] font-semibold leading-none tracking-tight text-ink sm:mt-10 sm:text-[52px] lg:text-[64px]">
+            <h1 className="page-title mt-8 sm:mt-10">
               Join Community
             </h1>
           </div>

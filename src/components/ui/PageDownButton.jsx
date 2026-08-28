@@ -56,7 +56,12 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
     if (next) {
       scrollToElement(next, "start");
     } else {
-      window.scrollBy({ top: window.innerHeight * 0.9, behavior: "smooth" });
+      // No next <section> — this is the last pane. Land deterministically
+      // at the true bottom of the document instead of an arbitrary
+      // scrollBy(90vh), which lands wherever it lands depending on the
+      // current scroll offset (the "lands in the wrong place" bug).
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      window.scrollTo({ top: maxScroll, behavior: "smooth" });
     }
   }
 

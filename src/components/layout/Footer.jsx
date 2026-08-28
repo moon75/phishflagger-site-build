@@ -48,7 +48,7 @@ export default function Footer({ logoSrc = logoImg }) {
       {!hideFaq && (
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
-          <section
+          <div
             id="footer-products"
             className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
             style={{
@@ -114,7 +114,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 ))}
               </div>
             </div>
-          </section>
+          </div>
         </>
       )}
 
@@ -155,9 +155,9 @@ export default function Footer({ logoSrc = logoImg }) {
               links={[
                 { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
                 { label: "Email - PRO", href: "/join/pro" },
-                { label: "Email - Marketing", href: "/join/email-marketing" },
-                { label: "Messaging", href: "/join/messaging" },
                 { label: "Telecom", href: "/telecom" },
+                { label: "Messaging", href: "/join/messaging" },
+                { label: "Email - Marketing", href: "/join/email-marketing" },
                 { label: "Kickstarter", href: "/kick" },
                 { label: "Numbering History", href: "/about/numbering-history" },
               ]}
@@ -172,7 +172,8 @@ export default function Footer({ logoSrc = logoImg }) {
               headingHref="/email"
               links={[
                 { label: "Free Plug-In", href: "/join/email-free-plug-in" },
-                { label: "PRO", href: "/join/pro" },
+                { label: "Pro Plug-In", href: "/join/pro" },
+                { label: "Domain", href: "/join/domain" },
                 { label: "Marketing", href: "/join/email-marketing" },
                 { label: "Contact", href: "/contact" },
                 { label: "Subscribe", href: "/join/email-subscribe" },
@@ -186,7 +187,7 @@ export default function Footer({ logoSrc = logoImg }) {
               links={[
                 { label: "Contact", href: "/telecom/contact" },
                 { label: "Subscribe", href: "/telecom/subscribe" },
-                { label: "Endorse Us", href: "/help/telecom-endorse-us" },
+                { label: "Endorse Safe Calls", href: "/help/telecom-endorse-us" },
                 { label: "Sign Petition", href: "/petition" },
               ]}
             />
@@ -200,7 +201,6 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },
                 { label: "Kickstarter", href: "/kick" },
-                { label: "Intellectual Property", href: "/about/intellectual-property" },
               ]}
             />
             <FooterSitemapColumn
@@ -315,7 +315,8 @@ export default function Footer({ logoSrc = logoImg }) {
         </div>
       </footer>
 
-      <section
+      <div
+        role="region"
         aria-label="Related tags"
         className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-white px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[7px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[6px]"
       >
@@ -324,7 +325,7 @@ export default function Footer({ logoSrc = logoImg }) {
             {t}
           </span>
         ))}
-      </section>
+      </div>
     </>
   );
 }

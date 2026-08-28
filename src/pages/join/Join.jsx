@@ -165,16 +165,42 @@ export default function Join() {
               alt="Endorse Us"
             />
             <ActionCard
-              to="/white-paper"
-              label="White Paper"
-              alt="White Paper"
+              to="/human-compatible"
+              label="Human"
+              alt="Human"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#e63950" />
-                  <rect x="7" y="4.5" width="10" height="15" rx="1.6" fill="white" />
-                  <rect x="9" y="7.5" width="6" height="1.4" rx="0.7" fill="#e63950" />
-                  <rect x="9" y="10.3" width="6" height="1.4" rx="0.7" fill="#c9c9c9" />
-                  <rect x="9" y="13.1" width="4" height="1.4" rx="0.7" fill="#c9c9c9" />
+                  <circle cx="12" cy="12" r="11" fill="#6d28d9" />
+                  <circle cx="12" cy="9" r="3.2" fill="white" />
+                  <path
+                    d="M6 18c1.3-3.1 3.6-4.6 6-4.6s4.7 1.5 6 4.6"
+                    stroke="white"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                </svg>
+              }
+            />
+            <ActionCard
+              to="/digital-verification"
+              label="Digital"
+              alt="Digital"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                  <circle cx="12" cy="12" r="11" fill="#0ea5e9" />
+                  <path
+                    d="M12 5.5l6 2.2v4.3c0 3.6-2.4 6.4-6 7.5-3.6-1.1-6-3.9-6-7.5V7.7l6-2.2Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M9.3 12.2l1.9 1.9 3.5-3.9"
+                    stroke="#0ea5e9"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
                 </svg>
               }
             />

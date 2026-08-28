@@ -76,7 +76,6 @@ export default function Telecom() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
-              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
             />
             <ActionCard
               to="/help/telecom-endorse-us"
@@ -111,7 +110,7 @@ export default function Telecom() {
               label="FAQ"
               alt="FAQ"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <circle cx="12" cy="12" r="11" fill="#f59e0b" />
                   <path
                     d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
@@ -486,9 +485,11 @@ function ActionCard({
       to={to}
       className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
-      <span className="text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">
-        {label}
-      </span>
+      <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
+        <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">
+          {label}
+        </span>
+      </div>
       <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
         {svgIcon ?? (
           <img

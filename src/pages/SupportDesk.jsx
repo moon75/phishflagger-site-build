@@ -52,7 +52,7 @@ export default function SupportDesk() {
       >
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+            <h1 className="page-title">
               Support Desk
             </h1>
             <p className="mx-auto mt-6 max-w-[560px] text-[15px] leading-relaxed text-ink sm:text-[16px]">

@@ -76,6 +76,17 @@
   .telecom-body-text {
     @apply text-[16px] leading-relaxed text-ink sm:text-[19px];
   }
+
+  /* GLOBAL STANDARD — the big page-hero H1 used at the top of standalone
+     pages (Subscribe, Contact, Demo, Download, Numbering History, etc.).
+     Was hand-rolled per page as text-[40px] sm:text-[52/56px] lg:text-[64px]
+     with drifting weights/leading; now one class so "make titles X% bigger"
+     is a single edit here instead of a site-wide find/replace. Add layout
+     classes (mt-*, text-center, max-w-*, mx-auto) alongside this on each
+     h1 — only size/weight/leading/tracking/color live here. */
+  .page-title {
+    @apply text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px];
+  }
 }
 
 @layer base {

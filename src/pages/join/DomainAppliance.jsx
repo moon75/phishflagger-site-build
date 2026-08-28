@@ -51,13 +51,16 @@ export default function DomainAppliance() {
             </ul>
           </div>
 
-          <div className="flex justify-center lg:justify-start lg:pl-40">
+          <div className="flex flex-wrap justify-center gap-6 lg:justify-start lg:pl-40">
             <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src="/assets/images/Email-Authentication-Join-Domain-Pro.png"
                 alt="Email authentication for domain appliance"
                 className="h-full w-full rounded-lg object-contain"
               />
+            </div>
+            <div className="flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
+              <PlaceholderIcon />
             </div>
           </div>
         </div>
@@ -261,6 +264,25 @@ export default function DomainAppliance() {
       </section>
 
     </>
+  );
+}
+
+function PlaceholderIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-14 w-14 text-ink/40"
+      aria-hidden
+    >
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <circle cx="8.5" cy="9.5" r="1.5" />
+      <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L3 20" />
+    </svg>
   );
 }
 

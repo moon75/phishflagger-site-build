@@ -41,7 +41,7 @@ export default function Fiction() {
           backgroundSize: "140%",
         }}
       >
-        <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[52px]">
+        <h1 className="page-title">
           Fiction
         </h1>
       </div>

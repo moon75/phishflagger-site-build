@@ -342,9 +342,9 @@ export default function Home() {
             className="h-auto w-full max-w-[286px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
           />
           <img
-            src="/assets/images/footer%20history%20pic%203rd.png"
+            src="/assets/images/Marketing%20Email.png"
             alt="PhishFlagger email inbox showing numbered messages"
-            className="h-auto w-full max-w-[286px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+            className="h-auto w-full max-w-[200px] object-contain transition-transform duration-200 hover:scale-[1.2]"
           />
         </div>
         <div>
@@ -379,7 +379,7 @@ export default function Home() {
         <div>
           <h2 className="section-title flex items-center gap-3">
             <LogoMark />
-            Telecom / Caller ID
+            Telecom / Caller ID / CLI
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Fake phone calls can be prevented now.

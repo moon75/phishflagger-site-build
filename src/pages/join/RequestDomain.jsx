@@ -63,7 +63,7 @@ export default function RequestDomain() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+            <h1 className="page-title">
               Request My Domain
             </h1>
             <p className="mt-3 text-[15px] font-semibold text-ink sm:text-[16px]">

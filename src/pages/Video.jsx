@@ -219,7 +219,36 @@ function categoryVideos(category) {
         title: "Woman Caring for Pets",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Oracle%20Video1.mp4",
+        title: "Oracle Video 1",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Oracle%20Video1%20sameple%202.mp4",
+        title: "Oracle Video 1 - Sample 2",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Oracle%20Video1%20sameple%203.mp4",
+        title: "Oracle Video 1 - Sample 3",
+        description: "",
+      },
     ];
+  }
+
+  if (category === "Telecom Caller ID") {
+    return padToFullPage([
+      {
+        type: "local",
+        src: "/assets/video1/Telecom/PhishFlagger_FINAL_bright_logo.mp4",
+        title: "PhishFlagger Telecom / Caller ID",
+        description: "",
+      },
+    ]);
   }
 
   if (category === "Ads") {
@@ -318,8 +347,10 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-md border border-black bg-white px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
-                    category === activeCategory ? "text-brand" : "text-ink"
+                  className={`cursor-pointer rounded-md border border-black px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
+                    category === activeCategory
+                      ? "bg-gray-200 text-brand"
+                      : "bg-white text-ink"
                   }`}
                 >
                   {category}

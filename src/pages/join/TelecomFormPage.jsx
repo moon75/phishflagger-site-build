@@ -47,7 +47,7 @@ export function TelecomFormPage({
     >
       <div className="mx-auto max-w-content">
         <div className="text-center">
-          <h1 className="text-[40px] font-normal leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+          <h1 className="page-title">
             {title}
           </h1>
         </div>

@@ -59,7 +59,7 @@ export default function Header() {
 
   // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
   // menus that already open on hover — no click required.
-  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help"]);
+  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help", "About"]);
 
   // Desktop nav split into two blocks of 3 (see JSX below) — first half /
   // second half of the 6-item nav array.
@@ -76,7 +76,13 @@ export default function Header() {
       <NavLink
         to={item.href}
         onMouseEnter={
-          HOVER_NAV_LABELS.has(item.label) ? () => navigate(item.href) : undefined
+          HOVER_NAV_LABELS.has(item.label)
+            ? () => {
+                // Guard against re-navigating on every re-entry (see
+                // NavDropdown's handleEnter for why this matters).
+                if (location.pathname !== item.href) navigate(item.href);
+              }
+            : undefined
         }
         className={({ isActive }) =>
           `rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
@@ -119,7 +125,7 @@ export default function Header() {
         {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
           <span
-            className="flex shrink-0 cursor-default items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold"
+            className="group relative flex shrink-0 cursor-default items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
             onMouseEnter={bumpVisitCount}
           >
@@ -128,6 +134,9 @@ export default function Header() {
               <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
             {visitBadge}
+            <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
+              PhishCounter
+            </span>
           </span>
           <div
             className="relative flex"
@@ -163,7 +172,7 @@ export default function Header() {
           <Link
             to="/login"
             aria-label="Sign in"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
+            className="group relative flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
           >
             <svg
               viewBox="0 0 24 24"
@@ -178,6 +187,9 @@ export default function Header() {
               <circle cx="12" cy="8" r="3.6" />
               <path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" />
             </svg>
+            <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
+              Sign-In
+            </span>
           </Link>
         </div>
 

@@ -19,7 +19,7 @@ export default function NumberingHistory() {
         }}
       >
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+          <h1 className="page-title">
             Numbering History
           </h1>
         </div>

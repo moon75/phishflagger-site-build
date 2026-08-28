@@ -10,7 +10,7 @@ export default function Demo() {
 
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[960px] px-6 text-center sm:px-12">
-          <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+          <h1 className="page-title">
             Request Demo
           </h1>
 

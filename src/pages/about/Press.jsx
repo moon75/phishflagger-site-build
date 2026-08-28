@@ -40,7 +40,7 @@ export default function Press() {
         <div className="mx-auto max-w-[1000px]">
           {/* Header */}
           <div className="text-center">
-            <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+            <h1 className="page-title">
               Press
             </h1>
           </div>

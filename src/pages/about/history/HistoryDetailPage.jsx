@@ -17,7 +17,7 @@ export default function HistoryDetailPage({ title, img, imgAlt }) {
         }}
       >
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+          <h1 className="page-title">
             {title}
           </h1>
 

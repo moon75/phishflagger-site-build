@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="mx-auto max-w-content">
         {/* ===== Top — page heading ===== */}
         <div className="text-center">
-          <h1 className="text-[40px] font-semibold leading-none tracking-tight text-ink sm:text-[52px] lg:text-[64px]">
+          <h1 className="page-title">
             Contact
           </h1>
         </div>

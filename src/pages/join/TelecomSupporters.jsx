@@ -31,7 +31,7 @@ export default function TelecomSupporters() {
       {/* Header */}
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+          <h1 className="page-title">
             Telecom Supporters
           </h1>
         </div>

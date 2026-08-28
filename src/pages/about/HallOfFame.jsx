@@ -48,7 +48,7 @@ export default function HallOfFame() {
             Protecting Communications
           </p>
 
-          <h1 className="mt-10 text-[40px] font-semibold leading-tight tracking-tight text-ink sm:text-[56px]">
+          <h1 className="page-title mt-10">
             Hall of Fame
           </h1>
 

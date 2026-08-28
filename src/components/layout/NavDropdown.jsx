@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils.js";
 
 function ChevronDown({ className }) {
@@ -24,6 +24,7 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
   const wrapRef = useRef(null);
   const closeTimer = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (!open) return;
@@ -46,7 +47,13 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
   const handleEnter = () => {
     clearTimeout(closeTimer.current);
     setOpen(true);
-    if (hoverNavigate && item.href) navigate(item.href);
+    // Guard against re-navigating on every re-entry — without this, a
+    // layout shift under the cursor (the dropdown opening/closing) can
+    // flicker mouseenter on/off and spam navigate() into a render loop
+    // that freezes the tab.
+    if (hoverNavigate && item.href && location.pathname !== item.href) {
+      navigate(item.href);
+    }
   };
   const handleLeave = () => {
     closeTimer.current = setTimeout(() => setOpen(false), 120);
