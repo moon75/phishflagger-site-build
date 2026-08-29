@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 
 const LEFT_LINKS = [
   { to: "/about/press", label: "Press" },
@@ -26,7 +28,8 @@ export default function AboutIndex() {
       }}
     >
       {/* ===== Pane 1 — About links (2 columns) — roughly half the height of the Home hero pane ===== */}
-      <section className="flex min-h-[340px] w-full items-center px-4 py-14 sm:min-h-[380px] sm:px-6 sm:py-20">
+      <section className="relative flex min-h-[480px] w-full items-center px-4 py-14 sm:min-h-[560px] sm:px-6 sm:py-20">
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={5} center />
         <div className="mx-auto grid w-full max-w-content grid-cols-1 gap-x-16 gap-y-10 sm:grid-cols-2">
           <ul className="space-y-5 text-center sm:pl-40 sm:text-left lg:pl-56">
             {LEFT_LINKS.map((item) => (

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage-yellow.png";
 
@@ -31,7 +33,8 @@ export default function Help() {
       }}
     >
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="w-full px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
+      <section className="relative flex w-full min-h-[480px] flex-col justify-center px-4 pt-[50px] pb-4 sm:min-h-[560px] sm:px-6 sm:pt-[72px] sm:pb-6">
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={4} center />
         <div className="mx-auto max-w-content">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-10">
             {LINKS.map((item) => (

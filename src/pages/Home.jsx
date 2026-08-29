@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import { brandify } from "../components/Brand.jsx";
@@ -45,6 +47,7 @@ export default function Home() {
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
     <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 pb-8 sm:px-6 sm:pt-3 sm:pb-10">
+      <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">

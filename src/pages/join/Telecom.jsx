@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
@@ -20,12 +22,13 @@ export default function Telecom() {
     <div ref={containerRef} className="relative w-full">
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:px-6 sm:pb-8"
+        className="relative flex w-full min-h-[480px] flex-col justify-center bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:min-h-[560px] sm:px-6 sm:pb-8"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center />
         <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
           {/* A — spacer */}
           <div className="hidden lg:block lg:flex-[0.5]" />

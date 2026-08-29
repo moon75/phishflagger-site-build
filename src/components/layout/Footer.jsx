@@ -59,13 +59,8 @@ export default function Footer({ logoSrc = logoImg }) {
           >
             <PageDownButton />
             <div className="mx-auto max-w-[1200px]">
-              <div className="flex items-center justify-center gap-[7.5rem]">
-                <Link
-                  to="/about/faq"
-                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
-                >
-                  FAQ
-                </Link>
+              <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+                <div aria-hidden />
                 <div className="flex items-center justify-center gap-3">
                   <img
                     src="/assets/images/logo-mark.png"
@@ -76,12 +71,20 @@ export default function Footer({ logoSrc = logoImg }) {
                     Protecting Communications
                   </h2>
                 </div>
-                <Link
-                  to="/help/endorse-us"
-                  className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
-                >
-                  Endorse Us
-                </Link>
+                <div className="flex items-center justify-end gap-3 pr-[20px]">
+                  <Link
+                    to="/about/faq"
+                    className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
+                  >
+                    FAQ
+                  </Link>
+                  <Link
+                    to="/help/endorse-us"
+                    className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
+                  >
+                    Endorse Us
+                  </Link>
+                </div>
               </div>
               <div className="mt-10 flex flex-wrap items-start justify-center gap-6 sm:gap-10">
                 {PRODUCT_IMAGES.map((item, idx) => (

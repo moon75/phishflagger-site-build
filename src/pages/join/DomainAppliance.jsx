@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
@@ -12,6 +13,7 @@ export default function DomainAppliance() {
   return (
     <>
       <CloseButton />
+      <JoinPagesNav current={2} />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"

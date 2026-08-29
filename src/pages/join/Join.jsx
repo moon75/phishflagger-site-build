@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../../assets/images/domain-server-only.png";
 import oneOrManyImg from "../../assets/images/six plugin one or more.png";
@@ -24,7 +26,8 @@ export default function Join() {
       }}
     >
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
-      <section className="relative w-full px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8">
+      <section className="relative flex w-full min-h-[480px] flex-col justify-center px-4 pb-6 pt-6 sm:min-h-[560px] sm:px-6 sm:pb-8 sm:pt-8">
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
             <img

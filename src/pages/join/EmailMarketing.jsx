@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import marketerImg from "../../assets/images/email-marketing-verified-v9.png";
@@ -8,6 +9,7 @@ export default function EmailMarketing() {
   return (
     <>
       <CloseButton />
+      <JoinPagesNav current={3} />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-14 sm:px-6 sm:pt-20 sm:pb-20"

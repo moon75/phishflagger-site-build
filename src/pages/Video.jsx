@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
+import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
@@ -243,6 +245,24 @@ function categoryVideos(category) {
         title: "Pet Health Commercial Storyboard",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Oracle%C2%AEBlood%20Glucose%20Meter%20Video.mp4",
+        title: "Oracle® Blood Glucose Meter Video",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/BloodSugar.mp4",
+        title: "Blood Sugar",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Video1%20v2.mp4",
+        title: "Video 1 v2",
+        description: "",
+      },
     ];
   }
 
@@ -313,7 +333,7 @@ export default function Video() {
           gray background, spanning the full page width; everything below
           is plain white. */}
       <div
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-6 sm:px-6"
+        className="relative flex w-full min-h-[480px] flex-col justify-center bg-[#eef0f4] bg-cover bg-center px-4 py-6 sm:min-h-[560px] sm:px-6"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
@@ -322,6 +342,7 @@ export default function Video() {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center />
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">
