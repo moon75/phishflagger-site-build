@@ -9,7 +9,6 @@ import SupportDesk from "./pages/SupportDesk.jsx";
 import Help from "./pages/Help.jsx";
 import Community from "./pages/Community.jsx";
 import Demo from "./pages/Demo.jsx";
-import VideoPage from "./pages/Video.jsx";
 import Download from "./pages/Download.jsx";
 import PluginDownload from "./pages/PluginDownload.jsx";
 import DigitalIno from "./pages/DigitalIno.jsx";
@@ -129,13 +128,11 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="country" element={<CountrySelect />} />
-        <Route path="video/:category?" element={<VideoPage />} />
         <Route path="download" element={<Download />} />
         <Route path="plugin-download" element={<PluginDownload />} />
         <Route path="digital-verification" element={<DigitalIno />} />
         <Route path="human-compatible" element={<HumanCompatible />} />
         <Route path="white-paper" element={<WhitePaper />} />
-        <Route path="News" element={<News />} />
         <Route path="petition" element={<Petition />} />
         <Route path="petition/thanks" element={<PetitionThanks />} />
         <Route path="join-free" element={<JoinFreeIframe />} />

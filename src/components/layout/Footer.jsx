@@ -126,7 +126,7 @@ export default function Footer({ logoSrc = logoImg }) {
           <PageUpButton inline />
         </div>
 
-        <div className="mx-auto max-w-[980px] px-6 pt-20 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-[72px]">
+        <div className="mx-auto max-w-[980px] px-6 pt-14 text-center text-[#3a3a3a] max-sm:px-4 max-sm:pt-12">
           {/* Description paragraph */}
           <div className="mx-auto max-w-[1280px]">
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">

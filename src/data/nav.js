@@ -17,7 +17,7 @@ export const nav = [
       { label: "Blog", href: "/about/blog" },
       { label: "Numbering History", href: "/about/numbering-history" },
       { label: "Phishing Ends - Fiction", href: "/about/phishing-ends" },
-      { label: "Phishing News", href: "/News" },
+      { label: "Phishing News", href: "/about/news" },
     ],
   },
 ];

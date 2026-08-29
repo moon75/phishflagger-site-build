@@ -34,7 +34,7 @@ export default function DomainAppliance() {
                   <span className="font-extrabold text-ink">Phish</span>
                   <span className="font-normal text-brand">Flagger</span>
                 </em>{" "}
-                Domain Appliance
+                Domain
               </h2>
             </div>
             <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
@@ -59,7 +59,7 @@ export default function DomainAppliance() {
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
+            <div className="img-hover-zoom flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
               <PlaceholderIcon />
             </div>
           </div>

@@ -14,6 +14,8 @@
 //   percent-increase-BUTTONS                 10%
 //   percent-increase-FOOTER-PICTURES/gif     10%
 //   percent-increase-HOME-TOP-PICTURES/gif   10%
+//   pane-vertical-spacing                    py-14 → sm:py-20 (the standard)
+//   pane-spacing-scale-down                  1 → .8 (Home Human/Digital gap — DONE)
 
 function Section({ title, id, children }) {
   return (
@@ -128,9 +130,17 @@ export default function GlobalSettings() {
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-FOOTER-PICTURES/gif</td>
               <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
             </tr>
-            <tr>
+            <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-HOME-TOP-PICTURES/gif</td>
               <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">pane-vertical-spacing</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">py-14 → sm:py-20</td>
+            </tr>
+            <tr>
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">pane-spacing-scale-down</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">1 → .8</td>
             </tr>
           </tbody>
         </table>
@@ -143,6 +153,7 @@ export default function GlobalSettings() {
         <a href="#buttons" className="text-brand hover:underline">Buttons</a>
         <a href="#footer-pics" className="text-brand hover:underline">Footer pictures/gifs</a>
         <a href="#home-top-pics" className="text-brand hover:underline">Home top pictures/gifs</a>
+        <a href="#pane-spacing" className="text-brand hover:underline">Pane spacing</a>
         <a href="#colors" className="text-brand hover:underline">Colors</a>
         <a href="#body-text" className="text-brand hover:underline">Other body text</a>
       </nav>
@@ -220,6 +231,30 @@ export default function GlobalSettings() {
         <Table>
           <Row where="Home hero — hero v1 / v2 / v3 images" value="none" note={<>No hover-scale at all today <Flag>inconsistent</Flag></>} />
           <Row where="Home hero — phone screens (Email/Messages/Text/Caller ID row)" value="hover:scale-[1.35] (via PhonePlaceholder)" note="Separate component, different value again" />
+        </Table>
+      </Section>
+
+      <Section id="pane-spacing" title="Pane vertical spacing (section top/bottom padding)">
+        <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
+          The <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">pt-*</code>/
+          <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">pb-*</code> (or
+          combined <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">py-*</code>)
+          padding on each page's top-level <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">&lt;section&gt;</code>
+          — controls the gap above/below a pane, including the gap around the
+          page-down/up chevron pair. <code className="mx-1 rounded bg-[#f7f8fa] px-1 py-0.5 font-mono text-[12px]">py-14 → sm:py-20</code> is
+          the most common value (47 occurrences); everything else below is a
+          one-off or small cluster.
+        </p>
+        <Table>
+          <Row where="Site-wide standard section padding" value="py-14 → sm:py-20" note="47 occurrences — treat as the standard" />
+          <Row where="Home — Human/Digital verification block, bottom gap before #pane-0002" value="pb-16 → sm:pb-24 scaled to pb-[3.2rem] → sm:pb-[4.8rem]" note="DONE — scaled ×0.8 per owner note" />
+          <Row where="Hero/standalone-page pattern (JoinFree, JoinFreeRegister, JoinFreeTerms, RequestDomain, MessagingAppRequest, EmailMarketingQuote, Press, SupportDesk, Rock, …)" value="pt-14 → pb-16" note={<>12 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="News, EndorseUs, VictimTestimonials, Petition" value="pb-16 → pt-10" note={<>5 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="FAQ, IP, Team, TestStripe(pt-12)" value="pt-14 → pb-20" note={<>4 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="Supporters, HallOfFame, TelecomSupporters(pb-12), Blog" value="pt-14 → pb-12" note={<>4 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="EmailFreePlugIn, JoinFreeIframe, JoinCorporateIframe, Home — pane-0002" value="pb-14 → pt-6" note={<>4 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="EndorseUs (2nd block), Blog (2nd block), VictimTestimonials(2nd)" value="pb-12 → pt-14" note={<>3 occurrences <Flag>inconsistent</Flag></>} />
+          <Row where="Long tail — Kick, Join, PhishFlaggerOrg, and ~18 more, each used once" value="pt-9/pb-9, pt-6/pb-8, pt-6/pb-20, pt-2/pb-8, pt-14/pb-4, pt-12/pb-6, pb-8/pt-24, pb-6/pt-7, pb-5/pt-5, pb-4/pt-2, …" note={<>24 one-off values — biggest source of inconsistency <Flag>inconsistent</Flag></>} />
         </Table>
       </Section>
 

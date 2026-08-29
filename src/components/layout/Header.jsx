@@ -67,7 +67,11 @@ export default function Header() {
   const navRight = nav.slice(3);
 
   function renderNavItem(item) {
-    if (item.children) {
+    // About now navigates straight to /about on hover (which lists all of
+    // Press/Team/Intellectual Property/Blog/etc. on the page itself), so
+    // the old hover dropdown listing those same children is redundant —
+    // render it as a plain nav link instead of a NavDropdown.
+    if (item.children && item.label !== "About") {
       return (
         <NavDropdown item={item} hoverNavigate={HOVER_NAV_LABELS.has(item.label)} />
       );

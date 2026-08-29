@@ -45,7 +45,12 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
       }
     }
 
-    const sections = Array.from(root.querySelectorAll("section"));
+    // #footer-products (the footer's own page-down/up pair) counts as a
+    // valid "next" stop too — it's a <div>, not a <section>, so the last
+    // real pane on a page would otherwise have nowhere to go and fall
+    // through to the "land at the document bottom" branch below, overshooting
+    // past the footer pane entirely.
+    const sections = Array.from(root.querySelectorAll("section, #footer-products"));
     const currentIndex = currentIndexFor(event, sections);
 
     // Position-based lookup (DOM order), not scroll-position guessing — a
@@ -72,7 +77,12 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
     }
 
     const root = containerRef?.current ?? document;
-    const sections = Array.from(root.querySelectorAll("section"));
+    // #footer-products (the footer's own page-down/up pair) counts as a
+    // valid "next" stop too — it's a <div>, not a <section>, so the last
+    // real pane on a page would otherwise have nowhere to go and fall
+    // through to the "land at the document bottom" branch below, overshooting
+    // past the footer pane entirely.
+    const sections = Array.from(root.querySelectorAll("section, #footer-products"));
     const currentIndex = currentIndexFor(event, sections);
     const prev = currentIndex > 0 ? sections[currentIndex - 1] : null;
 

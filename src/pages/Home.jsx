@@ -51,7 +51,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-6 object-contain"
+            className="h-auto w-full -translate-y-1 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -65,7 +65,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v3%20need%20logo%20up.png"
             alt="Woman using PhishFlagger-protected email"
-            className="relative left-1/2 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain"
+            className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain"
           />
         </div>
       </div>
@@ -103,7 +103,9 @@ export default function Home() {
                 large
               />
             </div>
-            <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} alt={`${SCREENS[1].label} screen`} />
+            <div className="-translate-y-[1px]">
+              <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} alt={`${SCREENS[1].label} screen`} wide />
+            </div>
           </div>
         </div>
 
@@ -115,17 +117,18 @@ export default function Home() {
             >
               {s.label}
             </Link>
-            <PhonePlaceholder src={s.src} alt={`${s.label} screen`} />
+            <PhonePlaceholder src={s.src} alt={`${s.label} screen`} wide />
           </div>
         ))}
       </div>
 
       </div>
-    </section>
 
-    {/* ===== Section 4 — Human / Digital verification (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) ===== */}
-    <section className="relative w-full px-4 pt-6 pb-16 sm:px-6 sm:pt-8 sm:pb-24">
-      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2 lg:gap-20">
+      {/* ===== Human / Digital verification (was: email-auth / digital-verification diagrams, moved to /kick and /digital-ino) =====
+          Kept inside the pane-0001 <section> (not its own <section>) so the
+          global page-down tab's "next <section>" lookup skips straight to
+          #pane-0002 instead of stopping here. ===== */}
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 pt-9 pb-[3.2rem] sm:gap-16 sm:pt-12 sm:pb-[4.8rem] lg:grid-cols-2 lg:gap-20">
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
             {brandify("PhishFlagger")} / Human
@@ -389,7 +392,7 @@ export default function Home() {
             between carriers globally, a &lsquo;sequence number&rsquo; implemented
             by telecoms worldwide would end fake calls.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center gap-8">
             <Link
               to="/telecom"
               className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
@@ -398,7 +401,7 @@ export default function Home() {
             </Link>
             <div className="text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
               <p>Help stop phone fraud in your country.</p>
-              <div className="mt-2 flex flex-wrap items-center gap-1">
+              <div className="mt-0.5 flex flex-wrap items-center gap-1">
                 <Link
                   to="/petition"
                   className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
@@ -681,7 +684,7 @@ function SectionCounter({ value }) {
   );
 }
 
-function PhonePlaceholder({ src, hoverSrc, alt, large = false }) {
+function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -694,7 +697,13 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false }) {
       className={
         large
           ? "relative z-10 mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[300px] lg:w-[300px]"
-          : "relative z-10 block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[180px] lg:w-[170px]"
+          : wide
+            // This mockup (PhishFlagger-Email v6.png) has a noticeably
+            // thinner phone bezel than the Messages/Text/Caller ID
+            // mockups, so at the same width it reads as a smaller device.
+            // Bumped ~4% wider so the phone silhouettes look consistent.
+            ? "relative z-10 block h-auto w-[146px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[188px] lg:w-[177px]"
+            : "relative z-10 block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[180px] lg:w-[170px]"
       }
     />
   );

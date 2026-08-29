@@ -43,7 +43,7 @@ export default function Join() {
               <Link
                 to="/join/email-free-plug-in"
                 aria-label="Join Free — Plug-In Free"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src="/assets/images/individual.png"
@@ -70,7 +70,7 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 aria-label="Join PRO — One or Many"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black transition-transform duration-200 hover:scale-110"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src={oneOrManyImg}
@@ -97,7 +97,7 @@ export default function Join() {
               <Link
                 to="/join/domain"
                 aria-label="Join Domain — Domain Appliance"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-transform duration-200 hover:scale-110"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src={cloudServerImg}
@@ -121,7 +121,7 @@ export default function Join() {
               <Link
                 to="/join/email-marketing"
                 aria-label="Marketing"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-transform duration-200 hover:scale-110"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src="/assets/images/Marketing%20Email.png"
@@ -138,11 +138,13 @@ export default function Join() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ===== Pane 2 — Contact / Endorse Us / White Paper / FAQ (no background) ===== */}
-      <section id="join-icon-links" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pb-4 pt-2 sm:px-6 sm:pb-6 sm:pt-3">
-        <div className="mx-auto max-w-content">
+        {/* ===== Contact / Endorse Us / White Paper / FAQ (no background) =====
+            Kept inside the Pane 1 <section> (not its own <section>) so the
+            global page-down tab's "next <section>" lookup skips straight to
+            #join-human-digital, the first pane with its own page-down
+            button pair, instead of stopping here. ===== */}
+        <div className="mx-auto max-w-content pb-4 pt-2 sm:pb-6 sm:pt-3">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
               to="/contact"

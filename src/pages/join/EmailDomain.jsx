@@ -205,29 +205,16 @@ export default function EmailDomain() {
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
               What you will receive.
             </h3>
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
-              <div className="flex flex-col items-center">
-                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                  Domain Appliance
-                </span>
-                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
-                  <li>Terms of Service</li>
-                  <li>Access Key</li>
-                  <li>Appliance Install</li>
-                  <li>Install Instructions</li>
-                </ul>
-              </div>
-              <div className="flex flex-col items-start">
-                <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                  Plug-In
-                </span>
-                <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
-                  <li>Terms of Service</li>
-                  <li>Access Key</li>
-                  <li>Install Plug-In</li>
-                  <li>Install Instructions</li>
-                </ul>
-              </div>
+            <div className="mt-4 flex flex-col items-start">
+              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
+                Plug-In
+              </span>
+              <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+                <li>Terms of Service</li>
+                <li>Access Key</li>
+                <li>Install Plug-In</li>
+                <li>Install Instructions</li>
+              </ul>
             </div>
           </div>
           <div className="p-6 text-center sm:p-8">
@@ -244,7 +231,7 @@ export default function EmailDomain() {
                 to="/join-corporate"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
-                Join
+                Join PRO
               </Link>
             </div>
           </div>

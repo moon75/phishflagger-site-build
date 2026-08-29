@@ -237,6 +237,12 @@ function categoryVideos(category) {
         title: "Oracle Video 1 - Sample 3",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Pet_health_commercial_storyboard_202608281110.mp4",
+        title: "Pet Health Commercial Storyboard",
+        description: "",
+      },
     ];
   }
 
@@ -347,7 +353,7 @@ export default function Video() {
                       replace: true,
                     });
                   }}
-                  className={`cursor-pointer rounded-md border border-black px-3 py-1.5 text-[15px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
+                  className={`cursor-pointer rounded-md border border-black px-2.5 py-1 text-[13px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
                     category === activeCategory
                       ? "bg-gray-200 text-brand"
                       : "bg-white text-ink"
@@ -383,7 +389,11 @@ export default function Video() {
         </div>
       </div>
 
-      <section className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
+      {/* A <div>, not a <section> — this is the only content block on the
+          page, and HeaderTopPageDownTab's "next <section>" lookup would
+          otherwise stop here (a no-op scroll) instead of skipping straight
+          to the footer's #footer-products page-down/up pair. */}
+      <div className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1300px]">
           {/* Video grid */}
           <div className="mx-auto mt-4 w-full max-w-[1300px] rounded-2xl bg-white p-4 sm:mt-5 sm:p-6">
@@ -410,6 +420,8 @@ export default function Video() {
                         src={v.src}
                         poster={v.poster}
                         controls
+                        controlsList="nodownload noremoteplayback"
+                        disablePictureInPicture
                         preload="metadata"
                         playsInline
                         className="h-full w-full object-contain"
@@ -456,7 +468,7 @@ export default function Video() {
           </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

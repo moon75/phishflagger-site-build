@@ -22,7 +22,10 @@ export default function HeaderTopPageDownTab() {
       ticking = false;
       const header = document.querySelector("header");
       const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-      const sections = Array.from(document.querySelectorAll("section"));
+      // Also treat #footer-products (the footer's own page-down/up pair) as
+      // a valid stop — pages with a single <section> (e.g. Video) would
+      // otherwise have nowhere to send this button.
+      const sections = Array.from(document.querySelectorAll("section, #footer-products"));
       const hasNext = sections.some((section) => section.getBoundingClientRect().top > headerBottom + 1);
       setVisible(hasNext);
 
@@ -67,7 +70,7 @@ export default function HeaderTopPageDownTab() {
   function handleClick() {
     const header = document.querySelector("header");
     const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-    const sections = Array.from(document.querySelectorAll("section"));
+    const sections = Array.from(document.querySelectorAll("section, #footer-products"));
     const next = sections.find((section) => section.getBoundingClientRect().top > headerBottom + 1);
     if (next) {
       // window.scrollTo to an absolute Y, not next.scrollIntoView — see
