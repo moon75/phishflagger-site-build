@@ -333,7 +333,7 @@ export default function Video() {
           gray background, spanning the full page width; everything below
           is plain white. */}
       <div
-        className="relative flex w-full min-h-[480px] flex-col justify-center bg-[#eef0f4] bg-cover bg-center px-4 py-6 sm:min-h-[560px] sm:px-6"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-6 sm:px-6"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
