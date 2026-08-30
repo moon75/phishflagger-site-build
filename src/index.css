@@ -4,6 +4,21 @@
   /* Fallback before Header measures itself on mount (see Header.jsx);
      kept close to the header's real height to avoid a first-paint jump. */
   --header-h: 88px;
+
+  /* Single knob for the whitespace below a pane's content, before the next
+     pane's top edge (where a PageDownButton tab usually sits). Every such
+     gap should be written as `pb-[calc(<base>*var(--pane-gap-scale))]`
+     against its own base rem value, so bumping this one number re-scales
+     all of them together instead of hand-tuning each pb-* separately. */
+  --pane-gap-scale: 0.65;
+
+  /* Single knob for square icon-link hover growth (Help/FAQ/Contact-style
+     tiles). The codebase had this hand-typed as 1.05/1.1/1.2/1.23/.8/.7 in
+     different places — write new/updated icon links as
+     `hover:scale-[var(--icon-link-hover-scale)]` against this one value
+     instead of picking another number by hand. Target: +10% (see
+     /internal/global-settings). */
+  --icon-link-hover-scale: 1.1;
 }
 
 /* ==========================================================================

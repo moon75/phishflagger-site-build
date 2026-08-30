@@ -52,7 +52,10 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
     // flicker mouseenter on/off and spam navigate() into a render loop
     // that freezes the tab.
     if (hoverNavigate && item.href && location.pathname !== item.href) {
-      navigate(item.href);
+      // replace: true — same reasoning as Header.jsx's hover-navigate: a
+      // hover must not add a real history entry, or CloseButton's
+      // "return to where this was opened from" breaks.
+      navigate(item.href, { replace: true });
     }
   };
   const handleLeave = () => {

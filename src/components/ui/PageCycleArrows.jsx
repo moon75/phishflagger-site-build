@@ -21,9 +21,15 @@ export default function PageCycleArrows({ pages, current, center = false }) {
   const prevLabel = pages[(current - 1 + total) % total].label;
   const nextLabel = pages[(current + 1) % total].label;
 
-  const position = center
-    ? "absolute top-[35%] z-10 -translate-y-1/2"
-    : "absolute top-20 z-10 sm:top-24";
+  // Fixed offset below the header, same on every page (not a % of each
+  // hero's own height) so left/right arrows land at the identical spot
+  // across Home/Video/Email/Telecom/Help/About regardless of that page's
+  // hero content height.
+  // Fixed offset below the header, same on every page (not a % of each
+  // hero's own height) so left/right arrows land at the identical spot
+  // across Home/Video/Email/Telecom/Help/About regardless of that page's
+  // hero content height.
+  const position = "absolute top-20 z-10 sm:top-24";
 
   // When centering within an ancestor `section`, this component must not
   // introduce its own positioning context (it has no height of its own),
@@ -32,44 +38,49 @@ export default function PageCycleArrows({ pages, current, center = false }) {
   // its own absolute children at the document position it's rendered at.
   const wrapperClass = center ? "" : "relative";
 
+  // Tabs attached to the left/right edge of the pane — same "attached tab"
+  // chrome as PageDownButton's up/down pill (border, no near-edge border,
+  // rounded corners on the far side, white bg, invert to dark on hover) —
+  // just anchored to the side edges instead of the top edge.
+  const tabClass =
+    "group flex h-11 w-4 cursor-pointer flex-col items-center justify-center overflow-hidden border-[#4a4a4a] bg-white text-[#4a4a4a] transition hover:bg-[#2b2b2b] hover:text-white sm:h-12 sm:w-5";
+
   return (
     <div className={wrapperClass}>
       <button
         type="button"
         onClick={() => go(-1)}
         aria-label={`Previous: ${prevLabel}`}
-        className={`${position} left-4 flex h-10 w-10 items-center justify-center text-[#4a4a4a] transition hover:text-[#2b2b2b] sm:left-6 sm:h-11 sm:w-11`}
+        className={`${position} left-0 ${tabClass} rounded-r-2xl border border-l-0 pl-0.5`}
       >
         <svg
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-6 w-6 sm:h-7 sm:w-7"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
-          <path d="M19 12H5M11 6l-6 6 6 6" />
+          <path d="M15 6l-6 6 6 6" />
         </svg>
       </button>
       <button
         type="button"
         onClick={() => go(1)}
         aria-label={`Next: ${nextLabel}`}
-        className={`${position} right-4 flex h-10 w-10 items-center justify-center text-[#4a4a4a] transition hover:text-[#2b2b2b] sm:right-6 sm:h-11 sm:w-11`}
+        className={`${position} right-0 ${tabClass} rounded-l-2xl border border-r-0 pr-0.5`}
       >
         <svg
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-6 w-6 sm:h-7 sm:w-7"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
-          <path d="M5 12h14M13 6l6 6-6 6" />
+          <path d="M9 6l6 6-6 6" />
         </svg>
       </button>
     </div>

@@ -61,6 +61,21 @@ export default function Header() {
   // menus that already open on hover — no click required.
   const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help", "About"]);
 
+  // Email's plan sub-pages live under /join/* (Plug-In Free, Plug-In Pro,
+  // Domain, Marketing + their quote/thanks flows) rather than under /email,
+  // so react-router's default NavLink isActive (prefix match on item.href)
+  // doesn't catch them — the "Email" tab would fall back to its plain
+  // (unhighlighted) grey-ink state instead of staying on its active
+  // grey-pill/red-text look while you're on one of those sub-pages.
+  const EMAIL_ACTIVE_PREFIXES = ["/join/pro", "/join/domain", "/join/email-"];
+  function isNavItemActive(item, isDefaultActive) {
+    if (isDefaultActive) return true;
+    if (item.label === "Email") {
+      return EMAIL_ACTIVE_PREFIXES.some((p) => location.pathname.startsWith(p));
+    }
+    return false;
+  }
+
   // Desktop nav split into two blocks of 3 (see JSX below) — first half /
   // second half of the 6-item nav array.
   const navLeft = nav.slice(0, 3);
@@ -84,13 +99,19 @@ export default function Header() {
             ? () => {
                 // Guard against re-navigating on every re-entry (see
                 // NavDropdown's handleEnter for why this matters).
-                if (location.pathname !== item.href) navigate(item.href);
+                // replace: true — a hover shouldn't count as a real
+                // navigation step. Without it, every mouse-enter across the
+                // nav bar pushes a new history entry, so CloseButton's "go
+                // back to where this was opened from" (used by the 4 Email
+                // plan pages) can land on a junk hover-entry instead of the
+                // actual originating page/scroll position.
+                if (location.pathname !== item.href) navigate(item.href, { replace: true });
               }
             : undefined
         }
         className={({ isActive }) =>
           `rounded-md px-3 py-1.5 text-[15px] font-medium transition-colors hover:text-brand ${
-            isActive ? "bg-gray-100 text-brand" : "text-ink"
+            isNavItemActive(item, isActive) ? "bg-gray-100 text-brand" : "text-ink"
           }`
         }
       >
@@ -129,7 +150,7 @@ export default function Header() {
         {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
           <span
-            className="group relative flex shrink-0 cursor-default items-center gap-1.5 font-semibold text-ink transition-[font-weight] duration-200 hover:font-extrabold"
+            className="group relative flex shrink-0 cursor-default items-center gap-1.5 font-normal text-ink transition-colors duration-200 hover:text-brand"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
             onMouseEnter={bumpVisitCount}
           >

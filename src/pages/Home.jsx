@@ -46,7 +46,7 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 pb-8 sm:px-6 sm:pt-3 sm:pb-10">
+    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 sm:px-6 sm:pt-3">
       <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
@@ -131,7 +131,7 @@ export default function Home() {
           Kept inside the pane-0001 <section> (not its own <section>) so the
           global page-down tab's "next <section>" lookup skips straight to
           #pane-0002 instead of stopping here. ===== */}
-      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 pt-9 pb-[3.2rem] sm:gap-16 sm:pt-12 sm:pb-[4.8rem] lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 pt-9 pb-[calc(3.2rem*var(--pane-gap-scale))] sm:gap-16 sm:pt-12 sm:pb-[calc(4.8rem*var(--pane-gap-scale))] lg:grid-cols-2 lg:gap-20">
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
             {brandify("PhishFlagger")} / Human

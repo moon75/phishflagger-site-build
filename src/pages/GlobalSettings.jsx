@@ -15,7 +15,13 @@
 //   percent-increase-FOOTER-PICTURES/gif     10%
 //   percent-increase-HOME-TOP-PICTURES/gif   10%
 //   pane-vertical-spacing                    py-14 → sm:py-20 (the standard)
-//   pane-spacing-scale-down                  1 → .8 (Home Human/Digital gap — DONE)
+//   pane-spacing-scale-down                  1 → .65 (--pane-gap-scale in index.css — DONE)
+//   nav-page-down-up-tab-bg                  white → bg-gray-100 (DONE)
+//   nav-cycle-arrows-style                   wireframe tab attached to left/right edge, same top offset every page (DONE)
+//   nav-email-active-state                   stays highlighted (grey pill + red text) across /join/pro, /join/domain, /join/email-* (DONE)
+//   visit-badge-hover                        no bold, hover text-brand (full red, not btn-hover-red) (DONE)
+//   icon-link-hover-scale                    1.05/1.1/1.2/1.23/.8/.7 → --icon-link-hover-scale: 1.1 (index.css) — Help page DONE, rest still to migrate
+//   help-page-pane-spacing                   removed forced min-h centering gap + Kickstarter box pt/pb scaled by --pane-gap-scale (DONE)
 
 function Section({ title, id, children }) {
   return (
@@ -138,9 +144,21 @@ export default function GlobalSettings() {
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">pane-vertical-spacing</td>
               <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">py-14 → sm:py-20</td>
             </tr>
-            <tr>
+            <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">pane-spacing-scale-down</td>
-              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">1 → .8</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">1 → .65</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">nav-page-down-up-tab-bg</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">white → gray-100</td>
+            </tr>
+            <tr className="border-b border-line">
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">nav-cycle-arrows-style</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">wireframe tab, left/right edge</td>
+            </tr>
+            <tr>
+              <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">visit-badge-hover</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">no bold, text-brand</td>
             </tr>
           </tbody>
         </table>
@@ -154,6 +172,7 @@ export default function GlobalSettings() {
         <a href="#footer-pics" className="text-brand hover:underline">Footer pictures/gifs</a>
         <a href="#home-top-pics" className="text-brand hover:underline">Home top pictures/gifs</a>
         <a href="#pane-spacing" className="text-brand hover:underline">Pane spacing</a>
+        <a href="#nav-chrome" className="text-brand hover:underline">Nav chrome</a>
         <a href="#colors" className="text-brand hover:underline">Colors</a>
         <a href="#body-text" className="text-brand hover:underline">Other body text</a>
       </nav>
@@ -247,7 +266,7 @@ export default function GlobalSettings() {
         </p>
         <Table>
           <Row where="Site-wide standard section padding" value="py-14 → sm:py-20" note="47 occurrences — treat as the standard" />
-          <Row where="Home — Human/Digital verification block, bottom gap before #pane-0002" value="pb-16 → sm:pb-24 scaled to pb-[3.2rem] → sm:pb-[4.8rem]" note="DONE — scaled ×0.8 per owner note" />
+          <Row where="Home — Human/Digital verification block, bottom gap before #pane-0002" value="pb-[calc(3.2rem*var(--pane-gap-scale))] → sm:pb-[calc(4.8rem*var(--pane-gap-scale))]" note="DONE — driven by --pane-gap-scale (0.65) in index.css; reuse the same calc() pattern anywhere else this gap needs scaling" />
           <Row where="Hero/standalone-page pattern (JoinFree, JoinFreeRegister, JoinFreeTerms, RequestDomain, MessagingAppRequest, EmailMarketingQuote, Press, SupportDesk, Rock, …)" value="pt-14 → pb-16" note={<>12 occurrences <Flag>inconsistent</Flag></>} />
           <Row where="News, EndorseUs, VictimTestimonials, Petition" value="pb-16 → pt-10" note={<>5 occurrences <Flag>inconsistent</Flag></>} />
           <Row where="FAQ, IP, Team, TestStripe(pt-12)" value="pt-14 → pb-20" note={<>4 occurrences <Flag>inconsistent</Flag></>} />
@@ -255,6 +274,15 @@ export default function GlobalSettings() {
           <Row where="EmailFreePlugIn, JoinFreeIframe, JoinCorporateIframe, Home — pane-0002" value="pb-14 → pt-6" note={<>4 occurrences <Flag>inconsistent</Flag></>} />
           <Row where="EndorseUs (2nd block), Blog (2nd block), VictimTestimonials(2nd)" value="pb-12 → pt-14" note={<>3 occurrences <Flag>inconsistent</Flag></>} />
           <Row where="Long tail — Kick, Join, PhishFlaggerOrg, and ~18 more, each used once" value="pt-9/pb-9, pt-6/pb-8, pt-6/pb-20, pt-2/pb-8, pt-14/pb-4, pt-12/pb-6, pb-8/pt-24, pb-6/pt-7, pb-5/pt-5, pb-4/pt-2, …" note={<>24 one-off values — biggest source of inconsistency <Flag>inconsistent</Flag></>} />
+        </Table>
+      </Section>
+
+      <Section id="nav-chrome" title="Header nav chrome (added today)">
+        <Table>
+          <Row where="PageDownButton (up/down tab) — src/components/ui/PageDownButton.jsx" value="bg-white → bg-gray-100" note="Owner-requested" />
+          <Row where="PageCycleArrows (prev/next tabs) — src/components/ui/PageCycleArrows.jsx" value="wireframe tab attached to left/right pane edge, fixed top-20/sm:top-24 on every page" note="Same chrome as PageDownButton's tab; position no longer scales with each hero's height" />
+          <Row where="Header — 'Email' nav tab active state" value="stays highlighted (bg-gray-100 + text-brand) on /join/pro, /join/domain, /join/email-*" note="Header.jsx: isNavItemActive() prefix match" />
+          <Row where="Header — ^000N visit badge, on hover" value="font-semibold → font-normal (no bold); hover color btn-hover-red → text-brand (full red)" note="Owner-requested" />
         </Table>
       </Section>
 

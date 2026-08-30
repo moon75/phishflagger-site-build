@@ -6,13 +6,6 @@ const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%
 
 const logoMarkImg = "/assets/images/logo-mark.png";
 
-const DOMAIN_PROVIDERS = [
-  { domains: ["gmail.com"], provider: "Gmail" },
-  { domains: ["yahoo.com"], provider: "Yahoo" },
-  // Hotmail and Outlook share the same Microsoft icon — one tile, two labels.
-  { domains: ["hotmail.com", "outlook.com"], provider: "Outlook" },
-];
-
 const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
@@ -33,7 +26,7 @@ export default function Help() {
       }}
     >
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="relative flex w-full min-h-[480px] flex-col justify-center px-4 pt-[50px] pb-4 sm:min-h-[560px] sm:px-6 sm:pt-[72px] sm:pb-6">
+      <section className="relative flex w-full flex-col justify-center px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={4} center />
         <div className="mx-auto max-w-content">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-10">
@@ -60,7 +53,7 @@ export default function Help() {
       </section>
 
       {/* ===== Pane 1 — Kickstarter (main box) ===== */}
-      <section className="w-full px-4 pt-9 pb-9 sm:px-6 sm:pt-[50px] sm:pb-[50px]">
+      <section className="w-full px-4 pt-[calc(2.25rem*var(--pane-gap-scale))] pb-[calc(2.25rem*var(--pane-gap-scale))] sm:px-6 sm:pt-[calc(50px*var(--pane-gap-scale))] sm:pb-[calc(50px*var(--pane-gap-scale))]">
         <div className="mx-auto w-full">
           <div className="mx-auto flex w-full max-w-[950px] flex-col items-stretch justify-center">
             {/* Kickstarter, full production card */}
@@ -76,28 +69,6 @@ export default function Help() {
                   </div>
                 </div>
 
-                <div className="h-px w-full bg-gray-200" />
-
-                <div className="px-6 py-3 sm:px-8 sm:py-4">
-                  <h4 className="text-[17px] font-semibold leading-[1.2] tracking-tight text-ink sm:text-[19px]">
-                    Available soon for these domains
-                  </h4>
-                  <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                    {DOMAIN_PROVIDERS.map(({ domains, provider }) => (
-                      <div
-                        key={provider}
-                        className="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#f4f5f8] px-3 py-4 text-center"
-                      >
-                        <DomainIcon provider={provider} />
-                        <span className="flex flex-col gap-0.5 text-[11.5px] font-semibold text-ink">
-                          {domains.map((domain) => (
-                            <span key={domain}>{domain}</span>
-                          ))}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -112,7 +83,7 @@ function HelpCard({ to, label, icon, src, imageClassName = "" }) {
   return (
     <Link
       to={to}
-      className="group flex w-[130px] flex-col items-center transition-transform duration-200 hover:scale-105"
+      className="group flex w-[130px] flex-col items-center transition-transform duration-200 hover:scale-[var(--icon-link-hover-scale)]"
     >
       <span className="mb-3 flex h-[36px] items-end justify-center text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">
         {label}
@@ -184,34 +155,5 @@ function BrandInline() {
       <span className="font-bold text-ink">Phish</span>
       <span className="font-normal text-brand">Flagger</span>
     </em>
-  );
-}
-
-function DomainIcon({ provider }) {
-  if (provider === "Gmail") {
-    return (
-      <svg viewBox="0 0 64 48" className="h-6 w-9" aria-label="Gmail">
-        <path d="M5 10v31h10V20l17 13 17-13v21h10V10l-7-5-20 16L12 5Z" fill="#ea4335" />
-        <path d="M5 10v31h10V20L5 13Z" fill="#4285f4" />
-        <path d="M49 20v21h10V13Z" fill="#34a853" />
-      </svg>
-    );
-  }
-
-  if (provider === "Yahoo") {
-    return (
-      <span className="text-[15px] font-black italic tracking-[-0.08em] text-[#6001d2]">
-        YAHOO!
-      </span>
-    );
-  }
-
-  return (
-    <svg viewBox="0 0 40 40" className="h-6 w-6" aria-hidden="true">
-      <rect x="2" y="2" width="17" height="17" fill="#f25022" />
-      <rect x="21" y="2" width="17" height="17" fill="#7fba00" />
-      <rect x="2" y="21" width="17" height="17" fill="#00a4ef" />
-      <rect x="21" y="21" width="17" height="17" fill="#ffb900" />
-    </svg>
   );
 }

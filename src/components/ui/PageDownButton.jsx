@@ -97,7 +97,7 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
   }
 
   return (
-    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-white">
+    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-gray-100">
       <button
         type="button"
         onClick={handleDown}
