@@ -29,7 +29,7 @@ export default function Telecom() {
         }}
       >
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center />
-        <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center lg:gap-4">
           {/* A — spacer */}
           <div className="hidden lg:block lg:flex-[0.5]" />
 
@@ -38,7 +38,7 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="block h-auto w-[432px] max-h-full max-w-full object-contain"
+              className="relative z-10 block h-auto w-[432px] max-h-full max-w-full scale-[1.3] object-contain lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
@@ -47,7 +47,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing-caller-id-with-status.png"
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="block h-auto max-h-full w-auto max-w-full rounded-xl object-contain"
+              className="relative z-10 block h-auto max-h-full w-auto max-w-full scale-[1.3] rounded-xl object-contain"
             />
           </div>
 
@@ -56,7 +56,7 @@ export default function Telecom() {
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-[95%] w-auto max-w-full -translate-y-3 rounded-2xl object-cover"
+              className="h-[95%] w-auto max-w-full -translate-y-3 scale-[1.2] rounded-2xl object-cover lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 
