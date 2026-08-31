@@ -379,7 +379,7 @@ export default function Video() {
                   href={CATEGORY_SCRIPTS[category]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] font-semibold text-[#e63950] underline transition-colors hover:text-brand-hover"
+                  className="text-[13px] font-semibold text-[#f28b96] underline transition-colors hover:text-brand-hover"
                 >
                   Scripts
                 </a>
@@ -415,10 +415,8 @@ export default function Video() {
                   setPage(n);
                 }}
                 aria-current={n === page ? "page" : undefined}
-                className={`h-8 min-w-8 px-2 text-[13px] font-semibold transition duration-200 ${
-                  n === page
-                    ? "rounded-[7px] bg-[#585858] text-btn-hover-red hover:scale-[1.2] hover:bg-[#3f3f3f]"
-                    : "rounded-[7px] text-ink-muted hover:scale-[1.2] hover:bg-[#585858] hover:text-btn-hover-red"
+                className={`cursor-pointer rounded-md border border-brand px-2.5 py-1 text-[13px] font-medium text-brand transition-transform duration-200 hover:scale-[1.15] hover:text-brand-hover ${
+                  n === page ? "bg-gray-200" : "bg-white"
                 }`}
               >
                 {n}
