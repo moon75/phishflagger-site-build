@@ -154,7 +154,7 @@ export default function DomainAppliance() {
         }}
       >
         <SectionCounter value="^0002" />
-        <PageDownButton />
+        <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="section-title mb-6 flex items-center justify-center gap-3 text-center sm:justify-start sm:text-left">
@@ -226,7 +226,7 @@ export default function DomainAppliance() {
         }}
       >
         <SectionCounter value="^0004" />
-        <PageDownButton />
+        <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">

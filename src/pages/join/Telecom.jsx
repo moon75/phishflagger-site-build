@@ -151,7 +151,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0002" />
-        <PageDownButton containerRef={containerRef} />
+        <PageDownButton containerRef={containerRef} bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="telecom-body-text space-y-4 pl-5">
             <li className="list-disc">
@@ -229,7 +229,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0004" />
-        <PageDownButton containerRef={containerRef} />
+        <PageDownButton containerRef={containerRef} bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
@@ -404,7 +404,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0006" />
-        <PageDownButton containerRef={containerRef} />
+        <PageDownButton containerRef={containerRef} bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <h2 className="telecom-title flex items-center gap-3">
@@ -435,7 +435,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0007" />
-        <PageDownButton />
+        <PageDownButton bg="white" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="telecom-body-text">
             The{" "}
@@ -548,7 +548,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
       }
     >
       {counter && <SectionCounter value={counter} />}
-      <PageDownButton containerRef={containerRef} forceTopOnUp />
+      <PageDownButton containerRef={containerRef} forceTopOnUp bg={tone === "gray" ? "white" : "gray"} />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img

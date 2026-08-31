@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import FaqTabs from "../../components/faq/FaqTabs.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 export default function FAQ() {
   const [searchParams] = useSearchParams();
@@ -19,7 +20,8 @@ export default function FAQ() {
         }}
       >
         <div className="mx-auto max-w-[1240px]">
-          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
+          <h1 className="flex items-center justify-center gap-3 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[44px]">
+            <LogoMark />
             FAQ
           </h1>
 

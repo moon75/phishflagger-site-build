@@ -57,7 +57,7 @@ export default function Footer({ logoSrc = logoImg }) {
               backgroundSize: "140%",
             }}
           >
-            <PageDownButton />
+            <PageDownButton bg="white" />
             <div className="mx-auto max-w-[1200px]">
               <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
                 <div aria-hidden />

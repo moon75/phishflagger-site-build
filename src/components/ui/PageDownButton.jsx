@@ -8,8 +8,18 @@
 // first pane on a page). Pass `forceTopOnUp` to make the up-arrow always
 // jump straight to the very top of the page (header top) instead of just
 // the previous section — useful for a pane that should always return you
-// to the top regardless of what happens to sit above it.
-export default function PageDownButton({ containerRef, targetSelector, block = "start", forceTopOnUp = false }) {
+// to the top regardless of what happens to sit above it. Pass `bg="white"`
+// when the pane this button sits in has a grey/textured background (e.g.
+// the "nice background shade" tower pattern) so the tab reads as a
+// contrasting white tab instead of blending into it — leave the default
+// ("gray") for panes with a plain white background.
+export default function PageDownButton({
+  containerRef,
+  targetSelector,
+  block = "start",
+  forceTopOnUp = false,
+  bg = "gray",
+}) {
   // window.scrollTo(behavior:"smooth") to an absolute Y, rather than
   // element.scrollIntoView(behavior:"smooth") — scrollIntoView's smooth
   // animation was observed to silently no-op on some sections on this
@@ -97,7 +107,9 @@ export default function PageDownButton({ containerRef, targetSelector, block = "
   }
 
   return (
-    <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl border border-t-0 border-[#4a4a4a] bg-gray-100">
+    <div
+      className={`absolute left-1/2 top-0 z-10 flex -translate-x-1/2 overflow-hidden rounded-b-2xl border border-t-0 border-[#4a4a4a] ${bg === "white" ? "bg-white" : "bg-gray-100"}`}
+    >
       <button
         type="button"
         onClick={handleDown}

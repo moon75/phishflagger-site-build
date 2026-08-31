@@ -339,7 +339,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0002" />
-      <PageDownButton targetSelector="#pane-0004" />
+      <PageDownButton targetSelector="#pane-0004" bg="white" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">
           <img
@@ -456,7 +456,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0004" />
-      <PageDownButton targetSelector="#pane-0006" />
+      <PageDownButton targetSelector="#pane-0006" bg="white" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
