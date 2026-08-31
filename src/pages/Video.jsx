@@ -263,6 +263,24 @@ function categoryVideos(category) {
         title: "Video 1 v2",
         description: "",
       },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Outro%20video%20with%20text%20on%20it%20.mp4",
+        title: "Outro Video with Text",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Script%203%20video%20cat.mp4",
+        title: "Script 3 Video - Cat",
+        description: "",
+      },
+      {
+        type: "local",
+        src: "/assets/video1/Oracle/Script%203%20video%20dog.mp4",
+        title: "Script 3 Video - Dog",
+        description: "",
+      },
     ];
   }
 
