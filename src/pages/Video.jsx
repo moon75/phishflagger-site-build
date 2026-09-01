@@ -74,6 +74,7 @@ const VIDEO_CATEGORIES = [
   "CISO",
   "Telecom Caller ID",
   "Oracle",
+  "Oracle2",
 ];
 const CATEGORY_SLUGS = {
   Feature: "",
@@ -84,6 +85,7 @@ const CATEGORY_SLUGS = {
   Learning: "learning",
   "Telecom Caller ID": "telecom-caller-id",
   Oracle: "oracle",
+  Oracle2: "oracle2",
   CISO: "ciso",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
@@ -103,6 +105,7 @@ const CATEGORY_SCRIPTS = {
   Learning: "https://docs.google.com/document/d/1nh8GnkkCM9uDDPFNhSAr9Gfhu49pk_l4YpRbvTsSP4c/edit?usp=sharing",
   "Telecom Caller ID": "https://docs.google.com/document/d/1HsqXIfQIE4AkhKF8tk_Yq0AFoL0UH9xD3qduP0PzGFU/edit?usp=sharing",
   Oracle: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
+  Oracle2: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
   CISO: "https://docs.google.com/document/d/1yEJY1sn-JPJcrRg2w34hihlrBzNlzBKAEidvqMaEW6M/edit?usp=sharing",
 };
 
@@ -257,6 +260,10 @@ function categoryVideos(category) {
         title: "Blood Sugar",
         description: "",
       },
+    ];
+  }
+  if (category === "Oracle2") {
+    return padToFullPage([
       {
         type: "local",
         src: "/assets/video1/Oracle/Video1%20v2.mp4",
@@ -281,7 +288,7 @@ function categoryVideos(category) {
         title: "Script 3 Video - Dog",
         description: "",
       },
-    ];
+    ]);
   }
 
   if (category === "Telecom Caller ID") {
