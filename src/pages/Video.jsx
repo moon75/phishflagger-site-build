@@ -411,7 +411,10 @@ export default function Video() {
             ))}
           </div>
 
-          {/* Page number — shown above the grid so it's easy to spot */}
+          {/* Page number — shown above the grid so it's easy to spot. Hidden
+              when there's only one page, since there's nothing to page
+              between. */}
+          {totalPages > 1 && (
           <div className="mt-4 flex justify-center gap-2 sm:mt-5">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
               <button
@@ -422,14 +425,15 @@ export default function Video() {
                   setPage(n);
                 }}
                 aria-current={n === page ? "page" : undefined}
-                className={`cursor-pointer rounded-md border px-2.5 py-1 text-[13px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
-                  n === page ? "border-brand bg-gray-200 text-brand" : "border-black bg-white text-ink"
+                className={`cursor-pointer rounded-md border border-black px-2.5 py-1 text-[13px] font-medium text-ink transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
+                  n === page ? "bg-gray-200" : "bg-white"
                 }`}
               >
                 {n}
               </button>
             ))}
           </div>
+          )}
         </div>
       </div>
 
