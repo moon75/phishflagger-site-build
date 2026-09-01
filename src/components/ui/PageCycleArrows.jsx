@@ -38,12 +38,12 @@ export default function PageCycleArrows({ pages, current, center = false }) {
   // its own absolute children at the document position it's rendered at.
   const wrapperClass = center ? "" : "relative";
 
-  // Tabs attached to the left/right edge of the pane — same "attached tab"
-  // chrome as PageDownButton's up/down pill (border, no near-edge border,
-  // rounded corners on the far side, white bg, invert to dark on hover) —
-  // just anchored to the side edges instead of the top edge.
+  // Tabs attached to the left/right edge of the pane — same look and feel
+  // as the category buttons on the Video page (white bg, black border,
+  // rounded corners, subtle scale + red text on hover) — just anchored to
+  // the side edges instead of sitting inline.
   const tabClass =
-    "group flex h-11 w-4 cursor-pointer flex-col items-center justify-center overflow-hidden border-[#4a4a4a] bg-white text-[#4a4a4a] transition hover:bg-[#2b2b2b] hover:text-white sm:h-12 sm:w-5";
+    "group flex h-11 w-4 cursor-pointer flex-col items-center justify-center overflow-hidden border-black bg-white text-ink transition-transform duration-200 hover:scale-[1.15] hover:text-brand sm:h-12 sm:w-5";
 
   return (
     <div className={wrapperClass}>
@@ -51,7 +51,7 @@ export default function PageCycleArrows({ pages, current, center = false }) {
         type="button"
         onClick={() => go(-1)}
         aria-label={`Previous: ${prevLabel}`}
-        className={`${position} left-0 ${tabClass} rounded-r-2xl border border-l-0 pl-0.5`}
+        className={`${position} left-0 ${tabClass} rounded-r-md border border-l-0 pl-0.5`}
       >
         <svg
           viewBox="0 0 24 24"
@@ -59,7 +59,7 @@ export default function PageCycleArrows({ pages, current, center = false }) {
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-brand sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
           <path d="M15 6l-6 6 6 6" />
@@ -69,7 +69,7 @@ export default function PageCycleArrows({ pages, current, center = false }) {
         type="button"
         onClick={() => go(1)}
         aria-label={`Next: ${nextLabel}`}
-        className={`${position} right-0 ${tabClass} rounded-l-2xl border border-r-0 pr-0.5`}
+        className={`${position} right-0 ${tabClass} rounded-l-md border border-r-0 pr-0.5`}
       >
         <svg
           viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ export default function PageCycleArrows({ pages, current, center = false }) {
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-btn-hover-red sm:h-3.5 sm:w-3.5"
+          className="h-3 w-3 stroke-[2.6] transition-colors group-hover:stroke-[3.2] group-hover:text-brand sm:h-3.5 sm:w-3.5"
           aria-hidden
         >
           <path d="M9 6l6 6-6 6" />

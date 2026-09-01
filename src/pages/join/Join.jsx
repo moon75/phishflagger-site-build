@@ -73,7 +73,7 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 aria-label="Join PRO — One or Many"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src={oneOrManyImg}
@@ -168,6 +168,7 @@ export default function Join() {
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
+              imageSize="h-[78px] w-[78px] sm:h-[95px] sm:w-[95px]"
             />
             <ActionCard
               to="/human-compatible"
@@ -214,17 +215,16 @@ export default function Join() {
               label="FAQ - Email"
               alt="FAQ - Email"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
+                <svg viewBox="6 5 12 15" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <path
                     d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="white"
+                    stroke="#4a4a4a"
                     strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
+                  <circle cx="12" cy="16.7" r="1.05" fill="#4a4a4a" />
                 </svg>
               }
             />

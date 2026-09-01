@@ -38,25 +38,32 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="relative z-10 block h-auto w-[432px] max-h-full max-w-full scale-[1.3] object-contain lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="relative z-10 block h-auto w-[432px] max-h-full max-w-full scale-[1.8] object-contain lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
           {/* 2 — Caller ID list */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <img
-              src="/assets/images/existing-caller-id-with-status.png"
-              alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="relative z-10 block h-auto max-h-full w-auto max-w-full scale-[1.3] rounded-xl object-contain"
-            />
+            <div className="relative z-10 flex h-full max-h-full aspect-[639/440] max-w-full scale-100 flex-col overflow-hidden rounded-xl">
+              <img
+                src="/assets/images/existing-caller-id-title.png"
+                alt="Existing Caller ID can be used to validate calls now."
+                className="block h-auto w-full shrink-0 object-contain"
+              />
+              <img
+                src="/assets/images/existing-caller-id-with-status.png"
+                alt="The first three calls are marked safe and the fourth is marked fraud."
+                className="block h-auto w-full shrink-0 object-contain"
+              />
+            </div>
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex h-[220px] items-end justify-center lg:h-full lg:flex-1">
+          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-[95%] w-auto max-w-full -translate-y-3 scale-[1.2] rounded-2xl object-cover lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="h-full w-auto max-w-full scale-[1.3] rounded-2xl object-contain lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 

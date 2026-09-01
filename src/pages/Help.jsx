@@ -58,6 +58,9 @@ export default function Help() {
           <div className="mx-auto flex w-full max-w-[950px] flex-col items-stretch justify-center">
             {/* Kickstarter, full production card */}
             <div className="flex flex-col items-center">
+              <span className="mb-3 text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">
+                Kickstarter
+              </span>
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-[#FFFF00]">
                 <div className="bg-[#FFFF00] pb-3 sm:pb-4">
                   <div className="flex aspect-[1916/575] w-full justify-center overflow-hidden">
@@ -134,17 +137,16 @@ function SupportDeskIcon() {
 
 function FaqIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
-      <circle cx="12" cy="12" r="11" fill="#f59e0b" />
+    <svg viewBox="6 5 12 15" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
       <path
         d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-        stroke="white"
+        stroke="#4a4a4a"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
-      <circle cx="12" cy="16.7" r="1.05" fill="white" />
+      <circle cx="12" cy="16.7" r="1.05" fill="#4a4a4a" />
     </svg>
   );
 }
