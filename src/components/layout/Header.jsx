@@ -16,20 +16,15 @@ export default function Header() {
   const headerRef = useRef(null);
 
   // "^0001"-style badge — no longer a real visit count, just a fun
-  // gimmick: it ticks up by one each time you hover over it. The count is
+  // gimmick: it ticks up by one on every page load/refresh. The count is
   // saved to a cookie so it carries over across reloads/visits too.
   const [visitCount, setVisitCount] = useState(1);
   useEffect(() => {
     const saved = Number(readCookie("pf_hover_count"));
-    if (Number.isFinite(saved) && saved > 0) setVisitCount(saved);
+    const next = Number.isFinite(saved) && saved > 0 ? saved + 1 : 1;
+    setVisitCount(next);
+    writeCookie("pf_hover_count", String(next));
   }, []);
-  function bumpVisitCount() {
-    setVisitCount((n) => {
-      const next = n + 1;
-      writeCookie("pf_hover_count", String(next));
-      return next;
-    });
-  }
   const visitBadge = formatVisitCount(visitCount);
 
   // Country badge — shows the country picked on /country, read from a
@@ -152,7 +147,6 @@ export default function Header() {
           <span
             className="group relative flex shrink-0 cursor-default items-center gap-1.5 font-normal text-ink transition-colors duration-200 hover:text-brand"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
-            onMouseEnter={bumpVisitCount}
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />

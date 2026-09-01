@@ -54,7 +54,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-10 object-contain"
+            className="h-auto w-full -translate-y-6 object-contain"
           />
         </div>
         <div className="min-w-0 lg:flex-1">

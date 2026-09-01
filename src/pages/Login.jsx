@@ -5,9 +5,11 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
   function onSubmit(event) {
     event.preventDefault();
+    setError(true);
   }
 
   return (
@@ -74,15 +76,16 @@ export default function Login() {
               />
             </div>
 
+            {error && (
+              <p role="alert" className="text-center text-[13px] font-semibold text-[#c9002b]">
+                Account not found or wrong password.
+              </p>
+            )}
+
             <div className="relative mt-2 inline-flex w-full">
-              <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">
-                Coming Soon
-              </span>
               <button
                 type="submit"
-                disabled
-                aria-disabled="true"
-                className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-md bg-[#4a4a4a] px-7 py-3 text-[14px] font-semibold text-white transition duration-200 hover:bg-[#d9d9d9] hover:text-[#2b2b2b]"
+                className="inline-flex w-full items-center justify-center rounded-md bg-[#4a4a4a] px-7 py-3 text-[14px] font-semibold text-white transition duration-200 hover:bg-[#2f2f2f]"
               >
                 Sign In
               </button>

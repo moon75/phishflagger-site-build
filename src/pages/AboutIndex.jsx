@@ -135,7 +135,7 @@ export default function AboutIndex() {
                   />
                 </Link>
                 <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
-                  Blockchain brings tamper-proof sequence.
+                  Blockchain solved tamper-proof sequence.
                 </p>
               </div>
 
