@@ -9,7 +9,12 @@ import { useNavigate } from "react-router-dom";
 // arrows within the nearest positioned ancestor (e.g. the hero <section>)
 // — still `absolute`, so it scrolls away with that section rather than
 // staying pinned to the viewport.
-export default function PageCycleArrows({ pages, current, center = false }) {
+export default function PageCycleArrows({
+  pages,
+  current,
+  center = false,
+  topClass = "top-20 sm:top-24",
+}) {
   const navigate = useNavigate();
   const total = pages.length;
 
@@ -29,7 +34,7 @@ export default function PageCycleArrows({ pages, current, center = false }) {
   // hero's own height) so left/right arrows land at the identical spot
   // across Home/Video/Email/Telecom/Help/About regardless of that page's
   // hero content height.
-  const position = "absolute top-20 z-10 sm:top-24";
+  const position = `absolute z-10 ${topClass}`;
 
   // When centering within an ancestor `section`, this component must not
   // introduce its own positioning context (it has no height of its own),

@@ -29,7 +29,7 @@ export default function AboutIndex() {
     >
       {/* ===== Pane 1 — About links (2 columns) — roughly half the height of the Home hero pane ===== */}
       <section className="relative flex min-h-[400px] w-full items-center px-4 py-12 sm:min-h-[460px] sm:px-6 sm:py-16">
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={5} center />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={5} center topClass="top-0 sm:top-2" />
         <div className="mx-auto grid w-full max-w-content grid-cols-1 gap-x-16 gap-y-10 sm:grid-cols-2">
           <ul className="space-y-5 text-center sm:pl-40 sm:text-left lg:pl-56">
             {LEFT_LINKS.map((item) => (

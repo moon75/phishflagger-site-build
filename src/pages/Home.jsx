@@ -47,7 +47,7 @@ export default function Home() {
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
     <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 sm:px-6 sm:pt-3">
-      <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center />
+      <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center topClass="top-0 sm:top-2" />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">
@@ -482,7 +482,7 @@ export default function Home() {
           <img
             src={pane0004MessageCardImg}
             alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
-            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain"
+            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain transition-transform duration-200 hover:scale-[1.2]"
           />
 
           <div className="flex flex-col items-center">

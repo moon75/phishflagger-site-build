@@ -39,8 +39,13 @@ export default function PageDownButton({
     // A button rendered above the first <section> (e.g. an intro/hero
     // button) treats that first section as "current" so it still advances
     // relative to it, rather than just landing on the one it's already
-    // sitting on top of.
-    const currentSection = event.currentTarget.closest("section") ?? sections[0];
+    // sitting on top of. Also match "#footer-products" itself — the
+    // footer's own pair sits inside that <div>, not a <section>, so
+    // without this, closest("section") would fall through to sections[0]
+    // and the footer's up-arrow would think it's on the very first pane
+    // instead of the last one, jumping straight to the top of the page.
+    const currentSection =
+      event.currentTarget.closest("section, #footer-products") ?? sections[0];
     return currentSection ? sections.indexOf(currentSection) : -1;
   }
 

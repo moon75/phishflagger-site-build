@@ -360,7 +360,7 @@ export default function Video() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center topClass="top-0 sm:top-2" />
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">
@@ -415,8 +415,8 @@ export default function Video() {
                   setPage(n);
                 }}
                 aria-current={n === page ? "page" : undefined}
-                className={`cursor-pointer rounded-md border border-brand px-2.5 py-1 text-[13px] font-medium text-brand transition-transform duration-200 hover:scale-[1.15] hover:text-brand-hover ${
-                  n === page ? "bg-gray-200" : "bg-white"
+                className={`cursor-pointer rounded-md border px-2.5 py-1 text-[13px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
+                  n === page ? "border-brand bg-gray-200 text-brand" : "border-black bg-white text-ink"
                 }`}
               >
                 {n}

@@ -28,7 +28,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center topClass="top-0 sm:top-2" />
         <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center lg:gap-4">
           {/* A — spacer */}
           <div className="hidden lg:block lg:flex-[0.5]" />
