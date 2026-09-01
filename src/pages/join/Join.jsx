@@ -147,7 +147,7 @@ export default function Join() {
             global page-down tab's "next <section>" lookup skips straight to
             #join-human-digital, the first pane with its own page-down
             button pair, instead of stopping here. ===== */}
-        <div className="mx-auto max-w-content pb-4 pt-2 sm:pb-6 sm:pt-3">
+        <div className="mx-auto max-w-content pb-4 pt-8 sm:pb-6 sm:pt-12">
           <div className="flex flex-nowrap justify-center gap-x-3 overflow-x-auto pb-2 sm:gap-x-4">
             <ActionCard
               to="/contact"
