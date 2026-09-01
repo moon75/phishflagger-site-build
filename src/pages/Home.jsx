@@ -86,6 +86,7 @@ export default function Home() {
             </Link>
             <Link
               to="/join/pro"
+              state={{ from: "/" }}
               className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
             >
               Email - PRO
@@ -199,14 +200,14 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Client Plug-In
             </span>
-            <div className="relative w-full max-w-[380px]">
+            <div className="group relative w-full max-w-[380px]">
               <Link
                 to="/kick"
-                className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
+                className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition group-hover:scale-120 hover:scale-120 sm:text-[10px]"
               >
                 <span>Coming Soon</span>
               </Link>
-              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3]">
+              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] transition-transform duration-200 hover:scale-120">
                 <img
                   src={outlookThunderbirdImg}
                   alt="Microsoft Outlook and Mozilla Thunderbird"
@@ -274,6 +275,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/pro"
+                  state={{ from: "/" }}
                   className="mt-3 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Pro
@@ -295,7 +297,7 @@ export default function Home() {
               Domain Appliance
             </span>
             <Link to="/join/domain" className="relative w-full max-w-[380px]">
-              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-105">
+              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-120">
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server appliance"
@@ -456,7 +458,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0004" />
-      <PageDownButton targetSelector="#pane-0006" bg="white" />
+      <PageDownButton bg="white" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
@@ -550,108 +552,6 @@ export default function Home() {
       </div>
     </section>
     )}
-
-    {/* ===== Section 9 — Numbering history gallery (white) ===== */}
-    <section id="pane-0006" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0005" />
-      <PageDownButton />
-      <div className="mx-auto max-w-content">
-        <p className="mx-auto max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
-          Numbering has been revolutionary in creating order and reducing
-          fraud.
-        </p>
-
-        <div className="relative mt-14 sm:mt-16">
-          {/* Timeline connector */}
-          <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />
-
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6 lg:gap-10">
-            <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
-                1470
-              </span>
-              <Link
-                to="/about/numbering-history"
-                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
-              >
-                <img
-                  src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
-                  alt="Numbered papers"
-                  className="h-[85%] w-auto object-contain"
-                />
-                <img
-                  src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
-                  alt="Bundle of numbered books"
-                  className="h-[85%] w-auto object-contain"
-                />
-              </Link>
-              <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
-                Sequential page numbering brings order.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
-                1892
-              </span>
-              <Link
-                to="/about/numbering-history"
-                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
-              >
-                <img
-                  src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
-                  alt="Numbering stamp"
-                  className="h-full w-auto scale-[1.2] object-contain"
-                />
-              </Link>
-              <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
-                Mechanical numbering stops paper fraud.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
-                1991
-              </span>
-              <Link
-                to="/about/numbering-history"
-                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
-              >
-                <img
-                  src="/assets/images/blockchain.png"
-                  alt="Blockchain ledger"
-                  className="h-full w-auto object-contain"
-                />
-              </Link>
-              <p className="mt-4 max-w-[240px] text-center text-[21px] leading-[1.5] text-ink-muted sm:text-[22.5px]">
-                Blockchain brings tamper-proof sequence.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center">
-              <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
-                2026
-              </span>
-              <Link
-                to="/about/numbering-history"
-                className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
-              >
-                <img
-                  src="/assets/images/footer%20history%20pic%203rd.png"
-                  alt="PhishFlagger inbox demonstration"
-                  className="h-full w-full object-contain"
-                />
-              </Link>
-              <p className="mt-4 max-w-[260px] text-center text-[19px] leading-[1.5] text-ink-muted sm:text-[20px]">
-                <BrandInline /> brings back Human Validation, Order, Proof of
-                delivery and helps stop fraud.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     </>
   );

@@ -176,7 +176,7 @@ export default function EmailFreePlugIn() {
         </div>
       </section>
 
-      <section id="efp-pane-3" className="relative w-full px-4 py-14 sm:px-6 sm:py-20">
+      <section id="efp-pane-3" className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
         <PageDownButton targetSelector="#site-footer" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">

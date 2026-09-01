@@ -1,22 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
+// Always navigates forward to a known destination — never browser "back"
+// (navigate(-1)), since that can land on whatever page the user happened
+// to arrive from (a search result, a different site, etc.) rather than
+// the page that actually opened this one. The link that opened this page
+// should pass state={{ from: "/wherever" }} so the X returns there; pages
+// reachable from only one place can just pass a fixed `to` instead.
 export default function CloseButton({ to = "/", force = false }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   function handleClose() {
-    if (force) {
-      navigate(to, { replace: true });
-      return;
-    }
-
-    const historyIndex = Number(window.history.state?.idx);
-
-    if (Number.isFinite(historyIndex) && historyIndex > 0) {
-      navigate(-1);
-      return;
-    }
-
-    navigate(to, { replace: true });
+    const destination = !force && location.state?.from ? location.state.from : to;
+    navigate(destination, { replace: true });
   }
 
   return (

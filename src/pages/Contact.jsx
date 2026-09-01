@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/VLb4zabl";
 
@@ -54,7 +55,8 @@ export default function Contact() {
       <div className="mx-auto max-w-content">
         {/* ===== Top — page heading ===== */}
         <div className="text-center">
-          <h1 className="page-title">
+          <h1 className="page-title flex items-center justify-center gap-3">
+            <LogoMark />
             Contact
           </h1>
         </div>

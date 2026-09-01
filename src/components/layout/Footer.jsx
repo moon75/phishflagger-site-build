@@ -71,7 +71,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     Protecting Communications
                   </h2>
                 </div>
-                <div className="flex items-center justify-end gap-3 pr-[20px]">
+                <div className="flex items-center justify-end gap-8 pr-[20px]">
                   <Link
                     to="/about/faq"
                     className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
@@ -158,6 +158,7 @@ export default function Footer({ logoSrc = logoImg }) {
               links={[
                 { label: "Email - Free Plug-In", href: "/join/email-free-plug-in" },
                 { label: "Email - PRO", href: "/join/pro" },
+                { label: "Email - Domain", href: "/join/domain" },
                 { label: "Telecom", href: "/telecom" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "Email - Marketing", href: "/join/email-marketing" },
@@ -181,7 +182,9 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Contact", href: "/contact" },
                 { label: "Subscribe", href: "/join/email-subscribe" },
                 { label: "Endorse Us", href: "/help/endorse-us" },
-                { label: "White Paper", href: "/white-paper" },
+                { label: "Human Compatible", href: "/human-compatible" },
+                { label: "Digital Verification", href: "/digital-verification" },
+                { label: "FAQ - Email", href: "/about/faq?category=General" },
               ]}
             />
             <FooterSitemapColumn
@@ -192,6 +195,8 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Subscribe", href: "/telecom/subscribe" },
                 { label: "Endorse Safe Calls", href: "/help/telecom-endorse-us" },
                 { label: "Sign Petition", href: "/petition" },
+                { label: "Human Compatible", href: "/human-compatible" },
+                { label: "Digital Verification", href: "/digital-verification" },
               ]}
             />
             <FooterSitemapColumn

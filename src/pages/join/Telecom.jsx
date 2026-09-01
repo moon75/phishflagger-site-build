@@ -29,7 +29,7 @@ export default function Telecom() {
         }}
       >
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center topClass="top-0 sm:top-2" />
-        <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center lg:gap-4">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:gap-8 lg:h-[300px] lg:flex-row lg:flex-nowrap lg:items-stretch lg:justify-center lg:gap-32 lg:translate-x-12">
           {/* A — spacer */}
           <div className="hidden lg:block lg:flex-[0.5]" />
 
@@ -44,18 +44,11 @@ export default function Telecom() {
 
           {/* 2 — Caller ID list */}
           <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
-            <div className="relative z-10 flex h-full max-h-full aspect-[639/440] max-w-full scale-100 flex-col overflow-hidden rounded-xl">
-              <img
-                src="/assets/images/existing-caller-id-title.png"
-                alt="Existing Caller ID can be used to validate calls now."
-                className="block h-auto w-full shrink-0 object-contain"
-              />
-              <img
-                src="/assets/images/existing-caller-id-with-status.png"
-                alt="The first three calls are marked safe and the fourth is marked fraud."
-                className="block h-auto w-full shrink-0 object-contain"
-              />
-            </div>
+            <img
+              src="/assets/images/existing%20caller%20id.png"
+              alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
+              className="relative z-10 block h-auto w-[400px] max-h-full max-w-full scale-[1.7] object-contain"
+            />
           </div>
 
           {/* 3 — granny image */}
@@ -158,7 +151,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0002" />
-        <PageDownButton containerRef={containerRef} bg="white" />
+        <PageDownButton containerRef={containerRef} />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <ul className="telecom-body-text space-y-4 pl-5">
             <li className="list-disc">
@@ -555,7 +548,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
       }
     >
       {counter && <SectionCounter value={counter} />}
-      <PageDownButton containerRef={containerRef} forceTopOnUp bg={tone === "gray" ? "white" : "gray"} />
+      <PageDownButton containerRef={containerRef} forceTopOnUp bg={tone === "gray" ? "gray" : "white"} />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex justify-center">
           <img

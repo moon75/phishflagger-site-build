@@ -46,7 +46,7 @@ export default function Join() {
               <Link
                 to="/join/email-free-plug-in"
                 aria-label="Join Free — Plug-In Free"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
                   src="/assets/images/individual.png"
@@ -72,6 +72,7 @@ export default function Join() {
               </div>
               <Link
                 to="/join/pro"
+                state={{ from: "/email" }}
                 aria-label="Join PRO — One or Many"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
@@ -83,6 +84,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/pro"
+                state={{ from: "/email" }}
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Pro
@@ -126,11 +128,7 @@ export default function Join() {
                 aria-label="Marketing"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
-                <img
-                  src="/assets/images/Marketing%20Email.png"
-                  alt="Join PhishFlagger illustration"
-                  className="h-full w-full object-contain"
-                />
+                <MarketingEmailTextCard />
               </Link>
               <Link
                 to="/join/email-marketing"
@@ -174,19 +172,8 @@ export default function Join() {
               to="/human-compatible"
               label="Human"
               alt="Human"
-              svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#6d28d9" />
-                  <circle cx="12" cy="9" r="3.2" fill="white" />
-                  <path
-                    d="M6 18c1.3-3.1 3.6-4.6 6-4.6s4.7 1.5 6 4.6"
-                    stroke="white"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                </svg>
-              }
+              src="/assets/icons/Human%20icon.png"
+              imageSize="h-[90px] w-[90px] sm:h-[105px] sm:w-[105px]"
             />
             <ActionCard
               to="/digital-verification"
@@ -194,15 +181,11 @@ export default function Join() {
               alt="Digital"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#0ea5e9" />
+                  <circle cx="12" cy="12" r="11" fill="#16a34a" />
                   <path
-                    d="M12 5.5l6 2.2v4.3c0 3.6-2.4 6.4-6 7.5-3.6-1.1-6-3.9-6-7.5V7.7l6-2.2Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M9.3 12.2l1.9 1.9 3.5-3.9"
-                    stroke="#0ea5e9"
-                    strokeWidth="1.6"
+                    d="M7 12.5l3.3 3.3L17 8.5"
+                    stroke="white"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
@@ -215,16 +198,17 @@ export default function Join() {
               label="FAQ - Email"
               alt="FAQ - Email"
               svgIcon={
-                <svg viewBox="6 5 12 15" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
                   <path
                     d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="#4a4a4a"
+                    stroke="white"
                     strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="16.7" r="1.05" fill="#4a4a4a" />
+                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
                 </svg>
               }
             />
@@ -243,6 +227,40 @@ export default function Join() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function MarketingEmailTextCard() {
+  const rows = [
+    { subject: "^5003 Your monthly statement" },
+    { subject: "Low Rate Credit Card of", flagged: true },
+    { subject: "^5002 Your Investing transaction" },
+    { subject: "^5001 Alert: Your Account Balance" },
+  ];
+
+  return (
+    <div
+      role="img"
+      aria-label="Four ABC Bank email subjects, with the low-rate credit-card message highlighted"
+      className="m-1 flex h-[calc(100%-8px)] w-[calc(100%-8px)] flex-col overflow-hidden rounded-[10px] bg-transparent text-left"
+      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+    >
+      {rows.map((row, index) => (
+        <div
+          key={row.subject}
+          className={`flex min-h-0 flex-1 flex-col justify-center px-4 ${
+            row.flagged ? "bg-[#fde8ec]" : "bg-transparent"
+          } ${index < rows.length - 1 ? "border-b border-[#d8d8d8]" : ""}`}
+        >
+          <span className="text-[12px] font-semibold leading-none text-black">
+            ABC Bank
+          </span>
+          <span className="mt-1 whitespace-nowrap text-[11px] font-normal leading-none text-[#075cff]">
+            {row.subject}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
