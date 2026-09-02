@@ -189,7 +189,7 @@ export default function Home() {
     {/* ===== Section 5 — Individual protection: Free Plug-In (white) ===== */}
     <section id="pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
       <SectionCounter value="^0001" />
-      <PageDownButton targetSelector="#pane-0003" />
+      <PageDownButton targetSelector="#pane-0003" forceTopOnUp />
       <div className="mx-auto max-w-content">
         <h2 className="section-title mt-6 mb-10 flex items-center justify-center gap-3 text-center sm:mt-10 sm:mb-14">
           <LogoMark />

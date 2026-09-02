@@ -65,7 +65,7 @@ export default function AboutIndex() {
       {/* ===== Pane 2 — Numbering history gallery (white) — moved here from Home pane-0006 ===== */}
       <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
-        <PageDownButton targetSelector="#site-footer" />
+        <PageDownButton targetSelector="#site-footer" forceTopOnUp />
         <div className="mx-auto max-w-content">
           <p className="mx-auto max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
             Numbering has been revolutionary in creating order and reducing
