@@ -59,6 +59,21 @@ export default function AboutIndex() {
               </li>
             ))}
           </ul>
+          <div className="hidden self-stretch border-l-2 border-black sm:block" aria-hidden />
+          <div className="flex flex-col items-center gap-5 sm:items-start">
+            <Link
+              to="/demo"
+              className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+            >
+              Demo
+            </Link>
+            <Link
+              to="/join/messaging"
+              className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+            >
+              Messaging
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -119,7 +119,7 @@ export default function Join() {
             </div>
             <div className="flex w-auto flex-col items-center">
               <div className="mb-[34px] flex h-[86px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                   Marketing
                 </span>
               </div>
@@ -249,14 +249,14 @@ function MarketingEmailTextCard() {
       {rows.map((row, index) => (
         <div
           key={row.subject}
-          className={`flex min-h-0 flex-1 flex-col justify-center px-4 ${
+          className={`flex min-h-0 flex-1 flex-col justify-center pl-1.5 pr-4 ${
             row.flagged ? "bg-[#fde8ec]" : "bg-transparent"
           } ${index < rows.length - 1 ? "border-b border-[#d8d8d8]" : ""}`}
         >
-          <span className="text-[12px] font-semibold leading-none text-black">
+          <span className="text-[12px] font-semibold leading-none text-[#075cff]">
             ABC Bank
           </span>
-          <span className="mt-1 whitespace-nowrap text-[11px] font-normal leading-none text-[#075cff]">
+          <span className="mt-1 whitespace-nowrap text-[11px] font-normal leading-none text-black">
             {row.subject}
           </span>
         </div>

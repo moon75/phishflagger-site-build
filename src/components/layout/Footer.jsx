@@ -20,7 +20,6 @@ const VIDEO_CATEGORY_LINKS = [
   { label: "Learning", href: "/video1/learning" },
   { label: "CISO", href: "/video1/ciso" },
   { label: "Telecom Caller ID", href: "/video1/telecom-caller-id" },
-  { label: "Oracle", href: "/video1/oracle" },
 ];
 
 const PRODUCT_IMAGES = [
@@ -163,7 +162,6 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "Email - Marketing", href: "/join/email-marketing" },
                 { label: "Kickstarter", href: "/kick" },
-                { label: "Numbering History", href: "/about/numbering-history" },
               ]}
             />
             <FooterSitemapColumn
@@ -206,9 +204,9 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Contact", href: "/contact" },
                 { label: "Support Desk", href: "/help/support-desk" },
                 { label: "FAQ", href: "/about/faq" },
+                { label: "Demo", href: "/demo" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },
-                { label: "Kickstarter", href: "/kick" },
               ]}
             />
             <FooterSitemapColumn

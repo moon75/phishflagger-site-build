@@ -34,29 +34,29 @@ export default function Telecom() {
           <div className="hidden lg:block lg:flex-[0.5]" />
 
           {/* 1 — heading + intro */}
-          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
+          <div className="flex items-center justify-center lg:h-full lg:flex-1 lg:overflow-visible">
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="relative z-10 block h-auto w-[432px] max-h-full max-w-full scale-[1.8] object-contain lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:scale-[1.8] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
+          <div className="flex items-center justify-center lg:h-full lg:flex-1 lg:overflow-visible">
             <img
               src="/assets/images/existing%20caller%20id.png"
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="relative z-10 block h-auto w-[400px] max-h-full max-w-full scale-[1.7] object-contain"
+              className="relative z-10 block h-auto w-full max-w-[340px] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.7]"
             />
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex h-[220px] items-center justify-center lg:h-full lg:flex-1">
+          <div className="flex items-center justify-center lg:h-full lg:flex-1 lg:overflow-visible">
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-full w-auto max-w-full scale-[1.3] rounded-2xl object-contain lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 
@@ -66,7 +66,7 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-6 max-w-content sm:mt-8">
-          <div className="grid grid-cols-[repeat(3,max-content)] place-items-center justify-center gap-x-6 gap-y-4 sm:grid-cols-[repeat(6,max-content)] sm:gap-x-8">
+          <div className="flex flex-wrap items-start justify-center gap-x-6 gap-y-4 sm:gap-x-8">
             <ActionCard
               to="/telecom/contact"
               label="Contact"
@@ -450,11 +450,8 @@ export default function Telecom() {
             <br />
             in the following Jurisdictions:
           </p>
-          <div
-            className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-6 transition-transform duration-200 hover:z-10 hover:scale-[1.5] sm:p-8"
-            style={{ zoom: 0.6 }}
-          >
-            <p className="telecom-body-text">
+          <div className="mx-auto mt-8 max-w-[1100px] rounded-2xl border-2 border-black bg-white p-4 transition-transform duration-200 hover:z-10 hover:scale-[1.3] sm:p-6">
+            <p className="text-[10px] leading-relaxed text-ink sm:text-[12px]">
               Africa, Albania, Australia, Austria, Belgium, Brazil, Bulgaria,
               Canada, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark,
               Egypt, Estonia, Finland, France, Germany, Greece, Hungary, Iceland,

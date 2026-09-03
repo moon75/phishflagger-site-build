@@ -33,21 +33,6 @@ export default function Help() {
             {LINKS.map((item) => (
               <HelpCard key={item.to} {...item} />
             ))}
-            <div className="hidden self-stretch border-l-2 border-black sm:block" aria-hidden />
-            <div className="flex flex-col items-start gap-3">
-              <Link
-                to="/demo"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Demo
-              </Link>
-              <Link
-                to="/join/messaging"
-                className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
-              >
-                Messaging
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -55,19 +40,19 @@ export default function Help() {
       {/* ===== Pane 1 — Kickstarter (main box) ===== */}
       <section className="w-full px-4 pt-[calc(2.25rem*var(--pane-gap-scale))] pb-[calc(2.25rem*var(--pane-gap-scale))] sm:px-6 sm:pt-[calc(50px*var(--pane-gap-scale))] sm:pb-[calc(50px*var(--pane-gap-scale))]">
         <div className="mx-auto w-full">
-          <div className="mx-auto flex w-full max-w-[950px] flex-col items-stretch justify-center">
+          <div className="mx-auto flex w-full max-w-[700px] flex-col items-stretch justify-center">
             {/* Kickstarter, full production card */}
             <div className="flex flex-col items-center">
-              <span className="mb-3 text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">
+              <span className="mb-3 text-center text-[18px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[20px]">
                 Kickstarter
               </span>
               <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl border-2 border-black bg-[#FFFF00]">
-                <div className="bg-[#FFFF00] pb-3 sm:pb-4">
-                  <div className="flex aspect-[1916/575] w-full justify-center overflow-hidden">
+                <div className="bg-[#FFFF00] pb-1 sm:pb-2">
+                  <div className="flex aspect-[1916/430] w-full items-center justify-center overflow-hidden">
                     <img
                       src={outlookThunderbirdImg}
                       alt="Microsoft Outlook and Mozilla Thunderbird"
-                      className="h-full w-full object-cover"
+                      className="h-[112%] w-[112%] object-contain"
                     />
                   </div>
                 </div>
