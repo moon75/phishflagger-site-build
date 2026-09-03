@@ -46,7 +46,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20caller%20id.png"
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] scale-[0.7] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.7]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] scale-[0.7] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.19]"
             />
           </div>
 

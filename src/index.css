@@ -18,7 +18,7 @@
      `hover:scale-[var(--icon-link-hover-scale)]` against this one value
      instead of picking another number by hand. Target: +10% (see
      /internal/global-settings). */
-  --icon-link-hover-scale: 1.1;
+  --icon-link-hover-scale: 1.2;
 }
 
 /* ==========================================================================

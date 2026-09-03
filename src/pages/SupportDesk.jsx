@@ -9,6 +9,8 @@ export default function SupportDesk() {
     name: "",
     email: "",
     subject: "",
+    phone: "",
+    accountNumber: "",
     message: "",
   });
   const [status, setStatus] = useState("idle");
@@ -95,6 +97,26 @@ export default function SupportDesk() {
                 value={form.subject}
                 onChange={update("subject")}
                 placeholder="What do you need help with?"
+                className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+              />
+            </Field>
+
+            <Field label="Phone Number (optional)">
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={update("phone")}
+                placeholder="Your Phone Number"
+                className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
+              />
+            </Field>
+
+            <Field label="Account Number (optional)">
+              <input
+                type="text"
+                value={form.accountNumber}
+                onChange={update("accountNumber")}
+                placeholder="Your Account Number"
                 className="w-full bg-transparent text-[15px] text-ink placeholder:text-gray-400 focus:outline-none"
               />
             </Field>

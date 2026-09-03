@@ -38,8 +38,7 @@ export default function Demo() {
 
           <p className="mx-auto mt-8 max-w-[640px] text-[16px] leading-[1.6] text-ink-muted sm:mt-10 sm:text-[17px]">
             This will open your default email client (Outlook, Apple Mail,
-            Gmail, etc.). Subject or Content is not required. Just click
-            send.
+            Gmail, etc.).
           </p>
 
           <div className="mx-auto mt-14 max-w-[640px] text-left">
@@ -47,8 +46,8 @@ export default function Demo() {
               What should I expect:
             </h2>
             <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              We will email you a series of 7 emails simulating bank
-              communications. One of them will be a Phish. This will allow
+              We will email you a series of 7 emails simulating bank or
+              marketing communications. One of them will be a Phish. This will allow
               you a way to examine your emails should you suspect they are
               fraudulent.
             </p>
@@ -57,7 +56,7 @@ export default function Demo() {
               automated.
             </p>
             <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              We also validate Digitally.{" "}
+              We also validate the sending domain.{" "}
               <Link
                 to="/digital-verification"
                 className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"

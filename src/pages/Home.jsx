@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
@@ -507,7 +507,7 @@ export default function Home() {
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
               <img
-                src="/assets/images/messaging-icons-and-phone.png"
+                src="/assets/images/messaging-icons-and-phone-animated.gif"
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
                 className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
               />
@@ -600,8 +600,16 @@ function SectionCounter({ value }) {
   );
 }
 
+// Hover delay before the gif starts — a quick mouse-pass shouldn't trigger
+// playback, only a deliberate hover. The static `src` poster frame should
+// match the gif's own first frame, so this delay is invisible: whether the
+// gif has started yet or not, the same picture is on screen either way.
+const PHONE_GIF_HOVER_DELAY_MS = 150;
+
 function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [showGif, setShowGif] = useState(false);
+  const [gifKey, setGifKey] = useState(0);
+  const hoverTimeoutRef = useRef(null);
 
   const sizeClass = large
     ? "mt-[2px] h-auto w-[230px] max-w-full sm:w-[300px] lg:w-[300px]"
@@ -614,28 +622,43 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
       : "h-auto w-[140px] max-w-full sm:w-[180px] lg:w-[170px]";
   const frameClass = large ? "rounded-lg border-2 border-black bg-white" : "";
 
+  // Only mount the gif <img> once the hover delay has elapsed, and bump
+  // `key` each time so it's a fresh element — that's what makes the gif
+  // always restart at frame 1 on every hover, instead of continuing to
+  // play wherever it was left off.
+  function handleMouseEnter() {
+    if (!hoverSrc) return;
+    hoverTimeoutRef.current = window.setTimeout(() => {
+      setGifKey((k) => k + 1);
+      setShowGif(true);
+    }, PHONE_GIF_HOVER_DELAY_MS);
+  }
+
+  function handleMouseLeave() {
+    if (hoverTimeoutRef.current) {
+      window.clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setShowGif(false);
+  }
+
   return (
     <div
       className={`relative z-10 inline-block transition-transform duration-200 hover:z-30 hover:scale-[1.35] ${sizeClass} ${frameClass}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {/* Both images stay mounted for the component's lifetime — the gif
-          plays continuously underneath and hover only crossfades opacity.
-          Swapping `src` (or remounting via `key`) on hover restarted the
-          gif from frame 0 every time, and since the hover scale transform
-          shifts the box under the cursor, that could re-trigger
-          mouseenter/leave and restart it repeatedly ("multiple starts"). */}
       <img
         src={src}
         alt={alt}
-        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${hoverSrc && isHovered ? "opacity-0" : "opacity-100"}`}
+        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${showGif ? "opacity-0" : "opacity-100"}`}
       />
-      {hoverSrc && (
+      {hoverSrc && showGif && (
         <img
+          key={gifKey}
           src={hoverSrc}
           alt={alt}
-          className={`absolute inset-0 block w-full object-contain transition-opacity duration-150 ${large ? "rounded-lg" : ""} ${isHovered ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 block w-full object-contain ${large ? "rounded-lg" : ""}`}
         />
       )}
     </div>
