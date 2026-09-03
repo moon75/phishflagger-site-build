@@ -21,7 +21,7 @@ export default function JoinCorporateIframe() {
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[28px] w-auto shrink-0 object-contain sm:h-[42px]"
+              className="h-[28px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[42px]"
             />
             <h1 className="text-center text-[22px] font-bold leading-tight tracking-tight text-ink sm:text-[34px]">
               <em className="italic">

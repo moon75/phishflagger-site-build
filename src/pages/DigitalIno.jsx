@@ -27,7 +27,7 @@ export default function DigitalIno() {
             <img
               src={topImg}
               alt="Digital verification overview"
-              className="h-auto w-full max-w-[420px] object-contain"
+              className="h-auto w-full max-w-[420px] object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
 
@@ -36,7 +36,7 @@ export default function DigitalIno() {
             <img
               src="/assets/images/phishflagger%20email%20authentication.png"
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
 
@@ -45,7 +45,7 @@ export default function DigitalIno() {
             <img
               src="/assets/images/phishflagger%20digital%20verification.png"
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
 
@@ -74,7 +74,7 @@ export default function DigitalIno() {
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server email hosting"
-                  className="h-full w-full scale-[1.7] object-cover"
+                  className="h-full w-full scale-[1.7] object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
@@ -122,7 +122,7 @@ export default function DigitalIno() {
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server email hosting"
-                  className="h-full w-full scale-[1.7] object-cover"
+                  className="h-full w-full scale-[1.7] object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-7 pb-10">

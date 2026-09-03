@@ -29,7 +29,7 @@ export default function EmailDomain() {
               <img
                 src={logoMarkImg}
                 alt="PhishFlagger envelope and flag mark"
-                className="h-[38px] w-auto shrink-0 object-contain sm:h-[48px]"
+                className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[48px]"
               />
               <h2 className="inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
                 <em className="italic">
@@ -100,7 +100,7 @@ export default function EmailDomain() {
                     <img
                       src={outlookThunderbirdImg}
                       alt="Microsoft Outlook and Mozilla Thunderbird"
-                      className="h-full w-full translate-y-1 scale-[1.5] object-contain"
+                      className="h-full w-full translate-y-1 scale-[1.5] object-contain pic-with-no-link-mouse-over-increase"
                     />
                   </div>
                   <div className="flex flex-1 flex-col gap-3 bg-[#FFFF00] p-7 pb-10">

@@ -74,7 +74,7 @@ export default function Fiction() {
           <img
             src={PAGES[index]}
             alt={`Newspaper page ${index + 1}`}
-            className="max-h-[80vh] w-auto max-w-full rounded-md bg-white object-contain shadow-2xl"
+            className="max-h-[80vh] w-auto max-w-full rounded-md bg-white object-contain shadow-2xl pic-with-no-link-mouse-over-increase"
           />
 
           {/* Next */}

@@ -9,7 +9,7 @@ export default function LogoMark({ className = "" }) {
     <img
       src="/assets/images/logo-mark.png"
       alt="PhishFlagger envelope and flag mark"
-      className={`h-[26px] w-auto shrink-0 object-contain sm:h-[30px] ${className}`}
+      className={`h-[26px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[30px] ${className}`}
     />
   );
 }

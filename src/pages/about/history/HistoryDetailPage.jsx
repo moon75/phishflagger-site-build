@@ -25,7 +25,7 @@ export default function HistoryDetailPage({ title, img, imgAlt }) {
             <img
               src={img}
               alt={imgAlt}
-              className="h-auto w-full rounded-2xl object-contain"
+              className="h-auto w-full rounded-2xl object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
         </div>

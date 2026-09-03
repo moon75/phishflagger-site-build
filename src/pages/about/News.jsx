@@ -107,7 +107,7 @@ export default function News() {
                     <img
                       src={item.image}
                       alt=""
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
                     />
                   </div>
                   <div className="flex flex-1 flex-col px-5 pb-5 pt-5">

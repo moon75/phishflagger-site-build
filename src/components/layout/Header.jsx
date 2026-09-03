@@ -27,6 +27,24 @@ export default function Header() {
   }, []);
   const visitBadge = formatVisitCount(visitCount);
 
+  // Header-top page-down tab layout — click the ^0001 badge to cycle between
+  // two ways: "gap" (default) keeps the nav split into two blocks of 3 with
+  // a reserved center gap the HeaderTopPageDownTab tab pokes down into;
+  // "tight" hides that tab entirely and closes the gap so the nav reads as
+  // one normal, evenly-spaced menu. Every other page-down/up button on the
+  // site is untouched either way. Remembered across visits via a cookie,
+  // same as the visit-count/country badges above.
+  const [navTabMode, setNavTabMode] = useState(() =>
+    readCookie("pf_nav_tab_mode") === "tight" ? "tight" : "gap",
+  );
+  function toggleNavTabMode() {
+    setNavTabMode((prev) => {
+      const next = prev === "gap" ? "tight" : "gap";
+      writeCookie("pf_nav_tab_mode", next);
+      return next;
+    });
+  }
+
   // Country badge — shows the country picked on /country, read from a
   // cookie (set in CountrySelect.jsx) so it's remembered across visits.
   const [countryName, setCountryName] = useState(null);
@@ -144,9 +162,12 @@ export default function Header() {
 
         {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
-          <span
-            className="group relative flex shrink-0 cursor-default items-center gap-1.5 font-normal text-ink transition-colors duration-200 hover:text-brand"
+          <button
+            type="button"
+            onClick={toggleNavTabMode}
+            className="group relative flex shrink-0 cursor-pointer items-center gap-1.5 border-none bg-transparent font-normal text-ink transition-colors duration-200 hover:text-brand"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
+            aria-label={`PhishCounter — click to switch the header nav layout (currently ${navTabMode === "gap" ? "with center page-down tab" : "tight, no center tab"})`}
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
@@ -156,7 +177,7 @@ export default function Header() {
             <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
               PhishCounter
             </span>
-          </span>
+          </button>
           <div
             className="relative flex"
             onMouseEnter={() => setCountryHover(true)}
@@ -229,26 +250,36 @@ export default function Header() {
           {/* Desktop nav + badge — kept tight together */}
           <div className="hidden items-center gap-3 lg:flex">
             <nav aria-label="Primary">
-              {/* Split into two blocks of 3 with a gap between them the
-                  width of the header-top page-down tab, left block nudged
-                  left and right block nudged right. */}
-              <div className="flex items-center">
-                <ul className="-ml-4 flex items-center gap-4">
-                  {navLeft.map((item) => (
+              {navTabMode === "gap" ? (
+                /* Way 1 (default) — split into two blocks of 3 with a gap
+                   between them the width of the header-top page-down tab,
+                   left block nudged left and right block nudged right. */
+                <div className="flex items-center">
+                  <ul className="-ml-4 flex items-center gap-4">
+                    {navLeft.map((item) => (
+                      <li key={item.label}>{renderNavItem(item)}</li>
+                    ))}
+                  </ul>
+                  {/* Exact anchor for the header-top page-down tab below —
+                      its own center is always equidistant from both nav
+                      blocks (A=B), regardless of how wide "About ⌄" etc.
+                      make each side. */}
+                  <div id="nav-gap-anchor" className="w-[120px] shrink-0 sm:w-[132px]" aria-hidden />
+                  <ul className="-mr-4 flex items-center gap-4">
+                    {navRight.map((item) => (
+                      <li key={item.label}>{renderNavItem(item)}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                /* Way 2 — no center gap, no header-top page-down tab: one
+                   normal, evenly-spaced menu. */
+                <ul className="flex items-center gap-4">
+                  {[...navLeft, ...navRight].map((item) => (
                     <li key={item.label}>{renderNavItem(item)}</li>
                   ))}
                 </ul>
-                {/* Exact anchor for the header-top page-down tab below —
-                    its own center is always equidistant from both nav
-                    blocks (A=B), regardless of how wide "About ⌄" etc.
-                    make each side. */}
-                <div id="nav-gap-anchor" className="w-[120px] shrink-0 sm:w-[132px]" aria-hidden />
-                <ul className="-mr-4 flex items-center gap-4">
-                  {navRight.map((item) => (
-                    <li key={item.label}>{renderNavItem(item)}</li>
-                  ))}
-                </ul>
-              </div>
+              )}
             </nav>
 
           </div>
@@ -283,7 +314,7 @@ export default function Header() {
           </button>
         </div>
 
-        <HeaderTopPageDownTab />
+        {navTabMode === "gap" && <HeaderTopPageDownTab />}
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />

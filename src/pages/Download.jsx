@@ -22,7 +22,7 @@ export default function Download() {
                 <img
                   src="/assets/images/thunderbird new pick.avif"
                   alt="Mozilla Thunderbird"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
               <div className="flex justify-center gap-6 px-5 py-5 sm:px-6">
@@ -47,7 +47,7 @@ export default function Download() {
                 <img
                   src={outlookImg}
                   alt="Microsoft Outlook"
-                  className="h-full w-full scale-[1.2] object-cover"
+                  className="h-full w-full scale-[1.2] object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
               <div className="flex justify-center px-5 py-5 sm:px-6">

@@ -122,7 +122,7 @@ function PressAwardCard({
       <img
         src={img}
         alt={name}
-        className="mt-4 h-20 w-20 rounded-full object-cover object-top ring-4 ring-[#eef0f4]"
+        className="mt-4 h-20 w-20 rounded-full object-cover object-top ring-4 ring-[#eef0f4] pic-with-no-link-mouse-over-increase"
       />
       <h3 className="mt-4 text-[17px] font-semibold text-ink">{name}</h3>
       <p className="mt-1 text-[12px] font-medium text-ink-muted">{date}</p>

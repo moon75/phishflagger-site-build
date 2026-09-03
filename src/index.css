@@ -70,6 +70,33 @@
     transform: scale(1.2);
   }
 
+  /* GLOBAL STANDARD — use on any picture that is NOT a link (no <Link>/<a>
+     wrapping it) — a plain illustration/screenshot/diagram. Grows 10% on
+     hover, deliberately smaller than .img-hover-zoom's 20% (that class is
+     for clickable pictures, where the bigger hover reads as "this does
+     something"). Exception: the country picture on /telecom stays on its
+     own manual, bigger hand-tuned hover scale — it needs to grow enough to
+     be legible, so don't migrate it to this class. */
+  .pic-with-no-link-mouse-over-increase {
+    transition: transform 200ms ease-out;
+  }
+  .pic-with-no-link-mouse-over-increase:hover {
+    transform: scale(1.1);
+  }
+
+  /* GLOBAL STANDARD — use on any plain text link (a <Link>/<a> that's just
+     words, not an icon tile or button — e.g. the Press/Team/Blog-style link
+     lists). Grows 10% on hover. Do not hand-roll a one-off hover:scale on
+     text links anymore; use this class name so it stays one tweakable rule
+     site-wide. */
+  .mouse-over-link-increase {
+    display: inline-block;
+    transition: transform 200ms ease-out;
+  }
+  .mouse-over-link-increase:hover {
+    transform: scale(1.1);
+  }
+
   /* GLOBAL STANDARD — use on any section heading (the "Email Marketing",
      "Telecom / Caller ID", "SMS", "Message" style titles paired with
      LogoMark). Do not hand-roll text-[28px] sm:text-[34px] lg:text-[40px]

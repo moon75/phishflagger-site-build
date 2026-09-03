@@ -30,12 +30,12 @@ export default function Messaging() {
             <img
               src={messagingIconsImg}
               alt="Grid of popular messaging app icons"
-              className="h-auto w-[45%] max-w-[300px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:w-[58%]"
+              className="h-auto w-[45%] max-w-[300px] object-contain img-hover-zoom sm:w-[58%]"
             />
             <img
               src={messagesImg}
               alt="Phone showing PhishFlagger numbered messages"
-              className="h-auto w-[28%] max-w-[190px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:w-[36%]"
+              className="h-auto w-[28%] max-w-[190px] object-contain img-hover-zoom sm:w-[36%]"
             />
           </div>
         </div>

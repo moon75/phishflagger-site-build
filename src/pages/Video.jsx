@@ -75,6 +75,8 @@ const VIDEO_CATEGORIES = [
   "Telecom Caller ID",
   "Oracle",
   "Oracle2",
+  "Funny",
+  "From the Vault",
 ];
 const CATEGORY_SLUGS = {
   Feature: "",
@@ -87,6 +89,8 @@ const CATEGORY_SLUGS = {
   Oracle: "oracle",
   Oracle2: "oracle2",
   CISO: "ciso",
+  Funny: "funny",
+  "From the Vault": "from-the-vault",
 };
 const SLUG_CATEGORIES = Object.fromEntries(
   Object.entries(CATEGORY_SLUGS).map(([category, slug]) => [slug, category]),
@@ -382,14 +386,20 @@ export default function Video() {
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
             {VIDEO_CATEGORIES.map((category) => (
               <div key={category} className="flex flex-col items-center gap-1.5">
-                <a
-                  href={CATEGORY_SCRIPTS[category]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[13px] font-semibold text-[#f28b96] underline transition-colors hover:text-brand-hover"
-                >
-                  Scripts
-                </a>
+                {CATEGORY_SCRIPTS[category] ? (
+                  <a
+                    href={CATEGORY_SCRIPTS[category]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[13px] font-semibold text-[#f28b96] underline transition-colors hover:text-brand-hover"
+                  >
+                    Scripts
+                  </a>
+                ) : (
+                  <span className="text-[13px] font-semibold text-transparent" aria-hidden>
+                    Scripts
+                  </span>
+                )}
                 <button
                   type="button"
                   onClick={() => {
@@ -491,7 +501,7 @@ export default function Video() {
                         <img
                           src={v.thumb}
                           alt={v.title}
-                          className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
+                          className="pic-with-no-link-mouse-over-increase h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
                         />
                         <div className="absolute inset-0 flex items-center justify-center">
                           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-black shadow sm:h-10 sm:w-10">

@@ -22,6 +22,11 @@
 //   visit-badge-hover                        no bold, hover text-brand (full red, not btn-hover-red) (DONE)
 //   icon-link-hover-scale                    1.05/1.1/1.2/1.23/.8/.7 → --icon-link-hover-scale: 1.1 (index.css) — Help page DONE, rest still to migrate
 //   help-page-pane-spacing                   removed forced min-h centering gap + Kickstarter box pt/pb scaled by --pane-gap-scale (DONE)
+//   pic-with-no-link-mouse-over-increase     10% (.pic-with-no-link-mouse-over-increase in index.css) — every picture with no
+//                                             <Link>/<a> wrapper, except /telecom's country picture (stays manual, needs to grow
+//                                             more to be legible)
+//   mouse-over-link-increase                 10% (.mouse-over-link-increase in index.css) — every plain text link (not an
+//                                             icon tile/button) — started on the About page's Press/Team/Blog-style link lists
 
 function Section({ title, id, children }) {
   return (

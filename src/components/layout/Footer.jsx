@@ -20,6 +20,8 @@ const VIDEO_CATEGORY_LINKS = [
   { label: "Learning", href: "/video1/learning" },
   { label: "CISO", href: "/video1/ciso" },
   { label: "Telecom Caller ID", href: "/video1/telecom-caller-id" },
+  { label: "Funny", href: "/video1/funny" },
+  { label: "From the Vault", href: "/video1/from-the-vault" },
 ];
 
 const PRODUCT_IMAGES = [
@@ -64,7 +66,7 @@ export default function Footer({ logoSrc = logoImg }) {
                   <img
                     src="/assets/images/logo-mark.png"
                     alt="PhishFlagger envelope and flag mark"
-                    className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px]"
+                    className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px] pic-with-no-link-mouse-over-increase"
                   />
                   <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
                     Protecting Communications
@@ -92,12 +94,12 @@ export default function Footer({ logoSrc = logoImg }) {
                     className="flex flex-col items-center gap-4"
                   >
                     <div
-                      className={`relative flex h-[150px] w-auto items-center transition-transform duration-300 ease-out hover:z-10 hover:scale-130 sm:h-[190px] ${item.offsetClass || ""}`}
+                      className={`relative flex h-[150px] w-auto items-center hover:z-10 sm:h-[190px] ${item.offsetClass || ""}`}
                     >
                       <img
                         src={item.src}
                         alt={item.alt}
-                        className={`${
+                        className={`pic-with-no-link-mouse-over-increase ${
                           item.frame
                             ? "h-full w-auto rounded-lg border-2 border-black object-contain"
                             : "h-full w-auto object-contain"
@@ -135,7 +137,7 @@ export default function Footer({ logoSrc = logoImg }) {
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
-                className="mr-2 inline-block h-[26px] w-auto shrink-0 align-middle object-contain sm:h-[30px]"
+                className="mr-2 inline-block h-[26px] w-auto shrink-0 align-middle object-contain sm:h-[30px] pic-with-no-link-mouse-over-increase"
               />
               <em className="text-black">
                 Phish<strong className="text-[#FF0033]">Flagger</strong>
@@ -204,16 +206,18 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Contact", href: "/contact" },
                 { label: "Support Desk", href: "/help/support-desk" },
                 { label: "FAQ", href: "/about/faq" },
-                { label: "Demo", href: "/demo" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },
               ]}
             />
             <FooterSitemapColumn
               heading="About"
-              links={(nav.find((item) => item.label === "About")?.children ?? []).filter(
-                (item) => item.label !== "Press",
-              )}
+              links={[
+                ...(nav.find((item) => item.label === "About")?.children ?? []).filter(
+                  (item) => item.label !== "Press",
+                ),
+                { label: "Demo", href: "/demo" },
+              ]}
             />
           </div>
         </div>
@@ -290,7 +294,7 @@ export default function Footer({ logoSrc = logoImg }) {
             <img
               src={logoSrc}
               alt="PhishFlagger"
-              className="mx-auto h-auto w-[220px] sm:w-[260px]"
+              className="mx-auto h-auto w-[220px] sm:w-[260px] pic-with-no-link-mouse-over-increase"
             />
             <p className="mt-2 text-[13px] text-[#4a4a4a]">
               Protecting Communications.

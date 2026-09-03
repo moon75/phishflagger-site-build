@@ -35,7 +35,7 @@ export default function Kickstarter() {
               <img
                 src={supportersImg}
                 alt="Happy PhishFlagger supporters"
-                className="mt-8 h-auto w-full max-w-[420px] object-contain"
+                className="mt-8 h-auto w-full max-w-[420px] object-contain pic-with-no-link-mouse-over-increase"
               />
               <Link
                 to="/about/hall-of-fame"

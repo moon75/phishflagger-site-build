@@ -73,7 +73,7 @@ export default function EndorseUs() {
               <img
                 src={grannyImg}
                 alt="Woman on a phone call"
-                className="h-[220px] w-full max-w-[300px] rounded-2xl object-cover object-top shadow-sm"
+                className="h-[220px] w-full max-w-[300px] rounded-2xl object-cover object-top shadow-sm pic-with-no-link-mouse-over-increase"
               />
               <p className="mt-auto max-w-[420px] text-center text-[16px] leading-relaxed text-ink-muted sm:text-left sm:text-[18px]">
                 Share why verified, numbered calls matter to you — your endorsement
@@ -85,7 +85,7 @@ export default function EndorseUs() {
               <img
                 src={supportersImg}
                 alt="Happy PhishFlagger supporters"
-                className="h-[220px] w-full max-w-[600px] object-contain"
+                className="h-[220px] w-full max-w-[600px] object-contain pic-with-no-link-mouse-over-increase"
               />
               <div className="relative mt-auto inline-block">
                 <span className="absolute -top-3 -left-3 z-10 -rotate-12 whitespace-nowrap rounded-full bg-[#c9002b] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white">

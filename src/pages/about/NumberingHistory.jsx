@@ -8,7 +8,7 @@ import blockchainHistoryImg from "../../assets/images/bloch chain history.png";
 export default function NumberingHistory() {
   return (
     <>
-      <CloseButton />
+      <CloseButton to="/about" />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-4 sm:px-6 sm:pt-20"

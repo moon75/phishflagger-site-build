@@ -29,7 +29,7 @@ export default function Login() {
             <img
               src="/assets/images/logo-mark.png"
               alt="PhishFlagger envelope and flag mark"
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain pic-with-no-link-mouse-over-increase"
             />
             <h1 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[28px]">
               Sign In

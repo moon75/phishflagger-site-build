@@ -564,7 +564,7 @@ function BlogImage({ src, alt }) {
         src={src}
         alt={alt}
         onError={onError}
-        className="block h-auto w-full object-cover"
+        className="block h-auto w-full object-cover pic-with-no-link-mouse-over-increase"
       />
       <div
         className="hidden aspect-[16/9] items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 text-[13px] font-medium text-ink-muted"

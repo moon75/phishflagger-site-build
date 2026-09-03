@@ -29,7 +29,7 @@ export default function DomainAppliance() {
               <img
                 src={logoMarkImg}
                 alt="PhishFlagger envelope and flag mark"
-                className="h-[38px] w-auto shrink-0 object-contain sm:h-[48px]"
+                className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[48px]"
               />
               <h2 className="inline-block whitespace-nowrap text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
                 <em className="italic">
@@ -83,7 +83,7 @@ export default function DomainAppliance() {
                   <img
                     src={digitalDomainImg}
                     alt="Cloud and server email hosting"
-                    className="h-full w-full scale-[1.42] object-contain"
+                    className="h-full w-full scale-[1.42] object-contain pic-with-no-link-mouse-over-increase"
                   />
                 </div>
                 {/* Content split into two columns beneath the image — Cloud

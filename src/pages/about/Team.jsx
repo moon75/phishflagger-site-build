@@ -114,7 +114,7 @@ function TeamCard({ name, role, bio, photo }) {
             src={photo}
             alt={name}
             onError={onImgError}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-center pic-with-no-link-mouse-over-increase"
           />
           <div
             className="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-[#2a6df4] to-[#1a52c9] text-[48px] font-bold text-white"

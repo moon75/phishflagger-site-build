@@ -80,7 +80,7 @@ export default function JoinFree() {
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
-                className="h-[38px] w-auto shrink-0 object-contain sm:h-[50px] lg:h-[60px]"
+                className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[50px] lg:h-[60px]"
               />
               <h1 className="page-title">
                 <em className="italic">

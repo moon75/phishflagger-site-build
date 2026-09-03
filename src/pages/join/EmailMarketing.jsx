@@ -25,7 +25,7 @@ export default function EmailMarketing() {
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
-                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+                className="h-[30px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[36px]"
               />
               Brand Protection
             </h2>
@@ -44,7 +44,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:scale-[1.2]"
+              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain img-hover-zoom"
             />
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function EmailMarketing() {
             <img
               src={phishCounterImg}
               alt="PhishCounter subject line example"
-              className="h-auto w-full max-w-[560px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+              className="h-auto w-full max-w-[560px] object-contain img-hover-zoom"
             />
           </div>
 
@@ -69,7 +69,7 @@ export default function EmailMarketing() {
               <img
                 src="/assets/images/logo-mark.png"
                 alt="PhishFlagger envelope and flag mark"
-                className="h-[30px] w-auto shrink-0 object-contain sm:h-[36px]"
+                className="h-[30px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[36px]"
               />
               The Human Part
             </h2>
@@ -132,7 +132,7 @@ export default function EmailMarketing() {
               <img
                 src={inboxImg}
                 alt="PhishFlagger inbox showing validated and flagged emails"
-                className="h-full w-full object-cover transition-transform duration-200 hover:scale-[1.2]"
+                className="h-full w-full object-cover img-hover-zoom"
               />
             </div>
           </div>

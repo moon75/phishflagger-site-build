@@ -6,6 +6,7 @@ import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import { brandify } from "../components/Brand.jsx";
 import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
+import messagesPhoneGif from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v7 animated transparent.gif";
 import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v7-gray-header-ordered.png";
@@ -14,20 +15,22 @@ import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
+import callerIdHandsetGif from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6-animated-transparent.gif";
 import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
 import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import textPhoneGif from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6 animated transparent.gif";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import pane0004MessageCardImg from "../assets/images/home-pane-0004-message-card.png";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
   { label: "Email", src: emailPhoneImg, hoverSrc: "/assets/images/PhishFlagger%20Email%20Gif%20v2.gif" },
-  { label: "Messages", src: messagesPhoneImg },
-  { label: "Text/SMS", src: textPhoneImg },
-  { label: "Caller ID", src: callerIdHandsetImg },
+  { label: "Messages", src: messagesPhoneImg, hoverSrc: messagesPhoneGif },
+  { label: "Text/SMS", src: textPhoneImg, hoverSrc: textPhoneGif },
+  { label: "Caller ID", src: callerIdHandsetImg, hoverSrc: callerIdHandsetGif },
 ];
 
 
@@ -54,49 +57,58 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-6 object-contain"
+            className="h-auto w-full -translate-y-6 object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v2.png"
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.8] object-contain"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src="/assets/images/hero%20v3%20need%20logo%20up.png"
             alt="Woman using PhishFlagger-protected email"
-            className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain"
+            className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
       </div>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
       <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
-        <div className="flex flex-col items-center">
-          {/* Shared label row, centered above the first two phones */}
-          <div className="mb-3 flex items-center justify-center gap-8 sm:mb-4">
-            <Link
-              to="/join/email-free-plug-in"
-              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-            >
-              Email - Free
-            </Link>
-            <Link
-              to="/join/pro"
-              state={{ from: "/" }}
-              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-            >
-              Email - PRO
-            </Link>
-            <Link
-              to="/join/domain"
-              className="text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-            >
-              Email - Domain
-            </Link>
+        <div className="flex flex-col items-stretch">
+          {/* Shared label row — mirrors the phone-row layout below exactly
+              (flex-1 slot for the large phone + a fixed-width slot matching
+              the wide phone's own width classes) so "Email - Domain" is
+              guaranteed to land centered over the wide "Email" phone at
+              every breakpoint, instead of a hand-tuned margin that only
+              lined up at one viewport width. */}
+          <div className="mb-3 flex items-stretch gap-x-12 sm:mb-4 lg:gap-x-[30px]">
+            <div className="flex flex-1 items-center justify-center gap-8">
+              <Link
+                to="/join/email-free-plug-in"
+                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
+              >
+                Email - Free
+              </Link>
+              <Link
+                to="/join/pro"
+                state={{ from: "/" }}
+                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
+              >
+                Email - PRO
+              </Link>
+            </div>
+            <div className="flex w-[146px] items-center justify-center sm:w-[188px] lg:w-[177px]">
+              <Link
+                to="/join/domain"
+                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
+              >
+                Email - Domain
+              </Link>
+            </div>
           </div>
           <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
             <div className="flex flex-1 items-center">
@@ -121,7 +133,7 @@ export default function Home() {
             >
               {s.label}
             </Link>
-            <PhonePlaceholder src={s.src} alt={`${s.label} screen`} wide />
+            <PhonePlaceholder src={s.src} hoverSrc={s.hoverSrc} alt={`${s.label} screen`} wide />
           </div>
         ))}
       </div>
@@ -152,6 +164,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Link
               to="/human-compatible"
+              state={{ from: "/" }}
               className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Human Compatible
@@ -207,7 +220,7 @@ export default function Home() {
               >
                 <span>Coming Soon</span>
               </Link>
-              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] transition-transform duration-200 hover:scale-120">
+              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] transition-transform duration-200 hover:scale-[1.1]">
                 <img
                   src={outlookThunderbirdImg}
                   alt="Microsoft Outlook and Mozilla Thunderbird"
@@ -297,7 +310,7 @@ export default function Home() {
               Domain Appliance
             </span>
             <Link to="/join/domain" className="relative w-full max-w-[380px]">
-              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-120">
+              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-[1.1]">
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server appliance"
@@ -347,12 +360,12 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain transition-transform duration-200 hover:scale-[1.2] lg:-translate-x-8"
+            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain img-hover-zoom lg:-translate-x-8"
           />
           <img
             src="/assets/images/Marketing%20Email.png"
             alt="PhishFlagger email inbox showing numbered messages"
-            className="h-auto w-full max-w-[200px] object-contain transition-transform duration-200 hover:scale-[1.2]"
+            className="h-auto w-full max-w-[200px] object-contain img-hover-zoom"
           />
         </div>
         <div>
@@ -430,18 +443,18 @@ export default function Home() {
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[130px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[200px]"
+              className="h-auto w-full max-w-[130px] object-contain img-hover-zoom sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[135px]"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain img-hover-zoom sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain transition-transform duration-200 hover:scale-[1.2] sm:max-w-[160px]"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain img-hover-zoom sm:max-w-[160px]"
           />
         </div>
       </div>
@@ -470,7 +483,7 @@ export default function Home() {
               <img
                 src="/assets/images/sms-phone-and-text.png"
                 alt="Phone displaying PhishFlagger text messages"
-                className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
               />
               <Link
                 to="/telecom"
@@ -484,7 +497,7 @@ export default function Home() {
           <img
             src={pane0004MessageCardImg}
             alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
-            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain transition-transform duration-200 hover:scale-[1.2]"
+            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain img-hover-zoom"
           />
 
           <div className="flex flex-col items-center">
@@ -496,7 +509,7 @@ export default function Home() {
               <img
                 src="/assets/images/messaging-icons-and-phone.png"
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                className="h-[260px] w-auto max-w-full object-contain transition-transform duration-200 hover:scale-[1.2] sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
               />
               <Link
                 to="/join/messaging"
@@ -563,7 +576,7 @@ function HistoryCard({ img, imgAlt }) {
       <img
         src={img}
         alt={imgAlt}
-        className="h-auto w-full rounded-2xl object-contain"
+        className="h-auto w-full rounded-2xl object-contain pic-with-no-link-mouse-over-increase"
       />
     </div>
   );
@@ -590,24 +603,41 @@ function SectionCounter({ value }) {
 function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const sizeClass = large
+    ? "mt-[2px] h-auto w-[230px] max-w-full sm:w-[300px] lg:w-[300px]"
+    : wide
+      // This mockup (PhishFlagger-Email v6.png) has a noticeably
+      // thinner phone bezel than the Messages/Text/Caller ID
+      // mockups, so at the same width it reads as a smaller device.
+      // Bumped ~4% wider so the phone silhouettes look consistent.
+      ? "h-auto w-[146px] max-w-full sm:w-[188px] lg:w-[177px]"
+      : "h-auto w-[140px] max-w-full sm:w-[180px] lg:w-[170px]";
+  const frameClass = large ? "rounded-lg border-2 border-black bg-white" : "";
+
   return (
-    <img
-      key={isHovered && hoverSrc ? "animated" : "static"}
-      src={isHovered && hoverSrc ? hoverSrc : src}
-      alt={alt}
+    <div
+      className={`relative z-10 inline-block transition-transform duration-200 hover:z-30 hover:scale-[1.35] ${sizeClass} ${frameClass}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={
-        large
-          ? "relative z-10 mt-[2px] block h-auto w-[230px] max-w-full rounded-lg border-2 border-black bg-white object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[300px] lg:w-[300px]"
-          : wide
-            // This mockup (PhishFlagger-Email v6.png) has a noticeably
-            // thinner phone bezel than the Messages/Text/Caller ID
-            // mockups, so at the same width it reads as a smaller device.
-            // Bumped ~4% wider so the phone silhouettes look consistent.
-            ? "relative z-10 block h-auto w-[146px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[188px] lg:w-[177px]"
-            : "relative z-10 block h-auto w-[140px] max-w-full object-contain transition-transform duration-200 hover:z-30 hover:scale-[1.35] sm:w-[180px] lg:w-[170px]"
-      }
-    />
+    >
+      {/* Both images stay mounted for the component's lifetime — the gif
+          plays continuously underneath and hover only crossfades opacity.
+          Swapping `src` (or remounting via `key`) on hover restarted the
+          gif from frame 0 every time, and since the hover scale transform
+          shifts the box under the cursor, that could re-trigger
+          mouseenter/leave and restart it repeatedly ("multiple starts"). */}
+      <img
+        src={src}
+        alt={alt}
+        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${hoverSrc && isHovered ? "opacity-0" : "opacity-100"}`}
+      />
+      {hoverSrc && (
+        <img
+          src={hoverSrc}
+          alt={alt}
+          className={`absolute inset-0 block w-full object-contain transition-opacity duration-150 ${large ? "rounded-lg" : ""} ${isHovered ? "opacity-100" : "opacity-0"}`}
+        />
+      )}
+    </div>
   );
 }

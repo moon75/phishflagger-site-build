@@ -56,7 +56,7 @@ export default function EmailFreePlugIn() {
             <img
               src="/assets/images/logo-mark.png"
               alt="PhishFlagger envelope and flag mark"
-              className="h-[34px] w-auto shrink-0 self-center object-contain sm:h-[42px]"
+              className="h-[34px] w-auto shrink-0 self-center object-contain pic-with-no-link-mouse-over-increase sm:h-[42px]"
             />
             <h1 className="text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
               <em className="italic">
@@ -150,7 +150,7 @@ export default function EmailFreePlugIn() {
                   <img
                     src="/assets/images/logo-mark.png"
                     alt=""
-                    className="h-9 w-9 object-contain"
+                    className="h-9 w-9 object-contain pic-with-no-link-mouse-over-increase"
                   />
                   <span className="mt-3 text-[15px] font-semibold text-ink">
                     Download Page
@@ -187,7 +187,7 @@ export default function EmailFreePlugIn() {
             <img
               src={emailInboxImg}
               alt="Inbox showing PhishCounter numbered email messages in Outlook"
-              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
+              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
           <div className="flex flex-col items-center">
@@ -197,7 +197,7 @@ export default function EmailFreePlugIn() {
             <img
               src={emailInboxImg}
               alt="Inbox showing PhishCounter numbered email messages in Thunderbird"
-              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain"
+              className="h-auto w-full max-w-[460px] rounded-lg border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
         </div>
@@ -257,7 +257,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
         <img
           src={image}
           alt={alt}
-          className={`h-full w-full -translate-y-3 object-contain ${imageScale}`}
+          className={`h-full w-full -translate-y-3 object-contain pic-with-no-link-mouse-over-increase ${imageScale}`}
         />
       </div>
       <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">

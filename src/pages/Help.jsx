@@ -52,7 +52,7 @@ export default function Help() {
                     <img
                       src={outlookThunderbirdImg}
                       alt="Microsoft Outlook and Mozilla Thunderbird"
-                      className="h-[112%] w-[112%] object-contain"
+                      className="h-[112%] w-[112%] object-contain pic-with-no-link-mouse-over-increase"
                     />
                   </div>
                 </div>

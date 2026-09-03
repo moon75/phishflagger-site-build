@@ -110,7 +110,7 @@ function SupporterCard({ name, number, img, quote, index }) {
       <img
         src={img}
         alt={name}
-        className="relative h-24 w-24 rounded-full object-cover ring-4 ring-[#eef0f4]"
+        className="relative h-24 w-24 rounded-full object-cover ring-4 ring-[#eef0f4] pic-with-no-link-mouse-over-increase"
       />
       <h2 className="mt-4 text-[18px] font-semibold text-ink">{name}</h2>
       <span className="mt-1 inline-block rounded-full bg-brand px-3 py-0.5 text-[12px] font-bold text-white tracking-wide">

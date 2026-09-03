@@ -6,14 +6,13 @@ import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
-import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
 import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
-import telecomIntroCombinedImg from "../../assets/images/telecom-intro-combined.png";
+import telecomIntroCombinedImg from "../../assets/images/telecom-intro-combined-transparent.png";
 
 export default function Telecom() {
   const containerRef = useRef(null);
@@ -38,7 +37,7 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:scale-[1.8] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:scale-[1.8] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
@@ -47,7 +46,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20caller%20id.png"
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="relative z-10 block h-auto w-full max-w-[340px] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.7]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] scale-[0.7] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.7]"
             />
           </div>
 
@@ -56,7 +55,7 @@ export default function Telecom() {
             <img
               src="/assets/images/granny image.png"
               alt="User receiving an authenticated call"
-              className="h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 
@@ -70,9 +69,13 @@ export default function Telecom() {
             <ActionCard
               to="/telecom/contact"
               label="Contact"
-              src={contactIcon}
               alt="Contact"
-              imageClassName="rounded-full object-cover"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
+                  <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
+                  <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
+                </svg>
+              }
             />
             <ActionCard
               to="/telecom/subscribe"
@@ -173,17 +176,17 @@ export default function Telecom() {
             <img
               src={threePhoneImg}
               alt="Phones with caller ID display"
-              className="h-auto w-[24vw] max-w-[85px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[130px]"
+              className="h-auto w-[24vw] max-w-[85px] object-contain pic-with-no-link-mouse-over-increase sm:w-full sm:max-w-[130px]"
             />
             <img
               src={desktopPhoneImg}
               alt="Caller ID box with PhishCounter sequence number, verified"
-              className="h-auto w-[32vw] max-w-[125px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[195px]"
+              className="h-auto w-[32vw] max-w-[125px] object-contain pic-with-no-link-mouse-over-increase sm:w-full sm:max-w-[195px]"
             />
             <img
               src={callerIdBoxImg}
               alt="Caller ID box showing a PhishCounter sequence number"
-              className="h-auto w-[28vw] max-w-[115px] object-contain transition-transform duration-200 hover:scale-120 sm:w-full sm:max-w-[180px]"
+              className="h-auto w-[28vw] max-w-[115px] object-contain pic-with-no-link-mouse-over-increase sm:w-full sm:max-w-[180px]"
             />
           </div>
         </div>
@@ -197,7 +200,7 @@ export default function Telecom() {
             <img
               src="/assets/images/image-stir.png"
               alt="Existing CLI"
-              className="h-auto w-full max-w-[500px] transition-transform duration-200 hover:scale-120"
+              className="h-auto w-full max-w-[500px] pic-with-no-link-mouse-over-increase"
             />
           </div>
           <div>
@@ -235,7 +238,7 @@ export default function Telecom() {
             <img
               src="/assets/images/existing%20CLI.jpg"
               alt="STIR/SHAKEN anti-spoofing ecosystem diagram"
-              className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain transition-transform duration-200 hover:scale-120"
+              className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
           <div className="lg:order-1">
@@ -377,7 +380,7 @@ export default function Telecom() {
             <img
               src="/assets/images/Respresntation%20image.png"
               alt="PhishFlagger using existing infrastructure"
-              className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain transition-transform duration-200 hover:scale-120"
+              className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
           <div>
@@ -420,7 +423,7 @@ export default function Telecom() {
             <img
               src="/assets/images/sms-phone-and-text.png"
               alt="Phone showing PhishFlagger SMS messages next to numbered message sequence detail"
-              className="h-auto w-full max-w-[560px] object-contain transition-transform duration-200 hover:scale-120"
+              className="h-auto w-full max-w-[560px] object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
         </div>
@@ -551,7 +554,7 @@ function SplitSection({ image, imageAlt, text, bullets, counter, tone = "white",
           <img
             src={image}
             alt={imageAlt}
-            className="h-auto w-full max-w-[210px] object-contain transition-transform duration-200 hover:scale-120"
+            className="h-auto w-full max-w-[210px] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         {bullets ? (

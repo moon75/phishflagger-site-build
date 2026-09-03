@@ -218,7 +218,7 @@ function PictureBox({ file, uploading, onFile }) {
           <img
             src={previewUrl}
             alt="Uploaded"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
           />
         ) : (
           <span className="px-4 text-center text-[13px] text-ink-muted">

@@ -5,7 +5,6 @@ import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../../assets/images/domain-server-only.png";
 import oneOrManyImg from "../../assets/images/six plugin one or more.png";
-import contactIcon from "../../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
@@ -33,7 +32,7 @@ export default function Join() {
             <img
               src={emailSolutionsCardImg}
               alt="Email Solutions. PhishFlagger protects individuals and organizations who want greater confidence in the authenticity of their emails. Whether you host a domain or use an email client, PhishFlagger adds extra layers of protection against phishing and email impersonation."
-              className="block h-auto w-[380px] max-w-full object-contain"
+              className="block h-auto w-[380px] max-w-full object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
@@ -150,9 +149,13 @@ export default function Join() {
             <ActionCard
               to="/contact"
               label="Contact"
-              src={contactIcon}
               alt="Contact"
-              imageClassName="rounded-full object-cover"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                  <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
+                  <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
+                </svg>
+              }
             />
             <ActionCard
               to="/join/email-subscribe"
@@ -170,6 +173,7 @@ export default function Join() {
             />
             <ActionCard
               to="/human-compatible"
+              state={{ from: "/email" }}
               label="Human"
               alt="Human"
               src="/assets/icons/Human%20icon.png"
@@ -184,7 +188,7 @@ export default function Join() {
                   <circle cx="12" cy="12" r="11" fill="#16a34a" />
                   <path
                     d="M7 12.5l3.3 3.3L17 8.5"
-                    stroke="white"
+                    stroke="black"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -199,16 +203,15 @@ export default function Join() {
               alt="FAQ - Email"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
                   <path
-                    d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="white"
+                    d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+                    stroke="black"
                     strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
+                  <circle cx="12" cy="15.7" r="1.05" fill="black" />
                 </svg>
               }
             />
@@ -267,6 +270,7 @@ function MarketingEmailTextCard() {
 
 function ActionCard({
   to,
+  state,
   label,
   src,
   alt,
@@ -278,6 +282,7 @@ function ActionCard({
   return (
     <Link
       to={to}
+      state={state}
       className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
       <span

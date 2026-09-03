@@ -84,7 +84,7 @@ export default function EndorseUs() {
               <img
                 src={supportersImg}
                 alt="Happy PhishFlagger supporters"
-                className="h-[220px] w-full max-w-[600px] object-contain"
+                className="h-[220px] w-full max-w-[600px] object-contain pic-with-no-link-mouse-over-increase"
               />
               <Link
                 to={

@@ -113,7 +113,7 @@ export default function Kick() {
         <img
           src={howDoesItWorkImg}
           alt="How Does PhishFlagger Work? Human validation via PhishCounter subject line, digital validation via sending domain checks"
-          className="mt-6 h-auto w-full max-w-[480px] object-contain"
+          className="mt-6 h-auto w-full max-w-[480px] object-contain pic-with-no-link-mouse-over-increase"
         />
 
         {/* ===== Email authentication diagram (moved from Home) ===== */}
@@ -121,7 +121,7 @@ export default function Kick() {
           <img
             src="/assets/images/phishflagger%20email%20authentication.png"
             alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
-            className="h-auto w-full object-contain"
+            className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
 
@@ -159,7 +159,7 @@ export default function Kick() {
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[52px] w-auto shrink-0 object-contain sm:h-[64px]"
+              className="h-[52px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[64px]"
             />
             <h2 className="section-title whitespace-nowrap text-left">
               Email Solutions
@@ -221,7 +221,7 @@ export default function Kick() {
               <img
                 src="/assets/images/0005%20image.png"
                 alt="Why PhishFlagger Mail"
-                className="h-auto w-full object-contain"
+                className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
               />
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function Kick() {
             <img
               src={logoMarkImg}
               alt="PhishFlagger envelope and flag mark"
-              className="h-[30px] w-auto shrink-0 object-contain sm:h-[38px] lg:h-[42px]"
+              className="h-[30px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[38px] lg:h-[42px]"
             />
             <h2 className="text-center text-[24px] font-medium tracking-tight text-ink leading-[1.15] sm:text-[32px] lg:text-left lg:text-[36px]">
               Protecting Communications

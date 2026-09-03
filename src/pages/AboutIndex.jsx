@@ -39,7 +39,7 @@ export default function AboutIndex() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
                 >
                   {item.label}
                 </Link>
@@ -52,7 +52,7 @@ export default function AboutIndex() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
                 >
                   {item.label}
                 </Link>

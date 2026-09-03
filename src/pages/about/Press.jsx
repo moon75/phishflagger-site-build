@@ -60,7 +60,7 @@ export default function Press() {
                   <img
                     src={item.image}
                     alt=""
-                    className={`h-full w-full ${
+                    className={`h-full w-full pic-with-no-link-mouse-over-increase ${
                       item.fit === "contain" ? "object-contain" : "object-cover"
                     }`}
                   />
