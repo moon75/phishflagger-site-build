@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { publicPath } from "../lib/publicPath.js";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -27,7 +28,7 @@ export default function Register() {
         <div className="w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-8 shadow-[0_8px_28px_rgba(15,23,42,0.07)] sm:p-10">
           <div className="mb-2 flex items-center justify-center gap-3">
             <img
-              src="/assets/images/logo-mark.png"
+              src={publicPath("/assets/images/logo-mark.png")}
               alt="PhishFlagger envelope and flag mark"
               className="h-8 w-auto object-contain pic-with-no-link-mouse-over-increase"
             />

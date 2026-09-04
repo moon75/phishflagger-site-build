@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
-const outlookThunderbirdImg = "/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage-yellow.png";
+import { publicPath } from "../lib/publicPath.js";
+const outlookThunderbirdImg = publicPath("/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage-yellow.png");
 
-const logoMarkImg = "/assets/images/logo-mark.png";
+const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },

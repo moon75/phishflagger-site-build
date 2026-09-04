@@ -3,6 +3,7 @@ import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import { BrandInline } from "../components/Brand.jsx";
+import { publicPath } from "../lib/publicPath.js";
 
 const LEFT_LINKS = [
   { to: "/about/press", label: "Press" },
@@ -101,12 +102,12 @@ export default function AboutIndex() {
                   className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
                 >
                   <img
-                    src="/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png"
+                    src={publicPath("/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png")}
                     alt="Numbered papers"
                     className="h-[85%] w-auto object-contain"
                   />
                   <img
-                    src="/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png"
+                    src={publicPath("/assets/images/History%20Pane%20Images/bundle%20of%20books%20second%20image.png")}
                     alt="Bundle of numbered books"
                     className="h-[85%] w-auto object-contain"
                   />
@@ -125,7 +126,7 @@ export default function AboutIndex() {
                   className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
                 >
                   <img
-                    src="/assets/images/History%20Pane%20Images/stamp%20third%20image.png"
+                    src={publicPath("/assets/images/History%20Pane%20Images/stamp%20third%20image.png")}
                     alt="Numbering stamp"
                     className="h-full w-auto scale-[1.2] object-contain"
                   />
@@ -144,7 +145,7 @@ export default function AboutIndex() {
                   className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
                 >
                   <img
-                    src="/assets/images/blockchain.png"
+                    src={publicPath("/assets/images/blockchain.png")}
                     alt="Blockchain ledger"
                     className="h-full w-auto object-contain"
                   />
@@ -163,7 +164,7 @@ export default function AboutIndex() {
                   className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
                 >
                   <img
-                    src="/assets/images/footer%20history%20pic%203rd.png"
+                    src={publicPath("/assets/images/footer%20history%20pic%203rd.png")}
                     alt="PhishFlagger inbox demonstration"
                     className="h-full w-full object-contain"
                   />

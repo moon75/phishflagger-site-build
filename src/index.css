@@ -48,6 +48,56 @@
   --font-display: "Mulish", "Mulish Placeholder", sans-serif;
 }
 
+/* Rows sliding/fading up into place — used by MarketingEmailTextCard
+   (Join.jsx) so the mock inbox rows appear one at a time, bottom row
+   first, like real phone notifications arriving one by one — not all at
+   once. Each row gets its own keyframes (row-msg-a through -d) sharing
+   one 8s cycle: a is the bottom row (appears first, at 0%), through d,
+   the top row (appears last, at 64%). All four then hold together until
+   90%, fade out together by 95%, and stay blank until the cycle repeats
+   at 100% — so the whole group empties and refills together rather than
+   each row fading in and out independently. */
+@keyframes row-msg-a {
+  0%, 95%, 100% { opacity: 0; transform: translateY(10px); }
+  2%, 90% { opacity: 1; transform: translateY(0); }
+}
+@keyframes row-msg-b {
+  0%, 21%, 95%, 100% { opacity: 0; transform: translateY(10px); }
+  23%, 90% { opacity: 1; transform: translateY(0); }
+}
+@keyframes row-msg-c {
+  0%, 43%, 95%, 100% { opacity: 0; transform: translateY(10px); }
+  45%, 90% { opacity: 1; transform: translateY(0); }
+}
+@keyframes row-msg-d {
+  0%, 64%, 95%, 100% { opacity: 0; transform: translateY(10px); }
+  66%, 90% { opacity: 1; transform: translateY(0); }
+}
+
+/* Default (not hovered): every row just sits fully visible, same as if
+   there were no animation at all — all four messages shown at once.
+   animation-name is set per row inline (Join.jsx), but with no duration
+   given here it has no visible effect at rest.
+   On hover: animation-duration/iteration/fill only apply while
+   `.group:hover` matches, which (re)starts the named animation fresh from
+   0% every time hover begins, and — since these properties only exist
+   inside this hover rule — the moment hover ends they revert to their
+   CSS-initial values (duration 0s, fill none), snapping the row straight
+   back to fully visible instead of freezing mid-animation. */
+.marketing-inbox-row {
+  opacity: 1;
+  transform: translateY(0);
+}
+.group:hover .marketing-inbox-row {
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.group:hover .marketing-inbox-row {
+  animation-play-state: running;
+}
+
 @layer utilities {
   /* Content wrapper — 1100px on standard screens, scales to 75 vw (max 1600px) on hi-res */
   .max-w-content {

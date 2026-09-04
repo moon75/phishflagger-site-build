@@ -1,6 +1,7 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { Link } from "react-router-dom";
 import outlookImg from "../assets/images/outlook image 90.png";
+import { publicPath } from "../lib/publicPath.js";
 
 export default function Download() {
   return (
@@ -20,7 +21,7 @@ export default function Download() {
             <div className="overflow-hidden rounded-2xl border-2 border-black">
               <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                 <img
-                  src="/assets/images/thunderbird new pick.avif"
+                  src={publicPath("/assets/images/thunderbird new pick.avif")}
                   alt="Mozilla Thunderbird"
                   className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
                 />

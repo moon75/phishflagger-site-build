@@ -3,9 +3,10 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
+import { publicPath } from "../lib/publicPath.js";
 
-const howDoesItWorkImg = "/assets/images/How%20does%20phishflagger%20work-v3-transparent.png";
-const logoMarkImg = "/assets/images/logo-mark.png";
+const howDoesItWorkImg = publicPath("/assets/images/How%20does%20phishflagger%20work-v3-transparent.png");
+const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const DOMAIN_PROVIDERS = [
   { domain: "gmail.com", provider: "Gmail" },
@@ -119,7 +120,7 @@ export default function Kick() {
         {/* ===== Email authentication diagram (moved from Home) ===== */}
         <div className="mt-10 w-full max-w-[1000px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
           <img
-            src="/assets/images/phishflagger%20email%20authentication.png"
+            src={publicPath("/assets/images/phishflagger%20email%20authentication.png")}
             alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
             className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
           />
@@ -219,7 +220,7 @@ export default function Kick() {
 
             <div className="flex w-full max-w-[380px] justify-center lg:ml-auto">
               <img
-                src="/assets/images/0005%20image.png"
+                src={publicPath("/assets/images/0005%20image.png")}
                 alt="Why PhishFlagger Mail"
                 className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
               />

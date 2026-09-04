@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
+import { publicPath } from "../../lib/publicPath.js";
 
 const PRESS_AWARDS = [
   {
@@ -8,7 +9,7 @@ const PRESS_AWARDS = [
     place: "1st Place",
     name: "Dain Oh",
     date: "August 10, 2024",
-    img: "/assets/images/supporters/Dain_Oh.webp",
+    img: publicPath("/assets/images/supporters/Dain_Oh.webp"),
     description:
       'Our Top Recognition for the FIRST to write about PhishFlagger is awarded to Dain Oh. She was the very first editor to recognize and write about our solution.',
     articleUrl:
@@ -20,7 +21,7 @@ const PRESS_AWARDS = [
     place: "2nd Place",
     name: "Austin Harris",
     date: "August 19, 2024",
-    img: "/assets/images/supporters/Austin%20Harris.jpg",
+    img: publicPath("/assets/images/supporters/Austin%20Harris.jpg"),
     description:
       "The SECOND to write about PhishFlagger is awarded to Austin Harris. He was the second editor to recognize and write about our solution.",
     articleUrl:
@@ -32,7 +33,7 @@ const PRESS_AWARDS = [
     place: "3rd Place",
     name: "J.D. Houvener",
     date: "2025",
-    img: "/assets/images/supporters/jd%20houvener.jpg",
+    img: publicPath("/assets/images/supporters/jd%20houvener.jpg"),
     description:
       "In 2025, J.D. Houvener reached out to Mr. Pearce, recognizing his patent.",
     pickUrl: "https://www.youtube.com/@boldpatents/streams",

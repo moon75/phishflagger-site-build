@@ -5,6 +5,7 @@ import LogoMark from "../components/ui/LogoMark.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import kickstarterVideo2Poster from "../assets/images/kickstarter-video-2-poster.png";
+import { publicPath } from "../lib/publicPath.js";
 
 const YOUTUBE_VIDEO_ID = "kqtO0Mq3f-s";
 
@@ -18,25 +19,25 @@ const BASE_VIDEOS = [
   },
   {
     type: "local",
-    src: "/assets/video1/v1.mp4",
+    src: publicPath("/assets/video1/v1.mp4"),
     title: "Thank You Video",
     description: "A closer look at how sequential numbering flags impersonation in real time.",
   },
   {
     type: "local",
-    src: "/assets/video1/v2.mp4",
+    src: publicPath("/assets/video1/v2.mp4"),
     title: "Setup & Protection",
     description: "See how quickly your domain or inbox can be protected end to end.",
   },
   {
     type: "local",
-    src: "/assets/video1/PhishFlagger_Kickstarter_video_1.mp4",
+    src: publicPath("/assets/video1/PhishFlagger_Kickstarter_video_1.mp4"),
     title: "PhishFlagger Kickstarter",
     description: "An introduction to the PhishFlagger Kickstarter campaign.",
   },
   {
     type: "local",
-    src: "/assets/video1/PhishFlagger_Kickstarter_video_2.mp4",
+    src: publicPath("/assets/video1/PhishFlagger_Kickstarter_video_2.mp4"),
     title: "PhishFlagger Kickstarter",
     description: "More on the PhishFlagger Kickstarter campaign.",
     poster: kickstarterVideo2Poster,
@@ -126,37 +127,37 @@ function categoryVideos(category) {
     return padToFullPage([
       {
         type: "local",
-        src: "/assets/video1/monkey video.mp4",
+        src: publicPath("/assets/video1/monkey video.mp4"),
         title: "Coming Soon",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Get the message part1.mp4",
+        src: publicPath("/assets/video1/Get the message part1.mp4"),
         title: "Get the Message - Part 1",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/The Message Part 2 Final.mp4",
+        src: publicPath("/assets/video1/The Message Part 2 Final.mp4"),
         title: "Get the Message - Part 2",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/PhishFlagger_8.04.26_Part3.mp4",
+        src: publicPath("/assets/video1/PhishFlagger_8.04.26_Part3.mp4"),
         title: "PhishFlagger 8.04.26 - Part 3",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Fake_message_reveal_offer_202608071511.mp4",
+        src: publicPath("/assets/video1/Fake_message_reveal_offer_202608071511.mp4"),
         title: "Fake Message Reveal Offer",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Taking_over_the_world_202608102121.mp4",
+        src: publicPath("/assets/video1/Taking_over_the_world_202608102121.mp4"),
         title: "Taking Over the World",
         description: "",
       },
@@ -166,103 +167,103 @@ function categoryVideos(category) {
     return [
       {
         type: "local",
-        src: "/assets/video1/Oracle/Man_and_dog_pet_health_202608130007.mp4",
+        src: publicPath("/assets/video1/Oracle/Man_and_dog_pet_health_202608130007.mp4"),
         title: "Man and Dog Pet Health",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Man_testing_dog_ketone_strips_202608130020.mp4",
+        src: publicPath("/assets/video1/Oracle/Man_testing_dog_ketone_strips_202608130020.mp4"),
         title: "Man Testing Dog Ketone Strips",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Pet_owner_with_dog_in_202608130010.mp4",
+        src: publicPath("/assets/video1/Oracle/Pet_owner_with_dog_in_202608130010.mp4"),
         title: "Pet Owner with Dog",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Pet_product_video_advertisement_202608130012.mp4",
+        src: publicPath("/assets/video1/Oracle/Pet_product_video_advertisement_202608130012.mp4"),
         title: "Pet Product Video Advertisement",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/save%20your%20dog%20too.mp4",
+        src: publicPath("/assets/video1/Oracle/save%20your%20dog%20too.mp4"),
         title: "Save Your Dog Too",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Website_text_display_sequence_202608141319.mp4",
+        src: publicPath("/assets/video1/Oracle/Website_text_display_sequence_202608141319.mp4"),
         title: "Website Text Display Sequence",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Pet%20owner%20with%20dog%20full.mp4",
+        src: publicPath("/assets/video1/Oracle/Pet%20owner%20with%20dog%20full.mp4"),
         title: "Pet Owner with Dog - Full",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Granny_with_cat_save_your_cat_too.mp4",
+        src: publicPath("/assets/video1/Oracle/Granny_with_cat_save_your_cat_too.mp4"),
         title: "Granny: Save Your Cat Too Use Code SAVE123",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/save%20your%20dog%20too_usecode-save123.mp4",
+        src: publicPath("/assets/video1/Oracle/save%20your%20dog%20too_usecode-save123.mp4"),
         title: "Save Your Dog Too Use Code SAVE123",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Granny_monitoring_dog_health_202608212143.mp4",
+        src: publicPath("/assets/video1/Oracle/Granny_monitoring_dog_health_202608212143.mp4"),
         title: "Granny Monitoring Dog Health",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Woman_caring_for_pets_at_202608212137.mp4",
+        src: publicPath("/assets/video1/Oracle/Woman_caring_for_pets_at_202608212137.mp4"),
         title: "Woman Caring for Pets",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Oracle%20Video1.mp4",
+        src: publicPath("/assets/video1/Oracle/Oracle%20Video1.mp4"),
         title: "Oracle Video 1",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Oracle%20Video1%20sameple%202.mp4",
+        src: publicPath("/assets/video1/Oracle/Oracle%20Video1%20sameple%202.mp4"),
         title: "Oracle Video 1 - Sample 2",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Oracle%20Video1%20sameple%203.mp4",
+        src: publicPath("/assets/video1/Oracle/Oracle%20Video1%20sameple%203.mp4"),
         title: "Oracle Video 1 - Sample 3",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Pet_health_commercial_storyboard_202608281110.mp4",
+        src: publicPath("/assets/video1/Oracle/Pet_health_commercial_storyboard_202608281110.mp4"),
         title: "Pet Health Commercial Storyboard",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Oracle%C2%AEBlood%20Glucose%20Meter%20Video.mp4",
+        src: publicPath("/assets/video1/Oracle/Oracle%C2%AEBlood%20Glucose%20Meter%20Video.mp4"),
         title: "Oracle® Blood Glucose Meter Video",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/BloodSugar.mp4",
+        src: publicPath("/assets/video1/Oracle/BloodSugar.mp4"),
         title: "Blood Sugar",
         description: "",
       },
@@ -272,25 +273,25 @@ function categoryVideos(category) {
     return padToFullPage([
       {
         type: "local",
-        src: "/assets/video1/Oracle/Video1%20v2.mp4",
+        src: publicPath("/assets/video1/Oracle/Video1%20v2.mp4"),
         title: "Video 1 v2",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Outro%20video%20with%20text%20on%20it%20.mp4",
+        src: publicPath("/assets/video1/Oracle/Outro%20video%20with%20text%20on%20it%20.mp4"),
         title: "Outro Video with Text",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Script%203%20video%20cat.mp4",
+        src: publicPath("/assets/video1/Oracle/Script%203%20video%20cat.mp4"),
         title: "Script 3 Video - Cat",
         description: "",
       },
       {
         type: "local",
-        src: "/assets/video1/Oracle/Script%203%20video%20dog.mp4",
+        src: publicPath("/assets/video1/Oracle/Script%203%20video%20dog.mp4"),
         title: "Script 3 Video - Dog",
         description: "",
       },
@@ -301,7 +302,7 @@ function categoryVideos(category) {
     return padToFullPage([
       {
         type: "local",
-        src: "/assets/video1/Telecom/PhishFlagger_FINAL_bright_logo.mp4",
+        src: publicPath("/assets/video1/Telecom/PhishFlagger_FINAL_bright_logo.mp4"),
         title: "PhishFlagger Telecom / Caller ID",
         description: "",
       },
@@ -312,7 +313,7 @@ function categoryVideos(category) {
     return padToFullPage([
       {
         type: "local",
-        src: "/assets/video1/PhishFlagger_protecting_communications.mp4",
+        src: publicPath("/assets/video1/PhishFlagger_protecting_communications.mp4"),
         title: "PhishFlagger - Protecting Communications",
         description: "",
       },

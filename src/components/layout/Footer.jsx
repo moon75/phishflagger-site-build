@@ -9,6 +9,7 @@ import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/Ph
 import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
+import { publicPath } from "../../lib/publicPath.js";
 
 // Mirrors CATEGORY_SLUGS in pages/Video.jsx — keep in sync if categories change there.
 const VIDEO_CATEGORY_LINKS = [
@@ -64,7 +65,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 <div aria-hidden />
                 <div className="flex items-center justify-center gap-3">
                   <img
-                    src="/assets/images/logo-mark.png"
+                    src={publicPath("/assets/images/logo-mark.png")}
                     alt="PhishFlagger envelope and flag mark"
                     className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px] pic-with-no-link-mouse-over-increase"
                   />
@@ -135,7 +136,7 @@ export default function Footer({ logoSrc = logoImg }) {
           <div className="mx-auto max-w-[1280px]">
             <p className="text-[24px] leading-[1.55] text-[#4a4a4a] [text-wrap:balance] max-sm:text-[23px]">
               <img
-                src="/assets/images/logo-mark.png"
+                src={publicPath("/assets/images/logo-mark.png")}
                 alt="PhishFlagger envelope and flag mark"
                 className="mr-2 inline-block h-[26px] w-auto shrink-0 align-middle object-contain sm:h-[30px] pic-with-no-link-mouse-over-increase"
               />

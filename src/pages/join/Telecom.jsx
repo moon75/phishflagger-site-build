@@ -13,6 +13,7 @@ import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/des
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
 import telecomIntroCombinedImg from "../../assets/images/telecom-intro-combined-transparent.png";
+import { publicPath } from "../../lib/publicPath.js";
 
 export default function Telecom() {
   const containerRef = useRef(null);
@@ -44,7 +45,7 @@ export default function Telecom() {
           {/* 2 — Caller ID list */}
           <div className="flex items-center justify-center lg:h-full lg:flex-1 lg:overflow-visible">
             <img
-              src="/assets/images/existing%20caller%20id.png"
+              src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
               className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] scale-[0.7] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.19]"
             />
@@ -53,7 +54,7 @@ export default function Telecom() {
           {/* 3 — granny image */}
           <div className="flex items-center justify-center lg:h-full lg:flex-1 lg:overflow-visible">
             <img
-              src="/assets/images/granny image.png"
+              src={publicPath("/assets/images/granny image.png")}
               alt="User receiving an authenticated call"
               className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
@@ -198,7 +199,7 @@ export default function Telecom() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img
-              src="/assets/images/image-stir.png"
+              src={publicPath("/assets/images/image-stir.png")}
               alt="Existing CLI"
               className="h-auto w-full max-w-[500px] pic-with-no-link-mouse-over-increase"
             />
@@ -236,7 +237,7 @@ export default function Telecom() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center lg:order-2">
             <img
-              src="/assets/images/existing%20CLI.jpg"
+              src={publicPath("/assets/images/existing%20CLI.jpg")}
               alt="STIR/SHAKEN anti-spoofing ecosystem diagram"
               className="h-auto w-full max-w-[520px] rounded-lg border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
@@ -378,7 +379,7 @@ export default function Telecom() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center">
             <img
-              src="/assets/images/Respresntation%20image.png"
+              src={publicPath("/assets/images/Respresntation%20image.png")}
               alt="PhishFlagger using existing infrastructure"
               className="h-auto w-full max-w-[420px] rounded-2xl border-2 border-black object-contain pic-with-no-link-mouse-over-increase"
             />
@@ -421,7 +422,7 @@ export default function Telecom() {
           </div>
           <div className="flex justify-center">
             <img
-              src="/assets/images/sms-phone-and-text.png"
+              src={publicPath("/assets/images/sms-phone-and-text.png")}
               alt="Phone showing PhishFlagger SMS messages next to numbered message sequence detail"
               className="h-auto w-full max-w-[560px] object-contain pic-with-no-link-mouse-over-increase"
             />

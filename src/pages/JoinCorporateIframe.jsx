@@ -1,7 +1,8 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { publicPath } from "../lib/publicPath.js";
 
 const JOIN_CORPORATE_URL = "https://join.phishflagger.com/business/";
-const logoMarkImg = "/assets/images/logo-mark.png";
+const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 export default function JoinCorporateIframe() {
   return (

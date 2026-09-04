@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
-import cloudServerImg from "../../assets/images/domain-server-only.png";
-import oneOrManyImg from "../../assets/images/six plugin one or more.png";
+import cloudServerImg from "../../assets/images/domain-server-only animated.gif";
+import oneOrManyImg from "../../assets/images/six plugin one or more animated.gif";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
+import { publicPath } from "../../lib/publicPath.js";
 
 export default function Join() {
   const containerRef = useRef(null);
@@ -48,7 +49,7 @@ export default function Join() {
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <img
-                  src="/assets/images/individual.png"
+                  src={publicPath("/assets/images/individual-animated.gif")}
                   alt="Individual protection illustration"
                   className="h-full w-full object-contain"
                 />
@@ -125,7 +126,7 @@ export default function Join() {
               <Link
                 to="/join/email-marketing"
                 aria-label="Marketing"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                className="group flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
                 <MarketingEmailTextCard />
               </Link>
@@ -176,7 +177,7 @@ export default function Join() {
               state={{ from: "/email" }}
               label="Human"
               alt="Human"
-              src="/assets/icons/Human%20icon.png"
+              src={publicPath("/assets/icons/Human%20icon.png")}
               imageSize="h-[90px] w-[90px] sm:h-[105px] sm:w-[105px]"
             />
             <ActionCard
@@ -252,9 +253,18 @@ function MarketingEmailTextCard() {
       {rows.map((row, index) => (
         <div
           key={row.subject}
-          className={`flex min-h-0 flex-1 flex-col justify-center pl-1.5 pr-4 ${
+          className={`marketing-inbox-row flex min-h-0 flex-1 flex-col justify-center pl-1.5 pr-4 ${
             row.flagged ? "bg-[#fde8ec]" : "bg-transparent"
           } ${index < rows.length - 1 ? "border-b border-[#d8d8d8]" : ""}`}
+          style={{
+            // Bottom row (highest array index, lowest PhishCounter number)
+            // appears first — each row above it follows in turn, like
+            // messages arriving oldest-first, one at a time. Each row runs
+            // its own named keyframes (row-msg-a..d, in index.css) sharing
+            // one slow 8s cycle, instead of a per-row delay — that keeps
+            // all four in sync forever across loops.
+            animationName: ["row-msg-d", "row-msg-c", "row-msg-b", "row-msg-a"][index],
+          }}
         >
           <span className="text-[12px] font-semibold leading-none text-[#075cff]">
             ABC Bank

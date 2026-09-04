@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { publicPath } from "../../lib/publicPath.js";
 
 
 export default function JoinFree() {
@@ -78,7 +79,7 @@ export default function JoinFree() {
             </button>
             <div className="flex items-center justify-center gap-4">
               <img
-                src="/assets/images/logo-mark.png"
+                src={publicPath("/assets/images/logo-mark.png")}
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[50px] lg:h-[60px]"
               />

@@ -6,8 +6,9 @@ import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
+import { publicPath } from "../../lib/publicPath.js";
 
-const logoMarkImg = "/assets/images/logo-mark.png";
+const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 export default function DomainAppliance() {
   return (
@@ -56,7 +57,7 @@ export default function DomainAppliance() {
           <div className="flex flex-wrap justify-center gap-6 lg:justify-start lg:pl-40">
             <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
-                src="/assets/images/Email-Authentication-Join-Domain-Pro.png"
+                src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
                 alt="Email authentication for domain appliance"
                 className="h-full w-full rounded-lg object-contain"
               />
@@ -191,7 +192,7 @@ export default function DomainAppliance() {
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
             <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
-                src="/assets/images/domain image for homepage.png"
+                src={publicPath("/assets/images/domain image for homepage.png")}
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full rounded-lg object-contain"
               />

@@ -2,8 +2,9 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import supportersImg from "../assets/images/supporters-cartoon.png";
+import { publicPath } from "../lib/publicPath.js";
 
-const grannyImg = "/assets/images/granny%20image.png";
+const grannyImg = publicPath("/assets/images/granny%20image.png");
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/YW0bMhHOg";
 

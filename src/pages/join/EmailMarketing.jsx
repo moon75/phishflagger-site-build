@@ -4,6 +4,7 @@ import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import marketerImg from "../../assets/images/email-marketing-verified-v9.png";
+import { publicPath } from "../../lib/publicPath.js";
 
 export default function EmailMarketing() {
   return (
@@ -23,7 +24,7 @@ export default function EmailMarketing() {
           <div className="space-y-7 text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="flex items-center gap-3 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px]">
               <img
-                src="/assets/images/logo-mark.png"
+                src={publicPath("/assets/images/logo-mark.png")}
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[30px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[36px]"
               />
@@ -67,7 +68,7 @@ export default function EmailMarketing() {
           <div className="text-[15px] leading-relaxed text-ink sm:text-[17px]">
             <h2 className="flex items-center gap-3 text-[28px] font-semibold leading-tight tracking-tight text-ink sm:text-[38px] lg:mt-16">
               <img
-                src="/assets/images/logo-mark.png"
+                src={publicPath("/assets/images/logo-mark.png")}
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[30px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[36px]"
               />

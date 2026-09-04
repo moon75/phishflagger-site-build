@@ -1,32 +1,33 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
+import { publicPath } from "../../lib/publicPath.js";
 
 const PRESS_ITEMS = [
   {
     title:
       'PhishFlagger™ announces a breakthrough in the global fight against Caller ID fraud.',
     url: "https://www.einpresswire.com/article/905767982/phishflagger-announces-a-breakthrough-in-the-global-fight-against-caller-id-fraud",
-    image: "/assets/images/granny image.png",
+    image: publicPath("/assets/images/granny image.png"),
     fit: "cover",
   },
   {
     title: "PhishFlagger anti-phishing email solution released",
     url: "https://appdevelopermagazine.com/phishflagger-anti-phishing-email-solution-released/",
     image:
-      "/assets/images/PhishFlagger-anti-phishing-email-solution-released-App-Developer-Magazine_v6prlp8a.webp",
+      publicPath("/assets/images/PhishFlagger-anti-phishing-email-solution-released-App-Developer-Magazine_v6prlp8a.webp"),
     fit: "cover",
   },
   {
     title: "Top 10 announcements from Black Hat 2024",
     url: "https://web.archive.org/web/20251005223901/https://thereadable.co/top-10-announcements-black-hat-2024/",
-    image: "/assets/images/top 100 annouaments form balck hat.png",
+    image: publicPath("/assets/images/top 100 annouaments form balck hat.png"),
     fit: "cover",
   },
   {
     title:
       "PhishFlagger™ Announces a new anti-phishing solution: a unique email validation technology highlights phishing attacks.",
     url: "https://www.einpresswire.com/article/733555885/phishflagger-announces-a-new-anti-phishing-solution-a-unique-email-validation-technology-highlights-phishing-attack",
-    image: "/assets/images/PhishFlagger Presswire img.png",
+    image: publicPath("/assets/images/PhishFlagger Presswire img.png"),
     fit: "contain",
   },
 ];

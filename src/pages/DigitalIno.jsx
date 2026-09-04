@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import topImg from "../assets/images/3rd section left image.avif";
+import { publicPath } from "../lib/publicPath.js";
 
 export default function DigitalIno() {
   return (
@@ -34,7 +35,7 @@ export default function DigitalIno() {
           {/* ===== Email authentication diagram (moved from Home) ===== */}
           <div className="mx-auto mt-10 w-full max-w-[1000px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
-              src="/assets/images/phishflagger%20email%20authentication.png"
+              src={publicPath("/assets/images/phishflagger%20email%20authentication.png")}
               alt="Email authentication: PhishFlagger, DMARC, SPF, DKIM"
               className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
             />
@@ -43,7 +44,7 @@ export default function DigitalIno() {
           {/* ===== Digital verification diagram (moved from Home) ===== */}
           <div className="mx-auto mt-10 w-full max-w-[900px] overflow-hidden rounded-lg shadow-[0_4px_14px_-4px_rgba(15,23,42,0.15)]">
             <img
-              src="/assets/images/phishflagger%20digital%20verification.png"
+              src={publicPath("/assets/images/phishflagger%20digital%20verification.png")}
               alt="PhishFlagger digital verification: email server, check domain records, validate sending domain, verified"
               className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
             />

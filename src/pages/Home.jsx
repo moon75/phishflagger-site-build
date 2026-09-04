@@ -24,10 +24,11 @@ import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlag
 import textPhoneGif from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6 animated transparent.gif";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import pane0004MessageCardImg from "../assets/images/home-pane-0004-message-card.png";
+import { publicPath } from "../lib/publicPath.js";
 
 const SCREENS = [
   { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
-  { label: "Email", src: emailPhoneImg, hoverSrc: "/assets/images/PhishFlagger%20Email%20Gif%20v2.gif" },
+  { label: "Email", src: emailPhoneImg, hoverSrc: publicPath("/assets/images/PhishFlagger%20Email%20Gif%20v2.gif") },
   { label: "Messages", src: messagesPhoneImg, hoverSrc: messagesPhoneGif },
   { label: "Text/SMS", src: textPhoneImg, hoverSrc: textPhoneGif },
   { label: "Caller ID", src: callerIdHandsetImg, hoverSrc: callerIdHandsetGif },
@@ -55,21 +56,21 @@ export default function Home() {
       <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
         <div className="min-w-0 lg:flex-1">
           <img
-            src="/assets/images/hero%20v1.png"
+            src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
             className="h-auto w-full -translate-y-2 object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
-            src="/assets/images/hero%20v2.png"
+            src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
             className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
-            src="/assets/images/hero%20v3%20need%20logo%20up.png"
+            src={publicPath("/assets/images/hero%20v3%20need%20logo%20up.png")}
             alt="Woman using PhishFlagger-protected email"
             className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain pic-with-no-link-mouse-over-increase"
           />
@@ -363,7 +364,7 @@ export default function Home() {
             className="h-auto w-full max-w-[286px] -translate-x-3 object-contain img-hover-zoom lg:-translate-x-8"
           />
           <img
-            src="/assets/images/Marketing%20Email.png"
+            src={publicPath("/assets/images/Marketing%20Email.png")}
             alt="PhishFlagger email inbox showing numbered messages"
             className="h-auto w-full max-w-[200px] object-contain img-hover-zoom"
           />
@@ -481,7 +482,7 @@ export default function Home() {
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
               <img
-                src="/assets/images/sms-phone-and-text.png"
+                src={publicPath("/assets/images/sms-phone-and-text.png")}
                 alt="Phone displaying PhishFlagger text messages"
                 className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
               />
@@ -507,7 +508,7 @@ export default function Home() {
             </span>
             <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
               <img
-                src="/assets/images/messaging-icons-and-phone-animated.gif"
+                src={publicPath("/assets/images/messaging-icons-and-phone-animated.gif")}
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
                 className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
               />

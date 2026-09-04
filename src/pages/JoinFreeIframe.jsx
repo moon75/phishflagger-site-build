@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import { publicPath } from "../lib/publicPath.js";
 
 const JOIN_FREE_URL = "https://join.phishflagger.com/individual/";
 
@@ -55,7 +56,7 @@ export default function JoinFreeIframe() {
         <div className="mx-auto max-w-content">
           <div className="mb-5 flex flex-wrap items-center justify-center gap-3 sm:mb-8 sm:gap-4">
             <img
-              src="/assets/images/logo-mark.png"
+              src={publicPath("/assets/images/logo-mark.png")}
               alt="PhishFlagger envelope and flag mark"
               className="h-[28px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[42px]"
             />

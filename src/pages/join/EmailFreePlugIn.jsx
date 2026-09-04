@@ -4,6 +4,7 @@ import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
+import { publicPath } from "../../lib/publicPath.js";
 
 const DOWNLOADS = [
   {
@@ -17,7 +18,7 @@ const DOWNLOADS = [
   },
   {
     name: "Thunderbird",
-    image: "/assets/images/thunderbird new pick.avif",
+    image: publicPath("/assets/images/thunderbird new pick.avif"),
     imageScale: "scale-125",
     alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
     actions: [
@@ -54,7 +55,7 @@ export default function EmailFreePlugIn() {
         <div className="mx-auto max-w-content text-center">
           <div className="mb-4 mt-3 flex items-center justify-center gap-4 sm:mt-4">
             <img
-              src="/assets/images/logo-mark.png"
+              src={publicPath("/assets/images/logo-mark.png")}
               alt="PhishFlagger envelope and flag mark"
               className="h-[34px] w-auto shrink-0 self-center object-contain pic-with-no-link-mouse-over-increase sm:h-[42px]"
             />
@@ -148,7 +149,7 @@ export default function EmailFreePlugIn() {
               <div className="flex h-[176px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-6">
                 <div className="flex h-full w-full flex-col items-center justify-center">
                   <img
-                    src="/assets/images/logo-mark.png"
+                    src={publicPath("/assets/images/logo-mark.png")}
                     alt=""
                     className="h-9 w-9 object-contain pic-with-no-link-mouse-over-increase"
                   />

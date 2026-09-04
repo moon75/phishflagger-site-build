@@ -6,8 +6,9 @@ import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
+import { publicPath } from "../../lib/publicPath.js";
 
-const logoMarkImg = "/assets/images/logo-mark.png";
+const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 export default function EmailDomain() {
   return (
@@ -60,7 +61,7 @@ export default function EmailDomain() {
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
-                  src="/assets/images/corporate-image-homepage-center-person.png"
+                  src={publicPath("/assets/images/corporate-image-homepage-center-person.png")}
                   alt="Corporate email protection design"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -72,7 +73,7 @@ export default function EmailDomain() {
               </span>
               <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
                 <img
-                  src="/assets/images/corporate-image-homepage-v5.png"
+                  src={publicPath("/assets/images/corporate-image-homepage-v5.png")}
                   alt="Six-person email protection design"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -166,7 +167,7 @@ export default function EmailDomain() {
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
             <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
-                src="/assets/images/domain image for homepage.png"
+                src={publicPath("/assets/images/domain image for homepage.png")}
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full rounded-lg object-contain"
               />
@@ -203,15 +204,15 @@ export default function EmailDomain() {
         <SectionCounter value="^0004" />
         <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-          <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 sm:p-8">
+          <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
               What you will receive.
             </h3>
-            <div className="mt-4 flex flex-col items-start">
+            <div className="mt-4 flex flex-col items-center">
               <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
                 Plug-In
               </span>
-              <ul className="mt-3 list-disc space-y-2 self-start pl-5 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+              <ul className="mt-3 list-inside list-disc space-y-2 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
                 <li>Terms of Service</li>
                 <li>Access Key</li>
                 <li>Install Plug-In</li>
