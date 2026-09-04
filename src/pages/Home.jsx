@@ -57,7 +57,7 @@ export default function Home() {
           <img
             src="/assets/images/hero%20v1.png"
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-6 object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full -translate-y-2 object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
