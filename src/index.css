@@ -19,6 +19,15 @@
      instead of picking another number by hand. Target: +10% (see
      /internal/global-settings). */
   --icon-link-hover-scale: 1.2;
+
+  /* Single knob for the min-height of a "link list, vertically centered"
+     pane (e.g. the About page's Press/Team/Blog/Demo links pane) — that
+     min-height is what pads the space above and below the links, between
+     the pane's PageCycleArrows/PageDownButton tabs and the content. Write
+     such panes as `min-h-[calc(<base>*var(--link-pane-min-h-scale))]`
+     against their own base px value so trimming this one number re-scales
+     all of them together instead of hand-tuning each min-h separately. */
+  --link-pane-min-h-scale: 0.6;
 }
 
 /* ==========================================================================

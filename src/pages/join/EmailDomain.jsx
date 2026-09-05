@@ -55,11 +55,11 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
-            <div className="flex flex-col items-center">
-              <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
+            <div className="flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink sm:text-[25px]">
                 One
               </span>
-              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
+              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-center-person.png")}
                   alt="Corporate email protection design"
@@ -67,11 +67,11 @@ export default function EmailDomain() {
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <span className="mb-3 text-[22px] font-semibold text-ink sm:text-[25px]">
+            <div className="flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
+              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink sm:text-[25px]">
                 Many
               </span>
-              <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black bg-white p-1">
+              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-v5.png")}
                   alt="Six-person email protection design"
@@ -212,7 +212,7 @@ export default function EmailDomain() {
               <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
                 Plug-In
               </span>
-              <ul className="mt-3 list-inside list-disc space-y-2 text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+              <ul className="mt-3 w-full max-w-[220px] list-outside list-disc space-y-2 pl-5 text-left text-[14px] leading-[1.65] text-ink sm:text-[15px]">
                 <li>Terms of Service</li>
                 <li>Access Key</li>
                 <li>Install Plug-In</li>
@@ -226,16 +226,29 @@ export default function EmailDomain() {
                 As low as $10.00 per Year / per Email
               </span>
             </p>
-            <div className="relative mt-6 inline-block">
-              <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
-                Coming Soon
-              </span>
-              <Link
-                to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+            <div className="mt-6 flex flex-col items-center gap-6">
+              <div className="relative inline-block">
+                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                  Coming Soon
+                </span>
+                <Link
+                  to="/join-corporate"
+                  className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                >
+                  Join PRO
+                </Link>
+              </div>
+              {/* TEST — light button linking out to Dan's page (URL TBD,
+                  "#" placeholder for now). Opens in a new tab, separate
+                  from the existing "Join PRO" button above. */}
+              <a
+                href="https://join.phishflagger.com/business/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
               >
-                Join PRO
-              </Link>
+                Join PRO (test)
+              </a>
             </div>
           </div>
         </div>

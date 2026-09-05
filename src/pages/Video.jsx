@@ -74,10 +74,10 @@ const VIDEO_CATEGORIES = [
   "Learning",
   "CISO",
   "Telecom Caller ID",
-  "Oracle",
-  "Oracle2",
   "Funny",
   "From the Vault",
+  "Oracle",
+  "Oracle2",
 ];
 const CATEGORY_SLUGS = {
   Feature: "",

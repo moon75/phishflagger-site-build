@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
-import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
-import PageDownButton from "../components/ui/PageDownButton.jsx";
 import { BrandInline } from "../components/Brand.jsx";
 import { publicPath } from "../lib/publicPath.js";
 
@@ -31,9 +28,7 @@ export default function AboutIndex() {
       }}
     >
       {/* ===== Pane 1 — About links (2 columns) — no counter number ===== */}
-      <section id="about-pane-0001" className="relative flex min-h-[400px] w-full items-center px-4 py-12 sm:min-h-[460px] sm:px-6 sm:py-16">
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={5} center topClass="top-0 sm:top-2" />
-        <PageDownButton targetSelector="#about-pane-0002" />
+      <section id="about-pane-0001" className="relative flex min-h-[calc(400px*var(--link-pane-min-h-scale))] w-full items-center px-4 py-12 sm:min-h-[calc(460px*var(--link-pane-min-h-scale))] sm:px-6 sm:py-16">
         <div className="mx-auto flex w-full max-w-content flex-col items-center gap-y-10 sm:flex-row sm:items-stretch sm:justify-center sm:gap-x-16">
           <ul className="space-y-5 text-center sm:text-left">
             {LEFT_LINKS.map((item) => (
@@ -81,13 +76,7 @@ export default function AboutIndex() {
       {/* ===== Pane 2 — Numbering history gallery (white) — moved here from Home pane-0006 ===== */}
       <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
-        <PageDownButton targetSelector="#site-footer" forceTopOnUp />
         <div className="mx-auto max-w-content">
-          <p className="mx-auto max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
-            Numbering has been revolutionary in creating order and reducing
-            fraud.
-          </p>
-
           <div className="relative mt-14 sm:mt-16">
             {/* Timeline connector */}
             <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />

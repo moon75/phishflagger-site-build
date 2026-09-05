@@ -22,6 +22,10 @@ export default function NumberingHistory() {
           <h1 className="page-title">
             Numbering History
           </h1>
+          <p className="mx-auto mt-6 max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
+            Numbering has been revolutionary in creating order and reducing
+            fraud.
+          </p>
         </div>
       </section>
 

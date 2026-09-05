@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
@@ -12,6 +12,10 @@ import { publicPath } from "../../lib/publicPath.js";
 
 export default function Join() {
   const containerRef = useRef(null);
+  // Remounting MarketingEmailTextCard on every mouse-enter (via this key)
+  // forces its CSS animation to restart from 0% each time hover begins,
+  // instead of relying on the group-hover duration toggle alone.
+  const [marketingCardHoverKey, setMarketingCardHoverKey] = useState(0);
 
   return (
     <div
@@ -126,9 +130,10 @@ export default function Join() {
               <Link
                 to="/join/email-marketing"
                 aria-label="Marketing"
+                onMouseEnter={() => setMarketingCardHoverKey((k) => k + 1)}
                 className="group flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
-                <MarketingEmailTextCard />
+                <MarketingEmailTextCard key={marketingCardHoverKey} />
               </Link>
               <Link
                 to="/join/email-marketing"
@@ -186,11 +191,10 @@ export default function Join() {
               alt="Digital"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
-                  <circle cx="12" cy="12" r="11" fill="#16a34a" />
                   <path
                     d="M7 12.5l3.3 3.3L17 8.5"
-                    stroke="black"
-                    strokeWidth="2"
+                    stroke="#16a34a"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
@@ -206,13 +210,13 @@ export default function Join() {
                 <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
                   <path
                     d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="black"
-                    strokeWidth="1.6"
+                    stroke="#f97316"
+                    strokeWidth="2.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="15.7" r="1.05" fill="black" />
+                  <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
                 </svg>
               }
             />
