@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
 import history3Img from "../../assets/images/7 3rd.avif";
@@ -19,7 +20,8 @@ export default function NumberingHistory() {
         }}
       >
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="page-title">
+          <h1 className="page-title flex items-center justify-center gap-3">
+            <LogoMark />
             Numbering History
           </h1>
           <p className="mx-auto mt-6 max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">

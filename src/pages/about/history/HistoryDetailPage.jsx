@@ -1,4 +1,5 @@
 import CloseButton from "../../../components/ui/CloseButton.jsx";
+import LogoMark from "../../../components/ui/LogoMark.jsx";
 
 // Shared layout for the three individual numbering-history detail pages
 // (Books / Documents / Communications). Each one shows its full card image
@@ -17,7 +18,8 @@ export default function HistoryDetailPage({ title, img, imgAlt }) {
         }}
       >
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="page-title">
+          <h1 className="page-title flex items-center justify-center gap-3">
+            <LogoMark />
             {title}
           </h1>
 

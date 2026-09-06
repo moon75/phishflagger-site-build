@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 import { publicPath } from "../../lib/publicPath.js";
 
@@ -67,7 +68,8 @@ export default function Supporters() {
           <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications
           </p>
-          <h1 className="page-title mt-10">
+          <h1 className="page-title mt-10 flex items-center justify-center gap-3">
+            <LogoMark />
             Supporters
           </h1>
           <p className="mx-auto mt-4 max-w-[580px] text-[15px] leading-relaxed text-ink-muted sm:text-[17px]">

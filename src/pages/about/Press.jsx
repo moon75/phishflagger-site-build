@@ -1,4 +1,5 @@
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 import { publicPath } from "../../lib/publicPath.js";
 
@@ -41,7 +42,8 @@ export default function Press() {
         <div className="mx-auto max-w-[1000px]">
           {/* Header */}
           <div className="text-center">
-            <h1 className="page-title">
+            <h1 className="page-title flex items-center justify-center gap-3">
+              <LogoMark />
               Press
             </h1>
           </div>

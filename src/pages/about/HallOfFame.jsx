@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
 const SUPPORTERS = [
@@ -48,7 +49,8 @@ export default function HallOfFame() {
             Protecting Communications
           </p>
 
-          <h1 className="page-title mt-10">
+          <h1 className="page-title mt-10 flex items-center justify-center gap-3">
+            <LogoMark />
             Hall of Fame
           </h1>
 

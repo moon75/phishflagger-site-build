@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import page1 from "../../assets/images/fiction/Newspaper Page 1.jpg";
 import page2 from "../../assets/images/fiction/Newspaper Page 2.jpg";
 import page3 from "../../assets/images/fiction/Newspaper Page 3.jpg";
@@ -41,7 +42,8 @@ export default function Fiction() {
           backgroundSize: "140%",
         }}
       >
-        <h1 className="page-title">
+        <h1 className="page-title flex items-center justify-center gap-3">
+          <LogoMark />
           Fiction
         </h1>
       </div>
