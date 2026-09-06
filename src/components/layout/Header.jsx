@@ -28,21 +28,16 @@ export default function Header() {
   const visitBadge = formatVisitCount(visitCount);
 
   // Header-top page-down tab layout — click the ^0001 badge to cycle between
-  // two ways: "gap" (default) keeps the nav split into two blocks of 3 with
-  // a reserved center gap the HeaderTopPageDownTab tab pokes down into;
-  // "tight" hides that tab entirely and closes the gap so the nav reads as
-  // one normal, evenly-spaced menu. Every other page-down/up button on the
-  // site is untouched either way. Remembered across visits via a cookie,
-  // same as the visit-count/country badges above.
-  const [navTabMode, setNavTabMode] = useState(() =>
-    readCookie("pf_nav_tab_mode") === "tight" ? "tight" : "gap",
-  );
+  // two ways: "gap" keeps the nav split into two blocks of 3 with a reserved
+  // center gap the HeaderTopPageDownTab tab pokes down into; "tight" hides
+  // that tab entirely and closes the gap so the nav reads as one normal,
+  // evenly-spaced menu. Every other page-down/up button on the site is
+  // untouched either way. This is NOT remembered across visits — every
+  // fresh page load starts back on "gap", so every visitor sees the
+  // split/center-tab look first and the click is just a live toggle.
+  const [navTabMode, setNavTabMode] = useState("gap");
   function toggleNavTabMode() {
-    setNavTabMode((prev) => {
-      const next = prev === "gap" ? "tight" : "gap";
-      writeCookie("pf_nav_tab_mode", next);
-      return next;
-    });
+    setNavTabMode((prev) => (prev === "gap" ? "tight" : "gap"));
   }
 
   // Country badge — shows the country picked on /country, read from a
