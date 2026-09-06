@@ -50,7 +50,7 @@ export default function Home() {
       }}
     >
     {/* ===== Section 1 — Hero (gray) ===== */}
-    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-2 sm:px-6 sm:pt-3">
+    <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
       <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center topClass="top-0 sm:top-2" />
       <div className="mx-auto max-w-content">
       <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
@@ -58,14 +58,14 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-2 object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full -translate-y-[3.25rem] scale-[0.85] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-x-4 -translate-y-[3.25rem] scale-[0.9] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">

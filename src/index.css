@@ -28,6 +28,15 @@
      against their own base px value so trimming this one number re-scales
      all of them together instead of hand-tuning each min-h separately. */
   --link-pane-min-h-scale: 0.6;
+
+  /* Single knob pair for the first "hero / intro" pane on Home, Video,
+     Email, Telecom, Help and About — the pane that carries the ‹ ›
+     PageCycleArrows. Every such pane writes its vertical padding as
+     `pt-[var(--hero-pane-pt)]` / `pb-[var(--hero-pane-pb)]` (no per-
+     breakpoint overrides) so all six share one identical top and bottom
+     gap, tuned from here. */
+  --hero-pane-pt: 2.75rem;
+  --hero-pane-pb: 2rem;
 }
 
 /* ==========================================================================

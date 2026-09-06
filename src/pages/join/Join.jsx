@@ -4,11 +4,31 @@ import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../../assets/images/domain-server-only animated.gif";
+import cloudServerStill from "../../assets/images/domain-server-only.png";
 import oneOrManyImg from "../../assets/images/six plugin one or more animated.gif";
+import oneOrManyStill from "../../assets/images/six plugin one or more.png";
 import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
 import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 import { publicPath } from "../../lib/publicPath.js";
+
+// The three /email plan illustrations are animated GIFs. Show a still
+// frame (the *-preview.png) by default and only swap in the GIF while the
+// pointer is over the card, then revert to the still on leave. Re-setting
+// src to the GIF on each hover also makes it play from its first frame.
+function HoverGif({ stillSrc, gifSrc, alt, className }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <img
+      src={playing ? gifSrc : stillSrc}
+      alt={alt}
+      className={className}
+      draggable={false}
+      onMouseEnter={() => setPlaying(true)}
+      onMouseLeave={() => setPlaying(false)}
+    />
+  );
+}
 
 export default function Join() {
   const containerRef = useRef(null);
@@ -30,7 +50,7 @@ export default function Join() {
       }}
     >
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
-      <section className="relative flex w-full min-h-[480px] flex-col justify-center px-4 pb-6 pt-6 sm:min-h-[560px] sm:px-6 sm:pb-8 sm:pt-8">
+      <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center topClass="top-0 sm:top-2" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="lg:w-[500px]">
@@ -52,8 +72,9 @@ export default function Join() {
                 aria-label="Join Free — Plug-In Free"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
-                <img
-                  src={publicPath("/assets/images/individual-animated.gif")}
+                <HoverGif
+                  stillSrc={publicPath("/assets/images/individual.png")}
+                  gifSrc={publicPath("/assets/images/individual-animated.gif")}
                   alt="Individual protection illustration"
                   className="h-full w-full object-contain"
                 />
@@ -80,8 +101,9 @@ export default function Join() {
                 aria-label="Join PRO — One or Many"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
-                <img
-                  src={oneOrManyImg}
+                <HoverGif
+                  stillSrc={oneOrManyStill}
+                  gifSrc={oneOrManyImg}
                   alt="Domain protection illustration"
                   className="h-full w-full rounded-lg object-contain"
                 />
@@ -108,8 +130,9 @@ export default function Join() {
                 aria-label="Join Domain — Domain Appliance"
                 className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
               >
-                <img
-                  src={cloudServerImg}
+                <HoverGif
+                  stillSrc={cloudServerStill}
+                  gifSrc={cloudServerImg}
                   alt="Cloud and server appliance illustration"
                   className="h-full w-full rounded-lg object-contain"
                 />

@@ -27,7 +27,7 @@ export default function Help() {
       }}
     >
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="relative flex w-full flex-col justify-center px-4 pt-[50px] pb-4 sm:px-6 sm:pt-[72px] sm:pb-6">
+      <section className="relative flex w-full flex-col justify-center px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={4} center topClass="top-0 sm:top-2" />
         <div className="mx-auto max-w-content">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-10">

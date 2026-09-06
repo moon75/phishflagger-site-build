@@ -22,7 +22,7 @@ export default function Telecom() {
     <div ref={containerRef} className="relative w-full">
 
       <section
-        className="relative flex w-full min-h-[480px] flex-col justify-center bg-[#eef0f4] bg-cover bg-center px-4 pt-12 pb-6 sm:min-h-[560px] sm:px-6 sm:pb-8"
+        className="relative flex w-full flex-col bg-[#eef0f4] bg-cover bg-center px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6"
         style={{
           backgroundImage:
             "url('/assets/images/nice%20background%20shade.png')",
@@ -80,9 +80,15 @@ export default function Telecom() {
             />
             <ActionCard
               to="/telecom/subscribe"
-              label="Subscribe"
+              label={
+                <>
+                  Subscribe
+                  <br />
+                  Telecom
+                </>
+              }
               src={subscribeIcon}
-              alt="Subscribe"
+              alt="Subscribe Telecom"
             />
             <ActionCard
               to="/help/telecom-endorse-us"
@@ -114,8 +120,14 @@ export default function Telecom() {
             />
             <ActionCard
               to="/about/faq?category=Telecom"
-              label="FAQ"
-              alt="FAQ"
+              label={
+                <>
+                  FAQ
+                  <br />
+                  Telecom
+                </>
+              }
+              alt="FAQ Telecom"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <circle cx="12" cy="12" r="11" fill="#f59e0b" />
