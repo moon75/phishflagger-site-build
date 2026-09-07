@@ -38,7 +38,7 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:scale-[1.8] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] scale-[0.8] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:scale-[1.44] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
@@ -66,7 +66,7 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-6 max-w-content sm:mt-8">
-          <div className="flex flex-wrap items-start justify-center gap-x-6 gap-y-4 sm:gap-x-8">
+          <div className="flex flex-nowrap justify-center gap-x-2 overflow-x-auto pb-2 sm:gap-x-3">
             <ActionCard
               to="/telecom/contact"
               label="Contact"
@@ -129,17 +129,16 @@ export default function Telecom() {
               }
               alt="FAQ Telecom"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
-                  <circle cx="12" cy="12" r="11" fill="#f59e0b" />
+                <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
                   <path
-                    d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="white"
-                    strokeWidth="1.6"
+                    d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+                    stroke="#f97316"
+                    strokeWidth="2.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="16.7" r="1.05" fill="white" />
+                  <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
                 </svg>
               }
             />

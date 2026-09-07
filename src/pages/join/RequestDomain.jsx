@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 // TODO: replace with a real Formspark form endpoint for this page.
 const FORMSPARK_ENDPOINT = "https://submit-form.com/REPLACE_ME";
@@ -63,7 +64,8 @@ export default function RequestDomain() {
       <section className="w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="page-title">
+            <h1 className="page-title flex items-center justify-center gap-3">
+              <LogoMark />
               Request My Domain
             </h1>
             <p className="mt-3 text-[15px] font-semibold text-ink sm:text-[16px]">

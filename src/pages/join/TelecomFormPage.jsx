@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 export function TelecomFormPage({
   title,
@@ -47,7 +48,8 @@ export function TelecomFormPage({
     >
       <div className="mx-auto max-w-content">
         <div className="text-center">
-          <h1 className="page-title">
+          <h1 className="page-title flex items-center justify-center gap-3">
+            <LogoMark />
             {title}
           </h1>
         </div>

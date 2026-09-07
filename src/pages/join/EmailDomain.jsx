@@ -55,11 +55,11 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
-            <div className="flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
-              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink sm:text-[25px]">
+            <div className="group flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 transition-all duration-200 hover:border-blue-600 hover:bg-blue-50 sm:p-5">
+              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
                 One
               </span>
-              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
+              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-blue-600 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-center-person.png")}
                   alt="Corporate email protection design"
@@ -67,11 +67,11 @@ export default function EmailDomain() {
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 sm:p-5">
-              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink sm:text-[25px]">
+            <div className="group flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 transition-all duration-200 hover:border-blue-600 hover:bg-blue-50 sm:p-5">
+              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
                 Many
               </span>
-              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
+              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-blue-600 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-v5.png")}
                   alt="Six-person email protection design"

@@ -114,6 +114,16 @@ export default function EmailFreePlugIn() {
                   Join Free
                 </Link>
               </div>
+              {/* TEST — light button linking out to Dan's page. Opens in a
+                  new tab, separate from the existing "Join Free" button. */}
+              <a
+                href="https://join.phishflagger.com/business/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
+              >
+                Join PRO (test)
+              </a>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
@@ -128,6 +138,16 @@ export default function EmailFreePlugIn() {
               <span className="rounded bg-[#FFFF00] px-2 py-0.5 text-[12px] text-ink">
                 $10.00 / Year
               </span>
+              {/* TEST — light button linking out to Dan's page. Opens in a
+                  new tab, separate from the existing "Join Pro" button. */}
+              <a
+                href="https://join.phishflagger.com/business/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
+              >
+                Join PRO (test)
+              </a>
             </div>
           </div>
         </div>

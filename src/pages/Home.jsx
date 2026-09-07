@@ -58,7 +58,7 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-[3.25rem] scale-[0.85] object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full -translate-y-[3.25rem] scale-[0.9] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -80,36 +80,29 @@ export default function Home() {
       {/* Phones row — flex so phones sit tight together regardless of container width */}
       <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         <div className="flex flex-col items-stretch">
-          {/* Shared label row — mirrors the phone-row layout below exactly
-              (flex-1 slot for the large phone + a fixed-width slot matching
-              the wide phone's own width classes) so "Email - Domain" is
-              guaranteed to land centered over the wide "Email" phone at
-              every breakpoint, instead of a hand-tuned margin that only
-              lined up at one viewport width. */}
-          <div className="mb-3 flex items-stretch gap-x-12 sm:mb-4 lg:gap-x-[30px]">
-            <div className="flex flex-1 items-center justify-center gap-8">
-              <Link
-                to="/join/email-free-plug-in"
-                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-              >
-                Email - Free
-              </Link>
-              <Link
-                to="/join/pro"
-                state={{ from: "/" }}
-                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-              >
-                Email - PRO
-              </Link>
-            </div>
-            <div className="flex w-[146px] items-center justify-center sm:w-[188px] lg:w-[177px]">
-              <Link
-                to="/join/domain"
-                className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-base"
-              >
-                Email - Domain
-              </Link>
-            </div>
+          {/* Shared label row — the three "Email" links sit as one group
+              spanning the full width of the two phones below (large + wide),
+              spaced evenly so they stay balanced at every breakpoint. */}
+          <div className="mb-3 flex items-center justify-around px-4 sm:mb-4">
+            <Link
+              to="/join/email-free-plug-in"
+              className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
+            >
+              Email - Free
+            </Link>
+            <Link
+              to="/join/pro"
+              state={{ from: "/" }}
+              className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
+            >
+              Email - PRO
+            </Link>
+            <Link
+              to="/join/domain"
+              className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
+            >
+              Email - Domain
+            </Link>
           </div>
           <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
             <div className="flex flex-1 items-center">
@@ -130,7 +123,7 @@ export default function Home() {
           <div key={i + 2} className="flex flex-col items-center">
             <Link
               to={s.label === "Messages" ? "/join/messaging" : "/telecom"}
-              className="mb-3 text-[14px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-base"
+              className="mb-3 text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-[18px]"
             >
               {s.label}
             </Link>

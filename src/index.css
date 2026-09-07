@@ -137,6 +137,12 @@
   .img-hover-zoom:hover {
     transform: scale(1.2);
   }
+  /* When the picture sits inside a hover group (e.g. a card whose title and
+     image should react together), hovering anywhere in the group runs the
+     same zoom. */
+  .group:hover .img-hover-zoom {
+    transform: scale(1.2);
+  }
 
   /* GLOBAL STANDARD — use on any picture that is NOT a link (no <Link>/<a>
      wrapping it) — a plain illustration/screenshot/diagram. Grows 10% on

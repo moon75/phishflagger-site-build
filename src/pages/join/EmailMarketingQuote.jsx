@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 const initialForm = {
   firstName: "",
@@ -70,7 +71,8 @@ export default function EmailMarketingQuote() {
           <p className="mt-3 text-[18px] font-medium text-ink sm:text-[19px]">
             Protecting Communications
           </p>
-          <h1 className="mt-6 text-[22px] font-medium leading-tight tracking-tight text-ink sm:text-[30px]">
+          <h1 className="mt-6 flex items-center justify-center gap-3 text-[22px] font-medium leading-tight tracking-tight text-ink sm:text-[30px]">
+            <LogoMark />
             Marketers and Bulk Emailers License Quote Request
           </h1>
         </div>

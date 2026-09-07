@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 export default function JoinFreeTerms() {
   const location = useLocation();
@@ -32,7 +33,8 @@ export default function JoinFreeTerms() {
           {!submitted ? (
             <>
               <div className="text-center">
-                <h1 className="text-[28px] font-semibold leading-none tracking-tight text-ink sm:text-[36px] lg:text-[44px]">
+                <h1 className="flex items-center justify-center gap-3 text-[28px] font-semibold leading-none tracking-tight text-ink sm:text-[36px] lg:text-[44px]">
+                  <LogoMark />
                   Terms Of Service
                 </h1>
                 {email && (

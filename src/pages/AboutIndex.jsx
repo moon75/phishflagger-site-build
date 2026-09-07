@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
+import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
+import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import { publicPath } from "../lib/publicPath.js";
 
 const LEFT_LINKS = [
@@ -29,6 +31,7 @@ export default function AboutIndex() {
     >
       {/* ===== Pane 1 — About links (2 columns) — no counter number ===== */}
       <section id="about-pane-0001" className="relative flex min-h-[calc(400px*var(--link-pane-min-h-scale))] w-full items-center px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:min-h-[calc(460px*var(--link-pane-min-h-scale))] sm:px-6">
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={5} center topClass="top-0 sm:top-2" />
         <div className="mx-auto flex w-full max-w-content flex-col items-center gap-y-10 sm:flex-row sm:items-stretch sm:justify-center sm:gap-x-16">
           <ul className="space-y-5 text-center sm:text-left">
             {LEFT_LINKS.map((item) => (

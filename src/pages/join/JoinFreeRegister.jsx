@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 import { Field } from "./JoinFree.jsx";
 
 const REQUIRED_MESSAGES = {
@@ -82,7 +83,8 @@ export default function JoinFreeRegister() {
       <section className="relative w-full bg-white px-4 pt-14 pb-16 sm:px-6 sm:pt-20 sm:pb-24">
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="text-[20px] font-semibold leading-none tracking-tight text-ink sm:text-[26px] lg:text-[32px]">
+            <h1 className="flex items-center justify-center gap-3 text-[20px] font-semibold leading-none tracking-tight text-ink sm:text-[26px] lg:text-[32px]">
+              <LogoMark />
               Complete Your Registration
             </h1>
             {email && (

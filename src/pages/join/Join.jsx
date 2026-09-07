@@ -16,16 +16,18 @@ import { publicPath } from "../../lib/publicPath.js";
 // frame (the *-preview.png) by default and only swap in the GIF while the
 // pointer is over the card, then revert to the still on leave. Re-setting
 // src to the GIF on each hover also makes it play from its first frame.
-function HoverGif({ stillSrc, gifSrc, alt, className }) {
-  const [playing, setPlaying] = useState(false);
+function HoverGif({ stillSrc, gifSrc, alt, className, playing: playingProp }) {
+  const [playingState, setPlayingState] = useState(false);
+  const controlled = playingProp !== undefined;
+  const playing = controlled ? playingProp : playingState;
   return (
     <img
       src={playing ? gifSrc : stillSrc}
       alt={alt}
       className={className}
       draggable={false}
-      onMouseEnter={() => setPlaying(true)}
-      onMouseLeave={() => setPlaying(false)}
+      onMouseEnter={controlled ? undefined : () => setPlayingState(true)}
+      onMouseLeave={controlled ? undefined : () => setPlayingState(false)}
     />
   );
 }
@@ -36,6 +38,11 @@ export default function Join() {
   // forces its CSS animation to restart from 0% each time hover begins,
   // instead of relying on the group-hover duration toggle alone.
   const [marketingCardHoverKey, setMarketingCardHoverKey] = useState(0);
+  // Which plan card the pointer is currently over — lets the title share
+  // the same hover target as the picture, so hovering either one plays the
+  // card's GIF and runs the box's hover styling (mirrors the ActionCard
+  // buttons lower on the page, where the whole card is one hover group).
+  const [hoveredPlanCard, setHoveredPlanCard] = useState(null);
 
   return (
     <div
@@ -62,22 +69,27 @@ export default function Join() {
           </div>
           <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[86px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Plug-In Free
-                </span>
-              </div>
               <Link
                 to="/join/email-free-plug-in"
                 aria-label="Join Free — Plug-In Free"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                onMouseEnter={() => setHoveredPlanCard("free")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
+                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <HoverGif
-                  stillSrc={publicPath("/assets/images/individual.png")}
-                  gifSrc={publicPath("/assets/images/individual-animated.gif")}
-                  alt="Individual protection illustration"
-                  className="h-full w-full object-contain"
-                />
+                <div className="mb-[34px] flex h-[86px] items-end justify-center">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                    Plug-In Free
+                  </span>
+                </div>
+                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                  <HoverGif
+                    stillSrc={publicPath("/assets/images/individual.png")}
+                    gifSrc={publicPath("/assets/images/individual-animated.gif")}
+                    alt="Individual protection illustration"
+                    className="h-full w-full object-contain"
+                    playing={hoveredPlanCard === "free"}
+                  />
+                </div>
               </Link>
               <Link
                 to="/join/email-free-plug-in"
@@ -87,26 +99,31 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Plug-In Pro
-                </span>
-                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  One or Many
-                </span>
-              </div>
               <Link
                 to="/join/pro"
                 state={{ from: "/email" }}
                 aria-label="Join PRO — One or Many"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                onMouseEnter={() => setHoveredPlanCard("pro")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
+                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <HoverGif
-                  stillSrc={oneOrManyStill}
-                  gifSrc={oneOrManyImg}
-                  alt="Domain protection illustration"
-                  className="h-full w-full rounded-lg object-contain"
-                />
+                <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                    Plug-In Pro
+                  </span>
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                    One or Many
+                  </span>
+                </div>
+                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                  <HoverGif
+                    stillSrc={oneOrManyStill}
+                    gifSrc={oneOrManyImg}
+                    alt="Domain protection illustration"
+                    className="h-full w-full rounded-lg object-contain"
+                    playing={hoveredPlanCard === "pro"}
+                  />
+                </div>
               </Link>
               <Link
                 to="/join/pro"
@@ -117,25 +134,30 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
-                <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Domain
-                </span>
-                <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
-                  Appliance
-                </span>
-              </div>
               <Link
                 to="/join/domain"
                 aria-label="Join Domain — Domain Appliance"
-                className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                onMouseEnter={() => setHoveredPlanCard("domain")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
+                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <HoverGif
-                  stillSrc={cloudServerStill}
-                  gifSrc={cloudServerImg}
-                  alt="Cloud and server appliance illustration"
-                  className="h-full w-full rounded-lg object-contain"
-                />
+                <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                    Domain
+                  </span>
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                    Appliance
+                  </span>
+                </div>
+                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                  <HoverGif
+                    stillSrc={cloudServerStill}
+                    gifSrc={cloudServerImg}
+                    alt="Cloud and server appliance illustration"
+                    className="h-full w-full rounded-lg object-contain"
+                    playing={hoveredPlanCard === "domain"}
+                  />
+                </div>
               </Link>
               <Link
                 to="/join/domain"
@@ -145,18 +167,20 @@ export default function Join() {
               </Link>
             </div>
             <div className="flex w-auto flex-col items-center">
-              <div className="mb-[34px] flex h-[86px] items-end justify-center">
-                <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
-                  Marketing
-                </span>
-              </div>
               <Link
                 to="/join/email-marketing"
                 aria-label="Marketing"
                 onMouseEnter={() => setMarketingCardHoverKey((k) => k + 1)}
-                className="group flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 hover:scale-110 hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <MarketingEmailTextCard key={marketingCardHoverKey} />
+                <div className="mb-[34px] flex h-[86px] items-end justify-center">
+                  <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                    Marketing
+                  </span>
+                </div>
+                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                  <MarketingEmailTextCard key={marketingCardHoverKey} />
+                </div>
               </Link>
               <Link
                 to="/join/email-marketing"
@@ -213,7 +237,7 @@ export default function Join() {
               label="Digital"
               alt="Digital"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
                   <path
                     d="M7 12.5l3.3 3.3L17 8.5"
                     stroke="#16a34a"
@@ -230,7 +254,7 @@ export default function Join() {
               label="FAQ - Email"
               alt="FAQ - Email"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
                   <path
                     d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
                     stroke="#f97316"

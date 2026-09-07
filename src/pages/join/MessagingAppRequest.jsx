@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import LogoMark from "../../components/ui/LogoMark.jsx";
 
 // TODO: swap in the real Formspark endpoint once it's created
 // (https://submit-form.com/<form-id>) — placeholder for now.
@@ -60,7 +61,8 @@ export default function MessagingAppRequest() {
       >
         <div className="mx-auto max-w-[640px]">
           <div className="text-center">
-            <h1 className="text-[30px] font-semibold leading-tight tracking-tight text-ink sm:text-[40px]">
+            <h1 className="flex items-center justify-center gap-3 text-[30px] font-semibold leading-tight tracking-tight text-ink sm:text-[40px]">
+              <LogoMark />
               Want to see <BrandInline /> in your Message App?
             </h1>
             <p className="mt-3 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
