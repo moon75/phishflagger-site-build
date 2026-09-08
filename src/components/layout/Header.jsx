@@ -28,14 +28,14 @@ export default function Header() {
   const visitBadge = formatVisitCount(visitCount);
 
   // Header-top page-down tab layout — click the ^0001 badge to cycle between
-  // two ways: "gap" keeps the nav split into two blocks of 3 with a reserved
-  // center gap the HeaderTopPageDownTab tab pokes down into; "tight" hides
-  // that tab entirely and closes the gap so the nav reads as one normal,
-  // evenly-spaced menu. Every other page-down/up button on the site is
-  // untouched either way. This is NOT remembered across visits — every
-  // fresh page load starts back on "gap", so every visitor sees the
-  // split/center-tab look first and the click is just a live toggle.
-  const [navTabMode, setNavTabMode] = useState("gap");
+  // two ways: "tight" (default) closes the gap so the nav reads as one
+  // normal, evenly-spaced menu and hides the HeaderTopPageDownTab tab
+  // entirely; "gap" splits the nav into two blocks of 3 with a reserved
+  // center gap the tab pokes down into. Every other page-down/up button on
+  // the site is untouched either way. This is NOT remembered across visits
+  // — every fresh page load starts back on "tight", so every visitor sees
+  // the closed-in menu first and the click is just a live toggle.
+  const [navTabMode, setNavTabMode] = useState("tight");
   function toggleNavTabMode() {
     setNavTabMode((prev) => (prev === "gap" ? "tight" : "gap"));
   }
@@ -246,7 +246,7 @@ export default function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <nav aria-label="Primary">
               {navTabMode === "gap" ? (
-                /* Way 1 (default) — split into two blocks of 3 with a gap
+                /* Way 2 (toggle) — split into two blocks of 3 with a gap
                    between them the width of the header-top page-down tab,
                    left block nudged left and right block nudged right. */
                 <div className="flex items-center">
@@ -267,8 +267,8 @@ export default function Header() {
                   </ul>
                 </div>
               ) : (
-                /* Way 2 — no center gap, no header-top page-down tab: one
-                   normal, evenly-spaced menu. */
+                /* Way 1 (default) — no center gap, no header-top page-down
+                   tab: one normal, evenly-spaced menu. */
                 <ul className="flex items-center gap-4">
                   {[...navLeft, ...navRight].map((item) => (
                     <li key={item.label}>{renderNavItem(item)}</li>

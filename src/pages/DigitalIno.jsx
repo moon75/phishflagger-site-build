@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import topImg from "../assets/images/3rd section left image.avif";
 import { publicPath } from "../lib/publicPath.js";
@@ -7,11 +8,12 @@ import { publicPath } from "../lib/publicPath.js";
 export default function DigitalIno() {
   return (
     <>
-      <CloseButton to="/join/email-marketing" />
+      <CloseButton to="/" />
 
       <section className="relative w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
         <div className="mx-auto max-w-content">
-          <h1 className="text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
+          <h1 className="flex items-center justify-center gap-3 text-center text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
+            <LogoMark />
             Domain Verification
           </h1>
 

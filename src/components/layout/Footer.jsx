@@ -38,11 +38,7 @@ export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
   const hideFaq = pathname === "/about/faq";
   const tags = [
-    "#phishflagger", "#phishcounter", "#sendmailsafe", "#numbering",
-    "#numberingemail", "#cybersecurity", "#emailsecurity",
-    "#phishing", "#cyberthreats", "#digitalsecurity",
-    "#identityprotection", "#databreach", "#emailphishing", "#ransomware",
-    "#callerid",
+    "#phishflagger", "#phishcounter", "#numbering", "#phishing", "#callerid",
   ];
 
   return (
@@ -61,19 +57,19 @@ export default function Footer({ logoSrc = logoImg }) {
           >
             <PageDownButton bg="white" />
             <div className="mx-auto max-w-[1200px]">
-              <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
-                <div aria-hidden />
+              <div className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
+                <div className="hidden lg:block" aria-hidden />
                 <div className="flex items-center justify-center gap-3">
                   <img
                     src={publicPath("/assets/images/logo-mark.png")}
                     alt="PhishFlagger envelope and flag mark"
-                    className="h-[34px] w-auto shrink-0 object-contain sm:h-[42px] pic-with-no-link-mouse-over-increase"
+                    className="h-[26px] w-auto shrink-0 object-contain sm:h-[36px] lg:h-[42px] pic-with-no-link-mouse-over-increase"
                   />
-                  <h2 className="text-center text-[32px] font-normal leading-[1.5] text-ink sm:text-[40px] sm:leading-[1.45]">
+                  <h2 className="text-center text-[21px] font-normal leading-[1.35] text-ink sm:text-[30px] sm:leading-[1.4] lg:text-[40px] lg:leading-[1.45]">
                     Protecting Communications
                   </h2>
                 </div>
-                <div className="flex items-center justify-end gap-8 pr-[20px]">
+                <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-end lg:gap-8 lg:pr-[20px]">
                   <Link
                     to="/about/faq"
                     className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"

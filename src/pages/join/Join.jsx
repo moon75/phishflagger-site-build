@@ -60,14 +60,14 @@ export default function Join() {
       <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center topClass="top-0 sm:top-2" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
-          <div className="lg:w-[500px]">
+          <div className="flex justify-center lg:block lg:w-[500px]">
             <img
               src={emailSolutionsCardImg}
               alt="Email Solutions. PhishFlagger protects individuals and organizations who want greater confidence in the authenticity of their emails. Whether you host a domain or use an email client, PhishFlagger adds extra layers of protection against phishing and email impersonation."
               className="block h-auto w-[380px] max-w-full object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
-          <div className="flex flex-wrap items-start justify-center gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
+          <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-8 sm:gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
             <div className="flex w-auto flex-col items-center">
               <Link
                 to="/join/email-free-plug-in"
@@ -76,12 +76,12 @@ export default function Join() {
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <div className="mb-[34px] flex h-[86px] items-end justify-center">
+                <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                     Plug-In Free
                   </span>
                 </div>
-                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
                   <HoverGif
                     stillSrc={publicPath("/assets/images/individual.png")}
                     gifSrc={publicPath("/assets/images/individual-animated.gif")}
@@ -107,7 +107,7 @@ export default function Join() {
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
+                <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                     Plug-In Pro
                   </span>
@@ -115,7 +115,7 @@ export default function Join() {
                     One or Many
                   </span>
                 </div>
-                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
                   <HoverGif
                     stillSrc={oneOrManyStill}
                     gifSrc={oneOrManyImg}
@@ -141,7 +141,7 @@ export default function Join() {
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <div className="relative mb-[34px] flex h-[86px] items-end justify-center">
+                <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                     Domain
                   </span>
@@ -149,7 +149,7 @@ export default function Join() {
                     Appliance
                   </span>
                 </div>
-                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
                   <HoverGif
                     stillSrc={cloudServerStill}
                     gifSrc={cloudServerImg}
@@ -173,12 +173,12 @@ export default function Join() {
                 onMouseEnter={() => setMarketingCardHoverKey((k) => k + 1)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
-                <div className="mb-[34px] flex h-[86px] items-end justify-center">
+                <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
                     Marketing
                   </span>
                 </div>
-                <div className="flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100">
+                <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
                   <MarketingEmailTextCard key={marketingCardHoverKey} />
                 </div>
               </Link>
@@ -197,8 +197,8 @@ export default function Join() {
             global page-down tab's "next <section>" lookup skips straight to
             #join-human-digital, the first pane with its own page-down
             button pair, instead of stopping here. ===== */}
-        <div className="mx-auto max-w-content pb-4 pt-8 sm:pb-6 sm:pt-12">
-          <div className="flex flex-nowrap justify-center gap-x-2 overflow-x-auto pb-2 sm:gap-x-3">
+        <div className="mx-auto max-w-content px-2 pb-4 pt-8 sm:pb-6 sm:pt-12">
+          <div className="flex flex-wrap justify-center gap-x-2 gap-y-4 pb-2 sm:flex-nowrap sm:gap-x-3 sm:overflow-x-auto">
             <ActionCard
               to="/contact"
               label="Contact"
@@ -215,14 +215,14 @@ export default function Join() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
-              imageSize="h-[80px] w-[80px] sm:h-[98px] sm:w-[98px]"
+              imageSize="h-[64px] w-[64px] sm:h-[90px] sm:w-[90px] lg:h-[98px] lg:w-[98px]"
             />
             <ActionCard
               to="/help/endorse-us"
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
-              imageSize="h-[78px] w-[78px] sm:h-[95px] sm:w-[95px]"
+              imageSize="h-[62px] w-[62px] sm:h-[88px] sm:w-[88px] lg:h-[95px] lg:w-[95px]"
             />
             <ActionCard
               to="/human-compatible"
@@ -230,7 +230,7 @@ export default function Join() {
               label="Human"
               alt="Human"
               src={publicPath("/assets/icons/Human%20icon.png")}
-              imageSize="h-[90px] w-[90px] sm:h-[105px] sm:w-[105px]"
+              imageSize="h-[70px] w-[70px] sm:h-[98px] sm:w-[98px] lg:h-[105px] lg:w-[105px]"
             />
             <ActionCard
               to="/digital-verification"
@@ -344,16 +344,16 @@ function ActionCard({
     <Link
       to={to}
       state={state}
-      className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
+      className="group flex w-[112px] shrink-0 flex-col items-center transition-transform duration-200 ease-out hover:scale-105 sm:w-[160px] lg:w-[190px]"
     >
       <span
-        className={`whitespace-nowrap text-center text-[18px] font-bold uppercase tracking-[0.18em] text-ink-muted sm:text-[22px] ${
+        className={`whitespace-nowrap text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink-muted sm:text-[16px] sm:tracking-[0.18em] lg:text-[22px] ${
           hideLabel ? "invisible" : ""
         }`}
       >
         {label}
       </span>
-      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
+      <div className="mt-3 flex h-[92px] w-[92px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:mt-5 sm:h-[110px] sm:w-[110px] lg:h-[120px] lg:w-[120px]">
         {svgIcon ?? (
           <img
             src={src}
