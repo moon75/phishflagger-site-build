@@ -66,7 +66,7 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-6 w-full min-w-0 max-w-content sm:mt-8">
-          <div className="flex flex-nowrap justify-center gap-x-2 overflow-x-auto pb-2 sm:gap-x-3">
+          <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/telecom/contact"
               label="Contact"
@@ -498,10 +498,10 @@ function ActionCard({
   return (
     <Link
       to={to}
-      className="group flex w-[170px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
+      className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
-        <span className="whitespace-nowrap text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">
+        <span className="text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">
           {label}
         </span>
       </div>
