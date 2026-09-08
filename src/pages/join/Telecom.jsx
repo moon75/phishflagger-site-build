@@ -65,7 +65,7 @@ export default function Telecom() {
         </div>
 
         {/* Merged from former Bottom CTA panel */}
-        <div className="mx-auto mt-6 max-w-content sm:mt-8">
+        <div className="mx-auto mt-6 w-full min-w-0 max-w-content sm:mt-8">
           <div className="flex flex-nowrap justify-center gap-x-2 overflow-x-auto pb-2 sm:gap-x-3">
             <ActionCard
               to="/telecom/contact"

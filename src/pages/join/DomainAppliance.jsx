@@ -32,7 +32,7 @@ export default function DomainAppliance() {
                 alt="PhishFlagger envelope and flag mark"
                 className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[48px]"
               />
-              <h2 className="inline-block whitespace-nowrap text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
+              <h2 className="inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
                 <em className="italic">
                   <span className="font-extrabold text-ink">Phish</span>
                   <span className="font-normal text-brand">Flagger</span>

@@ -61,7 +61,7 @@ export default function MessagingAppRequest() {
       >
         <div className="mx-auto max-w-[640px]">
           <div className="text-center">
-            <h1 className="flex items-center justify-center gap-3 text-[30px] font-semibold leading-tight tracking-tight text-ink sm:text-[40px]">
+            <h1 className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[30px] font-semibold leading-tight tracking-tight text-ink sm:text-[40px]">
               <LogoMark />
               Want to see <BrandInline /> in your Message App?
             </h1>
