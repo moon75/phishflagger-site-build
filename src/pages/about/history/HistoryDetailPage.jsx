@@ -18,7 +18,7 @@ export default function HistoryDetailPage({ title, img, imgAlt }) {
         }}
       >
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="page-title flex items-center justify-center gap-3">
+          <h1 className="page-title flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             <LogoMark />
             {title}
           </h1>
