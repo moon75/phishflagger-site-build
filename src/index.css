@@ -229,6 +229,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Responsive safety net — no embedded media may exceed its container and
+     force a horizontal scrollbar on small screens. `img` is already capped
+     by the reset; this extends the same guard to the other replaced
+     elements. Inert whenever the element already fits. */
+  :where(svg, video, iframe, canvas) {
+    max-width: 100%;
+  }
+
   body.is-menu-open {
     overflow: hidden;
   }

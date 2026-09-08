@@ -151,7 +151,7 @@ export default function Header() {
           <img
             src={logoImg}
             alt="PhishFlagger"
-            className="h-auto w-[190px] transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
+            className="h-auto w-[190px] max-w-full transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
           />
         </NavLink>
 
@@ -228,7 +228,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="mx-auto flex min-h-[88px] w-[80%] items-center justify-between gap-7 py-5 lg:justify-center lg:gap-9">
+        <div className="mx-auto flex min-h-[88px] w-[90%] items-center justify-between gap-7 py-5 lg:w-[80%] lg:justify-center lg:gap-9">
           {/* Logo (mobile/tablet) */}
           <NavLink
             to="/"
@@ -238,7 +238,7 @@ export default function Header() {
             <img
               src={logoImg}
               alt="PhishFlagger"
-              className="h-auto w-[190px] sm:w-[220px]"
+              className="h-auto w-[190px] max-w-full sm:w-[220px]"
             />
           </NavLink>
 

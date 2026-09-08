@@ -74,7 +74,8 @@ export default function MobileMenu({ open, onClose }) {
     <div
       id="mobile-menu"
       className={cn(
-        "fixed inset-0 z-30 overflow-y-auto bg-white px-6 pb-8 pt-24 lg:hidden",
+        "fixed inset-0 z-30 overflow-y-auto overscroll-contain bg-white pt-24 lg:hidden",
+        "pb-[calc(2rem+env(safe-area-inset-bottom))] pl-[calc(1.5rem+env(safe-area-inset-left))] pr-[calc(1.5rem+env(safe-area-inset-right))]",
         open ? "block" : "hidden",
       )}
       aria-hidden={!open}

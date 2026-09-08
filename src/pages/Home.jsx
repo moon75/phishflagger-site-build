@@ -83,7 +83,7 @@ export default function Home() {
           {/* Shared label row — the three "Email" links sit as one group
               spanning the full width of the two phones below (large + wide),
               spaced evenly so they stay balanced at every breakpoint. */}
-          <div className="mb-3 flex items-center justify-around px-4 sm:mb-4">
+          <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 sm:mb-4 sm:justify-around">
             <Link
               to="/join/email-free-plug-in"
               className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
@@ -104,7 +104,7 @@ export default function Home() {
               Email - Domain
             </Link>
           </div>
-          <div className="flex items-stretch gap-x-12 lg:gap-x-[30px]">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-stretch sm:gap-x-12 lg:gap-x-[30px]">
             <div className="flex flex-1 items-center">
               <PhonePlaceholder
                 src={SCREENS[0].src}

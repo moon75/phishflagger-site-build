@@ -291,14 +291,14 @@ export default function Footer({ logoSrc = logoImg }) {
             <img
               src={logoSrc}
               alt="PhishFlagger"
-              className="mx-auto h-auto w-[220px] sm:w-[260px] pic-with-no-link-mouse-over-increase"
+              className="mx-auto h-auto w-[220px] max-w-full sm:w-[260px] pic-with-no-link-mouse-over-increase"
             />
             <p className="mt-2 text-[13px] text-[#4a4a4a]">
               Protecting Communications.
             </p>
           </div>
 
-          <p className="mx-auto mb-2.5 mt-3 whitespace-nowrap text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:whitespace-normal max-sm:text-[9px]">
+          <p className="mx-auto mb-2.5 mt-3 whitespace-normal text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>

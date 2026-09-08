@@ -48,7 +48,7 @@ export default function SiteLayout() {
   const hideHeader = pathname === "/join-free" || pathname === "/join-corporate";
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-clip">
       {!hideHeader && <Header />}
       <main id="main" className="flex-1">
         <Outlet />
