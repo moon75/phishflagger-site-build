@@ -91,7 +91,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     className="flex flex-col items-center gap-4"
                   >
                     <div
-                      className={`relative flex h-[150px] w-auto items-center hover:z-10 sm:h-[190px] ${item.offsetClass || ""}`}
+                      className={`group relative flex h-[150px] w-auto items-center hover:z-10 sm:h-[190px] ${item.offsetClass || ""}`}
                     >
                       <img
                         src={item.src}
@@ -103,7 +103,7 @@ export default function Footer({ logoSrc = logoImg }) {
                         } ${item.imageClass || ""}`}
                       />
                       {item.verified && (
-                        <span className="absolute top-1 left-[62%] flex translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] sm:text-[15px]">
+                        <span className="absolute top-1 left-[62%] flex origin-center translate-x-[calc(-50%+10px)] items-center gap-1.5 whitespace-nowrap text-[13px] font-semibold text-[#16a34a] transition-transform duration-200 ease-out group-hover:scale-110 sm:text-[15px]">
                           <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-[#22c55e] text-[11px] font-bold leading-none text-white">
                             ✓
                           </span>

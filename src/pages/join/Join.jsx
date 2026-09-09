@@ -198,13 +198,13 @@ export default function Join() {
             #join-human-digital, the first pane with its own page-down
             button pair, instead of stopping here. ===== */}
         <div className="mx-auto max-w-content px-2 pb-4 pt-8 sm:pb-6 sm:pt-12">
-          <div className="flex flex-wrap justify-center gap-x-2 gap-y-4 pb-2 sm:flex-nowrap sm:gap-x-3 sm:overflow-x-auto">
+          <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/contact"
               label="Contact"
               alt="Contact"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[66px] sm:w-[66px]">
+                <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
                   <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
                 </svg>
@@ -215,14 +215,12 @@ export default function Join() {
               label="Subscribe"
               src={subscribeIcon}
               alt="Subscribe"
-              imageSize="h-[64px] w-[64px] sm:h-[90px] sm:w-[90px] lg:h-[98px] lg:w-[98px]"
             />
             <ActionCard
               to="/help/endorse-us"
               label="Endorse Us"
               src={endorseIcon}
               alt="Endorse Us"
-              imageSize="h-[62px] w-[62px] sm:h-[88px] sm:w-[88px] lg:h-[95px] lg:w-[95px]"
             />
             <ActionCard
               to="/human-compatible"
@@ -230,7 +228,6 @@ export default function Join() {
               label="Human"
               alt="Human"
               src={publicPath("/assets/icons/Human%20icon.png")}
-              imageSize="h-[70px] w-[70px] sm:h-[98px] sm:w-[98px] lg:h-[105px] lg:w-[105px]"
             />
             <ActionCard
               to="/digital-verification"
@@ -344,16 +341,18 @@ function ActionCard({
     <Link
       to={to}
       state={state}
-      className="group flex w-[112px] shrink-0 flex-col items-center transition-transform duration-200 ease-out hover:scale-105 sm:w-[160px] lg:w-[190px]"
+      className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[172px]"
     >
-      <span
-        className={`whitespace-nowrap text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink-muted sm:text-[16px] sm:tracking-[0.18em] lg:text-[22px] ${
-          hideLabel ? "invisible" : ""
-        }`}
-      >
-        {label}
-      </span>
-      <div className="mt-3 flex h-[92px] w-[92px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:mt-5 sm:h-[110px] sm:w-[110px] lg:h-[120px] lg:w-[120px]">
+      <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
+        <span
+          className={`text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px] ${
+            hideLabel ? "invisible" : ""
+          }`}
+        >
+          {label}
+        </span>
+      </div>
+      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
         {svgIcon ?? (
           <img
             src={src}

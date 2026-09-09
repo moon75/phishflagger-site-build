@@ -295,6 +295,12 @@ function categoryVideos(category) {
         title: "Script 3 Video - Dog",
         description: "",
       },
+      {
+        type: "local",
+        src: publicPath("/assets/video1/Oracle/My%20Dog%20Seems%20Tired.mp4"),
+        title: "My Dog Seems Tired",
+        description: "",
+      },
     ]);
   }
 

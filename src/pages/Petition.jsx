@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/QA8UI22TL";
 
@@ -93,7 +94,8 @@ export default function Petition() {
         <div className="mx-auto max-w-[1040px]">
           {/* Header */}
           <div className="text-center">
-            <h1 className="text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
+            <h1 className="flex items-center justify-center gap-3 text-center text-[26px] font-extrabold uppercase tracking-widest text-[#303030] sm:text-[32px]">
+              <LogoMark />
               Help Stop Fake Calls
             </h1>
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
+import LogoMark from "../components/ui/LogoMark.jsx";
 
 const FORMSPARK_ENDPOINT = "https://submit-form.com/VLb4zabl";
 
@@ -54,7 +55,8 @@ export default function SupportDesk() {
       >
         <div className="mx-auto max-w-content">
           <div className="text-center">
-            <h1 className="page-title">
+            <h1 className="page-title flex items-center justify-center gap-3">
+              <LogoMark />
               Support Desk
             </h1>
             <p className="mx-auto mt-6 max-w-[560px] text-[15px] leading-relaxed text-ink sm:text-[16px]">
