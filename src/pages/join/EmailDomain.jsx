@@ -1,5 +1,4 @@
-﻿import { Link } from "react-router-dom";
-import CloseButton from "../../components/ui/CloseButton.jsx";
+﻿import CloseButton from "../../components/ui/CloseButton.jsx";
 import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
@@ -59,11 +58,11 @@ export default function EmailDomain() {
               <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
                 One
               </span>
-              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-blue-600 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
+              <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-center-person.png")}
                   alt="Corporate email protection design"
-                  className="h-full w-full rounded-lg object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>
@@ -71,11 +70,11 @@ export default function EmailDomain() {
               <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
                 Many
               </span>
-              <div className="img-hover-zoom h-[130px] w-[130px] overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-blue-600 sm:h-[180px] sm:w-[180px] lg:h-[217px] lg:w-[217px]">
+              <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-v5.png")}
                   alt="Six-person email protection design"
-                  className="h-full w-full rounded-lg object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>
@@ -227,20 +226,6 @@ export default function EmailDomain() {
               </span>
             </p>
             <div className="mt-6 flex flex-col items-center gap-6">
-              <div className="relative inline-block">
-                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
-                  Coming Soon
-                </span>
-                <Link
-                  to="/join-corporate"
-                  className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
-                >
-                  Join PRO
-                </Link>
-              </div>
-              {/* TEST — light button linking out to Dan's page (URL TBD,
-                  "#" placeholder for now). Opens in a new tab, separate
-                  from the existing "Join PRO" button above. */}
               <a
                 href="https://join.phishflagger.com/business/"
                 target="_blank"

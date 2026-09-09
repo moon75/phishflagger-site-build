@@ -236,8 +236,4 @@
   :where(svg, video, iframe, canvas) {
     max-width: 100%;
   }
-
-  body.is-menu-open {
-    overflow: hidden;
-  }
 }

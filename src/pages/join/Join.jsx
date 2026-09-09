@@ -77,7 +77,7 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
                     Plug-In Free
                   </span>
                 </div>
@@ -108,10 +108,10 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
                     Plug-In Pro
                   </span>
-                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[17px]">
                     One or Many
                   </span>
                 </div>
@@ -142,10 +142,10 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
                     Domain
                   </span>
-                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink sm:text-[17px]">
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[17px]">
                     Appliance
                   </span>
                 </div>
@@ -174,7 +174,7 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
+                  <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
                     Marketing
                   </span>
                 </div>
@@ -345,7 +345,7 @@ function ActionCard({
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
         <span
-          className={`text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px] ${
+          className={`text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted transition-colors group-hover:text-brand sm:text-[22px] ${
             hideLabel ? "invisible" : ""
           }`}
         >

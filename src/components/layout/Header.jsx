@@ -1,15 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { nav } from "../../data/nav.js";
-import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
-import MobileMenu from "./MobileMenu.jsx";
 import { formatVisitCount } from "../../lib/visitCounter.js";
 import { readCookie, writeCookie } from "../../lib/cookies.js";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const headerRef = useRef(null);
@@ -127,164 +124,177 @@ export default function Header() {
     );
   }
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [location.pathname]);
-
-  // Lock body scroll while overlay is open
-  useEffect(() => {
-    document.body.classList.toggle("is-menu-open", mobileOpen);
-    return () => document.body.classList.remove("is-menu-open");
-  }, [mobileOpen]);
-
   return (
-    <>
-      <header ref={headerRef} className="relative z-40 bg-white">
-        {/* Logo — pinned to the far left edge of the page on desktop */}
-        <NavLink
-          to="/"
-          className="hidden lg:absolute lg:left-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center"
-          aria-label="PhishFlagger home"
-        >
-          <img
-            src={logoImg}
-            alt="PhishFlagger"
-            className="h-auto w-[190px] max-w-full transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
-          />
-        </NavLink>
+    <header ref={headerRef} className="relative z-40 bg-white">
+      {/* Logo — pinned to the far left edge of the page on desktop */}
+      <NavLink
+        to="/"
+        className="hidden lg:absolute lg:left-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center"
+        aria-label="PhishFlagger home"
+      >
+        <img
+          src={logoImg}
+          alt="PhishFlagger"
+          className="h-auto w-[190px] max-w-full transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
+        />
+      </NavLink>
 
-        {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
-        <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
-          <button
-            type="button"
-            onClick={toggleNavHoverMode}
-            className="group relative flex shrink-0 cursor-pointer items-center gap-1.5 border-none bg-transparent font-normal text-ink transition-colors duration-200 hover:text-brand"
-            style={{ fontSize: "19px", letterSpacing: "0.04em" }}
-            aria-label={`PhishCounter — click to switch the 6-menu nav between mouse-over and click (currently ${navHoverMode ? "mouse-over opens menus" : "click required"})`}
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
-              <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
-              <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            </svg>
-            {visitBadge}
-            <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
-              PhishCounter
-            </span>
-          </button>
-          <div
-            className="relative flex"
-            onMouseEnter={() => setCountryHover(true)}
-            onMouseLeave={() => setCountryHover(false)}
-          >
-            <Link
-              to="/country"
-              aria-label="Choose your country"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-5 w-5"
-                aria-hidden
-              >
-                <circle cx="12" cy="12" r="9" />
-                <path d="M3 12h18" />
-                <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z" />
-              </svg>
-            </Link>
-            {countryHover && (
-              <span className="absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white shadow-md">
-                {countryName || "Select your country"}
-              </span>
-            )}
-          </div>
-          <Link
-            to="/login"
-            aria-label="Sign in"
-            className="group relative flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <circle cx="12" cy="8" r="3.6" />
-              <path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" />
-            </svg>
-            <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
-              Sign-In
-            </span>
-          </Link>
-        </div>
+      {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
+      <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
+        <HeaderActions
+          navHoverMode={navHoverMode}
+          toggleNavHoverMode={toggleNavHoverMode}
+          visitBadge={visitBadge}
+          countryName={countryName}
+          countryHover={countryHover}
+          setCountryHover={setCountryHover}
+        />
+      </div>
 
-        <div className="mx-auto flex min-h-[88px] w-[90%] items-center justify-between gap-7 py-5 lg:w-[80%] lg:justify-center lg:gap-9">
-          {/* Logo (mobile/tablet) */}
+      {/* ---------- Mobile / tablet: 2-row header ---------- */}
+      <div className="lg:hidden">
+        {/* Row 1 — logo (left) + PhishCounter / globe / login (right) */}
+        <div className="mx-auto flex w-[90%] items-center justify-between gap-4 pt-4 pb-2">
           <NavLink
             to="/"
-            className="flex shrink-0 items-center lg:hidden"
+            className="flex shrink-0 items-center"
             aria-label="PhishFlagger home"
           >
             <img
               src={logoImg}
               alt="PhishFlagger"
-              className="h-auto w-[190px] max-w-full sm:w-[220px]"
+              className="h-auto w-[170px] max-w-full sm:w-[200px]"
             />
           </NavLink>
-
-          {/* Desktop nav + badge — kept tight together */}
-          <div className="hidden items-center gap-3 lg:flex">
-            <nav aria-label="Primary">
-              <ul className="flex items-center gap-4">
-                {nav.map((item) => (
-                  <li key={item.label}>{renderNavItem(item)}</li>
-                ))}
-              </ul>
-            </nav>
+          <div className="flex items-center gap-3">
+            <HeaderActions
+              navHoverMode={navHoverMode}
+              toggleNavHoverMode={toggleNavHoverMode}
+              visitBadge={visitBadge}
+              countryName={countryName}
+              countryHover={countryHover}
+              setCountryHover={setCountryHover}
+            />
           </div>
-
-          {/* Mobile toggle */}
-          <button
-            type="button"
-            className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] lg:hidden"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setMobileOpen((o) => !o)}
-          >
-            <span
-              className={cn(
-                "block h-0.5 w-6 rounded bg-ink transition-transform duration-200",
-                mobileOpen && "translate-y-[7px] rotate-45",
-              )}
-            />
-            <span
-              className={cn(
-                "block h-0.5 w-6 rounded bg-ink transition-opacity duration-200",
-                mobileOpen && "opacity-0",
-              )}
-            />
-            <span
-              className={cn(
-                "block h-0.5 w-6 rounded bg-ink transition-transform duration-200",
-                mobileOpen && "-translate-y-[7px] -rotate-45",
-              )}
-            />
-          </button>
         </div>
 
-      </header>
+        {/* Row 2 — the 6 primary links; wrap to a second line when too narrow */}
+        <nav aria-label="Primary" className="border-t border-gray-100">
+          <ul className="mx-auto flex w-[90%] flex-wrap items-center justify-center gap-x-3 gap-y-0.5 py-2">
+            {nav.map((item) => (
+              <li key={item.label}>
+                <NavLink
+                  to={item.href}
+                  end={item.href === "/"}
+                  className={({ isActive }) =>
+                    `rounded-md px-2 py-1 text-[14px] font-medium transition-colors hover:text-brand ${
+                      isNavItemActive(item, isActive) ? "text-brand" : "text-ink"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
 
-      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      {/* ---------- Desktop: centered single row of the 6 tabs ---------- */}
+      <div className="mx-auto hidden min-h-[88px] w-[80%] items-center justify-center gap-9 py-5 lg:flex">
+        <nav aria-label="Primary">
+          <ul className="flex items-center gap-4">
+            {nav.map((item) => (
+              <li key={item.label}>{renderNavItem(item)}</li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+// The right-side cluster (PhishCounter badge, country globe, sign-in) —
+// shared by the desktop absolute-positioned bar and the mobile row-1 bar.
+function HeaderActions({
+  navHoverMode,
+  toggleNavHoverMode,
+  visitBadge,
+  countryName,
+  countryHover,
+  setCountryHover,
+}) {
+  return (
+    <>
+      <button
+        type="button"
+        onClick={toggleNavHoverMode}
+        className="group relative flex shrink-0 cursor-pointer items-center gap-1.5 border-none bg-transparent font-normal text-ink transition-colors duration-200 hover:text-brand"
+        style={{ fontSize: "19px", letterSpacing: "0.04em" }}
+        aria-label={`PhishCounter — click to switch the 6-menu nav between mouse-over and click (currently ${navHoverMode ? "mouse-over opens menus" : "click required"})`}
+      >
+        <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
+          <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </svg>
+        {visitBadge}
+        <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
+          PhishCounter
+        </span>
+      </button>
+      <div
+        className="relative flex"
+        onMouseEnter={() => setCountryHover(true)}
+        onMouseLeave={() => setCountryHover(false)}
+      >
+        <Link
+          to="/country"
+          aria-label="Choose your country"
+          className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-5 w-5"
+            aria-hidden
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18" />
+            <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9Z" />
+          </svg>
+        </Link>
+        {countryHover && (
+          <span className="absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white shadow-md">
+            {countryName || "Select your country"}
+          </span>
+        )}
+      </div>
+      <Link
+        to="/login"
+        aria-label="Sign in"
+        className="group relative flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="h-5 w-5"
+          aria-hidden
+        >
+          <circle cx="12" cy="8" r="3.6" />
+          <path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" />
+        </svg>
+        <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
+          Sign-In
+        </span>
+      </Link>
     </>
   );
 }

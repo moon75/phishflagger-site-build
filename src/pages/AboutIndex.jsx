@@ -62,13 +62,13 @@ export default function AboutIndex() {
           <div className="flex flex-col items-center gap-5 sm:items-start">
             <Link
               to="/demo"
-              className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+              className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
             >
               Demo
             </Link>
             <Link
               to="/join/messaging"
-              className="text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
+              className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
             >
               Messaging
             </Link>
@@ -77,10 +77,10 @@ export default function AboutIndex() {
       </section>
 
       {/* ===== Pane 2 — Numbering history gallery (white) — moved here from Home pane-0006 ===== */}
-      <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-8 sm:px-6 sm:py-10">
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
-          <div className="relative mt-14 sm:mt-16">
+          <div className="relative mt-6 sm:mt-8">
             {/* Timeline connector */}
             <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />
 
