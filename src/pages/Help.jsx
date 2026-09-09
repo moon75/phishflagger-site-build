@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
-import contactIcon from "../../telecom Webpage/assets/images/products/OIP-915219841.png";
 import { publicPath } from "../lib/publicPath.js";
 const outlookThunderbirdImg = publicPath("/assets/images/thunderbird%20and%20outlook%20for%20kickstarterpage-yellow.png");
 
@@ -11,7 +10,7 @@ const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
   { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
-  { to: "/contact", label: "Contact", src: contactIcon, imageClassName: "rounded-full object-cover" },
+  { to: "/contact", label: "Contact", icon: <ContactIcon /> },
 ];
 
 export default function Help() {
@@ -121,18 +120,27 @@ function SupportDeskIcon() {
   );
 }
 
+function ContactIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+      <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
+      <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
+    </svg>
+  );
+}
+
 function FaqIcon() {
   return (
-    <svg viewBox="6 5 12 15" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
       <path
-        d="M9.3 9.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-        stroke="#4a4a4a"
-        strokeWidth="1.6"
+        d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+        stroke="#f97316"
+        strokeWidth="2.6"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
-      <circle cx="12" cy="16.7" r="1.05" fill="#4a4a4a" />
+      <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
     </svg>
   );
 }

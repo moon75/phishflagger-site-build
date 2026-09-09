@@ -19,7 +19,7 @@ function ChevronDown({ className }) {
   );
 }
 
-export default function NavDropdown({ item, hoverNavigate = false }) {
+export default function NavDropdown({ item, hoverNavigate = false, hoverOpen = true }) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
   const closeTimer = useRef(null);
@@ -66,8 +66,8 @@ export default function NavDropdown({ item, hoverNavigate = false }) {
     <div
       ref={wrapRef}
       className="relative"
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+      onMouseEnter={hoverOpen ? handleEnter : undefined}
+      onMouseLeave={hoverOpen ? handleLeave : undefined}
     >
       {item.href ? (
         <NavLink

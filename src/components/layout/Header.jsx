@@ -4,7 +4,6 @@ import { nav } from "../../data/nav.js";
 import { cn } from "../../lib/utils.js";
 import NavDropdown from "./NavDropdown.jsx";
 import MobileMenu from "./MobileMenu.jsx";
-import HeaderTopPageDownTab from "./HeaderTopPageDownTab.jsx";
 import { formatVisitCount } from "../../lib/visitCounter.js";
 import { readCookie, writeCookie } from "../../lib/cookies.js";
 import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
@@ -27,17 +26,17 @@ export default function Header() {
   }, []);
   const visitBadge = formatVisitCount(visitCount);
 
-  // Header-top page-down tab layout — click the ^0001 badge to cycle between
-  // two ways: "tight" (default) closes the gap so the nav reads as one
-  // normal, evenly-spaced menu and hides the HeaderTopPageDownTab tab
-  // entirely; "gap" splits the nav into two blocks of 3 with a reserved
-  // center gap the tab pokes down into. Every other page-down/up button on
-  // the site is untouched either way. This is NOT remembered across visits
-  // — every fresh page load starts back on "tight", so every visitor sees
-  // the closed-in menu first and the click is just a live toggle.
-  const [navTabMode, setNavTabMode] = useState("tight");
-  function toggleNavTabMode() {
-    setNavTabMode((prev) => (prev === "gap" ? "tight" : "gap"));
+  // 6-menu interaction mode — click the ^0001 PhishCounter badge to switch
+  // how the primary nav's 6 items (and their dropdowns) respond:
+  //   false (default) — CLICK required: dropdowns open only on click, and
+  //     Home/Video/Email/Telecom/Help/About do NOT navigate on hover.
+  //   true — MOUSE-OVER: dropdowns open on hover and those 6 tabs
+  //     hover-navigate, the older behaviour.
+  // NOT remembered across visits — every fresh page load starts back on
+  // "click required", the badge click is just a live toggle.
+  const [navHoverMode, setNavHoverMode] = useState(false);
+  function toggleNavHoverMode() {
+    setNavHoverMode((prev) => !prev);
   }
 
   // Country badge — shows the country picked on /country, read from a
@@ -65,9 +64,10 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // "Home", "Email", and "Telecom" navigate on mouse-over, like the dropdown
-  // menus that already open on hover — no click required.
+  // The 6 primary tabs that hover-navigate / hover-open — but only while
+  // navHoverMode is on (see the PhishCounter badge toggle above).
   const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help", "About"]);
+  const hoverNavActive = (label) => navHoverMode && HOVER_NAV_LABELS.has(label);
 
   // Email's plan sub-pages live under /join/* (Plug-In Free, Plug-In Pro,
   // Domain, Marketing + their quote/thanks flows) rather than under /email,
@@ -84,11 +84,6 @@ export default function Header() {
     return false;
   }
 
-  // Desktop nav split into two blocks of 3 (see JSX below) — first half /
-  // second half of the 6-item nav array.
-  const navLeft = nav.slice(0, 3);
-  const navRight = nav.slice(3);
-
   function renderNavItem(item) {
     // About now navigates straight to /about on hover (which lists all of
     // Press/Team/Intellectual Property/Blog/etc. on the page itself), so
@@ -96,14 +91,18 @@ export default function Header() {
     // render it as a plain nav link instead of a NavDropdown.
     if (item.children && item.label !== "About") {
       return (
-        <NavDropdown item={item} hoverNavigate={HOVER_NAV_LABELS.has(item.label)} />
+        <NavDropdown
+          item={item}
+          hoverOpen={navHoverMode}
+          hoverNavigate={hoverNavActive(item.label)}
+        />
       );
     }
     return (
       <NavLink
         to={item.href}
         onMouseEnter={
-          HOVER_NAV_LABELS.has(item.label)
+          hoverNavActive(item.label)
             ? () => {
                 // Guard against re-navigating on every re-entry (see
                 // NavDropdown's handleEnter for why this matters).
@@ -159,10 +158,10 @@ export default function Header() {
         <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
           <button
             type="button"
-            onClick={toggleNavTabMode}
+            onClick={toggleNavHoverMode}
             className="group relative flex shrink-0 cursor-pointer items-center gap-1.5 border-none bg-transparent font-normal text-ink transition-colors duration-200 hover:text-brand"
             style={{ fontSize: "19px", letterSpacing: "0.04em" }}
-            aria-label={`PhishCounter — click to switch the header nav layout (currently ${navTabMode === "gap" ? "with center page-down tab" : "tight, no center tab"})`}
+            aria-label={`PhishCounter — click to switch the 6-menu nav between mouse-over and click (currently ${navHoverMode ? "mouse-over opens menus" : "click required"})`}
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
               <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
@@ -245,38 +244,12 @@ export default function Header() {
           {/* Desktop nav + badge — kept tight together */}
           <div className="hidden items-center gap-3 lg:flex">
             <nav aria-label="Primary">
-              {navTabMode === "gap" ? (
-                /* Way 2 (toggle) — split into two blocks of 3 with a gap
-                   between them the width of the header-top page-down tab,
-                   left block nudged left and right block nudged right. */
-                <div className="flex items-center">
-                  <ul className="-ml-4 flex items-center gap-4">
-                    {navLeft.map((item) => (
-                      <li key={item.label}>{renderNavItem(item)}</li>
-                    ))}
-                  </ul>
-                  {/* Exact anchor for the header-top page-down tab below —
-                      its own center is always equidistant from both nav
-                      blocks (A=B), regardless of how wide "About ⌄" etc.
-                      make each side. */}
-                  <div id="nav-gap-anchor" className="w-[120px] shrink-0 sm:w-[132px]" aria-hidden />
-                  <ul className="-mr-4 flex items-center gap-4">
-                    {navRight.map((item) => (
-                      <li key={item.label}>{renderNavItem(item)}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                /* Way 1 (default) — no center gap, no header-top page-down
-                   tab: one normal, evenly-spaced menu. */
-                <ul className="flex items-center gap-4">
-                  {[...navLeft, ...navRight].map((item) => (
-                    <li key={item.label}>{renderNavItem(item)}</li>
-                  ))}
-                </ul>
-              )}
+              <ul className="flex items-center gap-4">
+                {nav.map((item) => (
+                  <li key={item.label}>{renderNavItem(item)}</li>
+                ))}
+              </ul>
             </nav>
-
           </div>
 
           {/* Mobile toggle */}
@@ -309,7 +282,6 @@ export default function Header() {
           </button>
         </div>
 
-        {navTabMode === "gap" && <HeaderTopPageDownTab />}
       </header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
