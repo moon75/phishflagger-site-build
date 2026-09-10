@@ -70,7 +70,7 @@ export default function Home() {
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
-            src={publicPath("/assets/images/hero%20v3%20need%20logo%20up.png")}
+            src={publicPath("/assets/images/hero%20v3.png")}
             alt="Woman using PhishFlagger-protected email"
             className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain pic-with-no-link-mouse-over-increase"
           />

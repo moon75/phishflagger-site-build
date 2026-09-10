@@ -234,15 +234,19 @@ export default function Join() {
               label="Digital"
               alt="Digital"
               svgIcon={
-                <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
-                  <path
-                    d="M7 12.5l3.3 3.3L17 8.5"
-                    stroke="#16a34a"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]"
+                  fill="none"
+                  stroke="#000"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {/* Binary "10" — a slashed zero for the digital look */}
+                  <path d="M5.5 8.5 L8 7 V17" />
+                  <ellipse cx="15.5" cy="12" rx="3.3" ry="5" />
+                  <line x1="12.7" y1="16.5" x2="18.3" y2="7.5" />
                 </svg>
               }
             />
