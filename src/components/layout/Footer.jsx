@@ -293,7 +293,7 @@ export default function Footer({ logoSrc = logoImg }) {
               alt="PhishFlagger"
               className="mx-auto h-auto w-[220px] max-w-full sm:w-[260px] pic-with-no-link-mouse-over-increase"
             />
-            <p className="mt-2 text-[13px] text-[#4a4a4a]">
+            <p className="mt-2 text-[26px] text-[#4a4a4a]">
               Protecting Communications.
             </p>
           </div>
@@ -323,7 +323,7 @@ export default function Footer({ logoSrc = logoImg }) {
             <span
               role="list"
               aria-label="Related tags"
-              className="flex flex-wrap justify-center gap-x-2.5 gap-y-1 text-[14px] font-semibold leading-[1.35] text-[#8a8f98] max-sm:text-[12px]"
+              className="flex flex-wrap justify-center gap-x-2.5 gap-y-1 text-[10px] leading-[1.4] text-black"
             >
               {tags.map((t) => (
                 <span key={t} role="listitem" className="whitespace-nowrap">

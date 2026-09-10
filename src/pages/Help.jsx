@@ -8,7 +8,7 @@ const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const LINKS = [
   { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/help/support-desk", label: "Support Desk", icon: <SupportDeskIcon /> },
+  { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.jpg") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
 ];
@@ -104,18 +104,6 @@ function ImagePlaceholderIcon() {
       <rect x="3" y="4" width="18" height="16" rx="2" />
       <circle cx="8.5" cy="9.5" r="1.5" />
       <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L3 20" />
-    </svg>
-  );
-}
-
-function SupportDeskIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
-      <circle cx="12" cy="12" r="11" fill="#16a34a" />
-      <path
-        d="M6 13a6 6 0 0 1 12 0v3.5a1.5 1.5 0 0 1-1.5 1.5H15v-5h3v-.5a6 6 0 0 0-12 0v.5h3v5H7.5A1.5 1.5 0 0 1 6 16.5z"
-        fill="white"
-      />
     </svg>
   );
 }

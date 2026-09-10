@@ -112,7 +112,6 @@ export default function Telecom() {
               alt="Sign Petition"
               svgIcon={
                 <svg viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
-                  <rect width="68" height="68" rx="34" fill="#eef0f4"/>
                   <rect x="18" y="14" width="28" height="36" rx="3" fill="white" stroke="#c0c4cc" strokeWidth="2"/>
                   <line x1="23" y1="23" x2="41" y2="23" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>
                   <line x1="23" y1="29" x2="41" y2="29" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round"/>

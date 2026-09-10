@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
@@ -255,12 +255,14 @@ export default function DomainAppliance() {
               <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                 Coming Soon
               </span>
-              <Link
-                to="/join-corporate"
+              <a
+                href="https://join.phishflagger.com/business/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Domain
-              </Link>
+              </a>
             </div>
           </div>
         </div>
