@@ -107,47 +107,31 @@ export default function EmailFreePlugIn() {
                 <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                   Coming Soon
                 </span>
-                <Link
-                  to="/join-free"
+                <a
+                  href="https://join.phishflagger.com/individual/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Free
-                </Link>
+                </a>
               </div>
-              {/* TEST — light button linking out to Dan's page. Opens in a
-                  new tab, separate from the existing "Join Free" button. */}
-              <a
-                href="https://join.phishflagger.com/business/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
-              >
-                Join PRO (test)
-              </a>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
                 Don&rsquo;t see your Domain
               </span>
-              <Link
-                to="/join-corporate"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
-              >
-                Join Pro
-              </Link>
-              <span className="rounded bg-[#FFFF00] px-2 py-0.5 text-[12px] text-ink">
-                $10.00 / Year
-              </span>
-              {/* TEST — light button linking out to Dan's page. Opens in a
-                  new tab, separate from the existing "Join Pro" button. */}
               <a
                 href="https://join.phishflagger.com/business/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md whitespace-nowrap border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
-                Join PRO (test)
+                Join PRO
               </a>
+              <span className="rounded bg-[#FFFF00] px-2 py-0.5 text-[12px] text-ink">
+                $10.00 / Year
+              </span>
             </div>
           </div>
         </div>

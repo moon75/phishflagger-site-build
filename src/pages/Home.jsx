@@ -147,11 +147,11 @@ export default function Home() {
             Put Verification in the Hands of People
           </h2>
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:text-[15px] sm:leading-[1.6]">
-            {brandify("PhishFlagger")} gives people a simple way to
+            {brandify("PhishFlagger")} gives people a way to
             recognize trusted communications. Every outgoing email receives
             a unique, sequential {brandify("PhishCounter")} in the subject
             line. Recipients can compare the number with the previous
-            message from that sender. If the sequence is missing or
+            message from the sender. If the sequence is missing or
             doesn't match, it's a clear signal to stop and take a closer
             look.
           </p>
@@ -198,9 +198,13 @@ export default function Home() {
       <SectionCounter value="^0001" />
       <PageDownButton targetSelector="#pane-0003" forceTopOnUp />
       <div className="mx-auto max-w-content">
+        {/* Trailing invisible LogoMark mirrors the leading one so the word
+            "Email" sits at the true horizontal centre of the pane, not the
+            logo + text pair. */}
         <h2 className="section-title mt-6 mb-10 flex items-center justify-center gap-3 text-center sm:mt-10 sm:mb-14">
           <LogoMark />
           Email
+          <LogoMark className="invisible" />
         </h2>
         <div className="mx-auto mt-6 flex flex-col items-center justify-center gap-10 px-4 sm:mt-8 lg:flex-row lg:flex-nowrap lg:items-start lg:gap-[84px]">
           <div className="flex w-auto flex-col items-center">
@@ -370,9 +374,8 @@ export default function Home() {
           <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
             Build greater trust with every campaign. <BrandInline /> helps
             marketers authenticate their email communications, giving
-            recipients greater confidence that messages are legitimate and
-            protecting your brand from phishing and impersonation. When
-            customers know an email is genuine, they are more likely to
+            recipients greater confidence that messages are legitimate.
+            When customers know an email is genuine, they are more likely to
             open, read, and engage with it.
           </p>
           <Link

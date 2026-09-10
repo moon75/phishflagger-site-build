@@ -54,8 +54,8 @@ export default function EmailDomain() {
           </div>
 
           <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
-            <div className="group flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 transition-all duration-200 hover:border-blue-600 hover:bg-blue-50 sm:p-5">
-              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
+            <div className="group flex flex-col items-center gap-4 p-4 sm:p-5">
+              <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
                 One
               </span>
               <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
@@ -66,8 +66,8 @@ export default function EmailDomain() {
                 />
               </div>
             </div>
-            <div className="group flex flex-col items-center gap-4 rounded-2xl border-2 border-black bg-white p-4 transition-all duration-200 hover:border-blue-600 hover:bg-blue-50 sm:p-5">
-              <span className="rounded-lg border-2 border-black px-6 py-1.5 text-[22px] font-semibold text-ink transition-all duration-200 group-hover:scale-110 group-hover:border-blue-600 sm:text-[25px]">
+            <div className="group flex flex-col items-center gap-4 p-4 sm:p-5">
+              <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
                 Many
               </span>
               <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
@@ -230,9 +230,9 @@ export default function EmailDomain() {
                 href="https://join.phishflagger.com/business/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-ink/20 bg-white/60 px-5 py-3 text-[13px] font-semibold text-ink-muted transition hover:bg-white duration-200"
+                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
-                Join PRO (test)
+                Join PRO
               </a>
             </div>
           </div>

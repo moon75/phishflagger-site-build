@@ -198,6 +198,19 @@ export default function Join() {
             #join-human-digital, the first pane with its own page-down
             button pair, instead of stopping here. ===== */}
         <div className="mx-auto max-w-content px-2 pb-4 pt-8 sm:pb-6 sm:pt-12">
+          <svg width="0" height="0" aria-hidden="true" className="absolute">
+            <defs>
+              <filter id="email-person-blue" colorInterpolationFilters="sRGB">
+                {/* Isolate purple people, preserving neutral envelopes and green checks. */}
+                <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 -100 100 0 -1" />
+                <feComposite in2="SourceGraphic" operator="in" result="personMask" />
+                <feFlood floodColor="#2563EB" />
+                <feComposite in2="personMask" operator="in" result="bluePerson" />
+                <feComposite in="SourceGraphic" in2="personMask" operator="out" />
+                <feComposite in="bluePerson" operator="over" />
+              </filter>
+            </defs>
+          </svg>
           <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/contact"
@@ -214,12 +227,14 @@ export default function Join() {
               to="/join/email-subscribe"
               label="Subscribe"
               src={subscribeIcon}
+              bluePerson
               alt="Subscribe"
             />
             <ActionCard
               to="/help/endorse-us"
               label="Endorse Us"
               src={endorseIcon}
+              bluePerson
               alt="Endorse Us"
             />
             <ActionCard
@@ -228,6 +243,8 @@ export default function Join() {
               label="Human"
               alt="Human"
               src={publicPath("/assets/icons/Human%20icon.png")}
+              imageSize="h-[81.6px] w-[81.6px] sm:h-[99.6px] sm:w-[99.6px]"
+              bluePerson
             />
             <ActionCard
               to="/digital-verification"
@@ -338,6 +355,7 @@ function ActionCard({
   alt,
   imageClassName = "",
   svgIcon,
+  bluePerson = false,
   imageSize = "h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]",
   hideLabel = false,
 }) {
@@ -361,6 +379,7 @@ function ActionCard({
           <img
             src={src}
             alt={alt}
+            style={bluePerson ? { filter: "url(#email-person-blue)" } : undefined}
             className={`object-contain ${imageSize} ${imageClassName}`}
           />
         )}

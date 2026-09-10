@@ -4,7 +4,6 @@ import LogoMark from "../../components/ui/LogoMark.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
 import history3Img from "../../assets/images/7 3rd.avif";
-import blockchainHistoryImg from "../../assets/images/bloch chain history.png";
 
 export default function NumberingHistory() {
   return (
@@ -12,35 +11,21 @@ export default function NumberingHistory() {
       <CloseButton to="/about" />
 
       <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-4 sm:px-6 sm:pt-20"
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
         style={{
           backgroundImage:
             "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
           backgroundSize: "140%",
         }}
       >
-        <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="page-title flex items-center justify-center gap-3">
+        <div className="mx-auto max-w-content text-center">
+          <p className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
             <LogoMark />
-            Numbering History
-          </h1>
-          <p className="mx-auto mt-6 max-w-[1100px] text-center text-[22px] leading-[1.5] text-ink sm:whitespace-nowrap sm:text-[28px] sm:leading-[1.45]">
             Numbering has been revolutionary in creating order and reducing
             fraud.
           </p>
-        </div>
-      </section>
 
-      <section
-        className="w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
-        <div className="mx-auto max-w-content">
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-8 text-left sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
             <HistoryCard
               to="/about/numbering-history/books"
               img={history1Img}
@@ -50,11 +35,6 @@ export default function NumberingHistory() {
               to="/about/numbering-history/documents"
               img={history2Img}
               imgAlt="Mechanical numbering stamp"
-            />
-            <HistoryCard
-              to="/about/numbering-history/blockchain"
-              img={blockchainHistoryImg}
-              imgAlt="Blockchain digital timestamping"
             />
             <HistoryCard
               to="/about/numbering-history/communications"

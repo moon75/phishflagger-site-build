@@ -303,36 +303,37 @@ export default function Footer({ logoSrc = logoImg }) {
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>
 
-          <p className="mx-auto mt-0.5 text-[10px] text-[#4a4a4a]">
-            <em className="text-black">
-              Phish<strong className="text-[#FF0033]">Flagger</strong>
-            </em>
-            <sup>&trade;</sup>{" "}
-            and{" "}
-            <em className="text-black">
-              Phish<strong className="text-[#FF0033]">Counter</strong>
-            </em>
-            <sup>&trade;</sup>{" "}
-            are Trademarks of{" "}
-            <em className="text-black">
-              Phish<strong className="text-[#FF0033]">Flagger</strong>
-            </em>{" "}
-            Inc.
+          <p className="mx-auto mt-0.5 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 text-[10px] text-[#4a4a4a]">
+            <span>
+              <em className="text-black">
+                Phish<strong className="text-[#FF0033]">Flagger</strong>
+              </em>
+              <sup>&trade;</sup>{" "}
+              and{" "}
+              <em className="text-black">
+                Phish<strong className="text-[#FF0033]">Counter</strong>
+              </em>
+              <sup>&trade;</sup>{" "}
+              are Trademarks of{" "}
+              <em className="text-black">
+                Phish<strong className="text-[#FF0033]">Flagger</strong>
+              </em>{" "}
+              Inc.
+            </span>
+            <span
+              role="list"
+              aria-label="Related tags"
+              className="flex flex-wrap justify-center gap-x-2.5 gap-y-1 text-[14px] font-semibold leading-[1.35] text-[#8a8f98] max-sm:text-[12px]"
+            >
+              {tags.map((t) => (
+                <span key={t} role="listitem" className="whitespace-nowrap">
+                  {t}
+                </span>
+              ))}
+            </span>
           </p>
         </div>
       </footer>
-
-      <div
-        role="region"
-        aria-label="Related tags"
-        className="flex w-full flex-wrap justify-center gap-x-2.5 gap-y-1.5 bg-white px-[max(48px,calc((100%-940px)/2+48px))] pb-5 text-center text-[7px] font-semibold leading-[1.35] text-[#8a8f98] font-['Mulish',sans-serif] max-sm:gap-x-2 max-sm:gap-y-1 max-sm:px-[18px] max-sm:pt-4 max-sm:pb-[18px] max-sm:text-[6px]"
-      >
-        {tags.map((t) => (
-          <span key={t} className="inline-block whitespace-nowrap">
-            {t}
-          </span>
-        ))}
-      </div>
     </>
   );
 }

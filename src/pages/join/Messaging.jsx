@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
+import { brandify } from "../../components/Brand.jsx";
 import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
 import messagingIconsImg from "../../assets/images/Icons-5.png";
 
@@ -20,9 +21,10 @@ export default function Messaging() {
             <h1 className="mb-6 text-left text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px] lg:text-[54px]">
               Messaging
             </h1>
-            <p className="rounded-lg bg-[#FFFF00] px-4 py-3 text-ink">
-              Placeholder text goes here. Replace this paragraph with the
-              final copy for this section.
+            <p className="text-ink">
+              {brandify(
+                "Text messages are used for everything from account alerts and customer service to payments and marketing. PhishFlagger™ adds an additional layer of sender verification to supported SMS communications, helping recipients distinguish legitimate messages from potential phishing, spoofing, and impersonation attempts.",
+              )}
             </p>
           </div>
 
@@ -40,7 +42,7 @@ export default function Messaging() {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-content flex-wrap items-center justify-center gap-4 text-center sm:mt-14">
+        <div className="mx-auto mt-20 flex max-w-content flex-wrap items-center justify-center gap-6 text-center sm:mt-28">
           <Link
             to="/join/messaging/request"
             className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
@@ -49,7 +51,7 @@ export default function Messaging() {
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center rounded-md border-2 border-black bg-white px-5 py-3 text-[13px] font-bold text-ink transition hover:bg-gray-100 duration-200 hover:scale-[1.2]"
+            className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
           >
             Contact Us
           </Link>
