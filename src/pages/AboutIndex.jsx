@@ -45,7 +45,7 @@ export default function AboutIndex() {
               </li>
             ))}
           </ul>
-          <div className="hidden self-stretch border-l-2 border-black sm:block" aria-hidden />
+          <div className="w-1/2 self-center border-t-2 border-black sm:w-auto sm:self-stretch sm:border-t-0 sm:border-l-2" aria-hidden />
           <ul className="space-y-5 text-center sm:text-left">
             {RIGHT_LINKS.map((item) => (
               <li key={item.to}>
@@ -58,7 +58,7 @@ export default function AboutIndex() {
               </li>
             ))}
           </ul>
-          <div className="hidden self-stretch border-l-2 border-black sm:block" aria-hidden />
+          <div className="w-1/2 self-center border-t-2 border-black sm:w-auto sm:self-stretch sm:border-t-0 sm:border-l-2" aria-hidden />
           <div className="flex flex-col items-center gap-5 sm:items-start">
             <Link
               to="/demo"

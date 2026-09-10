@@ -39,7 +39,7 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:origin-center lg:scale-[1.44] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[460px] lg:w-[432px] lg:max-w-full lg:origin-center lg:scale-[1.44] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
@@ -48,7 +48,7 @@ export default function Telecom() {
             <img
               src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.19]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[440px] lg:w-[400px] lg:max-w-full lg:scale-[1.19]"
             />
           </div>
 
@@ -57,7 +57,7 @@ export default function Telecom() {
             <img
               src={publicPath("/assets/images/granny image.png")}
               alt="User receiving an authenticated call"
-              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[380px] rounded-2xl object-contain sm:max-w-[380px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 

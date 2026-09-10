@@ -251,6 +251,20 @@ export default function Kick() {
             identify messages that may be fraudulent.
           </p>
         </div>
+
+        {/* ===== Telecom intro (moved here from the /telecom hero image) ===== */}
+        <div className="mt-16 w-full max-w-[900px] text-left">
+          <p className="mx-auto max-w-[780px] text-center text-[16px] leading-[1.6] text-ink sm:text-[18px] sm:leading-[1.5] lg:mx-0 lg:text-left">
+            Phishing and impersonation don&rsquo;t stop at email.{" "}
+            <em className="italic">
+              <span className="font-bold text-ink">Phish</span>
+              <span className="font-normal text-brand">Flagger</span>
+            </em>
+            <sup>&trade;</sup> extends trusted communication into telecom,
+            helping organizations verify messages sent through mobile and
+            telecommunications channels.
+          </p>
+        </div>
       </section>
 
       {/* ===== Human / Digital text (moved here from /email = Join.jsx) ===== */}
