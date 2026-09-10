@@ -72,7 +72,7 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v3.png")}
             alt="Woman using PhishFlagger-protected email"
-            className="relative left-1/2 top-7 h-auto w-[120%] max-w-none -translate-x-1/2 origin-bottom object-contain pic-with-no-link-mouse-over-increase"
+            className="relative mx-auto h-auto w-full max-w-[340px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[420px] lg:left-1/2 lg:top-7 lg:w-[120%] lg:max-w-none lg:origin-bottom lg:-translate-x-1/2"
           />
         </div>
       </div>

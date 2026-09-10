@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import BluePersonFilter from "../../components/ui/BluePersonFilter.jsx";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
@@ -38,7 +39,7 @@ export default function Telecom() {
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[360px] object-contain sm:max-w-[400px] lg:w-[432px] lg:max-w-full lg:origin-center lg:scale-[1.44] lg:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
@@ -47,7 +48,7 @@ export default function Telecom() {
             <img
               src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-[340px] object-contain sm:max-w-[380px] lg:w-[400px] lg:max-w-full lg:scale-[1.19]"
             />
           </div>
 
@@ -56,7 +57,7 @@ export default function Telecom() {
             <img
               src={publicPath("/assets/images/granny image.png")}
               alt="User receiving an authenticated call"
-              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[280px] rounded-2xl object-contain sm:max-w-[320px] lg:h-full lg:w-auto lg:max-w-full lg:scale-[1.3] lg:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 
@@ -66,6 +67,7 @@ export default function Telecom() {
 
         {/* Merged from former Bottom CTA panel */}
         <div className="mx-auto mt-6 w-full min-w-0 max-w-content sm:mt-8">
+          <BluePersonFilter id="telecom-person-blue" />
           <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/telecom/contact"
@@ -88,6 +90,7 @@ export default function Telecom() {
                 </>
               }
               src={subscribeIcon}
+              bluePerson
               alt="Subscribe Telecom"
             />
             <ActionCard
@@ -100,6 +103,7 @@ export default function Telecom() {
                 </>
               }
               src={endorseIcon}
+              bluePerson
               alt="Endorse Safe Calls"
             />
             <ActionCard
@@ -492,6 +496,7 @@ function ActionCard({
   src,
   alt,
   imageClassName = "",
+  bluePerson = false,
   svgIcon,
   imageSize = "h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]",
 }) {
@@ -511,6 +516,7 @@ function ActionCard({
             src={src}
             alt={alt}
             className={`object-contain ${imageSize} ${imageClassName}`}
+            style={bluePerson ? { filter: "url(#telecom-person-blue)" } : undefined}
           />
         )}
       </div>
