@@ -1,16 +1,27 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { publicPath } from "../lib/publicPath.js";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  // Internal-use routing box, not part of the real sign-in flow: /video1 is
+  // our Oracle-backed video demo, /video will be the site's real, public
+  // video page (not built yet). Typing "007" anywhere in the box sends you
+  // to the demo; anything else (or nothing) goes to /video.
+  const [accessCode, setAccessCode] = useState("");
 
   function onSubmit(event) {
     event.preventDefault();
     setError(true);
+  }
+
+  function onAccessCodeSubmit(event) {
+    event.preventDefault();
+    navigate(accessCode.includes("007") ? "/video1" : "/video");
   }
 
   return (
@@ -102,6 +113,37 @@ export default function Login() {
               Create one
             </Link>
           </p>
+
+          {/* Internal — not part of sign-in. Enter "007" to jump to the
+              Oracle-backed video demo (/video1); anything else goes to the
+              site's real video page (/video). */}
+          <form
+            onSubmit={onAccessCodeSubmit}
+            className="mt-6 border-t border-gray-200 pt-5"
+          >
+            <label
+              htmlFor="login-access-code"
+              className="mb-1.5 block text-[13px] font-semibold text-ink"
+            >
+              Access Code
+            </label>
+            <div className="flex gap-2">
+              <input
+                id="login-access-code"
+                type="text"
+                value={accessCode}
+                onChange={(e) => setAccessCode(e.target.value)}
+                className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-[14px] text-ink outline-none transition focus:border-ink focus:ring-1 focus:ring-ink"
+                placeholder="Enter code"
+              />
+              <button
+                type="submit"
+                className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[14px] font-semibold text-white transition duration-200 hover:bg-[#2f2f2f]"
+              >
+                Go
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </>

@@ -76,22 +76,21 @@ export default function AboutIndex() {
         </div>
       </section>
 
-      {/* ===== Pane 2 — Numbering history gallery (white) — moved here from Home pane-0006 ===== */}
-      <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-8 sm:px-6 sm:py-10">
-        <SectionCounter value="^0001" />
+      {/* ===== Pane 2 — Numbering history gallery (grey, matches pane 1) — moved here from Home pane-0006 ===== */}
+      <section id="about-pane-0002" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 py-4 sm:px-6 sm:py-6">
         <div className="mx-auto max-w-content">
-          <div className="relative mt-6 sm:mt-8">
+          <div className="relative mt-3 sm:mt-4">
             {/* Timeline connector */}
             <div className="pointer-events-none absolute left-[16.5%] right-[16.5%] top-[26px] hidden h-[2px] bg-ink/15 sm:block" />
 
-            <div className="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6 lg:gap-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-4 sm:gap-6 lg:gap-8">
               <div className="flex flex-col items-center">
-                <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                <span className="relative z-10 mb-6 px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                   1470
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png")}
@@ -110,12 +109,12 @@ export default function AboutIndex() {
               </div>
 
               <div className="flex flex-col items-center">
-                <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                <span className="relative z-10 mb-6 px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                   1892
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/History%20Pane%20Images/stamp%20third%20image.png")}
@@ -129,12 +128,12 @@ export default function AboutIndex() {
               </div>
 
               <div className="flex flex-col items-center">
-                <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                <span className="relative z-10 mb-6 px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                   1991
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/blockchain.png")}
@@ -148,12 +147,12 @@ export default function AboutIndex() {
               </div>
 
               <div className="flex flex-col items-center">
-                <span className="relative z-10 mb-6 bg-white px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
+                <span className="relative z-10 mb-6 px-3 text-[28px] font-bold tracking-tight text-ink sm:text-[32px]">
                   2026
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-transform duration-300 ease-out hover:z-10 hover:scale-[1.2]"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/footer%20history%20pic%203rd.png")}
@@ -171,13 +170,5 @@ export default function AboutIndex() {
         </div>
       </section>
     </div>
-  );
-}
-
-function SectionCounter({ value }) {
-  return (
-    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
-      {value}
-    </span>
   );
 }

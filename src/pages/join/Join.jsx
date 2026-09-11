@@ -60,7 +60,7 @@ export default function Join() {
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center topClass="top-0 sm:top-2" />
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
+        <div className="mx-auto grid max-w-content grid-cols-1 items-start gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="flex justify-center lg:block lg:w-[500px]">
             <img
               src={emailSolutionsCardImg}
@@ -68,7 +68,8 @@ export default function Join() {
               className="block h-auto w-[380px] max-w-full object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
-          <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-8 sm:gap-8 lg:flex-nowrap lg:justify-center lg:pl-8">
+          <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-8 sm:gap-8 lg:justify-center lg:pl-8">
+            <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-8 sm:gap-8 lg:-mt-[55px]">
             <div className="flex w-auto flex-col items-center">
               <Link
                 to="/join/email-free-plug-in"
@@ -78,7 +79,7 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
                     Plug-In Free
                   </span>
                 </div>
@@ -103,17 +104,17 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 state={{ from: "/email" }}
-                aria-label="Join PRO — One or Many"
+                aria-label="Join PRO — Individual / Group"
                 onMouseEnter={() => setHoveredPlanCard("pro")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
                     Plug-In Pro
                   </span>
-                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[17px]">
-                    One or Many
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors sm:text-[17px]">
+                    Individual / Group
                   </span>
                 </div>
                 <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
@@ -143,10 +144,10 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
+                  <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
                     Domain
                   </span>
-                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[17px]">
+                  <span className="absolute top-full left-1/2 mt-2 -translate-x-1/2 whitespace-nowrap text-center text-[15px] font-semibold leading-tight text-ink transition-colors sm:text-[17px]">
                     Appliance
                   </span>
                 </div>
@@ -175,7 +176,7 @@ export default function Join() {
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
-                  <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand sm:text-[25px]">
+                  <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
                     Marketing
                   </span>
                 </div>
@@ -190,6 +191,7 @@ export default function Join() {
                 Marketing
               </Link>
             </div>
+            </div>
           </div>
         </div>
 
@@ -198,7 +200,7 @@ export default function Join() {
             global page-down tab's "next <section>" lookup skips straight to
             #join-human-digital, the first pane with its own page-down
             button pair, instead of stopping here. ===== */}
-        <div className="mx-auto max-w-content px-2 pb-4 pt-8 sm:pb-6 sm:pt-12">
+        <div className="mx-auto max-w-content px-2 pb-0 pt-8 sm:pt-12">
           <BluePersonFilter id="email-person-blue" />
           <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
@@ -258,7 +260,7 @@ export default function Join() {
             />
             <ActionCard
               to="/about/faq?category=General"
-              label="FAQ - Email"
+              label={<span className="whitespace-nowrap">FAQ - Email</span>}
               alt="FAQ - Email"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
@@ -356,7 +358,7 @@ function ActionCard({
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
         <span
-          className={`text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted transition-colors group-hover:text-brand sm:text-[22px] ${
+          className={`text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted transition-colors sm:text-[22px] ${
             hideLabel ? "invisible" : ""
           }`}
         >

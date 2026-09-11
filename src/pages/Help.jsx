@@ -7,8 +7,8 @@ const outlookThunderbirdImg = publicPath("/assets/images/thunderbird%20and%20out
 const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const LINKS = [
-  { to: "/about/faq", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.jpg") },
+  { to: "/about/faq?category=General", label: "FAQ", icon: <FaqIcon /> },
+  { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
 ];

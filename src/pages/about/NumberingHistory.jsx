@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
@@ -26,21 +25,9 @@ export default function NumberingHistory() {
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-8 text-left sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
-            <HistoryCard
-              to="/about/numbering-history/books"
-              img={history1Img}
-              imgAlt="Numbered book pages"
-            />
-            <HistoryCard
-              to="/about/numbering-history/documents"
-              img={history2Img}
-              imgAlt="Mechanical numbering stamp"
-            />
-            <HistoryCard
-              to="/about/numbering-history/communications"
-              img={history3Img}
-              imgAlt="PhishFlagger email numbering"
-            />
+            <HistoryCard img={history1Img} imgAlt="Numbered book pages" />
+            <HistoryCard img={history2Img} imgAlt="Mechanical numbering stamp" />
+            <HistoryCard img={history3Img} imgAlt="PhishFlagger email numbering" />
           </div>
         </div>
       </section>
@@ -48,17 +35,14 @@ export default function NumberingHistory() {
   );
 }
 
-function HistoryCard({ to, img, imgAlt }) {
+function HistoryCard({ img, imgAlt }) {
   return (
-    <Link
-      to={to}
-      className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center transition-transform duration-200 hover:z-10 hover:scale-105"
-    >
+    <div className="flex flex-col items-center rounded-2xl border-2 border-black p-0.5 text-center">
       <img
         src={img}
         alt={imgAlt}
         className="h-auto w-full rounded-2xl object-contain"
       />
-    </Link>
+    </div>
   );
 }

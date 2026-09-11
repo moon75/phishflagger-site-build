@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FAQ_CATEGORIES } from "../../data/faq.js";
 import { brandify } from "../Brand.jsx";
@@ -23,23 +23,11 @@ export default function FaqTabs({
   const [openQuestion, setOpenQuestion] = useState(null);
   const active = activeIndex === null ? null : categories[activeIndex];
   const { pathname } = useLocation();
-  const hoverTimer = useRef(null);
 
   function selectCategory(idx) {
     if (idx !== activeIndex) setOpenQuestion(null);
     setActiveIndex(idx);
   }
-
-  // Selects the tab after a brief 0.2s hover dwell — no click required.
-  function handleTabHoverEnter(idx) {
-    clearTimeout(hoverTimer.current);
-    hoverTimer.current = setTimeout(() => selectCategory(idx), 200);
-  }
-  function handleTabHoverLeave() {
-    clearTimeout(hoverTimer.current);
-  }
-
-  useEffect(() => () => clearTimeout(hoverTimer.current), []);
 
   // The Footer (and this FAQ block) persists across route changes, so an
   // expanded category/question would otherwise stay open when navigating away.
@@ -47,7 +35,7 @@ export default function FaqTabs({
     setActiveIndex(initialIndex >= 0 ? initialIndex : null);
     setOpenQuestion(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [pathname, initialCategory]);
 
   return (
     <div className={classic ? "" : "rounded-2xl bg-white p-6 sm:p-8"}>
@@ -56,8 +44,7 @@ export default function FaqTabs({
           <button
             key={category.name}
             type="button"
-            onMouseEnter={() => handleTabHoverEnter(idx)}
-            onMouseLeave={handleTabHoverLeave}
+            onClick={() => selectCategory(idx)}
             className={`cursor-pointer rounded-full px-4 py-2 text-[13px] font-medium transition-all duration-200 hover:scale-[1.1] sm:text-[14px] ${
               classic ? "border " : ""
             }${

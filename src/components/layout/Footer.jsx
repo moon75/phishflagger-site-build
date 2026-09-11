@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import PageUpButton from "../ui/PageUpButton.jsx";
 import PageDownButton from "../ui/PageDownButton.jsx";
-import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v2.png";
+import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
 import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
 import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
 import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
@@ -27,7 +27,7 @@ const VIDEO_CATEGORY_LINKS = [
 
 const PRODUCT_IMAGES = [
   { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
-  { src: desktopPhoneImg, alt: "Desktop phone", verified: true, imageClass: "translate-y-3" },
+  { src: desktopPhoneImg, alt: "Desktop phone", imageClass: "translate-y-1 scale-[1.15]" },
   { src: callerIdPhoneImg, alt: "PhishFlagger Caller ID", offsetClass: "" },
   { src: emailPhoneImg, alt: "PhishFlagger Email" },
   { src: messagesPhoneImg, alt: "PhishFlagger Messages" },
@@ -37,6 +37,11 @@ const PRODUCT_IMAGES = [
 export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
   const hideFaq = pathname === "/about/faq";
+  // The About page's numbering-history pane used to carry "^0001" itself;
+  // it's been moved down onto this shared products/phones pane instead,
+  // but only when landing here from /about — other pages don't have a
+  // counter sequence that this pane fits into.
+  const showAboutCounter = pathname === "/about";
   const tags = [
     "#phishflagger", "#phishcounter", "#numbering", "#phishing", "#callerid",
   ];
@@ -55,6 +60,7 @@ export default function Footer({ logoSrc = logoImg }) {
               backgroundSize: "140%",
             }}
           >
+            {showAboutCounter && <SectionCounter value="^0001" />}
             <PageDownButton bg="white" />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
@@ -71,7 +77,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-end lg:gap-8 lg:pr-[20px]">
                   <Link
-                    to="/about/faq"
+                    to="/about/faq?category=General"
                     className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
                   >
                     FAQ
@@ -202,7 +208,7 @@ export default function Footer({ logoSrc = logoImg }) {
               links={[
                 { label: "Contact", href: "/contact" },
                 { label: "Support Desk", href: "/help/support-desk" },
-                { label: "FAQ", href: "/about/faq" },
+                { label: "FAQ", href: "/about/faq?category=General" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },
               ]}
@@ -335,6 +341,14 @@ export default function Footer({ logoSrc = logoImg }) {
         </div>
       </footer>
     </>
+  );
+}
+
+function SectionCounter({ value }) {
+  return (
+    <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
+      {value}
+    </span>
   );
 }
 
