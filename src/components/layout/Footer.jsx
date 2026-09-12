@@ -36,7 +36,11 @@ const PRODUCT_IMAGES = [
 
 export default function Footer({ logoSrc = logoImg }) {
   const { pathname } = useLocation();
-  const hideFaq = pathname === "/about/faq";
+  const hideFooterBlock = pathname === "/about/faq";
+  // Help page already has its own FAQ icon card up top, so the footer's
+  // FAQ button here would be redundant — hide just that button, keep
+  // Endorse Us and the rest of the footer block showing.
+  const hideFaqButton = pathname === "/help";
   // The About page's numbering-history pane used to carry "^0001" itself;
   // it's been moved down onto this shared products/phones pane instead,
   // but only when landing here from /about — other pages don't have a
@@ -48,7 +52,7 @@ export default function Footer({ logoSrc = logoImg }) {
 
   return (
     <>
-      {!hideFaq && (
+      {!hideFooterBlock && (
         <>
           <div className="h-1.5 w-full bg-gray-300" aria-hidden />
           <div
@@ -75,14 +79,20 @@ export default function Footer({ logoSrc = logoImg }) {
                     Protecting Communications
                   </h2>
                 </div>
-                <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-end lg:gap-8 lg:pr-[20px]">
-                  <Link
-                    to="/about/faq?category=General"
-                    state={{ from: pathname }}
-                    className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
-                  >
-                    FAQ
-                  </Link>
+                <div
+                  className={`flex flex-wrap items-center justify-center gap-4 lg:gap-8 ${
+                    hideFaqButton ? "lg:justify-start lg:pl-[20px]" : "lg:justify-end lg:pr-[20px]"
+                  }`}
+                >
+                  {!hideFaqButton && (
+                    <Link
+                      to="/about/faq?category=General"
+                      state={{ from: pathname }}
+                      className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
+                    >
+                      FAQ
+                    </Link>
+                  )}
                   <Link
                     to="/help/endorse-us"
                     state={{ from: pathname }}

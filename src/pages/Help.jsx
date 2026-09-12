@@ -7,6 +7,7 @@ const outlookThunderbirdImg = publicPath("/assets/images/thunderbird%20and%20out
 const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const LINKS = [
+  { to: "/about/faq?category=General", label: "FAQ", icon: <FaqIcon /> },
   { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
@@ -115,6 +116,22 @@ function ContactIcon() {
     <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
       <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
       <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
+    </svg>
+  );
+}
+
+function FaqIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+      <path
+        d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
+        stroke="#eab308"
+        strokeWidth="2.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <circle cx="12" cy="15.7" r="1.3" fill="#eab308" />
     </svg>
   );
 }
