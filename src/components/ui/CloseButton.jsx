@@ -12,7 +12,9 @@ export default function CloseButton({ to = "/", force = false }) {
 
   function handleClose() {
     const destination = !force && location.state?.from ? location.state.from : to;
-    navigate(destination, { replace: true });
+    // restoreScroll tells SiteLayout to put the destination page back where
+    // the user left it, instead of jumping to the top (see SiteLayout.jsx).
+    navigate(destination, { replace: true, state: { restoreScroll: true } });
   }
 
   return (

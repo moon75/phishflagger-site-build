@@ -101,14 +101,10 @@ export default function EmailDomain() {
                       className="h-full w-full translate-y-1 scale-[1.5] object-contain pic-with-no-link-mouse-over-increase"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-3 bg-[#FFFF00] p-7 pb-10">
+                  <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
                     <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                       <li>Windows</li>
                       <li>Linux / Window</li>
-                      <li>
-                        Placeholder text goes here. Replace this copy with the
-                        final content.
-                      </li>
                     </ul>
                   </div>
                 </div>

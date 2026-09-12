@@ -244,10 +244,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Link
-              to="/kick"
-              className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center transition duration-200 hover:scale-[1.5] hover:bg-red-100"
-            >
+            {/* Link to /kick turned off for now — plain non-clickable card */}
+            <div className="mt-4 flex w-full max-w-[380px] flex-col items-center justify-center gap-1 rounded-2xl border-2 border-black bg-red-50 px-6 py-4 text-center">
               <span className="text-[13px] font-bold uppercase tracking-wide text-ink sm:text-[14px]">
                 Help Us Stop Phishing
               </span>
@@ -257,7 +255,7 @@ export default function Home() {
               <span className="text-[16px] font-medium text-brand sm:text-[18px]">
                 Support us on Kickstarter
               </span>
-            </Link>
+            </div>
             <div className="mt-8 flex flex-wrap items-stretch justify-center gap-4">
               <div className="flex w-[170px] flex-col items-center gap-3">
                 <span className="text-[28px] font-extrabold uppercase tracking-wide text-ink">
