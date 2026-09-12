@@ -43,7 +43,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain img-hover-zoom"
+              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function EmailMarketing() {
             <img
               src={phishCounterImg}
               alt="PhishCounter subject line example"
-              className="h-auto w-full max-w-[560px] object-contain img-hover-zoom"
+              className="h-auto w-full max-w-[560px] object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
 
@@ -128,11 +128,11 @@ export default function EmailMarketing() {
             <p className="mb-4 w-full max-w-[358px] text-center text-[16px] text-ink sm:text-[18px]">
               Email client view from enabled Domain
             </p>
-            <div className="aspect-[1448/1017] w-full max-w-[358px] overflow-hidden rounded-2xl border-2 border-black bg-white">
+            <div className="aspect-[1448/1017] w-full max-w-[358px] overflow-hidden rounded-2xl border-2 border-black bg-white pic-with-no-link-mouse-over-increase">
               <img
                 src={inboxImg}
                 alt="PhishFlagger inbox showing validated and flagged emails"
-                className="h-full w-full object-cover img-hover-zoom"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>

@@ -81,9 +81,11 @@ export const VIDEO_CATEGORIES = [
   "Oracle2",
 ];
 
-// Categories shown on the public /video showcase — all of them, Oracle and
-// Oracle2 included.
-export const PUBLIC_VIDEO_CATEGORIES = VIDEO_CATEGORIES;
+// Categories shown on the public /video showcase — everything except
+// Oracle and Oracle2, which stay in the gated /video1 library only.
+export const PUBLIC_VIDEO_CATEGORIES = VIDEO_CATEGORIES.filter(
+  (category) => category !== "Oracle" && category !== "Oracle2",
+);
 
 export const CATEGORY_SLUGS = {
   Feature: "",

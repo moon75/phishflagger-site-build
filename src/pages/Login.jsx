@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { publicPath } from "../lib/publicPath.js";
+import { isVideo1Unlocked, setVideo1Unlocked } from "../lib/videoAccess.js";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -9,10 +10,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   // Internal-use routing box, not part of the real sign-in flow: /video1 is
-  // our Oracle-backed video demo, /video will be the site's real, public
-  // video page (not built yet). Typing "007" anywhere in the box sends you
-  // to the demo; anything else (or nothing) goes to /video.
-  const [accessCode, setAccessCode] = useState("");
+  // our Oracle-backed video demo, /video is the site's real, public video
+  // page. Typing "007" anywhere in the box unlocks the demo — saved so it
+  // stays unlocked (the box shows "007" again) until "off"/"OFF" is typed
+  // to turn it back off. Anything else (or nothing) just goes to /video.
+  const [accessCode, setAccessCode] = useState(() => (isVideo1Unlocked() ? "007" : ""));
 
   function onSubmit(event) {
     event.preventDefault();
@@ -21,7 +23,19 @@ export default function Login() {
 
   function onAccessCodeSubmit(event) {
     event.preventDefault();
-    navigate(accessCode.includes("007") ? "/video1" : "/video");
+    const normalized = accessCode.trim().toLowerCase();
+    if (normalized === "off") {
+      setVideo1Unlocked(false);
+      setAccessCode("");
+      navigate("/video");
+      return;
+    }
+    if (accessCode.includes("007")) {
+      setVideo1Unlocked(true);
+      navigate("/video1");
+      return;
+    }
+    navigate("/video");
   }
 
   return (

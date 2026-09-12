@@ -5,6 +5,12 @@ import { publicPath } from "../../lib/publicPath.js";
 const NEWS_ITEMS = [
   {
     title:
+      "Passkey-Themed Phishing Attacks Lead to Microsoft 365 Data Theft",
+    image: publicPath("/assets/images/news/passkey-phishing-m365.svg"),
+    url: "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
+  },
+  {
+    title:
       "Q1 Goals to Cops in Security: The Rise of AI-Powered Phishing",
     image: newsCardImg,
     url: "https://securityboulevard.com/2025/04/q1-goals-to-gaps-in-security-the-rise-of-hr-themed-phishing/",

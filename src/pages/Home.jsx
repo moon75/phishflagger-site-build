@@ -58,14 +58,14 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-[3.25rem] scale-[0.9] object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full -translate-y-[3.25rem] scale-[1.0] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-y-[3.25rem] scale-[0.9] object-contain pic-with-no-link-mouse-over-increase"
+            className="mx-auto h-auto w-[100%] max-w-none -translate-y-[3.25rem] scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">

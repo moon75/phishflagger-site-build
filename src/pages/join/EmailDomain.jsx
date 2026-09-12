@@ -56,7 +56,7 @@ export default function EmailDomain() {
               <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
                 One
               </span>
-              <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
+              <div className="pic-with-no-link-mouse-over-increase h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-center-person.png")}
                   alt="Corporate email protection design"
@@ -68,7 +68,7 @@ export default function EmailDomain() {
               <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
                 Many
               </span>
-              <div className="img-hover-zoom h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
+              <div className="pic-with-no-link-mouse-over-increase h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
                   src={publicPath("/assets/images/corporate-image-homepage-v5.png")}
                   alt="Six-person email protection design"
@@ -151,7 +151,7 @@ export default function EmailDomain() {
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
-              className="img-hover-zoom h-auto w-full max-w-[500px] object-contain"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[500px] object-contain"
             />
           </div>
         </div>
@@ -162,14 +162,14 @@ export default function EmailDomain() {
         <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
-            <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
+            <div className="pic-with-no-link-mouse-over-increase h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src={publicPath("/assets/images/domain image for homepage.png")}
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="img-hover-zoom flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
+            <div className="pic-with-no-link-mouse-over-increase flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"

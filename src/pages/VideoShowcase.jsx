@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import VideoCard from "../components/video/VideoCard.jsx";
 import { PUBLIC_VIDEO_CATEGORIES, showcaseVideosForCategory } from "../data/videos.js";
+import { isVideo1Unlocked } from "../lib/videoAccess.js";
 
 // The public, default /video page — same category-button + grid layout as
 // the full /video1 library, but each category shows only its one curated
 // "best of best" pick (padded with "Coming Soon" placeholders), and Oracle /
 // Oracle2 are left out entirely (see PUBLIC_VIDEO_CATEGORIES). The full
 // library with every video and its script doc lives at /video1, reached via
-// the "007" access code on /login.
+// the "007" access code on /login — once unlocked that stays saved, so
+// landing here goes straight to /video1 until "off"/"OFF" is entered there.
 export default function VideoShowcase() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState(PUBLIC_VIDEO_CATEGORIES[0]);
   const [playing, setPlaying] = useState(null);
+
+  useEffect(() => {
+    if (isVideo1Unlocked()) navigate("/video1", { replace: true });
+  }, [navigate]);
 
   const videos = showcaseVideosForCategory(activeCategory);
 

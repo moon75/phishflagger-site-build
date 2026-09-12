@@ -125,13 +125,13 @@ function FaqIcon() {
     <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
       <path
         d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-        stroke="#f97316"
+        stroke="#eab308"
         strokeWidth="2.6"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
-      <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
+      <circle cx="12" cy="15.7" r="1.3" fill="#eab308" />
     </svg>
   );
 }

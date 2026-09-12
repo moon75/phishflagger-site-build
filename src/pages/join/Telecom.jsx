@@ -48,7 +48,7 @@ export default function Telecom() {
             <img
               src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[210px] md:max-w-[290px] lg:max-w-[420px] min-[1900px]:w-[400px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[1.05]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[200px] md:max-w-[270px] lg:max-w-[390px] min-[1900px]:w-[400px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[0.95]"
             />
           </div>
 
@@ -430,9 +430,8 @@ export default function Telecom() {
               <LogoMark />
               SMS
             </h2>
-            <p className="telecom-body-text mt-6 rounded-lg bg-[#FFFF00] px-4 py-3">
-              Placeholder text goes here. Replace this paragraph with the
-              final copy for this section.
+            <p className="telecom-body-text mt-6">
+              Text messages are used for everything from account alerts and customer service to payments and marketing. PhishFlagger™ adds an additional layer of sender verification to supported SMS communications, helping recipients distinguish legitimate messages from potential phishing, spoofing, and impersonation attempts.
             </p>
           </div>
           <div className="flex justify-center">

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1917"/>
+      <stop offset="100%" stop-color="#3a2323"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe08a"/>
+      <stop offset="100%" stop-color="#e0a83a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- faint grid / circuit texture -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1.5">
+    <path d="M0 90 H800 M0 200 H800 M0 320 H800"/>
+    <path d="M120 0 V450 M420 0 V450 M660 0 V450"/>
+  </g>
+
+  <!-- login card -->
+  <rect x="470" y="110" width="250" height="230" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="595" cy="180" r="26" fill="#ffffff" fill-opacity="0.85"/>
+  <path d="M577 196 q18 -14 36 0" stroke="#3a2323" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="510" y="230" width="170" height="14" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="510" y="256" width="170" height="14" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="510" y="292" width="170" height="34" rx="8" fill="#e0002b"/>
+  <text x="595" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">SIGN IN</text>
+
+  <!-- fraud/alert badge on the card -->
+  <circle cx="700" cy="115" r="20" fill="#e0002b"/>
+  <text x="700" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff">!</text>
+
+  <!-- large passkey icon, center-left -->
+  <g transform="translate(115,140)">
+    <circle cx="60" cy="60" r="58" fill="url(#key)"/>
+    <circle cx="60" cy="60" r="26" fill="#3a2323"/>
+    <circle cx="60" cy="60" r="10" fill="url(#key)"/>
+    <rect x="98" y="52" width="150" height="16" rx="8" fill="url(#key)"/>
+    <rect x="200" y="68" width="16" height="30" rx="4" fill="url(#key)"/>
+    <rect x="228" y="68" width="16" height="22" rx="4" fill="url(#key)"/>
+  </g>
+
+  <!-- phishing hook overlapping the key, red accent -->
+  <path d="M150 260 q0 60 55 60 q40 0 40 -34 q0 -22 -22 -22 q-14 0 -14 12 q0 8 8 8"
+        fill="none" stroke="#e0002b" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="150" cy="252" r="9" fill="#e0002b"/>
+
+  <!-- headline -->
+  <text x="60" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#ffffff">Passkey-Themed Phishing</text>
+  <text x="60" y="412" font-family="Arial, sans-serif" font-size="18" fill="#f2c9ce">Targeting Microsoft 365 accounts</text>
+</svg>

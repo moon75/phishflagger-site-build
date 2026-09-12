@@ -269,7 +269,7 @@ export default function Join() {
               }
             />
             <ActionCard
-              to="/about/faq?category=General"
+              to="/about/faq?category=Email%20-%20Plug-In%20(Free)"
               state={{ from: "/email" }}
               label={<span className="whitespace-nowrap">FAQ - Email</span>}
               alt="FAQ - Email"

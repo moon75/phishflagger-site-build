@@ -53,14 +53,14 @@ export default function DomainAppliance() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 lg:justify-start lg:pl-40">
-            <div className="img-hover-zoom h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
+            <div className="pic-with-no-link-mouse-over-increase h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
               <img
                 src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
                 alt="Email authentication for domain appliance"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="img-hover-zoom flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
+            <div className="pic-with-no-link-mouse-over-increase flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
               <PlaceholderIcon />
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function DomainAppliance() {
             <img
               src={domainProtocolImg}
               alt="Email authentication protocol showing PhishFlagger with outgoing email validation"
-              className="img-hover-zoom h-auto w-full max-w-[500px] object-contain"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[500px] object-contain"
             />
           </div>
         </div>
@@ -188,14 +188,14 @@ export default function DomainAppliance() {
         <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
-            <div className="img-hover-zoom h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
+            <div className="pic-with-no-link-mouse-over-increase h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 src={publicPath("/assets/images/domain image for homepage.png")}
                 alt="City skyline representing corporate domain protection"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="img-hover-zoom flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
+            <div className="pic-with-no-link-mouse-over-increase flex h-[130px] w-auto shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white sm:h-[180px] lg:h-[240px]">
               <img
                 src={emailInboxImg}
                 alt="PhishFlagger inbox showing numbered emails"
@@ -245,22 +245,21 @@ export default function DomainAppliance() {
           </div>
           <div className="p-6 text-center sm:p-8">
             <p className="mx-auto max-w-[560px]">
-              <span className="inline-block rounded-lg bg-[#FFFF00] px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                As low as $10.00 per Year / per Email
+              <span className="inline-block rounded-lg px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                $10.00 per Year / per Email
               </span>
             </p>
             <div className="relative mt-6 inline-block">
               <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                 Coming Soon
               </span>
-              <a
-                href="https://join.phishflagger.com/business/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+              <button
+                type="button"
+                disabled
+                className="inline-flex cursor-not-allowed items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
               >
                 Join Domain
-              </a>
+              </button>
             </div>
           </div>
         </div>
