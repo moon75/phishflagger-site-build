@@ -26,12 +26,16 @@ import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connec
 import pane0004MessageCardImg from "../assets/images/home-pane-0004-message-card.png";
 import { publicPath } from "../lib/publicPath.js";
 
+// gifDurationMs is each gif's own one-loop playback length (frame durations
+// summed), measured from the source files — the gifs themselves loop
+// forever, so PhonePlaceholder uses this to know when to cut them off after
+// exactly one play.
 const SCREENS = [
-  { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif },
-  { label: "Email", src: emailPhoneImg, hoverSrc: publicPath("/assets/images/PhishFlagger%20Email%20Gif%20v2.gif") },
-  { label: "Messages", src: messagesPhoneImg, hoverSrc: messagesPhoneGif },
-  { label: "Text/SMS", src: textPhoneImg, hoverSrc: textPhoneGif },
-  { label: "Caller ID", src: callerIdHandsetImg, hoverSrc: callerIdHandsetGif },
+  { label: "Email Inbox", src: heroInfoBoxImg, hoverSrc: heroInfoBoxGif, gifDurationMs: 5200 },
+  { label: "Email", src: emailPhoneImg, hoverSrc: publicPath("/assets/images/PhishFlagger%20Email%20Gif%20v2.gif"), gifDurationMs: 5000 },
+  { label: "Messages", src: messagesPhoneImg, hoverSrc: messagesPhoneGif, gifDurationMs: 6000 },
+  { label: "Text/SMS", src: textPhoneImg, hoverSrc: textPhoneGif, gifDurationMs: 6000 },
+  { label: "Caller ID", src: callerIdHandsetImg, hoverSrc: callerIdHandsetGif, gifDurationMs: 4000 },
 ];
 
 
@@ -111,12 +115,13 @@ export default function Home() {
               <PhonePlaceholder
                 src={SCREENS[0].src}
                 hoverSrc={SCREENS[0].hoverSrc}
+                gifDurationMs={SCREENS[0].gifDurationMs}
                 alt={`${SCREENS[0].label} screen`}
                 large
               />
             </div>
             <div className="-translate-y-[1px]">
-              <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} alt={`${SCREENS[1].label} screen`} wide />
+              <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} gifDurationMs={SCREENS[1].gifDurationMs} alt={`${SCREENS[1].label} screen`} wide />
             </div>
           </div>
         </div>
@@ -129,7 +134,7 @@ export default function Home() {
             >
               {s.label}
             </Link>
-            <PhonePlaceholder src={s.src} hoverSrc={s.hoverSrc} alt={`${s.label} screen`} wide />
+            <PhonePlaceholder src={s.src} hoverSrc={s.hoverSrc} gifDurationMs={s.gifDurationMs} alt={`${s.label} screen`} wide />
           </div>
         ))}
       </div>
@@ -609,12 +614,16 @@ function SectionCounter({ value }) {
 // playback, only a deliberate hover. The static `src` poster frame should
 // match the gif's own first frame, so this delay is invisible: whether the
 // gif has started yet or not, the same picture is on screen either way.
-const PHONE_GIF_HOVER_DELAY_MS = 150;
+// Hold the hover for this long on the static image before the gif starts —
+// then let it play exactly once (gifDurationMs) and stop, staying on the
+// static image until the user moves away and hovers again.
+const PHONE_GIF_HOVER_DELAY_MS = 2000;
 
-function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
+function PhonePlaceholder({ src, hoverSrc, gifDurationMs, alt, large = false, wide = false }) {
   const [showGif, setShowGif] = useState(false);
   const [gifKey, setGifKey] = useState(0);
   const hoverTimeoutRef = useRef(null);
+  const playbackTimeoutRef = useRef(null);
 
   const sizeClass = large
     ? "mt-[2px] h-auto w-[230px] max-w-full sm:w-[300px] lg:w-[300px]"
@@ -636,6 +645,12 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
     hoverTimeoutRef.current = window.setTimeout(() => {
       setGifKey((k) => k + 1);
       setShowGif(true);
+      // Let it play exactly one loop (the gif itself loops forever), then
+      // drop back to the static image — still hovering doesn't restart it,
+      // only a fresh mouseenter after leaving does.
+      playbackTimeoutRef.current = window.setTimeout(() => {
+        setShowGif(false);
+      }, gifDurationMs || 0);
     }, PHONE_GIF_HOVER_DELAY_MS);
   }
 
@@ -643,6 +658,10 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
     if (hoverTimeoutRef.current) {
       window.clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
+    }
+    if (playbackTimeoutRef.current) {
+      window.clearTimeout(playbackTimeoutRef.current);
+      playbackTimeoutRef.current = null;
     }
     setShowGif(false);
   }
