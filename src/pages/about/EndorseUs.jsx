@@ -56,9 +56,11 @@ export default function EndorseUs() {
     }
   };
 
+  const closeTo = location.pathname.startsWith("/help") ? "/help" : "/about";
+
   return (
     <>
-      <CloseButton />
+      <CloseButton to={closeTo} />
       <section
         className="bg-[#eef0f4] bg-cover bg-center px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14"
         style={{

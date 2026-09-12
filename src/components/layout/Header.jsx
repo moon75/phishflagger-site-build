@@ -23,18 +23,11 @@ export default function Header() {
   }, []);
   const visitBadge = formatVisitCount(visitCount);
 
-  // 6-menu interaction mode — click the ^0001 PhishCounter badge to switch
-  // how the primary nav's 6 items (and their dropdowns) respond:
-  //   false (default) — CLICK required: dropdowns open only on click, and
-  //     Home/Video/Email/Telecom/Help/About do NOT navigate on hover.
-  //   true — MOUSE-OVER: dropdowns open on hover and those 6 tabs
-  //     hover-navigate, the older behaviour.
-  // NOT remembered across visits — every fresh page load starts back on
-  // "click required", the badge click is just a live toggle.
-  const [navHoverMode, setNavHoverMode] = useState(false);
-  function toggleNavHoverMode() {
-    setNavHoverMode((prev) => !prev);
-  }
+  // 6-menu interaction mode — dropdowns open on click only, and
+  // Home/Video/Email/Telecom/Help/About do NOT navigate on hover.
+  // The PhishCounter badge used to toggle this to a mouse-over mode; that
+  // switch is disabled for now, so this always stays click-required.
+  const navHoverMode = false;
 
   // Country badge — shows the country picked on /country, read from a
   // cookie (set in CountrySelect.jsx) so it's remembered across visits.
@@ -61,8 +54,8 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // The 6 primary tabs that hover-navigate / hover-open — but only while
-  // navHoverMode is on (see the PhishCounter badge toggle above).
+  // The 6 primary tabs that would hover-navigate / hover-open if
+  // navHoverMode were ever true — disabled for now (see above).
   const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help", "About"]);
   const hoverNavActive = (label) => navHoverMode && HOVER_NAV_LABELS.has(label);
 
@@ -142,8 +135,6 @@ export default function Header() {
       {/* ^0001 badge + Globe (country/region) + Login — pinned to the far right edge on desktop */}
       <div className="hidden lg:absolute lg:right-10 lg:top-1/2 lg:flex lg:-translate-y-1/2 lg:items-center lg:gap-4">
         <HeaderActions
-          navHoverMode={navHoverMode}
-          toggleNavHoverMode={toggleNavHoverMode}
           visitBadge={visitBadge}
           countryName={countryName}
           countryHover={countryHover}
@@ -168,8 +159,6 @@ export default function Header() {
           </NavLink>
           <div className="flex items-center gap-3">
             <HeaderActions
-              navHoverMode={navHoverMode}
-              toggleNavHoverMode={toggleNavHoverMode}
               visitBadge={visitBadge}
               countryName={countryName}
               countryHover={countryHover}
@@ -217,8 +206,6 @@ export default function Header() {
 // The right-side cluster (PhishCounter badge, country globe, sign-in) —
 // shared by the desktop absolute-positioned bar and the mobile row-1 bar.
 function HeaderActions({
-  navHoverMode,
-  toggleNavHoverMode,
   visitBadge,
   countryName,
   countryHover,
@@ -226,22 +213,17 @@ function HeaderActions({
 }) {
   return (
     <>
-      <button
-        type="button"
-        onClick={toggleNavHoverMode}
-        className="group relative flex shrink-0 cursor-pointer items-center gap-1.5 border-none bg-transparent font-normal text-ink transition-colors duration-200 hover:text-brand"
+      <div
+        className="flex shrink-0 items-center gap-1.5 font-normal text-ink"
         style={{ fontSize: "19px", letterSpacing: "0.04em" }}
-        aria-label={`PhishCounter — click to switch the 6-menu nav between mouse-over and click (currently ${navHoverMode ? "mouse-over opens menus" : "click required"})`}
+        aria-label="PhishCounter"
       >
         <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden>
           <rect x="2" y="2" width="20" height="20" rx="4" fill="#16a34a" />
           <path d="M7 12.5l3 3 7-7.5" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         </svg>
         {visitBadge}
-        <span className="pointer-events-none absolute right-0 top-full mt-2 whitespace-nowrap rounded-md bg-[#2b2b2b] px-3 py-1.5 text-[12px] font-semibold text-white opacity-0 shadow-md transition-opacity duration-150 group-hover:opacity-100">
-          PhishCounter
-        </span>
-      </button>
+      </div>
       <div
         className="relative flex"
         onMouseEnter={() => setCountryHover(true)}

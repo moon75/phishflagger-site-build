@@ -3,7 +3,7 @@
 // bar in order. Keep in sync with src/data/nav.js.
 export const TOP_NAV_LOOP_PAGES = [
   { label: "Home", to: "/" },
-  { label: "Video", to: "/video1" },
+  { label: "Video", to: "/video" },
   { label: "Email", to: "/email" },
   { label: "Telecom", to: "/telecom" },
   { label: "Help", to: "/help" },

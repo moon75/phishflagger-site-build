@@ -26,7 +26,7 @@ export default function Help() {
       }}
     >
       {/* ===== Pane 2 — Help links (icon squares) ===== */}
-      <section className="relative flex w-full flex-col justify-center px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
+      <section className="relative flex w-full flex-col justify-center px-4 pt-[var(--hero-pane-pt)] pb-10 sm:px-6 sm:pb-14">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={4} center topClass="top-0 sm:top-2" />
         <div className="mx-auto max-w-content">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-10">
@@ -37,7 +37,8 @@ export default function Help() {
         </div>
       </section>
 
-      {/* ===== Pane 1 — Kickstarter (main box) ===== */}
+      {/* ===== Pane 1 — Kickstarter (main box) — HIDDEN for now ===== */}
+      {false && (
       <section className="w-full px-4 pt-[calc(2.25rem*var(--pane-gap-scale))] pb-[calc(2.25rem*var(--pane-gap-scale))] sm:px-6 sm:pt-[calc(50px*var(--pane-gap-scale))] sm:pb-[calc(50px*var(--pane-gap-scale))]">
         <div className="mx-auto w-full">
           <div className="mx-auto flex w-full max-w-[700px] flex-col items-stretch justify-center">
@@ -62,6 +63,7 @@ export default function Help() {
           </div>
         </div>
       </section>
+      )}
 
     </div>
   );
@@ -71,6 +73,7 @@ function HelpCard({ to, label, icon, src, imageClassName = "" }) {
   return (
     <Link
       to={to}
+      state={{ from: "/help" }}
       className="group flex w-[130px] flex-col items-center transition-transform duration-200 hover:scale-[var(--icon-link-hover-scale)]"
     >
       <span className="mb-3 flex h-[36px] items-end justify-center text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">

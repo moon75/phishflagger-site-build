@@ -86,6 +86,7 @@ export default function Home() {
           <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 sm:mb-4 sm:justify-around">
             <Link
               to="/join/email-free-plug-in"
+              state={{ from: "/" }}
               className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
             >
               Email - Free
@@ -99,6 +100,7 @@ export default function Home() {
             </Link>
             <Link
               to="/join/domain"
+              state={{ from: "/" }}
               className="whitespace-nowrap text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:text-[18px]"
             >
               Email - Domain
@@ -181,12 +183,17 @@ export default function Home() {
             may be impersonating a trusted organization or sender.
           </p>
           <div className="flex justify-center">
-            <Link
-              to="/digital-verification"
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
-            >
-              Domain Verification
-            </Link>
+            <div className="relative mt-6 inline-flex">
+              <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                Coming Soon
+              </span>
+              <span
+                aria-disabled="true"
+                className="inline-flex h-[42px] cursor-not-allowed items-center justify-center rounded-[7px] bg-gray-300 px-7 text-[14px] font-semibold text-gray-500"
+              >
+                Domain Verification
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -218,7 +225,7 @@ export default function Home() {
               >
                 <span>Coming Soon</span>
               </Link>
-              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] transition-transform duration-200 hover:scale-[1.1]">
+              <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] pic-with-no-link-mouse-over-increase">
                 <img
                   src={outlookThunderbirdImg}
                   alt="Microsoft Outlook and Mozilla Thunderbird"
@@ -270,6 +277,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/join/email-free-plug-in"
+                    state={{ from: "/" }}
                     className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                   >
                     Join Free
@@ -307,15 +315,15 @@ export default function Home() {
             <span className="mb-5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink sm:text-[25px]">
               Domain Appliance
             </span>
-            <Link to="/join/domain" className="relative w-full max-w-[380px]">
-              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black transition-transform duration-200 hover:scale-[1.1]">
+            <div className="relative w-full max-w-[380px]">
+              <div className="aspect-[46/30] w-full overflow-hidden rounded-2xl border-2 border-black pic-with-no-link-mouse-over-increase">
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server appliance"
                   className="h-full w-full object-cover"
                 />
               </div>
-            </Link>
+            </div>
             <p className="mt-4 flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
               Our Appliance will enable the protocol across your entire
               Domain. No Install or Downloads required by users.
@@ -330,6 +338,7 @@ export default function Home() {
                 </span>
                 <Link
                   to="/join/domain"
+                  state={{ from: "/" }}
                   className="-mt-[6px] inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
                 >
                   Join Domain
@@ -358,12 +367,12 @@ export default function Home() {
           <img
             src={whoCanUseImg}
             alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain img-hover-zoom lg:-translate-x-8"
+            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain pic-with-no-link-mouse-over-increase lg:-translate-x-8"
           />
           <img
             src={publicPath("/assets/images/Marketing%20Email.png")}
             alt="PhishFlagger email inbox showing numbered messages"
-            className="h-auto w-full max-w-[200px] object-contain img-hover-zoom"
+            className="h-auto w-full max-w-[200px] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div>
@@ -380,6 +389,7 @@ export default function Home() {
           </p>
           <Link
             to="/join/email-marketing"
+            state={{ from: "/" }}
             className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
           >
             Marketing
@@ -403,7 +413,7 @@ export default function Home() {
               <img
                 src={publicPath("/assets/images/sms-phone-and-text.png")}
                 alt="Phone displaying PhishFlagger text messages"
-                className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px]"
               />
               <Link
                 to="/telecom"
@@ -417,7 +427,7 @@ export default function Home() {
           <img
             src={pane0004MessageCardImg}
             alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
-            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain img-hover-zoom"
+            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain pic-with-no-link-mouse-over-increase"
           />
 
           <div className="flex flex-col items-center">
@@ -429,7 +439,7 @@ export default function Home() {
               <img
                 src={publicPath("/assets/images/messaging-icons-and-phone-animated.gif")}
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                className="h-[260px] w-auto max-w-full object-contain img-hover-zoom sm:h-[300px]"
+                className="h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px]"
               />
               <Link
                 to="/join/messaging"
@@ -503,18 +513,18 @@ export default function Home() {
             <img
               src={callerIdDesktopImg}
               alt="Desktop corded phone with PhishFlagger Caller ID"
-              className="h-auto w-full max-w-[130px] object-contain img-hover-zoom sm:max-w-[200px]"
+              className="h-auto w-full max-w-[130px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[200px]"
             />
           </div>
           <img
             src={threePhoneImg}
             alt="PhishFlagger Caller ID phones"
-            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain img-hover-zoom sm:max-w-[135px]"
+            className="h-auto w-1/3 min-w-0 max-w-[90px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[135px]"
           />
           <img
             src={callerIdHandsetImg}
             alt="Cordless handset with PhishFlagger Caller ID"
-            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain img-hover-zoom sm:max-w-[160px]"
+            className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[160px]"
           />
         </div>
       </div>

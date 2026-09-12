@@ -1,6 +1,5 @@
 ﻿import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import phishCounterImg from "../../assets/images/4th section.avif";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import marketerImg from "../../assets/images/email-marketing-verified-v9.png";
@@ -10,7 +9,6 @@ export default function EmailMarketing() {
   return (
     <>
       <CloseButton />
-      <JoinPagesNav current={3} />
 
       <section
         className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 pt-14 pb-14 sm:px-6 sm:pt-20 sm:pb-20"
@@ -117,6 +115,7 @@ export default function EmailMarketing() {
                 to SPF.{" "}
                 <Link
                   to="/digital-verification"
+                  state={{ from: "/join/email-marketing" }}
                   className="font-semibold text-[#2a6df4] underline underline-offset-4"
                 >
                   More info Here.
@@ -149,12 +148,14 @@ export default function EmailMarketing() {
           <div className="flex items-center justify-center gap-4">
             <Link
               to="/demo"
+              state={{ from: "/join/email-marketing" }}
               className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Demo
             </Link>
             <Link
               to="/contact"
+              state={{ from: "/join/email-marketing" }}
               className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
             >
               Contact Us

@@ -145,7 +145,7 @@
   }
 
   /* GLOBAL STANDARD — use on any picture that is NOT a link (no <Link>/<a>
-     wrapping it) — a plain illustration/screenshot/diagram. Grows 10% on
+     wrapping it) — a plain illustration/screenshot/diagram. Grows 5% on
      hover, deliberately smaller than .img-hover-zoom's 20% (that class is
      for clickable pictures, where the bigger hover reads as "this does
      something"). Exception: the country picture on /telecom stays on its
@@ -155,7 +155,7 @@
     transition: transform 200ms ease-out;
   }
   .pic-with-no-link-mouse-over-increase:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   /* GLOBAL STANDARD — use on any plain text link (a <Link>/<a> that's just

@@ -73,6 +73,7 @@ export default function Join() {
             <div className="flex w-auto flex-col items-center">
               <Link
                 to="/join/email-free-plug-in"
+                state={{ from: "/email" }}
                 aria-label="Join Free — Plug-In Free"
                 onMouseEnter={() => setHoveredPlanCard("free")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
@@ -95,6 +96,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-free-plug-in"
+                state={{ from: "/email" }}
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Free
@@ -138,6 +140,7 @@ export default function Join() {
             <div className="flex w-auto flex-col items-center">
               <Link
                 to="/join/domain"
+                state={{ from: "/email" }}
                 aria-label="Join Domain — Domain Appliance"
                 onMouseEnter={() => setHoveredPlanCard("domain")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
@@ -163,6 +166,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/domain"
+                state={{ from: "/email" }}
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Join Domain
@@ -171,6 +175,7 @@ export default function Join() {
             <div className="flex w-auto flex-col items-center">
               <Link
                 to="/join/email-marketing"
+                state={{ from: "/email" }}
                 aria-label="Marketing"
                 onMouseEnter={() => setMarketingCardHoverKey((k) => k + 1)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
@@ -186,6 +191,7 @@ export default function Join() {
               </Link>
               <Link
                 to="/join/email-marketing"
+                state={{ from: "/email" }}
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Marketing
@@ -205,6 +211,7 @@ export default function Join() {
           <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/contact"
+              state={{ from: "/email" }}
               label="Contact"
               alt="Contact"
               svgIcon={
@@ -216,6 +223,7 @@ export default function Join() {
             />
             <ActionCard
               to="/join/email-subscribe"
+              state={{ from: "/email" }}
               label="Subscribe"
               src={subscribeIcon}
               bluePerson
@@ -223,6 +231,7 @@ export default function Join() {
             />
             <ActionCard
               to="/help/endorse-us"
+              state={{ from: "/email" }}
               label="Endorse Us"
               src={endorseIcon}
               bluePerson
@@ -239,6 +248,7 @@ export default function Join() {
             />
             <ActionCard
               to="/digital-verification"
+              state={{ from: "/email" }}
               label="Digital"
               alt="Digital"
               svgIcon={
@@ -246,7 +256,7 @@ export default function Join() {
                   viewBox="0 0 24 24"
                   className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]"
                   fill="none"
-                  stroke="#000"
+                  stroke="#6b7280"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -260,19 +270,20 @@ export default function Join() {
             />
             <ActionCard
               to="/about/faq?category=General"
+              state={{ from: "/email" }}
               label={<span className="whitespace-nowrap">FAQ - Email</span>}
               alt="FAQ - Email"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
                   <path
                     d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="#f97316"
+                    stroke="#eab308"
                     strokeWidth="2.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
+                  <circle cx="12" cy="15.7" r="1.3" fill="#eab308" />
                 </svg>
               }
             />

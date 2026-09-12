@@ -123,6 +123,7 @@ export default function Telecom() {
             />
             <ActionCard
               to="/about/faq?category=Telecom"
+              state={{ from: "/telecom" }}
               label={
                 <>
                   FAQ
@@ -135,13 +136,13 @@ export default function Telecom() {
                 <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
                   <path
                     d="M9.3 8.3a2.7 2.7 0 1 1 4 2.35c-.75.43-1.3.83-1.3 1.75"
-                    stroke="#f97316"
+                    stroke="#eab308"
                     strokeWidth="2.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     fill="none"
                   />
-                  <circle cx="12" cy="15.7" r="1.3" fill="#f97316" />
+                  <circle cx="12" cy="15.7" r="1.3" fill="#eab308" />
                 </svg>
               }
             />
@@ -491,6 +492,7 @@ export default function Telecom() {
 
 function ActionCard({
   to,
+  state,
   label,
   src,
   alt,
@@ -502,6 +504,7 @@ function ActionCard({
   return (
     <Link
       to={to}
+      state={state}
       className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[200px]"
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">

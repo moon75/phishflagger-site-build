@@ -3,7 +3,7 @@
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "Video", href: "/video1" },
+  { label: "Video", href: "/video" },
   { label: "Email", href: "/email" },
   { label: "Telecom", href: "/telecom" },
   { label: "Help", href: "/help" },

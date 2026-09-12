@@ -57,6 +57,7 @@ import AboutIndex from "./pages/AboutIndex.jsx";
 import Team from "./pages/about/Team.jsx";
 import Press from "./pages/about/Press.jsx";
 import Video from "./pages/about/Video.jsx";
+import VideoShowcase from "./pages/VideoShowcase.jsx";
 import IP from "./pages/about/IP.jsx";
 import FAQ from "./pages/about/FAQ.jsx";
 import Blog from "./pages/about/Blog.jsx";
@@ -218,6 +219,7 @@ export default function App() {
           <Route path="telecom-supporters" element={<TelecomSupporters />} />
         </Route>
 
+        <Route path="video" element={<VideoShowcase />} />
         <Route path="video1/:category?" element={<Video />} />
 
         <Route path="about">

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import JoinPagesNav from "../../components/ui/JoinPagesNav.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
@@ -39,7 +38,6 @@ export default function EmailFreePlugIn() {
   return (
     <>
       <CloseButton />
-      <JoinPagesNav current={0} />
 
       <div
         className="relative w-full bg-[#eef0f4] bg-cover bg-center"

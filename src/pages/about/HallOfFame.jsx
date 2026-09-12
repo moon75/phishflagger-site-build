@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
@@ -31,9 +31,14 @@ const SUPPORTERS = [
 ];
 
 export default function HallOfFame() {
+  const { pathname } = useLocation();
+  const kickstarterTo = pathname.startsWith("/help")
+    ? "/help/kickstarter"
+    : "/about/kickstarter";
+
   return (
     <>
-      <CloseButton to="/about/kickstarter" />
+      <CloseButton to={kickstarterTo} />
 
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[920px] text-center">
@@ -90,7 +95,7 @@ export default function HallOfFame() {
 
           <div className="mt-10 text-center">
             <Link
-              to="/about/kickstarter"
+              to={kickstarterTo}
               className="text-[15px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[16px]"
             >
               Help stop phishing — support our Kickstarter
