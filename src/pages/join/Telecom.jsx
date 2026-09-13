@@ -212,7 +212,7 @@ export default function Telecom() {
 
       <section className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0003" />
-        <PageDownButton containerRef={containerRef} />
+        <PageDownButton containerRef={containerRef} forceTopOnUp />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center">
             <img

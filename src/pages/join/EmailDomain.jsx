@@ -197,9 +197,9 @@ export default function EmailDomain() {
         <SectionCounter value="^0004" />
         <PageDownButton bg="white" targetSelector="#footer-products" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-          <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
+          <div className="mx-auto w-full max-w-[300px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
-              You will receive.
+              You will receive
             </h3>
             <div className="mt-4 flex flex-col items-center">
               <ul className="w-full max-w-[220px] list-outside list-disc space-y-1.5 pl-5 text-left text-[14px] leading-normal text-ink sm:text-[15px]">
@@ -217,14 +217,18 @@ export default function EmailDomain() {
               </span>
             </p>
             <div className="mt-6 flex flex-col items-center gap-6">
-              <a
-                href="https://join.phishflagger.com/business/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
-              >
-                Join PRO
-              </a>
+              <div className="relative mt-6 inline-block">
+                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                  Coming Soon
+                </span>
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
+                >
+                  Join PRO
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -13,22 +13,38 @@ import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 import { publicPath } from "../../lib/publicPath.js";
 
-// The three /email plan GIFs embed their own completed-view hold and
-// play-once behavior. Remounting on each new hover restarts that sequence.
-const MARKETING_HOVER_HOLD_MS = 2000;
+// The three /email plan illustrations are animated GIFs. Same rule as the
+// Home page phone mockups (Home.jsx's PhonePlaceholder): hold the hover for
+// HOVER_HOLD_MS before the gif starts (so a quick mouse-pass doesn't trigger
+// it — the still poster frame matches the gif's own first frame, so the
+// wait is invisible), then let it play exactly once (gifDurationMs) and
+// drop back to the still image, staying there until the pointer leaves and
+// hovers again. Same 2s hold as the Home version.
+const HOVER_HOLD_MS = 2000;
 
-function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
+function HoverGif({ stillSrc, gifSrc, alt, className, active, gifDurationMs }) {
   const [showGif, setShowGif] = useState(false);
   const [gifKey, setGifKey] = useState(0);
+  const holdTimeoutRef = useRef(null);
+  const playbackTimeoutRef = useRef(null);
 
   useEffect(() => {
     if (active) {
-      setGifKey((key) => key + 1);
-      setShowGif(true);
+      holdTimeoutRef.current = window.setTimeout(() => {
+        setGifKey((k) => k + 1);
+        setShowGif(true);
+        playbackTimeoutRef.current = window.setTimeout(() => {
+          setShowGif(false);
+        }, gifDurationMs || 0);
+      }, HOVER_HOLD_MS);
     } else {
       setShowGif(false);
     }
-  }, [active]);
+    return () => {
+      if (holdTimeoutRef.current) window.clearTimeout(holdTimeoutRef.current);
+      if (playbackTimeoutRef.current) window.clearTimeout(playbackTimeoutRef.current);
+    };
+  }, [active, gifDurationMs]);
 
   return (
     <img
@@ -43,7 +59,11 @@ function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
 
 export default function Join() {
   const containerRef = useRef(null);
-  // Marketing is not a GIF, so it keeps its separate existing hover hold.
+  // Marketing isn't a gif, but follows the same rule as the other three
+  // plan cards (HoverGif above): hold the hover for HOVER_HOLD_MS before
+  // the "messages arriving" reveal starts (so a quick mouse-pass doesn't
+  // trigger it), then let it play through once and freeze — it doesn't
+  // start instantly on `.group:hover` like before.
   const [marketingCardHoverKey, setMarketingCardHoverKey] = useState(0);
   const [marketingPlaying, setMarketingPlaying] = useState(false);
   const marketingHoldTimeoutRef = useRef(null);
@@ -51,7 +71,7 @@ export default function Join() {
     marketingHoldTimeoutRef.current = window.setTimeout(() => {
       setMarketingCardHoverKey((k) => k + 1);
       setMarketingPlaying(true);
-    }, MARKETING_HOVER_HOLD_MS);
+    }, HOVER_HOLD_MS);
   }
   function handleMarketingMouseLeave() {
     if (marketingHoldTimeoutRef.current) {
@@ -112,6 +132,7 @@ export default function Join() {
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
                     active={hoveredPlanCard === "free"}
+                    gifDurationMs={7500}
                   />
                 </div>
               </Link>
@@ -147,6 +168,7 @@ export default function Join() {
                     alt="Domain protection illustration"
                     className="h-full w-full rounded-lg object-contain"
                     active={hoveredPlanCard === "pro"}
+                    gifDurationMs={7500}
                   />
                 </div>
               </Link>
@@ -182,6 +204,7 @@ export default function Join() {
                     alt="Cloud and server appliance illustration"
                     className="h-full w-full rounded-lg object-contain"
                     active={hoveredPlanCard === "domain"}
+                    gifDurationMs={4500}
                   />
                 </div>
               </Link>
