@@ -3,6 +3,7 @@ import LogoMark from "../../components/ui/LogoMark.jsx";
 import history1Img from "../../assets/images/7 1st.avif";
 import history2Img from "../../assets/images/7  2nd.avif";
 import history3Img from "../../assets/images/7 3rd.avif";
+import blockchainHistoryImg from "../../assets/images/bloch chain history.png";
 
 export default function NumberingHistory() {
   return (
@@ -24,9 +25,13 @@ export default function NumberingHistory() {
             fraud.
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 text-left sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-8 text-left sm:mt-12 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
             <HistoryCard img={history1Img} imgAlt="Numbered book pages" />
             <HistoryCard img={history2Img} imgAlt="Mechanical numbering stamp" />
+            <HistoryCard
+              img={blockchainHistoryImg}
+              imgAlt="Blockchain digital timestamping"
+            />
             <HistoryCard img={history3Img} imgAlt="PhishFlagger email numbering" />
           </div>
         </div>
