@@ -190,6 +190,18 @@ export default function Kick() {
               Endorse Us
             </Link>
           </p>
+          {/* Supporters link — the Endorse Us page's own "Supporters" button
+              is disabled (Coming Soon), so this keeps the same destination
+              reachable from here in the meantime. */}
+          <p className="mt-2 text-[15px] text-ink sm:text-[16px]">
+            See who's already on board.{" "}
+            <Link
+              to="/help/supporters"
+              className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
+            >
+              Supporters
+            </Link>
+          </p>
         </div>
 
         {/* ===== Why PhishFlagger Email? (moved from Home ^0002) ===== */}
@@ -297,6 +309,19 @@ export default function Kick() {
                 message may not be authentic, giving users a simple way to
                 spot phishing attempts.
               </p>
+              <div className="flex justify-center">
+                <div className="relative mt-6 inline-flex">
+                  <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                    Coming Soon
+                  </span>
+                  <span
+                    aria-disabled="true"
+                    className="inline-flex h-[42px] cursor-not-allowed items-center justify-center rounded-[7px] bg-gray-300 px-7 text-[14px] font-semibold text-gray-500"
+                  >
+                    Human Compatible
+                  </span>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -319,6 +344,19 @@ export default function Kick() {
                 authorized senders, adding an extra layer of protection
                 against impersonation and phishing and other attacks.
               </p>
+              <div className="flex justify-center">
+                <div className="relative mt-6 inline-flex">
+                  <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                    Coming Soon
+                  </span>
+                  <span
+                    aria-disabled="true"
+                    className="inline-flex h-[42px] cursor-not-allowed items-center justify-center rounded-[7px] bg-gray-300 px-7 text-[14px] font-semibold text-gray-500"
+                  >
+                    Domain Verification
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

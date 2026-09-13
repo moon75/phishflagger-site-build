@@ -24,7 +24,7 @@ export default function PluginDownload() {
           </h2>
 
           <div className="mt-6 min-h-[260px] w-full rounded-lg border-2 border-gray-300 bg-white p-6 text-[16px] leading-[1.6] text-ink">
-            Plug-in placeholder text for Terms of Service
+            Available Soon.
           </div>
 
           <label className="mt-8 flex cursor-pointer items-center gap-3 text-[16px] text-ink">
@@ -37,14 +37,19 @@ export default function PluginDownload() {
             <span>I accept the terms of Service</span>
           </label>
 
-          <button
-            type="button"
-            disabled={!accepted}
-            data-download={selectedDownload}
-            className="mt-8 rounded-lg bg-[#585858] px-7 py-3 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red disabled:cursor-not-allowed disabled:opacity-45 duration-200 hover:scale-[1.2]"
-          >
-            Continue with Download
-          </button>
+          <div className="relative mt-8 inline-flex">
+            <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+              Coming Soon
+            </span>
+            <button
+              type="button"
+              disabled
+              data-download={selectedDownload}
+              className="cursor-not-allowed rounded-lg bg-[#585858] px-7 py-3 text-[14px] font-semibold text-white opacity-45"
+            >
+              Continue with Download
+            </button>
+          </div>
         </div>
       </section>
     </>

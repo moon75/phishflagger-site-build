@@ -29,7 +29,7 @@ export default function Telecom() {
             "url('/assets/images/nice%20background%20shade.png')",
         }}
       >
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center topClass="top-0 sm:top-2" />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center topClass="top-0 sm:top-2" />
         <div className="mx-auto flex max-w-[1800px] flex-col items-stretch justify-center gap-6 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-8 md:gap-16 lg:gap-32 min-[1900px]:h-[300px] min-[1900px]:items-stretch min-[1900px]:gap-32 min-[1900px]:translate-x-12">
           {/* A — spacer */}
           <div className="hidden min-[1900px]:block min-[1900px]:flex-[0.5]" />

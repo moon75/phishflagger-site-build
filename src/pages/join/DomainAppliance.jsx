@@ -7,8 +7,6 @@ import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-c
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import { publicPath } from "../../lib/publicPath.js";
 
-const logoMarkImg = publicPath("/assets/images/logo-mark.png");
-
 export default function DomainAppliance() {
   return (
     <>
@@ -24,35 +22,29 @@ export default function DomainAppliance() {
       >
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
-            <div className="mb-6 flex items-center gap-4">
-              <img
-                src={logoMarkImg}
-                alt="PhishFlagger envelope and flag mark"
-                className="h-[38px] w-auto shrink-0 object-contain pic-with-no-link-mouse-over-increase sm:h-[48px]"
-              />
-              <h2 className="inline-block text-[34px] font-semibold leading-tight tracking-tight text-ink sm:text-[46px]">
-                <em className="italic">
-                  <span className="font-extrabold text-ink">Phish</span>
-                  <span className="font-normal text-brand">Flagger</span>
-                </em>{" "}
-                Domain
-              </h2>
+            <h2 className="section-title mb-6 flex items-center gap-4">
+              <LogoMark />
+              <span>
+                <BrandInline /> Domain
+              </span>
+            </h2>
+            <div className="rounded-2xl bg-white p-5 sm:p-7">
+              <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
+                <li className="list-none">
+                  <strong className="font-bold text-ink">
+                    Advanced Email Authentication
+                  </strong>{" "}
+                  Strengthen the verification of emails sent and helps
+                  recipients distinguish legitimate communications from
+                  impersonated messages. Use the PhishCounter&trade; to provide
+                  a simple, recognizable method of verifying the sequence and
+                  authenticity of communications.
+                </li>
+              </ul>
             </div>
-            <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-              <li className="list-none">
-                <strong className="font-bold text-ink">
-                  Advanced Email Authentication
-                </strong>{" "}
-                Strengthen the verification of emails sent and helps
-                recipients distinguish legitimate communications from
-                impersonated messages. Use the PhishCounter&trade; to provide
-                a simple, recognizable method of verifying the sequence and
-                authenticity of communications.
-              </li>
-            </ul>
           </div>
 
-          <div className="flex flex-nowrap items-center justify-center gap-4 lg:justify-start lg:pl-10">
+          <div className="flex flex-nowrap items-center justify-center gap-8 lg:justify-start lg:pl-10">
             <div className="pic-with-no-link-mouse-over-increase h-[160px] w-[160px] shrink-0 overflow-hidden rounded-xl p-1">
               <img
                 src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
@@ -60,7 +52,7 @@ export default function DomainAppliance() {
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[400px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
+            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[560px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
               <img
                 src={publicPath("/assets/images/Domain-History-image.png")}
                 alt="Domain history"
@@ -229,13 +221,10 @@ export default function DomainAppliance() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
-              What you will receive.
+              You will receive.
             </h3>
             <div className="mt-4 flex flex-col items-center">
-              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                Domain Appliance
-              </span>
-              <ul className="mt-3 w-full max-w-[220px] list-outside list-disc space-y-2 pl-5 text-left text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+              <ul className="w-full max-w-[220px] list-outside list-disc space-y-1.5 pl-5 text-left text-[14px] leading-normal text-ink sm:text-[15px]">
                 <li>Terms of Service</li>
                 <li>Access Key</li>
                 <li>Appliance Install</li>

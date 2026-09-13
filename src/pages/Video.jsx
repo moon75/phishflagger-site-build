@@ -65,7 +65,7 @@ export default function Video() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center topClass="top-0 sm:top-2" />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={3} center topClass="top-0 sm:top-2" />
         <div className="mx-auto max-w-[1300px]">
           {/* Intro */}
           <div className="text-center">

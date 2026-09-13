@@ -199,13 +199,10 @@ export default function EmailDomain() {
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
-              What you will receive.
+              You will receive.
             </h3>
             <div className="mt-4 flex flex-col items-center">
-              <span className="rounded-md border border-ink px-3 py-1 text-[12px] font-bold uppercase tracking-wide text-ink sm:text-[13px]">
-                Plug-In
-              </span>
-              <ul className="mt-3 w-full max-w-[220px] list-outside list-disc space-y-2 pl-5 text-left text-[14px] leading-[1.65] text-ink sm:text-[15px]">
+              <ul className="w-full max-w-[220px] list-outside list-disc space-y-1.5 pl-5 text-left text-[14px] leading-normal text-ink sm:text-[15px]">
                 <li>Terms of Service</li>
                 <li>Access Key</li>
                 <li>Install Plug-In</li>

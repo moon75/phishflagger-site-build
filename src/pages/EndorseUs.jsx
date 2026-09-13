@@ -11,6 +11,7 @@ const FORMSPARK_ENDPOINT = "https://submit-form.com/YW0bMhHOg";
 export default function EndorseUs() {
   const [pic, setPic] = useState(null);
   const [verifyMe, setVerifyMe] = useState(false);
+  const [subscribe, setSubscribe] = useState(false);
   const [status, setStatus] = useState("idle");
   const navigate = useNavigate();
   const fileRef = useRef(null);
@@ -47,6 +48,7 @@ export default function EndorseUs() {
       form.reset();
       setPic(null);
       setVerifyMe(false);
+      setSubscribe(false);
       navigate("/help/telecom-endorse-us/thanks");
     } catch {
       setStatus("error");
@@ -257,6 +259,21 @@ export default function EndorseUs() {
                   </div>
                 )}
               </div>
+
+              <label className="flex cursor-pointer items-center gap-3">
+                <input
+                  id="subscribe"
+                  name="subscribe"
+                  value="true"
+                  type="checkbox"
+                  checked={subscribe}
+                  onChange={(e) => setSubscribe(e.target.checked)}
+                  className="h-5 w-5 cursor-pointer rounded border-[#ccc] accent-brand"
+                />
+                <span className="text-[16px] font-medium text-[#333]">
+                  Please also subscribe me for updates.
+                </span>
+              </label>
             </div>
 
             <div className="mt-12 flex justify-center">

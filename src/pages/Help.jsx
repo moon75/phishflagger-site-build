@@ -11,6 +11,7 @@ const LINKS = [
   { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
+  { to: "/download", label: "Download Page", icon: <DownloadIcon /> },
 ];
 
 export default function Help() {
@@ -116,6 +117,29 @@ function ContactIcon() {
     <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
       <circle cx="12" cy="8.5" r="4" fill="#2563eb" />
       <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="#2563eb" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[54px] w-[54px] sm:h-[60px] sm:w-[60px]">
+      <path
+        d="M12 3v11m0 0l-4-4m4 4l4-4"
+        stroke="#2563eb"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"
+        stroke="#2563eb"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
     </svg>
   );
 }

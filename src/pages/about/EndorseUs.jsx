@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import supportersImg from "../../assets/images/supporters-cartoon.png";
 import { brandify } from "../../components/Brand.jsx";
@@ -14,6 +14,7 @@ export default function EndorseUs() {
     position: "",
     company: "",
     endorsement: "",
+    subscribe: false,
   });
   const [status, setStatus] = useState("idle");
   const location = useLocation();
@@ -45,6 +46,7 @@ export default function EndorseUs() {
         position: "",
         company: "",
         endorsement: "",
+        subscribe: false,
       });
       navigate(
         location.pathname.startsWith("/help")
@@ -94,17 +96,18 @@ export default function EndorseUs() {
                 alt="Happy PhishFlagger supporters"
                 className="h-[220px] w-full max-w-[600px] object-contain pic-with-no-link-mouse-over-increase"
               />
-              <Link
-                to={
-                  location.pathname.startsWith("/help")
-                    ? "/help/supporters"
-                    : "/about/supporters"
-                }
-                state={{ originFrom: cameFrom }}
-                className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
-              >
-                Supporters
-              </Link>
+              <div className="relative mt-auto">
+                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                  Coming Soon
+                </span>
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
+                >
+                  Supporters
+                </button>
+              </div>
             </div>
           </div>
 
@@ -202,6 +205,23 @@ export default function EndorseUs() {
                   className="min-h-[96px] w-full resize-none bg-transparent py-4 text-[15px] text-ink placeholder:text-[#808080] focus:outline-none"
                 />
               </Field>
+
+              <label className="flex cursor-pointer items-center gap-3">
+                <input
+                  type="checkbox"
+                  checked={form.subscribe}
+                  onChange={(event) =>
+                    setForm((current) => ({
+                      ...current,
+                      subscribe: event.target.checked,
+                    }))
+                  }
+                  className="h-5 w-5 cursor-pointer rounded border-[#ccc] accent-brand"
+                />
+                <span className="text-[16px] font-medium text-[#333]">
+                  Please also subscribe me for updates.
+                </span>
+              </label>
             </div>
 
             <div className="mt-12 flex justify-center">

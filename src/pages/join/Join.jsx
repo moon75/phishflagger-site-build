@@ -100,7 +100,7 @@ export default function Join() {
     >
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
-        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={2} center topClass="top-0 sm:top-2" />
+        <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center topClass="top-0 sm:top-2" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-start gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="flex justify-center lg:block lg:w-[500px]">
             <img

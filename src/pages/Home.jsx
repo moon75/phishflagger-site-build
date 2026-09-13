@@ -171,15 +171,6 @@ export default function Home() {
             doesn't match, it's a clear signal to stop and take a closer
             look.
           </p>
-          <div className="flex justify-center">
-            <Link
-              to="/human-compatible"
-              state={{ from: "/" }}
-              className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
-            >
-              Human Compatible
-            </Link>
-          </div>
         </div>
         <div>
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
@@ -196,19 +187,6 @@ export default function Home() {
             {brandify("PhishFlagger")} helps identify communications that
             may be impersonating a trusted organization or sender.
           </p>
-          <div className="flex justify-center">
-            <div className="relative mt-6 inline-flex">
-              <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
-                Coming Soon
-              </span>
-              <span
-                aria-disabled="true"
-                className="inline-flex h-[42px] cursor-not-allowed items-center justify-center rounded-[7px] bg-gray-300 px-7 text-[14px] font-semibold text-gray-500"
-              >
-                Domain Verification
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
