@@ -19,9 +19,8 @@ import { publicPath } from "../../lib/publicPath.js";
 // it — the still poster frame matches the gif's own first frame, so the
 // wait is invisible), then let it play exactly once (gifDurationMs) and
 // drop back to the still image, staying there until the pointer leaves and
-// hovers again. The only difference from the Home version is the much
-// shorter hold — 100ms here vs. Home's 2s.
-const HOVER_HOLD_MS = 100;
+// hovers again. Same 2s hold as the Home version.
+const HOVER_HOLD_MS = 2000;
 
 function HoverGif({ stillSrc, gifSrc, alt, className, active, gifDurationMs }) {
   const [showGif, setShowGif] = useState(false);
