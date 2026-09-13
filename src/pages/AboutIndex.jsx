@@ -62,12 +62,14 @@ export default function AboutIndex() {
           <div className="flex flex-col items-center gap-5 sm:items-start">
             <Link
               to="/demo"
+              state={{ from: "/about" }}
               className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
             >
               Demo
             </Link>
             <Link
               to="/join/messaging"
+              state={{ from: "/about" }}
               className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
             >
               Messaging

@@ -43,14 +43,19 @@ const PRESS_AWARDS = [
 ];
 
 export default function Supporters() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   const closeTo = pathname.startsWith("/help")
     ? "/help/endorse-us"
     : "/about/endorse-us";
 
   return (
     <>
-      <CloseButton to={closeTo} />
+      {/* Forward originFrom (the close chain's ultimate destination, set by
+          Endorse Us's Supporters link) back to Endorse Us so its own close
+          button still knows where to land instead of losing it on this
+          round trip — see CloseButton.jsx and EndorseUs.jsx. */}
+      <CloseButton to={closeTo} state={{ originFrom: location.state?.originFrom }} />
 
       {/* Header */}
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">

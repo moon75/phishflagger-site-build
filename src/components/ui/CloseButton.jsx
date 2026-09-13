@@ -6,7 +6,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 // the page that actually opened this one. The link that opened this page
 // should pass state={{ from: "/wherever" }} so the X returns there; pages
 // reachable from only one place can just pass a fixed `to` instead.
-export default function CloseButton({ to = "/", force = false }) {
+// `state` lets a page forward extra fields (e.g. the original `from` it
+// received) into the state the destination page lands with — needed when
+// a page sits in the middle of a close chain (Home -> Endorse Us ->
+// Supporters -> close -> Endorse Us -> close -> should land on Home, not
+// wherever Endorse Us's own default `to` points) so the chain's ultimate
+// origin survives the round trip instead of being dropped.
+export default function CloseButton({ to = "/", force = false, state }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -14,7 +20,7 @@ export default function CloseButton({ to = "/", force = false }) {
     const destination = !force && location.state?.from ? location.state.from : to;
     // restoreScroll tells SiteLayout to put the destination page back where
     // the user left it, instead of jumping to the top (see SiteLayout.jsx).
-    navigate(destination, { replace: true, state: { restoreScroll: true } });
+    navigate(destination, { replace: true, state: { restoreScroll: true, ...state } });
   }
 
   return (

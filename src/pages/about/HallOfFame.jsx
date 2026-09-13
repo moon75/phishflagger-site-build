@@ -31,14 +31,21 @@ const SUPPORTERS = [
 ];
 
 export default function HallOfFame() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   const kickstarterTo = pathname.startsWith("/help")
     ? "/help/kickstarter"
     : "/about/kickstarter";
 
   return (
     <>
-      <CloseButton to={kickstarterTo} />
+      {/* Forward originFrom back to Kickstarter so its own close button
+          still knows the chain's ultimate destination instead of losing it
+          on this round trip — see CloseButton.jsx and Kickstarter.jsx. */}
+      <CloseButton
+        to={kickstarterTo}
+        state={{ originFrom: location.state?.originFrom }}
+      />
 
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
         <div className="mx-auto max-w-[920px] text-center">

@@ -46,7 +46,7 @@ export default function Demo() {
               What should I expect:
             </h2>
             <p className="mt-4 text-[15px] leading-[1.65] text-ink sm:text-[16px]">
-              We will email you a series of 7 emails simulating bank or
+              We will email you a series of 6 emails simulating bank or
               marketing communications. One of them will be a Phish. This will allow
               you a way to examine your emails should you suspect they are
               fraudulent.

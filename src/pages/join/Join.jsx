@@ -1,5 +1,5 @@
 import BluePersonFilter from "../../components/ui/BluePersonFilter.jsx";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
@@ -13,32 +13,74 @@ import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 import { publicPath } from "../../lib/publicPath.js";
 
-// The three /email plan illustrations are animated GIFs. Show a still
-// frame (the *-preview.png) by default and only swap in the GIF while the
-// pointer is over the card, then revert to the still on leave. Re-setting
-// src to the GIF on each hover also makes it play from its first frame.
-function HoverGif({ stillSrc, gifSrc, alt, className, playing: playingProp }) {
-  const [playingState, setPlayingState] = useState(false);
-  const controlled = playingProp !== undefined;
-  const playing = controlled ? playingProp : playingState;
+// The three /email plan illustrations are animated GIFs. Same rule as the
+// Home page phone mockups (Home.jsx's PhonePlaceholder): hold the hover for
+// HOVER_HOLD_MS before the gif starts (so a quick mouse-pass doesn't trigger
+// it — the still poster frame matches the gif's own first frame, so the
+// wait is invisible), then let it play exactly once (gifDurationMs) and
+// drop back to the still image, staying there until the pointer leaves and
+// hovers again. The only difference from the Home version is the much
+// shorter hold — 100ms here vs. Home's 2s.
+const HOVER_HOLD_MS = 100;
+
+function HoverGif({ stillSrc, gifSrc, alt, className, active, gifDurationMs }) {
+  const [showGif, setShowGif] = useState(false);
+  const [gifKey, setGifKey] = useState(0);
+  const holdTimeoutRef = useRef(null);
+  const playbackTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (active) {
+      holdTimeoutRef.current = window.setTimeout(() => {
+        setGifKey((k) => k + 1);
+        setShowGif(true);
+        playbackTimeoutRef.current = window.setTimeout(() => {
+          setShowGif(false);
+        }, gifDurationMs || 0);
+      }, HOVER_HOLD_MS);
+    } else {
+      setShowGif(false);
+    }
+    return () => {
+      if (holdTimeoutRef.current) window.clearTimeout(holdTimeoutRef.current);
+      if (playbackTimeoutRef.current) window.clearTimeout(playbackTimeoutRef.current);
+    };
+  }, [active, gifDurationMs]);
+
   return (
     <img
-      src={playing ? gifSrc : stillSrc}
+      key={gifKey}
+      src={showGif ? gifSrc : stillSrc}
       alt={alt}
       className={className}
       draggable={false}
-      onMouseEnter={controlled ? undefined : () => setPlayingState(true)}
-      onMouseLeave={controlled ? undefined : () => setPlayingState(false)}
     />
   );
 }
 
 export default function Join() {
   const containerRef = useRef(null);
-  // Remounting MarketingEmailTextCard on every mouse-enter (via this key)
-  // forces its CSS animation to restart from 0% each time hover begins,
-  // instead of relying on the group-hover duration toggle alone.
+  // Marketing isn't a gif, but follows the same rule as the other three
+  // plan cards (HoverGif above): hold the hover for HOVER_HOLD_MS before
+  // the "messages arriving" reveal starts (so a quick mouse-pass doesn't
+  // trigger it), then let it play through once and freeze — it doesn't
+  // start instantly on `.group:hover` like before.
   const [marketingCardHoverKey, setMarketingCardHoverKey] = useState(0);
+  const [marketingPlaying, setMarketingPlaying] = useState(false);
+  const marketingHoldTimeoutRef = useRef(null);
+  function handleMarketingMouseEnter() {
+    marketingHoldTimeoutRef.current = window.setTimeout(() => {
+      setMarketingCardHoverKey((k) => k + 1);
+      setMarketingPlaying(true);
+    }, HOVER_HOLD_MS);
+  }
+  function handleMarketingMouseLeave() {
+    if (marketingHoldTimeoutRef.current) {
+      window.clearTimeout(marketingHoldTimeoutRef.current);
+      marketingHoldTimeoutRef.current = null;
+    }
+    setMarketingPlaying(false);
+  }
   // Which plan card the pointer is currently over — lets the title share
   // the same hover target as the picture, so hovering either one plays the
   // card's GIF and runs the box's hover styling (mirrors the ActionCard
@@ -90,7 +132,8 @@ export default function Join() {
                     gifSrc={publicPath("/assets/images/individual-animated.gif")}
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
-                    playing={hoveredPlanCard === "free"}
+                    active={hoveredPlanCard === "free"}
+                    gifDurationMs={7500}
                   />
                 </div>
               </Link>
@@ -125,7 +168,8 @@ export default function Join() {
                     gifSrc={oneOrManyImg}
                     alt="Domain protection illustration"
                     className="h-full w-full rounded-lg object-contain"
-                    playing={hoveredPlanCard === "pro"}
+                    active={hoveredPlanCard === "pro"}
+                    gifDurationMs={7500}
                   />
                 </div>
               </Link>
@@ -160,7 +204,8 @@ export default function Join() {
                     gifSrc={cloudServerImg}
                     alt="Cloud and server appliance illustration"
                     className="h-full w-full rounded-lg object-contain"
-                    playing={hoveredPlanCard === "domain"}
+                    active={hoveredPlanCard === "domain"}
+                    gifDurationMs={4500}
                   />
                 </div>
               </Link>
@@ -177,8 +222,9 @@ export default function Join() {
                 to="/join/email-marketing"
                 state={{ from: "/email" }}
                 aria-label="Marketing"
-                onMouseEnter={() => setMarketingCardHoverKey((k) => k + 1)}
-                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
+                onMouseEnter={handleMarketingMouseEnter}
+                onMouseLeave={handleMarketingMouseLeave}
+                className={`group flex flex-col items-center transition-transform duration-200 hover:scale-110 ${marketingPlaying ? "is-playing" : ""}`}
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="-translate-x-1.5 whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
@@ -251,6 +297,7 @@ export default function Join() {
               state={{ from: "/email" }}
               label="Digital"
               alt="Digital"
+              disabled
               svgIcon={
                 <svg
                   viewBox="0 0 24 24"
@@ -293,7 +340,7 @@ export default function Join() {
 
       {/* ===== Pane 2 placeholder — Human/Digital text moved to /kick ===== */}
       <section id="join-human-digital" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
-        <PageDownButton containerRef={containerRef} />
+        <PageDownButton containerRef={containerRef} targetSelector="#footer-products" />
         <div className="mx-auto max-w-content">
           <div className="flex min-h-[220px] items-center justify-center rounded-2xl border-2 border-black bg-[#FFFF00]">
             <span className="text-[16px] font-semibold text-ink sm:text-[18px]">
@@ -360,12 +407,17 @@ function ActionCard({
   bluePerson = false,
   imageSize = "h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]",
   hideLabel = false,
+  disabled = false,
 }) {
+  const Wrapper = disabled ? "div" : Link;
+  const wrapperProps = disabled ? {} : { to, state };
+
   return (
-    <Link
-      to={to}
-      state={state}
-      className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.9] sm:w-[172px]"
+    <Wrapper
+      {...wrapperProps}
+      className={`group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out sm:w-[172px] ${
+        disabled ? "cursor-not-allowed" : "hover:scale-[0.9]"
+      }`}
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
         <span
@@ -376,17 +428,28 @@ function ActionCard({
           {label}
         </span>
       </div>
-      <div className="mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[120px] sm:w-[120px]">
-        {svgIcon ?? (
-          <img
-            src={src}
-            alt={alt}
-            style={bluePerson ? { filter: "url(#email-person-blue)" } : undefined}
-            className={`object-contain ${imageSize} ${imageClassName}`}
-          />
+      <div className="relative">
+        {disabled && (
+          <span className="absolute top-1 -left-4 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+            Coming Soon
+          </span>
         )}
+        <div
+          className={`mt-5 flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white transition-all duration-200 sm:h-[120px] sm:w-[120px] ${
+            disabled ? "opacity-50" : "group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100"
+          }`}
+        >
+          {svgIcon ?? (
+            <img
+              src={src}
+              alt={alt}
+              style={bluePerson ? { filter: "url(#email-person-blue)" } : undefined}
+              className={`object-contain ${imageSize} ${imageClassName}`}
+            />
+          )}
+        </div>
       </div>
-    </Link>
+    </Wrapper>
   );
 }
 

@@ -95,6 +95,7 @@ export default function Telecom() {
             />
             <ActionCard
               to="/help/telecom-endorse-us"
+              state={{ from: "/telecom" }}
               label={
                 <>
                   Endorse
@@ -108,6 +109,7 @@ export default function Telecom() {
             />
             <ActionCard
               to="/petition"
+              state={{ from: "/telecom" }}
               label="Sign Petition"
               alt="Sign Petition"
               svgIcon={
@@ -453,7 +455,7 @@ export default function Telecom() {
         }}
       >
         <SectionCounter value="^0007" />
-        <PageDownButton bg="white" />
+        <PageDownButton bg="white" targetSelector="#footer-products" />
         <div className="mx-auto max-w-[960px] text-center">
           <p className="telecom-body-text">
             The{" "}

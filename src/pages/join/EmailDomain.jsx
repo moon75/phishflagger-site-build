@@ -195,7 +195,7 @@ export default function EmailDomain() {
         }}
       >
         <SectionCounter value="^0004" />
-        <PageDownButton bg="white" />
+        <PageDownButton bg="white" targetSelector="#footer-products" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[420px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">

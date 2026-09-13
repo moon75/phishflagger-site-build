@@ -57,10 +57,16 @@ export default function EndorseUs() {
   };
 
   const closeTo = location.pathname.startsWith("/help") ? "/help" : "/about";
+  // Where the whole close chain should ultimately land — normally the page
+  // that linked here (via state.from), but if we got here by closing back
+  // out of Supporters instead, that page forwards it along as
+  // `originFrom` so it survives the round trip instead of being dropped
+  // (see CloseButton.jsx and Supporters.jsx).
+  const cameFrom = location.state?.from ?? location.state?.originFrom;
 
   return (
     <>
-      <CloseButton to={closeTo} />
+      <CloseButton to={cameFrom || closeTo} force />
       <section
         className="bg-[#eef0f4] bg-cover bg-center px-4 pb-16 pt-10 text-ink sm:px-6 sm:pt-14"
         style={{
@@ -94,6 +100,7 @@ export default function EndorseUs() {
                     ? "/help/supporters"
                     : "/about/supporters"
                 }
+                state={{ originFrom: cameFrom }}
                 className="mt-auto inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] duration-200 hover:scale-[1.2]"
               >
                 Supporters

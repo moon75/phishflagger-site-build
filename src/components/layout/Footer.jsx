@@ -65,7 +65,7 @@ export default function Footer({ logoSrc = logoImg }) {
             }}
           >
             {showAboutCounter && <SectionCounter value="^0001" />}
-            <PageDownButton bg="white" />
+            <PageDownButton bg="white" targetSelector="#site-footer" />
             <div className="mx-auto max-w-[1200px]">
               <div className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
                 <div className="hidden lg:block" aria-hidden />
@@ -397,6 +397,7 @@ function FooterSitemapColumn({ heading, headingHref, links }) {
           <li key={item.href}>
             <Link
               to={item.href}
+              state={{ from: location.pathname }}
               className={`block rounded-md px-2 py-1 -mx-2 text-[13px] transition-colors hover:text-[#FF0033] ${
                 isActive(item.href) ? "bg-gray-100 text-black" : "text-black"
               }`}

@@ -54,7 +54,12 @@ export default function PageDownButton({
     const root = containerRef?.current ?? document;
 
     if (targetSelector) {
-      const target = root.querySelector(targetSelector);
+      // Always resolve targetSelector against the whole document, not the
+      // scoped containerRef — a caller pinning an exact element (e.g.
+      // "#site-footer") means that literal element even when it lives
+      // outside this page's own container (the footer is rendered by
+      // SiteLayout, a sibling of the page content).
+      const target = document.querySelector(targetSelector);
       if (target) {
         scrollToElement(target, block);
         return;

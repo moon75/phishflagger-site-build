@@ -100,6 +100,7 @@ export default function FaqTabs({
 }
 
 function FaqItem({ question, answer, last, open, onToggle }) {
+  const location = useLocation();
   return (
     <div className={last ? "" : "border-b border-gray-200"}>
       <button
@@ -125,6 +126,7 @@ function FaqItem({ question, answer, last, open, onToggle }) {
                       Help stop phone fraud in your country. Sign our{" "}
                       <Link
                         to="/petition"
+                        state={{ from: location.pathname + location.search }}
                         className="text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                       >
                         Petition

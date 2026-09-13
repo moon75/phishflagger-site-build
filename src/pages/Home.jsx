@@ -112,31 +112,40 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-stretch sm:gap-x-12 lg:gap-x-[30px]">
             <div className="flex flex-1 items-center">
-              <PhonePlaceholder
-                src={SCREENS[0].src}
-                hoverSrc={SCREENS[0].hoverSrc}
-                gifDurationMs={SCREENS[0].gifDurationMs}
-                alt={`${SCREENS[0].label} screen`}
-                large
-              />
+              <Link to="/join/email-free-plug-in" state={{ from: "/" }}>
+                <PhonePlaceholder
+                  src={SCREENS[0].src}
+                  hoverSrc={SCREENS[0].hoverSrc}
+                  gifDurationMs={SCREENS[0].gifDurationMs}
+                  alt={`${SCREENS[0].label} screen`}
+                  large
+                />
+              </Link>
             </div>
             <div className="-translate-y-[1px]">
-              <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} gifDurationMs={SCREENS[1].gifDurationMs} alt={`${SCREENS[1].label} screen`} wide />
+              <Link to="/join/domain" state={{ from: "/" }}>
+                <PhonePlaceholder src={SCREENS[1].src} hoverSrc={SCREENS[1].hoverSrc} gifDurationMs={SCREENS[1].gifDurationMs} alt={`${SCREENS[1].label} screen`} wide />
+              </Link>
             </div>
           </div>
         </div>
 
-        {SCREENS.slice(2).map((s, i) => (
-          <div key={i + 2} className="flex flex-col items-center">
-            <Link
-              to={s.label === "Messages" ? "/join/messaging" : "/telecom"}
-              className="mb-3 text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-[18px]"
-            >
-              {s.label}
-            </Link>
-            <PhonePlaceholder src={s.src} hoverSrc={s.hoverSrc} gifDurationMs={s.gifDurationMs} alt={`${s.label} screen`} wide />
-          </div>
-        ))}
+        {SCREENS.slice(2).map((s, i) => {
+          const to = s.label === "Messages" ? "/join/messaging" : "/telecom";
+          return (
+            <div key={i + 2} className="flex flex-col items-center">
+              <Link
+                to={to}
+                className="mb-3 text-[15px] font-semibold text-ink transition-colors hover:text-red-600 sm:mb-4 sm:text-[18px]"
+              >
+                {s.label}
+              </Link>
+              <Link to={to}>
+                <PhonePlaceholder src={s.src} hoverSrc={s.hoverSrc} gifDurationMs={s.gifDurationMs} alt={`${s.label} screen`} wide />
+              </Link>
+            </div>
+          );
+        })}
       </div>
 
       </div>
@@ -446,6 +455,7 @@ export default function Home() {
               />
               <Link
                 to="/join/messaging"
+                state={{ from: "/" }}
                 className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >
                 Messaging
@@ -467,7 +477,7 @@ export default function Home() {
       }}
     >
       <SectionCounter value="^0004" />
-      <PageDownButton bg="white" />
+      <PageDownButton bg="white" targetSelector="#footer-products" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -495,6 +505,7 @@ export default function Home() {
               <div className="mt-0.5 flex flex-wrap items-center gap-1">
                 <Link
                   to="/petition"
+                  state={{ from: "/" }}
                   className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >
                   Sign our Petition
@@ -502,6 +513,7 @@ export default function Home() {
                 <span>and</span>
                 <Link
                   to="/help/telecom-endorse-us"
+                  state={{ from: "/" }}
                   className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >
                   Endorse Safe Calls
