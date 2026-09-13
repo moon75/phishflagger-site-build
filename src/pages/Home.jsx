@@ -629,7 +629,7 @@ function SectionCounter({ value }) {
 // Hold the hover for this long on the static image before the gif starts —
 // then let it play exactly once (gifDurationMs) and stop, staying on the
 // static image until the user moves away and hovers again.
-const PHONE_GIF_HOVER_DELAY_MS = 2000;
+const PHONE_GIF_HOVER_DELAY_MS = 1000;
 
 function PhonePlaceholder({ src, hoverSrc, gifDurationMs, alt, large = false, wide = false }) {
   const [showGif, setShowGif] = useState(false);
