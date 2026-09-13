@@ -7,12 +7,12 @@ import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
 
-import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
-import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
-import callerIdBoxImg from "../../../telecom Webpage/assets/images/products/caller-id-box.png";
-import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
-import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
-import threePhoneImg from "../../../telecom Webpage/assets/images/products/3phone.png";
+import subscribeIcon from "../../assets/images/checkbox-icon.png";
+import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
+import callerIdBoxImg from "../../assets/images/caller-id-box.png";
+import desktopPhoneImg from "../../assets/images/desktop-phone-v3-verified.png";
+import callerIdPhoneImg from "../../assets/images/phishflagger-callerid-v6.png";
+import threePhoneImg from "../../assets/images/3phone.png";
 import telecomIntroCombinedImg from "../../assets/images/telecom-intro-combined-transparent.png";
 import { publicPath } from "../../lib/publicPath.js";
 

@@ -54,7 +54,7 @@ export default function EmailDomain() {
           <div className="flex flex-wrap items-start justify-center gap-8 lg:pl-16">
             <div className="group flex flex-col items-center gap-4 p-4 sm:p-5">
               <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
-                One
+                Individual
               </span>
               <div className="pic-with-no-link-mouse-over-increase h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
@@ -66,7 +66,7 @@ export default function EmailDomain() {
             </div>
             <div className="group flex flex-col items-center gap-4 p-4 sm:p-5">
               <span className="text-[22px] font-semibold text-ink transition-transform duration-200 group-hover:scale-110 sm:text-[25px]">
-                Many
+                Group
               </span>
               <div className="pic-with-no-link-mouse-over-increase h-[112px] w-[112px] sm:h-[150px] sm:w-[150px] lg:h-[180px] lg:w-[180px]">
                 <img
@@ -215,8 +215,8 @@ export default function EmailDomain() {
           </div>
           <div className="p-6 text-center sm:p-8">
             <p className="mx-auto max-w-[560px]">
-              <span className="inline-block rounded-lg bg-[#FFFF00] px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                As low as $10.00 per Year / per Email
+              <span className="inline-block rounded-lg px-5 py-2 text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                $10.00 per Year / per Email
               </span>
             </p>
             <div className="mt-6 flex flex-col items-center gap-6">

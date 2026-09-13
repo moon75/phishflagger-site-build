@@ -52,16 +52,20 @@ export default function DomainAppliance() {
             </ul>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 lg:justify-start lg:pl-40">
-            <div className="pic-with-no-link-mouse-over-increase h-[217px] w-[217px] overflow-hidden rounded-xl border-2 border-black p-1">
+          <div className="flex flex-nowrap items-center justify-center gap-4 lg:justify-start lg:pl-10">
+            <div className="pic-with-no-link-mouse-over-increase h-[160px] w-[160px] shrink-0 overflow-hidden rounded-xl p-1">
               <img
                 src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
                 alt="Email authentication for domain appliance"
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="pic-with-no-link-mouse-over-increase flex h-[217px] w-[217px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-[#FFFF00] p-1">
-              <PlaceholderIcon />
+            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[340px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
+              <img
+                src={publicPath("/assets/images/Domain-History-image.png")}
+                alt="Domain history"
+                className="h-auto w-full rounded-lg object-contain"
+              />
             </div>
           </div>
         </div>
@@ -88,7 +92,7 @@ export default function DomainAppliance() {
                 {/* Content split into two columns beneath the image — Cloud
                     (left, under the cloud icon) and On-Site Server (right,
                     under the server rack icon) */}
-                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-[#FFFF00] p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4 bg-white p-7 pb-10 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
                   <div className="space-y-4">
                     <p>
                       Microsoft Email
@@ -120,7 +124,7 @@ export default function DomainAppliance() {
                   </div>
 
                   {/* Applies to both sides (Cloud + On-Site) — spans full width */}
-                  <div className="col-span-2 space-y-4 border-t border-[#f0e2a0] pt-4">
+                  <div className="col-span-2 space-y-4 border-t border-black/10 pt-4">
                     <p>
                       Appliance forms:
                       <br />
@@ -130,10 +134,6 @@ export default function DomainAppliance() {
                       Hosted on: AWS, VMware, Azure,
                       <br />
                       or any server with Open Port 25.
-                    </p>
-                    <p>
-                      Placeholder text goes here. Replace this copy with the
-                      final content.
                     </p>
                   </div>
                 </div>
@@ -266,25 +266,6 @@ export default function DomainAppliance() {
       </section>
 
     </>
-  );
-}
-
-function PlaceholderIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-14 w-14 text-ink/40"
-      aria-hidden
-    >
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <circle cx="8.5" cy="9.5" r="1.5" />
-      <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L3 20" />
-    </svg>
   );
 }
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import { brandify } from "../../components/Brand.jsx";
-import messagesImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
+import messagesImg from "../../assets/images/PhishFlagger-Messages v6.png";
 import messagingIconsImg from "../../assets/images/Icons-5.png";
 
 export default function Messaging() {

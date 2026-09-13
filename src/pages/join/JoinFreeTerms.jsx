@@ -20,7 +20,6 @@ export default function JoinFreeTerms() {
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
-      console.log("Free key requested:", { email, ...location.state });
     }, 900);
   }
 

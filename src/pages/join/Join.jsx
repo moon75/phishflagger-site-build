@@ -8,8 +8,8 @@ import cloudServerImg from "../../assets/images/domain-server-only animated.gif"
 import cloudServerStill from "../../assets/images/domain-server-only.png";
 import oneOrManyImg from "../../assets/images/six plugin one or more animated.gif";
 import oneOrManyStill from "../../assets/images/six plugin one or more.png";
-import subscribeIcon from "../../../telecom Webpage/assets/images/icons/checkbox-icon.png";
-import endorseIcon from "../../../telecom Webpage/assets/images/icons/endorse-us-removebg-preview.png";
+import subscribeIcon from "../../assets/images/checkbox-icon.png";
+import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 import { publicPath } from "../../lib/publicPath.js";
 
@@ -232,7 +232,7 @@ export default function Join() {
             <ActionCard
               to="/help/endorse-us"
               state={{ from: "/email" }}
-              label="Endorse Us"
+              label="Endorse"
               src={endorseIcon}
               bluePerson
               alt="Endorse Us"

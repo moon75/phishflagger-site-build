@@ -5,23 +5,23 @@ import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import { brandify } from "../components/Brand.jsx";
-import messagesPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import messagesPhoneGif from "../../telecom Webpage/assets/images/products/PhishFlagger-Messages v7 animated transparent.gif";
-import emailPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
+import messagesPhoneImg from "../assets/images/PhishFlagger-Messages v6.png";
+import messagesPhoneGif from "../assets/images/PhishFlagger-Messages v7 animated transparent.gif";
+import emailPhoneImg from "../assets/images/PhishFlagger-Email v6.png";
 import infoBoxImg from "../assets/images/email-inbox-v4-gray-header.png";
 import heroInfoBoxImg from "../assets/images/email-inbox-v7-gray-header-ordered.png";
 import heroInfoBoxGif from "../assets/images/email-inbox-v6-gray-header-5004-animated.gif";
 import whoCanUseImg from "../assets/images/email-marketing-verified-v9.png";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
-import callerIdDesktopImg from "../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
-import callerIdHandsetImg from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
-import callerIdHandsetGif from "../../telecom Webpage/assets/images/products/phishflagger-callerid-v6-animated-transparent.gif";
-import threePhoneImg from "../../telecom Webpage/assets/images/products/3phone.png";
+import callerIdDesktopImg from "../assets/images/desktop-phone-v3-verified.png";
+import callerIdHandsetImg from "../assets/images/phishflagger-callerid-v6.png";
+import callerIdHandsetGif from "../assets/images/phishflagger-callerid-v6-animated-transparent.gif";
+import threePhoneImg from "../assets/images/3phone.png";
 import history1Img from "../assets/images/7 1st.avif";
 import history2Img from "../assets/images/7  2nd.avif";
 import history3Img from "../assets/images/7 3rd.avif";
-import textPhoneImg from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
-import textPhoneGif from "../../telecom Webpage/assets/images/products/PhishFlagger-Text v6 animated transparent.gif";
+import textPhoneImg from "../assets/images/PhishFlagger-Text v6.png";
+import textPhoneGif from "../assets/images/PhishFlagger-Text v6 animated transparent.gif";
 import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import pane0004MessageCardImg from "../assets/images/home-pane-0004-message-card.png";
 import { publicPath } from "../lib/publicPath.js";
@@ -57,26 +57,26 @@ export default function Home() {
     <section id="pane-0001" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
       <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={0} center topClass="top-0 sm:top-2" />
       <div className="mx-auto max-w-content">
-      <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-center lg:gap-12">
+      <div className="mx-auto mt-3 flex w-full max-w-[1400px] flex-col items-stretch justify-center gap-3 sm:mt-4 lg:flex-row lg:items-start lg:gap-12">
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full -translate-y-[3.25rem] scale-[1.0] object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full scale-[1.0] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none -translate-y-[3.25rem] scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
+            className="mx-auto h-auto w-[100%] max-w-none origin-top translate-y-2.5 scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v3.png")}
             alt="Woman using PhishFlagger-protected email"
-            className="relative mx-auto h-auto w-full max-w-[340px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[420px] lg:left-1/2 lg:top-7 lg:w-[120%] lg:max-w-none lg:origin-bottom lg:-translate-x-1/2"
+            className="relative mx-auto h-auto w-full max-w-[340px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[420px] lg:left-1/2 lg:w-[120%] lg:max-w-none lg:origin-bottom lg:-translate-x-1/2"
           />
         </div>
       </div>

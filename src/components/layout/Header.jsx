@@ -4,7 +4,7 @@ import { nav } from "../../data/nav.js";
 import NavDropdown from "./NavDropdown.jsx";
 import { formatVisitCount } from "../../lib/visitCounter.js";
 import { readCookie, writeCookie } from "../../lib/cookies.js";
-import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
+import logoImg from "../../assets/images/pf-logo-v2.png";
 
 export default function Header() {
   const location = useLocation();
@@ -67,6 +67,12 @@ export default function Header() {
   // grey-pill/red-text look while you're on one of those sub-pages.
   const EMAIL_ACTIVE_PREFIXES = ["/join/pro", "/join/domain", "/join/email-"];
   function isNavItemActive(item, isDefaultActive) {
+    // FAQ lives at /about/faq but isn't really "About" content — it's
+    // reached from FAQ buttons all over the site (Help, Email, Telecom,
+    // footer, …), so the About tab shouldn't light up while there.
+    if (item.label === "About" && location.pathname.startsWith("/about/faq")) {
+      return false;
+    }
     if (isDefaultActive) return true;
     if (item.label === "Email") {
       return EMAIL_ACTIVE_PREFIXES.some((p) => location.pathname.startsWith(p));

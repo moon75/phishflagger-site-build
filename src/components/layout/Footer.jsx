@@ -2,13 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import { nav } from "../../data/nav.js";
 import PageUpButton from "../ui/PageUpButton.jsx";
 import PageDownButton from "../ui/PageDownButton.jsx";
-import desktopPhoneImg from "../../../telecom Webpage/assets/images/products/desktop-phone-v3-verified.png";
-import callerIdPhoneImg from "../../../telecom Webpage/assets/images/products/phishflagger-callerid-v6.png";
-import emailPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Email v6.png";
-import messagesPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Messages v6.png";
-import textPhoneImg from "../../../telecom Webpage/assets/images/products/PhishFlagger-Text v6.png";
+import desktopPhoneImg from "../../assets/images/desktop-phone-v3-verified.png";
+import callerIdPhoneImg from "../../assets/images/phishflagger-callerid-v6.png";
+import emailPhoneImg from "../../assets/images/PhishFlagger-Email v6.png";
+import messagesPhoneImg from "../../assets/images/PhishFlagger-Messages v6.png";
+import textPhoneImg from "../../assets/images/PhishFlagger-Text v6.png";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
-import logoImg from "../../../telecom Webpage/assets/images/logo/pf-logo-v2.png";
+import logoImg from "../../assets/images/pf-logo-v2.png";
 import { publicPath } from "../../lib/publicPath.js";
 
 // Mirrors CATEGORY_SLUGS in pages/Video.jsx — keep in sync if categories change there.
@@ -98,7 +98,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     state={{ from: pathname }}
                     className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
                   >
-                    Endorse Us
+                    Endorse
                   </Link>
                 </div>
               </div>
