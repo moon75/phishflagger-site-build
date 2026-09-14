@@ -1,12 +1,36 @@
-﻿import CloseButton from "../../components/ui/CloseButton.jsx";
+﻿import { Link } from "react-router-dom";
+import CloseButton from "../../components/ui/CloseButton.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
+import outlookImg from "../../assets/images/outlook image 90.png";
 import { publicPath } from "../../lib/publicPath.js";
 
 const logoMarkImg = publicPath("/assets/images/logo-mark.png");
+
+const PLUGIN_DOWNLOADS = [
+  {
+    name: "Microsoft Outlook",
+    image: outlookImg,
+    imageScale: "scale-150",
+    alt: "Microsoft Outlook with the PhishFlagger plug-in",
+    actions: [
+      { label: "Windows Download", to: "/plugin-download?client=Outlook&download=Windows%20Download" },
+    ],
+  },
+  {
+    name: "Thunderbird",
+    image: publicPath("/assets/images/thunderbird new pick.avif"),
+    imageScale: "scale-125",
+    alt: "Mozilla Thunderbird with the PhishFlagger plug-in",
+    actions: [
+      { label: "Windows Download", to: "/plugin-download?client=Thunderbird&download=Windows%20Download" },
+      { label: "Linux Download", to: "/plugin-download?client=Thunderbird&download=Linux%20Download" },
+    ],
+  },
+];
 
 export default function EmailDomain() {
   return (
@@ -195,7 +219,7 @@ export default function EmailDomain() {
         }}
       >
         <SectionCounter value="^0004" />
-        <PageDownButton bg="white" targetSelector="#footer-products" />
+        <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[300px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
@@ -234,6 +258,50 @@ export default function EmailDomain() {
         </div>
       </section>
 
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0005" />
+        <PageDownButton targetSelector="#footer-products" />
+        <div className="mx-auto max-w-content">
+          <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
+            Install Plug-In
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
+            {PLUGIN_DOWNLOADS.map((item) => (
+              <DownloadCard key={item.name} {...item} />
+            ))}
+
+            <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
+              <div className="flex h-[176px] items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e8edf5] p-6">
+                <div className="flex h-full w-full flex-col items-center justify-center">
+                  <img
+                    src={logoMarkImg}
+                    alt=""
+                    className="h-9 w-9 object-contain pic-with-no-link-mouse-over-increase"
+                  />
+                  <span className="mt-3 text-[15px] font-semibold text-ink">
+                    Download Page
+                  </span>
+                  <span className="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-brand text-[19px] font-bold leading-none text-white">
+                    ↓
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
+                <h2 className="text-[15px] font-semibold text-ink">
+                  Download Page
+                </h2>
+                <Link
+                  to="/download"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                >
+                  Go to Download Page
+                </Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
@@ -252,5 +320,33 @@ function SectionCounter({ value }) {
     <span className="absolute left-6 top-4 text-[17px] font-normal tracking-[0.04em] text-ink sm:left-10 sm:text-[19px]">
       {value}
     </span>
+  );
+}
+
+function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
+  return (
+    <article className="flex min-h-[272px] flex-col overflow-hidden rounded-2xl border-2 border-black bg-white shadow-[0_8px_28px_rgba(15,23,42,0.07)]">
+      <div className="flex h-[176px] items-center justify-center overflow-hidden bg-[#f7f8fb]">
+        <img
+          src={image}
+          alt={alt}
+          className={`h-full w-full -translate-y-3 object-contain pic-with-no-link-mouse-over-increase ${imageScale}`}
+        />
+      </div>
+      <div className="flex flex-1 flex-col items-center justify-between p-5 text-center">
+        <h2 className="text-[15px] font-semibold text-ink">{name}</h2>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+          {actions.map((action) => (
+            <Link
+              key={action.label}
+              to={action.to}
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+            >
+              {action.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </article>
   );
 }
