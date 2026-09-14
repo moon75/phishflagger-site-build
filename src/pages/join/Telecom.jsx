@@ -35,7 +35,7 @@ export default function Telecom() {
           <div className="hidden min-[1900px]:block min-[1900px]:flex-[0.5]" />
 
           {/* 1 — heading + intro */}
-          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
@@ -44,7 +44,7 @@ export default function Telecom() {
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
@@ -53,7 +53,7 @@ export default function Telecom() {
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={publicPath("/assets/images/granny image.png")}
               alt="User receiving an authenticated call"
