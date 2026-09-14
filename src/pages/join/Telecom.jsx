@@ -35,29 +35,29 @@ export default function Telecom() {
           <div className="hidden min-[1900px]:block min-[1900px]:flex-[0.5]" />
 
           {/* 1 — heading + intro */}
-          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={telecomIntroCombinedImg}
               alt="Telecoms and Regulators — Help stop Call Spoofing. PhishFlagger protocols introduce a sequence number, known only by the valid carrier and the callee into the Caller ID field, providing a simple way to identify fake calls."
-              className="pic-with-no-link-mouse-over-increase relative z-10 -mx-4 block h-auto w-[calc(100%+2rem)] max-w-[calc(100%+2rem)] object-contain sm:mx-0 sm:w-full sm:max-w-[220px] md:max-w-[300px] lg:max-w-[560px] min-[1900px]:w-[432px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[0.97] min-[1900px]:-translate-x-[clamp(5rem,7vw,8.5rem)]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[220px] md:max-w-[300px] lg:max-w-[560px] min-[1900px]:w-[432px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[0.97] min-[1900px]:-translate-x-[clamp(5rem,7vw,8.5rem)]"
             />
           </div>
 
           {/* 2 — Caller ID list */}
-          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={publicPath("/assets/images/existing%20caller%20id.png")}
               alt="Existing Caller ID can be used to validate calls now. The first three calls are marked safe and the fourth is marked fraud."
-              className="pic-with-no-link-mouse-over-increase relative z-10 -mx-4 block h-auto w-[calc(100%+2rem)] max-w-[calc(100%+2rem)] object-contain sm:mx-0 sm:w-full sm:max-w-[200px] md:max-w-[270px] lg:max-w-[390px] min-[1900px]:w-[400px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[0.95]"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[200px] md:max-w-[270px] lg:max-w-[390px] min-[1900px]:w-[400px] min-[1900px]:max-w-full min-[1900px]:origin-top min-[1900px]:scale-[0.95]"
             />
           </div>
 
           {/* 3 — granny image */}
-          <div className="flex min-w-0 shrink items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:shrink-0 min-[1900px]:items-start min-[1900px]:overflow-visible">
+          <div className="flex min-w-0 shrink-0 items-center justify-center min-[1900px]:h-full min-[1900px]:flex-1 min-[1900px]:items-start min-[1900px]:overflow-visible">
             <img
               src={publicPath("/assets/images/granny image.png")}
               alt="User receiving an authenticated call"
-              className="pic-with-no-link-mouse-over-increase -mx-4 h-auto w-[calc(100%+2rem)] max-w-[calc(100%+2rem)] -translate-y-6 rounded-2xl object-contain sm:mx-0 sm:w-full sm:max-w-[190px] md:max-w-[260px] lg:max-w-[353px] min-[1900px]:h-full min-[1900px]:w-auto min-[1900px]:max-w-full min-[1900px]:scale-[1.01] min-[1900px]:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
+              className="pic-with-no-link-mouse-over-increase h-auto w-full max-w-[350px] -translate-y-6 rounded-2xl object-contain sm:max-w-[190px] md:max-w-[260px] lg:max-w-[353px] min-[1900px]:h-full min-[1900px]:w-auto min-[1900px]:max-w-full min-[1900px]:scale-[1.01] min-[1900px]:translate-x-[clamp(3.5rem,calc(3.5vw+1rem),5.25rem)]"
             />
           </div>
 
