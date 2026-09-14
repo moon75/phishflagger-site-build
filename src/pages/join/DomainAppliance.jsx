@@ -52,7 +52,7 @@ export default function DomainAppliance() {
                 className="h-full w-full rounded-lg object-contain"
               />
             </div>
-            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[560px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
+            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[820px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
               <img
                 src={publicPath("/assets/images/Domain-History-image.png")}
                 alt="Domain history"
