@@ -94,7 +94,7 @@ export default function Telecom() {
               alt="Subscribe Telecom"
             />
             <ActionCard
-              to="/help/telecom-endorse-us"
+              to="/resources/telecom-endorse-us"
               state={{ from: "/telecom" }}
               label={
                 <>

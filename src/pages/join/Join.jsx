@@ -81,6 +81,7 @@ export default function Join() {
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center topClass="top-0 sm:top-2" />
+        <PageDownButton containerRef={containerRef} targetSelector="#footer-products" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-start gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="flex justify-center lg:block lg:w-[500px]">
             <img
@@ -252,7 +253,7 @@ export default function Join() {
               alt="Subscribe"
             />
             <ActionCard
-              to="/help/endorse-us"
+              to="/resources/endorse-us"
               state={{ from: "/email" }}
               label="Endorse"
               src={endorseIcon}
@@ -310,20 +311,6 @@ export default function Join() {
                   <circle cx="12" cy="15.7" r="1.3" fill="#eab308" />
                 </svg>
               }
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== Pane 2 — email history image ===== */}
-      <section id="join-human-digital" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
-        <PageDownButton containerRef={containerRef} targetSelector="#footer-products" />
-        <div className="mx-auto max-w-content">
-          <div className="flex items-center justify-center rounded-2xl">
-            <img
-              src={publicPath("/assets/images/history-image-for-email.svg")}
-              alt="History of email"
-              className="pic-with-no-link-mouse-over-increase ml-16 h-auto w-full object-contain sm:ml-24"
             />
           </div>
         </div>

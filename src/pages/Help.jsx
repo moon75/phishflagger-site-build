@@ -8,7 +8,7 @@ const logoMarkImg = publicPath("/assets/images/logo-mark.png");
 
 const LINKS = [
   { to: "/about/faq?category=General", label: "FAQ", icon: <FaqIcon /> },
-  { to: "/help/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
+  { to: "/resources/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
   { to: "/download", label: "Download Page", icon: <DownloadIcon /> },
@@ -74,7 +74,7 @@ function HelpCard({ to, label, icon, src, imageClassName = "" }) {
   return (
     <Link
       to={to}
-      state={{ from: "/help" }}
+      state={{ from: "/resources" }}
       className="group flex w-[130px] flex-col items-center transition-transform duration-200 hover:scale-[var(--icon-link-hover-scale)]"
     >
       <span className="mb-3 flex h-[36px] items-end justify-center text-center text-[13px] font-bold uppercase leading-snug tracking-[0.1em] text-ink-muted sm:text-[14px]">

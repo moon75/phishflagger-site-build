@@ -5,6 +5,7 @@ import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
 import digitalDomainImg from "../../assets/images/digital-domain-diagram-v6-no-connector.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
+import domainSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card-for-domain page.png";
 import { publicPath } from "../../lib/publicPath.js";
 
 export default function DomainAppliance() {
@@ -20,45 +21,35 @@ export default function DomainAppliance() {
           backgroundSize: "140%",
         }}
       >
-        <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div>
-            <h2 className="section-title mb-6 flex items-center gap-4">
-              <LogoMark />
-              <span>
-                <BrandInline /> Domain
-              </span>
-            </h2>
-            <div className="rounded-2xl bg-white p-5 sm:p-7">
-              <ul className="space-y-4 text-[15px] leading-[1.6] text-ink sm:space-y-5 sm:text-[18px] sm:leading-[1.55]">
-                <li className="list-none">
-                  <strong className="font-bold text-ink">
-                    Advanced Email Authentication
-                  </strong>{" "}
-                  Strengthen the verification of emails sent and helps
-                  recipients distinguish legitimate communications from
-                  impersonated messages. Use the PhishCounter&trade; to provide
-                  a simple, recognizable method of verifying the sequence and
-                  authenticity of communications.
-                </li>
-              </ul>
-            </div>
+        <div className="mx-auto flex max-w-content flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-center">
+          {/* Block 1 — title + text */}
+          <div className="flex w-full max-w-[420px] shrink-0 justify-center">
+            <img
+              src={domainSolutionsCardImg}
+              alt="PhishFlagger Domain. Advanced Email Authentication. Strengthen the verification of emails sent and helps recipients distinguish legitimate communications from impersonated messages. Use the PhishCounter to provide a simple, recognizable method of verifying the sequence and authenticity of communications."
+              className="block h-auto w-full max-w-[420px] object-contain pic-with-no-link-mouse-over-increase"
+            />
           </div>
 
-          <div className="flex flex-nowrap items-center justify-center gap-8 lg:justify-start lg:pl-10">
-            <div className="pic-with-no-link-mouse-over-increase h-[160px] w-[160px] shrink-0 overflow-hidden rounded-xl p-1">
-              <img
-                src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
-                alt="Email authentication for domain appliance"
-                className="h-full w-full rounded-lg object-contain"
-              />
-            </div>
-            <div className="pic-with-no-link-mouse-over-increase flex min-w-0 max-w-[820px] flex-1 items-center justify-center overflow-hidden rounded-xl p-1">
-              <img
-                src={publicPath("/assets/images/Domain-History-image.png")}
-                alt="Domain history"
-                className="h-auto w-full rounded-lg object-contain"
-              />
-            </div>
+          {/* Block 2 — spacer */}
+          <div className="hidden w-32 shrink-0 lg:block" aria-hidden="true" />
+
+          {/* Block 3 — wheel icon */}
+          <div className="pic-with-no-link-mouse-over-increase h-[160px] w-[160px] shrink-0 overflow-hidden rounded-xl p-1">
+            <img
+              src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
+              alt="Email authentication for domain appliance"
+              className="h-full w-full rounded-lg object-contain"
+            />
+          </div>
+
+          {/* Block 4 — Email Authentication diagram */}
+          <div className="pic-with-no-link-mouse-over-increase w-full max-w-[380px] shrink-0 overflow-hidden rounded-xl p-1">
+            <img
+              src={publicPath("/assets/images/Domain-History-image.png")}
+              alt="Domain history"
+              className="h-auto w-full rounded-lg object-contain"
+            />
           </div>
         </div>
       </section>

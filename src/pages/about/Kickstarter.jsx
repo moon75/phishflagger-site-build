@@ -5,8 +5,8 @@ import supportersImg from "../../assets/images/supporters-cartoon.png";
 export default function Kickstarter() {
   const location = useLocation();
   const { pathname } = location;
-  const isHelp = pathname.startsWith("/help");
-  const closeTo = isHelp ? "/help" : "/about";
+  const isHelp = pathname.startsWith("/resources");
+  const closeTo = isHelp ? "/resources" : "/about";
   // Same close-chain issue as Endorse Us / Supporters: if we got here by
   // closing back out of Hall of Fame instead of a direct link, that page
   // forwards our original `from` along as `originFrom` (see CloseButton.jsx
@@ -48,7 +48,7 @@ export default function Kickstarter() {
                 className="mt-8 h-auto w-full max-w-[420px] object-contain pic-with-no-link-mouse-over-increase"
               />
               <Link
-                to={isHelp ? "/help/hall-of-fame" : "/about/hall-of-fame"}
+                to={isHelp ? "/resources/hall-of-fame" : "/about/hall-of-fame"}
                 state={{ originFrom: cameFrom }}
                 className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
               >

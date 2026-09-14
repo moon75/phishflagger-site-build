@@ -33,8 +33,8 @@ const SUPPORTERS = [
 export default function HallOfFame() {
   const location = useLocation();
   const { pathname } = location;
-  const kickstarterTo = pathname.startsWith("/help")
-    ? "/help/kickstarter"
+  const kickstarterTo = pathname.startsWith("/resources")
+    ? "/resources/kickstarter"
     : "/about/kickstarter";
 
   return (

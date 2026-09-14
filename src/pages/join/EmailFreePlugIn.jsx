@@ -4,6 +4,7 @@ import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import { publicPath } from "../../lib/publicPath.js";
+import { isVideo1Unlocked } from "../../lib/videoAccess.js";
 
 const DOWNLOADS = [
   {
@@ -35,6 +36,8 @@ const PROVIDERS = [
 ];
 
 export default function EmailFreePlugIn() {
+  const unlocked = isVideo1Unlocked();
+
   return (
     <>
       <CloseButton />
@@ -66,7 +69,7 @@ export default function EmailFreePlugIn() {
             </h1>
           </div>
           <h2 className="text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
-            Step 1. Get your Key.&nbsp; Works with ....
+            Get your Key.&nbsp; Works with ....
           </h2>
           <div className="mx-auto mt-9 grid max-w-[892px] grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-12">
             {PROVIDERS.map(({ key, labels }) => (
@@ -96,29 +99,49 @@ export default function EmailFreePlugIn() {
             </Link>
             <div className="flex items-center gap-3">
               <div className="relative">
-                <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
-                  Coming Soon
-                </span>
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
-                >
-                  Join Free
-                </button>
+                {!unlocked && (
+                  <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                    Coming Soon
+                  </span>
+                )}
+                {unlocked ? (
+                  <Link
+                    to="/joinfree"
+                    className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                  >
+                    Join Free
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    disabled
+                    className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
+                  >
+                    Join Free
+                  </button>
+                )}
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
                 Don&rsquo;t see your Domain
               </span>
-              <button
-                type="button"
-                disabled
-                className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
-              >
-                Join PRO
-              </button>
+              {unlocked ? (
+                <Link
+                  to="/join/pro"
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                >
+                  Join PRO
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
+                >
+                  Join PRO
+                </button>
+              )}
               <span className="rounded px-2 py-0.5 text-[12px] text-ink">
                 $10.00 / Year
               </span>
@@ -131,7 +154,7 @@ export default function EmailFreePlugIn() {
         <SectionCounter value="^0001" />
         <div className="mx-auto max-w-content">
           <h2 className="mt-10 text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:mt-12 sm:text-[32px]">
-            Step 2. Install Plug-In
+            Install Plug-In
           </h2>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-3 md:gap-10">
             {DOWNLOADS.map((item) => (

@@ -36,7 +36,7 @@ export default function SupportDesk() {
 
       if (!res.ok) throw new Error();
       setStatus("success");
-      navigate("/help/support-desk/thanks");
+      navigate("/resources/support-desk/thanks");
     } catch {
       setStatus("error");
     }

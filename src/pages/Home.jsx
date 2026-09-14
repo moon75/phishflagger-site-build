@@ -485,7 +485,7 @@ export default function Home() {
                 </Link>
                 <span>and</span>
                 <Link
-                  to="/help/telecom-endorse-us"
+                  to="/resources/telecom-endorse-us"
                   state={{ from: "/" }}
                   className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                 >

@@ -40,7 +40,7 @@ export default function Footer({ logoSrc = logoImg }) {
   // Help page already has its own FAQ icon card up top, so the footer's
   // FAQ button here would be redundant — hide just that button, keep
   // Endorse Us and the rest of the footer block showing.
-  const hideFaqButton = pathname === "/help";
+  const hideFaqButton = pathname === "/resources";
   // The About page's numbering-history pane used to carry "^0001" itself;
   // it's been moved down onto this shared products/phones pane instead,
   // but only when landing here from /about — other pages don't have a
@@ -94,7 +94,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     </Link>
                   )}
                   <Link
-                    to="/help/endorse-us"
+                    to="/resources/endorse-us"
                     state={{ from: pathname }}
                     className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
                   >
@@ -196,7 +196,7 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Marketing", href: "/join/email-marketing" },
                 { label: "Contact", href: "/contact" },
                 { label: "Subscribe", href: "/join/email-subscribe" },
-                { label: "Endorse Us", href: "/help/endorse-us" },
+                { label: "Endorse Us", href: "/resources/endorse-us" },
                 { label: "Human Compatible", href: "/human-compatible" },
                 { label: "Digital Verification", href: "/digital-verification" },
                 { label: "FAQ - Email", href: "/about/faq?category=General" },
@@ -208,18 +208,18 @@ export default function Footer({ logoSrc = logoImg }) {
               links={[
                 { label: "Contact", href: "/telecom/contact" },
                 { label: "Subscribe", href: "/telecom/subscribe" },
-                { label: "Endorse Safe Calls", href: "/help/telecom-endorse-us" },
+                { label: "Endorse Safe Calls", href: "/resources/telecom-endorse-us" },
                 { label: "Sign Petition", href: "/petition" },
                 { label: "Human Compatible", href: "/human-compatible" },
                 { label: "Digital Verification", href: "/digital-verification" },
               ]}
             />
             <FooterSitemapColumn
-              heading="Help"
-              headingHref="/help"
+              heading="Resources"
+              headingHref="/resources"
               links={[
                 { label: "Contact", href: "/contact" },
-                { label: "Support Desk", href: "/help/support-desk" },
+                { label: "Support Desk", href: "/resources/support-desk" },
                 { label: "FAQ", href: "/about/faq?category=General" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "PhishFlagger.org", href: "/phishflagger-org" },

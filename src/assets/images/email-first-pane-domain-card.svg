@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="279" viewBox="0 0 380 279" role="img" aria-labelledby="title description">
+  <title id="title">PhishFlagger Domain</title>
+  <desc id="description">Advanced Email Authentication information card.</desc>
+
+  <defs>
+    <clipPath id="body-clip">
+      <rect x="0" y="88" width="380" height="191" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <image href="../../../public/assets/images/logo-mark.png" x="0" y="0" width="80" height="62" preserveAspectRatio="xMidYMid meet"/>
+  <text x="95" y="47" font-family="Mulish, Arial, sans-serif" font-size="27" fill="#0c2217">
+    <tspan font-style="italic" font-weight="800">Phish</tspan><tspan fill="#f20d35" font-style="italic" font-weight="500">Flagger</tspan><tspan font-weight="800"> Domain</tspan>
+  </text>
+
+  <rect x="0" y="88" width="380" height="191" rx="16" fill="#fff"/>
+  <g clip-path="url(#body-clip)" font-family="Mulish, Arial, sans-serif" font-size="15" fill="#0c2217">
+    <text x="22" y="119">
+      <tspan x="22" font-weight="800">Advanced Email Authentication</tspan>
+      <tspan x="22" dy="24">Strengthen the verification of emails sent and</tspan>
+      <tspan x="22" dy="24">helps recipients distinguish legitimate</tspan>
+      <tspan x="22" dy="24">communications from impersonated messages.</tspan>
+      <tspan x="22" dy="24">Use the PhishCounter™ to provide a simple,</tspan>
+      <tspan x="22" dy="24">recognizable method of verifying the sequence</tspan>
+      <tspan x="22" dy="24">and authenticity of communications.</tspan>
+    </text>
+  </g>
+</svg>

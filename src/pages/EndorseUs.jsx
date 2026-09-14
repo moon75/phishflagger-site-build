@@ -49,7 +49,7 @@ export default function EndorseUs() {
       setPic(null);
       setVerifyMe(false);
       setSubscribe(false);
-      navigate("/help/telecom-endorse-us/thanks");
+      navigate("/resources/telecom-endorse-us/thanks");
     } catch {
       setStatus("error");
     }

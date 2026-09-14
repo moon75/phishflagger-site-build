@@ -21,6 +21,7 @@ import Petition from "./pages/Petition.jsx";
 import PetitionThanks from "./pages/PetitionThanks.jsx";
 import GenericThanks from "./pages/GenericThanks.jsx";
 import Kick from "./pages/Kick.jsx";
+import Kick2 from "./pages/Kick2.jsx";
 import Rock from "./pages/Rock.jsx";
 import HumanVsDigital from "./pages/HumanVsDigital.jsx";
 import TestStripe from "./pages/TestStripe.jsx";
@@ -91,6 +92,7 @@ export default function App() {
           }
         />
         <Route path="kick" element={<Kick />} />
+        <Route path="kick2" element={<Kick2 />} />
         <Route path="edit" element={<Rock />} />
         <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
         <Route path="test-stripe" element={<TestStripe />} />
@@ -105,13 +107,13 @@ export default function App() {
             />
           }
         />
-        <Route path="help/support-desk" element={<SupportDesk />} />
+        <Route path="resources/support-desk" element={<SupportDesk />} />
         <Route
-          path="help/support-desk/thanks"
+          path="resources/support-desk/thanks"
           element={
             <GenericThanks
               message="Thank you. Your support request has been received."
-              closeTo="/help/support-desk"
+              closeTo="/resources/support-desk"
             />
           }
         />
@@ -196,7 +198,7 @@ export default function App() {
           <Route path="other" element={<Other />} />
         </Route>
 
-        <Route path="help">
+        <Route path="resources">
           <Route index element={<Help />} />
           <Route path="endorse-us" element={<AboutEndorseUs />} />
           <Route
@@ -204,7 +206,7 @@ export default function App() {
             element={
               <GenericThanks
                 message="Thank you. Your endorsement has been received."
-                closeTo="/help/endorse-us"
+                closeTo="/resources/endorse-us"
               />
             }
           />

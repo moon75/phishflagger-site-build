@@ -56,7 +56,7 @@ export default function Header() {
 
   // The 6 primary tabs that would hover-navigate / hover-open if
   // navHoverMode were ever true — disabled for now (see above).
-  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Help", "About"]);
+  const HOVER_NAV_LABELS = new Set(["Home", "Email", "Telecom", "Video", "Resources", "About"]);
   const hoverNavActive = (label) => navHoverMode && HOVER_NAV_LABELS.has(label);
 
   // Email's plan sub-pages live under /join/* (Plug-In Free, Plug-In Pro,

@@ -43,21 +43,26 @@ export default function Download() {
             </div>
 
             {/* Outlook */}
-            <div className="overflow-hidden rounded-2xl border-2 border-black">
-              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
-                <img
-                  src={outlookImg}
-                  alt="Microsoft Outlook"
-                  className="h-full w-full scale-[1.2] object-cover pic-with-no-link-mouse-over-increase"
-                />
-              </div>
-              <div className="flex justify-center px-5 py-5 sm:px-6">
-                <Link
-                  to="/plugin-download?client=Outlook&download=Windows%20Download"
-                  className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
-                >
-                  Windows
-                </Link>
+            <div className="relative">
+              <span className="absolute -top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                Coming Soon
+              </span>
+              <div className="overflow-hidden rounded-2xl border-2 border-black">
+                <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
+                  <img
+                    src={outlookImg}
+                    alt="Microsoft Outlook"
+                    className="h-full w-full scale-[1.2] object-cover pic-with-no-link-mouse-over-increase"
+                  />
+                </div>
+                <div className="flex justify-center px-5 py-5 sm:px-6">
+                  <Link
+                    to="/plugin-download?client=Outlook&download=Windows%20Download"
+                    className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
+                  >
+                    Windows
+                  </Link>
+                </div>
               </div>
             </div>
 

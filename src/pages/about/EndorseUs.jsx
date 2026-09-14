@@ -49,8 +49,8 @@ export default function EndorseUs() {
         subscribe: false,
       });
       navigate(
-        location.pathname.startsWith("/help")
-          ? "/help/endorse-us/thanks"
+        location.pathname.startsWith("/resources")
+          ? "/resources/endorse-us/thanks"
           : "/about/endorse-us/thanks"
       );
     } catch {
@@ -58,7 +58,7 @@ export default function EndorseUs() {
     }
   };
 
-  const closeTo = location.pathname.startsWith("/help") ? "/help" : "/about";
+  const closeTo = location.pathname.startsWith("/resources") ? "/resources" : "/about";
   // Where the whole close chain should ultimately land — normally the page
   // that linked here (via state.from), but if we got here by closing back
   // out of Supporters instead, that page forwards it along as

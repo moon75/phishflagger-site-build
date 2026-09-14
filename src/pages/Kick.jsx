@@ -3,6 +3,7 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 import kickstarterPdf from "../assets/Pdf/Kickstarter Campaign.pdf";
 import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
+import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import { publicPath } from "../lib/publicPath.js";
 
 const howDoesItWorkImg = publicPath("/assets/images/How%20does%20phishflagger%20work-v3-transparent.png");
@@ -126,6 +127,42 @@ export default function Kick() {
           />
         </div>
 
+        {/* ===== History of email (moved from /email) ===== */}
+        <div className="mt-10 w-full max-w-[1000px] overflow-hidden rounded-lg">
+          <img
+            src={publicPath("/assets/images/history-image-for-email.svg")}
+            alt="History of email"
+            className="h-auto w-full object-contain pic-with-no-link-mouse-over-increase"
+          />
+        </div>
+
+        {/* ===== Plug-In (moved from /join/pro) ===== */}
+        <div className="mx-auto mt-10 flex w-full max-w-[460px] flex-col">
+          <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
+            Plug-In
+          </h3>
+          <div className="relative">
+            <span className="absolute top-2 -left-2 z-10 -rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
+              Coming Soon
+            </span>
+            <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
+              <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
+                <img
+                  src={outlookThunderbirdImg}
+                  alt="Microsoft Outlook and Mozilla Thunderbird"
+                  className="h-full w-full translate-y-1 scale-[1.5] object-contain pic-with-no-link-mouse-over-increase"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
+                  <li>Windows</li>
+                  <li>Linux / Window</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ===== Available domains ===== */}
         <div className="mx-auto mt-10 w-full max-w-[640px] rounded-lg bg-[#f4f5f8] px-5 py-4">
           <p className="text-[13px] font-semibold text-ink">
@@ -184,7 +221,7 @@ export default function Kick() {
           <p className="mt-4 text-[15px] text-ink sm:text-[16px]">
             Like what you see.{" "}
             <Link
-              to="/help/endorse-us"
+              to="/resources/endorse-us"
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
               Endorse Us
@@ -196,7 +233,7 @@ export default function Kick() {
           <p className="mt-2 text-[15px] text-ink sm:text-[16px]">
             See who's already on board.{" "}
             <Link
-              to="/help/supporters"
+              to="/resources/supporters"
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
               Supporters

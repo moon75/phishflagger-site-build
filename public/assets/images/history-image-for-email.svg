@@ -21,19 +21,18 @@
     </g>
   </defs>
 
+  <g transform="translate(277 0)">
   <rect x="16" y="17" width="375" height="261" rx="18" class="card"/>
   <rect x="427" y="17" width="374" height="261" rx="18" class="card"/>
   <rect x="837" y="17" width="373" height="261" rx="18" class="card"/>
   <rect x="1240" y="17" width="375" height="261" rx="18" class="card"/>
-  <rect x="1647" y="17" width="374" height="261" rx="18" class="card"/>
 
-  <path d="M391 142h18v-10l25 21-25 21v-10h-18zM801 142h18v-10l25 21-25 21v-10h-18zM1210 142h18v-10l25 21-25 21v-10h-18zM1615 142h18v-10l25 21-25 21v-10h-18z" class="red"/>
+  <path d="M391 142h18v-10l25 21-25 21v-10h-18zM801 142h18v-10l25 21-25 21v-10h-18zM1210 142h18v-10l25 21-25 21v-10h-18z" class="red"/>
 
   <g transform="translate(43 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2004</text></g>
   <g transform="translate(454 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2005</text></g>
   <g transform="translate(864 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2012</text></g>
   <g transform="translate(1267 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2026</text></g>
-  <g transform="translate(1674 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2026</text></g>
 
   <g transform="translate(48 113)">
     <path d="M0 45l55-44 55 44v75H0zM1 45l54 47 55-47M0 120l38-35M110 120L73 85" class="blue-stroke"/>
@@ -57,11 +56,9 @@
   <text x="998" y="143" class="heading">DMARC</text>
   <text x="998" y="177" class="body"><tspan x="998">Aligns DKIM and SPF</tspan><tspan x="998" dy="28">and enforces policy</tspan><tspan x="998" dy="28">for the domain.</tspan></text>
 
-  <use href="#person-check" transform="translate(1270 108) scale(.78)"/>
-  <text x="1376" y="143" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Flagger</tspan></text>
-  <text x="1376" y="177" class="body"><tspan x="1376">Adds human-readable</tspan><tspan x="1376" dy="28">verification using</tspan><tspan x="1376" dy="28">sequential context.</tspan></text>
-
-  <use href="#person-check" transform="translate(1676 108) scale(.78)"/>
-  <text x="1782" y="159" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Counter</tspan></text>
-  <text x="1782" y="203" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Flagger</tspan></text>
+  <use href="#person-check" transform="translate(1268 112) scale(.68)"/>
+  <text x="1362" y="126" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Counter</tspan></text>
+  <text x="1362" y="154" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Flagger</tspan></text>
+  <text x="1362" y="180" style="font:14px Arial,Helvetica,sans-serif;fill:#073991"><tspan x="1362">Adds a sequential number visible</tspan><tspan x="1362" dy="18">to the user to allow human validation.</tspan><tspan x="1362" dy="22">Domain verification authenticates</tspan><tspan x="1362" dy="18">the sending domain is true.</tspan></text>
+  </g>
 </svg>

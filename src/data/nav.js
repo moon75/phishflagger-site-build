@@ -6,7 +6,7 @@ export const nav = [
   { label: "Email", href: "/email" },
   { label: "Telecom", href: "/telecom" },
   { label: "Video", href: "/video" },
-  { label: "Help", href: "/help" },
+  { label: "Resources", href: "/resources" },
   {
     label: "About",
     href: "/about",

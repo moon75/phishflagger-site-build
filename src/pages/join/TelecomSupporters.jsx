@@ -26,7 +26,7 @@ const TELECOM_SUPPORTERS = [
 export default function TelecomSupporters() {
   return (
     <>
-      <CloseButton to="/help/telecom-endorse-us" />
+      <CloseButton to="/resources/telecom-endorse-us" />
 
       {/* Header */}
       <section className="relative w-full bg-white px-4 pt-14 pb-12 sm:px-6 sm:pt-20 sm:pb-16">
@@ -52,7 +52,7 @@ export default function TelecomSupporters() {
       <section className="w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto flex max-w-[980px] justify-center">
           <Link
-            to="/help/telecom-endorse-us"
+            to="/resources/telecom-endorse-us"
             className="inline-flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
           >
             Endorse Us

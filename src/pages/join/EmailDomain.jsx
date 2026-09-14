@@ -3,7 +3,6 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import domainProtocolImg from "../../assets/images/4th section.avif";
-import outlookThunderbirdImg from "../../assets/images/outlook and thunderbird.png";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import { publicPath } from "../../lib/publicPath.js";
@@ -107,47 +106,6 @@ export default function EmailDomain() {
       <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0001" />
         <PageDownButton />
-        <div className="mx-auto max-w-content">
-          <div className="mx-auto mt-10 flex justify-center sm:mt-14">
-            <div className="mx-auto flex w-full max-w-[460px] flex-col">
-              <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
-                Plug-In
-              </h3>
-              <div className="relative">
-                <span className="absolute top-2 -left-2 z-10 -rotate-12 whitespace-nowrap rounded-full bg-brand px-4 py-1.5 text-[13px] font-extrabold uppercase tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[14px]">
-                  Coming Soon
-                </span>
-                <div className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
-                  <div className="flex h-[140px] items-center justify-center overflow-hidden bg-[#EEF0F4] px-5 sm:h-[200px]">
-                    <img
-                      src={outlookThunderbirdImg}
-                      alt="Microsoft Outlook and Mozilla Thunderbird"
-                      className="h-full w-full translate-y-1 scale-[1.5] object-contain pic-with-no-link-mouse-over-increase"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-3 p-7 pb-10">
-                    <ul className="grid grid-cols-2 gap-x-6 gap-y-4 list-none pl-0 text-center text-[14px] leading-[1.65] text-ink-muted sm:text-[15px]">
-                      <li>Windows</li>
-                      <li>Linux / Window</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
-        <SectionCounter value="^0002" />
-        <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="text-[14px] leading-[1.75] text-ink-muted sm:text-[15px]">
             <h2 className="section-title mb-6 flex items-center justify-center gap-3 text-center sm:justify-start sm:text-left">
@@ -177,9 +135,16 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0003" />
-        <PageDownButton />
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
+        <SectionCounter value="^0002" />
+        <PageDownButton bg="white" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap sm:gap-6">
             <div className="pic-with-no-link-mouse-over-increase h-[130px] w-[130px] shrink-0 overflow-hidden rounded-xl border-2 border-black sm:h-[180px] sm:w-[180px] lg:h-[240px] lg:w-[240px]">
@@ -210,16 +175,9 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section
-        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-          backgroundSize: "140%",
-        }}
-      >
-        <SectionCounter value="^0004" />
-        <PageDownButton bg="white" />
+      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
+        <SectionCounter value="^0003" />
+        <PageDownButton />
         <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-[300px] rounded-2xl border-2 border-black bg-white p-6 text-center sm:p-8">
             <h3 className="text-[16px] font-bold text-ink sm:text-[18px]">
@@ -258,9 +216,16 @@ export default function EmailDomain() {
         </div>
       </section>
 
-      <section className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
-        <SectionCounter value="^0005" />
-        <PageDownButton targetSelector="#footer-products" />
+      <section
+        className="relative w-full bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+          backgroundSize: "140%",
+        }}
+      >
+        <SectionCounter value="^0004" />
+        <PageDownButton bg="white" targetSelector="#footer-products" />
         <div className="mx-auto max-w-content">
           <h2 className="text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
             Install Plug-In

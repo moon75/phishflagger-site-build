@@ -45,8 +45,8 @@ const PRESS_AWARDS = [
 export default function Supporters() {
   const location = useLocation();
   const { pathname } = location;
-  const closeTo = pathname.startsWith("/help")
-    ? "/help/endorse-us"
+  const closeTo = pathname.startsWith("/resources")
+    ? "/resources/endorse-us"
     : "/about/endorse-us";
 
   return (

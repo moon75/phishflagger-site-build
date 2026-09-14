@@ -3,6 +3,7 @@ import { BrandInline } from "../components/Brand.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import { publicPath } from "../lib/publicPath.js";
+import { isVideo1Unlocked } from "../lib/videoAccess.js";
 
 const LEFT_LINKS = [
   { to: "/about/press", label: "Press" },
@@ -75,6 +76,37 @@ export default function AboutIndex() {
               Messaging
             </Link>
           </div>
+          {isVideo1Unlocked() && (
+            <>
+              <div className="w-1/2 self-center border-t-2 border-black sm:w-auto sm:self-stretch sm:border-t-0 sm:border-l-2" aria-hidden />
+              <div className="flex flex-col items-center gap-5 sm:items-start">
+                <Link
+                  to="/kick"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
+                >
+                  kick
+                </Link>
+                <Link
+                  to="/kick2"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
+                >
+                  kick2
+                </Link>
+                <Link
+                  to="/edit"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
+                >
+                  edit
+                </Link>
+                <Link
+                  to="/internal/global-settings"
+                  className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
+                >
+                  global
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
