@@ -315,14 +315,16 @@ export default function Join() {
         </div>
       </section>
 
-      {/* ===== Pane 2 placeholder — Human/Digital text moved to /kick ===== */}
+      {/* ===== Pane 2 — email history image ===== */}
       <section id="join-human-digital" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <PageDownButton containerRef={containerRef} targetSelector="#footer-products" />
         <div className="mx-auto max-w-content">
-          <div className="flex min-h-[220px] items-center justify-center rounded-2xl border-2 border-black bg-[#FFFF00]">
-            <span className="text-[16px] font-semibold text-ink sm:text-[18px]">
-              Placeholder
-            </span>
+          <div className="flex items-center justify-center rounded-2xl">
+            <img
+              src={publicPath("/assets/images/history-image-for-email.svg")}
+              alt="History of email"
+              className="pic-with-no-link-mouse-over-increase ml-16 h-auto w-full object-contain sm:ml-24"
+            />
           </div>
         </div>
       </section>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2170" height="314" viewBox="0 0 2170 314" role="img" aria-labelledby="title desc">
+  <title id="title">History of email verification</title>
+  <desc id="desc">A timeline from DKIM in 2004 through SPF, DMARC, PhishFlagger, and PhishCounter.</desc>
+  <defs>
+    <style>
+      .card{fill:#fff;stroke:#242424;stroke-width:2}.blue{fill:#073991}.blue-stroke{fill:none;stroke:#073991;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.heading{font:700 27px Arial,Helvetica,sans-serif;fill:#050505}.body{font:18px Arial,Helvetica,sans-serif;fill:#073991}.year{font:700 20px Arial,Helvetica,sans-serif;fill:#0038b8}.brand{font:700 26px Arial,Helvetica,sans-serif;fill:#050505}.red{fill:#f10d0d}
+    </style>
+    <g id="calendar">
+      <rect x="1" y="4" width="20" height="18" rx="2" fill="none" stroke="#0038b8" stroke-width="2.5"/>
+      <path d="M1 9h20M6 1v6M16 1v6" fill="none" stroke="#0038b8" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g id="check">
+      <circle cx="0" cy="0" r="30" class="red"/>
+      <path d="M-15 0l10 11L17-15" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+    </g>
+    <g id="person-check">
+      <circle cx="50" cy="43" r="29" fill="none" stroke="#050505" stroke-width="5"/>
+      <path d="M28 91c-18 9-27 27-27 52v18h73" fill="none" stroke="#050505" stroke-width="5" stroke-linecap="round"/>
+      <path d="M73 91c7 2 13 5 18 9" fill="none" stroke="#050505" stroke-width="5" stroke-linecap="round"/>
+      <use href="#check" transform="translate(82 151) scale(.82)"/>
+    </g>
+  </defs>
+
+  <rect x="16" y="17" width="375" height="261" rx="18" class="card"/>
+  <rect x="427" y="17" width="374" height="261" rx="18" class="card"/>
+  <rect x="837" y="17" width="373" height="261" rx="18" class="card"/>
+  <rect x="1240" y="17" width="375" height="261" rx="18" class="card"/>
+  <rect x="1647" y="17" width="374" height="261" rx="18" class="card"/>
+
+  <path d="M391 142h18v-10l25 21-25 21v-10h-18zM801 142h18v-10l25 21-25 21v-10h-18zM1210 142h18v-10l25 21-25 21v-10h-18zM1615 142h18v-10l25 21-25 21v-10h-18z" class="red"/>
+
+  <g transform="translate(43 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2004</text></g>
+  <g transform="translate(454 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2005</text></g>
+  <g transform="translate(864 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2012</text></g>
+  <g transform="translate(1267 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2026</text></g>
+  <g transform="translate(1674 35)"><rect width="132" height="54" rx="27" fill="#d6ebff"/><use href="#calendar" transform="translate(21 15)"/><text x="57" y="35" class="year">2026</text></g>
+
+  <g transform="translate(48 113)">
+    <path d="M0 45l55-44 55 44v75H0zM1 45l54 47 55-47M0 120l38-35M110 120L73 85" class="blue-stroke"/>
+    <circle cx="45" cy="42" r="7" fill="none" stroke="#073991" stroke-width="4"/><circle cx="65" cy="42" r="7" fill="none" stroke="#073991" stroke-width="4"/>
+    <circle cx="104" cy="116" r="27" fill="#073991"/><path d="M90 115l10 11 18-23" fill="none" stroke="#fff" stroke-width="7"/>
+  </g>
+  <text x="186" y="143" class="heading">DKIM</text>
+  <text x="186" y="177" class="body"><tspan x="186">Verifies the message</tspan><tspan x="186" dy="30">wasn't altered in transit.</tspan></text>
+
+  <g transform="translate(466 116) scale(.8)">
+    <path d="M55 0c21 16 37 20 55 25v61c0 39-24 61-55 78C24 147 0 125 0 86V25C18 20 34 16 55 0z" class="blue-stroke"/>
+    <text x="55" y="92" text-anchor="middle" style="font:700 31px Arial,Helvetica,sans-serif;fill:#073991">SPF</text>
+  </g>
+  <text x="590" y="143" class="heading">SPF</text>
+  <text x="590" y="177" class="body"><tspan x="590">Verifies the sender's</tspan><tspan x="590" dy="28">server is authorized</tspan><tspan x="590" dy="28">to send email.</tspan></text>
+
+  <g transform="translate(874 116) scale(.8)">
+    <path d="M55 0c21 16 37 20 55 25v61c0 39-24 61-55 78C24 147 0 125 0 86V25C18 20 34 16 55 0z" class="blue-stroke"/>
+    <text x="55" y="92" text-anchor="middle" style="font:700 23px Arial,Helvetica,sans-serif;fill:#073991">DMARC</text>
+  </g>
+  <text x="998" y="143" class="heading">DMARC</text>
+  <text x="998" y="177" class="body"><tspan x="998">Aligns DKIM and SPF</tspan><tspan x="998" dy="28">and enforces policy</tspan><tspan x="998" dy="28">for the domain.</tspan></text>
+
+  <use href="#person-check" transform="translate(1270 108) scale(.78)"/>
+  <text x="1376" y="143" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Flagger</tspan></text>
+  <text x="1376" y="177" class="body"><tspan x="1376">Adds human-readable</tspan><tspan x="1376" dy="28">verification using</tspan><tspan x="1376" dy="28">sequential context.</tspan></text>
+
+  <use href="#person-check" transform="translate(1676 108) scale(.78)"/>
+  <text x="1782" y="159" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Counter</tspan></text>
+  <text x="1782" y="203" class="brand">Phish<tspan fill="#f10d0d" font-style="italic" font-weight="400">Flagger</tspan></text>
+</svg>
