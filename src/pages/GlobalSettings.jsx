@@ -12,8 +12,9 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 //   Text-size-ex-telecom-bullets-text-others 5
 //   text-size-on-telecom-page                5   (DONE — .telecom-body-text in index.css)
 //   title-size-on-telecom-page               5   (DONE — .telecom-title in index.css)
-//   percent-increase-SQUARE-ICON-LINKS       10%
-//   percent-increase-BUTTONS                 30% → --btn-hover-scale: 1.3 (index.css) — migrated ~63 hand-typed
+//   percent-increase-SQUARE-ICON-LINKS       15% → --icon-link-hover-scale: 1.15 (index.css); ActionCard
+//                                             scale 0.75 → 0.8625 (Join/Telecom) (DONE)
+//   percent-increase-BUTTONS                 15% → --btn-hover-scale: 1.15 (index.css) — migrated ~63 hand-typed
 //                                             hover:scale-[1.2] occurrences to this one variable (DONE)
 //   percent-increase-FOOTER-PICTURES/gif     10%
 //   percent-increase-HOME-TOP-PICTURES/gif   10%
@@ -23,7 +24,8 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 //   nav-cycle-arrows-style                   wireframe tab attached to left/right edge, same top offset every page (DONE)
 //   nav-email-active-state                   stays highlighted (grey pill + red text) across /join/pro, /join/domain, /join/email-* (DONE)
 //   visit-badge-hover                        no bold, hover text-brand (full red, not btn-hover-red) (DONE)
-//   icon-link-hover-scale                    1.05/1.1/1.2/1.23/.8/.7 → --icon-link-hover-scale: 1.1 (index.css) — Help page DONE, rest still to migrate
+//   icon-link-hover-scale                    1.05/1.1/1.2/1.23/.8/.7 → --icon-link-hover-scale: 1.15 (index.css) — same
+//                                             knob as percent-increase-SQUARE-ICON-LINKS above (DONE, all pages)
 //   help-page-pane-spacing                   removed forced min-h centering gap + Kickstarter box pt/pb scaled by --pane-gap-scale (DONE)
 //   pic-with-no-link-mouse-over-increase     5% (.pic-with-no-link-mouse-over-increase in index.css) — every picture with no
 //                                             <Link>/<a> wrapper, except /telecom's country picture (stays manual, needs to grow
@@ -138,11 +140,11 @@ export default function GlobalSettings() {
             </tr>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-SQUARE-ICON-LINKS</td>
-              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">15%</td>
             </tr>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-BUTTONS</td>
-              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">10%</td>
+              <td className="py-2.5 pr-3 text-right font-mono text-[13px] font-bold text-ink sm:text-[14px]">15%</td>
             </tr>
             <tr className="border-b border-line">
               <td className="py-2.5 pr-4 pl-3 text-[13px] text-ink sm:text-[14px]">percent-increase-FOOTER-PICTURES/gif</td>
@@ -227,28 +229,28 @@ export default function GlobalSettings() {
         </Table>
       </Section>
 
-      <Section id="icon-links" title="percent-increase-SQUARE-ICON-LINKS — target 10%">
+      <Section id="icon-links" title="percent-increase-SQUARE-ICON-LINKS — target 15%">
         <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
           The square icon buttons (Contact / Subscribe / Endorse Us / FAQ /
-          Sign Petition rows). Bumped from +20% to +30% per explicit request
-          (superseding the earlier 10% target).
+          Sign Petition rows). Went 20% → 30% → settled at 15% per explicit
+          request.
         </p>
         <Table>
-          <Row where="ActionCard (Join, Telecom, Help icon rows)" value="scale 0.75 → 0.975 on hover (Join/Telecom); --icon-link-hover-scale: 1.3 (Help)" note="+30% relative to each one's own resting size — DONE, consistent across all three" />
+          <Row where="ActionCard (Join, Telecom, Help icon rows)" value="scale 0.75 → 0.8625 on hover (Join/Telecom); --icon-link-hover-scale: 1.15 (Help)" note="+15% relative to each one's own resting size — DONE, consistent across all three" />
           <Row where="Join — Domain Appliance / Plug-In-Pro image tiles" value="hover:scale-110" note="+10% — already matches target" />
           <Row where="Join — Free/Marketing image tiles" value="hover:scale-110" note="+10% — already matches target" />
         </Table>
       </Section>
 
-      <Section id="buttons" title="percent-increase-BUTTONS — target 30%">
+      <Section id="buttons" title="percent-increase-BUTTONS — target 15%">
         <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
           Every CTA button (Join Free / Join Pro / Marketing / Endorse Us /
           etc.). Was hand-typed as hover:scale-[1.2] (+20%) in ~63 places;
-          migrated to one CSS variable and bumped to +30% per explicit
-          request (superseding the earlier 10% target).
+          migrated to one CSS variable. Went 20% → 30% → settled at 15%
+          per explicit request.
         </p>
         <Table>
-          <Row where="Gray CTA buttons site-wide (Join Free, Join Pro, Join Domain, Marketing, Endorse Us, Subscribe, …)" value="hover:scale-[var(--btn-hover-scale)] → --btn-hover-scale: 1.3 (index.css)" note="+30% — DONE, now one shared value instead of ~63 hand-typed occurrences" />
+          <Row where="Gray CTA buttons site-wide (Join Free, Join Pro, Join Domain, Marketing, Endorse Us, Subscribe, …)" value="hover:scale-[var(--btn-hover-scale)] → --btn-hover-scale: 1.15 (index.css)" note="+15% — DONE, now one shared value instead of ~63 hand-typed occurrences" />
           <Row where="Video category / page-number pills" value="hover:scale-120  (10 occurrences)" note="+20%, same family as above" />
           <Row where="A few one-off buttons" value="hover:scale-110 / 130 / [1.03] / [1.1]" note={<>Scattered exceptions <Flag>inconsistent</Flag></>} />
         </Table>

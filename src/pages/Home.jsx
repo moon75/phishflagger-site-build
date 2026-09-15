@@ -615,18 +615,6 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
       : "h-auto w-[140px] max-w-full sm:w-[180px] lg:w-[170px]";
   const frameClass = large ? "rounded-lg border-2 border-black bg-white" : "";
 
-  // Warm the browser's own cache for the hover GIF as soon as this card
-  // mounts (page load), not on first hover — on a cold cache (e.g. right
-  // after deploying to Netlify, or once its cache entry has expired) the
-  // network fetch on first hover was slow enough that the still frame had
-  // already been hidden with nothing painted in its place yet, flashing
-  // the page background through for a moment.
-  useEffect(() => {
-    if (!hoverSrc) return;
-    const img = new Image();
-    img.src = hoverSrc;
-  }, [hoverSrc]);
-
   // Mount a fresh image on every hover so the embedded sequence restarts.
   function handleMouseEnter() {
     if (!hoverSrc) return;

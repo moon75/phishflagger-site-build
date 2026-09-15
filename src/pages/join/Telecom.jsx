@@ -506,7 +506,7 @@ function ActionCard({
     <Link
       to={to}
       state={state}
-      className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.975] sm:w-[200px]"
+      className="group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out hover:scale-[0.8625] sm:w-[200px]"
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">
         <span className="text-center text-[18px] font-bold uppercase leading-tight tracking-[0.18em] text-ink-muted sm:text-[22px]">

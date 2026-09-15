@@ -21,17 +21,6 @@ function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
   const [gifLoaded, setGifLoaded] = useState(false);
   const [gifKey, setGifKey] = useState(0);
 
-  // Warm the browser's own cache for the GIF as soon as this card mounts
-  // (page load), not on first hover — same fix as the homepage phone
-  // cards: on a cold cache the network fetch on first hover was slow
-  // enough that swapping the <img> src straight to the GIF showed a blank
-  // frame (page background bleeding through) until it arrived.
-  useEffect(() => {
-    if (!gifSrc) return;
-    const img = new Image();
-    img.src = gifSrc;
-  }, [gifSrc]);
-
   useEffect(() => {
     if (active) {
       setGifKey((key) => key + 1);
@@ -439,7 +428,7 @@ function ActionCard({
     <Wrapper
       {...wrapperProps}
       className={`group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out sm:w-[172px] ${
-        disabled ? "cursor-not-allowed" : "hover:scale-[0.975]"
+        disabled ? "cursor-not-allowed" : "hover:scale-[0.8625]"
       }`}
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">

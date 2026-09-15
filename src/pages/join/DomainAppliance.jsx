@@ -61,7 +61,7 @@ export default function DomainAppliance() {
           <div className="mx-auto mt-10 flex justify-center sm:mt-14">
             <div className="mx-auto flex w-full max-w-[460px] flex-col">
               <h3 className="mb-3 text-center text-[20px] font-bold uppercase tracking-[0.14em] text-ink">
-                Appliance
+                Appliance Options
               </h3>
               <div className="relative">
                 <div className="flex flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">

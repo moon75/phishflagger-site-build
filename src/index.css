@@ -18,14 +18,14 @@
      `hover:scale-[var(--icon-link-hover-scale)]` against this one value
      instead of picking another number by hand. Target: +10% (see
      /internal/global-settings). */
-  --icon-link-hover-scale: 1.3;
+  --icon-link-hover-scale: 1.15;
 
   /* Single knob for every gray CTA button's hover growth (Join Free, Join
      Pro, Join Domain, Marketing, Endorse Us, Subscribe, Contact submit,
      etc. — the buttons whose text also turns red on hover). Was hand-typed
      as hover:scale-[1.2] in ~60 places; write new/updated buttons as
      `hover:scale-[var(--btn-hover-scale)]` against this one value instead. */
-  --btn-hover-scale: 1.3;
+  --btn-hover-scale: 1.15;
 
   /* Single knob for the min-height of a "link list, vertically centered"
      pane (e.g. the About page's Press/Team/Blog/Demo links pane) — that
