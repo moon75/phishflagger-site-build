@@ -88,7 +88,7 @@ export default function Footer({ logoSrc = logoImg }) {
                     <Link
                       to="/about/faq?category=General"
                       state={{ from: pathname }}
-                      className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
+                      className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)] sm:text-[14px]"
                     >
                       FAQ
                     </Link>
@@ -96,7 +96,7 @@ export default function Footer({ logoSrc = logoImg }) {
                   <Link
                     to="/resources/endorse-us"
                     state={{ from: pathname }}
-                    className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2] sm:text-[14px]"
+                    className="inline-flex shrink-0 items-center justify-center rounded-md bg-[#4a4a4a] px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)] sm:text-[14px]"
                   >
                     Endorse
                   </Link>

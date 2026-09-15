@@ -17,7 +17,7 @@ export default function Demo() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:demo@phishflaggerkey.com?subject=001%20-%20PhishFlagger%20Demo&body=Hi%20PhishFlagger%20team%2C%0A%0AI%27d%20like%20to%20try%20the%20demo."
-              className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#2a6df4] px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition hover:bg-[#1a52c9] sm:px-10 sm:py-4 sm:text-[16px] duration-200 hover:scale-[1.2]"
+              className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#2a6df4] px-8 py-3.5 text-[15px] font-bold text-white shadow-sm transition hover:bg-[#1a52c9] sm:px-10 sm:py-4 sm:text-[16px] duration-200 hover:scale-[var(--btn-hover-scale)]"
             >
               ABC Bank
             </a>

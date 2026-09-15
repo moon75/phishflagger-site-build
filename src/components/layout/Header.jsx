@@ -134,7 +134,7 @@ export default function Header() {
         <img
           src={logoImg}
           alt="PhishFlagger"
-          className="h-auto w-[190px] max-w-full transition-transform duration-200 hover:scale-[1.2] sm:w-[220px]"
+          className="h-auto w-[190px] max-w-full transition-transform duration-200 hover:scale-[var(--btn-hover-scale)] sm:w-[220px]"
         />
       </NavLink>
 

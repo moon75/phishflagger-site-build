@@ -1,3 +1,5 @@
+import CloseButton from "../components/ui/CloseButton.jsx";
+
 // Hidden, unlinked audit page — not in nav.js, not in any sitemap column.
 // Read-only snapshot of the site's actual current values (font sizes,
 // hover-scale percentages, etc.) so inconsistencies are visible in one
@@ -11,7 +13,8 @@
 //   text-size-on-telecom-page                5   (DONE — .telecom-body-text in index.css)
 //   title-size-on-telecom-page               5   (DONE — .telecom-title in index.css)
 //   percent-increase-SQUARE-ICON-LINKS       10%
-//   percent-increase-BUTTONS                 10%
+//   percent-increase-BUTTONS                 30% → --btn-hover-scale: 1.3 (index.css) — migrated ~63 hand-typed
+//                                             hover:scale-[1.2] occurrences to this one variable (DONE)
 //   percent-increase-FOOTER-PICTURES/gif     10%
 //   percent-increase-HOME-TOP-PICTURES/gif   10%
 //   pane-vertical-spacing                    py-14 → sm:py-20 (the standard)
@@ -90,7 +93,9 @@ function Flag({ children }) {
 
 export default function GlobalSettings() {
   return (
-    <div className="mx-auto max-w-[1000px] px-4 py-12 sm:px-6 sm:py-16">
+    <>
+      <CloseButton />
+      <div className="mx-auto max-w-[1000px] px-4 py-12 sm:px-6 sm:py-16">
       <p className="text-[12px] font-bold uppercase tracking-wide text-brand">
         Internal — not linked anywhere
       </p>
@@ -235,13 +240,15 @@ export default function GlobalSettings() {
         </Table>
       </Section>
 
-      <Section id="buttons" title="percent-increase-BUTTONS — target 10%">
+      <Section id="buttons" title="percent-increase-BUTTONS — target 30%">
         <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
           Every CTA button (Join Free / Join Pro / Marketing / Endorse Us /
-          etc.). The huge majority currently use +20%, not the 10% target.
+          etc.). Was hand-typed as hover:scale-[1.2] (+20%) in ~63 places;
+          migrated to one CSS variable and bumped to +30% per explicit
+          request (superseding the earlier 10% target).
         </p>
         <Table>
-          <Row where="Gray CTA buttons site-wide (Join Free, Join Pro, Join Domain, Marketing, Endorse Us, Subscribe, …)" value="hover:scale-[1.2]  (79 occurrences)" note={<>+20% — the de-facto standard today, not 10% <Flag>inconsistent</Flag></>} />
+          <Row where="Gray CTA buttons site-wide (Join Free, Join Pro, Join Domain, Marketing, Endorse Us, Subscribe, …)" value="hover:scale-[var(--btn-hover-scale)] → --btn-hover-scale: 1.3 (index.css)" note="+30% — DONE, now one shared value instead of ~63 hand-typed occurrences" />
           <Row where="Video category / page-number pills" value="hover:scale-120  (10 occurrences)" note="+20%, same family as above" />
           <Row where="A few one-off buttons" value="hover:scale-110 / 130 / [1.03] / [1.1]" note={<>Scattered exceptions <Flag>inconsistent</Flag></>} />
         </Table>
@@ -317,6 +324,7 @@ export default function GlobalSettings() {
         not auto-synced. If you change a value on a live page, update the
         matching row here too.
       </p>
-    </div>
+      </div>
+    </>
   );
 }

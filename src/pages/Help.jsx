@@ -11,7 +11,7 @@ const LINKS = [
   { to: "/resources/support-desk", label: "Support Desk", src: publicPath("/assets/icons/support%20desk%20icon.png") },
   { to: "/phishflagger-org", label: "PhishFlagger.org", src: logoMarkImg, imageClassName: "p-2" },
   { to: "/contact", label: "Contact", icon: <ContactIcon /> },
-  { to: "/download", label: "Download Page", icon: <DownloadIcon /> },
+  { to: "/download", label: "Download", icon: <DownloadIcon /> },
 ];
 
 export default function Help() {

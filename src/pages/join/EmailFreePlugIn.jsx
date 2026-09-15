@@ -105,12 +105,14 @@ export default function EmailFreePlugIn() {
                   </span>
                 )}
                 {unlocked ? (
-                  <Link
-                    to="/joinfree"
-                    className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                  <a
+                    href="https://join.phishflagger.com/individual/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
                   >
                     Join Free
-                  </Link>
+                  </a>
                 ) : (
                   <button
                     type="button"
@@ -127,12 +129,14 @@ export default function EmailFreePlugIn() {
                 Don&rsquo;t see your Domain
               </span>
               {unlocked ? (
-                <Link
-                  to="/join/pro"
-                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                <a
+                  href="https://join.phishflagger.com/business/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
                 >
                   Join PRO
-                </Link>
+                </a>
               ) : (
                 <button
                   type="button"
@@ -152,6 +156,7 @@ export default function EmailFreePlugIn() {
 
       <section id="efp-pane-2" className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
         <SectionCounter value="^0001" />
+        <PageDownButton targetSelector="#efp-pane-3" />
         <div className="mx-auto max-w-content">
           <h2 className="mt-10 text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:mt-12 sm:text-[32px]">
             Install Plug-In
@@ -183,7 +188,7 @@ export default function EmailFreePlugIn() {
                 </h2>
                 <Link
                   to="/download"
-                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
                 >
                   Go to Download Page
                 </Link>
@@ -284,7 +289,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
             <Link
               key={action.label}
               to={action.to}
-              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+              className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
             >
               {action.label}
             </Link>

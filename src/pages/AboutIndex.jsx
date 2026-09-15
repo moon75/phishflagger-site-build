@@ -124,7 +124,7 @@ export default function AboutIndex() {
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center gap-3 rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[var(--btn-hover-scale)] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/History%20Pane%20Images/4%20papers%20first%20image.png")}
@@ -148,7 +148,7 @@ export default function AboutIndex() {
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[var(--btn-hover-scale)] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/History%20Pane%20Images/stamp%20third%20image.png")}
@@ -167,7 +167,7 @@ export default function AboutIndex() {
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[var(--btn-hover-scale)] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/blockchain.png")}
@@ -186,7 +186,7 @@ export default function AboutIndex() {
                 </span>
                 <Link
                   to="/about/numbering-history"
-                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[1.2] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
+                  className="flex aspect-[1448/1017] w-full max-w-[240px] items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:z-10 hover:scale-[var(--btn-hover-scale)] hover:border-4 hover:border-blue-600 hover:bg-blue-100"
                 >
                   <img
                     src={publicPath("/assets/images/footer%20history%20pic%203rd.png")}

@@ -143,7 +143,7 @@ export default function MessagingAppRequest() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition duration-200 hover:scale-[1.2] hover:bg-[#2b2b2b] disabled:opacity-60"
+                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition duration-200 hover:scale-[var(--btn-hover-scale)] hover:bg-[#2b2b2b] disabled:opacity-60"
               >
                 {status === "submitting" ? "Sending..." : "Submit"}
               </button>

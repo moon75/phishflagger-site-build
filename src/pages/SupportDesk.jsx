@@ -138,7 +138,7 @@ export default function SupportDesk() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#2b2b2b] disabled:opacity-60 duration-200 hover:scale-[1.2]"
+                className="cursor-pointer rounded-lg bg-[#3d3d3d] px-8 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#2b2b2b] disabled:opacity-60 duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 {status === "submitting" ? "Sending..." : "Send"}
               </button>

@@ -50,7 +50,7 @@ export default function Kickstarter() {
               <Link
                 to={isHelp ? "/resources/hall-of-fame" : "/about/hall-of-fame"}
                 state={{ originFrom: cameFrom }}
-                className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                className="mt-8 flex h-[49px] items-center justify-center rounded-[7px] bg-[#585858] px-8 text-[16px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Hall of Fame
               </Link>

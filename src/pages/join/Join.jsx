@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import cloudServerImg from "../../assets/images/domain-server-only animated.gif";
 import cloudServerStill from "../../assets/images/domain-server-only.png";
 import oneOrManyImg from "../../assets/images/six plugin one or more animated.gif";
@@ -19,25 +18,58 @@ const MARKETING_HOVER_HOLD_MS = 2000;
 
 function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
   const [showGif, setShowGif] = useState(false);
+  const [gifLoaded, setGifLoaded] = useState(false);
   const [gifKey, setGifKey] = useState(0);
+
+  // Warm the browser's own cache for the GIF as soon as this card mounts
+  // (page load), not on first hover — same fix as the homepage phone
+  // cards: on a cold cache the network fetch on first hover was slow
+  // enough that swapping the <img> src straight to the GIF showed a blank
+  // frame (page background bleeding through) until it arrived.
+  useEffect(() => {
+    if (!gifSrc) return;
+    const img = new Image();
+    img.src = gifSrc;
+  }, [gifSrc]);
 
   useEffect(() => {
     if (active) {
       setGifKey((key) => key + 1);
+      setGifLoaded(false);
       setShowGif(true);
     } else {
       setShowGif(false);
+      setGifLoaded(false);
     }
   }, [active]);
 
   return (
-    <img
-      key={gifKey}
-      src={showGif ? gifSrc : stillSrc}
-      alt={alt}
-      className={className}
-      draggable={false}
-    />
+    <div className="relative h-full w-full">
+      {/* Still stays visible underneath, always fully opaque. The GIF only
+          ever appears on top once fully loaded, snapping straight to
+          opaque (no transition) — never a moment where the background
+          shows through between the two. */}
+      <img src={stillSrc} alt={alt} className={className} draggable={false} />
+      {showGif && gifLoaded && (
+        <img
+          key={gifKey}
+          src={gifSrc}
+          alt={alt}
+          className={`absolute inset-0 ${className}`}
+          draggable={false}
+        />
+      )}
+      {showGif && !gifLoaded && (
+        <img
+          key={`preload-${gifKey}`}
+          src={gifSrc}
+          alt=""
+          aria-hidden="true"
+          className="hidden"
+          onLoad={() => setGifLoaded(true)}
+        />
+      )}
+    </div>
   );
 }
 
@@ -81,7 +113,6 @@ export default function Join() {
       {/* ===== Pane 1 — Email Solutions (no counter; icon row below carries ^0001) ===== */}
       <section className="relative flex w-full flex-col px-4 pt-[var(--hero-pane-pt)] pb-[var(--hero-pane-pb)] sm:px-6">
         <PageCycleArrows pages={TOP_NAV_LOOP_PAGES} current={1} center topClass="top-0 sm:top-2" />
-        <PageDownButton containerRef={containerRef} targetSelector="#footer-products" />
         <div className="mx-auto grid max-w-content grid-cols-1 items-start gap-10 sm:gap-16 lg:grid-cols-[500px_1fr] lg:gap-4">
           <div className="flex justify-center lg:block lg:w-[500px]">
             <img
@@ -119,7 +150,7 @@ export default function Join() {
               <Link
                 to="/join/email-free-plug-in"
                 state={{ from: "/email" }}
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Join Free
               </Link>
@@ -154,7 +185,7 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 state={{ from: "/email" }}
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Join Pro
               </Link>
@@ -189,7 +220,7 @@ export default function Join() {
               <Link
                 to="/join/domain"
                 state={{ from: "/email" }}
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Join Domain
               </Link>
@@ -215,7 +246,7 @@ export default function Join() {
               <Link
                 to="/join/email-marketing"
                 state={{ from: "/email" }}
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[1.2]"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Marketing
               </Link>

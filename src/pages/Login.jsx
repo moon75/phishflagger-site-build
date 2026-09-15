@@ -11,9 +11,10 @@ export default function Login() {
   const [error, setError] = useState(false);
   // Internal-use routing box, not part of the real sign-in flow: /video1 is
   // our Oracle-backed video demo, /video is the site's real, public video
-  // page. Typing "007" anywhere in the box unlocks the demo — saved so it
-  // stays unlocked (the box shows "007" again) until "off"/"OFF" is typed
-  // to turn it back off. Anything else (or nothing) just goes to /video.
+  // page. Typing "007" and hitting Go unlocks developer mode (saved so it
+  // stays unlocked — the box shows "007" again on return — until turned
+  // off) and jumps to /video1. Typing anything else and hitting Go turns
+  // developer mode back off and goes to /video.
   const [accessCode, setAccessCode] = useState(() => (isVideo1Unlocked() ? "007" : ""));
 
   function onSubmit(event) {
@@ -23,18 +24,13 @@ export default function Login() {
 
   function onAccessCodeSubmit(event) {
     event.preventDefault();
-    const normalized = accessCode.trim().toLowerCase();
-    if (normalized === "off") {
-      setVideo1Unlocked(false);
-      setAccessCode("");
-      navigate("/video");
-      return;
-    }
     if (accessCode.includes("007")) {
       setVideo1Unlocked(true);
       navigate("/video1");
       return;
     }
+    setVideo1Unlocked(false);
+    setAccessCode("");
     navigate("/video");
   }
 
