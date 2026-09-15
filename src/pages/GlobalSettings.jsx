@@ -225,11 +225,11 @@ export default function GlobalSettings() {
       <Section id="icon-links" title="percent-increase-SQUARE-ICON-LINKS — target 10%">
         <p className="mb-4 text-[13px] leading-[1.6] text-ink-muted sm:text-[14px]">
           The square icon buttons (Contact / Subscribe / Endorse Us / FAQ /
-          Sign Petition rows). Current hover growth is bigger than the 10%
-          target you've set.
+          Sign Petition rows). Bumped from +20% to +30% per explicit request
+          (superseding the earlier 10% target).
         </p>
         <Table>
-          <Row where="ActionCard (Join, Telecom, Help icon rows)" value="scale 0.75 → 0.9 on hover" note={<>Effective +20% relative to its own resting size <Flag>inconsistent</Flag></>} />
+          <Row where="ActionCard (Join, Telecom, Help icon rows)" value="scale 0.75 → 0.975 on hover (Join/Telecom); --icon-link-hover-scale: 1.3 (Help)" note="+30% relative to each one's own resting size — DONE, consistent across all three" />
           <Row where="Join — Domain Appliance / Plug-In-Pro image tiles" value="hover:scale-110" note="+10% — already matches target" />
           <Row where="Join — Free/Marketing image tiles" value="hover:scale-110" note="+10% — already matches target" />
         </Table>

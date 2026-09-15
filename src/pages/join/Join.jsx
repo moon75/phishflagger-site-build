@@ -408,7 +408,7 @@ function ActionCard({
     <Wrapper
       {...wrapperProps}
       className={`group flex w-[128px] scale-[0.75] flex-col items-center transition-transform duration-200 ease-out sm:w-[172px] ${
-        disabled ? "cursor-not-allowed" : "hover:scale-[0.9]"
+        disabled ? "cursor-not-allowed" : "hover:scale-[0.975]"
       }`}
     >
       <div className="flex min-h-[48px] w-full flex-col items-center justify-end sm:min-h-[58px]">

@@ -643,18 +643,33 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Still stays visible underneath, always fully opaque — it's the
+          permanent backdrop, never hidden. The GIF only ever appears on
+          top of it once fully loaded, snapping straight to opaque (no
+          fade/transition) so there is never a moment where both layers
+          are partially transparent and the page background bleeds
+          through between them. */}
       <img
         src={src}
         alt={alt}
-        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${gifLoaded ? "opacity-0" : "opacity-100"}`}
+        className={`block w-full object-contain ${large ? "rounded-lg" : ""}`}
       />
-      {hoverSrc && showGif && (
+      {hoverSrc && showGif && gifLoaded && (
         <img
           key={gifKey}
           src={hoverSrc}
           alt={alt}
+          className={`absolute inset-0 block w-full object-contain ${large ? "rounded-lg" : ""}`}
+        />
+      )}
+      {hoverSrc && showGif && !gifLoaded && (
+        <img
+          key={`preload-${gifKey}`}
+          src={hoverSrc}
+          alt=""
+          aria-hidden="true"
+          className="hidden"
           onLoad={() => setGifLoaded(true)}
-          className={`absolute inset-0 block w-full object-contain transition-opacity duration-150 ${large ? "rounded-lg" : ""} ${gifLoaded ? "opacity-100" : "opacity-0"}`}
         />
       )}
     </div>

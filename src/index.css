@@ -18,7 +18,7 @@
      `hover:scale-[var(--icon-link-hover-scale)]` against this one value
      instead of picking another number by hand. Target: +10% (see
      /internal/global-settings). */
-  --icon-link-hover-scale: 1.2;
+  --icon-link-hover-scale: 1.3;
 
   /* Single knob for the min-height of a "link list, vertically centered"
      pane (e.g. the About page's Press/Team/Blog/Demo links pane) — that
