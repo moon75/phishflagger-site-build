@@ -27,6 +27,8 @@
 //                                             more to be legible)
 //   mouse-over-link-increase                 10% (.mouse-over-link-increase in index.css) — every plain text link (not an
 //                                             icon tile/button) — started on the About page's Press/Team/Blog-style link lists
+//   home-hero-trio-hover-zoom                3% (.home-hero-trio-hover-zoom in index.css) — Home hero v1/v2/v3 images ONLY
+//                                             (deliberate one-off, smaller than the 5% pic-with-no-link default) (DONE)
 
 function Section({ title, id, children }) {
   return (
@@ -253,7 +255,7 @@ export default function GlobalSettings() {
 
       <Section id="home-top-pics" title="percent-increase-HOME-TOP-PICTURES/gif">
         <Table>
-          <Row where="Home hero — hero v1 / v2 / v3 images" value="none" note={<>No hover-scale at all today <Flag>inconsistent</Flag></>} />
+          <Row where="Home hero — hero v1 / v2 / v3 images" value="hover:scale-[1.03]  (.home-hero-trio-hover-zoom)" note="+3% — DONE, deliberate one-off (not the 10% target)" />
           <Row where="Home hero — phone screens (Email/Messages/Text/Caller ID row)" value="hover:scale-[1.35] (via PhonePlaceholder)" note="Separate component, different value again" />
         </Table>
       </Section>

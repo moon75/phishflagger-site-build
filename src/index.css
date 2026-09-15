@@ -157,6 +157,15 @@
     transform: scale(1.05);
   }
 
+  /* Home hero pane's 3 side-by-side images (hero v1/v2/v3) only — set to
+     3% hover growth per request, instead of the site-wide 5% default. */
+  .home-hero-trio-hover-zoom {
+    transition: transform 200ms ease-out;
+  }
+  .home-hero-trio-hover-zoom:hover {
+    transform: scale(1.03);
+  }
+
   /* GLOBAL STANDARD — use on any plain text link (a <Link>/<a> that's just
      words, not an icon tile or button — e.g. the Press/Team/Blog-style link
      lists). Grows 10% on hover. Do not hand-roll a one-off hover:scale on

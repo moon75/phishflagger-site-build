@@ -39,7 +39,7 @@ export default function EmailMarketing() {
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end lg:pr-32">
+          <div className="flex justify-center lg:justify-end lg:pr-48">
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"

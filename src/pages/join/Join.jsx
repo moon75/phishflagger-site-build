@@ -312,6 +312,32 @@ export default function Join() {
                 </svg>
               }
             />
+            <ActionCard
+              to="/download"
+              state={{ from: "/email" }}
+              label="Download"
+              alt="Download Page"
+              svgIcon={
+                <svg viewBox="0 0 24 24" className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]">
+                  <path
+                    d="M12 3v11m0 0l-4-4m4 4l4-4"
+                    stroke="#2563eb"
+                    strokeWidth="2.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"
+                    stroke="#2563eb"
+                    strokeWidth="2.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              }
+            />
           </div>
         </div>
       </section>

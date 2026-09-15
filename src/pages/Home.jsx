@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
@@ -58,21 +58,21 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full scale-[1.0] object-contain pic-with-no-link-mouse-over-increase"
+            className="h-auto w-full scale-[1.0] object-contain home-hero-trio-hover-zoom"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none origin-top translate-y-2.5 scale-[0.8] object-contain pic-with-no-link-mouse-over-increase"
+            className="mx-auto h-auto w-[100%] max-w-none origin-top translate-y-2.5 scale-[0.8] object-contain home-hero-trio-hover-zoom"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
           <img
             src={publicPath("/assets/images/hero%20v3.png")}
             alt="Woman using PhishFlagger-protected email"
-            className="relative mx-auto h-auto w-full max-w-[340px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[420px] lg:left-1/2 lg:w-[120%] lg:max-w-none lg:origin-bottom lg:-translate-x-1/2"
+            className="relative mx-auto h-auto w-full max-w-[340px] object-contain home-hero-trio-hover-zoom sm:max-w-[420px] lg:left-1/2 lg:w-[120%] lg:max-w-none lg:origin-bottom lg:-translate-x-1/2"
           />
         </div>
       </div>
@@ -598,6 +598,7 @@ function SectionCounter({ value }) {
 // The GIF files control their completed-view hold and one-time playback.
 function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
   const [showGif, setShowGif] = useState(false);
+  const [gifLoaded, setGifLoaded] = useState(false);
   const [gifKey, setGifKey] = useState(0);
 
   const sizeClass = large
@@ -611,15 +612,29 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
       : "h-auto w-[140px] max-w-full sm:w-[180px] lg:w-[170px]";
   const frameClass = large ? "rounded-lg border-2 border-black bg-white" : "";
 
+  // Warm the browser's own cache for the hover GIF as soon as this card
+  // mounts (page load), not on first hover — on a cold cache (e.g. right
+  // after deploying to Netlify, or once its cache entry has expired) the
+  // network fetch on first hover was slow enough that the still frame had
+  // already been hidden with nothing painted in its place yet, flashing
+  // the page background through for a moment.
+  useEffect(() => {
+    if (!hoverSrc) return;
+    const img = new Image();
+    img.src = hoverSrc;
+  }, [hoverSrc]);
+
   // Mount a fresh image on every hover so the embedded sequence restarts.
   function handleMouseEnter() {
     if (!hoverSrc) return;
     setGifKey((key) => key + 1);
+    setGifLoaded(false);
     setShowGif(true);
   }
 
   function handleMouseLeave() {
     setShowGif(false);
+    setGifLoaded(false);
   }
 
   return (
@@ -631,14 +646,15 @@ function PhonePlaceholder({ src, hoverSrc, alt, large = false, wide = false }) {
       <img
         src={src}
         alt={alt}
-        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${showGif ? "opacity-0" : "opacity-100"}`}
+        className={`block w-full object-contain ${large ? "rounded-lg" : ""} ${gifLoaded ? "opacity-0" : "opacity-100"}`}
       />
       {hoverSrc && showGif && (
         <img
           key={gifKey}
           src={hoverSrc}
           alt={alt}
-          className={`absolute inset-0 block w-full object-contain ${large ? "rounded-lg" : ""}`}
+          onLoad={() => setGifLoaded(true)}
+          className={`absolute inset-0 block w-full object-contain transition-opacity duration-150 ${large ? "rounded-lg" : ""} ${gifLoaded ? "opacity-100" : "opacity-0"}`}
         />
       )}
     </div>
