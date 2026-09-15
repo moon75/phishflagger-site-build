@@ -36,6 +36,12 @@ const SCREENS = [
 
 
 export default function Home() {
+  // Unlike every other GIF on this page, this one has no still-frame
+  // fallback — it's rendered directly on mount. Hidden until it finishes
+  // downloading (instead of showing a blank/broken frame while it loads),
+  // per-request quick fix rather than building it a full still+hover swap.
+  const [messageGifLoaded, setMessageGifLoaded] = useState(false);
+
   return (
     <>
     {/* ===== Sections 1–3 share one continuous, non-repeating background ===== */}
@@ -58,7 +64,7 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v1.png")}
             alt="See the difference. Trust the messages."
-            className="h-auto w-full scale-[1.0] object-contain home-hero-trio-hover-zoom"
+            className="h-auto w-full origin-top scale-[0.9] object-contain home-hero-trio-hover-zoom"
           />
         </div>
         <div className="min-w-0 lg:flex-1">
@@ -427,7 +433,8 @@ export default function Home() {
               <img
                 src={publicPath("/assets/images/messaging-icons-and-phone-animated.gif")}
                 alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                className="h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px]"
+                onLoad={() => setMessageGifLoaded(true)}
+                className={`h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px] ${messageGifLoaded ? "opacity-100" : "opacity-0"}`}
               />
               <Link
                 to="/join/messaging"
