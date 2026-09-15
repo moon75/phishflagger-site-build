@@ -45,3 +45,8 @@ src/assets/images/*old*
 src/assets/images/*Old*
 src/assets/images/*OLD*
 .superpowers/
+
+# Unused/superseded assets — anything not referenced anywhere in src/ or
+# index.html gets moved here instead of deleted (so it's recoverable),
+# but none of it should ship in the production repo or bundle.
+unused/
