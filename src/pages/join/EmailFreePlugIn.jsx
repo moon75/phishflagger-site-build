@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
-import PageDownButton from "../../components/ui/PageDownButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import { publicPath } from "../../lib/publicPath.js";
@@ -156,7 +155,6 @@ export default function EmailFreePlugIn() {
 
       <section id="efp-pane-2" className="relative w-full px-4 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-8">
         <SectionCounter value="^0001" />
-        <PageDownButton targetSelector="#efp-pane-3" />
         <div className="mx-auto max-w-content">
           <h2 className="mt-10 text-center text-[24px] font-semibold leading-tight tracking-tight text-ink sm:mt-12 sm:text-[32px]">
             Install Plug-In
@@ -200,7 +198,6 @@ export default function EmailFreePlugIn() {
 
       <section id="efp-pane-3" className="relative w-full bg-white px-4 py-14 sm:px-6 sm:py-20">
         <SectionCounter value="^0002" />
-        <PageDownButton targetSelector="#footer-products" />
         <div className="mx-auto grid max-w-content grid-cols-1 gap-10 sm:grid-cols-2">
           <div className="flex flex-col items-center">
             <p className="mb-4 text-center text-[28px] text-ink sm:text-[30px]">

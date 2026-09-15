@@ -85,7 +85,7 @@ export default function Video() {
                     href={CATEGORY_SCRIPTS[category]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[13px] font-semibold text-[#f28b96] underline transition-colors hover:text-brand-hover"
+                    className="text-[13px] font-semibold text-green-600 underline transition-colors hover:text-green-800"
                   >
                     Scripts
                   </a>

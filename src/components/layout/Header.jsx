@@ -77,6 +77,12 @@ export default function Header() {
     if (item.label === "Email") {
       return EMAIL_ACTIVE_PREFIXES.some((p) => location.pathname.startsWith(p));
     }
+    // /video1 is the 007-unlocked Oracle-backed video demo — a sibling
+    // route, not a child of /video, so react-router's default prefix
+    // match doesn't catch it either.
+    if (item.label === "Video") {
+      return location.pathname === "/video1";
+    }
     return false;
   }
 
