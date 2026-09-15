@@ -21,35 +21,48 @@ export default function DomainAppliance() {
           backgroundSize: "140%",
         }}
       >
-        <div className="mx-auto flex max-w-content flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-center">
+        <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-8 sm:flex-row sm:flex-nowrap sm:gap-16 md:gap-24 lg:gap-32">
+          {/* Same clean, no-frame floating-image treatment as /telecom's
+              hero row: no card/border/background box — just the image
+              itself with its own responsive max-width, growing at each
+              breakpoint, aligned on one shared row. */}
+
           {/* Block 1 — title + text */}
-          <div className="flex w-full max-w-[420px] shrink-0 justify-center">
+          <div className="flex min-w-0 shrink-0 items-center justify-center">
             <img
               src={domainSolutionsCardImg}
               alt="PhishFlagger Domain. Advanced Email Authentication. Strengthen the verification of emails sent and helps recipients distinguish legitimate communications from impersonated messages. Use the PhishCounter to provide a simple, recognizable method of verifying the sequence and authenticity of communications."
-              className="block h-auto w-full max-w-[420px] object-contain pic-with-no-link-mouse-over-increase"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[220px] md:max-w-[320px] lg:max-w-[420px]"
             />
           </div>
 
-          {/* Block 2 — spacer */}
-          <div className="hidden w-32 shrink-0 lg:block" aria-hidden="true" />
-
-          {/* Block 3 — wheel icon */}
-          <div className="pic-with-no-link-mouse-over-increase h-[160px] w-[160px] shrink-0 overflow-hidden rounded-xl p-1">
+          {/* Block 3 — wheel icon. Extra left margin nudges it right —
+              with equal edge-to-edge gaps on both sides, its much smaller
+              width than its neighbors made its visual center sit closer to
+              the card than the diagram. */}
+          <div className="flex min-w-0 shrink-0 items-center justify-center sm:ml-6 md:ml-10 lg:ml-16">
             <img
               src={publicPath("/assets/images/Email-Authentication-Join-Domain-Pro.png")}
               alt="Email authentication for domain appliance"
-              className="h-full w-full rounded-lg object-contain"
+              className="pic-with-no-link-mouse-over-increase relative z-10 block h-auto w-full max-w-full object-contain sm:max-w-[130px] md:max-w-[170px] lg:max-w-[220px]"
             />
           </div>
 
-          {/* Block 4 — Email Authentication diagram */}
-          <div className="pic-with-no-link-mouse-over-increase w-full max-w-[380px] shrink-0 overflow-hidden rounded-xl p-1">
-            <img
-              src={publicPath("/assets/images/Domain-History-image.png")}
-              alt="Domain history"
-              className="h-auto w-full rounded-lg object-contain"
-            />
+          {/* Block 4 — Email Authentication diagram. The source PNG has a
+              large baked-in transparent margin (~45% of its height is
+              blank), so object-contain rendered the diagram tiny and
+              floating in empty space next to the tighter-cropped card/wheel
+              images. The wrapper's aspect-ratio matches the diagram's
+              actual content region (measured from its non-transparent
+              pixels), so object-cover fills it exactly with no crop loss. */}
+          <div className="flex min-w-0 shrink-0 items-center justify-center">
+            <div className="pic-with-no-link-mouse-over-increase aspect-[1392/512] w-full max-w-full overflow-hidden sm:max-w-[300px] md:max-w-[420px] lg:max-w-[560px]">
+              <img
+                src={publicPath("/assets/images/Domain-History-image.png")}
+                alt="Domain history"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
