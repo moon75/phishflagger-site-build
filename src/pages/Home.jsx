@@ -71,7 +71,7 @@ export default function Home() {
           <img
             src={publicPath("/assets/images/hero%20v2.png")}
             alt="PhishCounter sequence verification on ABC Bank messages"
-            className="mx-auto h-auto w-[100%] max-w-none origin-top translate-y-2.5 scale-[0.8] object-contain home-hero-trio-hover-zoom"
+            className="mx-auto h-auto w-[100%] max-w-none origin-top -translate-x-6 translate-y-2.5 scale-[0.8] object-contain home-hero-trio-hover-zoom"
           />
         </div>
         <div className="min-w-0 lg:flex-1">

@@ -28,9 +28,16 @@ export default function PageUpButton({ inline = false }) {
   }
 
   function handleUp() {
-    const target =
-      document.querySelector("#footer-products") ??
-      Array.from(document.querySelectorAll("section")).pop();
+    // This button always renders inside #footer-products itself, so
+    // targeting that element was a no-op click (already there). Find the
+    // pane that actually sits directly above it instead.
+    const footer = document.querySelector("#footer-products");
+    const sections = Array.from(document.querySelectorAll("section"));
+    const target = footer
+      ? sections
+          .filter((el) => el.compareDocumentPosition(footer) & Node.DOCUMENT_POSITION_FOLLOWING)
+          .pop()
+      : sections[sections.length - 1];
 
     if (target) {
       scrollToElement(target);
