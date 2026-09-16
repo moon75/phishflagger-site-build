@@ -71,8 +71,14 @@ export default function Telecom() {
           <div className="flex flex-wrap justify-center gap-x-1 gap-y-2 pb-2 sm:gap-x-3 lg:flex-nowrap">
             <ActionCard
               to="/telecom/contact"
-              label="Contact"
-              alt="Contact"
+              label={
+                <>
+                  Contact
+                  <br />
+                  Telecom
+                </>
+              }
+              alt="Contact Telecom"
               svgIcon={
                 <svg viewBox="0 0 24 24" className="h-[68px] w-[68px] sm:h-[83px] sm:w-[83px]">
                   <circle cx="12" cy="8.5" r="4" fill="#2563eb" />

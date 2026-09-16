@@ -1,0 +1,9 @@
+# This is a test/staging domain (mail.phishflagger.com) — block it from
+# search engines entirely so it doesn't get indexed and create duplicate
+# content once the site moves to its real production domain. When that
+# happens, replace this file's content with a normal "Allow: /" policy
+# and update the Sitemap line below to the real domain.
+User-agent: *
+Disallow: /
+
+Sitemap: https://mail.phishflagger.com/sitemap.xml

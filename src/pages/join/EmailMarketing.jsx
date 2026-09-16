@@ -43,7 +43,7 @@ export default function EmailMarketing() {
             <img
               src={marketerImg}
               alt="Email marketing and senders illustration with numbered outgoing emails"
-              className="h-auto w-full max-w-[271px] rounded-lg border-2 border-black bg-white object-contain pic-with-no-link-mouse-over-increase"
+              className="h-auto w-full max-w-[312px] object-contain pic-with-no-link-mouse-over-increase"
             />
           </div>
         </div>

@@ -312,7 +312,7 @@ export default function Footer({ logoSrc = logoImg }) {
               className="mx-auto h-auto w-[220px] max-w-full sm:w-[260px] pic-with-no-link-mouse-over-increase"
             />
             <p className="mt-2 text-[26px] text-[#4a4a4a]">
-              Protecting Communications.
+              Protecting Communications
             </p>
           </div>
 

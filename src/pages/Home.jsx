@@ -356,46 +356,6 @@ export default function Home() {
     >
       <SectionCounter value="^0002" />
       <PageDownButton targetSelector="#pane-0004" bg="white" />
-      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
-        <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">
-          <img
-            src={whoCanUseImg}
-            alt="PhishFlagger Email Marketing"
-            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain pic-with-no-link-mouse-over-increase lg:-translate-x-8"
-          />
-          <img
-            src={publicPath("/assets/images/Marketing%20Email.png")}
-            alt="PhishFlagger email inbox showing numbered messages"
-            className="h-auto w-full max-w-[200px] object-contain pic-with-no-link-mouse-over-increase"
-          />
-        </div>
-        <div>
-          <h2 className="section-title flex items-center gap-3">
-            <LogoMark />
-            Email Marketing
-          </h2>
-          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
-            Build greater trust with every campaign. <BrandInline /> helps
-            marketers authenticate their email communications, giving
-            recipients greater confidence that messages are legitimate.
-            When customers know an email is genuine, they are more likely to
-            open, read, and engage with it.
-          </p>
-          <Link
-            to="/join/email-marketing"
-            state={{ from: "/" }}
-            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
-          >
-            Marketing
-          </Link>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 7c — Telecom / Text (white) ===== */}
-    <section id="pane-0004" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0003" />
-      <PageDownButton targetSelector="#pane-0005" />
       <div className="mx-auto max-w-content">
         <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
           <div className="flex flex-col items-center">
@@ -445,6 +405,46 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 7c — Telecom / Text (white) ===== */}
+    <section id="pane-0004" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0003" />
+      <PageDownButton targetSelector="#pane-0005" />
+      <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
+        <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">
+          <img
+            src={whoCanUseImg}
+            alt="PhishFlagger Email Marketing"
+            className="h-auto w-full max-w-[286px] -translate-x-3 object-contain pic-with-no-link-mouse-over-increase lg:-translate-x-8"
+          />
+          <img
+            src={publicPath("/assets/images/Marketing%20Email.png")}
+            alt="PhishFlagger email inbox showing numbered messages"
+            className="h-auto w-full max-w-[200px] object-contain pic-with-no-link-mouse-over-increase"
+          />
+        </div>
+        <div>
+          <h2 className="section-title flex items-center gap-3">
+            <LogoMark />
+            Email Marketing
+          </h2>
+          <p className="mt-4 text-[14px] leading-[1.65] text-ink sm:mt-6 sm:text-[15px] sm:leading-[1.6]">
+            Build greater trust with every campaign. <BrandInline /> helps
+            marketers authenticate their email communications, giving
+            recipients greater confidence that messages are legitimate.
+            When customers know an email is genuine, they are more likely to
+            open, read, and engage with it.
+          </p>
+          <Link
+            to="/join/email-marketing"
+            state={{ from: "/" }}
+            className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+          >
+            Marketing
+          </Link>
         </div>
       </div>
     </section>

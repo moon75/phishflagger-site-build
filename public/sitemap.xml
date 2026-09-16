@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Curated list of real, indexable content pages only — deliberately
+  excludes: dev-only routes (/kick, /kick2, /edit, /internal/*,
+  /test-stripe, /video1), thanks/confirmation pages, account pages
+  (/login, /register, /country), quote/request forms, and the
+  join-free/join-corporate iframe wrappers. Update the domain below
+  once this moves off the mail.phishflagger.com test domain, and flip
+  robots.txt to allow indexing at the same time.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mail.phishflagger.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mail.phishflagger.com/email</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mail.phishflagger.com/join/pro</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mail.phishflagger.com/join/domain</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mail.phishflagger.com/join/email-free-plug-in</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mail.phishflagger.com/join/email-marketing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mail.phishflagger.com/join/messaging</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mail.phishflagger.com/telecom</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mail.phishflagger.com/video</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mail.phishflagger.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/team</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/press</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/intellectual-property</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/news</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/numbering-history</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/about/phishing-ends</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/support-desk</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/kickstarter</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/hall-of-fame</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/supporters</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/telecom-supporters</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/endorse-us</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/resources/telecom-endorse-us</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/contact</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/community</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/demo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/download</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mail.phishflagger.com/digital-verification</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/human-compatible</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/white-paper</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/petition</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mail.phishflagger.com/phishflagger-org</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mail.phishflagger.com/victim-testimonials</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>
