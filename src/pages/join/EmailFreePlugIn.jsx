@@ -3,7 +3,6 @@ import CloseButton from "../../components/ui/CloseButton.jsx";
 import emailInboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import outlookImg from "../../assets/images/outlook image 90.png";
 import { publicPath } from "../../lib/publicPath.js";
-import { isVideo1Unlocked } from "../../lib/videoAccess.js";
 
 const DOWNLOADS = [
   {
@@ -35,8 +34,6 @@ const PROVIDERS = [
 ];
 
 export default function EmailFreePlugIn() {
-  const unlocked = isVideo1Unlocked();
-
   return (
     <>
       <CloseButton />
@@ -97,54 +94,23 @@ export default function EmailFreePlugIn() {
               Request My Domain be on the FREE list.
             </Link>
             <div className="flex items-center gap-3">
-              <div className="relative">
-                {!unlocked && (
-                  <span className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
-                    Coming Soon
-                  </span>
-                )}
-                {unlocked ? (
-                  <a
-                    href="https://join.phishflagger.com/individual/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
-                  >
-                    Join Free
-                  </a>
-                ) : (
-                  <button
-                    type="button"
-                    disabled
-                    className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
-                  >
-                    Join Free
-                  </button>
-                )}
-              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+              >
+                Join Free
+              </Link>
             </div>
             <div className="flex flex-col items-center gap-2">
               <span className="whitespace-nowrap text-[18px] font-semibold text-ink">
                 Don&rsquo;t see your Domain
               </span>
-              {unlocked ? (
-                <a
-                  href="https://join.phishflagger.com/business/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
-                >
-                  Join PRO
-                </a>
-              ) : (
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex cursor-not-allowed items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white opacity-50"
-                >
-                  Join PRO
-                </button>
-              )}
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+              >
+                Join PRO
+              </Link>
               <span className="rounded px-2 py-0.5 text-[12px] text-ink">
                 $10.00 / Year
               </span>

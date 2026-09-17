@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
@@ -7,6 +7,7 @@ import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import VideoCard from "../components/video/VideoCard.jsx";
 import { PUBLIC_VIDEO_CATEGORIES, showcaseVideosForCategory } from "../data/videos.js";
 import { isVideo1Unlocked } from "../lib/videoAccess.js";
+import VideoModeToggle from "../components/video/VideoModeToggle.jsx";
 
 // The public, default /video page — same category-button + grid layout as
 // the full /video1 library, but each category shows only its one curated
@@ -17,12 +18,15 @@ import { isVideo1Unlocked } from "../lib/videoAccess.js";
 // landing here goes straight to /video1 until "off"/"OFF" is entered there.
 export default function VideoShowcase() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState(PUBLIC_VIDEO_CATEGORIES[0]);
   const [playing, setPlaying] = useState(null);
 
   useEffect(() => {
-    if (isVideo1Unlocked()) navigate("/video1", { replace: true });
-  }, [navigate]);
+    if (isVideo1Unlocked() && !location.state?.skipRedirect) {
+      navigate("/video1", { replace: true });
+    }
+  }, [navigate, location.state]);
 
   const videos = showcaseVideosForCategory(activeCategory);
 
@@ -56,6 +60,8 @@ export default function VideoShowcase() {
               <span>protects against phishing</span>
             </p>
           </div>
+
+          <VideoModeToggle active="public" />
 
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
             {PUBLIC_VIDEO_CATEGORIES.map((category) => (

@@ -1,5 +1,5 @@
 import BluePersonFilter from "../../components/ui/BluePersonFilter.jsx";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
@@ -12,32 +12,34 @@ import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
 import emailSolutionsCardImg from "../../assets/images/email-first-pane-solutions-card.png";
 import { publicPath } from "../../lib/publicPath.js";
 
-// The three /email plan GIFs embed their own completed-view hold and
-// play-once behavior. Remounting on each new hover restarts that sequence.
 const MARKETING_HOVER_HOLD_MS = 2000;
 
-function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
+// Same self-contained hover-to-play pattern as PhonePlaceholder on the
+// homepage (Home.jsx) — the GIF controls its own completed-view hold and
+// one-time playback; mounting a fresh <img> on every hover restarts it.
+function HoverGif({ stillSrc, gifSrc, alt, className }) {
   const [showGif, setShowGif] = useState(false);
   const [gifLoaded, setGifLoaded] = useState(false);
   const [gifKey, setGifKey] = useState(0);
 
-  useEffect(() => {
-    if (active) {
-      setGifKey((key) => key + 1);
-      setGifLoaded(false);
-      setShowGif(true);
-    } else {
-      setShowGif(false);
-      setGifLoaded(false);
-    }
-  }, [active]);
+  function handleMouseEnter() {
+    if (!gifSrc) return;
+    setGifKey((key) => key + 1);
+    setGifLoaded(false);
+    setShowGif(true);
+  }
+
+  function handleMouseLeave() {
+    setShowGif(false);
+    setGifLoaded(false);
+  }
 
   return (
-    <div className="relative h-full w-full">
-      {/* Still stays visible underneath, always fully opaque. The GIF only
-          ever appears on top once fully loaded, snapping straight to
-          opaque (no transition) — never a moment where the background
-          shows through between the two. */}
+    <div
+      className="relative h-full w-full"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <img src={stillSrc} alt={alt} className={className} draggable={false} />
       {showGif && gifLoaded && (
         <img
@@ -81,12 +83,6 @@ export default function Join() {
     }
     setMarketingPlaying(false);
   }
-  // Which plan card the pointer is currently over — lets the title share
-  // the same hover target as the picture, so hovering either one plays the
-  // card's GIF and runs the box's hover styling (mirrors the ActionCard
-  // buttons lower on the page, where the whole card is one hover group).
-  const [hoveredPlanCard, setHoveredPlanCard] = useState(null);
-
   return (
     <div
       ref={containerRef}
@@ -117,8 +113,6 @@ export default function Join() {
                 to="/join/email-free-plug-in"
                 state={{ from: "/email" }}
                 aria-label="Join Free — Plug-In Free"
-                onMouseEnter={() => setHoveredPlanCard("free")}
-                onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
@@ -132,7 +126,6 @@ export default function Join() {
                     gifSrc={publicPath("/assets/images/individual-animated.gif")}
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
-                    active={hoveredPlanCard === "free"}
                   />
                 </div>
               </Link>
@@ -149,8 +142,6 @@ export default function Join() {
                 to="/join/pro"
                 state={{ from: "/email" }}
                 aria-label="Join PRO — Individual / Group"
-                onMouseEnter={() => setHoveredPlanCard("pro")}
-                onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
@@ -167,7 +158,6 @@ export default function Join() {
                     gifSrc={oneOrManyImg}
                     alt="Domain protection illustration"
                     className="h-full w-full rounded-lg object-contain"
-                    active={hoveredPlanCard === "pro"}
                   />
                 </div>
               </Link>
@@ -184,8 +174,6 @@ export default function Join() {
                 to="/join/domain"
                 state={{ from: "/email" }}
                 aria-label="Join Domain — Domain Appliance"
-                onMouseEnter={() => setHoveredPlanCard("domain")}
-                onMouseLeave={() => setHoveredPlanCard(null)}
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
@@ -202,7 +190,6 @@ export default function Join() {
                     gifSrc={cloudServerImg}
                     alt="Cloud and server appliance illustration"
                     className="h-full w-full rounded-lg object-contain"
-                    active={hoveredPlanCard === "domain"}
                   />
                 </div>
               </Link>

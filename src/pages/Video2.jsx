@@ -15,7 +15,7 @@ import {
   categoryVideos,
 } from "../data/videos.js";
 
-export default function Video() {
+export default function Video2() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const { category = "" } = useParams();
@@ -78,7 +78,7 @@ export default function Video() {
             </p>
           </div>
 
-          <VideoModeToggle active="development" />
+          <VideoModeToggle active="development2" />
 
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
             {VIDEO_CATEGORIES.map((category) => (
@@ -102,7 +102,7 @@ export default function Video() {
                   onClick={() => {
                     const slug = CATEGORY_SLUGS[category];
                     setPlaying(null);
-                    navigate(slug ? `/video1/${slug}` : "/video1", {
+                    navigate(slug ? `/video2/${slug}` : "/video2", {
                       replace: true,
                     });
                   }}

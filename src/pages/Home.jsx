@@ -41,6 +41,7 @@ export default function Home() {
   // downloading (instead of showing a blank/broken frame while it loads),
   // per-request quick fix rather than building it a full still+hover swap.
   const [messageGifLoaded, setMessageGifLoaded] = useState(false);
+  const [smsGifLoaded, setSmsGifLoaded] = useState(false);
 
   return (
     <>
@@ -264,12 +265,6 @@ export default function Home() {
                 </span>
                 <div className="relative mt-3">
                   <Link
-                    to="/kick"
-                    className="absolute -top-4 -left-6 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition hover:scale-105 sm:text-[10px]"
-                  >
-                    <span>Coming Soon</span>
-                  </Link>
-                  <Link
                     to="/join/email-free-plug-in"
                     state={{ from: "/" }}
                     className="inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
@@ -356,63 +351,6 @@ export default function Home() {
     >
       <SectionCounter value="^0002" />
       <PageDownButton targetSelector="#pane-0004" bg="white" />
-      <div className="mx-auto max-w-content">
-        <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap">
-          <div className="flex flex-col items-center">
-            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
-              <LogoMark />
-              SMS
-            </span>
-            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
-              <img
-                src={publicPath("/assets/images/sms-phone-and-text.png")}
-                alt="Phone displaying PhishFlagger text messages"
-                className="h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px]"
-              />
-              <Link
-                to="/telecom"
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
-              >
-                Telecom
-              </Link>
-            </div>
-          </div>
-
-          <img
-            src={pane0004MessageCardImg}
-            alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
-            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain pic-with-no-link-mouse-over-increase"
-          />
-
-          <div className="flex flex-col items-center">
-            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
-              <LogoMark />
-              Message
-            </span>
-            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
-              <img
-                src={publicPath("/assets/images/messaging-icons-and-phone-animated.gif")}
-                alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
-                onLoad={() => setMessageGifLoaded(true)}
-                className={`h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px] ${messageGifLoaded ? "opacity-100" : "opacity-0"}`}
-              />
-              <Link
-                to="/join/messaging"
-                state={{ from: "/" }}
-                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
-              >
-                Messaging
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* ===== Section 7c — Telecom / Text (white) ===== */}
-    <section id="pane-0004" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <SectionCounter value="^0003" />
-      <PageDownButton targetSelector="#pane-0005" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">
           <img
@@ -449,18 +387,10 @@ export default function Home() {
       </div>
     </section>
 
-    {/* ===== Section 7b — Telecom / Caller ID (gray/tower) ===== */}
-    <section
-      id="pane-0005"
-      className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
-        backgroundSize: "140%",
-      }}
-    >
-      <SectionCounter value="^0004" />
-      <PageDownButton bg="white" targetSelector="#footer-products" />
+    {/* ===== Section 7c — Telecom / Text (white) ===== */}
+    <section id="pane-0004" className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-white px-4 py-14 sm:px-6 sm:py-20">
+      <SectionCounter value="^0003" />
+      <PageDownButton targetSelector="#pane-0005" />
       <div className="mx-auto grid max-w-content grid-cols-1 items-center gap-10 sm:gap-16 lg:grid-cols-2">
         {/* Left — heading + text */}
         <div>
@@ -524,6 +454,72 @@ export default function Home() {
             alt="Cordless handset with PhishFlagger Caller ID"
             className="h-auto w-1/3 min-w-0 max-w-[105px] object-contain pic-with-no-link-mouse-over-increase sm:max-w-[160px]"
           />
+        </div>
+      </div>
+    </section>
+
+    {/* ===== Section 7b — Telecom / Caller ID (gray/tower) ===== */}
+    <section
+      id="pane-0005"
+      className="relative w-full scroll-mt-[var(--header-h)] lg:scroll-mt-0 bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(238,240,244,0.94), rgba(238,240,244,0.94)), url('/assets/images/domain%20image%20for%20homepage.png')",
+        backgroundSize: "140%",
+      }}
+    >
+      <SectionCounter value="^0004" />
+      <PageDownButton bg="white" targetSelector="#footer-products" />
+      <div className="mx-auto max-w-content">
+        <div className="flex flex-wrap items-stretch justify-center gap-12 lg:flex-nowrap lg:justify-between">
+          <div className="flex flex-col items-center">
+            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
+              <LogoMark />
+              SMS
+            </span>
+            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
+              <img
+                src={publicPath("/assets/images/sms-phone-and-text-smooth.gif")}
+                alt="Phone displaying PhishFlagger text messages"
+                onLoad={() => setSmsGifLoaded(true)}
+                className={`-mt-4 h-[300px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:-mt-6 sm:h-[345px] ${smsGifLoaded ? "opacity-100" : "opacity-0"}`}
+              />
+              <Link
+                to="/telecom"
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+              >
+                Telecom
+              </Link>
+            </div>
+          </div>
+
+          <img
+            src={pane0004MessageCardImg}
+            alt="Phishing doesn't stop at email. PhishFlagger for SMS and Messages adds an additional layer of verification to SMS and mobile messaging, helping protect customers from text-based scams and impersonation."
+            className="mx-6 mt-2 h-auto w-[calc(100%-3rem)] max-w-[360px] shrink-0 self-center object-contain pic-with-no-link-mouse-over-increase"
+          />
+
+          <div className="flex flex-col items-center">
+            <span className="section-title mb-4 flex items-center justify-center gap-3 whitespace-nowrap text-center">
+              <LogoMark />
+              Message
+            </span>
+            <div className="flex flex-1 flex-col items-center justify-between sm:min-h-[340px]">
+              <img
+                src={publicPath("/assets/images/messaging-icons-and-phone-animated.gif")}
+                alt="Phone displaying PhishFlagger messages alongside popular messaging apps"
+                onLoad={() => setMessageGifLoaded(true)}
+                className={`h-[260px] w-auto max-w-full object-contain pic-with-no-link-mouse-over-increase sm:h-[300px] ${messageGifLoaded ? "opacity-100" : "opacity-0"}`}
+              />
+              <Link
+                to="/join/messaging"
+                state={{ from: "/" }}
+                className="mt-6 inline-flex h-[42px] items-center justify-center rounded-[7px] bg-[#585858] px-7 text-[14px] font-semibold text-white transition hover:bg-[#3f3f3f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+              >
+                Messaging
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
