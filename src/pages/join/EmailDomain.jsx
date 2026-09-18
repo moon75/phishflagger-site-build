@@ -252,6 +252,7 @@ export default function EmailDomain() {
                 </h2>
                 <Link
                   to="/download"
+                  state={{ from: "/join/pro" }}
                   className="mt-4 inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
                 >
                   Go to Download Page
@@ -300,6 +301,7 @@ function DownloadCard({ name, image, imageScale = "scale-125", alt, actions }) {
             <Link
               key={action.label}
               to={action.to}
+              state={{ from: "/join/pro" }}
               className="inline-flex items-center justify-center rounded-md bg-[#4a4a4a] px-4 py-2 text-[11px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
             >
               {action.label}

@@ -311,9 +311,6 @@ export default function Footer({ logoSrc = logoImg }) {
               alt="PhishFlagger"
               className="mx-auto h-auto w-[220px] max-w-full sm:w-[260px] pic-with-no-link-mouse-over-increase"
             />
-            <p className="mt-2 text-[26px] text-[#4a4a4a]">
-              Protecting Communications
-            </p>
           </div>
 
           <p className="mx-auto mb-2.5 mt-3 whitespace-normal text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:text-[9px]">

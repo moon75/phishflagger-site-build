@@ -5,6 +5,7 @@ import launchPlanPdf from "../assets/Pdf/Launch Plan Living Doc.pdf";
 import kickstarterRequirementsPdf from "../assets/Pdf/Kickstarter Requirements.pdf";
 import outlookThunderbirdImg from "../assets/images/outlook and thunderbird.png";
 import { publicPath } from "../lib/publicPath.js";
+import BluePersonFilter from "../components/ui/BluePersonFilter.jsx";
 
 const howDoesItWorkImg = publicPath("/assets/images/How%20does%20phishflagger%20work-v3-transparent.png");
 const logoMarkImg = publicPath("/assets/images/logo-mark.png");
@@ -184,6 +185,7 @@ export default function Kick() {
           <div className="mt-3 text-center">
             <Link
               to="/joinfree/request-domain"
+              state={{ from: "/kick" }}
               className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
             >
               Request My Domain
@@ -222,6 +224,7 @@ export default function Kick() {
             Like what you see.{" "}
             <Link
               to="/resources/endorse-us"
+              state={{ from: "/kick" }}
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
               Endorse Us
@@ -319,8 +322,24 @@ export default function Kick() {
       {/* ===== Human / Digital text (moved here from /email = Join.jsx) ===== */}
       <section className="relative w-full bg-white px-4 pt-10 pb-10 sm:px-6 sm:pt-14 sm:pb-14">
         <div className="mx-auto max-w-content">
+          <BluePersonFilter id="kick-person-blue" />
           <div className="grid grid-cols-1 gap-10 sm:gap-16 lg:grid-cols-2">
             <div>
+              <div className="mb-6 flex justify-center">
+                <div className="relative">
+                  <span className="absolute top-1 -left-4 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                    Coming Soon
+                  </span>
+                  <div className="flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white opacity-50 sm:h-[120px] sm:w-[120px]">
+                    <img
+                      src={publicPath("/assets/icons/Human%20icon.png")}
+                      alt="Human"
+                      style={{ filter: "url(#kick-person-blue)" }}
+                      className="h-[81.6px] w-[81.6px] object-contain sm:h-[99.6px] sm:w-[99.6px]"
+                    />
+                  </div>
+                </div>
+              </div>
               <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
                 <em className="italic">
                   <span className="font-extrabold text-ink">Phish</span>
@@ -362,6 +381,28 @@ export default function Kick() {
             </div>
 
             <div>
+              <div className="mb-6 flex justify-center">
+                <div className="relative">
+                  <span className="absolute top-1 -left-4 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                    Coming Soon
+                  </span>
+                  <div className="flex h-[100px] w-[100px] items-center justify-center rounded-2xl border-2 border-black bg-white opacity-50 sm:h-[120px] sm:w-[120px]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]"
+                      fill="none"
+                      stroke="#6b7280"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5.5 8.5 L8 7 V17" />
+                      <ellipse cx="15.5" cy="12" rx="3.3" ry="5" />
+                      <line x1="12.7" y1="16.5" x2="18.3" y2="7.5" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
               <h2 className="mb-4 text-[20px] font-bold leading-[1.15] tracking-tight text-ink sm:text-[24px] lg:text-[28px]">
                 <em className="italic">
                   <span className="font-extrabold text-ink">Phish</span>

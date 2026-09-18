@@ -15,7 +15,7 @@ export default function Register() {
 
   return (
     <>
-      <CloseButton />
+      <CloseButton to="/login" />
 
       <section
         className="relative flex min-h-screen w-full items-center justify-center bg-[#eef0f4] bg-cover bg-center px-4 py-14 sm:px-6 sm:py-20"

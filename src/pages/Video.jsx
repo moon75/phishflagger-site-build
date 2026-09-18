@@ -4,6 +4,7 @@ import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
+import ShortsViewer from "../components/video/ShortsViewer.jsx";
 import VideoCard from "../components/video/VideoCard.jsx";
 import VideoModeToggle from "../components/video/VideoModeToggle.jsx";
 import {
@@ -150,8 +151,12 @@ export default function Video() {
           to the footer's #footer-products page-down/up pair. */}
       <div className="w-full px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10">
         <div className="mx-auto max-w-[1300px]">
-          {/* Video grid */}
+          {/* Video grid — Shorts gets its own vertical, swipeable viewer
+              instead of the horizontal 16:9 grid every other category uses. */}
           <div className="mx-auto mt-4 w-full max-w-[1300px] rounded-2xl bg-white p-4 sm:mt-5 sm:p-6">
+          {activeCategory === "Shorts" ? (
+            <ShortsViewer videos={categoryAllVideos} />
+          ) : (
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {displayedVideos.map((v, i) => (
               <VideoCard
@@ -162,6 +167,7 @@ export default function Video() {
               />
             ))}
           </div>
+          )}
           </div>
         </div>
       </div>

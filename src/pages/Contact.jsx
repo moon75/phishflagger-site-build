@@ -131,6 +131,7 @@ export default function Contact() {
                   Contact for Telecom or Caller ID{" "}
                   <Link
                     to="/telecom/contact"
+                    state={{ from: "/contact" }}
                     className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
                   >
                     Click Here

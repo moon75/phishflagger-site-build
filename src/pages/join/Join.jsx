@@ -1,5 +1,5 @@
 import BluePersonFilter from "../../components/ui/BluePersonFilter.jsx";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
@@ -17,47 +17,65 @@ const MARKETING_HOVER_HOLD_MS = 2000;
 // Same self-contained hover-to-play pattern as PhonePlaceholder on the
 // homepage (Home.jsx) — the GIF controls its own completed-view hold and
 // one-time playback; mounting a fresh <img> on every hover restarts it.
-function HoverGif({ stillSrc, gifSrc, alt, className }) {
-  const [showGif, setShowGif] = useState(false);
-  const [gifLoaded, setGifLoaded] = useState(false);
-  const [gifKey, setGifKey] = useState(0);
+function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
+  const [gifBlob, setGifBlob] = useState(null);
+  const [gifLoadFailed, setGifLoadFailed] = useState(false);
+  const [activeGifSrc, setActiveGifSrc] = useState(null);
 
-  function handleMouseEnter() {
-    if (!gifSrc) return;
-    setGifKey((key) => key + 1);
-    setGifLoaded(false);
-    setShowGif(true);
-  }
+  // Fetch the animation as data rather than mounting a hidden <img>. A hidden
+  // play-once GIF can finish before its visible copy is shown, and browsers
+  // may then reuse that completed animation state for the same URL.
+  useEffect(() => {
+    if (!gifSrc) return undefined;
 
-  function handleMouseLeave() {
-    setShowGif(false);
-    setGifLoaded(false);
-  }
+    const controller = new AbortController();
+    setGifBlob(null);
+    setGifLoadFailed(false);
+
+    fetch(gifSrc, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Unable to load GIF: ${response.status}`);
+        return response.blob();
+      })
+      .then((blob) => setGifBlob(blob))
+      .catch((error) => {
+        if (error.name !== "AbortError") setGifLoadFailed(true);
+      });
+
+    return () => controller.abort();
+  }, [gifSrc]);
+
+  // A new blob URL gives every hover a fresh image decoder and animation
+  // timeline, while reusing the bytes fetched above.
+  useEffect(() => {
+    if (!active) {
+      setActiveGifSrc(null);
+      return undefined;
+    }
+
+    if (gifBlob) {
+      const objectUrl = URL.createObjectURL(gifBlob);
+      setActiveGifSrc(objectUrl);
+      return () => URL.revokeObjectURL(objectUrl);
+    }
+
+    if (gifLoadFailed) {
+      const separator = gifSrc.includes("?") ? "&" : "?";
+      setActiveGifSrc(`${gifSrc}${separator}play=${Date.now()}`);
+    }
+
+    return undefined;
+  }, [active, gifBlob, gifLoadFailed, gifSrc]);
 
   return (
-    <div
-      className="relative h-full w-full"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative h-full w-full">
       <img src={stillSrc} alt={alt} className={className} draggable={false} />
-      {showGif && gifLoaded && (
+      {activeGifSrc && (
         <img
-          key={gifKey}
-          src={gifSrc}
+          src={activeGifSrc}
           alt={alt}
           className={`absolute inset-0 ${className}`}
           draggable={false}
-        />
-      )}
-      {showGif && !gifLoaded && (
-        <img
-          key={`preload-${gifKey}`}
-          src={gifSrc}
-          alt=""
-          aria-hidden="true"
-          className="hidden"
-          onLoad={() => setGifLoaded(true)}
         />
       )}
     </div>
@@ -66,6 +84,7 @@ function HoverGif({ stillSrc, gifSrc, alt, className }) {
 
 export default function Join() {
   const containerRef = useRef(null);
+  const [hoveredPlanCard, setHoveredPlanCard] = useState(null);
   // Marketing is not a GIF, so it keeps its separate existing hover hold.
   const [marketingCardHoverKey, setMarketingCardHoverKey] = useState(0);
   const [marketingPlaying, setMarketingPlaying] = useState(false);
@@ -112,6 +131,8 @@ export default function Join() {
               <Link
                 to="/join/email-free-plug-in"
                 state={{ from: "/email" }}
+                onMouseEnter={() => setHoveredPlanCard("free")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join Free — Plug-In Free"
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
@@ -126,6 +147,7 @@ export default function Join() {
                     gifSrc={publicPath("/assets/images/individual-animated.gif")}
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
+                    active={hoveredPlanCard === "free"}
                   />
                 </div>
               </Link>
@@ -141,6 +163,8 @@ export default function Join() {
               <Link
                 to="/join/pro"
                 state={{ from: "/email" }}
+                onMouseEnter={() => setHoveredPlanCard("pro")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join PRO — Individual / Group"
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
@@ -158,6 +182,7 @@ export default function Join() {
                     gifSrc={oneOrManyImg}
                     alt="Domain protection illustration"
                     className="h-full w-full rounded-lg object-contain"
+                    active={hoveredPlanCard === "pro"}
                   />
                 </div>
               </Link>
@@ -173,6 +198,8 @@ export default function Join() {
               <Link
                 to="/join/domain"
                 state={{ from: "/email" }}
+                onMouseEnter={() => setHoveredPlanCard("domain")}
+                onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join Domain — Domain Appliance"
                 className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
               >
@@ -190,6 +217,7 @@ export default function Join() {
                     gifSrc={cloudServerImg}
                     alt="Cloud and server appliance illustration"
                     className="h-full w-full rounded-lg object-contain"
+                    active={hoveredPlanCard === "domain"}
                   />
                 </div>
               </Link>
@@ -266,39 +294,6 @@ export default function Join() {
               src={endorseIcon}
               bluePerson
               alt="Endorse Us"
-            />
-            <ActionCard
-              to="/human-compatible"
-              state={{ from: "/email" }}
-              label="Human"
-              alt="Human"
-              src={publicPath("/assets/icons/Human%20icon.png")}
-              imageSize="h-[81.6px] w-[81.6px] sm:h-[99.6px] sm:w-[99.6px]"
-              bluePerson
-              disabled
-            />
-            <ActionCard
-              to="/digital-verification"
-              state={{ from: "/email" }}
-              label="Digital"
-              alt="Digital"
-              disabled
-              svgIcon={
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-[64px] w-[64px] sm:h-[78px] sm:w-[78px]"
-                  fill="none"
-                  stroke="#6b7280"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  {/* Binary "10" — a slashed zero for the digital look */}
-                  <path d="M5.5 8.5 L8 7 V17" />
-                  <ellipse cx="15.5" cy="12" rx="3.3" ry="5" />
-                  <line x1="12.7" y1="16.5" x2="18.3" y2="7.5" />
-                </svg>
-              }
             />
             <ActionCard
               to="/about/faq?category=Email%20-%20Plug-In%20(Free)"

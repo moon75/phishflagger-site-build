@@ -151,6 +151,7 @@ export default function Header() {
           countryName={countryName}
           countryHover={countryHover}
           setCountryHover={setCountryHover}
+          fromPath={location.pathname}
         />
       </div>
 
@@ -175,6 +176,7 @@ export default function Header() {
               countryName={countryName}
               countryHover={countryHover}
               setCountryHover={setCountryHover}
+              fromPath={location.pathname}
             />
           </div>
         </div>
@@ -222,6 +224,7 @@ function HeaderActions({
   countryName,
   countryHover,
   setCountryHover,
+  fromPath,
 }) {
   return (
     <>
@@ -243,6 +246,7 @@ function HeaderActions({
       >
         <Link
           to="/country"
+          state={{ from: fromPath }}
           aria-label="Choose your country"
           className="flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
         >
@@ -269,6 +273,7 @@ function HeaderActions({
       </div>
       <Link
         to="/login"
+        state={{ from: fromPath }}
         aria-label="Sign in"
         className="group relative flex h-9 w-9 items-center justify-center rounded-full text-ink transition hover:bg-gray-100 hover:text-brand"
       >

@@ -139,6 +139,7 @@ export default function NavDropdown({ item, hoverNavigate = false, hoverOpen = t
               ) : (
                 <NavLink
                   to={child.href}
+                  state={{ from: location.pathname }}
                   role="menuitem"
                   className={({ isActive }) =>
                     cn(

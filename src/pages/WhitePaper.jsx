@@ -4,7 +4,7 @@ import CloseButton from "../components/ui/CloseButton.jsx";
 export default function WhitePaper() {
   return (
     <>
-      <CloseButton />
+      <CloseButton to="/digital-verification" />
 
       <section className="relative w-full bg-white px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
         <div className="mx-auto max-w-content">

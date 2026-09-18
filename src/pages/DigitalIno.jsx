@@ -61,16 +61,6 @@ export default function DigitalIno() {
             </Link>
           </p>
 
-          <p className="mx-auto mt-8 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:text-[16px]">
-            PLACEHOLDER-DIGITALINO-1. Replace this copy with the final
-            content.
-          </p>
-
-          <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
-            PLACEHOLDER-DIGITALINO-2. Replace this copy with the final
-            content.
-          </p>
-
           <div className="mx-auto mt-14 grid max-w-[1080px] grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-16">
             <div className="mx-auto flex w-full max-w-[460px] flex-col overflow-hidden rounded-[28px] border-2 border-black bg-white">
               <div className="h-[200px] w-full overflow-hidden">
@@ -152,11 +142,6 @@ export default function DigitalIno() {
               </div>
             </div>
           </div>
-
-          <p className="mx-auto mt-14 max-w-[640px] text-center text-[15px] leading-relaxed text-ink sm:mt-20 sm:text-[16px]">
-            PLACEHOLDER-DIGITALINO-3. Replace this copy with the final
-            content.
-          </p>
         </div>
       </section>
     </>

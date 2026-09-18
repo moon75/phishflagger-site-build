@@ -1,6 +1,7 @@
 import CloseButton from "../components/ui/CloseButton.jsx";
 import { Link } from "react-router-dom";
 import outlookImg from "../assets/images/outlook image 90.png";
+import cloudServerImg from "../assets/images/digital-domain-diagram-v6-no-connector.png";
 import { publicPath } from "../lib/publicPath.js";
 
 export default function Download() {
@@ -74,15 +75,44 @@ export default function Download() {
             </div>
 
             {/* Developers CTA */}
-            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 py-10 text-center">
-              <p className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
+            <div className="flex h-full flex-col items-center justify-between gap-4 overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 pt-10 pb-5 text-center sm:px-6">
+              <p className="flex flex-1 items-center text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                 Email Client Developers: Add PhishFlagger protocol to your
                 Client free.
               </p>
+              <Link
+                to="/contact"
+                state={{ from: "/download" }}
+                className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+              >
+                Contact Us
+              </Link>
             </div>
 
-            {/* Empty placeholders */}
-            <div className="hidden rounded-xl border border-transparent sm:block" />
+            {/* Domain Appliance */}
+            <div className="flex h-full flex-col overflow-hidden rounded-2xl border-2 border-black">
+              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
+                <img
+                  src={cloudServerImg}
+                  alt="Cloud and server appliance"
+                  className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
+                />
+              </div>
+              <div className="flex flex-1 flex-col items-center justify-between gap-3 px-5 py-5 sm:px-6">
+                <span className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
+                  Domain Appliance
+                </span>
+                <Link
+                  to="/contact"
+                  state={{ from: "/download" }}
+                  className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+
+            {/* Empty placeholder */}
             <div className="hidden rounded-xl border border-transparent lg:block" />
           </div>
         </div>

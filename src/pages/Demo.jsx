@@ -59,6 +59,7 @@ export default function Demo() {
               We also validate the sending domain.{" "}
               <Link
                 to="/digital-verification"
+                state={{ from: "/demo" }}
                 className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
               >
                 More Info Here

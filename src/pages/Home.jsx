@@ -85,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* Phones row — flex so phones sit tight together regardless of container width */}
-      <div className="mt-12 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-16 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
+      <div className="mt-4 flex flex-wrap items-stretch justify-center gap-x-12 gap-y-10 sm:mt-6 sm:gap-y-12 lg:flex-nowrap lg:gap-x-[30px]">
         <div className="flex flex-col items-stretch">
           {/* Shared label row — the three "Email" links sit as one group
               spanning the full width of the two phones below (large + wide),
@@ -156,8 +156,8 @@ export default function Home() {
           Kept inside the pane-0001 <section> (not its own <section>) so the
           global page-down tab's "next <section>" lookup skips straight to
           #pane-0002 instead of stopping here. ===== */}
-      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 pt-9 pb-[calc(3.2rem*var(--pane-gap-scale))] sm:gap-16 sm:pt-12 sm:pb-[calc(4.8rem*var(--pane-gap-scale))] lg:grid-cols-2 lg:gap-20">
-        <div>
+      <div className="mx-auto grid w-[85%] max-w-[1360px] grid-cols-1 gap-10 pt-12 pb-[calc(3.2rem*var(--pane-gap-scale))] sm:gap-16 sm:pt-16 sm:pb-[calc(4.8rem*var(--pane-gap-scale))] lg:grid-cols-2 lg:gap-20">
+        <div className="pic-with-no-link-mouse-over-increase">
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
             {brandify("PhishFlagger")} / Human
           </span>
@@ -174,7 +174,7 @@ export default function Home() {
             look.
           </p>
         </div>
-        <div>
+        <div className="pic-with-no-link-mouse-over-increase">
           <span className="text-[13px] font-bold uppercase tracking-wide text-ink-muted sm:text-[14px]">
             {brandify("PhishFlagger")} / Digital
           </span>
@@ -230,6 +230,7 @@ export default function Home() {
                   <div className="flex justify-center pl-0 sm:pl-[4px]">
                     <Link
                       to="/download"
+                      state={{ from: "/" }}
                       className="whitespace-nowrap text-[10px] font-semibold text-white underline underline-offset-4 hover:text-white/80 sm:text-[11px]"
                     >
                       More Clients Coming Soon

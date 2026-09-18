@@ -39,6 +39,7 @@ export default function AboutIndex() {
               <li key={item.to}>
                 <Link
                   to={item.to}
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
                 >
                   {item.label}
@@ -52,6 +53,7 @@ export default function AboutIndex() {
               <li key={item.to}>
                 <Link
                   to={item.to}
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-ink transition-colors hover:text-brand sm:text-[18px]"
                 >
                   {item.label}
@@ -82,24 +84,28 @@ export default function AboutIndex() {
               <div className="flex flex-col items-center gap-5 sm:items-start">
                 <Link
                   to="/kick"
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
                 >
                   kick
                 </Link>
                 <Link
                   to="/kick2"
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
                 >
                   kick2
                 </Link>
                 <Link
                   to="/edit"
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
                 >
                   edit
                 </Link>
                 <Link
                   to="/internal/global-settings"
+                  state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
                 >
                   global
