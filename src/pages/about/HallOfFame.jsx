@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import CloseButton from "../../components/ui/CloseButton.jsx";
 import LogoMark from "../../components/ui/LogoMark.jsx";
 import { brandify } from "../../components/Brand.jsx";
+import { isVideo1Unlocked } from "../../lib/videoAccess.js";
 
 const SUPPORTERS = [
   {
@@ -75,20 +76,24 @@ export default function HallOfFame() {
             from day one. Thank you.
           </p>
 
-          <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
-            <Link
-              to="/video1?video=thank-you"
-              className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
-            >
-              Thank You Video
-            </Link>
-            <Link
-              to="/video1?video=kickstarter"
-              className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
-            >
-              Kickstarter Videos
-            </Link>
-          </div>
+          {isVideo1Unlocked() && (
+            <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
+              <Link
+                to="/video1?video=thank-you"
+                state={{ from: location.pathname }}
+                className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
+              >
+                Thank You Video
+              </Link>
+              <Link
+                to="/video1?video=kickstarter"
+                state={{ from: location.pathname }}
+                className="rounded-full border border-gray-300 px-4 py-2 text-[13px] font-medium text-ink-muted transition-colors hover:bg-gray-100 hover:text-ink sm:text-[14px]"
+              >
+                Kickstarter Videos
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 

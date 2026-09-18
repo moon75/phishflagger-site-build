@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import SiteLayout from "./components/layout/SiteLayout.jsx";
+import RequireVideo1Unlocked from "./components/RequireVideo1Unlocked.jsx";
 
 import Home from "./pages/Home.jsx";
 import PhishFlaggerOrg from "./pages/PhishFlaggerOrg.jsx";
@@ -93,14 +94,28 @@ export default function App() {
             />
           }
         />
-        <Route path="kick" element={<Kick />} />
-        <Route path="kick2" element={<Kick2 />} />
-        <Route path="edit" element={<Rock />} />
+        <Route path="kick63535" element={<RequireVideo1Unlocked><Kick /></RequireVideo1Unlocked>} />
+        <Route path="kick2" element={<RequireVideo1Unlocked><Kick2 /></RequireVideo1Unlocked>} />
+        <Route path="edit" element={<RequireVideo1Unlocked><Rock /></RequireVideo1Unlocked>} />
         <Route path="global2" element={<Global2 />} />
-        <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
+        <Route
+          path="kick63535/human-vs-digital"
+          element={
+            <RequireVideo1Unlocked>
+              <HumanVsDigital />
+            </RequireVideo1Unlocked>
+          }
+        />
         <Route path="test-stripe" element={<TestStripe />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="internal/global-settings" element={<GlobalSettings />} />
+        <Route
+          path="internal/global-settings"
+          element={
+            <RequireVideo1Unlocked>
+              <GlobalSettings />
+            </RequireVideo1Unlocked>
+          }
+        />
         <Route
           path="contact/thanks"
           element={
@@ -224,9 +239,23 @@ export default function App() {
           <Route path="telecom-supporters" element={<TelecomSupporters />} />
         </Route>
 
-        <Route path="video" element={<VideoShowcase />} />
-        <Route path="video1/:category?" element={<Video />} />
-        <Route path="video2/:category?" element={<Video2 />} />
+        <Route path="video/:category?" element={<VideoShowcase />} />
+        <Route
+          path="video1/:category?"
+          element={
+            <RequireVideo1Unlocked>
+              <Video />
+            </RequireVideo1Unlocked>
+          }
+        />
+        <Route
+          path="video2/:category?"
+          element={
+            <RequireVideo1Unlocked>
+              <Video2 />
+            </RequireVideo1Unlocked>
+          }
+        />
 
         <Route path="about">
           <Route index element={<AboutIndex />} />

@@ -10,9 +10,13 @@ import textPhoneImg from "../../assets/images/PhishFlagger-Text v6.png";
 import inboxImg from "../../assets/images/email-inbox-v4-gray-header.png";
 import logoImg from "../../assets/images/pf-logo-v2.png";
 import { publicPath } from "../../lib/publicPath.js";
+import { isVideo1Unlocked } from "../../lib/videoAccess.js";
+import { PUBLIC_VIDEO_CATEGORIES, CATEGORY_SLUGS } from "../../data/videos.js";
 
-// Mirrors CATEGORY_SLUGS in pages/Video.jsx — keep in sync if categories change there.
-const VIDEO_CATEGORY_LINKS = [
+// Mirrors CATEGORY_SLUGS in pages/Video.jsx — keep in sync if categories change
+// there. /video1 is 007-mode-only, so these deep links must never render for
+// a visitor who hasn't unlocked it (see VIDEO_CATEGORY_LINKS_LOCKED below).
+const VIDEO_CATEGORY_LINKS_UNLOCKED = [
   { label: "Feature", href: "/video1" },
   { label: "Ads", href: "/video1/ads" },
   { label: "Shorts", href: "/video1/shorts" },
@@ -24,6 +28,13 @@ const VIDEO_CATEGORY_LINKS = [
   { label: "Funny", href: "/video1/funny" },
   { label: "From the Vault", href: "/video1/from-the-vault" },
 ];
+
+// Normal-mode visitors get the same category labels, but pointed at the
+// public /video/<slug> showcase instead of the gated /video1 library.
+const VIDEO_CATEGORY_LINKS_LOCKED = PUBLIC_VIDEO_CATEGORIES.map((label) => {
+  const slug = CATEGORY_SLUGS[label];
+  return { label, href: slug ? `/video/${slug}` : "/video" };
+});
 
 const PRODUCT_IMAGES = [
   { src: inboxImg, alt: "PhishFlagger Inbox", frame: true },
@@ -178,13 +189,13 @@ export default function Footer({ logoSrc = logoImg }) {
                 { label: "Telecom", href: "/telecom" },
                 { label: "Messaging", href: "/join/messaging" },
                 { label: "Email - Marketing", href: "/join/email-marketing" },
-                { label: "Kickstarter", href: "/kick" },
+                { label: "Kickstarter", href: "/kick2" },
               ]}
             />
             <FooterSitemapColumn
               heading="Video"
               headingHref="/video"
-              links={VIDEO_CATEGORY_LINKS}
+              links={isVideo1Unlocked() ? VIDEO_CATEGORY_LINKS_UNLOCKED : VIDEO_CATEGORY_LINKS_LOCKED}
             />
             <FooterSitemapColumn
               heading="Email"
@@ -390,19 +401,31 @@ function FooterSitemapColumn({ heading, headingHref, links }) {
         </p>
       )}
       <ul className="space-y-2.5 list-none p-0">
-        {links.map((item) => (
-          <li key={item.href}>
-            <Link
-              to={item.href}
-              state={{ from: location.pathname }}
-              className={`block rounded-md px-2 py-1 -mx-2 text-[13px] transition-colors hover:text-[#FF0033] ${
-                isActive(item.href) ? "bg-gray-100 text-black" : "text-black"
-              }`}
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
+        {links.map((item) => {
+          const isExternal = /^https?:\/\//.test(item.href);
+          return (
+            <li key={item.href}>
+              {isExternal ? (
+                <a
+                  href={item.href}
+                  className="block rounded-md px-2 py-1 -mx-2 text-[13px] text-black transition-colors hover:text-[#FF0033]"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  state={{ from: location.pathname }}
+                  className={`block rounded-md px-2 py-1 -mx-2 text-[13px] transition-colors hover:text-[#FF0033] ${
+                    isActive(item.href) ? "bg-gray-100 text-black" : "text-black"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

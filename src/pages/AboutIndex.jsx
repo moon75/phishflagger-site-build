@@ -83,11 +83,11 @@ export default function AboutIndex() {
               <div className="w-1/2 self-center border-t-2 border-black sm:w-auto sm:self-stretch sm:border-t-0 sm:border-l-2" aria-hidden />
               <div className="flex flex-col items-center gap-5 sm:items-start">
                 <Link
-                  to="/kick"
+                  to="/kick63535"
                   state={{ from: "/about" }}
                   className="mouse-over-link-increase text-[16px] font-semibold text-green-600 transition-colors hover:text-green-800 sm:text-[18px]"
                 >
-                  kick
+                  kick63535
                 </Link>
                 <Link
                   to="/kick2"

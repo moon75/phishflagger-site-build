@@ -5,6 +5,7 @@ import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import PageDownButton from "../components/ui/PageDownButton.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import { brandify } from "../components/Brand.jsx";
+import { isVideo1Unlocked } from "../lib/videoAccess.js";
 import messagesPhoneImg from "../assets/images/PhishFlagger-Messages v6.png";
 import messagesPhoneGif from "../assets/images/PhishFlagger-Messages v7 animated transparent.gif";
 import emailPhoneImg from "../assets/images/PhishFlagger-Email v6.png";
@@ -213,12 +214,19 @@ export default function Home() {
               Client Plug-In
             </span>
             <div className="group relative w-full max-w-[380px]">
-              <Link
-                to="/kick"
-                className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition group-hover:scale-120 hover:scale-120 sm:text-[10px]"
-              >
-                <span>Coming Soon</span>
-              </Link>
+              {isVideo1Unlocked() ? (
+                <Link
+                  to="/kick63535"
+                  state={{ from: "/" }}
+                  className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white transition group-hover:scale-120 hover:scale-120 sm:text-[10px]"
+                >
+                  <span>Coming Soon</span>
+                </Link>
+              ) : (
+                <span className="absolute top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
+                  Coming Soon
+                </span>
+              )}
               <div className="relative flex aspect-[46/30] w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#EAECF3] pic-with-no-link-mouse-over-increase">
                 <img
                   src={outlookThunderbirdImg}

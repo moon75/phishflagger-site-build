@@ -44,7 +44,7 @@ export default function Kick() {
         </a>
 
         <Link
-          to="/kick/human-vs-digital"
+          to="/kick63535/human-vs-digital"
           className="text-[16px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
         >
           3. Human vs Digital
@@ -185,7 +185,7 @@ export default function Kick() {
           <div className="mt-3 text-center">
             <Link
               to="/joinfree/request-domain"
-              state={{ from: "/kick" }}
+              state={{ from: "/kick63535" }}
               className="text-[12.5px] font-semibold text-[#585858] underline hover:text-[#3f3f3f]"
             >
               Request My Domain
@@ -224,7 +224,7 @@ export default function Kick() {
             Like what you see.{" "}
             <Link
               to="/resources/endorse-us"
-              state={{ from: "/kick" }}
+              state={{ from: "/kick63535" }}
               className="font-semibold text-[#2a6df4] underline underline-offset-4 hover:text-[#1a52c9]"
             >
               Endorse Us

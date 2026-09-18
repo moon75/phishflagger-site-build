@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { BrandInline } from "../components/Brand.jsx";
 import LogoMark from "../components/ui/LogoMark.jsx";
 import PageCycleArrows from "../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../components/ui/topNavLoopPages.js";
 import ShortsViewer from "../components/video/ShortsViewer.jsx";
 import VideoCard from "../components/video/VideoCard.jsx";
-import { PUBLIC_VIDEO_CATEGORIES, showcaseVideosForCategory } from "../data/videos.js";
+import {
+  PUBLIC_VIDEO_CATEGORIES,
+  CATEGORY_SLUGS,
+  SLUG_CATEGORIES,
+  showcaseVideosForCategory,
+} from "../data/videos.js";
 import { isVideo1Unlocked } from "../lib/videoAccess.js";
 import VideoModeToggle from "../components/video/VideoModeToggle.jsx";
 
@@ -20,7 +25,11 @@ import VideoModeToggle from "../components/video/VideoModeToggle.jsx";
 export default function VideoShowcase() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [activeCategory, setActiveCategory] = useState(PUBLIC_VIDEO_CATEGORIES[0]);
+  const { category = "" } = useParams();
+  const requestedCategory = SLUG_CATEGORIES[category];
+  const activeCategory = PUBLIC_VIDEO_CATEGORIES.includes(requestedCategory)
+    ? requestedCategory
+    : PUBLIC_VIDEO_CATEGORIES[0];
   const [playing, setPlaying] = useState(null);
 
   useEffect(() => {
@@ -65,18 +74,22 @@ export default function VideoShowcase() {
           <VideoModeToggle active="public" />
 
           <div className="mt-4 flex flex-wrap justify-center gap-2 sm:mt-5 sm:gap-3">
-            {PUBLIC_VIDEO_CATEGORIES.map((category) => (
+            {PUBLIC_VIDEO_CATEGORIES.map((cat) => (
               <button
-                key={category}
+                key={cat}
                 type="button"
-                onClick={() => setActiveCategory(category)}
+                onClick={() => {
+                  setPlaying(null);
+                  const slug = CATEGORY_SLUGS[cat];
+                  navigate(slug ? `/video/${slug}` : "/video", { replace: true });
+                }}
                 className={`cursor-pointer rounded-md border border-black px-2.5 py-1 text-[13px] font-medium transition-transform duration-200 hover:scale-[1.15] hover:text-brand ${
-                  category === activeCategory
+                  cat === activeCategory
                     ? "bg-gray-200 text-brand"
                     : "bg-white text-ink"
                 }`}
               >
-                {category}
+                {cat}
               </button>
             ))}
           </div>
