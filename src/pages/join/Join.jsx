@@ -144,7 +144,7 @@ export default function Join() {
                 <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
                   <HoverGif
                     stillSrc={publicPath("/assets/images/individual.png")}
-                    gifSrc={publicPath("/assets/images/individual-animated.gif")}
+                    gifSrc={publicPath("/assets/images/individual-animated.gif?v=20260918-immediate")}
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
                     active={hoveredPlanCard === "free"}

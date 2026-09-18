@@ -237,7 +237,7 @@ export default function Footer({ logoSrc = logoImg }) {
           </div>
         </div>
 
-        <div className="mx-auto max-w-[980px] px-6 pb-[18px] text-center text-[#3a3a3a] max-sm:px-4">
+        <div className="mx-auto max-w-[980px] px-6 pb-10 text-center text-[#3a3a3a] max-sm:px-4">
         <div
           className="mx-auto inline-block rounded-2xl bg-[#eef0f4] bg-cover bg-center px-6 py-6 sm:px-8"
           style={{
@@ -313,7 +313,7 @@ export default function Footer({ logoSrc = logoImg }) {
             />
           </div>
 
-          <p className="mx-auto mb-2.5 mt-3 whitespace-normal text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:text-[9px]">
+          <p className="mx-auto mb-2.5 mt-9 whitespace-normal text-[10px] leading-[1.4] text-[#4a4a4a] max-sm:text-[9px]">
             US Granted Patents: US20200351275A1, US12238052B2, US12238083B2,
             US12309317B2, US20240305986A1. Pending in 62 Countries.
           </p>
