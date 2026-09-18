@@ -44,6 +44,16 @@
      gap, tuned from here. */
   --hero-pane-pt: 2.75rem;
   --hero-pane-pb: 2rem;
+
+  /* Live-tunable hover-grow knobs — same job as --icon-link-hover-scale/
+     --btn-hover-scale above, just for the remaining hover classes below.
+     Defaults match the values those classes always had; /global2
+     (src/pages/Global2.jsx) overwrites these inline on <html> at runtime
+     so a non-developer can retune them without touching this file. */
+  --img-hover-zoom-scale: 1.2;
+  --pic-no-link-hover-scale: 1.05;
+  --home-hero-trio-hover-scale: 1.03;
+  --mouse-over-link-scale: 1.1;
 }
 
 /* ==========================================================================
@@ -141,13 +151,13 @@
     transition: transform 200ms ease-out;
   }
   .img-hover-zoom:hover {
-    transform: scale(1.2);
+    transform: scale(var(--img-hover-zoom-scale));
   }
   /* When the picture sits inside a hover group (e.g. a card whose title and
      image should react together), hovering anywhere in the group runs the
      same zoom. */
   .group:hover .img-hover-zoom {
-    transform: scale(1.2);
+    transform: scale(var(--img-hover-zoom-scale));
   }
 
   /* GLOBAL STANDARD — use on any picture that is NOT a link (no <Link>/<a>
@@ -161,7 +171,7 @@
     transition: transform 200ms ease-out;
   }
   .pic-with-no-link-mouse-over-increase:hover {
-    transform: scale(1.05);
+    transform: scale(var(--pic-no-link-hover-scale));
   }
 
   /* Home hero pane's 3 side-by-side images (hero v1/v2/v3) only — set to
@@ -170,7 +180,7 @@
     transition: transform 200ms ease-out;
   }
   .home-hero-trio-hover-zoom:hover {
-    transform: scale(1.03);
+    transform: scale(var(--home-hero-trio-hover-scale));
   }
 
   /* GLOBAL STANDARD — use on any plain text link (a <Link>/<a> that's just
@@ -183,7 +193,7 @@
     transition: transform 200ms ease-out;
   }
   .mouse-over-link-increase:hover {
-    transform: scale(1.1);
+    transform: scale(var(--mouse-over-link-scale));
   }
 
   /* GLOBAL STANDARD — use on any section heading (the "Email Marketing",

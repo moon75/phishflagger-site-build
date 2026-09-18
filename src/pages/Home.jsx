@@ -313,9 +313,12 @@ export default function Home() {
                 />
               </div>
             </div>
-            <p className="mt-4 flex w-full max-w-[300px] items-center justify-center py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
-              Our Appliance will enable the protocol across your entire
-              Domain. No Install or Downloads required by users.
+            <p className="mt-4 flex w-full max-w-[300px] flex-col items-center justify-center gap-3 py-6 text-center text-[22px] leading-[1.6] text-ink sm:max-w-[460px] sm:py-8 sm:text-[22px]">
+              <span>
+                Our Appliance will enable {brandify("PhishFlagger")} across
+                your entire Domain.
+              </span>
+              <span>No Install or Downloads required by users.</span>
             </p>
             <div className="-mt-3 flex flex-wrap items-start justify-center gap-6">
               <div className="flex w-[260px] flex-col items-center gap-3">

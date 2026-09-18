@@ -96,6 +96,7 @@ export default function EmailFreePlugIn() {
             <div className="flex items-center gap-3">
               <Link
                 to="/contact"
+                state={{ from: "/join/email-free-plug-in" }}
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Join Free
@@ -107,6 +108,7 @@ export default function EmailFreePlugIn() {
               </span>
               <Link
                 to="/contact"
+                state={{ from: "/join/email-free-plug-in" }}
                 className="inline-flex items-center justify-center rounded-md whitespace-nowrap bg-[#4a4a4a] px-5 py-3 text-[13px] font-bold text-white transition hover:bg-[#2f2f2f] hover:text-btn-hover-red duration-200 hover:scale-[var(--btn-hover-scale)]"
               >
                 Join PRO

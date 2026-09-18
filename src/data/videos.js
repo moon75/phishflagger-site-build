@@ -79,12 +79,13 @@ export const VIDEO_CATEGORIES = [
   "From the Vault",
   "Oracle",
   "Oracle2",
+  "Oracle3",
 ];
 
 // Categories shown on the public /video showcase — everything except
-// Oracle and Oracle2, which stay in the gated /video1 library only.
+// Oracle, Oracle2, and Oracle3, which stay in the gated /video1 library only.
 export const PUBLIC_VIDEO_CATEGORIES = VIDEO_CATEGORIES.filter(
-  (category) => category !== "Oracle" && category !== "Oracle2",
+  (category) => category !== "Oracle" && category !== "Oracle2" && category !== "Oracle3",
 );
 
 export const CATEGORY_SLUGS = {
@@ -97,6 +98,7 @@ export const CATEGORY_SLUGS = {
   "Telecom Caller ID": "telecom-caller-id",
   Oracle: "oracle",
   Oracle2: "oracle2",
+  Oracle3: "oracle3",
   CISO: "ciso",
   Funny: "funny",
   "From the Vault": "from-the-vault",
@@ -119,6 +121,7 @@ export const CATEGORY_SCRIPTS = {
   "Telecom Caller ID": "https://docs.google.com/document/d/1HsqXIfQIE4AkhKF8tk_Yq0AFoL0UH9xD3qduP0PzGFU/edit?usp=sharing",
   Oracle: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
   Oracle2: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
+  Oracle3: "https://docs.google.com/document/d/1KTOVa0wRnynUHv4bfmfGftXJ9PTRsuJ7Tp9FIi5t6P0/edit?usp=sharing",
   CISO: "https://docs.google.com/document/d/1yEJY1sn-JPJcrRg2w34hihlrBzNlzBKAEidvqMaEW6M/edit?usp=sharing",
   Funny: "https://docs.google.com/document/d/1S74NisRSzyw0C37quBHoCpPGx9NWdefCGCd5IENRF9E/edit?usp=sharing",
   "From the Vault": "https://docs.google.com/document/d/1DlkLYRIix4iA7-dGpPzgIZdtdBayMegiqCJtXenGeuA/edit?usp=sharing",
@@ -310,6 +313,9 @@ export function categoryVideos(category) {
         description: "",
       },
     ]);
+  }
+  if (category === "Oracle3") {
+    return padToFullPage([]);
   }
 
   if (category === "Telecom Caller ID") {

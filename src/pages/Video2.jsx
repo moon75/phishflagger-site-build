@@ -12,8 +12,14 @@ import {
   SLUG_CATEGORIES,
   CATEGORY_SCRIPTS,
   VIDEOS_PER_PAGE,
-  categoryVideos,
+  padToFullPage,
 } from "../data/videos.js";
+
+// Development 2 is a blank library, ready for its own content — it
+// intentionally does not reuse /video1's videos.
+function categoryVideos() {
+  return padToFullPage([]);
+}
 
 export default function Video2() {
   const [searchParams] = useSearchParams();

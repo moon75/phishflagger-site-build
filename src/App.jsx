@@ -23,6 +23,7 @@ import GenericThanks from "./pages/GenericThanks.jsx";
 import Kick from "./pages/Kick.jsx";
 import Kick2 from "./pages/Kick2.jsx";
 import Rock from "./pages/Rock.jsx";
+import Global2 from "./pages/Global2.jsx";
 import HumanVsDigital from "./pages/HumanVsDigital.jsx";
 import TestStripe from "./pages/TestStripe.jsx";
 import NotFound from "./pages/NotFound.jsx";
@@ -95,6 +96,7 @@ export default function App() {
         <Route path="kick" element={<Kick />} />
         <Route path="kick2" element={<Kick2 />} />
         <Route path="edit" element={<Rock />} />
+        <Route path="global2" element={<Global2 />} />
         <Route path="kick/human-vs-digital" element={<HumanVsDigital />} />
         <Route path="test-stripe" element={<TestStripe />} />
         <Route path="contact" element={<Contact />} />
