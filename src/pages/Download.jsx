@@ -19,15 +19,15 @@ export default function Download() {
 
           <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {/* Thunderbird */}
-            <div className="overflow-hidden rounded-2xl border-2 border-black">
-              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
+            <div className="flex h-[340px] flex-col overflow-hidden rounded-2xl border-2 border-black">
+              <div className="flex h-48 shrink-0 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                 <img
                   src={publicPath("/assets/images/thunderbird new pick.avif")}
                   alt="Mozilla Thunderbird"
                   className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
-              <div className="flex justify-center gap-6 px-5 py-5 sm:px-6">
+              <div className="flex flex-1 items-center justify-center gap-6 px-5 sm:px-6">
                 <Link
                   to="/plugin-download?client=Thunderbird&download=Windows%20Download"
                   className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
@@ -44,19 +44,19 @@ export default function Download() {
             </div>
 
             {/* Outlook */}
-            <div className="relative">
+            <div className="relative flex h-[340px] flex-col rounded-2xl border-2 border-black">
               <span className="absolute -top-2 -left-2 z-10 flex -rotate-12 flex-col items-center whitespace-nowrap rounded-full bg-brand px-3 py-1 text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white shadow-[0_4px_10px_rgba(0,0,0,0.25)] ring-2 ring-white sm:text-[10px]">
                 Coming Soon
               </span>
-              <div className="overflow-hidden rounded-2xl border-2 border-black">
-                <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
+              <div className="flex h-full w-full flex-col overflow-hidden rounded-2xl">
+                <div className="flex h-48 shrink-0 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                   <img
                     src={outlookImg}
                     alt="Microsoft Outlook"
                     className="h-full w-full scale-[1.2] object-cover pic-with-no-link-mouse-over-increase"
                   />
                 </div>
-                <div className="flex justify-center px-5 py-5 sm:px-6">
+                <div className="flex flex-1 items-center justify-center px-5 sm:px-6">
                   <Link
                     to="/plugin-download?client=Outlook&download=Windows%20Download"
                     className="text-[13px] font-semibold text-[#2a6df4] underline underline-offset-4 sm:text-[14px]"
@@ -68,14 +68,14 @@ export default function Download() {
             </div>
 
             {/* More clients coming soon */}
-            <div className="flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 py-10 text-center">
+            <div className="flex h-[340px] flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 text-center">
               <p className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                 More Email Clients Available Soon
               </p>
             </div>
 
             {/* Developers CTA */}
-            <div className="flex h-full flex-col items-center justify-between gap-4 overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 pt-10 pb-5 text-center sm:px-6">
+            <div className="flex h-[340px] flex-col items-center justify-between gap-4 overflow-hidden rounded-2xl border-2 border-black bg-[#f4f5f8] px-5 py-8 text-center sm:px-6">
               <p className="flex flex-1 items-center text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                 Email Client Developers: Add PhishFlagger protocol to your
                 Client free.
@@ -90,15 +90,15 @@ export default function Download() {
             </div>
 
             {/* Domain Appliance */}
-            <div className="flex h-full flex-col overflow-hidden rounded-2xl border-2 border-black">
-              <div className="flex h-48 items-center justify-center overflow-hidden bg-[#f4f5f8]">
+            <div className="flex h-[340px] flex-col overflow-hidden rounded-2xl border-2 border-black">
+              <div className="flex h-48 shrink-0 items-center justify-center overflow-hidden bg-[#f4f5f8]">
                 <img
                   src={cloudServerImg}
                   alt="Cloud and server appliance"
                   className="h-full w-full object-cover pic-with-no-link-mouse-over-increase"
                 />
               </div>
-              <div className="flex flex-1 flex-col items-center justify-between gap-3 px-5 py-5 sm:px-6">
+              <div className="flex flex-1 flex-col items-center justify-center gap-3 px-5 sm:px-6">
                 <span className="text-[15px] font-semibold leading-snug text-ink sm:text-[16px]">
                   Domain Appliance
                 </span>

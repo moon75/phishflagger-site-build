@@ -95,7 +95,7 @@ export default function App() {
           }
         />
         <Route path="kick63535" element={<RequireVideo1Unlocked><Kick /></RequireVideo1Unlocked>} />
-        <Route path="kick2" element={<RequireVideo1Unlocked><Kick2 /></RequireVideo1Unlocked>} />
+        <Route path="kick2" element={<Kick2 />} />
         <Route path="edit" element={<RequireVideo1Unlocked><Rock /></RequireVideo1Unlocked>} />
         <Route path="global2" element={<Global2 />} />
         <Route
