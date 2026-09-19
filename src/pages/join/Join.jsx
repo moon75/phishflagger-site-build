@@ -5,7 +5,6 @@ import PageCycleArrows from "../../components/ui/PageCycleArrows.jsx";
 import { TOP_NAV_LOOP_PAGES } from "../../components/ui/topNavLoopPages.js";
 import cloudServerImg from "../../assets/images/domain-server-only animated.gif";
 import cloudServerStill from "../../assets/images/domain-server-only.png";
-import oneOrManyImg from "../../assets/images/six plugin one or more animated.gif";
 import oneOrManyStill from "../../assets/images/six plugin one or more.png";
 import subscribeIcon from "../../assets/images/checkbox-icon.png";
 import endorseIcon from "../../assets/images/endorse-us-removebg-preview.png";
@@ -15,64 +14,31 @@ import { publicPath } from "../../lib/publicPath.js";
 const MARKETING_HOVER_HOLD_MS = 2000;
 
 // Same self-contained hover-to-play pattern as PhonePlaceholder on the
-// homepage (Home.jsx) — the GIF controls its own completed-view hold and
-// one-time playback; mounting a fresh <img> on every hover restarts it.
+// homepage (Home.jsx) — mounting a brand-new <img src="...gif"> on every
+// hover forces the browser to fetch and decode it fresh, so playback always
+// restarts from frame one instead of showing whatever frame a reused image
+// resource had already finished on.
 function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
-  const [gifBlob, setGifBlob] = useState(null);
-  const [gifLoadFailed, setGifLoadFailed] = useState(false);
-  const [activeGifSrc, setActiveGifSrc] = useState(null);
+  const [playKey, setPlayKey] = useState(0);
+  const wasActiveRef = useRef(false);
 
-  // Fetch the animation as data rather than mounting a hidden <img>. A hidden
-  // play-once GIF can finish before its visible copy is shown, and browsers
-  // may then reuse that completed animation state for the same URL.
   useEffect(() => {
-    if (!gifSrc) return undefined;
-
-    const controller = new AbortController();
-    setGifBlob(null);
-    setGifLoadFailed(false);
-
-    fetch(gifSrc, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error(`Unable to load GIF: ${response.status}`);
-        return response.blob();
-      })
-      .then((blob) => setGifBlob(blob))
-      .catch((error) => {
-        if (error.name !== "AbortError") setGifLoadFailed(true);
-      });
-
-    return () => controller.abort();
-  }, [gifSrc]);
-
-  // A new blob URL gives every hover a fresh image decoder and animation
-  // timeline, while reusing the bytes fetched above.
-  useEffect(() => {
-    if (!active) {
-      setActiveGifSrc(null);
-      return undefined;
+    if (active && !wasActiveRef.current) {
+      setPlayKey((key) => key + 1);
     }
+    wasActiveRef.current = active;
+  }, [active]);
 
-    if (gifBlob) {
-      const objectUrl = URL.createObjectURL(gifBlob);
-      setActiveGifSrc(objectUrl);
-      return () => URL.revokeObjectURL(objectUrl);
-    }
-
-    if (gifLoadFailed) {
-      const separator = gifSrc.includes("?") ? "&" : "?";
-      setActiveGifSrc(`${gifSrc}${separator}play=${Date.now()}`);
-    }
-
-    return undefined;
-  }, [active, gifBlob, gifLoadFailed, gifSrc]);
+  const separator = gifSrc.includes("?") ? "&" : "?";
+  const playSrc = `${gifSrc}${separator}play=${playKey}`;
 
   return (
     <div className="relative h-full w-full">
       <img src={stillSrc} alt={alt} className={className} draggable={false} />
-      {activeGifSrc && (
+      {active && (
         <img
-          src={activeGifSrc}
+          key={playKey}
+          src={playSrc}
           alt={alt}
           className={`absolute inset-0 ${className}`}
           draggable={false}
@@ -81,6 +47,100 @@ function HoverGif({ stillSrc, gifSrc, alt, className, active }) {
     </div>
   );
 }
+
+// Some source GIFs refuse to animate in real-world browsers despite being
+// valid multi-frame files (confirmed: the frame data itself is fine, but
+// native <img> GIF playback silently freezes on frame one). Cycling plain
+// PNG frames on a timer sidesteps GIF playback entirely and is universally
+// reliable, since it's just swapping ordinary <img> sources.
+function HoverFrames({ stillSrc, frames, alt, className, active }) {
+  const [frameIndex, setFrameIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
+
+  // Warm the browser cache for every frame up front so the swap during
+  // playback never has to wait on a fresh network fetch + decode (that
+  // stall is what shows up as a flash/glitch on the first frame change).
+  useEffect(() => {
+    const preloaded = frames.map((frame) => {
+      const img = new Image();
+      img.src = frame.src;
+      return img;
+    });
+    return () => {
+      preloaded.length = 0;
+    };
+  }, [frames]);
+
+  // Hold on the still image for a beat before starting playback, same as
+  // the marketing card's hover hold below.
+  useEffect(() => {
+    if (!active) {
+      setPlaying(false);
+      return undefined;
+    }
+    const holdTimeoutId = window.setTimeout(() => setPlaying(true), MARKETING_HOVER_HOLD_MS);
+    return () => window.clearTimeout(holdTimeoutId);
+  }, [active]);
+
+  useEffect(() => {
+    if (!playing) {
+      setFrameIndex(0);
+      return undefined;
+    }
+
+    let cancelled = false;
+    let timeoutId = null;
+
+    function scheduleFrame(index) {
+      if (index >= frames.length - 1) return;
+      timeoutId = window.setTimeout(() => {
+        if (cancelled) return;
+        setFrameIndex(index + 1);
+        scheduleFrame(index + 1);
+      }, frames[index].duration);
+    }
+
+    setFrameIndex(0);
+    scheduleFrame(0);
+
+    return () => {
+      cancelled = true;
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
+  }, [playing, frames]);
+
+  return (
+    <div className="relative h-full w-full">
+      <img
+        src={stillSrc}
+        alt={alt}
+        className={className}
+        draggable={false}
+        style={playing ? { visibility: "hidden" } : undefined}
+      />
+      {playing && (
+        <img
+          src={frames[frameIndex].src}
+          alt={alt}
+          className={`absolute inset-0 ${className}`}
+          draggable={false}
+        />
+      )}
+    </div>
+  );
+}
+
+const INDIVIDUAL_FRAME_DURATIONS = [100, 1500, 1500, 1500, 1500, 100];
+const INDIVIDUAL_FRAMES = INDIVIDUAL_FRAME_DURATIONS.map((duration, i) => ({
+  src: publicPath(`/assets/images/individual-frames/frame-${i}.png`),
+  duration,
+}));
+
+const PLUGIN_PRO_FRAME_DURATIONS = [100, 1500, 1500, 1500, 1500, 100];
+const PLUGIN_PRO_FRAMES = PLUGIN_PRO_FRAME_DURATIONS.map((duration, i) => ({
+  src: publicPath(`/assets/images/plugin-pro-frames/frame-${i}.png`),
+  duration,
+}));
 
 export default function Join() {
   const containerRef = useRef(null);
@@ -134,7 +194,7 @@ export default function Join() {
                 onMouseEnter={() => setHoveredPlanCard("free")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join Free — Plug-In Free"
-                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
+                className="group flex flex-col items-center transition-transform duration-200 will-change-transform hover:scale-110"
               >
                 <div className="mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
@@ -142,9 +202,9 @@ export default function Join() {
                   </span>
                 </div>
                 <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
-                  <HoverGif
+                  <HoverFrames
                     stillSrc={publicPath("/assets/images/individual.png")}
-                    gifSrc={publicPath("/assets/images/individual-animated.gif?v=20260918-immediate")}
+                    frames={INDIVIDUAL_FRAMES}
                     alt="Individual protection illustration"
                     className="h-full w-full object-contain"
                     active={hoveredPlanCard === "free"}
@@ -166,7 +226,7 @@ export default function Join() {
                 onMouseEnter={() => setHoveredPlanCard("pro")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join PRO — Individual / Group"
-                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
+                className="group flex flex-col items-center transition-transform duration-200 will-change-transform hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
@@ -177,9 +237,9 @@ export default function Join() {
                   </span>
                 </div>
                 <div className="flex h-[150px] w-[150px] items-center justify-center overflow-hidden rounded-xl border-2 border-black bg-white p-1 transition-all duration-200 group-hover:border-4 group-hover:border-blue-600 group-hover:bg-blue-100 sm:h-[180px] sm:w-[180px]">
-                  <HoverGif
+                  <HoverFrames
                     stillSrc={oneOrManyStill}
-                    gifSrc={oneOrManyImg}
+                    frames={PLUGIN_PRO_FRAMES}
                     alt="Domain protection illustration"
                     className="h-full w-full rounded-lg object-contain"
                     active={hoveredPlanCard === "pro"}
@@ -201,7 +261,7 @@ export default function Join() {
                 onMouseEnter={() => setHoveredPlanCard("domain")}
                 onMouseLeave={() => setHoveredPlanCard(null)}
                 aria-label="Join Domain — Domain Appliance"
-                className="group flex flex-col items-center transition-transform duration-200 hover:scale-110"
+                className="group flex flex-col items-center transition-transform duration-200 will-change-transform hover:scale-110"
               >
                 <div className="relative mb-8 flex h-[60px] items-end justify-center sm:mb-[34px] sm:h-[86px]">
                   <span className="whitespace-nowrap text-center text-[22px] font-semibold leading-tight text-ink transition-colors sm:text-[25px]">
